@@ -1,0 +1,456 @@
+[
+  {
+    "product_name": "PX 3237",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "工業齒輪油"
+    ],
+    "composition_zh": "銀金屬鈍化劑（專利配方 Proprietary）",
+    "composition_en": "Silver Metal Deactivator (Proprietary formulation)",
+    "chemical_component": "銀金屬鈍化劑\n（專利配方 Proprietary）",
+    "application_fields_zh": "工業齒輪油",
+    "application_fields_en": "Industrial Gear Oils",
+    "suggested_use_level_zh": "工業齒輪油: 0.02–0.05%",
+    "suggested_use_level_en": "Industrial Gear Oils: 0.02–0.05%",
+    "properties": "專利銀金屬鈍化劑，有效保護含銀金屬部件免於催化氧化劣解，顯著提升潤滑系統之運轉可靠度與使用壽命。"
+  },
+  {
+    "product_name": "PX 3239",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "工業齒輪油",
+      "液壓油",
+      "循環油",
+      "潤滑脂",
+      "金屬切削液",
+      "金屬成型加工油"
+    ],
+    "composition_zh": "銅金屬鈍化劑（甲基苯三唑衍生物 Tolutriazole Derivative）",
+    "composition_en": "Copper Metal Deactivator (Tolutriazole derivative)",
+    "chemical_component": "銅金屬鈍化劑\n（甲基苯三唑衍生物 Tolutriazole Derivative）",
+    "application_fields_zh": "工業齒輪油、液壓油、循環油、潤滑脂、金屬切削液、金屬成型加工油",
+    "application_fields_en": "Industrial Gear Oils, Hydraulic Fluids, Circulating Oils, Greases, Metal Removal Fluids, Metal Forming Lubricants",
+    "suggested_use_level_zh": "工業齒輪油 / 液壓油 / 循環油 / 潤滑脂 / 金屬加工油: 0.02–0.05%",
+    "suggested_use_level_en": "Industrial Gear Oils / Hydraulic Fluids / Circulating Oils / Greases / Metalworking Fluids: 0.02–0.05%",
+    "properties": "高效銅金屬去活化劑與防腐蝕劑，廣泛適用於汽輪機油（透平機油）、壓縮機油、液壓油及金屬加工油。"
+  },
+  {
+    "product_name": "PX 3806",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "天然氣引擎機油",
+      "液壓油",
+      "壓縮機油",
+      "噴射渦輪發動機油",
+      "循環油"
+    ],
+    "composition_zh": "高效氧化抑制劑（烷基化苯基-α-萘胺 APANA）",
+    "composition_en": "High Performance Antioxidant (Alkylated Phenyl-alpha-Naphthylamine, APANA)",
+    "chemical_component": "高效氧化抑制劑\n（烷基化苯基-α-萘胺 APANA）",
+    "application_fields_zh": "天然氣引擎機油、噴射渦輪發動機油、液壓油、壓縮機油、循環油",
+    "application_fields_en": "Natural Gas Engine Oils, Jet Turbine Oils, Hydraulic Fluids, Compressor Oils, Circulating Oils",
+    "suggested_use_level_zh": "天然氣引擎機油 / 噴射渦輪發動機油 / 液壓油 / 壓縮機油 / 循環油: 0.05–1.0%",
+    "suggested_use_level_en": "Natural Gas Engine Oils / Jet Turbine Oils / Hydraulic Fluids / Compressor Oils / Circulating Oils: 0.05–1.0%",
+    "properties": "高溫抗氧化抑制劑，易溶於各類礦物油與合成基礎油，具備優異之油泥控制與漆膜沉積抑制能力。"
+  },
+  {
+    "product_name": "PX 3807",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "天然氣引擎機油",
+      "液壓油",
+      "壓縮機油",
+      "噴射渦輪發動機油",
+      "循環油"
+    ],
+    "composition_zh": "高效氧化抑制劑（烷基化苯基-α-萘胺 APAN）",
+    "composition_en": "High Performance Antioxidant (Alkylated Phenyl-alpha-Naphthylamine, APAN)",
+    "chemical_component": "高效氧化抑制劑\n（烷基化苯基-α-萘胺 APAN）",
+    "application_fields_zh": "天然氣引擎機油、噴射渦輪發動機油、液壓油、壓縮機油、循環油",
+    "application_fields_en": "Natural Gas Engine Oils, Jet Turbine Oils, Hydraulic Fluids, Compressor Oils, Circulating Oils",
+    "suggested_use_level_zh": "天然氣引擎機油 / 噴射渦輪發動機油 / 液壓油 / 壓縮機油 / 循環油: 0.05–1.0%",
+    "suggested_use_level_en": "Natural Gas Engine Oils / Jet Turbine Oils / Hydraulic Fluids / Compressor Oils / Circulating Oils: 0.05–1.0%",
+    "properties": "專用於汽輪機油、空氣壓縮機油及航空合成潤滑油的高熱安定性氧化抑制劑。"
+  },
+  {
+    "product_name": "PX 3811",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "天然氣引擎機油",
+      "壓縮機油"
+    ],
+    "composition_zh": "胺類抗氧化劑（N-十二烷基苯基-1-萘胺）",
+    "composition_en": "Amine Antioxidant (N-Dodecylphenyl-1-naphthylamine)",
+    "chemical_component": "胺類抗氧化劑\n（N-十二烷基苯基-1-萘胺）",
+    "application_fields_zh": "天然氣引擎機油、壓縮機油",
+    "application_fields_en": "Natural Gas Engine Oils, Compressor Oils",
+    "suggested_use_level_zh": "天然氣引擎機油: 1.0–4.0%\n壓縮機油: 1.0–4.0%",
+    "suggested_use_level_en": "Natural Gas Engine Oils: 1.0–4.0%\nCompressor Oils: 1.0–4.0%",
+    "properties": "適用於高溫嚴苛工況之芳香胺類抗氧化劑，具備優越之高溫積碳與積垢沉積控制能力。"
+  },
+  {
+    "product_name": "PX 3812",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "金屬切削液"
+    ],
+    "composition_zh": "油性摩擦改質劑（琥珀酸酐與丙二醇低聚酯）",
+    "composition_en": "Friction Modifier / Oiliness Agent (Oligomeric Ester of Succinic Anhydride and Propylene Glycol)",
+    "chemical_component": "油性摩擦改質劑\n（琥珀酸酐與丙二醇低聚酯）",
+    "application_fields_zh": "金屬切削液、金屬加工油",
+    "application_fields_en": "Metal Removal Fluids, Metalworking Fluids",
+    "suggested_use_level_zh": "金屬切削液 / 加工油: 1.0–3.0%",
+    "suggested_use_level_en": "Metal Removal / Metalworking Fluids: 1.0–3.0%",
+    "properties": "不含硫非活性油性劑，能顯著改善切削邊界潤滑性能並提高加工精度，外觀淺色且氣味極低。"
+  },
+  {
+    "product_name": "PX 3822",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用引擎機油",
+      "潤滑脂",
+      "金屬切削液",
+      "金屬成型加工油"
+    ],
+    "composition_zh": "無灰分散劑合成中間體（聚異丁烯琥珀酸酐 PIBSA, 950 MW）",
+    "composition_en": "Ashless Dispersant Intermediate (Polyisobutylene Succinic Anhydride - PIBSA, 950 MW)",
+    "chemical_component": "無灰分散劑合成中間體\n（聚異丁烯琥珀酸酐 PIBSA, 950 MW）",
+    "application_fields_zh": "車用引擎機油、潤滑脂、金屬切削液、金屬成型加工油",
+    "application_fields_en": "Engine Oils, Greases, Metal Removal Fluids, Metal Forming Lubricants",
+    "suggested_use_level_zh": "車用引擎機油: 2.0–10.0%\n潤滑脂 / 金屬加工油: 1.0–5.0%",
+    "suggested_use_level_en": "Engine Oils: 2.0–10.0%\nGreases / Metalworking Fluids: 1.0–5.0%",
+    "properties": "無灰無氯型聚異丁烯琥珀酸酐（950 MW），專用於合成高品質琥珀醯亞胺無灰清淨分散劑。"
+  },
+  {
+    "product_name": "PX 3823",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用引擎機油",
+      "車用/卡車齒輪油",
+      "金屬切削液",
+      "金屬成型加工油"
+    ],
+    "composition_zh": "無灰分散劑合成中間體（聚異丁烯琥珀酸酐 PIBSA, 1300 MW）",
+    "composition_en": "Ashless Dispersant Intermediate (Polyisobutylene Succinic Anhydride - PIBSA, 1300 MW)",
+    "chemical_component": "無灰分散劑合成中間體\n（聚異丁烯琥珀酸酐 PIBSA, 1300 MW）",
+    "application_fields_zh": "車用引擎機油、車用/卡車齒輪油、金屬切削液、金屬成型加工油",
+    "application_fields_en": "Engine Oils, Automotive/Truck Gear Oils, Metal Removal Fluids, Metal Forming Lubricants",
+    "suggested_use_level_zh": "車用/卡車齒輪油: 0.5–2.0%\n車用引擎機油 / 金屬加工油: 依配方調配",
+    "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.5–2.0%\nEngine Oils / Metalworking Fluids: Dosage upon request",
+    "properties": "高分子量（1300 MW）無灰無氯 PIBSA 合成中間體，賦予成品油優越之低溫油泥分散性與穩定性。"
+  },
+  {
+    "product_name": "PX 3824",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用/卡車齒輪油"
+    ],
+    "composition_zh": "無灰清淨分散劑（聚異丁烯雙琥珀醯亞胺 PIBSI-TEPA）",
+    "composition_en": "Ashless Detergent Dispersant (Polyisobutylene Bis-Succinimide TEPA)",
+    "chemical_component": "無灰清淨分散劑\n（聚異丁烯雙琥珀醯亞胺 PIBSI-TEPA）",
+    "application_fields_zh": "車用/卡車齒輪油（手排變速箱油、差速器油）",
+    "application_fields_en": "Automotive/Truck Gear Oils (Manual Transmission, Differential Fluids)",
+    "suggested_use_level_zh": "車用/卡車齒輪油: 0.5–2.0%",
+    "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.5–2.0%",
+    "properties": "多功能無灰添加劑，兼具極佳防鏽蝕性、非鐵金屬（銅）相容性及極壓抗磨損保護。"
+  },
+  {
+    "product_name": "PX 3825",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用/卡車齒輪油"
+    ],
+    "composition_zh": "油性摩擦改質劑（十八碳烯基琥珀醯亞胺衍生物）",
+    "composition_en": "Friction Modifier / Oiliness Agent (Octadecenyl Succinimide Derivative)",
+    "chemical_component": "油性摩擦改質劑\n（十八碳烯基琥珀醯亞胺衍生物）",
+    "application_fields_zh": "車用/卡車齒輪油（防滑差速器 LSD 油、自動變速箱油 ATF）",
+    "application_fields_en": "Automotive/Truck Gear Oils (Limited Slip Differential LSD, ATF)",
+    "suggested_use_level_zh": "車用/卡車齒輪油: 0.1–1.5%",
+    "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.1–1.5%",
+    "properties": "無灰無氯型摩擦修飾劑，相容於礦物基礎油、合成烴（PAO）與合成酯類基礎油。"
+  },
+  {
+    "product_name": "PX 3827",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "液壓油",
+      "循環油",
+      "潤滑脂",
+      "金屬切削液",
+      "金屬成型加工油"
+    ],
+    "composition_zh": "銀金屬鈍化劑（專利配方 Proprietary）",
+    "composition_en": "Silver Metal Deactivator (Proprietary formulation)",
+    "chemical_component": "銀金屬鈍化劑\n（專利配方 Proprietary）",
+    "application_fields_zh": "抗磨液壓油、循環油、潤滑脂、金屬切削液、金屬成型加工油",
+    "application_fields_en": "Hydraulic Fluids, Circulating Oils, Greases, Metal Removal Fluids, Metal Forming Lubricants",
+    "suggested_use_level_zh": "液壓油 / 循環油 / 潤滑脂 / 金屬加工油: 0.02–0.05%",
+    "suggested_use_level_en": "Hydraulic Fluids / Circulating Oils / Greases / Metalworking Fluids: 0.02–0.05%",
+    "properties": "防止鍍銀軸承與銀質組件受活性硫催化腐蝕劣化，顯著降低磨損並延長機件壽命。"
+  },
+  {
+    "product_name": "PX 3830",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "金屬切削液",
+      "金屬成型加工油"
+    ],
+    "composition_zh": "油包水型乳化劑（PIBSA 基聚異丁烯琥珀酸酐衍生物）",
+    "composition_en": "W/O Emulsifier (PIBSA-based formulation)",
+    "chemical_component": "油包水型乳化劑\n（PIBSA 基聚異丁烯琥珀酸酐衍生物）",
+    "application_fields_zh": "水溶性金屬切削液、金屬成型加工液",
+    "application_fields_en": "Water-soluble Metal Removal Fluids, Metal Forming Lubricants",
+    "suggested_use_level_zh": "金屬加工乳化液: 依配方調配",
+    "suggested_use_level_en": "Metalworking Fluids: Dosage upon request",
+    "properties": "高效油包水型（W/O）乳化劑，溶於礦物油、合成烴及多元醇酯類基礎油。"
+  },
+  {
+    "product_name": "PX 3841",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用引擎機油",
+      "天然氣引擎機油",
+      "車用/卡車齒輪油",
+      "工業齒輪油"
+    ],
+    "composition_zh": "非矽型消泡劑（聚丙烯酸丁酯均聚物）",
+    "composition_en": "Non-Silicone Defoamer (Polybutyl Acrylate Homopolymer)",
+    "chemical_component": "非矽型消泡劑\n（聚丙烯酸丁酯均聚物）",
+    "application_fields_zh": "車用引擎機油、天然氣引擎機油、車用/卡車齒輪油、工業齒輪油",
+    "application_fields_en": "Engine Oils, Natural Gas Engine Oils, Automotive/Truck Gear Oils, Industrial Gear Oils",
+    "suggested_use_level_zh": "引擎機油 / 齒輪油: 0.05–0.30%",
+    "suggested_use_level_en": "Engine Oils / Gear Oils: 0.05–0.30%",
+    "properties": "非矽氧烷型抗泡劑，具備極佳低溫破泡性、空氣釋放性與高熱安定性。"
+  },
+  {
+    "product_name": "PX 3843",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "液壓油",
+      "壓縮機油"
+    ],
+    "composition_zh": "非矽型抗乳化與消泡劑（磷酸甲苯酯環氧乙烷加成物）",
+    "composition_en": "Non-Silicone Demulsifier & Defoamer (Cresyl Phosphate Ethoxylate)",
+    "chemical_component": "非矽型抗乳化與消泡劑\n（磷酸甲苯酯環氧乙烷加成物）",
+    "application_fields_zh": "抗磨液壓油、空氣壓縮機油、透平機油",
+    "application_fields_en": "Hydraulic Fluids, Compressor Oils, Turbine Oils",
+    "suggested_use_level_zh": "液壓油 / 壓縮機油: 0.05–0.30%",
+    "suggested_use_level_en": "Hydraulic Fluids / Compressor Oils: 0.05–0.30%",
+    "properties": "非矽型抗乳化與消泡複合劑，具備卓越之油水分離性與負荷承載力，可溶於礦物油及合成基礎油。"
+  },
+  {
+    "product_name": "PX 3845",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "滑道油/導軌油"
+    ],
+    "composition_zh": "極壓抗磨劑（單/雙 2-乙基己基酸式磷酸酯混合物）",
+    "composition_en": "Extreme Pressure & Anti-Wear Agent (Mono/Di-2-Ethylhexyl Acid Phosphate)",
+    "chemical_component": "極壓抗磨劑\n（單/雙 2-乙基己基酸式磷酸酯混合物）",
+    "application_fields_zh": "工具機滑道油（導軌油）",
+    "application_fields_en": "Slideways / Ways Oils",
+    "suggested_use_level_zh": "滑道油/導軌油: 0.25–1.25%",
+    "suggested_use_level_en": "Slideways/Ways Oils: 0.25–1.25%",
+    "properties": "賦予滑道油優異之極壓承載力與防爬行（Stick-Slip）抗磨特性，與多數潤滑功能添加劑具備良好相容性。"
+  },
+  {
+    "product_name": "PX 3846",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用/卡車齒輪油",
+      "工業齒輪油",
+      "潤滑脂"
+    ],
+    "composition_zh": "極壓抗磨與防鏽劑（C12-C14 叔烷基胺基磷酸鹽）",
+    "composition_en": "Extreme Pressure & Anti-Wear Agent (C12-C14 tert-Alkylamine Phosphate)",
+    "chemical_component": "極壓抗磨與防鏽劑\n（C12-C14 叔烷基胺基磷酸鹽）",
+    "application_fields_zh": "車用/卡車齒輪油、工業極壓齒輪油、複合鋰基/聚脲基潤滑脂",
+    "application_fields_en": "Automotive/Truck Gear Oils, Industrial Gear Oils, Greases",
+    "suggested_use_level_zh": "車用/卡車齒輪油: 0.5–1.5%\n工業齒輪油: 0.1–0.4%\n潤滑脂: 0.2–1.0%",
+    "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.5–1.5%\nIndustrial Gear Oils: 0.1–0.4%\nGreases: 0.2–1.0%",
+    "properties": "兼具防鏽與防腐蝕特性之極壓抗磨添加劑，適用於重負荷齒輪油、透平機油及高溫潤滑脂。"
+  },
+  {
+    "product_name": "PX 3847",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用引擎機油"
+    ],
+    "composition_zh": "極壓抗磨與防腐蝕劑（烷基噻二唑/烷氧基丙基胺反應產物）",
+    "composition_en": "Extreme Pressure & Corrosion Inhibitor (Alkylthiadiazole / Alkoxypropylamine reaction product)",
+    "chemical_component": "極壓抗磨與防腐蝕劑\n（烷基噻二唑/烷氧基丙基胺反應產物）",
+    "application_fields_zh": "車用引擎機油、船用柴油引擎油",
+    "application_fields_en": "Engine Oils, Marine Diesel Engine Oils",
+    "suggested_use_level_zh": "船用/車用柴油引擎油: 0.5–1.0%",
+    "suggested_use_level_en": "Marine / Automotive Diesel Engine Oils: 0.5–1.0%",
+    "properties": "熱氧化安定性優良，對非鐵金屬無腐蝕性，能顯著增強高溫油膜承載力與邊界抗磨損性能。"
+  },
+  {
+    "product_name": "PX 3849",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用引擎機油",
+      "車用/卡車齒輪油",
+      "工業齒輪油",
+      "潤滑脂"
+    ],
+    "composition_zh": "極壓抗磨劑（有機磷酸酯 Phosphate Ester）",
+    "composition_en": "Extreme Pressure & Anti-Wear Agent (Phosphate Ester)",
+    "chemical_component": "極壓抗磨劑\n（有機磷酸酯 Phosphate Ester）",
+    "application_fields_zh": "車用引擎機油、車用/卡車齒輪油、工業齒輪油、潤滑脂",
+    "application_fields_en": "Engine Oils, Automotive/Truck Gear Oils, Industrial Gear Oils, Greases",
+    "suggested_use_level_zh": "車用引擎機油 / 車用齒輪油: 0.5–1.5%\n工業齒輪油: 0.1–0.4%\n潤滑脂: 0.2–1.0%",
+    "suggested_use_level_en": "Engine Oils / Automotive Gear Oils: 0.5–1.5%\nIndustrial Gear Oils: 0.1–0.4%\nGreases: 0.2–1.0%",
+    "properties": "形成高強度磷酸鹽化學反應膜，顯著提升潤滑油膜之抗擦傷（Scuffing）與極壓抗磨損承載能力。"
+  },
+  {
+    "product_name": "PX 3861",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "潤滑脂",
+      "金屬切削液",
+      "金屬成型加工油"
+    ],
+    "composition_zh": "無灰防鏽防腐蝕劑（烷基咪唑啉衍生物）",
+    "composition_en": "Ashless Rust & Corrosion Inhibitor (Alkyl Imidazoline Derivative)",
+    "chemical_component": "無灰防鏽防腐蝕劑\n（烷基咪唑啉衍生物）",
+    "application_fields_zh": "工業潤滑脂、金屬切削液、金屬成型加工油、壓縮機油",
+    "application_fields_en": "Greases, Metal Removal Fluids, Metal Forming Lubricants, Compressor Oils",
+    "suggested_use_level_zh": "壓縮機油: 0.1–0.2%\n潤滑脂: 0.5–1.5%\n金屬加工液: 0.05–1.0%",
+    "suggested_use_level_en": "Compressor Oils: 0.1–0.2%\nGreases: 0.5–1.5%\nMetalworking Fluids: 0.05–1.0%",
+    "properties": "無灰型咪唑啉防鏽劑，添加量低至 0.05 wt% 即展現優異之鐵金屬表面吸附防蝕保護。"
+  },
+  {
+    "product_name": "PX 3862",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用/卡車齒輪油",
+      "工業齒輪油"
+    ],
+    "composition_zh": "防鏽與銅金屬鈍化複合劑（甲基苯三唑與烯基琥珀酸酐複配物）",
+    "composition_en": "Rust Inhibitor & Copper Deactivator (Tolutriazole & Alkenyl Succinic Anhydride blend)",
+    "chemical_component": "防鏽與銅金屬鈍化複合劑\n（甲基苯三唑與烯基琥珀酸酐複配物）",
+    "application_fields_zh": "車用/卡車齒輪油、工業閉式齒輪油",
+    "application_fields_en": "Automotive/Truck Gear Oils, Industrial Gear Oils",
+    "suggested_use_level_zh": "車用/卡車齒輪油 / 工業齒輪油: 0.1–0.5%",
+    "suggested_use_level_en": "Automotive/Truck Gear Oils / Industrial Gear Oils: 0.1–0.5%",
+    "properties": "無灰複合型防鏽與銅金屬鈍化劑，於硫磷型齒輪油體系中表現極佳之抗腐蝕與防鏽特性。"
+  },
+  {
+    "product_name": "PX 3863",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "滑道油/導軌油",
+      "循環油"
+    ],
+    "composition_zh": "防鏽與銅金屬鈍化劑（甲基苯三唑溶於油酸混合液）",
+    "composition_en": "Rust Inhibitor & Copper Deactivator (Tolutriazole dissolved in Oleic Acid)",
+    "chemical_component": "防鏽與銅金屬鈍化劑\n（甲基苯三唑溶於油酸混合液）",
+    "application_fields_zh": "工具機滑道油（導軌油）、工業循環油",
+    "application_fields_en": "Slideways / Ways Oils, Industrial Circulating Oils",
+    "suggested_use_level_zh": "滑道油/導軌油: 0.25–1.25%\n循環油: 0.25–1.0%",
+    "suggested_use_level_en": "Slideways/Ways Oils: 0.25–1.25%\nCirculating Oils: 0.25–1.0%",
+    "properties": "極低添加劑量下即可提供卓越之銅片防腐蝕保護，並協同提升基礎油之油性潤滑機能。"
+  },
+  {
+    "product_name": "PX 3864",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "潤滑脂",
+      "金屬切削液",
+      "金屬成型加工油"
+    ],
+    "composition_zh": "無灰防鏽防腐蝕劑（烷基咪唑啉衍生物）",
+    "composition_en": "Ashless Rust & Corrosion Inhibitor (Alkyl Imidazoline Derivative)",
+    "chemical_component": "無灰防鏽防腐蝕劑\n（烷基咪唑啉衍生物）",
+    "application_fields_zh": "工業潤滑脂、金屬切削液、金屬成型加工油、壓縮機油",
+    "application_fields_en": "Greases, Metal Removal Fluids, Metal Forming Lubricants, Compressor Oils",
+    "suggested_use_level_zh": "壓縮機油: 0.1–1.0%\n潤滑脂: 0.25–1.5%\n金屬加工液: 0.05–1.0%",
+    "suggested_use_level_en": "Compressor Oils: 0.1–1.0%\nGreases: 0.25–1.5%\nMetalworking Fluids: 0.05–1.0%",
+    "properties": "通用無灰型咪唑啉防鏽劑，廣泛適用於各類工業潤滑油品及通用潤滑脂配方。"
+  },
+  {
+    "product_name": "PX 3865",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "潤滑脂"
+    ],
+    "composition_zh": "高效金屬鹽防鏽劑（十二碳烯基琥珀醯甘胺酸鈉鹽）",
+    "composition_en": "Metal Salt Rust Inhibitor (Sodium Dodecenylsuccinylglycinate)",
+    "chemical_component": "高效金屬鹽防鏽劑\n（十二碳烯基琥珀醯甘胺酸鈉鹽）",
+    "application_fields_zh": "工業潤滑脂、合成潤滑脂",
+    "application_fields_en": "Industrial Greases, Synthetic Greases",
+    "suggested_use_level_zh": "潤滑脂: 0.5–1.5%",
+    "suggested_use_level_en": "Greases: 0.5–1.5%",
+    "properties": "專為合成潤滑脂及嚴苛工業環境設計之表面活性防鏽劑，具備極強之抗水洗與防鏽保護力。"
+  },
+  {
+    "product_name": "PX 3871",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用/卡車齒輪油",
+      "潤滑脂"
+    ],
+    "composition_zh": "摩擦修飾與滴點改質劑（混合 C5/C13 烷基硼酸酯）",
+    "composition_en": "Friction Modifier & Grease Improver (Mixed C5/C13 Alkyl Borate)",
+    "chemical_component": "摩擦修飾與滴點改質劑\n（混合 C5/C13 烷基硼酸酯）",
+    "application_fields_zh": "車用/卡車齒輪油、複合鋰基潤滑脂",
+    "application_fields_en": "Automotive/Truck Gear Oils, Complex Lithium Greases",
+    "suggested_use_level_zh": "車用/卡車齒輪油: 0.3–1.5%\n潤滑脂: 0.5–1.5%",
+    "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.3–1.5%\nGreases: 0.5–1.5%",
+    "properties": "有機硼添加劑，具備無灰分散與抗磨損性能，並能顯著提升鋰基潤滑脂之滴點（Dropping Point）。"
+  },
+  {
+    "product_name": "PX 3872",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用/卡車齒輪油",
+      "潤滑脂"
+    ],
+    "composition_zh": "摩擦修飾與滴點改質劑（硼化油酸酯，低氣味）",
+    "composition_en": "Friction Modifier & Grease Improver (Borated Oleate, Low Odor)",
+    "chemical_component": "摩擦修飾與滴點改質劑\n（硼化油酸酯，低氣味）",
+    "application_fields_zh": "車用/卡車齒輪油、複合鋰基潤滑脂",
+    "application_fields_en": "Automotive/Truck Gear Oils, Complex Lithium Greases",
+    "suggested_use_level_zh": "車用/卡車齒輪油: 0.3–1.5%\n潤滑脂: 0.5–1.5%",
+    "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.3–1.5%\nGreases: 0.5–1.5%",
+    "properties": "低氣味硼化酯類添加劑，兼具減摩與極壓抗磨損效能，可大幅提升潤滑脂高溫滴點。"
+  },
+  {
+    "product_name": "PX 4005",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用引擎機油",
+      "天然氣引擎機油",
+      "車用/卡車齒輪油",
+      "液壓油",
+      "壓縮機油",
+      "潤滑脂"
+    ],
+    "composition_zh": "無灰清淨分散劑（聚異丁烯單/雙琥珀醯亞胺 PIBSI, 1000 MW）",
+    "composition_en": "Ashless Dispersant (Polyisobutylene Mono/Bis-Succinimide - PIBSI, 1000 MW)",
+    "chemical_component": "無灰清淨分散劑\n（聚異丁烯單/雙琥珀醯亞胺 PIBSI, 1000 MW）",
+    "application_fields_zh": "車用引擎機油、天然氣引擎機油、車用/卡車齒輪油、抗磨液壓油、壓縮機油、潤滑脂",
+    "application_fields_en": "Engine Oils, Natural Gas Engine Oils, Automotive/Truck Gear Oils, Hydraulic Fluids, Compressor Oils, Greases",
+    "suggested_use_level_zh": "車用引擎機油: 5.0–15.0%\n車用/卡車齒輪油: 1.0–2.0%\n天然氣引擎機油: 2.0–10.0%\n液壓油 / 壓縮機油: 1.0–3.0%",
+    "suggested_use_level_en": "Engine Oils: 5.0–15.0%\nAutomotive/Truck Gear Oils: 1.0–2.0%\nNatural Gas Engine Oils: 2.0–10.0%\nHydraulic Fluids / Compressor Oils: 1.0–3.0%",
+    "properties": "無灰無氯型琥珀醯亞胺分散劑（1000 MW），具優良之低溫油泥與高溫積碳分散能力，廣泛用於各類潤滑油品及燃油清淨配方。"
+  },
+  {
+    "product_name": "PX 4006",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "車用引擎機油",
+      "天然氣引擎機油",
+      "車用/卡車齒輪油"
+    ],
+    "composition_zh": "硼化無灰清淨分散劑（硼化聚異丁烯琥珀醯亞胺 Borated PIBSI, 950 MW）",
+    "composition_en": "Borated Ashless Dispersant (Borated Polyisobutylene Succinimide, 950 MW)",
+    "chemical_component": "硼化無灰清淨分散劑\n（硼化聚異丁烯琥珀醯亞胺 Borated PIBSI, 950 MW）",
+    "application_fields_zh": "車用引擎機油、天然氣引擎機油、車用/卡車齒輪油",
+    "application_fields_en": "Engine Oils, Natural Gas Engine Oils, Automotive/Truck Gear Oils",
+    "suggested_use_level_zh": "車用引擎機油: 2.0–15.0%\n車用/卡車齒輪油: 1.0–2.0%\n天然氣引擎機油: 2.0–10.0%",
+    "suggested_use_level_en": "Engine Oils: 2.0–15.0%\nAutomotive/Truck Gear Oils: 1.0–2.0%\nNatural Gas Engine Oils: 2.0–10.0%",
+    "properties": "高階硼化無灰分散劑，同時具備優異之碳煙分散性、邊界潤滑抗磨損保護及橡膠油封相容性。"
+  }
+]

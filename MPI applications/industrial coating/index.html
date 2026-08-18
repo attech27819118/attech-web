@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Coating 工業塗料智能選型系統</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 99px;
+        }
+        .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50/60 text-slate-800 font-sans min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
+
+    <div class="max-w-6xl mx-auto px-4 py-10 sm:py-14">
+        <header class="mb-10 text-center relative">
+            <div class="absolute top-0 right-0 inline-flex p-0.5 bg-slate-200/70 rounded-lg backdrop-blur-sm">
+                <button onclick="switchLanguage('zh')" id="lang-zh-btn" class="px-3 py-1 text-xs font-semibold rounded-md shadow-sm bg-white text-slate-800 transition-all duration-200">中文</button>
+                <button onclick="switchLanguage('en')" id="lang-en-btn" class="px-3 py-1 text-xs font-medium rounded-md text-slate-600 hover:text-slate-900 transition-all duration-200">EN</button>
+            </div>
+
+            <h1 id="ui-title" class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl mb-3">工業塗料智能選型系統</h1>
+            <p id="ui-subtitle" class="text-slate-500 text-sm max-w-2xl mx-auto leading-relaxed sm:whitespace-nowrap text-center px-4">依據核心應用訴求與關鍵性能指標，為您精確匹配最佳化塗裝解決方案</p>
+        </header>
+
+        <section class="bg-white rounded-2xl border border-slate-200/60 shadow-sm p-6 mb-8 transition-all duration-300">
+            <h2 id="ui-step1" class="text-base font-bold mb-5 flex items-center text-indigo-600 tracking-wide">
+                <span class="flex items-center justify-center w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 text-xs font-black mr-2.5">1</span>
+                定義您的核心應用訴求
+            </h2>
+
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-2.5" id="category-roadmap">
+                <button onclick="selectCategory('all')" id="btn-all" class="cat-btn p-3 rounded-xl border border-indigo-600 bg-indigo-50/40 text-indigo-700 shadow-sm flex flex-col items-center justify-center min-h-[96px] transition-all duration-200 group">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-indigo-600"><i class="fa-solid fa-layer-group text-lg"></i></span>
+                    <span id="cat-all-text" class="text-xs font-semibold tracking-wide block line-clamp-2">全部產品</span>
+                </button>
+                 <button onclick="selectCategory('PTFE Altinative')" id="btn-PTFE Altinative" class="cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-slate-400"><i class="fa-solid fa-flask-vial text-lg"></i></span>
+                    <span id="cat-ptfe-text" class="text-xs font-medium tracking-wide block line-clamp-2 leading-tight">PTFE 替代</span>
+                </button>
+                <button onclick="selectCategory('耐刮')" id="btn-耐刮" class="cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-slate-400"><i class="fa-solid fa-wand-magic-sparkles text-lg"></i></span>
+                    <span id="cat-scratch-text" class="text-xs font-medium tracking-wide block line-clamp-2">耐刮</span>
+                </button>
+                <button onclick="selectCategory('耐磨')" id="btn-耐磨" class="cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-slate-400"><i class="fa-solid fa-shield-halved text-lg"></i></span>
+                    <span id="cat-abrasion-text" class="text-xs font-medium tracking-wide block line-clamp-2">耐磨</span>
+                </button>
+                <button onclick="selectCategory('透明')" id="btn-透明" class="cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-slate-400"><i class="fa-solid fa-eye text-lg"></i></span>
+                    <span id="cat-clear-text" class="text-xs font-medium tracking-wide block line-clamp-2">透明</span>
+                </button>
+                <button onclick="selectCategory('消光')" id="btn-消光" class="cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-slate-400"><i class="fa-solid fa-border-none text-lg"></i></span>
+                    <span id="cat-matting-text" class="text-xs font-medium tracking-wide block line-clamp-2">消光</span>
+                </button>
+                <button onclick="selectCategory('織紋')" id="btn-織紋" class="cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-slate-400"><i class="fa-solid fa-rug text-lg"></i></span>
+                    <span id="cat-texture-text" class="text-xs font-medium tracking-wide block line-clamp-2">織紋</span>
+                </button>
+                <button onclick="selectCategory('柔感')" id="btn-柔感" class="cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200">
+                    <span class="flex items-center justify-center h-6 mb-1.5 text-slate-400"><i class="fa-solid fa-feather text-lg"></i></span>
+                    <span id="cat-soft-text" class="text-xs font-medium tracking-wide block line-clamp-2">柔感</span>
+                </button>
+
+            </div>
+        </section>
+
+        <div class="w-full">
+            <div class="bg-white rounded-2xl border border-slate-200/60 shadow-sm p-6">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                    <h3 class="text-base font-bold text-slate-900">
+                        <span id="ui-match-title">符合篩選條件的產品</span> (<span id="match-count" class="text-indigo-600 font-extrabold">0</span>)
+                    </h3>
+                    <div class="text-xs text-slate-500 flex items-center gap-2">
+                        <span id="active-filter-badge" class="hidden text-[11px] bg-amber-50 text-amber-700 border border-amber-200/60 px-2 py-0.5 rounded font-medium"><i class="fa-solid fa-filter mr-1"></i><span id="ui-filter-active-text">已啟用指標篩選</span></span>
+                        <span id="ui-current-cat-prefix" class="text-slate-400">當前分類：</span><span id="current-cat-label" class="font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">全部產品</span>
+                    </div>
+                </div>
+
+                <div id="products-container" class="space-y-4">
+                    <div class="text-center py-16 text-slate-400">
+                        <i class="fa-solid fa-spinner fa-spin text-xl mb-3 text-indigo-500"></i>
+                        <p id="ui-loading-text" class="text-xs font-medium tracking-wide">正在載入產品資料庫...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-40">
+        <button onclick="toggleFilterModal(true)" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-5 rounded-full shadow-lg flex items-center gap-2 transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.98] group">
+            <div class="relative flex items-center justify-center">
+                <i class="fa-solid fa-sliders text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span id="badge-count" class="absolute -top-4 -right-4 bg-indigo-600 text-white text-[10px] font-black rounded-full h-4 w-4 flex items-center justify-center shadow-sm">0</span>
+            </div>
+            <span id="ui-adv-filter-btn" class="text-xs tracking-wide">進階指標篩選</span>
+        </button>
+    </div>
+
+    <div id="filter-modal" class="fixed inset-0 z-50 overflow-hidden hidden transition-all duration-300" role="dialog" aria-modal="true">
+        <div class="absolute inset-0 bg-slate-900/30 backdrop-blur-xs transition-opacity opacity-0 duration-300" id="modal-overlay" onclick="toggleFilterModal(false)"></div>
+
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10 transform translate-x-full transition-transform duration-300" id="modal-panel">
+            <div class="w-screen max-w-sm bg-white shadow-2xl flex flex-col border-l border-slate-100">
+                <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between bg-white">
+                    <h2 class="text-sm font-bold flex items-center text-slate-900">
+                        <i class="fa-solid fa-sliders text-indigo-500 mr-2"></i> <span id="ui-modal-title">進階指標篩選</span>
+                    </h2>
+                    <div class="flex items-center gap-3">
+                        <button onclick="resetFilters()" id="ui-modal-reset" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">重設全部</button>
+                        <button onclick="toggleFilterModal(false)" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg hover:bg-slate-50 transition-colors">
+                            <i class="fa-solid fa-xmark text-base"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex-1 overflow-y-auto px-5 py-4 custom-scrollbar space-y-5" id="filter-scroll-container">
+                    <div class="space-y-5" id="performance-filters"></div>
+                </div>
+
+                <div class="border-t border-slate-100 px-4 py-3.5 bg-white flex gap-3">
+                    <button onclick="toggleFilterModal(false)" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm text-center text-xs tracking-wide transition-colors">
+                        <span id="ui-modal-submit-prefix">查看結果</span> (<span id="modal-match-count">0</span> <span id="ui-modal-submit-suffix">個產品</span>)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 已更新：根據最新的 json 對應關係修改的分類資料[cite: 1, 2]
+        const categoryMap = {
+            "PTFE Altinative": ["MP-28AL", "MPP-611AL", "MicroKlear 418AL", "Superslip 6515AL", "PolyGlide 1226XF", "SuperGlide 1231", "PolyTuf 1229"],
+            "耐刮": ["Aquapoly 511","Aquapoly 250","Polysilk 750","MP-22XF"],
+            "耐磨": ["MPP-611XF","MPP-620VF","MPP-620XF"],
+            "透明": ["MicroKlear 116", "MicroKlear 418","Micromide 520"],
+            "消光": ["PropylMatte 31","PropylMatte 31 HD","Micropro 440W"],
+            "織紋": ["Propyltex 100S", "Propyltex 140S", "Propyltex 200S", "Propyltex 200SF", "Propyltex 270S", "Propyltex 270S-1518", "Propyltex 325S", "Propyltex 50", "Propyltex 20", "NyloTex 50", "NyloTex 100", "NyloTex 140", "NyloTex 200"],
+            "柔感": ["MicroTouch 800XF", "MicroTouch 800F"]
+        };
+
+
+        const featureConfig = {
+            "zh": {
+                "ptfe_alternative": "PTFE 替代性",
+                "scratch_resistance": "耐刮",
+                "abrasion_resistance": "耐磨",
+                "anti_gassing": "抗氣泡/脫氣性",
+                "block_resistance": "抗沾黏",
+                "matting_gloss_control": "消光",
+                "slip_lubricity": "滑爽/潤滑度",
+                "texture_structure": "織紋"
+            },
+            "en": {
+                "ptfe_alternative": "PTFE Alternative",
+                "scratch_resistance": "Scratch Resistance",
+                "abrasion_resistance": "Abrasion Resistance",
+                "anti_gassing": "Anti-gassing",
+                "block_resistance": "Block Resistance",
+                "matting_gloss_control": "Matting/Gloss Control",
+                "slip_lubricity": "Slip/Lubricity",
+                "texture_structure": "Texture/Structure"
+            }
+        };
+
+        const uiText = {
+            "zh": {
+                "title": "工業塗料智能選型系統",
+                "subtitle": "依據核心應用訴求與關鍵性能指標，為您精確匹配最佳化塗裝解決方案",
+                "step1": "<span class='flex items-center justify-center w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 text-xs font-black mr-2.5'>1</span>定義您的核心應用訴求 ",
+                "cat_all": "全系列產品",
+                "cat_texture": "織紋",
+                "cat_soft": "絲滑柔感",
+                "cat_clear": "高透光高光澤",
+                "cat_matting": "消光",
+                "cat_scratch": "耐刮",
+                "cat_abrasion": "耐磨",
+                "cat_ptfe": "PTFE 替代方案",
+                "match_title": "符合篩選條件的產品",
+                "filter_active": "已啟用指標篩選",
+                "current_cat_prefix": "當前分類：",
+                "loading": "正在載入產品資料庫...",
+                "adv_filter_btn": "進階指標篩選",
+                "modal_title": "進階指標篩選",
+                "modal_reset": "重設全部",
+                "modal_submit_prefix": "查看結果",
+                "modal_submit_suffix": "個產品",
+                "no_limit": "不限",
+                "score_suffix": "分",
+                "best_label": "極佳",
+                "no_product": "沒有找到符合當前篩選條件的產品",
+                "no_product_sub": "請嘗試放寬或重設進階性能指標。",
+                "system_type_title": "推薦系統",
+                "app_fields_title": "適用環境與場景",
+                "melt_point": "熔點",
+                "density": "密度",
+                "mean_size": "平均粒徑 D50",
+                "max_size": "最大粒徑 D99",
+                "official_doc": "技術文檔 (TDS)",
+                "suggested_use_level_title": "建議添加量",
+                "tech_data":"技術資料",
+                "example":"案例",
+                "actual_case_title": "大廠採用實績",
+                "no_case": "暫無相關採用數據"
+            },
+            "en": {
+                "title": "Industrial Coating Solution Finder",
+                "subtitle": "Precisely match optimal coating formulations based on application requirements and performance metrics.",
+                "step1": "<span class='flex items-center justify-center w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 text-xs font-black mr-2.5'>1</span>Define Your Core Application Requirement",
+                "cat_all": "All Products",
+                "cat_texture": "Texture",
+                "cat_soft": "Soft Touch",
+                "cat_clear": "Clear/Gloss",
+                "cat_matting": "Matting",
+                "cat_scratch": "Scratch/Abrasion",
+                "cat_ptfe": "PTFE Alternative",
+                "match_title": "Matching Products",
+                "filter_active": "Metric Filters Active",
+                "current_cat_prefix": "Category: ",
+                "loading": "Loading product database...",
+                "adv_filter_btn": "Advanced Metrics",
+                "modal_title": "Advanced Filters",
+                "modal_reset": "Reset All",
+                "modal_submit_prefix": "View Results",
+                "modal_submit_suffix": "Products",
+                "no_limit": "Any",
+                "score_suffix": " pts",
+                "best_label": "Excellent",
+                "no_product": "No matching products found",
+                "no_product_sub": "Please try to loosen or reset the advanced metric sliders.",
+                "system_type_title": "Recommended System Type",
+                "app_fields_title": "Application Fields",
+                "melt_point": "Melt Point",
+                "density": "Density",
+                "mean_size": "Mean Size D50",
+                "max_size": "Max Size D99",
+                "official_doc": "Technical Data (TDS)",
+                "suggested_use_level_title": "Suggested Use Level",
+                "tech_data":"Technical Data",
+                "example":"example",
+                "actual_case_title": "Key Accounts Reference",
+                "no_case": "No reference data available"
+            }
+        };
+
+        let allProducts = [];
+        let currentCategory = 'all';
+        let activeFilters = {};
+        let currentLang = 'zh';
+
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('industrial coatings.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('無法讀取 JSON 檔案，請檢查路徑。');
+                    return response.json();
+                })
+                .then(data => {
+                    allProducts = data;
+                    initFilters();
+                    updateStaticUI();
+                    renderProducts();
+                })
+                .catch(error => {
+                    document.getElementById('products-container').innerHTML = `
+                        <div class="p-5 bg-rose-50 text-rose-700 rounded-xl text-center border border-rose-100 text-xs font-medium">
+                            <i class="fa-solid fa-circle-exclamation text-sm mb-1.5 block"></i>
+                            <p>${error.message}</p>
+                        </div>
+                    `;
+                });
+        });
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            const zhBtn = document.getElementById('lang-zh-btn');
+            const enBtn = document.getElementById('lang-en-btn');
+
+            if (lang === 'zh') {
+                zhBtn.className = "px-3 py-1 text-xs font-bold rounded-md shadow-sm bg-white text-slate-800 transition-all duration-200";
+                enBtn.className = "px-3 py-1 text-xs font-medium rounded-md text-slate-600 hover:text-slate-900 transition-all duration-200";
+            } else {
+                zhBtn.className = "px-3 py-1 text-xs font-medium rounded-md text-slate-600 hover:text-slate-900 transition-all duration-200";
+                enBtn.className = "px-3 py-1 text-xs font-bold rounded-md shadow-sm bg-white text-slate-800 transition-all duration-200";
+            }
+
+            updateStaticUI();
+
+            const currentFilterValues = { ...activeFilters };
+            initFilters();
+            activeFilters = currentFilterValues;
+
+            Object.entries(activeFilters).forEach(([key, val]) => {
+                updateFilterSliderDOM(key, val);
+            });
+            renderProducts();
+        }
+
+        function updateStaticUI() {
+            const t = uiText[currentLang];
+            document.getElementById('ui-title').innerText = t.title;
+            document.getElementById('ui-subtitle').innerText = t.subtitle;
+            document.getElementById('ui-step1').innerHTML = t.step1;
+
+            document.getElementById('cat-all-text').innerText = t.cat_all;
+            document.getElementById('cat-texture-text').innerText = t.cat_texture;
+            document.getElementById('cat-soft-text').innerText = t.cat_soft;
+            document.getElementById('cat-clear-text').innerText = t.cat_clear;
+            document.getElementById('cat-matting-text').innerText = t.cat_matting;
+            document.getElementById('cat-scratch-text').innerText = t.cat_scratch;
+            document.getElementById('cat-ptfe-text').innerText = t.cat_ptfe;
+
+            document.getElementById('ui-match-title').innerText = t.match_title;
+            document.getElementById('ui-filter-active-text').innerText = t.filter_active;
+            document.getElementById('ui-current-cat-prefix').innerText = t.current_cat_prefix;
+            document.getElementById('ui-adv-filter-btn').innerText = t.adv_filter_btn;
+            document.getElementById('ui-modal-title').innerText = t.modal_title;
+            document.getElementById('ui-modal-reset').innerText = t.modal_reset;
+            document.getElementById('ui-modal-submit-prefix').innerText = t.modal_submit_prefix;
+            document.getElementById('ui-modal-submit-suffix').innerText = t.modal_submit_suffix;
+
+            if (currentCategory === 'all') {
+                document.getElementById('current-cat-label').innerText = t.cat_all;
+            } else {
+                if (currentLang === 'en') {
+                    const catKeyMap = {  "織紋":"cat_texture", "柔感":"cat_soft", "透明":"cat_clear", "消光":"cat_matting","耐磨":"cat_abrasion", "耐刮":"cat_scratch", "PTFE Altinative":"cat_ptfe" };
+                    document.getElementById('current-cat-label').innerText = t[catKeyMap[currentCategory]] || currentCategory;
+                } else {
+                    document.getElementById('current-cat-label').innerText = currentCategory;
+                }
+            }
+        }
+
+        function toggleFilterModal(open) {
+            const modal = document.getElementById('filter-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const panel = document.getElementById('modal-panel');
+            const body = document.body;
+
+            if (open) {
+                modal.classList.remove('hidden');
+                body.classList.add('overflow-hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    overlay.classList.add('opacity-100');
+                    panel.classList.remove('translate-x-full');
+                    panel.classList.add('translate-x-0');
+                }, 10);
+            } else {
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                panel.classList.remove('translate-x-0');
+                panel.classList.add('translate-x-full');
+                body.classList.remove('overflow-hidden');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        function initFilters() {
+            const filterContainer = document.getElementById('performance-filters');
+            filterContainer.innerHTML = '';
+            const config = featureConfig[currentLang];
+            const t = uiText[currentLang];
+
+            Object.entries(config).forEach(([key, label]) => {
+                activeFilters[key] = activeFilters[key] || 0;
+
+                const filterItem = document.createElement('div');
+                filterItem.className = 'border-b border-slate-100 pb-4 filter-row';
+                filterItem.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-xs font-semibold text-slate-700 filter-label">${label}</label>
+                        <span id="val-${key}" class="text-[10px] font-bold bg-slate-100 px-1.5 py-0.5 rounded text-slate-500 filter-value-badge transition-all">${t.no_limit}</span>
+                    </div>
+                    <input type="range" min="0" max="3" value="${activeFilters[key]}" step="1" id="slider-${key}"
+                        class="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600 filter-slider transition-all"
+                        oninput="updateFilterValue('${key}', this.value)">
+                    <div class="flex justify-between text-[9px] text-slate-400 px-0.5 mt-1">
+                        <span>${t.no_limit}</span><span>1</span><span>2</span><span>3 (${t.best_label})</span>
+                    </div>
+                `;
+                filterContainer.appendChild(filterItem);
+            });
+
+            const hasActiveFilter = Object.values(activeFilters).some(score => score > 0);
+            const topBadge = document.getElementById('active-filter-badge');
+            if (hasActiveFilter) {
+                topBadge.classList.remove('hidden');
+            } else {
+                topBadge.classList.add('hidden');
+            }
+        }
+
+        function updateFilterValue(key, val) {
+            activeFilters[key] = parseInt(val);
+            updateFilterSliderDOM(key, val);
+
+            const hasActiveFilter = Object.values(activeFilters).some(score => score > 0);
+            const topBadge = document.getElementById('active-filter-badge');
+            if (hasActiveFilter) {
+                topBadge.classList.remove('hidden');
+            } else {
+                topBadge.classList.add('hidden');
+            }
+
+            renderProducts();
+        }
+
+        function updateFilterSliderDOM(key, val) {
+            const badge = document.getElementById(`val-${key}`);
+            const slider = document.getElementById(`slider-${key}`);
+            const t = uiText[currentLang];
+
+            if (slider) slider.value = val;
+            if (!badge) return;
+
+            if(val == 0) {
+                badge.innerText = t.no_limit;
+                badge.className = 'text-[10px] font-bold bg-slate-100 px-1.5 py-0.5 rounded text-slate-500 filter-value-badge';
+            } else {
+                badge.innerText = `≥ ${val}${t.score_suffix}`;
+                badge.className = 'text-[10px] font-bold bg-indigo-50 px-1.5 py-0.5 rounded text-indigo-600 border border-indigo-100 filter-value-badge';
+            }
+        }
+
+        function selectCategory(cat) {
+            currentCategory = cat;
+
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.className = 'cat-btn p-3 rounded-xl border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 flex flex-col items-center justify-center min-h-[96px] transition-all duration-200';
+            });
+
+            const activeBtn = document.getElementById(`btn-${cat}`);
+            if (activeBtn) {
+                activeBtn.className = 'cat-btn p-3 rounded-xl border border-indigo-600 bg-indigo-50/40 text-indigo-700 shadow-sm flex flex-col items-center justify-center min-h-[96px] transition-all duration-200 font-semibold';
+            }
+
+            const t = uiText[currentLang];
+            if (cat === 'all') {
+                document.getElementById('current-cat-label').innerText = t.cat_all;
+            } else {
+                if (currentLang === 'en') {
+                    const catKeyMap = {  "織紋":"cat_texture", "柔感":"cat_soft", "透明":"cat_clear", "消光":"cat_matting", "耐刮磨":"cat_scratch", "PTFE Altinative":"cat_ptfe" };
+                    document.getElementById('current-cat-label').innerText = t[catKeyMap[cat]] || cat;
+                } else {
+                    document.getElementById('current-cat-label').innerText = cat;
+                }
+            }
+            renderProducts();
+        }
+
+        function resetFilters() {
+            activeFilters = {};
+            initFilters();
+            selectCategory('all');
+            document.getElementById('filter-scroll-container').scrollTop = 0;
+        }
+
+        function renderProducts() {
+            const container = document.getElementById('products-container');
+            const t = uiText[currentLang];
+            const config = DATA_CONFIGS[currentProductLine];
+            if(!config) return;
+
+            const filtered = allProducts.filter(p => {
+                if (currentCategory !== 'all') {
+                    const allowed = config.categoryMap[currentCategory] || [];
+                    if (!allowed.includes(p.product_name)) return false;
+                }
+                for (const [key, minScore] of Object.entries(activeFilters)) {
+                    if (minScore > 0) {
+                        const jsonKey = config.ratingKeyMap[key] || key;
+                        const score = p.performance_ratings ? (p.performance_ratings[jsonKey] || 0) : 0;
+                        if (score < minScore) return false;
+                    }
+                }
+                return true;
+            });
+
+            document.getElementById('match-count').innerText = filtered.length;
+            document.getElementById('badge-count').innerText = filtered.length;
+            document.getElementById('modal-match-count').innerText = filtered.length;
+
+            const hasActiveFilter = Object.values(activeFilters).some(s => s > 0);
+            document.getElementById('active-filter-badge').classList.toggle('hidden', !hasActiveFilter);
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="text-center py-16 border border-dashed rounded-2xl text-slate-400 text-xs"><p class="font-bold">${t.no_product}</p><p class="mt-1 text-slate-400">${t.no_product_sub}</p></div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(p => {
+                const badges = Object.entries(featureConfig[currentLang])
+                    .map(([key, label]) => {
+                        const jsonKey = config.ratingKeyMap[key] || key;
+                        const score = p.performance_ratings ? (p.performance_ratings[jsonKey] || 0) : 0;
+                        if (score === 0) return '';
+                        const colors = ['', 'bg-slate-50 text-slate-600 border border-slate-200', 'bg-indigo-50 text-indigo-700 border border-indigo-100', 'bg-emerald-50 text-emerald-700 font-bold border border-emerald-100'];
+                        return `<span class="text-[10px] px-2 py-0.5 rounded-md ${colors[score]}">${label} [${score}]</span>`;
+                    }).join('');
+
+                const systemType = p['recommended_system_type_' + currentLang] || p.recommended_system_type || '—';
+                const appFields = p['application_fields_' + currentLang] || p.application_fields || '—';
+
+                // 🛠️ 核心修正邏輯：將字串或陣列安全拆分為指標大廠標籤
+                let caseArray = [];
+                if (p.examples && p.examples !== 'N/A') {
+                    if (Array.isArray(p.examples)) {
+                        caseArray = p.examples;
+                    } else if (typeof p.examples === 'string') {
+                        // 用逗號拆分，並過濾掉空白或多餘的逗號
+                        caseArray = p.examples.split(',').map(item => item.trim()).filter(item => item.length > 0);
+                    }
+                }
+
+                const caseBadges = caseArray.length > 0
+                    ? caseArray.map(ex => `
+                        <span class="inline-flex items-center text-[10px] px-2 py-0.5 bg-slate-100 text-slate-600 border border-slate-200/70 rounded-md font-medium shadow-2xs">
+                            <i class="fa-solid fa-check text-[9px] text-emerald-600 mr-1.5"></i>${ex}
+                        </span>
+                    `).join('')
+                    : `<span class="text-[11px] text-slate-400 italic font-normal">—</span>`;
+
+                return `
+                    <div class="border border-slate-200/60 hover:border-indigo-200 hover:shadow-md rounded-2xl p-5 bg-white transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-4">
+                            <div>
+                                <div class="flex items-center gap-2 flex-wrap mb-2">
+                                    <h4 class="text-lg font-bold text-slate-900">${p.product_name}</h4>
+                                    <span class="text-[10px] px-1.5 py-0.5 bg-slate-100 text-slate-500 rounded border">${p['composition_' + currentLang] || p.composition_zh}</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    ${p.website && p.website !== 'N/A' ? `
+                                        <a href="${p.website}" target="_blank" class="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] text-indigo-600 bg-indigo-50 border border-indigo-100 rounded hover:bg-indigo-100 transition-colors">
+                                            <i class="fa-solid fa-file-lines mr-1"></i>${t.official_doc}
+                                        </a>
+                                    ` : ''}
+                                </div>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-100 px-3 py-1 rounded-xl text-right min-w-[120px]">
+                                <span class="text-[10px] text-slate-400 block">${t.suggested_use_level_title}</span>
+                                <span class="text-xs font-bold text-slate-700">${p['suggested_use_level_' + currentLang] || p.suggested_use_level}</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-3 bg-slate-50/50 rounded-xl text-xs mb-4 border border-slate-100/50 text-slate-600">
+                            <div><span class="text-slate-400 text-[10px] block">${t.melt_point} (°C)</span><strong>${p.typical_properties?.melt_point_c || '—'}</strong></div>
+                            <div><span class="text-slate-400 text-[10px] block">${t.density} (g/cc)</span><strong>${p.typical_properties?.density_g_cc_25c || '—'}</strong></div>
+                            <div><span class="text-slate-400 text-[10px] block">${t.mean_size} (µm)</span><strong>${p.typical_properties?.mean_particle_size_um || '—'}</strong></div>
+                            <div><span class="text-slate-400 text-[10px] block">${t.max_size} (µm)</span><strong>${p.typical_properties?.max_particle_size_um || '—'}</strong></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-3">
+                            <div class="bg-slate-50/30 p-2.5 rounded-xl border border-slate-100">
+                                <p class="font-bold text-slate-700 mb-0.5 flex items-center gap-1"><i class="fa-solid fa-circle-check text-emerald-600 text-[10px]"></i> ${t.system_type_title}</p>
+                                <p class="text-slate-500 text-[11px]">${systemType === 'N/A' ? '—' : systemType}</p>
+                            </div>
+                            <div class="bg-slate-50/30 p-2.5 rounded-xl border border-slate-100">
+                                <p class="font-bold text-slate-700 mb-0.5 flex items-center gap-1"><i class="fa-solid fa-wand-magic-sparkles text-indigo-500 text-[10px]"></i> ${t.app_fields_title}</p>
+                                <p class="text-slate-500 text-[11px]">${appFields === 'N/A' ? '—' : appFields}</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50/30 p-2.5 rounded-xl border border-slate-100 mb-4">
+                            <p class="font-bold text-slate-700 text-[11px] mb-1.5 flex items-center gap-1.5">
+                                <i class="fa-solid fa-building text-slate-400 text-[10px]"></i>
+                                ${t.actual_case_title || (currentLang === 'zh' ? '指標大廠採用實績' : 'Key Accounts Reference')}
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                ${caseBadges}
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">${badges || '<span class="text-[11px] text-slate-400 italic">No traits</span>'}</div>
+                    </div>`;
+            }).join('');
+        }
+        // 開啟 PDF 彈窗
+function openPdfModal(title, pdfUrl) {
+    const modal = document.getElementById('pdfModal');
+    const modalTitle = document.getElementById('pdfModalTitle');
+    const iframe = document.getElementById('pdfIframe');
+
+    // 設定標題與 PDF 路徑
+    modalTitle.textContent = title;
+
+    // 這裡的小技巧：加入 #toolbar=1 或 0 可以控制是否顯示 PDF 瀏覽器的工具列
+    iframe.src = pdfUrl;
+
+    // 顯示彈窗 (移除 Tailwind 的 hidden 類別)
+    modal.classList.remove('hidden');
+    // 防止背景網頁跟著滾動
+    document.body.style.overflow = 'hidden';
+}
+// 在你的 renderProducts 迴圈中，處理技術資料按鈕：
+function getTechDataBtn(p, t) {
+    if (!p.tech_data_url || p.tech_data_url === 'N/A') return '';
+
+    // 檢查是否為 PDF 檔案
+    if (p.tech_data_url.toLowerCase().endsWith('.pdf')) {
+        return `
+            <button onclick="openPdfModal('${p.product_name} - ${t.tech_data}', '${p.tech_data_url}')" class="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] text-emerald-600 bg-emerald-50 border border-emerald-100 rounded hover:bg-emerald-100 transition-colors">
+                <i class="fa-solid fa-window-restore"></i> 預覽文件
+            </button>
+        `;
+    } else {
+        // 一般的外網連結連結
+        return `
+            <a href="${p.tech_data_url}" target="_blank" class="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] text-indigo-600 bg-indigo-50 border border-indigo-100 rounded hover:bg-indigo-100 transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> ${t.tech_data}
+            </a>
+        `;
+    }
+}
+
+// 關閉 PDF 彈窗
+function closePdfModal() {
+    const modal = document.getElementById('pdfModal');
+    const iframe = document.getElementById('pdfIframe');
+
+    // 隱藏彈窗
+    modal.classList.add('hidden');
+    // 清空 src，釋放記憶體並停止載入
+    iframe.src = '';
+    // 恢復背景網頁滾動
+    document.body.style.overflow = '';
+}
+
+// 選擇性加入：點擊彈窗外部陰影處也能關閉
+document.getElementById('pdfModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closePdfModal();
+    }
+});
+    </script>
+    <div id="pdfModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 animate-fade-in">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-5xl h-[85vh] flex flex-col overflow-hidden border border-slate-100">
+
+        <div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-file-pdf text-red-500 text-lg"></i>
+                <h3 id="pdfModalTitle" class="font-bold text-slate-800 text-sm sm:text-base">技術文件預覽</h3>
+            </div>
+            <button onclick="closePdfModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:bg-slate-200 hover:text-slate-600 transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 bg-slate-100 relative p-2">
+            <iframe id="pdfIframe" src="" class="w-full h-full rounded-lg border-0 bg-white" type="application/pdf"></table>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

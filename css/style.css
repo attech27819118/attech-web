@@ -1,0 +1,280 @@
+/* ==========================================
+ * 1. 統一字體與文字系統 (Typography System)
+ * ========================================== */
+:root {
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-base-size: 15px;
+
+    /* 字體大小階層 */
+    --text-xs: 0.75rem; /* 11.25px */
+    --text-sm: 0.875rem; /* 13.125px */
+    --text-base: 1rem; /* 15px */
+    --text-lg: 1.125rem; /* 16.875px */
+    --text-xl: 1.25rem; /* 18.75px */
+    --text-2xl: 1.5rem; /* 22.5px */
+    --text-3xl: 1.875rem; /* 28.125px */
+    --text-4xl: 2.25rem; /* 33.75px */
+
+    /* 字重 */
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+    --weight-extrabold: 800;
+}
+
+html {
+    scroll-behavior: auto;
+    font-size: var(--font-base-size);
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    font-weight: var(--weight-normal);
+    line-height: 1.5;
+}
+
+/* ==========================================
+ * 2. 搜尋跳轉高亮標示（清爽淺藍底色）
+ * ========================================== */
+/* 目標產品列淺藍底色標示 */
+tr.row-target-highlight {
+    background-color: #dbeafe !important; /* 淺藍底色 (Tailwind blue-100) */
+    transition: background-color 0.3s ease;
+}
+
+/* 凍結欄 (第一欄 sticky) 同步變為淺藍底 */
+tr.row-target-highlight td,
+tr.row-target-highlight td:first-child {
+    background-color: #dbeafe !important;
+}
+
+/* 左側目錄選中項目的樣式 (與圖片一致) */
+.dir-node-active {
+    background-color: #dbeafe !important; /* 淺藍底 */
+    color: #1e3a8a !important;            /* 深藍字 */
+    font-weight: 700 !important;
+    border-radius: 0.375rem;
+}
+
+
+/* ==========================================
+ * 3. 語意化字體與字重 Utility Classes
+ * ========================================== */
+.f-size-xs {
+    font-size: var(--text-xs);
+}
+
+.f-size-sm {
+    font-size: var(--text-sm);
+}
+
+.f-size-base {
+    font-size: var(--text-base);
+}
+
+.f-size-lg {
+    font-size: var(--text-lg);
+}
+
+.f-size-xl {
+    font-size: var(--text-xl);
+}
+
+.f-size-2xl {
+    font-size: var(--text-2xl);
+}
+
+.f-size-3xl {
+    font-size: var(--text-3xl);
+}
+
+.f-size-4xl {
+    font-size: var(--text-4xl);
+}
+
+.f-weight-normal {
+    font-weight: var(--weight-normal);
+}
+
+.f-weight-medium {
+    font-weight: var(--weight-medium);
+}
+
+.f-weight-bold {
+    font-weight: var(--weight-bold);
+}
+
+.f-weight-extrabold {
+    font-weight: var(--weight-extrabold);
+}
+
+/* 元件專用字體樣式 */
+.nav-btn {
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+}
+
+.btn-view-specs {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+}
+
+/* 限制全站最大寬度，適度留白 */
+.optimized-container {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 自訂平滑滾動條 */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 99px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.tab-content {
+    display: none;
+    opacity: 1;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.attech-accent {
+    border-top: 3px solid #1e3a8a;
+}
+
+.row-expanded {
+    border-left: 3px solid #2563eb !important;
+    background-color: #eff6ff !important;
+}
+
+.fallback-img {
+    position: relative;
+    display: inline-block;
+}
+
+.fallback-img::after {
+    content: attr(alt);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #334155;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    text-align: center;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+.grid-auto-partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.75rem;
+}
+
+.grid-auto-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+/* 緊湊型 Sticky 表格 */
+.table-container {
+    width: 100%;
+    max-height: 75vh;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 0.375rem;
+    font-size: var(--text-sm);
+}
+
+.table-container table {
+    width: 100% !important;
+    table-layout: fixed;
+}
+
+@media (max-width: 767px) {
+    .table-container table {
+        width: max-content !important;
+        min-width: 100% !important;
+    }
+}
+
+.sticky-table table th {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: #f8fafc !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    padding: 0.5rem 0.625rem;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+}
+
+.sticky-table table td {
+    padding: 0.5rem 0.625rem;
+    font-size: var(--text-sm);
+    font-weight: var(--weight-normal);
+}
+
+.sticky-table table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.08);
+}
+
+.sticky-table table th:first-child {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    background-color: #f8fafc !important;
+}
+
+.sticky-table tr.row-expanded td:first-child {
+    background-color: #eff6ff !important;
+}
+
+.sticky-table tr:hover td:first-child {
+    background-color: #f0f9ff;
+}
+
+.sticky-table table td.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .4;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

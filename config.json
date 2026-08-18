@@ -1,0 +1,208 @@
+{
+  "mpi": {
+    "brandName": "Micro Powders",
+    "masterPath": "./json/mpi/mpiall.json",
+    "files": [
+      {
+        "key": "ptfe",
+        "titleZh": "PTFE 取代",
+        "titleEn": "PTFE Alternative"
+      },
+      {
+        "key": "powder",
+        "titleZh": "粉體塗料",
+        "titleEn": "Powder Coating"
+      },
+      {
+        "key": "industrial",
+        "titleZh": "工業塗料",
+        "titleEn": "Industrial Coating"
+      },
+      {
+        "key": "ink",
+        "titleZh": "油墨",
+        "titleEn": "Energy Curable Inks & OPVs"
+      },
+      {
+        "key": "industrial_floor",
+        "titleZh": "地板塗料",
+        "titleEn": "Industrial Floor Coatings"
+      },
+      {
+        "key": "wood",
+        "titleZh": "木器漆",
+        "titleEn": "Wood Coatings"
+      },
+      {
+        "key": "leather",
+        "titleZh": "皮革塗料",
+        "titleEn": "Leather Coatings"
+      },
+      {
+        "key": "automotive_polishes",
+        "titleZh": "汽車蠟",
+        "titleEn": "Automotive Polishes"
+      }
+    ]
+  },
+  "dorfketal": {
+    "brandName": "Dorf Ketal",
+    "files": [
+      {
+        "key": "tyzor",
+        "jsonPath": "./json/dorfketal/tyzor.json",
+        "titleZh": "Tyzor® 鈦/鋯酸酯全系列",
+        "titleEn": "Tyzor® Titanates & Zirconates",
+        "categoryMap": {
+          "PET/PBT 催化劑": "PET/PBT Catalyst",
+          "通用催化劑": "Catalyst",
+          "膠黏劑與密封膠": "Adhesive and Sealant",
+          "油墨": "Ink",
+          "塗料": "Coating",
+          "玻璃": "Glass",
+          "防腐蝕保護": "Corrosion Protection"
+        }
+      },
+      {
+        "key": "px",
+        "jsonPath": "./json/dorfketal/px.json",
+        "titleZh": "PX 潤滑油添加劑",
+        "titleEn": "PX Lubricant Additives",
+        "categoryMap": {
+          "車用引擎機油": "engine_oil",
+          "車用/卡車齒輪油": "automotive_truck_gear_oils",
+          "天然氣引擎機油": "natural_gas_engine_oils",
+          "噴射渦輪發動機油": "jet_turbine_oils",
+          "工業齒輪油": "industrial_gear_oils",
+          "液壓油": "hydraulic_fluids",
+          "壓縮機油": "compressor_oils",
+          "滑道油/導軌油": "slideways_ways_oils",
+          "循環油": "circulating_oils",
+          "潤滑脂": "greases",
+          "金屬切削液": "metal_removal_fluids",
+          "金屬成型加工油": "metal_forming_lubricants"
+        }
+      },
+      {
+        "key": "chain",
+        "jsonPath": "./json/dorfketal/chainextender.json",
+        "titleZh": "擴鏈劑",
+        "titleEn": "Chain Extender",
+        "categoryMap": {
+          "聚脲 Polyurea": "Polyurea",
+          "聚氨酯Polyurethane": "Polyurethane",
+          "環氧 Epoxy": "Epoxy"
+        }
+      }
+    ]
+  },
+  "orion": {
+    "brandName": "Orion",
+    "files": [
+      {
+        "key": "coating",
+        "jsonPath": "./json/orion/coating.json",
+        "titleZh": "Orion 塗料碳黑",
+        "titleEn": "Orion Coatings Carbon Black",
+        "categoryMap": {
+          "汽車塗料": "automotive_coatings",
+          "電著塗料": "electro_deposition_coatings",
+          "一般工業塗料": "general_industrial_coating",
+          "金屬漆": "metallics",
+          "建築塗料": "decorative_coating",
+          "濕式 PU 著色": "wet_pu_coloring",
+          "防靜電與導電塗料": "antistatic_and_conductive_coating",
+          "溶劑型": "solvent_borne",
+          "水性": "waterborne",
+          "粉體塗料": "powder_coating"
+        }
+      },
+      {
+        "key": "ink_impact",
+        "jsonPath": "./json/orion/Inkandimpactprinting.json",
+        "titleZh": "Orion 油墨碳黑",
+        "titleEn": "Orion Inks & Non-Impact Printing Carbon Black",
+        "categoryMap": {
+          "單張紙凸版油墨": "sheetfed_letterpress",
+          "熱固性油墨": "heatset",
+          "冷固性油墨": "coldset",
+          "出版凹版油墨": "publication_gravure_inks",
+          "溶劑型液態油墨": "liquid_inks_solvent_based",
+          "水性液態油墨": "liquid_inks_water_based",
+          "絲網印刷油墨": "screen_inks",
+          "UV 固化油墨": "uv_curing_inks",
+          "UV 噴墨油墨": "uv_curing_inkjet_inks",
+          "水性噴墨油墨": "aquous_inkjet_inks",
+          "非水性噴墨油墨": "non-aquous_inkjet_inks",
+          "碳粉": "toner"
+        }
+      }
+    ]
+  },
+  "others": {
+    "brandName": "Others",
+    "files": [
+      {
+        "key": "coating_additive",
+        "jsonPath": "./json/others/coating_additive.json",
+        "titleZh": "粉體塗料助劑",
+        "titleEn": "Powder Coating Additives",
+        "categoryMap": {
+          "砂紋劑/紋理劑": "Texturing Agent / Wrinkle Agent",
+          "室外消光劑": "Outdoor Matting Agent",
+          "附著力改進劑": "Adhesion Promoter",
+          "增硬劑": "Hardening Agent"
+        }
+      },
+      {
+        "key": "matting_agent",
+        "jsonPath": "./json/others/matting_agent.json",
+        "titleZh": "消光粉",
+        "titleEn": "Matting Agent",
+        "categoryMap": {
+          "表面處理": "Surface Treatment",
+          "無表面處理": "No Surface Treatment"
+        }
+      },
+      {
+        "key": "maleic_acid_resin",
+        "jsonPath": "./json/others/maleic_acid_resin.json",
+        "titleZh": "馬林酸樹脂",
+        "titleEn": "Maleic Acid Resin",
+        "categoryMap": {
+          "馬林酸樹脂": "Maleic Acid Resin",
+          "改質馬林酸樹脂": "Modified Maleic Acid Resin",
+          "醇溶型馬林酸樹脂": "Alcohol-Soluble Maleic Acid Resin",
+          "酯化松香": "Esterified Rosin",
+          "松香季戊四醇酯": "Pentaerythritol Ester of Rosin",
+          "松香改質馬林酸樹脂": "Rosin-Modified Maleic Acid Resin"
+        }
+      },
+      {
+        "key": "silane",
+        "jsonPath": "./json/others/silane.json",
+        "titleZh": "矽烷偶合劑",
+        "titleEn": "Silane Coupling Agent",
+        "categoryMap": {
+          "Dynasylan": "dynasylan",
+          "Dynasylan Sivo": "dynasylan_sivo",
+          "Hydrosil": "hydrosil"
+        }
+      },
+      {
+        "key": "cpo_adhesion_promoter",
+        "jsonPath": "./json/others/cpo_adhesion_promoter.json",
+        "titleZh": "密著促進劑(氯系)",
+        "titleEn": "CPO Adhesion Promoter  ",
+        "categoryMap": {}
+      },
+      {
+        "key": "adhesion_promoter",
+        "jsonPath": "./json/others/adhesion_promoter.json",
+        "titleZh": "密著促進劑(非氯系)",
+        "titleEn": "Adhesion Promoter  ",
+        "categoryMap": {}
+      }
+    ]
+  }
+}

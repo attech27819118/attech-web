@@ -1,0 +1,543 @@
+{
+  "GraphShield 730": {
+    "Typical_Properties": {
+      "Melt_Point_C": "108-113",
+      "Density_g_cc_25C": "1.24",
+      "Mean_Particle_Size_um": "8.0-12.0",
+      "Max_Particle_Size_um": "31.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Graphene/synthetic wax",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Powder coatings, industrial coatings.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Subtly adapt your tone": "",
+      "Slip and Lubricity": "",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": "Improves corrosion resistance on bare and treated cold rolled steel (CRS) when formulated with titanium dioxide or other inorganic pigments. 1% typically reduces mm creep by 25%"
+    }
+  },
+  "MicroTex 580": {
+    "Typical_Properties": {
+      "Melt_Point_C": "",
+      "Density_g_cc_25C": "1.45",
+      "Mean_Particle_Size_um": "",
+      "Max_Particle_Size_um": "105 (140 mesh)"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Biopolymer",
+      "Suggested_Use_Level": "3.0-7.0% (depending on the desired level of texture)",
+      "Recommended_System_Type": "Powder coatings.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "PTFE (PFAS) free",
+      "Scratch and Abrasion Resistance": "",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "matte polyester/acrylic system",
+      "Slip and Lubricity": "",
+      "Texture and Structure": "Imparts a uniform sandpaper-like surface texture when formulated in a matte polyester/acrylic system. In polyester/epoxy and polyester/HAA systems, provides a smoother, scattered granular surface texture",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MicroTex 950": {
+    "Typical_Properties": {
+      "Melt_Point_C": "",
+      "Density_g_cc_25C": "1.22",
+      "Mean_Particle_Size_um": "",
+      "Max_Particle_Size_um": "74 (200 mesh)"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Modified polyolefin",
+      "Suggested_Use_Level": "4.0-6.0% (depending on the desired gloss level)",
+      "Recommended_System_Type": "Powder coatings.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "PTFE (PFAS) free. Can provide PTFE-like texturing with low gloss",
+      "Scratch and Abrasion Resistance": "",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "gloss reduction at 4-6% dosage. Best results for single digit gloss achieved at 6%",
+      "Slip and Lubricity": "",
+      "Texture and Structure": "Provides uniform fine texturing",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "Micro Touch 800XF": {
+    "Typical_Properties": {
+      "Melt_Point_C": "",
+      "Density_g_cc_25C": "1.05",
+      "Mean_Particle_Size_um": "6.0-9.0",
+      "Max_Particle_Size_um": "31.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Aliphatic polyurethane",
+      "Suggested_Use_Level": "2.0-10.0% (higher amounts when greater tactile effects are desired)",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic, vinyl and leather); architectural wall and trim paints; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; soft touch coatings; floor coatings; visual effects.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "improving burnish, scratch and mar resistance. Improves burnish and abrasion resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "Effective gloss reduction",
+      "Slip and Lubricity": "",
+      "Texture and Structure": "Provide different tactile effects ranging from satiny smooth to rubbery to leathery in properly formulated coatings. Different particle sizes available to create a unique surface \"touch\"",
+      "Soft Touch": "soft touch coatings",
+      "Corrosion Resistance": ""
+    }
+  },
+  "Micro Touch 800F": {
+    "Typical_Properties": {
+      "Melt_Point_C": "",
+      "Density_g_cc_25C": "1.05",
+      "Mean_Particle_Size_um": "22.0-30.0",
+      "Max_Particle_Size_um": "120.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Aliphatic polyurethane",
+      "Suggested_Use_Level": "2.0-10.0% (higher amounts when greater tactile effects are desired)",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic, vinyl and leather); architectural wall and trim paints; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; soft touch coatings; floor coatings; visual effects.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "improving burnish, scratch and mar resistance. Improves burnish and abrasion resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "Effective gloss reduction",
+      "Slip and Lubricity": "",
+      "Texture and Structure": "Provide different tactile effects ranging from satiny smooth to rubbery to leathery in properly formulated coatings. Different particle sizes available to create a unique surface \"touch\"",
+      "Soft Touch": "soft touch coatings",
+      "Corrosion Resistance": ""
+    }
+  },
+  "Micromide 520": {
+    "Typical_Properties": {
+      "Melt_Point_C": "141-146",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size_um": "5.0-8.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "Ethylene bis(stearamide) wax (EBS)",
+      "Suggested_Use_Level": "0.5-3.0%",
+      "Recommended_System_Type": "Solvent based and energy curable coatings and inks. Wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; powdered metals.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "scratch resistance and release properties",
+      "Anti-Gassing": "",
+      "Block Resistance": "High melting point to improve heat and block resistance",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Adds slip, release and lubricity with an excellent surface \"feel\". Lowers COF",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "Propyl Matte 31": {
+    "Typical_Properties": {
+      "Melt_Point_C": "160-170",
+      "Density_g_cc_25C": "0.89",
+      "Mean_Particle_Size_um": "8.0-12.0",
+      "Max_Particle_Size_um": "31.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "Polypropylene",
+      "Suggested_Use_Level": "2.0-5.0% depending on the level of gloss reduction desired",
+      "Recommended_System_Type": "Water based and solvent based coatings. Industrial coatings (including plastic, metal and leather); architectural wall and trim paints; stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; coil coatings.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "Tough, high molecular weight polymer imparts burnish and abrasion resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "efficient matting and gloss control. Provides consistent gloss reduction with no effect on coating viscosity. burnish resistance",
+      "Slip and Lubricity": "Imparts anti-slip properties",
+      "Texture and Structure": "Adds texture in low bake (Low E) powder coatings",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "Micropro 400": {
+    "Typical_Properties": {
+      "Melt_Point_C": "140-143",
+      "Density_g_cc_25C": "0.94",
+      "Mean_Particle_Size_um": "4.5-7.5",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Modified polypropylene",
+      "Suggested_Use_Level": "0.5-2.0% (mar and abrasion resistance); 2.0-5.0% (gloss control)",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic, metal and leather); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; floor coatings.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "Improves mar, scratch and metal marking resistance. abrasion resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "Provides antiblocking properties",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "Improves mar, scratch and metal marking resistance",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "Effective gloss control agent with good burnish resistance in low or medium gloss finishes",
+      "Slip and Lubricity": "surface slip",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MP-22VF": {
+    "Typical_Properties": {
+      "Melt_Point_C": "110-115",
+      "Density_g_cc_25C": "0.93",
+      "Mean_Particle_Size_um": "6.0-8.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "Synthetic wax",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic, metal and masonry); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; powdered metals.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "improved slip, scratch and rub resistance. Imparts a high degree of lubricity and slip with rub and mar resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "Provides antiblocking properties",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Imparts a high degree of lubricity and slip with rub and mar resistance. Consider MP-22C & MP-28C (spherical) for improved surface slip",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MP-22XF": {
+    "Typical_Properties": {
+      "Melt_Point_C": "110-115",
+      "Density_g_cc_25C": "0.93",
+      "Mean_Particle_Size_um": "4.5-6.5",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "Synthetic wax",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic, metal and masonry); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; powdered metals.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "improved slip, scratch and rub resistance. Imparts a high degree of lubricity and slip with rub and mar resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "Provides antiblocking properties",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Imparts a high degree of lubricity and slip with rub and mar resistance. Consider MP-22C & MP-28C (spherical) for improved surface slip",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MPP-611XF": {
+    "Typical_Properties": {
+      "Melt_Point_C": "110-116",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size_um": "4.0-6.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "High density polyethylene",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic and metal); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; seed coatings.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "Imparts excellent rub and mar resistance with good surface slip",
+      "Anti-Gassing": "",
+      "Block Resistance": "Provides excellent antiblocking properties",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Imparts excellent rub and mar resistance with good surface slip",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MPP-620VF": {
+    "Typical_Properties": {
+      "Melt_Point_C": "120-124",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size_um": "5.0-7.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "High density polyethylene",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic and metal); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "Imparts excellent abrasion, rub and mar resistance with good surface slip",
+      "Anti-Gassing": "",
+      "Block Resistance": "Provides excellent antiblocking properties",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "unique combination of surface slip. Imparts excellent abrasion, rub and mar resistance with good surface slip",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MPP-635VF": {
+    "Typical_Properties": {
+      "Melt_Point_C": "123-125",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size_um": "6.0-8.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "High density polyethylene",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic and metal); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "maximum rub and abrasion resistance. Crystalline, high melting point wax provides superior rub and abrasion resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "Imparts excellent antiblocking properties",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "High molecular weight and hardness improves resistance to solvent absorption and swelling",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MP-28AL": {
+    "Typical_Properties": {
+      "Melt_Point_C": "114-118",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size_um": "6.0-8.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Synthetic wax/aluminum oxide",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks, Industrial coatings (including plastic, metal and masonry); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; coil coatings.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "",
+      "Scratch and Abrasion Resistance": "Improves scratch, scuff and mar resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "Improves scratch, scuff and mar resistance",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Adds surface slip and lubricity",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MPP-611AL": {
+    "Typical_Properties": {
+      "Melt_Point_C": "110-116",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size_um": "3.5-5.5",
+      "Max_Particle_Size_um": "15.56"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "HDPE/aluminum oxide",
+      "Suggested_Use_Level": "0.5-1.5%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic and metal); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; coil coatings; rubber additives.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "Effective replacement for PTFE additives",
+      "Scratch and Abrasion Resistance": "Maximum scratch and scuff resistance with slip and lubricity. HDPE composite reinforced with 300 nm aluminum oxide nanoparticles (Mohs Hardness 9)",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "Mohs Hardness 9",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Maximum scratch and scuff resistance with slip and lubricity",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "MicroKlear 418AL": {
+    "Typical_Properties": {
+      "Melt_Point_C": "81-86",
+      "Density_g_cc_25C": "1.04",
+      "Mean_Particle_Size_um": "6.0-8.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "Carnauba wax/aluminum oxide",
+      "Suggested_Use_Level": "1.0-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic, metal and leather); wood coatings; printing inks and OPV's (including flexo and gravure); interior and exterior can and container coatings; coil coatings; seed coatings.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "Effective replacement for PTFE additives",
+      "Scratch and Abrasion Resistance": "Carnauba wax composite reinforced with 300 nm aluminum oxide nanoparticles (Mohs Hardness 9) Provides maximum scratch resistance with surface lubricity. Less abrasive on processing equipment compared to free aluminum oxide",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "Mohs Hardness 9",
+      "Matting and Gloss Control": "Does not adversely affect clarity or gloss",
+      "Slip and Lubricity": "Provides maximum scratch resistance with surface lubricity",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "Superslip 6515AL": {
+    "Typical_Properties": {
+      "Melt_Point_C": "139-145",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size_um": "3.5-5.5",
+      "Max_Particle_Size_um": "15.56"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "HDPE/EBS/aluminum oxide",
+      "Suggested_Use_Level": "0.5-1.5%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic and metal); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; can, container, and coil coatings; rubber additives.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "Maximum scratch resistance; equal to PE/PTFE additives",
+      "Scratch and Abrasion Resistance": "maximum scratch, scuff and block resistance. HDPE/EBS composite reinforced with 300 nm aluminum oxide nanoparticles (Mohs Hardness 9). Good abrasion resistance with slip and lubricity",
+      "Anti-Gassing": "",
+      "Block Resistance": "Amide wax component provides excellent antiblocking and release properties",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "Mohs Hardness 9",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Good abrasion resistance with slip and lubricity. Amide wax component provides excellent antiblocking and release properties",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "PolyGlide 1226XF": {
+    "Typical_Properties": {
+      "Melt_Point_C": "109-115",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size_um": "3.5-5.5",
+      "Max_Particle_Size_um": "15.56"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "HDPE/ceramic",
+      "Suggested_Use_Level": "0.5-1.5%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic and metal); stains, sealers and varnishes; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; can, container, and coil coatings; rubber additives.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "Effective replacement for PTFE additives. Improved Taber abrasion resistance when compared to PE/PTFE additives",
+      "Scratch and Abrasion Resistance": "HDPE composite reinforced with hard, inert ceramic microspheres and nanoceramic platelets. Improved Taber abrasion resistance when compared to PE/PTFE additives",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Provides slip and lubricity",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "SuperGlide 1231": {
+    "Typical_Properties": {
+      "Melt_Point_C": "141-146",
+      "Density_g_cc_25C": "1.00",
+      "Mean_Particle_Size_um": "5.0-8.0",
+      "Max_Particle_Size_um": "22.00"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": null,
+      "Composition": "Ethylene bis(stearamide)/ceramic",
+      "Suggested_Use_Level": "0.5-3.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; interior and exterior can and container coatings; powdered metals.",
+      "Interior_Exterior": "interior and exterior",
+      "PTFE Altinative": "Excellent scratch and abrasion resistance when compared to PTFE based additives",
+      "Scratch and Abrasion Resistance": "Amide wax composite reinforced with hard, inert ceramic microspheres. Excellent scratch and abrasion resistance when compared to PTFE based additives",
+      "Anti-Gassing": "",
+      "Block Resistance": "High melting point to improve heat and block resistance",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "Adds slip, release and lubricity with an excellent surface \"feel\". Lowers COF",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  },
+  "PolyTuf 1229": {
+    "Typical_Properties": {
+      "Melt_Point_C": "110-113",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size_um": "9.0-12.0",
+      "Max_Particle_Size_um": "31.11"
+    },
+    "Selector_Guide": {
+      "Available_as_Waterborne_Dispersion": true,
+      "Composition": "Ceramic modified polyethylene",
+      "Suggested_Use_Level": "0.5-2.0%",
+      "Recommended_System_Type": "Water based, solvent based and energy curable coatings and inks. Industrial coatings (including plastic, metal and masonry); architectural wall and trim paints; stains, sealers and varnishes; floor coatings; wood coatings; printing inks and OPV's (including flexo and gravure); powder coatings; coil coatings; rubber additives.",
+      "Interior_Exterior": "",
+      "PTFE Altinative": "PTFE-free alternative to Polyfluo 900",
+      "Scratch and Abrasion Resistance": "maximizing surface abrasion resistance (Taber) and film toughness. Fortified with two types of hard, inert ceramic particles. Low density polyethylene provides superior surface toughness, durability and mar resistance",
+      "Anti-Gassing": "",
+      "Block Resistance": "",
+      "Improved Extrusion Flow": "",
+      "Metal Mark Resistance": "",
+      "Apparent Hardness": "",
+      "Matting and Gloss Control": "",
+      "Slip and Lubricity": "",
+      "Texture and Structure": "",
+      "Soft Touch": "",
+      "Corrosion Resistance": ""
+    }
+  }
+}
