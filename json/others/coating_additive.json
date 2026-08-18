@@ -1,11 +1,5 @@
 [
   {
-    "product_name": "砂紋劑/紋理劑",
-    "composition_zh": " ",
-    "properties": " ",
-    "suggested_use_level_zh": " "
-  },
-  {
     "product_name": "SA 207",
     "brand_code": "捷通達",
     "featured_categories": [
@@ -218,13 +212,6 @@
     "performance_descriptions_zh": {},
     "performance_descriptions_en": {}
   },
-   {
-    "product_name": "室外消光劑",
-    "composition_zh": " ",
-    "properties": " ",
-    "suggested_use_level_zh": " "
-  },
-
   {
     "product_name": "K7212",
     "brand_code": "捷通達",
@@ -375,7 +362,7 @@
     ],
     "website": "",
     "tech_data_url": "",
-"composition_zh": "PES/TGIC 系统\n物理消光劑\n低蠟含量的樹脂型消光剂",
+    "composition_zh": "PES/TGIC 系统\n物理消光劑\n低蠟含量的樹脂型消光剂",
     "composition_en": "",
     "chemical_component": "低蠟含量的樹脂",
     "production_method": "",
@@ -447,7 +434,6 @@
     "website": "",
     "tech_data_url": "",
     "composition_zh": "PES/TGIC 系统\n物理消光劑\n低蠟含量的樹脂型消光剂",
-
     "composition_en": "",
     "chemical_component": "低蠟含量的樹脂",
     "production_method": "",
@@ -509,12 +495,6 @@
     "properties": "提供最低約6-30°光澤\n極低光澤\n塗層具有良好的流平性\n優異的抗黃變性能",
     "performance_descriptions_zh": {},
     "performance_descriptions_en": {}
-  },
-    {
-    "product_name": "附著力改進劑",
-    "composition_zh": " ",
-    "properties": " ",
-    "suggested_use_level_zh": " "
   },
   {
     "product_name": "K7921",
@@ -729,7 +709,7 @@
     "performance_descriptions_zh": {},
     "performance_descriptions_en": {}
   },
-    {
+  {
     "product_name": "特殊功能助劑",
     "composition_zh": " ",
     "properties": " ",
