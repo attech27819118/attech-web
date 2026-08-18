@@ -586,7 +586,7 @@
     "chemical_component": "HDPE/aluminum oxide",
     "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）\n粉體塗料；捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
     "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
     "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
@@ -631,7 +631,7 @@
           "no_silica_dust": 0
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐刮性能",
+          "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "提供最佳的抗刮與抗擦傷性能。",
           "slip_lubricity": "具備滑爽性與潤滑性。"
         },
@@ -665,11 +665,10 @@
           "apparent_hardness": 0
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE蠟粉的有效替代品，提供極佳耐刮性能",
-          "scratch_resistance": "採用奈米氧化鋁顆粒（莫氏硬度 9)。提供良好的抗刮。",
-          "abrasion_resistance": "提供優異的抗刮傷和抗擦傷性能",
+          "ptfe_alternative": "PTFE蠟粉的有效替代品",
+          "scratch_resistance": "複配奈米氧化鋁顆粒（莫氏硬度 9)。提供良好的抗刮性能。",
           "slip_lubricity": "具備滑爽性與潤滑性",
-          "apparent_hardness": "奈米氧化鋁(莫氏硬度 9)，可以有效提升表面硬度"
+          "apparent_hardness": "複配奈米氧化鋁(莫氏硬度 9)，有效提升表面硬度"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE powder additives, providing superior scratch resistance.",
@@ -704,9 +703,9 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐刮性能",
-          "scratch_resistance": "提升塗層的抗刮傷及抗磨損，並具備滑爽性與潤滑性。",
-          "apparent_hardness": "採用 300 奈米氧化鋁顆粒（莫氏硬度 9），提升塗層表面硬度。",
+          "ptfe_alternative": "PTFE蠟的有效替代品",
+          "scratch_resistance": "提升塗層的抗刮傷及抗磨損。",
+          "apparent_hardness": "複配 300 奈米氧化鋁顆粒（莫氏硬度 9），提升塗層表面硬度。",
           "slip_lubricity": "提高滑爽性與潤滑性。"
         },
         "performance_descriptions_en": {
@@ -740,7 +739,7 @@
           "intercoat_adhesion": 0
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE 聚四氟乙烯添加劑的有效替代品。",
+          "ptfe_alternative": "PTFE蠟的有效替代品。",
           "scratch_resistance": "300 奈米氧化鋁（莫氏硬度9），提升塗層抗刮與抗擦傷性能。",
           "slip_lubricity": "提高滑爽性與潤滑性",
           "matting_gloss_control": "複合微粒密度能夠最大化效率並使沉降降至最低",
@@ -780,7 +779,7 @@
           "cleanability": 0
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐刮性能",
+          "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "提高抗刮與抗擦傷性能。",
           "lubricity_smooth_feel": "提供滑爽性與潤滑性。"
         },
@@ -812,7 +811,7 @@
           "cleanability": 0
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐刮性能",
+          "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "提升的抗刮與抗擦傷性能。",
           "slip": "提高滑爽性與潤滑性"
         },
@@ -842,7 +841,7 @@
           "gloss_retention": 0
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐刮性能",
+          "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "提高的抗刮與抗擦傷性能。",
           "slip_lubricity": "提高滑爽性與潤滑性。"
         },
@@ -908,7 +907,7 @@
           "no_silica_dust": 0
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐刮性能",
+          "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "提供塗層良好的的抗刮與抗擦傷性能",
           "slip_lubricity": "提供良好的滑爽性與潤滑性。"
         },
@@ -1103,7 +1102,7 @@
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 3,
+          "abrasion_resistance": 0,
           "slip_lubricity": 0,
           "matting_gloss_control": 0,
           "soft_touch": 0,
@@ -1117,16 +1116,14 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效替代PTFE蠟粉",
-          "scratch_resistance": "採用奈米氧化鋁(莫氏硬度9)，可提高巴西棕梠蠟複合蠟的硬度，提供較佳的抗刮傷性與表面硬度。",
-          "abrasion_resistance": "耐磨性能良好。",
+          "scratch_resistance": "複配奈米氧化鋁(莫氏硬度9)，可提高巴西棕梠蠟的硬度，提供較佳的抗刮傷性與表面硬度。",
           "slip_lubricity": "提供優異的表面潤滑性。",
-          "gloss_retention": "不會對透明度或光澤產生影響",
-          "apparent_hardness": "奈米氧化鋁(莫氏硬度9)，有效提升表面硬度"
+          "gloss_retention": "對透明度或光澤影響減到最小",
+          "apparent_hardness": "複配奈米氧化鋁(莫氏硬度9)，有效提升表面硬度"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE powder additives.",
           "scratch_resistance": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to increase composite carnauba wax hardness, providing superior scratch resistance and surface hardness.",
-          "abrasion_resistance": "Provides good abrasion resistance.",
           "slip_lubricity": "Provides superior surface lubricity.",
           "gloss_retention": "Does not adversely affect clarity or gloss retention.",
           "apparent_hardness": "Aluminum oxide nanoparticles (Mohs hardness 9) effectively increase film surface hardness."
@@ -1160,7 +1157,7 @@
           "ptfe_alternative": "PTFE蠟的有效替代品。",
           "scratch_resistance": "提供良好的抗刮性能。",
           "block_resistance": "也可用作種子塗料。",
-          "apparent_hardness": "奈米氧化鋁，莫氏硬度9，提高塗層硬度",
+          "apparent_hardness": "複配奈米氧化鋁，莫氏硬度9，提高塗層硬度",
           "matting_gloss_control": "不會影響塗層透明度和光澤度。",
           "slip_lubricity": "提供優異的表面潤滑性。"
         },
@@ -1198,10 +1195,10 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
-          "scratch_resistance": "奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
+          "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
           "abrasion_resistance": "有效降低磨損",
           "slip_lubricity": "提供優異的表面潤滑性。",
-          "matting_gloss_control": "不對透明度或光澤度產生負面影響",
+          "matting_gloss_control": "透明度或光澤度產生影響減到最小",
           "clarity": "不會影響塗層透明度或光澤度。"
         },
         "performance_descriptions_en": {
@@ -1240,7 +1237,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
-          "scratch_resistance": "奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
+          "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
           "clarity": "不會影響塗層透明度或光澤度。",
           "gloss_retention": "不會對透明度或光澤度產生不利影響。",
           "lubricity_smooth_feel": "提高表面潤滑性。"
@@ -1274,7 +1271,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
-          "scratch_resistance": "奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
+          "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
           "slip_lubricity": "提供優異的表面潤滑性。",
           "cleanability": "不影響透明度或光澤。",
           "gloss_retention": "不影響透明度與光澤保持。"
@@ -1298,7 +1295,7 @@
     "chemical_component": "HDPE/EBS/aluminum oxide",
     "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）\n粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; can, container, and coil coatings; rubber additives.",
     "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
     "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
@@ -1382,11 +1379,10 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "極佳的抗刮性，效能等同於PE/PTFE蠟粉。",
-          "scratch_resistance": "奈米氧化鋁（莫氏硬度 9）增強塗層的硬度。產生良好的抗刮與抗黏結性。",
-          "abrasion_resistance": "具有良好的耐磨性。",
+          "scratch_resistance": "複配奈米氧化鋁（莫氏硬度 9）增強塗層的硬度。產生良好的抗刮性能。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
-          "apparent_hardness": "奈米氧化鋁(莫氏硬度9)，有效提升表面硬度"
+          "apparent_hardness": "提高複配奈米氧化鋁(莫氏硬度9)，有效提升表面硬度"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Superior scratch resistance, equal in performance to PE/PTFE wax powders.",
@@ -1423,7 +1419,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
-          "scratch_resistance": "極佳的抗刮傷性。採用 300 奈米氧化鋁顆粒（莫氏硬度 9）增強的 HDPE/EBS 複合蠟的耐刮性能。",
+          "scratch_resistance": "極佳的抗刮傷性。複配 300 奈米氧化鋁顆粒（莫氏硬度 9）增強的 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "良好的耐磨性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
           "apparent_hardness": "加了奈米氧化鋁，可提升漆模硬度與韌性。",
@@ -1463,7 +1459,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
-          "scratch_resistance": "極佳的抗刮傷性。採用 300 奈米氧化鋁顆粒（莫氏硬度 9）增強的 HDPE/EBS 複合蠟的耐刮性能。",
+          "scratch_resistance": "極佳的抗刮傷性。複配 300 奈米氧化鋁顆粒（莫氏硬度 9）增強的 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
@@ -1677,7 +1673,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟粉的有效替代品，(Taber)耐磨性更佳",
-          "abrasion_resistance": "採用堅硬的奈米陶瓷提高了塗層的(Taber) 耐磨性。",
+          "abrasion_resistance": "複配堅硬的奈米陶瓷，提高了塗層的(Taber) 耐磨性。",
           "slip_lubricity": "提供良好的滑爽性與潤滑性"
         },
         "performance_descriptions_en": {
@@ -1712,7 +1708,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
-          "abrasion_resistance": "採用堅硬的奈米陶瓷微粉和高密度聚乙烯做成複合蠟。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
+          "abrasion_resistance": "複配堅硬的奈米陶瓷微粉和高密度聚乙烯做成複合蠟。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
           "slip_lubricity": "提高滑爽性與潤滑性。適合罐頭塗料(內罐及外罐)、貨櫃漆；通過 21CFR 175.300 認證。"
         },
         "performance_descriptions_en": {
@@ -1746,7 +1742,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
-          "abrasion_resistance": "採用堅硬的奈米陶瓷微粉和高密度聚乙烯做成複合蠟。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
+          "abrasion_resistance": "複配堅硬的奈米陶瓷微粉和高密度聚乙烯做成複合蠟。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
           "slip_lubricity": "提供滑爽性與潤滑度"
         },
         "performance_descriptions_en": {
@@ -1828,7 +1824,7 @@
     "chemical_component": "Ethylene bis(stearamide)/ceramic",
     "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "木器塗料；印刷油墨（柔版與凹版）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；粉末冶金。",
+    "application_fields_zh": "木器塗料；印刷油墨（柔版與凹版）；粉體塗料\n罐頭塗料(內罐及外罐)、貨櫃漆；粉末冶金。",
     "application_fields_en": "Wood coatings; printing inks and OPVs (flexo and gravure); powder coatings; interior and exterior can and container coatings; powdered metals.",
     "suggested_use_level_zh": "0.5-3.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-3.0% (on total formula weight)",
@@ -1913,9 +1909,9 @@
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效替代PTFE蠟粉，具有優異的抗刮和耐磨性能",
           "scratch_resistance": "具有良好的抗刮性能。",
-          "abrasion_resistance": "採用堅硬、奈米陶瓷醯胺蠟複合蠟，具有優異的耐磨性能。",
+          "abrasion_resistance": "複配堅硬、奈米陶瓷與醯胺蠟複合蠟，具提升耐磨性能。",
           "slip_lubricity": "增加滑爽性、離型性，提供極佳的表面「手感」。降低摩擦係數(COF)",
-          "block_resistance": "高熔點可提高塗層的耐熱性與防粘結性。"
+          "block_resistance": "高熔點，可提高塗層的耐熱性與防粘結性。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE powder additives, providing superior scratch and abrasion resistance.",
@@ -1954,7 +1950,7 @@
           "scratch_resistance": "具有良好的抗刮性能",
           "abrasion_resistance": "具有良好的耐磨性能。",
           "block_resistance": "高熔點可提高耐熱性與防粘結性。",
-          "metal_mark_resistance": "採用堅硬奈米陶瓷微粉與醯胺蠟的複合蠟，可提供卓越的表面耐刮性。",
+          "metal_mark_resistance": "複配堅硬奈米陶瓷微粉與醯胺蠟的複合蠟，可提供卓越的表面耐刮性。",
           "slip_lubricity": "增加滑爽性、離型性與潤滑性，提供極佳的表面「手感」。"
         },
         "performance_descriptions_en": {
@@ -2566,7 +2562,7 @@
     "chemical_component": "Synthetic wax",
     "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（開括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；粉末冶金。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；粉末冶金。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; powdered metals.",
     "suggested_use_level_zh": "1.0-3.0%",
     "suggested_use_level_en": "1.0-3.0%",
@@ -2599,6 +2595,7 @@
           "matting_gloss_control": 0,
           "soft_touch": 0,
           "texture_structure": 0,
+          "water_repellency": 2,
           "corrosion_resistance": 0,
           "block_resistance": 0,
           "improved_extrusion_flow": 1,
@@ -2607,8 +2604,8 @@
           "apparent_hardness": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升抗刮性和耐磨性。",
-          "slip_lubricity": "賦予高撥水效果、潤滑性與滑爽性。若需更好的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。",
+          "scratch_resistance": "提升抗刮性能。",
+          "slip_lubricity": "賦予撥水效果、潤滑性與滑爽性。若需更高的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。",
           "block_resistance": "提供極佳抗黏結性能"
         },
         "performance_descriptions_en": {
@@ -2670,8 +2667,8 @@
           "apparent_hardness": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升耐刮和耐磨。",
-          "slip_lubricity": "賦予塗層良好的潤滑性與滑爽性，並兼具撥水。若需更好的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。",
+          "scratch_resistance": "提升耐刮性能。",
+          "slip_lubricity": "賦予塗層撥水效果、潤滑性與滑爽性。若需更高的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。",
           "block_resistance": "提供優異的抗黏結性能"
         },
         "performance_descriptions_en": {
@@ -2699,6 +2696,7 @@
           "matting_gloss_control": 0,
           "slip_lubricity": 2,
           "texture_structure": 0,
+          "water_repellency": 2,
           "soft_touch": 0,
           "corrosion_resistance": 0,
           "increased_cof": 0,
@@ -2734,6 +2732,7 @@
           "matting_gloss_control": 0,
           "soft_touch": 0,
           "texture_structure": 0,
+          "water_repellency": 2,
           "block_resistance": 1,
           "increased_cof": 0,
           "clarity": 0,
@@ -2769,6 +2768,7 @@
           "block_resistance": 1,
           "matting_gloss_control": 0,
           "texture_structure": 0,
+          "water_repellency": 2,
           "cleanability": 1,
           "water_repellency": 2,
           "no_silica_dust": 0
