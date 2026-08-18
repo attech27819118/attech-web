@@ -826,576 +826,560 @@
 
             <!-- 下方：表單主體 -->
             <div class="bg-white border border-slate-200 shadow-md rounded-xl overflow-hidden">
-                <div class="bg-slate-100 p-2 border-b border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <button type="button" onclick="switchFormMode('quick')" id="mode-btn-quick"
-                            class="flex items-center justify-center gap-2.5 p-2.5 rounded-lg border text-left bg-white text-blue-950 border-blue-900 shadow-sm f-weight-bold">
-                        <i class="fa-solid fa-bolt text-amber-500 f-size-lg shrink-0" aria-hidden="true"></i>
-                        <div>
-                            <div class="f-size-base f-weight-bold" id="mode-quick-title">指定樣品 / 快速詢價</div>
-                            <div class="f-size-sm text-slate-700 f-weight-medium" id="mode-quick-sub">
-                                已有明確產品型號，快速留下資料
-                            </div>
-                        </div>
-                    </button>
-
-                    <button type="button" onclick="switchFormMode('detailed')" id="mode-btn-detailed"
-                            class="flex items-center justify-center gap-2.5 p-2.5 rounded-lg border border-transparent hover:bg-slate-200/60 text-left text-slate-700 f-weight-medium">
-                        <i class="fa-solid fa-vial-circle-check text-blue-800 f-size-lg shrink-0"
-                           aria-hidden="true"></i>
-                        <div>
-                            <div class="f-size-base f-weight-bold" id="mode-detailed-title">詳細應用需求評估
-                                (完整申請單)
-                            </div>
-                            <div class="f-size-sm text-slate-700 f-weight-medium" id="mode-detailed-sub">
-                                提供配方條件與底材資訊，由專人為您選擇適合產品
-                            </div>
-                        </div>
-                    </button>
+    <div class="bg-slate-100 p-2 border-b border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <button type="button" onclick="switchFormMode('quick')" id="mode-btn-quick"
+                class="flex items-center justify-center gap-2.5 p-2.5 rounded-lg border text-left bg-white text-blue-950 border-blue-900 shadow-sm f-weight-bold">
+            <i class="fa-solid fa-bolt text-amber-500 f-size-lg shrink-0" aria-hidden="true"></i>
+            <div>
+                <div class="f-size-base f-weight-bold" id="mode-quick-title">指定樣品 / 快速詢價</div>
+                <div class="f-size-sm text-slate-700 f-weight-medium" id="mode-quick-sub">
+                    已有明確產品型號，快速留下資料
                 </div>
-
-                <form id="attech-contact-form" onsubmit="handleContactSubmit(event)"
-                      class="p-5 md:p-6 bg-white rounded-xl">
-                    <input type="hidden" name="csrf_token" id="csrf_token" value="EXAMPLETTOKEN123456789">
-
-                    <div class="hidden !p-0 !m-0 border-0">
-                        <label for="website_hp">If you are human, leave this empty:</label>
-                        <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off">
-                    </div>
-
-                    <!-- 模式一：指定樣品 / 快速詢價表單 -->
-                    <div id="form-mode-quick" class="space-y-5">
-                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 f-size-sm text-blue-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-2.5 f-weight-medium">
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-circle-info text-blue-700 f-size-base shrink-0"
-                                   aria-hidden="true"></i>
-                                <span>若您已確定欲索取的樣品名稱（如：MP-22），請填寫此表單即可。</span>
-                            </div>
-                            <a href="./doc/Sample_Request_Form.docx" download
-                               class="inline-flex items-center gap-1 text-blue-900 hover:underline f-weight-bold shrink-0 bg-white border border-blue-300 px-2.5 py-1 rounded shadow-sm f-size-xs hover:bg-blue-50">
-                                <i class="fa-solid fa-file-word text-blue-800" aria-hidden="true"></i> 下載紙本傳真單
-                            </a>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 f-size-sm">
-                            <div>
-                                <label for="quick-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
-                                    <span class="text-red-600">*</span></label>
-                                <input type="text" id="quick-company" name="quick_company" required
-                                       placeholder="請輸入公司名稱"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                            </div>
-                            <div>
-                                <label for="quick-contact" class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
-                                    <span class="text-red-600">*</span></label>
-                                <input type="text" id="quick-contact" name="quick_contact" required
-                                       placeholder="請輸入聯絡人姓名與職稱"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                            </div>
-                            <div>
-                                <label for="quick-email" class="block f-weight-bold text-slate-900 mb-1">電子信箱 <span
-                                        class="text-red-600">*</span></label>
-                                <input type="email" id="quick-email" name="quick_email" required
-                                       placeholder="example@company.com"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                            </div>
-                            <div>
-                                <label for="quick-mobile" class="block f-weight-bold text-slate-900 mb-1">手機 <span
-                                        class="text-red-600">*</span></label>
-                                <input type="tel" id="quick-mobile" name="quick_mobile" required
-                                       pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$"
-                                       title="請輸入正確的手機號碼格式，例如：0912-345-678 或 0912345678"
-                                       placeholder="請輸入手機號碼 (如：0912-345-678)"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                            </div>
-                            <div>
-                                <label for="quick-phone" class="block f-weight-bold text-slate-900 mb-1">電話及分機
-                                    <span class="text-red-600">*</span></label>
-                                <input type="tel" id="quick-phone" name="quick_phone"
-                                       pattern="^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
-                                       title="請輸入市話號碼及分機（如有），例如：04-2239-8056 或 02-1234-5678#123"
-                                       placeholder="請輸入市話及分機號碼 (如：04-2239-8056)"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                            </div>
-                            <div>
-                                <label for="quick-sample" class="block f-weight-bold text-slate-900 mb-1">指定索樣產品與數量
-                                    <span class="text-red-600">*</span></label>
-                                <input type="text" id="quick-sample" name="quick_sample" required
-                                       placeholder="例如：MP-22 (100g)"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                            </div>
-                            <div class="md:col-span-2">
-                                <label for="quick-address" class="block f-weight-bold text-slate-900 mb-1">樣品寄送地址
-                                    <span class="text-red-600">*</span></label>
-                                <input type="text" id="quick-address" name="quick_address" required
-                                       placeholder="請輸入完整的收件地址"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                            </div>
-                            <div class="md:col-span-2">
-                                <label for="quick-msg" class="block f-weight-bold text-slate-900 mb-1">備註 /
-                                    詢問內容</label>
-                                <textarea id="quick-msg" name="quick_msg" rows="3"
-                                          placeholder="請輸入您的其他需求或疑問..."
-                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 模式二：詳細應用需求評估 -->
-                    <div id="form-mode-detailed" class="space-y-5 hidden">
-                        <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
-                            <div class="bg-slate-100 px-3.5 py-2 f-weight-bold text-blue-950 f-size-sm border-b border-slate-200 flex items-center justify-between">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="w-5 h-5 rounded-full bg-blue-950 text-white f-size-xs flex items-center justify-center f-weight-bold">A</span>
-                                    請填寫基本聯絡資訊
-                                </div>
-                                <span class="f-size-xs text-slate-600 f-weight-medium">標記 <span
-                                        class="text-red-600">*</span> 為必填欄位</span>
-                            </div>
-                            <div class="p-3.5 grid grid-cols-1 md:grid-cols-2 gap-3.5 f-size-sm">
-                                <div>
-                                    <label for="detail-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="text" id="detail-company" name="detail_company"
-                                           placeholder="請輸入公司名稱"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="detail-contact" class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="text" id="detail-contact" name="detail_contact"
-                                           placeholder="請輸入聯絡人姓名與職稱"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="detail-mobile"
-                                           class="block f-weight-bold text-slate-900 mb-1">手機</label>
-                                    <input type="tel" id="detail-mobile" name="detail_mobile"
-                                           pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$"
-                                           title="請輸入正確的手機號碼格式，例如：0912-345-678 或 0912345678"
-                                           placeholder="請輸入手機號碼 (如：0912-345-678)"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="detail-phone"
-                                           class="block f-weight-bold text-slate-900 mb-1">電話及分機</label>
-                                    <input type="tel" id="detail-phone" name="detail_phone"
-                                           pattern="^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
-                                           title="請輸入市話號碼及分機（如有），例如：04-2239-8056 或 02-1234-5678#123"
-                                           placeholder="請輸入市話及分機號碼 (如：04-2239-8056)"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="detail-email" class="block f-weight-bold text-slate-900 mb-1">Email
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="email" id="detail-email" name="detail_email"
-                                           placeholder="example@company.com"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="detail-fax"
-                                           class="block f-weight-bold text-slate-900 mb-1">傳真號碼</label>
-                                    <input type="text" id="detail-fax" name="detail_fax" placeholder="例如：04-2239-5165"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div class="md:col-span-2">
-                                    <label for="detail-address" class="block f-weight-bold text-slate-900 mb-1">寄送地址
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="text" id="detail-address" name="detail_address"
-                                           placeholder="請輸入完整的樣品收件地址"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- B. 應用需求 -->
-                        <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
-                            <div class="bg-slate-100 px-3.5 py-2 f-weight-bold text-blue-950 f-size-sm border-b border-slate-200 flex items-center gap-1.5">
-                                <span class="w-5 h-5 rounded-full bg-blue-950 text-white f-size-xs flex items-center justify-center f-weight-bold">B</span>
-                                應用需求
-                            </div>
-                            <div class="p-3.5 space-y-3 f-size-sm">
-                                <div>
-                                    <span class="f-weight-bold text-slate-900 block mb-1.5">應用領域（可複選）：</span>
-                                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="PTFE取代"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> PTFE取代</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="粉體塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 粉體塗料</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="一般工業塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20">
-                                            一般工業塗料</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="卷鋼塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 卷鋼塗料</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="罐頭塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 罐頭塗料</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="螺絲塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 螺絲塗料</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="貨櫃塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 貨櫃塗料</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="一般油墨"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 一般油墨</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="UV油墨"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> UV油墨</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="地板塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 地板塗料</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="木器漆"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 木器漆</label>
-                                        <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_domain[]" value="皮革塗料"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 皮革塗料</label>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="f-weight-bold text-slate-900 block mb-1.5">產品 / 功能需求（可複選）：</span>
-                                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="密著改善"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 密著改善</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="分散"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 分散</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="PTFE取代"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> PTFE取代</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="耐刮"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 耐刮</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="耐磨"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 耐磨</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="耐拋光"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 耐拋光</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="耐摩擦"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 耐摩擦</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="滑爽"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 滑爽</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="防滑"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 防滑</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="消光"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 消光</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="柔感"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 柔感</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="app_func[]" value="織紋"
-                                                class="rounded text-blue-900 focus:ring-blue-500/20"> 織紋</label>
-                                    </div>
-                                    <div class="mt-2 flex items-center gap-2">
-                                        <label for="detail-other-func"
-                                               class="text-slate-900 f-weight-bold shrink-0 f-size-xs">其他功能：</label>
-                                        <input type="text" id="detail-other-func" name="detail_other_func"
-                                               placeholder="例如：防撥水、抗黏性、增加摩擦係數、改善流動性、易清潔、防潮..."
-                                               class="w-full px-2.5 py-1 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-0.5">
-                                    <div>
-                                        <span class="f-weight-bold text-slate-900 block mb-1">系統型態：</span>
-                                        <div class="flex flex-wrap gap-2.5 bg-slate-50 p-2 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                    type="checkbox" name="sys_type[]" value="水性"
-                                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 水性</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                    type="checkbox" name="sys_type[]" value="醇溶性"
-                                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 醇溶性</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                    type="checkbox" name="sys_type[]" value="油性(溶劑型)"
-                                                    class="rounded text-blue-900 focus:ring-blue-500/20">
-                                                油性(溶劑型)</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                    type="checkbox" name="sys_type[]" value="UV硬化"
-                                                    class="rounded text-blue-900 focus:ring-blue-500/20"> UV硬化</label>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="f-weight-bold text-slate-900 block mb-1">組份 / 外觀：</span>
-                                        <div class="flex flex-wrap items-center gap-2.5 bg-slate-50 p-2 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                            <div class="flex items-center gap-2">
-                                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                        type="radio" name="comp-type" value="單組份"
-                                                        class="text-blue-900 focus:ring-blue-500/20"> 單組份</label>
-                                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                        type="radio" name="comp-type" value="雙組份"
-                                                        class="text-blue-900 focus:ring-blue-500/20"> 雙組份</label>
-                                            </div>
-                                            <div class="flex items-center gap-2 border-l border-slate-300 pl-2.5">
-                                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                        type="radio" name="app-type" value="透明"
-                                                        class="text-blue-900 focus:ring-blue-500/20"> 透明</label>
-                                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                        type="radio" name="app-type" value="有顏色"
-                                                        class="text-blue-900 focus:ring-blue-500/20"> 有顏色</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- C. 基本資訊與規格 -->
-                        <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
-                            <div class="bg-slate-100 px-3.5 py-2 f-weight-bold text-blue-950 f-size-sm border-b border-slate-200 flex items-center gap-1.5">
-                                <span class="w-5 h-5 rounded-full bg-blue-950 text-white f-size-xs flex items-center justify-center f-weight-bold">C</span>
-                                基本資訊與規格
-                            </div>
-                            <div class="p-3.5 space-y-3 f-size-sm">
-                                <div>
-                                    <span class="f-weight-bold text-slate-900 block mb-1.5">底材類型：</span>
-                                    <div class="space-y-1.5 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                        <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                                            <span class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">塑膠：</span>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="PVC"
-                                                    class="rounded text-blue-900"> PVC</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="ABS"
-                                                    class="rounded text-blue-900"> ABS</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="PC"
-                                                    class="rounded text-blue-900"> PC</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="PET"
-                                                    class="rounded text-blue-900"> PET</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="PP"
-                                                    class="rounded text-blue-900"> PP</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="EPDM"
-                                                    class="rounded text-blue-900"> EPDM</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="尼龍"
-                                                    class="rounded text-blue-900"> 尼龍</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="EVA"
-                                                    class="rounded text-blue-900"> EVA</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="橡膠"
-                                                    class="rounded text-blue-900"> 橡膠</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="薄膜"
-                                                    class="rounded text-blue-900"> 薄膜</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="PMMA板材"
-                                                    class="rounded text-blue-900"> PMMA板材</label>
-                                        </div>
-                                        <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
-                                            <span class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">金屬：</span>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="鐵"
-                                                    class="rounded text-blue-900"> 鐵</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="不鏽鋼"
-                                                    class="rounded text-blue-900"> 不鏽鋼</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="鋁合金"
-                                                    class="rounded text-blue-900"> 鋁合金</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="鍍鋅鋼板"
-                                                    class="rounded text-blue-900"> 鍍鋅鋼板</label>
-                                        </div>
-                                        <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
-                                            <span class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">皮革紡織：</span>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="真皮"
-                                                    class="rounded text-blue-900"> 真皮</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="PU合成皮"
-                                                    class="rounded text-blue-900"> PU合成皮</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="PV合成皮"
-                                                    class="rounded text-blue-900"> PV合成皮</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="紡織品"
-                                                    class="rounded text-blue-900"> 紡織品</label>
-                                        </div>
-                                        <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
-                                            <label for="detail-substrate-other"
-                                                   class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">其它：</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="木頭"
-                                                    class="rounded text-blue-900"> 木頭</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="玻璃"
-                                                    class="rounded text-blue-900"> 玻璃</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="substrate[]" value="石材"
-                                                    class="rounded text-blue-900"> 石材</label>
-                                            <input type="text" id="detail-substrate-other" name="detail_substrate_other"
-                                                   placeholder="其他材質描述..."
-                                                   class="px-2 py-0.5 bg-white border border-slate-300 rounded outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500 grow max-w-xs">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="f-weight-bold text-slate-900 block mb-1">乾燥固化條件：</span>
-                                    <div class="flex flex-wrap items-center gap-y-1.5 gap-x-3 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                        <div class="inline-flex items-center gap-1">
-                                            <label for="detail-film-thick"
-                                                   class="f-weight-bold text-slate-900 f-size-xs">乾膜厚：</label>
-                                            <input type="text" id="detail-film-thick" name="detail_film_thick"
-                                                   placeholder="0"
-                                                   class="w-14 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 f-weight-medium">
-                                            <span>μm</span>
-                                        </div>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer border-l border-slate-300 pl-3"><input
-                                                type="checkbox" id="detail-no-bake" name="detail_no_bake"
-                                                class="rounded text-blue-900"> 不烘烤（風乾）</label>
-                                        <div class="inline-flex items-center gap-1.5 border-l border-slate-300 pl-3">
-                                            <label for="detail-bake-temp"
-                                                   class="f-weight-bold text-slate-900 f-size-xs">烘烤溫度：</label>
-                                            <input type="text" id="detail-bake-temp" name="detail_bake_temp"
-                                                   placeholder="如: 120℃"
-                                                   class="w-20 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                            <label for="detail-bake-time"
-                                                   class="f-weight-bold text-slate-900 ml-0.5 f-size-xs">時間：</label>
-                                            <input type="text" id="detail-bake-time" name="detail_bake_time"
-                                                   placeholder="如: 20 min"
-                                                   class="w-20 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="f-weight-bold text-slate-900 block mb-1.5">樹脂系統：</span>
-                                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="PU" class="rounded text-blue-900">
-                                            PU</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="壓克力"
-                                                class="rounded text-blue-900"> 壓克力</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="UV壓克力"
-                                                class="rounded text-blue-900"> UV壓克力</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="環氧"
-                                                class="rounded text-blue-900"> 環氧</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="胺基美耐敏"
-                                                class="rounded text-blue-900"> 胺基美耐敏</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="醇酸"
-                                                class="rounded text-blue-900"> 醇酸</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="NC硝化棉"
-                                                class="rounded text-blue-900"> NC硝化棉</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="UPE不飽和聚酯"
-                                                class="rounded text-blue-900"> UPE不飽和聚酯</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="聚酯"
-                                                class="rounded text-blue-900"> 聚酯</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="氟碳"
-                                                class="rounded text-blue-900"> 氟碳</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="矽利康"
-                                                class="rounded text-blue-900"> 矽利康</label>
-                                        <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
-                                                type="checkbox" name="resin[]" value="無機奈米"
-                                                class="rounded text-blue-900"> 無機奈米</label>
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-0.5">
-                                    <div>
-                                        <label for="detail-restricted" class="block f-weight-bold text-slate-900 mb-1">其他資訊（限用物質）</label>
-                                        <input type="text" id="detail-restricted" name="detail_restricted"
-                                               placeholder="例如：八大重金屬、EN-71、RoHS..."
-                                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                    </div>
-                                    <div>
-                                        <label for="detail-sample-req" class="block f-weight-bold text-slate-900 mb-1">索樣產品
-                                            <span class="text-red-600">*</span></label>
-                                        <input type="text" id="detail-sample-req" name="detail_sample_req"
-                                               placeholder="請填寫預計索取的產品名稱與數量"
-                                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                    </div>
-                                </div>
-
-                                <div class="pt-0.5">
-                                    <span class="f-weight-bold text-slate-900 block mb-1">需求文件：</span>
-                                    <div class="flex flex-wrap items-center gap-y-1.5 gap-x-5 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
-                                        <div class="flex items-center gap-1.5">
-                                            <span class="f-weight-bold text-slate-900 f-size-xs">TDS 產品說明書：</span>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="doc_req[]" value="TDS-中文"
-                                                    class="rounded text-blue-900"> 中文</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="doc_req[]" value="TDS-英文"
-                                                    class="rounded text-blue-900"> 英文</label>
-                                        </div>
-                                        <div class="flex items-center gap-1.5 border-l border-slate-300 pl-4">
-                                            <span class="f-weight-bold text-slate-900 f-size-xs">SDS 安全資料表：</span>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="doc_req[]" value="SDS-中文"
-                                                    class="rounded text-blue-900"> 中文</label>
-                                            <label class="inline-flex items-center gap-1 cursor-pointer"><input
-                                                    type="checkbox" name="doc_req[]" value="SDS-英文"
-                                                    class="rounded text-blue-900"> 英文</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- D & E 曾測試紀錄與備註 -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 f-size-sm">
-                            <div>
-                                <label for="detail-past-samples" class="block f-weight-bold text-slate-900 mb-1">D.
-                                    曾試過的相關樣品</label>
-                                <textarea id="detail-past-samples" name="detail_past_samples" rows="2.5"
-                                          placeholder="請填寫曾經試用過的樣品名稱、編號或評估結果..."
-                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
-                            </div>
-                            <div>
-                                <label for="detail-remarks" class="block f-weight-bold text-slate-900 mb-1">E. 備註 /
-                                    其他說明</label>
-                                <textarea id="detail-remarks" name="detail_remarks" rows="2.5"
-                                          placeholder="請輸入其他補充說明事項..."
-                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 底部說明與提交按鈕 -->
-                    <div class="mt-6 pt-3.5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-                        <div class="f-size-xs text-slate-600 f-weight-medium leading-relaxed">
-                            <p>※ 本調查表內所含之個人資料將受我司嚴格保護，並僅作為公司業務聯繫使用。</p>
-                            <p class="mt-0.5">習慣傳真作業？
-                                <a href="./doc/Sample_Request_Form.docx" download
-                                   class="text-blue-900 f-weight-bold hover:underline inline-flex items-center gap-1">
-                                    <i class="fa-solid fa-download f-size-xs" aria-hidden="true"></i> 點此下載紙本傳真申請單
-                                    (Word/PDF)
-                                </a>，傳真至 <strong>04-2239-5165</strong>。
-                            </p>
-                        </div>
-                        <button type="submit" id="form-submit"
-                                class="w-full sm:w-auto px-6 py-2.5 bg-blue-950 hover:bg-blue-900 active:scale-[0.98] text-white f-weight-bold rounded-lg shadow-md hover:shadow-lg flex items-center justify-center gap-2 f-size-base shrink-0">
-                            <i class="fa-solid fa-paper-plane f-size-sm" aria-hidden="true"></i> 送出需求訊息
-                        </button>
-                    </div>
-                </form>
             </div>
+        </button>
+
+        <button type="button" onclick="switchFormMode('detailed')" id="mode-btn-detailed"
+                class="flex items-center justify-center gap-2.5 p-2.5 rounded-lg border border-transparent hover:bg-slate-200/60 text-left text-slate-700 f-weight-medium">
+            <i class="fa-solid fa-vial-circle-check text-blue-800 f-size-lg shrink-0"
+               aria-hidden="true"></i>
+            <div>
+                <div class="f-size-base f-weight-bold" id="mode-detailed-title">詳細應用需求評估
+                    (完整申請單)
+                </div>
+                <div class="f-size-sm text-slate-700 f-weight-medium" id="mode-detailed-sub">
+                    提供配方條件與底材資訊，由專人為您選擇適合產品
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <form id="attech-contact-form" onsubmit="handleContactSubmit(event)"
+          class="p-5 md:p-6 bg-white rounded-xl">
+        <input type="hidden" name="csrf_token" id="csrf_token" value="EXAMPLETTOKEN123456789">
+
+        <div class="hidden !p-0 !m-0 border-0">
+            <label for="website_hp">If you are human, leave this empty:</label>
+            <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- 模式一：指定樣品 / 快速詢價表單 -->
+        <div id="form-mode-quick" class="space-y-5">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 f-size-sm text-blue-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-2.5 f-weight-medium">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-blue-700 f-size-base shrink-0"
+                       aria-hidden="true"></i>
+                    <span>若您已確定欲索取的樣品名稱（如：MP-22），請填寫此表單即可。</span>
+                </div>
+                <a href="./doc/Sample_Request_Form.docx" download
+                   class="inline-flex items-center gap-1 text-blue-900 hover:underline f-weight-bold shrink-0 bg-white border border-blue-300 px-2.5 py-1 rounded shadow-sm f-size-xs hover:bg-blue-50">
+                    <i class="fa-solid fa-file-word text-blue-800" aria-hidden="true"></i> 下載紙本傳真單
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 f-size-sm">
+                <div>
+                    <label for="quick-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
+                        <span class="text-red-600">*</span></label>
+                    <input type="text" id="quick-company" name="quick_company" required
+                           placeholder="請輸入公司名稱"
+                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                </div>
+                <div>
+                    <label for="quick-contact" class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
+                        <span class="text-red-600">*</span></label>
+                    <input type="text" id="quick-contact" name="quick_contact" required
+                           placeholder="請輸入聯絡人姓名與職稱"
+                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                </div>
+                <div>
+                    <label for="quick-email" class="block f-weight-bold text-slate-900 mb-1">電子信箱 <span
+                            class="text-red-600">*</span></label>
+                    <input type="email" id="quick-email" name="quick_email" required
+                           placeholder="example@company.com"
+                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                </div>
+                <!-- 整合後的手機 / 電話欄位 -->
+                <div>
+                    <label for="quick-contact-tel" class="block f-weight-bold text-slate-900 mb-1">聯絡電話 / 手機
+                        <span class="text-red-600">*</span></label>
+                    <input type="tel" id="quick-contact-tel" name="quick_contact_tel" required
+                           pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$|^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
+                           title="請輸入手機或市話號碼（如：0912-345-678 或 04-2239-8056#123）"
+                           placeholder="如：0912-345-678 或 04-2239-8056#123"
+                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="quick-sample" class="block f-weight-bold text-slate-900 mb-1">指定索樣產品與數量
+                        <span class="text-red-600">*</span></label>
+                    <input type="text" id="quick-sample" name="quick_sample" required
+                           placeholder="例如：MP-22 (100g)"
+                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="quick-address" class="block f-weight-bold text-slate-900 mb-1">樣品寄送地址
+                        <span class="text-red-600">*</span></label>
+                    <input type="text" id="quick-address" name="quick_address" required
+                           placeholder="請輸入完整的收件地址"
+                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="quick-msg" class="block f-weight-bold text-slate-900 mb-1">備註 /
+                        詢問內容</label>
+                    <textarea id="quick-msg" name="quick_msg" rows="3"
+                              placeholder="請輸入您的其他需求或疑問..."
+                              class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模式二：詳細應用需求評估 -->
+        <div id="form-mode-detailed" class="space-y-5 hidden">
+            <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+                <div class="bg-slate-100 px-3.5 py-2 f-weight-bold text-blue-950 f-size-sm border-b border-slate-200 flex items-center justify-between">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-blue-950 text-white f-size-xs flex items-center justify-center f-weight-bold">A</span>
+                        請填寫基本聯絡資訊
+                    </div>
+                    <span class="f-size-xs text-slate-600 f-weight-medium">標記 <span
+                            class="text-red-600">*</span> 為必填欄位</span>
+                </div>
+                <div class="p-3.5 grid grid-cols-1 md:grid-cols-2 gap-3.5 f-size-sm">
+                    <div>
+                        <label for="detail-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
+                            <span class="text-red-600">*</span></label>
+                        <input type="text" id="detail-company" name="detail_company"
+                               placeholder="請輸入公司名稱"
+                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                    </div>
+                    <div>
+                        <label for="detail-contact" class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
+                            <span class="text-red-600">*</span></label>
+                        <input type="text" id="detail-contact" name="detail_contact"
+                               placeholder="請輸入聯絡人姓名與職稱"
+                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                    </div>
+                    <div>
+                        <label for="detail-email" class="block f-weight-bold text-slate-900 mb-1">Email
+                            <span class="text-red-600">*</span></label>
+                        <input type="email" id="detail-email" name="detail_email"
+                               placeholder="example@company.com"
+                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                    </div>
+                    <!-- 整合後的手機 / 電話欄位 -->
+                    <div>
+                        <label for="detail-contact-tel" class="block f-weight-bold text-slate-900 mb-1">聯絡電話 / 手機
+                            <span class="text-red-600">*</span></label>
+                        <input type="tel" id="detail-contact-tel" name="detail_contact_tel"
+                               pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$|^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
+                               title="請輸入手機或市話號碼（如：0912-345-678 或 04-2239-8056#123）"
+                               placeholder="如：0912-345-678 或 04-2239-8056#123"
+                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="detail-fax"
+                               class="block f-weight-bold text-slate-900 mb-1">傳真號碼</label>
+                        <input type="text" id="detail-fax" name="detail_fax" placeholder="例如：04-2239-5165"
+                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="detail-address" class="block f-weight-bold text-slate-900 mb-1">寄送地址
+                            <span class="text-red-600">*</span></label>
+                        <input type="text" id="detail-address" name="detail_address"
+                               placeholder="請輸入完整的樣品收件地址"
+                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- B. 應用需求 -->
+            <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+                <div class="bg-slate-100 px-3.5 py-2 f-weight-bold text-blue-950 f-size-sm border-b border-slate-200 flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-blue-950 text-white f-size-xs flex items-center justify-center f-weight-bold">B</span>
+                    應用需求
+                </div>
+                <div class="p-3.5 space-y-3 f-size-sm">
+                    <div>
+                        <span class="f-weight-bold text-slate-900 block mb-1.5">應用領域（可複選）：</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="PTFE取代"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> PTFE取代</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="粉體塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 粉體塗料</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="一般工業塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20">
+                                一般工業塗料</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="卷鋼塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 卷鋼塗料</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="罐頭塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 罐頭塗料</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="螺絲塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 螺絲塗料</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="貨櫃塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 貨櫃塗料</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="一般油墨"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 一般油墨</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="UV油墨"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> UV油墨</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="地板塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 地板塗料</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="木器漆"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 木器漆</label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_domain[]" value="皮革塗料"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 皮革塗料</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="f-weight-bold text-slate-900 block mb-1.5">產品 / 功能需求（可複選）：</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="密著改善"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 密著改善</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="分散"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 分散</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="PTFE取代"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> PTFE取代</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="耐刮"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 耐刮</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="耐磨"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 耐磨</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="耐拋光"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 耐拋光</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="耐摩擦"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 耐摩擦</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="滑爽"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 滑爽</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="防滑"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 防滑</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="消光"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 消光</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="柔感"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 柔感</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="app_func[]" value="織紋"
+                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 織紋</label>
+                        </div>
+                        <div class="mt-2 flex items-center gap-2">
+                            <label for="detail-other-func"
+                                   class="text-slate-900 f-weight-bold shrink-0 f-size-xs">其他功能：</label>
+                            <input type="text" id="detail-other-func" name="detail_other_func"
+                                   placeholder="例如：防撥水、抗黏性、增加摩擦係數、改善流動性、易清潔、防潮..."
+                                   class="w-full px-2.5 py-1 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-0.5">
+                        <div>
+                            <span class="f-weight-bold text-slate-900 block mb-1">系統型態：</span>
+                            <div class="flex flex-wrap gap-2.5 bg-slate-50 p-2 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                        type="checkbox" name="sys_type[]" value="水性"
+                                        class="rounded text-blue-900 focus:ring-blue-500/20"> 水性</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                        type="checkbox" name="sys_type[]" value="醇溶性"
+                                        class="rounded text-blue-900 focus:ring-blue-500/20"> 醇溶性</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                        type="checkbox" name="sys_type[]" value="油性(溶劑型)"
+                                        class="rounded text-blue-900 focus:ring-blue-500/20">
+                                    油性(溶劑型)</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                        type="checkbox" name="sys_type[]" value="UV硬化"
+                                        class="rounded text-blue-900 focus:ring-blue-500/20"> UV硬化</label>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="f-weight-bold text-slate-900 block mb-1">組份 / 外觀：</span>
+                            <div class="flex flex-wrap items-center gap-2.5 bg-slate-50 p-2 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                                <div class="flex items-center gap-2">
+                                    <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                            type="radio" name="comp-type" value="單組份"
+                                            class="text-blue-900 focus:ring-blue-500/20"> 單組份</label>
+                                    <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                            type="radio" name="comp-type" value="雙組份"
+                                            class="text-blue-900 focus:ring-blue-500/20"> 雙組份</label>
+                                </div>
+                                <div class="flex items-center gap-2 border-l border-slate-300 pl-2.5">
+                                    <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                            type="radio" name="app-type" value="透明"
+                                            class="text-blue-900 focus:ring-blue-500/20"> 透明</label>
+                                    <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                            type="radio" name="app-type" value="有顏色"
+                                            class="text-blue-900 focus:ring-blue-500/20"> 有顏色</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C. 基本資訊與規格 -->
+            <div class="border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+                <div class="bg-slate-100 px-3.5 py-2 f-weight-bold text-blue-950 f-size-sm border-b border-slate-200 flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-blue-950 text-white f-size-xs flex items-center justify-center f-weight-bold">C</span>
+                    基本資訊與規格
+                </div>
+                <div class="p-3.5 space-y-3 f-size-sm">
+                    <div>
+                        <span class="f-weight-bold text-slate-900 block mb-1.5">底材類型：</span>
+                        <div class="space-y-1.5 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                                <span class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">塑膠：</span>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="PVC"
+                                        class="rounded text-blue-900"> PVC</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="ABS"
+                                        class="rounded text-blue-900"> ABS</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="PC"
+                                        class="rounded text-blue-900"> PC</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="PET"
+                                        class="rounded text-blue-900"> PET</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="PP"
+                                        class="rounded text-blue-900"> PP</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="EPDM"
+                                        class="rounded text-blue-900"> EPDM</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="尼龍"
+                                        class="rounded text-blue-900"> 尼龍</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="EVA"
+                                        class="rounded text-blue-900"> EVA</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="橡膠"
+                                        class="rounded text-blue-900"> 橡膠</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="薄膜"
+                                        class="rounded text-blue-900"> 薄膜</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="PMMA板材"
+                                        class="rounded text-blue-900"> PMMA板材</label>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
+                                <span class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">金屬：</span>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="鐵"
+                                        class="rounded text-blue-900"> 鐵</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="不鏽鋼"
+                                        class="rounded text-blue-900"> 不鏽鋼</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="鋁合金"
+                                        class="rounded text-blue-900"> 鋁合金</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="鍍鋅鋼板"
+                                        class="rounded text-blue-900"> 鍍鋅鋼板</label>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
+                                <span class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">皮革紡織：</span>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="真皮"
+                                        class="rounded text-blue-900"> 真皮</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="PU合成皮"
+                                        class="rounded text-blue-900"> PU合成皮</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="PV合成皮"
+                                        class="rounded text-blue-900"> PV合成皮</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="紡織品"
+                                        class="rounded text-blue-900"> 紡織品</label>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
+                                <label for="detail-substrate-other"
+                                       class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">其它：</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="木頭"
+                                        class="rounded text-blue-900"> 木頭</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="玻璃"
+                                        class="rounded text-blue-900"> 玻璃</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="substrate[]" value="石材"
+                                        class="rounded text-blue-900"> 石材</label>
+                                <input type="text" id="detail-substrate-other" name="detail_substrate_other"
+                                       placeholder="其他材質描述..."
+                                       class="px-2 py-0.5 bg-white border border-slate-300 rounded outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500 grow max-w-xs">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="f-weight-bold text-slate-900 block mb-1">乾燥固化條件：</span>
+                        <div class="flex flex-wrap items-center gap-y-1.5 gap-x-3 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                            <div class="inline-flex items-center gap-1">
+                                <label for="detail-film-thick"
+                                       class="f-weight-bold text-slate-900 f-size-xs">乾膜厚：</label>
+                                <input type="text" id="detail-film-thick" name="detail_film_thick"
+                                       placeholder="0"
+                                       class="w-14 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 f-weight-medium">
+                                <span>μm</span>
+                            </div>
+                            <label class="inline-flex items-center gap-1 cursor-pointer border-l border-slate-300 pl-3"><input
+                                    type="checkbox" id="detail-no-bake" name="detail_no_bake"
+                                    class="rounded text-blue-900"> 不烘烤（風乾）</label>
+                            <div class="inline-flex items-center gap-1.5 border-l border-slate-300 pl-3">
+                                <label for="detail-bake-temp"
+                                       class="f-weight-bold text-slate-900 f-size-xs">烘烤溫度：</label>
+                                <input type="text" id="detail-bake-temp" name="detail_bake_temp"
+                                       placeholder="如: 120℃"
+                                       class="w-20 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                                <label for="detail-bake-time"
+                                       class="f-weight-bold text-slate-900 ml-0.5 f-size-xs">時間：</label>
+                                <input type="text" id="detail-bake-time" name="detail_bake_time"
+                                       placeholder="如: 20 min"
+                                       class="w-20 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="f-weight-bold text-slate-900 block mb-1.5">樹脂系統：</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="PU" class="rounded text-blue-900">
+                                PU</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="壓克力"
+                                    class="rounded text-blue-900"> 壓克力</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="UV壓克力"
+                                    class="rounded text-blue-900"> UV壓克力</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="環氧"
+                                    class="rounded text-blue-900"> 環氧</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="胺基美耐敏"
+                                    class="rounded text-blue-900"> 胺基美耐敏</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="醇酸"
+                                    class="rounded text-blue-900"> 醇酸</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="NC硝化棉"
+                                    class="rounded text-blue-900"> NC硝化棉</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="UPE不飽和聚酯"
+                                    class="rounded text-blue-900"> UPE不飽和聚酯</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="聚酯"
+                                    class="rounded text-blue-900"> 聚酯</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="氟碳"
+                                    class="rounded text-blue-900"> 氟碳</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="矽利康"
+                                    class="rounded text-blue-900"> 矽利康</label>
+                            <label class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
+                                    type="checkbox" name="resin[]" value="無機奈米"
+                                    class="rounded text-blue-900"> 無機奈米</label>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-0.5">
+                        <div>
+                            <label for="detail-restricted" class="block f-weight-bold text-slate-900 mb-1">其他資訊（限用物質）</label>
+                            <input type="text" id="detail-restricted" name="detail_restricted"
+                                   placeholder="例如：八大重金屬、EN-71、RoHS..."
+                                   class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                        </div>
+                        <div>
+                            <label for="detail-sample-req" class="block f-weight-bold text-slate-900 mb-1">索樣產品
+                                <span class="text-red-600">*</span></label>
+                            <input type="text" id="detail-sample-req" name="detail_sample_req"
+                                   placeholder="請填寫預計索取的產品名稱與數量"
+                                   class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                        </div>
+                    </div>
+
+                    <div class="pt-0.5">
+                        <span class="f-weight-bold text-slate-900 block mb-1">需求文件：</span>
+                        <div class="flex flex-wrap items-center gap-y-1.5 gap-x-5 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
+                            <div class="flex items-center gap-1.5">
+                                <span class="f-weight-bold text-slate-900 f-size-xs">TDS 產品說明書：</span>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="doc_req[]" value="TDS-中文"
+                                        class="rounded text-blue-900"> 中文</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="doc_req[]" value="TDS-英文"
+                                        class="rounded text-blue-900"> 英文</label>
+                            </div>
+                            <div class="flex items-center gap-1.5 border-l border-slate-300 pl-4">
+                                <span class="f-weight-bold text-slate-900 f-size-xs">SDS 安全資料表：</span>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="doc_req[]" value="SDS-中文"
+                                        class="rounded text-blue-900"> 中文</label>
+                                <label class="inline-flex items-center gap-1 cursor-pointer"><input
+                                        type="checkbox" name="doc_req[]" value="SDS-英文"
+                                        class="rounded text-blue-900"> 英文</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D & E 曾測試紀錄與備註 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 f-size-sm">
+                <div>
+                    <label for="detail-past-samples" class="block f-weight-bold text-slate-900 mb-1">D.
+                        曾試過的相關樣品</label>
+                    <textarea id="detail-past-samples" name="detail_past_samples" rows="2.5"
+                              placeholder="請填寫曾經試用過的樣品名稱、編號或評估結果..."
+                              class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
+                </div>
+                <div>
+                    <label for="detail-remarks" class="block f-weight-bold text-slate-900 mb-1">E. 備註 /
+                        其他說明</label>
+                    <textarea id="detail-remarks" name="detail_remarks" rows="2.5"
+                              placeholder="請輸入其他補充說明事項..."
+                              class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部說明與提交按鈕 -->
+        <div class="mt-6 pt-3.5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="f-size-xs text-slate-600 f-weight-medium leading-relaxed">
+                <p>※ 本調查表內所含之個人資料將受我司嚴格保護，並僅作為公司業務聯繫使用。</p>
+                <p class="mt-0.5">習慣傳真作業？
+                    <a href="./doc/Sample_Request_Form.docx" download
+                       class="text-blue-900 f-weight-bold hover:underline inline-flex items-center gap-1">
+                        <i class="fa-solid fa-download f-size-xs" aria-hidden="true"></i> 點此下載紙本傳真申請單
+                        (Word/PDF)
+                    </a>，傳真至 <strong>04-2239-5165</strong>。
+                </p>
+            </div>
+            <button type="submit" id="form-submit"
+                    class="w-full sm:w-auto px-6 py-2.5 bg-blue-950 hover:bg-blue-900 active:scale-[0.98] text-white f-weight-bold rounded-lg shadow-md hover:shadow-lg flex items-center justify-center gap-2 f-size-base shrink-0">
+                <i class="fa-solid fa-paper-plane f-size-sm" aria-hidden="true"></i> 送出需求訊息
+            </button>
+        </div>
+    </form>
+</div>
         </div>
     </section>
 </main>
