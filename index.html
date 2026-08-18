@@ -79,7 +79,7 @@
 
 <!-- Toast 通知容器 -->
 <div id="toast-container" class="hidden pointer-events-none fixed bottom-[20px] left-1/2 -translate-x-1/2 z-[100]"
-     role="status" aria-Life="polite">
+     role="status" aria-live="polite">
     <div id="toast-message"
          class="bg-slate-900 text-white px-5 py-2.5 rounded-xl shadow-2xl flex items-center gap-2.5 f-size-base f-weight-bold">
         <i class="fa-solid fa-circle-check text-emerald-400 f-size-lg" aria-hidden="true"></i>
@@ -612,7 +612,7 @@
     <!-- 品牌按鈕網格 -->
     <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
         <!-- MPI Powders (選中狀態範例) -->
-        <button onclick="AppState.set('partner', 'MPI')"
+        <button onclick="switchPartner('MPI')"
                 id="btn-partner-MPI"
                 aria-label="MPI Powders"
                 class="flex h-14 items-center justify-center rounded border border-transparent bg-white p-2 shadow-sm ring-4 ring-blue-400 transition-all duration-200 active:scale-95">
@@ -625,7 +625,7 @@
         </button>
 
         <!-- Dorf Ketal -->
-        <button onclick="AppState.set('partner', 'DorfKetal')"
+        <button onclick="switchPartner('DorfKetal')"
                 id="btn-partner-DorfKetal"
                 aria-label="DORF KETAL"
                 class="flex h-14 items-center justify-center rounded border border-gray-200 bg-white p-2 opacity-50 shadow-sm transition-all duration-200 hover:bg-gray-50 hover:opacity-100 active:scale-95">
@@ -638,7 +638,7 @@
         </button>
 
         <!-- Orion -->
-        <button onclick="AppState.set('partner', 'Orion')"
+        <button onclick="switchPartner('Orion')"
                 id="btn-partner-Orion"
                 aria-label="ORION"
                 class="flex h-14 items-center justify-center rounded border border-slate-700 bg-slate-950 p-2 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
@@ -651,7 +651,7 @@
         </button>
 
         <!-- 其他品牌 (背景圖 + 磨砂文字) -->
-        <button onclick="AppState.set('partner', 'Others')"
+        <button onclick="switchPartner('Others')"
                 id="btn-partner-Others"
                 aria-label="其他品牌"
                 class="group relative flex h-14 items-center justify-center overflow-hidden rounded border border-slate-700 bg-slate-950 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
@@ -902,13 +902,18 @@
                                 <label for="quick-mobile" class="block f-weight-bold text-slate-900 mb-1">手機 <span
                                         class="text-red-600">*</span></label>
                                 <input type="tel" id="quick-mobile" name="quick_mobile" required
-                                       placeholder="請輸入手機號碼"
+                                       pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$"
+                                       title="請輸入正確的手機號碼格式，例如：0912-345-678 或 0912345678"
+                                       placeholder="請輸入手機號碼 (如：0912-345-678)"
                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                             </div>
                             <div>
                                 <label for="quick-phone" class="block f-weight-bold text-slate-900 mb-1">電話及分機
                                     <span class="text-red-600">*</span></label>
-                                <input type="tel" id="quick-phone" name="quick_phone" placeholder="請輸入市話及分機號碼"
+                                <input type="tel" id="quick-phone" name="quick_phone"
+                                       pattern="^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
+                                       title="請輸入市話號碼及分機（如有），例如：04-2239-8056 或 02-1234-5678#123"
+                                       placeholder="請輸入市話及分機號碼 (如：04-2239-8056)"
                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                             </div>
                             <div>
@@ -965,14 +970,18 @@
                                     <label for="detail-mobile"
                                            class="block f-weight-bold text-slate-900 mb-1">手機</label>
                                     <input type="tel" id="detail-mobile" name="detail_mobile"
-                                           placeholder="請輸入手機號碼"
+                                           pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$"
+                                           title="請輸入正確的手機號碼格式，例如：0912-345-678 或 0912345678"
+                                           placeholder="請輸入手機號碼 (如：0912-345-678)"
                                            class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                 </div>
                                 <div>
                                     <label for="detail-phone"
                                            class="block f-weight-bold text-slate-900 mb-1">電話及分機</label>
                                     <input type="tel" id="detail-phone" name="detail_phone"
-                                           placeholder="請輸入市話及分機號碼"
+                                           pattern="^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
+                                           title="請輸入市話號碼及分機（如有），例如：04-2239-8056 或 02-1234-5678#123"
+                                           placeholder="請輸入市話及分機號碼 (如：04-2239-8056)"
                                            class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                 </div>
                                 <div>
@@ -1559,6 +1568,7 @@
         expandedMenus: [],
         configs: {},
         allProductsCache: {},
+        allLoaded: false,
         searchQuery: '',
         sortColumn: null,
         sortOrder: 'desc',
@@ -1567,7 +1577,7 @@
             if (this[key] === value) return;
             this[key] = value;
             this.notify(key);
-            updateHashRoute();
+            updateHashRoute(key === 'partner');
         },
 
         notify(key) {
@@ -1587,10 +1597,23 @@
         return p;
     }
 
-    function selectPartnerAndSwitch(partnerKey) {
+    function switchPartner(partnerKey) {
+        resetSearchInputFields();
         AppState.partner = partnerKey;
-        switchTab('products', true);
+        const configKey = partnerConfigMap[partnerKey] || 'mpi';
+        const brandConfig = AppState.configs[configKey];
+        if (brandConfig && brandConfig.files && brandConfig.files[0]) {
+            AppState.productLine = brandConfig.files[0].key;
+        }
+        AppState.category = 'all';
+        AppState.filters = {};
+        switchTab('products', false);
         updatePartnerUI();
+        updateHashRoute(true);
+    }
+
+    function selectPartnerAndSwitch(partnerKey) {
+        switchPartner(partnerKey);
     }
 
     function hasValidValue(val) {
@@ -1615,7 +1638,6 @@
 
     class ProductRepository {
         static async loadBrandData(partnerKey) {
-            renderTableSkeleton(6, 6);
             const configKey = partnerConfigMap[partnerKey] || 'mpi';
             const brandConfig = AppState.configs[configKey];
             if (!brandConfig) return [];
@@ -1625,6 +1647,7 @@
                 if (AppState.allProductsCache['mpi_master']) {
                     return AppState.allProductsCache['mpi_master'];
                 }
+                renderTableSkeleton(6, 6);
                 try {
                     const res = await fetch(brandConfig.masterPath || './json/mpi/master_database_clear.json');
                     const data = await res.json();
@@ -1640,6 +1663,11 @@
             }
 
             // 其他品牌保持原有多檔案讀取邏輯
+            const isAllCached = (brandConfig.files || []).every(f => !!AppState.allProductsCache[f.key]);
+            if (!isAllCached) {
+                renderTableSkeleton(6, 6);
+            }
+
             const loadPromises = (brandConfig.files || []).map(file => {
                 if (AppState.allProductsCache[file.key]) {
                     return Promise.resolve({key: file.key, data: AppState.allProductsCache[file.key]});
@@ -1738,14 +1766,14 @@
                 {
                     id: 'performance',
                     title: '應用性能',
-                    class: 'w-[35%] min-w-[200px]',
+                    class: 'w-[25%] min-w-[200px]',
                     getValue: p => p.performance || p.properties,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.performance || p.properties || '—'}</span>`
                 },
                 {
                     id: 'usage',
                     title: '用法與用量',
-                    class: 'w-[20%] min-w-[130px]',
+                    class: 'w-[30%] min-w-[130px]',
                     getValue: p => p.suggested_use_level_zh || p.suggested_use_level || p.dosage,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.suggested_use_level_zh || p.suggested_use_level || p.dosage || '—'}</span>`
                 }
@@ -2291,8 +2319,8 @@
                     render: p => {
                         const t = uiText[AppState.lang];
                         return `<div class="flex flex-row justify-center gap-2.5">
-                ${p.website && p.website !== 'N/A' ? `<button data-action="tds" data-product="${p.product_name}" class="text-red-600 hover:text-red-800 f-size-sm f-weight-bold" title="${t.official_doc}"><i class="fa-solid fa-file-pdf"></i></button>` : ''}
-                ${p.tech_data_url && p.tech_data_url !== 'N/A' ? `<button data-action="data" data-product="${p.product_name}" class="text-blue-700 hover:text-blue-900 f-size-sm f-weight-bold" title="${t.tech_data}"><i class="fa-solid fa-file-lines"></i></button>` : ''}
+                ${p.website && p.website !== 'N/A' ? `<button data-action="tds" data-product="${p.product_name}" class="text-red-600 hover:text-red-800 f-size-sm f-weight-bold" title="${p.product_name} - ${t.official_doc}" aria-label="${p.product_name} - ${t.official_doc}"><i class="fa-solid fa-file-pdf"></i></button>` : ''}
+                ${p.tech_data_url && p.tech_data_url !== 'N/A' ? `<button data-action="data" data-product="${p.product_name}" class="text-blue-700 hover:text-blue-900 f-size-sm f-weight-bold" title="${p.product_name} - ${t.tech_data}" aria-label="${p.product_name} - ${t.tech_data}"><i class="fa-solid fa-file-lines"></i></button>` : ''}
             </div>`;
                     }
                 }
@@ -2825,11 +2853,10 @@
                 renderDirectoryTree();
                 initFilters();
 
-                if (!AppState.searchQuery) {
-                    // 修正：保留傳入的 category，不強制洗成 'all'
-                    selectDirectoryNode(AppState.productLine, AppState.category || 'all');
+                if (AppState.searchQuery) {
+                    renderGroupedSearchResults(AppState.searchQuery);
                 } else {
-                    renderProducts();
+                    selectDirectoryNode(AppState.productLine, AppState.category || 'all');
                 }
 
                 // 渲染完成後回呼
@@ -2900,6 +2927,8 @@
                 return `
 <button onclick="selectDirectoryNode('${lineKey}', '${subCat}')"
         data-line="${lineKey}" data-cat="${subCat}"
+        title="${lineTitle} - ${subCat}"
+        aria-label="${lineTitle} - ${subCat}"
         class="dir-node-btn w-full text-left pl-7 pr-2 py-1.5 rounded f-size-sm text-slate-700 f-weight-bold hover:bg-blue-50 hover:text-blue-900 flex justify-between items-center group">
     <span class="transform group-hover:translate-x-0.5">• ${subCat}</span>
     <span class="f-size-xs bg-slate-200 text-slate-800 px-1.5 py-0.5 rounded-full f-weight-bold">${count}</span>
@@ -2912,13 +2941,17 @@
         <div class="mb-1 border-b border-gray-100 last:border-0 pb-1">
             <button onclick="handleMainDirectoryClick('${lineKey}')"
                     id="node-${lineKey}-all"
+                    aria-expanded="${isExpanded ? 'true' : 'false'}"
+                    aria-controls="submenu-${lineKey}"
+                    title="${lineTitle}"
+                    aria-label="${lineTitle}"
                     class="dir-node-btn w-full text-left px-2.5 py-2 rounded f-size-sm f-weight-bold text-slate-900 hover:bg-slate-100 flex items-center justify-between group">
                 <div class="flex items-center gap-2 pointer-events-none">
-                    <i class="fa-solid ${iconMap[lineKey] || 'fa-folder'} text-slate-500 f-size-xs"></i>
+                    <i class="fa-solid ${iconMap[lineKey] || 'fa-folder'} text-slate-500 f-size-xs" aria-hidden="true"></i>
                     <span>${lineTitle}</span>
                 </div>
                 <div class="text-slate-500 group-hover:text-blue-900 ${isExpanded ? 'rotate-180' : ''} pointer-events-none" id="chevron-${lineKey}">
-                    <i class="fa-solid fa-chevron-down f-size-xs"></i>
+                    <i class="fa-solid fa-chevron-down f-size-xs" aria-hidden="true"></i>
                 </div>
             </button>
             <div id="submenu-${lineKey}" class="mt-0.5 space-y-0.5 border-l-2 border-slate-200 ml-3.5 ${isExpanded ? '' : 'hidden'}">
@@ -3078,7 +3111,7 @@
         AppState.category = categoryKey;
         renderDirectoryTree();
         renderProducts();
-        updateHashRoute();
+        updateHashRoute(true);
     }
 
     function handleMainDirectoryClick(lineKey) {
@@ -3154,20 +3187,24 @@
             AppState.searchQuery = query;
 
             if (query !== '') {
-                switchTab('products');
+                switchTab('products', false);
                 await loadAllBrandsData();
                 renderGroupedSearchResults(query);
+                updateHashRoute(false);
             } else {
                 renderProducts();
+                updateHashRoute(false);
             }
         }, 200);
     }
 
     async function loadAllBrandsData() {
+        if (AppState.allLoaded) return;
         const partners = ['MPI', 'DorfKetal', 'Orion', 'Others'];
         for (const p of partners) {
             await ProductRepository.loadBrandData(p);
         }
+        AppState.allLoaded = true;
     }
 
     function renderGroupedSearchResults(query) {
@@ -3221,9 +3258,11 @@
                                 <span class="f-size-xs f-weight-normal text-slate-700">(${matchedProducts.length} 項結果)</span>
                             </span>
                             <button onclick="navigateToCategory('${partnerName}', '${file.key}', 'all')"
+                                    title="前往【${brand.brandName}】${sectionTitle}分類專區"
+                                    aria-label="前往【${brand.brandName}】${sectionTitle}分類專區"
                                     class="px-3 py-1 bg-blue-700 hover:bg-blue-800 text-white rounded f-size-xs f-weight-bold flex items-center gap-1.5 transition-all active:scale-95 shadow-sm">
                                 <span>前往該分類專區</span>
-                                <i class="fa-solid fa-arrow-right f-size-xs"></i>
+                                <i class="fa-solid fa-arrow-right f-size-xs" aria-hidden="true"></i>
                             </button>
                         </div>
                     </td>
@@ -3249,8 +3288,10 @@
                             <div class="flex flex-col items-center gap-1.5">
                                 <span class="f-size-xs text-slate-600 f-weight-bold">${partnerName}</span>
                                 <button onclick="navigateToCategory('${partnerName}', '${file.key}', '${targetCategory}', '${name}')"
+                                        title="查看 ${name} 詳細資訊"
+                                        aria-label="查看 ${name} 詳細資訊"
                                         class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded f-weight-bold f-size-xs shadow-sm flex items-center gap-1 transition-all active:scale-95">
-                                    <i class="fa-solid fa-location-arrow f-size-xs text-blue-700"></i>
+                                    <i class="fa-solid fa-location-arrow f-size-xs text-blue-700" aria-hidden="true"></i>
                                     <span>詳細資訊</span>
                                 </button>
                             </div>
@@ -3322,8 +3363,8 @@
             }
         });
 
-        // 5. 更新網址 hash
-        updateHashRoute();
+        // 5. 更新網址 hash (加入歷史紀錄以支援返回)
+        updateHashRoute(true);
     }
 
     function resetSearchInputFields() {
@@ -3336,6 +3377,7 @@
         resetSearchInputFields();
         initFilters();
         renderProducts();
+        updateHashRoute(false);
     }
 
     function switchTab(tabId, updateUrl = true) {
@@ -3356,8 +3398,13 @@
             activeNavBtn.setAttribute('aria-selected', 'true');
         }
 
-        if (tabId === 'products') updatePartnerUI();
-        if (updateUrl) updateHashRoute();
+        if (tabId === 'products') {
+            if (updateUrl && !window.location.hash.includes('?q=')) {
+                resetSearchInputFields();
+            }
+            updatePartnerUI();
+        }
+        if (updateUrl) updateHashRoute(true);
     }
 
     window.addEventListener('popstate', parseHashRoute);
@@ -3467,6 +3514,18 @@
                 const el = document.getElementById(id);
                 if (el) el.required = false;
             });
+
+            // 清除非當前模式（詳細評估）下填寫的殘留數值與驗證錯誤
+            if (detailed) {
+                detailed.querySelectorAll('input:not([type="button"]):not([type="submit"]), textarea').forEach(el => {
+                    if (el.type === 'checkbox' || el.type === 'radio') {
+                        el.checked = false;
+                    } else {
+                        el.value = '';
+                    }
+                    el.setCustomValidity?.('');
+                });
+            }
         } else {
             quick?.classList.add('hidden');
             detailed?.classList.remove('hidden');
@@ -3481,8 +3540,16 @@
                 const el = document.getElementById(id);
                 if (el) el.required = true;
             });
+
+            // 清除非當前模式（快速詢價）下填寫的殘留數值與驗證錯誤
+            if (quick) {
+                quick.querySelectorAll('input:not([type="button"]):not([type="submit"]), textarea').forEach(el => {
+                    el.value = '';
+                    el.setCustomValidity?.('');
+                });
+            }
         }
-        updateHashRoute();
+        updateHashRoute(false);
     }
 
     async function handleContactSubmit(event) {
@@ -3502,6 +3569,9 @@
             return;
         }
 
+        const mobileRegex = /^(\+?886\-?|0)?9\d{8}$|^(\+?886\-?|0)?9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$/;
+        const phoneRegex = /^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$/;
+
         const isQuick = !document.getElementById('form-mode-quick')?.classList.contains('hidden');
         let payload = {};
 
@@ -3517,6 +3587,21 @@
 
             if (!company || !contact || !email) {
                 showToast('請填寫必填欄位（公司名稱、聯絡人、Email）', 'error');
+                return;
+            }
+
+            if (!mobile) {
+                showToast('請填寫手機號碼', 'error');
+                return;
+            }
+
+            if (!mobileRegex.test(mobile.replace(/\s+/g, ''))) {
+                showToast('請輸入正確的手機號碼格式（例：0912-345-678）', 'error');
+                return;
+            }
+
+            if (phone && !phoneRegex.test(phone.replace(/\s+/g, ''))) {
+                showToast('請輸入正確的市話號碼格式（例：04-2239-8056）', 'error');
                 return;
             }
 
@@ -3542,6 +3627,16 @@
 
             if (!company || !contact || !email) {
                 showToast('請填寫基本必填欄位（公司名稱、聯絡人、Email）', 'error');
+                return;
+            }
+
+            if (mobile && !mobileRegex.test(mobile.replace(/\s+/g, ''))) {
+                showToast('請輸入正確的手機號碼格式（例：0912-345-678）', 'error');
+                return;
+            }
+
+            if (phone && !phoneRegex.test(phone.replace(/\s+/g, ''))) {
+                showToast('請輸入正確的市話號碼格式（例：04-2239-8056）', 'error');
                 return;
             }
 
@@ -3653,6 +3748,17 @@
         switchTab(tabId, false);
 
         if (tabId === 'products') {
+            const q = params.get('q');
+            if (q) {
+                AppState.searchQuery = q;
+                document.querySelectorAll('.global-search-input').forEach(input => input.value = q);
+                loadAllBrandsData().then(() => {
+                    renderGroupedSearchResults(q);
+                });
+                return;
+            }
+
+            resetSearchInputFields();
             const partner = params.get('partner');
             const line = params.get('line');
             const category = params.get('category');
@@ -3679,14 +3785,18 @@
         }
     }
 
-    function updateHashRoute() {
+    function updateHashRoute(usePush = false) {
         const activeTab = document.querySelector('.tab-content.active')?.id.replace('tab-', '') || 'about';
         const params = new URLSearchParams();
 
         if (activeTab === 'products') {
-            if (AppState.partner) params.set('partner', AppState.partner);
-            if (AppState.productLine) params.set('line', AppState.productLine);
-            if (AppState.category && AppState.category !== 'all') params.set('category', AppState.category);
+            if (AppState.searchQuery) {
+                params.set('q', AppState.searchQuery);
+            } else {
+                if (AppState.partner) params.set('partner', AppState.partner);
+                if (AppState.productLine) params.set('line', AppState.productLine);
+                if (AppState.category && AppState.category !== 'all') params.set('category', AppState.category);
+            }
         } else if (activeTab === 'contact') {
             const isQuick = !document.getElementById('form-mode-quick')?.classList.contains('hidden');
             params.set('mode', isQuick ? 'quick' : 'detailed');
@@ -3696,7 +3806,11 @@
         const newHash = `#${activeTab}${queryString ? '?' + queryString : ''}`;
 
         if (window.location.hash !== newHash) {
-            history.replaceState(null, '', newHash);
+            if (usePush) {
+                history.pushState(null, '', newHash);
+            } else {
+                history.replaceState(null, '', newHash);
+            }
         }
     }
 
