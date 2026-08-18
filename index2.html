@@ -600,42 +600,74 @@
         <div class="optimized-container px-4 py-6">
 
             <!-- STEP 1：品牌篩選 -->
-            <section id="section-partner"
-                     class="bg-slate-900 text-white rounded-xl p-4 mb-5 shadow-sm border border-slate-800">
-                <h2 class="f-size-base f-weight-bold mb-2.5 flex items-center tracking-wide text-blue-300"
-                    id="ui-step-partner">
-                    <span class="flex items-center justify-center w-5 h-5 rounded bg-blue-600 text-white f-size-xs f-weight-bold mr-2">1</span>
-                    請選擇品牌
-                </h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <button onclick="AppState.set('partner', 'MPI')" id="btn-partner-MPI" aria-label="MPI Powders"
-                            class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 ring-4 ring-blue-400">
-                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="160" height="50" loading="lazy"
-                             decoding="async"
-                             onError="handleImageFallback(this, './img/MCP-Logo.png');"
-                             class="fallback-img max-h-full max-w-full object-contain">
-                    </button>
-                    <button onclick="AppState.set('partner', 'DorfKetal')" id="btn-partner-DorfKetal"
-                            aria-label="DORF KETAL"
-                            class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 opacity-50">
-                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="160" height="50" loading="lazy"
-                             decoding="async"
-                             onError="handleImageFallback(this, './img/dorf-ketal.png');"
-                             class="fallback-img max-h-full max-w-full object-contain">
-                    </button>
-                    <button onclick="AppState.set('partner', 'Orion')" id="btn-partner-Orion" aria-label="ORION"
-                            class="p-2 rounded border border-slate-700 bg-slate-950 shadow-sm flex items-center justify-center h-14 active:scale-95 opacity-50">
-                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="160" height="50" loading="lazy"
-                             decoding="async"
-                             onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
-                             class="fallback-img max-h-full max-w-full object-contain">
-                    </button>
-                    <button onclick="AppState.set('partner', 'Others')" id="btn-partner-Others" aria-label="其他品牌"
-                            class="p-2 rounded border border-gray-300 bg-gray-100 hover:bg-gray-200 flex flex-col items-center justify-center h-14 active:scale-95 text-slate-800 opacity-50">
-                        <span class="f-weight-bold f-size-base" id="ui-partner-others">其他特化材料</span>
-                    </button>
-                </div>
-            </section>
+            <section id="section-partner" class="mb-5 rounded-xl border border-slate-800 bg-slate-900 p-4 text-white shadow-sm">
+    <!-- 標題區域 -->
+    <h2 id="ui-step-partner" class="mb-3 flex items-center text-sm font-bold tracking-wide text-blue-300">
+        <span class="mr-2 flex h-5 w-5 items-center justify-center rounded bg-blue-600 text-xs font-bold text-white">
+            1
+        </span>
+        請選擇品牌
+    </h2>
+
+    <!-- 品牌按鈕網格 -->
+    <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <!-- MPI Powders (選中狀態範例) -->
+        <button onclick="AppState.set('partner', 'MPI')"
+                id="btn-partner-MPI"
+                aria-label="MPI Powders"
+                class="flex h-14 items-center justify-center rounded border border-transparent bg-white p-2 shadow-sm ring-4 ring-blue-400 transition-all duration-200 active:scale-95">
+            <img src="./img/MCP-Logo.png"
+                 alt="MPI POWDERS"
+                 width="160" height="50"
+                 loading="lazy" decoding="async"
+                 onError="handleImageFallback(this, './img/MCP-Logo.png');"
+                 class="fallback-img max-h-full max-w-full object-contain">
+        </button>
+
+        <!-- Dorf Ketal -->
+        <button onclick="AppState.set('partner', 'DorfKetal')"
+                id="btn-partner-DorfKetal"
+                aria-label="DORF KETAL"
+                class="flex h-14 items-center justify-center rounded border border-gray-200 bg-white p-2 opacity-50 shadow-sm transition-all duration-200 hover:bg-gray-50 hover:opacity-100 active:scale-95">
+            <img src="./img/dorf-ketal.png"
+                 alt="DORF KETAL"
+                 width="160" height="50"
+                 loading="lazy" decoding="async"
+                 onError="handleImageFallback(this, './img/dorf-ketal.png');"
+                 class="fallback-img max-h-full max-w-full object-contain">
+        </button>
+
+        <!-- Orion -->
+        <button onclick="AppState.set('partner', 'Orion')"
+                id="btn-partner-Orion"
+                aria-label="ORION"
+                class="flex h-14 items-center justify-center rounded border border-slate-700 bg-slate-950 p-2 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
+            <img src="./img/orion_new_logo_white.png"
+                 alt="ORION"
+                 width="160" height="50"
+                 loading="lazy" decoding="async"
+                 onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
+                 class="fallback-img max-h-full max-w-full object-contain">
+        </button>
+
+        <!-- 其他品牌 (背景圖 + 磨砂文字) -->
+        <button onclick="AppState.set('partner', 'Others')"
+                id="btn-partner-Others"
+                aria-label="其他品牌"
+                class="group relative flex h-14 items-center justify-center overflow-hidden rounded border border-slate-700 bg-slate-950 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
+            <img src="./img/others.jpg"
+                 alt="其他特化材料"
+                 width="160" height="50"
+                 loading="lazy" decoding="async"
+                 onError="handleImageFallback(this, './img/others.jpg');"
+                 class="fallback-img absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-300 group-hover:scale-110">
+            <span id="ui-partner-others"
+                  class="absolute inset-0 flex items-center justify-center bg-slate-950/40 text-lg font-bold tracking-wide text-white backdrop-blur-[1px]">
+                其他特化材料
+            </span>
+        </button>
+    </div>
+</section>
 
             <!-- 資料建置提示 -->
             <section id="section-coming-soon"
@@ -760,7 +792,7 @@
                 <h2 class="f-size-xl f-weight-bold text-blue-950 mb-5 flex items-center gap-2" id="contact-title">
                     <i class="fa-solid fa-headset f-size-lg" aria-hidden="true"></i> 詢價與業務接洽
                 </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 f-size-base text-slate-800">
+                <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-5 f-size-base text-slate-800">
                     <div class="flex items-start gap-2.5">
                         <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-900 flex items-center justify-center shrink-0 f-size-base">
                             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
@@ -1060,7 +1092,7 @@
                                         <label for="detail-other-func"
                                                class="text-slate-900 f-weight-bold shrink-0 f-size-xs">其他功能：</label>
                                         <input type="text" id="detail-other-func" name="detail_other_func"
-                                               placeholder="例如：防撥水、抗黏、增加摩擦係數、改善流動性、易清潔、防潮..."
+                                               placeholder="例如：防撥水、抗黏性、增加摩擦係數、改善流動性、易清潔、防潮..."
                                                class="w-full px-2.5 py-1 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
                                 </div>
@@ -1483,7 +1515,7 @@
             "slip_lubricity": "滑爽", "anti_slip": "防滑", "increased_cof": "高摩擦",
             "matting_gloss_control": "消光", "gloss_retention": "保持光澤", "clarity": "高透明",
             "soft_touch": "柔感", "texture_structure": "織紋", "corrosion_resistance": "防腐蝕",
-            "block_resistance": "抗黏", "improved_extrusion_flow": "改善流動", "anti_gassing": "防氣泡",
+            "block_resistance": "抗黏性", "improved_extrusion_flow": "改善流動", "anti_gassing": "防氣泡",
             "metal_mark_resistance": "抗金屬劃痕", "apparent_hardness": "表面硬度", "water_beading": "撥水",
             "water_repellency": "撥水", "heat_resistance": "耐高溫", "soil_resistance": "防污性",
             "cleanability": "易潔性", "no_silica_dust": "無矽塵"
