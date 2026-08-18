@@ -3252,26 +3252,27 @@
     function navigateToCategory(partner, lineKey, categoryKey = 'all', productName = null) {
         resetSearchInputFields();
 
+        // 1. 確保切換到產品分頁 (關鍵修復)
+        switchTab('products', false);
+
         AppState.partner = partner;
         AppState.productLine = lineKey;
         AppState.category = categoryKey;
 
-        // 展開左側子選單
+        // 2. 展開左側子選單
         if (!AppState.expandedMenus.includes(lineKey)) {
             AppState.expandedMenus.push(lineKey);
         }
 
-        // 自動展開目標產品的卡片
+        // 3. 若有指定產品，預設展開該產品卡片
         if (productName && !AppState.expandedDetails.includes(productName)) {
             AppState.expandedDetails.push(productName);
         }
 
-        // 傳入回呼函式，在畫面真正渲染完成後觸發定位
+        // 4. 更新畫面並滾動定位
         updatePartnerUI(() => {
-            // 1. 同步左側目錄標示
             updateNodeActiveStyles(lineKey, categoryKey);
 
-            // 2. 右側表格目標品項滾動與高亮
             if (productName) {
                 document.querySelectorAll('.row-target-highlight').forEach(el => el.classList.remove('row-target-highlight'));
 
@@ -3288,6 +3289,9 @@
                 mainDirectoryContainer.scrollIntoView({behavior: 'smooth'});
             }
         });
+
+        // 5. 更新網址 hash
+        updateHashRoute();
     }
 
     function resetSearchInputFields() {
