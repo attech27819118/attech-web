@@ -2906,7 +2906,7 @@
           "apparent_hardness": 2
         },
         "performance_descriptions_zh": {
-          "abrasion_resistance": "賦予良好的抗耐磨擦和抗劃痕性。",
+          "abrasion_resistance": "賦予塗層良好的耐磨擦和抗劃痕性。",
           "slip_lubricity": "提供良好的表面滑爽性",
           "block_resistance": "提供優異的抗黏結性能。",
           "apparent_hardness": "可提升塗層表面硬度。"
@@ -2968,7 +2968,7 @@
     "chemical_component": "High density polyethylene",
     "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（防護型，柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
     "suggested_use_level_zh": "1.0-3.0%",
     "suggested_use_level_en": "1.0-3.0%",
