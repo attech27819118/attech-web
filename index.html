@@ -1418,13 +1418,15 @@
         "zh": {
             "ptfe_alternative": "PTFE取代", "scratch_resistance": "耐刮", "abrasion_resistance": "耐磨",
             "burnish_resistance": "耐拋光", "rub_resistance": "耐摩擦",
-            "slip_lubricity": "滑爽", "anti_slip": "防滑", "increased_cof": "高摩擦",
+            "slip_lubricity": "滑爽", "slip": "滑爽", "anti_slip": "防滑", "increased_cof": "高摩擦",
             "matting_gloss_control": "消光", "gloss_retention": "保持光澤", "clarity": "高透明",
             "soft_touch": "柔感", "texture_structure": "織紋", "corrosion_resistance": "防腐蝕",
             "block_resistance": "抗黏性", "improved_extrusion_flow": "改善流動", "anti_gassing": "防氣泡",
             "metal_mark_resistance": "抗金屬劃痕", "apparent_hardness": "提升表面硬度", "water_beading": "撥水",
             "water_repellency": "撥水", "heat_resistance": "耐高溫", "soil_resistance": "防污性",
-            "cleanability": "易潔性", "no_silica_dust": "無矽塵"
+            "cleanability": "易潔性", "no_silica_dust": "無矽塵",
+            "lubricity_smooth_feel": "滑爽/滑度", "lubricity": "滑爽/潤滑", "flow_leveling": "流平性",
+            "recoatability": "重塗性", "weather_resistance": "耐候性", "chemical_resistance": "耐化學性"
         },
         "en": {
             "ptfe_alternative": "PTFE Alt.",
@@ -1433,6 +1435,7 @@
             "burnish_resistance": "Burnish Res.",
             "rub_resistance": "Rub Res.",
             "slip_lubricity": "Slip / Lubricity",
+            "slip": "Slip",
             "anti_slip": "Anti-Slip",
             "increased_cof": "High COF",
             "matting_gloss_control": "Matting / Gloss",
@@ -1451,7 +1454,13 @@
             "heat_resistance": "Heat Res.",
             "soil_resistance": "Soil Res.",
             "cleanability": "Cleanability",
-            "no_silica_dust": "No Silica Dust"
+            "no_silica_dust": "No Silica Dust",
+            "lubricity_smooth_feel": "Lubricity / Smooth Feel",
+            "lubricity": "Lubricity",
+            "flow_leveling": "Flow & Leveling",
+            "recoatability": "Recoatability",
+            "weather_resistance": "Weather Res.",
+            "chemical_resistance": "Chemical Res."
         }
     };
 
@@ -2408,7 +2417,7 @@
                     render: p => `
                     <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
                         <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
-                        ${renderCompareIcon(p, 'Orion', 'carbon_black')}
+                        ${renderCompareIcon(p, 'Orion', AppState.productLine || 'coating')}
                     </div>`
                 },
                 {
@@ -2761,7 +2770,7 @@
             <span class="text-xs text-slate-600 font-medium flex items-center gap-1.5">
                 <i class="fa-solid fa-scale-balanced text-blue-700"></i> 可加入比較表橫向對比最多 4 款產品規格
             </span>
-            <button data-product="${p.product_name}" onclick="event.stopPropagation(); toggleCompareProduct('${p.product_name}', 'MPI')" class="compare-toggle-btn px-3.5 py-1.5 rounded-lg border text-xs font-bold transition-all flex items-center gap-1.5 ${AppState.compareList.some(item => item.product_name === p.product_name) ? 'bg-blue-900 text-white border-blue-900 shadow-sm' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-300'}">
+            <button data-product="${p.product_name}" onclick="event.stopPropagation(); toggleCompareProduct('${p.product_name}', 'MPI', '${AppState.productLine}')" class="compare-toggle-btn px-3.5 py-1.5 rounded-lg border text-xs font-bold transition-all flex items-center gap-1.5 ${AppState.compareList.some(item => item.product_name === p.product_name) ? 'bg-blue-900 text-white border-blue-900 shadow-sm' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-300'}">
                 <i class="fa-solid ${AppState.compareList.some(item => item.product_name === p.product_name) ? 'fa-check' : 'fa-plus'}"></i>
                 <span>${AppState.compareList.some(item => item.product_name === p.product_name) ? t.compared : t.compare}</span>
             </button>
@@ -4190,25 +4199,43 @@
             else partnerKey = item?.partnerKey || 'MPI';
         }
 
-        // 智能提取 MPI 的 applications_data 與評分描述 (無論當前處於哪一個品牌頁面皆可完整提取)
+        // 智能提取所屬應用領域 / 功能情境之專屬資料 (同一支產品僅說明在該應用功能情況下的性能描述與評分)
         let appData = {};
-        let ratings = { ...(p.performance_ratings || {}) };
-        let descSource = { ...((p['performance_descriptions_' + lang] || p.performance_descriptions_zh) || {}) };
+        let ratings = {};
+        let descSource = {};
+        let appTitle = '';
 
         if (p.applications_data) {
-            if (item?.lineKey && p.applications_data[item.lineKey]) {
-                appData = p.applications_data[item.lineKey];
-                if (appData.performance_ratings) ratings = { ...ratings, ...appData.performance_ratings };
-                const d = appData['performance_descriptions_' + lang] || appData.performance_descriptions_zh;
-                if (d) descSource = { ...descSource, ...d };
+            const targetLineKey = item?.lineKey || (p.applications_data[AppState.productLine] ? AppState.productLine : null) || Object.keys(p.applications_data)[0];
+            if (targetLineKey && p.applications_data[targetLineKey]) {
+                appData = p.applications_data[targetLineKey];
+            } else {
+                const firstKey = Object.keys(p.applications_data)[0];
+                if (firstKey) appData = p.applications_data[firstKey];
             }
-            for (const key in p.applications_data) {
-                const ad = p.applications_data[key];
-                if (ad && typeof ad === 'object') {
-                    if (Object.keys(appData).length === 0) appData = ad;
-                    if (ad.performance_ratings) ratings = { ...ratings, ...ad.performance_ratings };
-                    const d = ad['performance_descriptions_' + lang] || ad.performance_descriptions_zh;
-                    if (d) descSource = { ...descSource, ...d };
+
+            if (appData) {
+                if (appData.performance_ratings) {
+                    ratings = { ...appData.performance_ratings };
+                } else if (p.performance_ratings) {
+                    ratings = { ...p.performance_ratings };
+                }
+                const d = appData['performance_descriptions_' + lang] || appData.performance_descriptions_zh || appData['performance_descriptions_' + (lang === 'zh' ? 'en' : 'zh')] || p['performance_descriptions_' + lang] || p.performance_descriptions_zh;
+                if (d) {
+                    descSource = { ...d };
+                }
+                appTitle = appData['application_title_' + lang] || appData.application_title_zh || appData.application_title_en || '';
+            }
+        } else {
+            if (p.performance_ratings) ratings = { ...p.performance_ratings };
+            const d = p['performance_descriptions_' + lang] || p.performance_descriptions_zh || p.performance_descriptions_en;
+            if (d) descSource = { ...d };
+
+            if (item?.lineKey) {
+                const configKey = partnerConfigMap[partnerKey] || partnerKey.toLowerCase();
+                const fileObj = AppState.configs[configKey]?.files?.find(f => f.key === item.lineKey);
+                if (fileObj) {
+                    appTitle = lang === 'zh' ? (fileObj.titleZh || fileObj.title) : (fileObj.titleEn || fileObj.title);
                 }
             }
         }
@@ -4230,6 +4257,7 @@
                 if (p.applications && (p.applications[k] === true || p.applications[k] === 1 || (typeof p.applications[k] === 'string' && p.applications[k] !== '0' && p.applications[k] !== '')) ) return true;
                 if (p.system && (p.system[k] === true || p.system[k] === 1 || (typeof p.system[k] === 'string' && p.system[k] !== '0' && p.system[k] !== '')) ) return true;
                 if (appData[k] || appData.applications?.[k] || appData.system?.[k]) return true;
+                if (p.applications_data && p.applications_data[k]) return true;
             }
             return false;
         };
@@ -4239,6 +4267,7 @@
         return {
             name: p.product_name || item.product_name,
             partnerKey: partnerKey,
+            appTitle: appTitle,
             rawProduct: p,
             
             // 基本資料
@@ -4439,7 +4468,8 @@
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </div>
-                            <div class="product-name-title mb-2 break-words">${pd.name}</div>
+                            <div class="product-name-title mb-1 break-words">${pd.name}</div>
+                            ${pd.appTitle ? `<div class="text-[11px] font-medium text-blue-800 bg-blue-50/80 rounded px-2 py-0.5 mb-2 inline-block border border-blue-200">${pd.appTitle}</div>` : '<div class="mb-1"></div>'}
                             <div class="flex flex-col gap-1.5 w-full">
                                 <button onclick="requestSampleFromCompare('${pd.name}')" class="w-full py-1.5 px-2 bg-blue-900 hover:bg-blue-800 active:scale-95 text-white rounded-lg text-xs font-semibold transition-all shadow-xs flex items-center justify-center gap-1.5">
                                     <i class="fa-solid fa-paper-plane text-xs"></i>
@@ -4495,11 +4525,11 @@
                         } else if (row.type === 'value') {
                             cellContent = hasVal(val) ? `<span class="font-semibold text-slate-900 text-xs font-tabular">${val}</span>` : '<span class="text-slate-300 text-xs">—</span>';
                         } else if (row.type === 'perf_desc') {
-                            const descEntries = Object.entries(pd.descSource || {}).filter(([_, d]) => d && d !== 'N/A');
+                            const descEntries = Object.entries(pd.descSource || {}).filter(([_, d]) => d && d !== 'N/A' && d !== '—');
                             if (descEntries.length > 0) {
                                 const list = descEntries.map(([k, d]) => {
-                                    const lbl = (featureConfig[lang] && featureConfig[lang][k]) ? featureConfig[lang][k] : k;
-                                    return `<li class="mb-1 text-slate-700 text-xs leading-relaxed"><strong class="text-slate-900 font-semibold">${lbl}：</strong>${d}</li>`;
+                                    const lbl = (featureConfig[lang] && featureConfig[lang][k]) ? featureConfig[lang][k] : (featureConfig['zh'][k] || k);
+                                    return `<li class="mb-1.5 text-slate-700 text-xs leading-relaxed"><strong class="text-slate-900 font-semibold">${lbl}：</strong>${d}</li>`;
                                 }).join('');
                                 cellContent = `<ul class="list-disc pl-4 space-y-1 text-left">${list}</ul>`;
                             } else if (pd.desc && pd.desc !== '—' && pd.desc !== 'N/A') {
