@@ -6,9 +6,9 @@
     "composition_zh": "合成蠟 / 奈米氧化鋁",
     "composition_en": "Synthetic wax / aluminum oxide nanocomposite",
     "chemical_component": "Synthetic wax/aluminum oxide",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings.",
     "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
@@ -292,9 +292,9 @@
     "composition_zh": "合成蠟 / 奈米氧化鋁",
     "composition_en": "Synthetic wax / aluminum oxide nanocomposite",
     "chemical_component": "Synthetic wax/aluminum oxide",
-    "recommended_system_type_zh": "水性、溶劑系統、UV系統。",
+    "recommended_system_type_zh": "水性、溶劑系統、UV系統",
     "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨(柔印和凹印）；粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨(柔印和凹印）；粉體塗料；捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
     "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
@@ -436,9 +436,9 @@
     "composition_zh": "合成蠟 / 奈米氧化鋁",
     "composition_en": "Synthetic wax / aluminum oxide nanocomposite",
     "chemical_component": "Synthetic wax/aluminum oxide",
-    "recommended_system_type_zh": "水性、溶劑系統、UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統、UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨(柔印和凹印）；粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨(柔印和凹印）；粉體塗料；捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
     "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
@@ -584,9 +584,9 @@
     "composition_zh": "高密度聚乙烯 / 奈米氧化鋁",
     "composition_en": "High density polyethylene / aluminum oxide nanocomposite",
     "chemical_component": "HDPE/aluminum oxide",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）\n粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）\n粉體塗料；捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
     "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
     "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
@@ -705,7 +705,7 @@
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "提升塗層的抗刮傷及抗磨損。",
-          "apparent_hardness": "複配 300 奈米氧化鋁顆粒（莫氏硬度 9），提升塗層表面硬度。",
+          "apparent_hardness": "複配奈米氧化鋁微粉（莫氏硬度 9），提升塗層表面硬度。",
           "slip_lubricity": "提高滑爽性與潤滑性。"
         },
         "performance_descriptions_en": {
@@ -860,9 +860,9 @@
     "composition_zh": "高密度聚乙烯 / 奈米氧化鋁",
     "composition_en": "High density polyethylene / aluminum oxide nanocomposite",
     "chemical_component": "High density polyethylene/aluminum oxide",
-    "recommended_system_type_zh": "水性、溶劑系統、UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統、UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
     "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
     "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
@@ -1032,9 +1032,9 @@
     "composition_zh": "巴西棕櫚蠟 / 奈米氧化鋁",
     "composition_en": "Carnauba wax / aluminum oxide nanocomposite",
     "chemical_component": "Carnauba wax/aluminum oxide",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔版與凹版）；罐頭塗料(內罐及外罐)；捲鋼塗料；種子塗料，皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔版與凹版）；罐頭塗料(內罐及外罐)；捲鋼塗料；種子塗料，皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; seed coatings.",
     "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
@@ -1156,9 +1156,8 @@
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
           "scratch_resistance": "提供良好的抗刮性能。",
-          "block_resistance": "也可用作種子塗料。",
-          "apparent_hardness": "複配奈米氧化鋁，莫氏硬度9，提高塗層硬度",
-          "matting_gloss_control": "不會影響塗層透明度和光澤度。",
+          "apparent_hardness": "複配奈米氧化鋁，(莫氏硬度9)，提高塗層硬度",
+          "gloss_retention": "不影響塗層透明度和光澤度。",
           "slip_lubricity": "提供優異的表面潤滑性。"
         },
         "performance_descriptions_en": {
@@ -1166,7 +1165,7 @@
           "scratch_resistance": "Provides superior scratch and mar resistance.",
           "block_resistance": "Also suitable for use in seed coatings.",
           "apparent_hardness": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to enhance film hardness.",
-          "matting_gloss_control": "Does not adversely affect coating clarity or gloss.",
+          "gloss_retention": "Does not adversely affect coating clarity or gloss.",
           "slip_lubricity": "Provides excellent surface lubricity."
         }
       },
@@ -1217,7 +1216,7 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "水性木器塗料",
+        "example": "水性木器漆",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
@@ -1293,9 +1292,9 @@
     "composition_zh": "高密度聚乙烯 / EBS / 奈米氧化鋁",
     "composition_en": "HDPE / EBS / aluminum oxide nanocomposite",
     "chemical_component": "HDPE/EBS/aluminum oxide",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）\n粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）\n粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; can, container, and coil coatings; rubber additives.",
     "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
     "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
@@ -1419,10 +1418,10 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
-          "scratch_resistance": "極佳的抗刮傷性。複配 300 奈米氧化鋁顆粒（莫氏硬度 9）增強的 HDPE/EBS 複合蠟的耐刮性能。",
+          "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "良好的耐磨性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
-          "apparent_hardness": "加了奈米氧化鋁，可提升漆模硬度與韌性。",
+          "apparent_hardness": "添加奈米氧化鋁，可提升漆模硬度與韌性。",
           "slip_lubricity": "具備滑爽性與潤滑性。"
         },
         "performance_descriptions_en": {
@@ -1459,7 +1458,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
-          "scratch_resistance": "極佳的抗刮傷性。複配 300 奈米氧化鋁顆粒（莫氏硬度 9）增強的 HDPE/EBS 複合蠟的耐刮性能。",
+          "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
@@ -1591,9 +1590,9 @@
     "composition_zh": "高密度聚乙烯 / 奈米陶瓷",
     "composition_en": "HDPE / ceramic nanocomposite",
     "chemical_component": "HDPE/ceramic",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔版與凹版）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; can, container, and coil coatings; rubber additives.",
     "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
     "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
@@ -1822,9 +1821,9 @@
     "composition_zh": "醯胺蠟 / 奈米陶瓷",
     "composition_en": "Ethylene bis(stearamide) / ceramic nanocomposite",
     "chemical_component": "Ethylene bis(stearamide)/ceramic",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "木器塗料；印刷油墨（柔版與凹版）；粉體塗料\n罐頭塗料(內罐及外罐)、貨櫃漆；粉末冶金。",
+    "application_fields_zh": "木器漆；印刷油墨（柔版與凹版）；粉體塗料\n罐頭塗料(內罐及外罐)、貨櫃漆；粉末冶金。",
     "application_fields_en": "Wood coatings; printing inks and OPVs (flexo and gravure); powder coatings; interior and exterior can and container coatings; powdered metals.",
     "suggested_use_level_zh": "0.5-3.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-3.0% (on total formula weight)",
@@ -2051,9 +2050,9 @@
     "composition_zh": "奈米陶瓷改性聚乙烯",
     "composition_en": "Nanoceramic modified polyethylene",
     "chemical_component": "Ceramic modified polyethylene",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器塗料；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料；橡膠添加劑；地板塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料；橡膠添加劑；地板塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and masonry); architectural paints; wood coatings; printing inks and OPVs (flexo and gravure); powder coatings; coil coatings; rubber additives; floor coatings.",
     "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
@@ -2172,7 +2171,7 @@
           "ptfe_alternative": "有效取代PTFE蠟粉",
           "scratch_resistance": "低密度聚乙烯蠟提供優異的表面耐刮。",
           "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
-          "apparent_hardness": "提高，非常適合步行路面。"
+          "apparent_hardness": "非常適合步行路面。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative to PTFE additives.",
@@ -2331,7 +2330,7 @@
     "chemical_component": "Acrylic",
     "recommended_system_type_zh": "水性、溶劑、UV系統塗料及油墨。",
     "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) coatings and inks.",
-    "application_fields_zh": "地板塗料；粉體塗料；皮革塗料；建築漆；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；木器塗料；印刷油墨。",
+    "application_fields_zh": "地板塗料；粉體塗料；皮革塗料；建築漆；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；木器漆；印刷油墨。",
     "application_fields_en": "Floor coatings; powder coatings; leather coatings; architectural wall and trim paints; interior and exterior can and container coatings; coil coatings; wood coatings; printing inks and OPVs.",
     "suggested_use_level_zh": "0.5-8.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-8.0% (on total formula weight)",
@@ -2382,7 +2381,7 @@
           "abrasion_resistance": "優異的耐磨性，並具有高摩擦係數。",
           "matting_gloss_control": "在建築塗料中可降低光澤。",
           "apparent_hardness": "堅硬的球形粉末，可提高塗層表面硬度。",
-          "heat_resistance": "260°C 的熔點，可用於高溫烘烤系統。",
+          "heat_resistance": "260°C 的熔點，可用於高溫烘烤系統",
           "burnish_resistance": "在建築塗料中可提高抗拋光性。"
         },
         "performance_descriptions_en": {
@@ -2426,7 +2425,7 @@
           "burnish_resistance": "在建築塗料中可提高抗拋光性。",
           "matting_gloss_control": "在建築塗料中可降低光澤。",
           "apparent_hardness": "堅硬、單一尺寸的球形粉末，可提高塗層表面硬度。",
-          "heat_resistance": "260°C 的熔點，可用於高溫烘烤系統。"
+          "heat_resistance": "260°C 的熔點，可用於高溫烘烤系統"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Superior scratch and mar resistance with high coefficient of friction.",
@@ -2448,7 +2447,7 @@
     "chemical_component": "Acrylic",
     "recommended_system_type_zh": "水性、溶劑、UV系統塗料及油墨。",
     "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) coatings and inks.",
-    "application_fields_zh": "地板塗料。粉體塗料。皮革塗料。建築漆。罐頭塗料(內罐及外罐)、貨櫃漆。捲鋼塗料。木器塗料。印刷油墨。",
+    "application_fields_zh": "地板塗料粉體塗料皮革塗料建築漆。罐頭塗料(內罐及外罐)、貨櫃漆。捲鋼塗料木器漆。印刷油墨。",
     "application_fields_en": "Floor coatings; powder coatings; leather coatings; architectural wall and trim paints; interior and exterior can and container coatings; coil coatings; wood coatings; printing inks and OPVs.",
     "suggested_use_level_zh": "0.5-8.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-8.0% (on total formula weight)",
@@ -2560,9 +2559,9 @@
     "composition_zh": "合成蠟",
     "composition_en": "Synthetic wax",
     "chemical_component": "Synthetic wax",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；粉末冶金。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；粉末冶金。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; powdered metals.",
     "suggested_use_level_zh": "1.0-3.0%",
     "suggested_use_level_en": "1.0-3.0%",
@@ -2623,9 +2622,9 @@
     "composition_zh": "合成蠟",
     "composition_en": "Synthetic wax",
     "chemical_component": "Synthetic wax",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；金屬粉體。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；金屬粉體。",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; powdered metals.",
     "suggested_use_level_zh": "1.0-3.0%",
     "suggested_use_level_en": "1.0-3.0%",
@@ -2863,9 +2862,9 @@
     "composition_zh": "高密度聚乙烯",
     "composition_en": "High density polyethylene",
     "chemical_component": "High density polyethylene",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗料",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; seed coatings.",
     "suggested_use_level_zh": "1.0-3.0%",
     "suggested_use_level_en": "1.0-3.0%",
@@ -2944,16 +2943,16 @@
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升塗層抗劃痕性",
-          "abrasion_resistance": "提升塗層抗耐磨擦性。",
-          "block_resistance": "提升抗黏結性能。具備良好的耐熱性。",
-          "apparent_hardness": "與合成蠟相比，具有更好的耐溶劑性與膨潤能力。",
+          "abrasion_resistance": "提升塗層耐磨擦性。",
+          "block_resistance": "提升抗黏結性能並具備良好的耐熱性。",
+          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力。",
           "slip_lubricity": "提升塗層表面滑爽性。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves coating mar and scratch resistance.",
           "abrasion_resistance": "Enhances abrasion and rub resistance.",
           "block_resistance": "Improves antiblocking properties with good heat resistance.",
-          "apparent_hardness": "Offers better resistance to solvent absorption and swelling compared to synthetic wax.",
+          "chemical_resistance": "Offers better resistance to solvent absorption and swelling compared to synthetic wax.",
           "slip_lubricity": "Enhances coating surface slip."
         }
       }
@@ -2966,9 +2965,9 @@
     "composition_zh": "高密度聚乙烯",
     "composition_en": "High density polyethylene",
     "chemical_component": "High density polyethylene",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
     "suggested_use_level_zh": "1.0-3.0%",
     "suggested_use_level_en": "1.0-3.0%",
@@ -3051,18 +3050,16 @@
           "scratch_resistance": "提升塗層抗劃痕性能。",
           "abrasion_resistance": "提升塗層耐磨與耐磨擦性能。",
           "block_resistance": "提升塗層抗黏結性能。",
-          "improved_extrusion_flow": "提供表面滑爽性、",
           "metal_mark_resistance": "提升塗層耐磨、抗擦傷和抗劃痕性。",
-          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與膨潤能力。",
+          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力。",
           "slip_lubricity": "具有良好的表面滑爽性。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves coating mar resistance.",
           "abrasion_resistance": "Enhances coating abrasion and rub resistance.",
           "block_resistance": "Improves antiblocking properties.",
-          "improved_extrusion_flow": "Provides surface slip and processing flow.",
           "metal_mark_resistance": "Improves abrasion, scuff, and metal mark resistance.",
-          "apparent_hardness": "Provides better resistance to solvent absorption and swelling compared to synthetic wax.",
+          "chemical_resistance": "Provides better resistance to solvent absorption and swelling compared to synthetic wax.",
           "slip_lubricity": "Delivers good surface slip."
         }
       },
@@ -3087,7 +3084,7 @@
           "increased_cof": 0,
           "clarity": 0,
           "heat_resistance": 0,
-          "intercoat_adhesion": 3
+          "chemical_resistance": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升塗層的抗刮傷性能。",
@@ -3096,7 +3093,7 @@
           "slip_lubricity": "提供良好表面滑爽性",
           "block_resistance": "提供優異的抗黏結性能",
           "heat_resistance": "提高耐熱性",
-          "intercoat_adhesion": "與常規合成蠟相比，對溶劑吸收與膨潤（溶脹）具有更好的抵抗性"
+          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves scratch and mar resistance.",
@@ -3105,7 +3102,7 @@
           "slip_lubricity": "Provides good surface slip.",
           "block_resistance": "Delivers superior antiblocking properties.",
           "heat_resistance": "Adds heat resistance.",
-          "intercoat_adhesion": "Offers superior resistance to solvent absorption and swelling compared to conventional synthetic waxes."
+          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to conventional synthetic waxes."
         }
       },
       "wood": {
@@ -3215,9 +3212,9 @@
     "composition_zh": "高密度聚乙烯",
     "composition_en": "High density polyethylene",
     "chemical_component": "High density polyethylene",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
     "suggested_use_level_zh": "1.0-3.0%",
     "suggested_use_level_en": "1.0-3.0%",
@@ -3258,7 +3255,7 @@
           "apparent_hardness": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升耐刮、高熔點提供高抗擦傷和耐刮性能。",
+          "scratch_resistance": "提升耐刮、高熔點提升抗擦傷和耐刮性能。",
           "abrasion_resistance": "提升抗擦傷與耐磨性。",
           "slip_lubricity": "提高表面滑度",
           "block_resistance": "賦予優異的抗黏結性能",
@@ -3323,11 +3320,11 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性及溶劑系統、粉體系統。",
+    "recommended_system_type_zh": "水性及溶劑系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；捲鋼塗料；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；粉體塗料；捲鋼塗料；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings.",
-    "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定）",
+    "suggested_use_level_zh": "2.0-5.0%（視所需的消光程度而定）",
     "suggested_use_level_en": "2.0-5.0% (depending on the desired gloss reduction and texture level)",
     "system": {
       "waterborne": 1,
@@ -3366,9 +3363,9 @@
           "apparent_hardness": 0
         },
         "performance_descriptions_zh": {
-          "abrasion_resistance": "可賦予塗層良好的抗拋光性和耐磨性",
+          "abrasion_resistance": "賦予塗層良好的耐磨性",
           "slip_lubricity": "提供表面平滑性能",
-          "matting_gloss_control": "高效的消光。具備抗拋光性。"
+          "matting_gloss_control": "高效的消光。具備良好的抗拋光性。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Imparts good burnish resistance and abrasion resistance to the coating.",
@@ -3404,13 +3401,13 @@
           "scratch_resistance": "高分子量可提升塗層耐刮。",
           "abrasion_resistance": "高分子量聚合物，可賦予耐磨性。",
           "matting_gloss_control": "用於高效消光和光澤控制。提供穩定的消光效果且不影響塗料黏度。",
-          "slip_lubricity": "賦予防滑性能。"
+          "increased_cof": "賦予防滑性能。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "High molecular weight polymer enhances coating scratch and burnish resistance.",
           "abrasion_resistance": "Tough, high molecular weight polymer imparts abrasion resistance.",
           "matting_gloss_control": "Efficient matting and gloss control; provides consistent gloss reduction with no effect on coating viscosity.",
-          "slip_lubricity": "Imparts anti-slip properties."
+          "increased_cof": "Imparts anti-slip properties."
         }
       },
       "ink": {
@@ -3565,9 +3562,9 @@
     "composition_zh": "改性聚丙烯",
     "composition_en": "Modified polypropylene",
     "chemical_component": "Modified polypropylene",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；地板塗料；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；地板塗料；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; floor coatings.",
     "suggested_use_level_zh": "0.5-2.0%（抗刮傷及耐磨）；2.0-5.0%（光澤控制）",
     "suggested_use_level_en": "0.5-2.0% (mar and abrasion resistance); 2.0-5.0% (gloss control)",
@@ -3713,7 +3710,7 @@
     "chemical_component": "Ethylene bis(stearamide) wax (EBS)",
     "recommended_system_type_zh": "溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Solvent-based, energy curable (UV), and powder coating systems.",
-    "application_fields_zh": "木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；金屬粉體。",
+    "application_fields_zh": "木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；金屬粉體。",
     "application_fields_en": "Wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; powdered metals.",
     "suggested_use_level_zh": "0.5-3.0%",
     "suggested_use_level_en": "0.5-3.0%",
@@ -3844,9 +3841,9 @@
     "composition_zh": "脂肪族聚氨酯",
     "composition_en": "Aliphatic polyurethane",
     "chemical_component": "Aliphatic polyurethane",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、乙烯基）；建築漆；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；皮革塗料；地板塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠）；建築漆；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；皮革塗料；地板塗料",
     "application_fields_en": "Industrial coatings (including plastics and vinyl); architectural paints; wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; leather coatings; floor coatings.",
     "suggested_use_level_zh": "2.0-10.0%（依要求觸感效果調整添加量）",
     "suggested_use_level_en": "2.0-10.0% (adjust dosage based on desired tactile effect)",
@@ -3923,18 +3920,16 @@
           "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "高韌性球形聚氨酯微粉可提供消光、抗刮傷和抗劃痕性能。",
+          "scratch_resistance": "球形聚氨酯微粉、抗刮傷性能。",
           "abrasion_resistance": "可提高耐磨性能。",
-          "matting_gloss_control": "有效降低光澤，產生消光效果。",
-          "texture_structure": "獨特的表面觸感。提供從絲綢般光滑、橡膠感或皮革感等不同的觸感效果。",
-          "soft_touch": "可調配塗料的柔軟觸感。"
+          "matting_gloss_control": "有效降低塗層光澤。",
+          "soft_touch": "獨特的表面觸感。提供從絲綢般光滑、橡膠感或皮革感等不同觸感效果。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Highly resilient spherical polyurethane beads provide matting, scratch, and mar resistance.",
           "abrasion_resistance": "Enhances coating abrasion resistance.",
           "matting_gloss_control": "Provides effective gloss reduction for a matte finish.",
-          "texture_structure": "Creates a unique surface touch, offering tactile effects ranging from satiny smooth to rubbery or leathery.",
-          "soft_touch": "Modifies and adjusts the soft-touch tactile feel of formulated coatings."
+          "soft_touch": "Creates a unique surface touch, offering tactile effects ranging from satiny smooth to rubbery or leathery."
         }
       },
       "ink": {
@@ -4095,9 +4090,9 @@
     "composition_zh": "脂肪族聚氨酯",
     "composition_en": "Aliphatic polyurethane",
     "chemical_component": "Aliphatic polyurethane",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、乙烯基和皮革）；建築漆；木器塗料；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；皮革塗料；地板塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；皮革塗料；地板塗料",
     "application_fields_en": "Industrial coatings (including plastics, vinyl, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; soft touch coatings; floor coatings.",
     "suggested_use_level_zh": "2.0-10.0%（依要求觸感效果調整添加量）",
     "suggested_use_level_en": "2.0-10.0% (adjust dosage based on desired tactile effect)",
@@ -4177,15 +4172,13 @@
           "scratch_resistance": "聚氨酯微粉可提高抗刮傷和抗劃痕性能。",
           "abrasion_resistance": "聚氨酯微粉可提高耐磨性能。",
           "matting_gloss_control": "有效降低光澤。",
-          "texture_structure": "提供從絲綢般光滑、橡膠感至皮革感等不同的觸感效果。",
-          "soft_touch": "聚氨酯微粉可改變調配塗料的觸感特性。"
+          "soft_touch": "提供從絲綢般光滑、橡膠感至皮革感等不同的觸感效果。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Polyurethane beads enhance scratch and mar resistance.",
           "abrasion_resistance": "Polyurethane beads improve coating abrasion resistance.",
           "matting_gloss_control": "Provides effective gloss reduction.",
-          "texture_structure": "Delivers tactile effects ranging from satiny smooth to rubbery or leathery.",
-          "soft_touch": "Polyurethane beads modify the tactile characteristics of formulated coatings."
+          "soft_touch": "Delivers tactile effects ranging from satiny smooth to rubbery or leathery."
         }
       },
       "ink": {
@@ -4348,7 +4341,7 @@
     "chemical_component": "Biopolymer",
     "recommended_system_type_zh": "粉體系統",
     "recommended_system_type_en": "Powder coating systems.",
-    "application_fields_zh": "粉體塗料。",
+    "application_fields_zh": "粉體塗料",
     "application_fields_en": "Powder coatings.",
     "suggested_use_level_zh": "3.0-7.0%（視所需的紋路深淺而定）",
     "suggested_use_level_en": "3.0-7.0% (depending on the desired level of texture)",
@@ -4408,7 +4401,7 @@
     "chemical_component": "Modified polyolefin",
     "recommended_system_type_zh": "粉體系統",
     "recommended_system_type_en": "Powder coating systems.",
-    "application_fields_zh": "粉體塗料。",
+    "application_fields_zh": "粉體塗料",
     "application_fields_en": "Powder coatings.",
     "suggested_use_level_zh": "4.0-6.0%（視所需的紋路深淺而定）",
     "suggested_use_level_en": "4.0-6.0% (depending on the desired texture level)",
@@ -4468,7 +4461,7 @@
     "chemical_component": "Modified polyolefin",
     "recommended_system_type_zh": "粉體系統",
     "recommended_system_type_en": "Powder coating systems.",
-    "application_fields_zh": "粉體塗料。",
+    "application_fields_zh": "粉體塗料",
     "application_fields_en": "Powder coatings.",
     "suggested_use_level_zh": "4.0-6.0%（依總配方重量計算，視所需的紋路深淺及光澤度而定）",
     "suggested_use_level_en": "4.0-6.0% (on total formula weight, depending on the desired texture and gloss level)",
@@ -4505,7 +4498,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE。",
-          "matting_gloss_control": "可提供類似 PTFE 的低光澤織紋效果。在 6% 時可達到降低光澤的最佳效果。",
+          "matting_gloss_control": "可提供類似 PTFE 的光澤織紋效果。在添加量 6% 時可達到降低光澤的最佳效果。",
           "texture_structure": "提供均勻的細緻織紋。"
         },
         "performance_descriptions_en": {
@@ -4523,11 +4516,11 @@
     "composition_zh": "石墨烯/合成蠟",
     "composition_en": "Graphene / synthetic wax composite",
     "chemical_component": "Graphene/synthetic wax",
-    "recommended_system_type_zh": "粉體系統",
+    "recommended_system_type_zh": "溶劑型系統、粉體系統",
     "recommended_system_type_en": "Powder coating systems and industrial coatings.",
-    "application_fields_zh": "粉體塗料；工業塗料。",
+    "application_fields_zh": "粉體塗料；工業塗料",
     "application_fields_en": "Powder coatings, industrial coatings.",
-    "suggested_use_level_zh": "1.0-3.0%",
+    "suggested_use_level_zh": "1.0-3.0%\n(必須與其他添加劑一起預混合，理想溫度最好超過110°C)",
     "suggested_use_level_en": "1.0-3.0%",
     "system": {
       "waterborne": 0,
@@ -4566,7 +4559,7 @@
           "apparent_hardness": 0
         },
         "performance_descriptions_zh": {
-          "corrosion_resistance": "當與二氧化鈦或其他無機顏料一起配製時，可提高金屬的耐腐蝕性能。"
+          "corrosion_resistance": "與二氧化鈦或其他無機顏料一起配製時，可提高塗層的耐腐蝕性能。"
         },
         "performance_descriptions_en": {
           "corrosion_resistance": "Improves corrosion resistance on metal substrates when formulated with titanium dioxide or other inorganic pigments."
@@ -4593,7 +4586,7 @@
           "gloss_retention": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "當與二氧化鈦或其他無機顏料配合使用時，可提升冷軋鋼與處理鋼材上的防腐蝕性能。",
+          "scratch_resistance": "與二氧化鈦或其他無機顏料配合使用時，可提升塗層的防腐蝕性能。",
           "slip_lubricity": "提升表面滑感。",
           "water_beading": "賦予撥水性"
         },
@@ -4612,9 +4605,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性及溶劑系統。",
+    "recommended_system_type_zh": "水性及溶劑系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings.",
-    "application_fields_zh": "工業塗料，包括建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
     "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
@@ -4652,19 +4645,19 @@
           "texture_structure": 3,
           "soft_touch": 1,
           "corrosion_resistance": 0,
-          "increased_cof": 3,
+          "anti_slip": 3,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
-          "slip_lubricity": "摩擦係數(COF)不降；非常適合防滑表面。",
+          "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻的中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene imparts good film durability and abrasion resistance.",
           "matting_gloss_control": "Reduces coating surface gloss.",
-          "slip_lubricity": "Maintains high coefficient of friction (COF); ideal for anti-skid and non-slip surfaces.",
+          "anti_slip": "Maintains high coefficient of friction (COF); ideal for anti-skid and non-slip surfaces.",
           "texture_structure": "Provides a consistent medium-textured coating surface."
         }
       },
@@ -4710,9 +4703,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性及溶劑系統。",
+    "recommended_system_type_zh": "水性及溶劑系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings.",
-    "application_fields_zh": "工業塗料，包括建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
     "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
@@ -4750,19 +4743,19 @@
           "texture_structure": 3,
           "soft_touch": 1,
           "corrosion_resistance": 0,
-          "increased_cof": 2,
+          "anti_slip": 2,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
-          "matting_gloss_control": "塗層表面降低光澤。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "matting_gloss_control": "降低塗層表面光澤。",
+          "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough polypropylene gives good film durability and abrasion resistance.",
           "matting_gloss_control": "Reduces coating surface gloss consistently.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid surfaces.",
+          "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
           "texture_structure": "Provides a consistent medium-textured coating surface."
         }
       },
@@ -4808,9 +4801,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性及溶劑系統。",
+    "recommended_system_type_zh": "水性及溶劑系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings.",
-    "application_fields_zh": "工業塗料，包括建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
     "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
@@ -4848,19 +4841,19 @@
           "texture_structure": 3,
           "soft_touch": 1,
           "corrosion_resistance": 0,
-          "increased_cof": 2,
+          "anti_slip": 2,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
-          "matting_gloss_control": "降低光澤。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "matting_gloss_control": "降低塗層表面光澤。",
+          "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability and abrasion resistance.",
           "matting_gloss_control": "Provides consistent gloss reduction.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid surfaces.",
+          "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
           "texture_structure": "Provides a consistent medium-textured coating surface."
         }
       },
@@ -4906,9 +4899,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性及溶劑系統。",
+    "recommended_system_type_zh": "水性及溶劑系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings.",
-    "application_fields_zh": "工業塗料，包括建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
     "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
@@ -4946,19 +4939,19 @@
           "texture_structure": 3,
           "soft_touch": 1,
           "corrosion_resistance": 0,
-          "increased_cof": 2,
+          "anti_slip": 2,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
-          "matting_gloss_control": "降低光澤。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "matting_gloss_control": "降低塗層表面光澤。",
+          "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability and abrasion resistance.",
           "matting_gloss_control": "Reduces coating gloss.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid surfaces.",
+          "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
           "texture_structure": "Provides a consistent medium-textured coating surface."
         }
       },
@@ -5004,9 +4997,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性、溶劑型、工業塗料。",
+    "recommended_system_type_zh": "水性系統、溶劑型系統",
     "recommended_system_type_en": "Water-based, solvent-based, and industrial coatings.",
-    "application_fields_zh": "工業塗料，包括金屬、塑膠；建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料，(包括金屬、塑膠)；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial coatings including metals, plastics, and masonry; architectural paints; wood coatings; floor coatings.",
     "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
     "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
@@ -5044,19 +5037,19 @@
           "texture_structure": 3,
           "soft_touch": 1,
           "corrosion_resistance": 0,
-          "increased_cof": 2,
+          "anti_slip": 2,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
-          "matting_gloss_control": "提供消光效果，與二氧化矽相比具有更好的消光性。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果。"
+          "matting_gloss_control": "降低塗層表面光澤。",
+          "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "texture_structure": "塗層表面建構細緻的織紋效果。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good durability and abrasion resistance.",
           "matting_gloss_control": "Provides gloss reduction with improved burnish resistance compared to silica.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid surfaces.",
+          "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
           "texture_structure": "Imparts a fine texture effect to the coating surface."
         }
       },
@@ -5085,7 +5078,7 @@
           "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "matting_gloss_control": "提供消光效果，且與二氧化矽相比，能提供更好的消光性。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果。"
+          "texture_structure": "塗層表面建構細緻的織紋效果。"
         },
         "performance_descriptions_en": {
           "anti_slip": "Maintains COF; highly suitable for anti-skid and non-slip floor surfaces.",
@@ -5124,7 +5117,7 @@
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "burnish_resistance": "提升抗拋光性能。",
           "matting_gloss_control": "與二氧化矽相比，提供消光效果。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果"
+          "texture_structure": "塗層表面建構細緻的織紋效果"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough polypropylene gives good film durability.",
@@ -5178,9 +5171,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性、溶劑型、工業塗料。",
+    "recommended_system_type_zh": "水性系統、溶劑型系統",
     "recommended_system_type_en": "Water-based, solvent-based, and industrial coatings.",
-    "application_fields_zh": "工業塗料，框架金屬、塑膠和石材；建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料，(包括金屬、塑膠)；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial coatings including metals, plastics, and masonry; architectural paints; wood coatings; floor coatings.",
     "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
     "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
@@ -5218,19 +5211,19 @@
           "texture_structure": 3,
           "soft_touch": 1,
           "corrosion_resistance": 0,
-          "increased_cof": 2,
+          "anti_slip": 2,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
-          "matting_gloss_control": "提供消光效果，與二氧化矽相比具有更好的消光性。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果。"
+          "matting_gloss_control": "降低塗層表面光澤。",
+          "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "texture_structure": "提供塗層細緻的織紋效果。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good durability.",
           "matting_gloss_control": "Provides gloss reduction with improved burnish resistance compared to silica.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid surfaces.",
+          "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
           "texture_structure": "Adds a mild, fine texture effect to the coating surface with narrow cut particle size distribution for maximum texture control."
         }
       },
@@ -5259,7 +5252,7 @@
           "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "matting_gloss_control": "且與二氧化矽相比，能提供更好的消光性。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果。特別粒徑分布規格實現最佳織紋控制。"
+          "texture_structure": "塗層表面建構細緻的織紋效果。特別粒徑分布規格實現最佳織紋控制。"
         },
         "performance_descriptions_en": {
           "anti_slip": "Maintains COF; ideal for non-slip and anti-skid walking surfaces.",
@@ -5278,9 +5271,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性、溶劑型、工業塗料。",
+    "recommended_system_type_zh": "水性系統、溶劑型系統",
     "recommended_system_type_en": "Water-based, solvent-based, and industrial coatings.",
-    "application_fields_zh": "工業塗料(包括金屬、塑膠)；建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料(包括金屬、塑膠)；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial coatings (including metals and plastics); architectural paints; wood coatings; floor coatings.",
     "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
     "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
@@ -5323,14 +5316,14 @@
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
-          "matting_gloss_control": "提供消光效果，與二氧化矽相比具有更好的消光性。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果。"
+          "matting_gloss_control": "降低塗層表面光澤。",
+          "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "texture_structure": "塗層表面建構細緻的織紋效果。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough polypropylene provides good film durability and abrasion resistance.",
           "matting_gloss_control": "Provides efficient gloss reduction with improved burnish resistance compared to silica.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid surfaces.",
+          "increased_cof": "Does not lower COF; ideal for anti-skid surfaces.",
           "texture_structure": "Builds a fine microtexture effect on the coating surface."
         }
       },
@@ -5359,7 +5352,7 @@
           "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "matting_gloss_control": "與二氧化矽相比，能提供更好的消光性。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果。"
+          "texture_structure": "塗層表面建構細緻的織紋效果。"
         },
         "performance_descriptions_en": {
           "anti_slip": "Maintains high COF; highly suitable for anti-skid and non-slip floor finishes.",
@@ -5398,7 +5391,7 @@
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "burnish_resistance": "提升抗拋光性能。",
           "matting_gloss_control": "與二氧化矽相比，提供消光效果。",
-          "texture_structure": "為塗層表面建構細緻的織紋效果"
+          "texture_structure": "塗層表面建構細緻的織紋效果"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough polypropylene provides good film durability.",
@@ -5452,9 +5445,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性及溶劑系統。",
+    "recommended_system_type_zh": "水性及溶劑系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings.",
-    "application_fields_zh": "工業塗料，包括建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
     "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
@@ -5498,13 +5491,13 @@
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "均勻粗糙織紋塗層表面以降低光澤。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability.",
           "matting_gloss_control": "Provides a consistent coarse-textured coating surface to reduce gloss.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid and non-slip surfaces.",
+          "increased_cof": "Does not lower COF; ideal for anti-skid and non-slip surfaces.",
           "texture_structure": "Provides a consistent coarse-textured coating surface. Easily dispersible with high-speed mixing."
         }
       },
@@ -5550,9 +5543,9 @@
     "composition_zh": "聚丙烯",
     "composition_en": "Polypropylene",
     "chemical_component": "Polypropylene",
-    "recommended_system_type_zh": "水性及溶劑系統。",
+    "recommended_system_type_zh": "水性及溶劑系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings.",
-    "application_fields_zh": "工業塗料，包括建築漆；木器塗料；地板塗料。",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
     "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
     "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
@@ -5595,14 +5588,14 @@
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
-          "matting_gloss_control": "塗層表面降低光澤。",
-          "slip_lubricity": "摩擦係數(COF)不降低；非常適合防滑表面。",
+          "matting_gloss_control": "降低塗層表面光澤。",
+          "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability.",
           "matting_gloss_control": "Provides a consistent coarse textured coating surface to reduce gloss.",
-          "slip_lubricity": "Does not lower COF; ideal for anti-skid surfaces.",
+          "increased_cof": "Does not lower COF; ideal for anti-skid surfaces.",
           "texture_structure": "Provides a consistent coarse textured coating surface. Easily dispersible with high-speed mixing."
         }
       },
@@ -5648,9 +5641,9 @@
     "composition_zh": "尼龍 66",
     "composition_en": "Nylon 66",
     "chemical_component": "Nylon 66",
-    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統。",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括金屬）；粉體塗料；捲鋼塗料；地板塗料。",
+    "application_fields_zh": "工業塗料（包括金屬）；粉體塗料；捲鋼塗料；地板塗料",
     "application_fields_en": "Industrial coatings (including metals); powder coatings; coil coatings; floor coatings.",
     "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
     "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
@@ -5692,7 +5685,7 @@
           "burnish_resistance": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
@@ -5723,7 +5716,7 @@
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
@@ -5740,9 +5733,9 @@
     "composition_zh": "尼龍 66",
     "composition_en": "Nylon 66",
     "chemical_component": "Nylon 66",
-    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統。",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括金屬）；粉體塗料；捲鋼塗料；地板塗料。",
+    "application_fields_zh": "工業塗料（包括金屬）；粉體塗料；捲鋼塗料；地板塗料",
     "application_fields_en": "Industrial coatings (including metals); powder coatings; coil coatings; floor coatings.",
     "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
     "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
@@ -5784,7 +5777,7 @@
           "burnish_resistance": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
@@ -5815,7 +5808,7 @@
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
@@ -5832,9 +5825,9 @@
     "composition_zh": "尼龍 66",
     "composition_en": "Nylon 66",
     "chemical_component": "Nylon 66",
-    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統。",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括金屬和塑膠）；粉體塗料；捲鋼塗料；地板塗料。",
+    "application_fields_zh": "工業塗料（包括金屬和塑膠）；粉體塗料；捲鋼塗料；地板塗料",
     "application_fields_en": "Industrial coatings (including metals and plastics); powder coatings; coil coatings; floor coatings.",
     "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
     "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
@@ -5876,7 +5869,7 @@
           "burnish_resistance": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
@@ -5907,7 +5900,7 @@
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
@@ -5924,9 +5917,9 @@
     "composition_zh": "尼龍 66",
     "composition_en": "Nylon 66",
     "chemical_component": "Nylon 66",
-    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統。",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括金屬和塑膠）；粉體塗料；捲鋼塗料；地板塗料。",
+    "application_fields_zh": "工業塗料（包括金屬和塑膠）；粉體塗料；捲鋼塗料；地板塗料",
     "application_fields_en": "Industrial coatings (including metals and plastics); powder coatings; coil coatings; floor coatings.",
     "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
     "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
@@ -5968,7 +5961,7 @@
           "burnish_resistance": 0
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
@@ -5999,7 +5992,7 @@
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統。",
+          "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
@@ -6016,9 +6009,9 @@
     "composition_zh": "巴西棕櫚蠟/高密度聚乙烯",
     "composition_en": "Carnauba wax / HDPE composite",
     "chemical_component": "Carnauba wax/HDPE",
-    "recommended_system_type_zh": "水性、溶系統和UV系統。",
+    "recommended_system_type_zh": "水性、溶系統和UV系統",
     "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗層；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗層；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; seed coatings.",
     "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
@@ -6123,9 +6116,9 @@
     "composition_zh": "巴西棕櫚蠟",
     "composition_en": "Carnauba wax",
     "chemical_component": "Carnauba wax",
-    "recommended_system_type_zh": "水性、溶系統和UV系統。",
+    "recommended_system_type_zh": "水性、溶系統和UV系統",
     "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔版與凹版）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗料，皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔版與凹版）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗料，皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; seed coatings.",
     "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
@@ -6224,7 +6217,7 @@
     "chemical_component": "Densified polypropylene",
     "recommended_system_type_zh": "水性及UV體系。",
     "recommended_system_type_en": "Water-based and energy curable (UV) systems.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器塗料；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；地板塗料；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；地板塗料；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); can, container, and coil coatings; floor coatings.",
     "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
     "suggested_use_level_en": "2.0-5.0% depending on the level of gloss reduction desired (on total formula weight)",
@@ -6269,13 +6262,13 @@
           "scratch_resistance": "提升塗層耐刮性能",
           "block_resistance": "改善抗黏結性和流動性",
           "matting_gloss_control": "有效降低光澤，從半消光到全消光的表面效果。",
-          "slip_lubricity": "賦予塗層防滑性能。"
+          "increased_cof": "賦予塗層防滑性能。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves coating scratch and burnish resistance compared to silica matting agents.",
           "block_resistance": "Optimized particle density prevents flotation or hard settling, ensuring superior in-can stability.",
           "matting_gloss_control": "Efficient gloss reduction providing finishes from satin to matte.",
-          "slip_lubricity": "Imparts anti-slip properties by maintaining high COF."
+          "increased_cof": "Imparts anti-slip properties by maintaining high COF."
         }
       },
       "ink": {
@@ -6325,9 +6318,9 @@
     "composition_zh": "改性聚丙烯",
     "composition_en": "Modified polypropylene",
     "chemical_component": "Modified polypropylene",
-    "recommended_system_type_zh": "水性系統。",
+    "recommended_system_type_zh": "水性系統",
     "recommended_system_type_en": "Water-based coatings and inks.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨(包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)及貨櫃漆；地板塗料；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨(包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)及貨櫃漆；地板塗料；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); can, container, and coil coatings; floor coatings.",
     "suggested_use_level_zh": "0.5-2.0%（耐磨）；2.0-5.0%（光澤控制）（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (mar and abrasion resistance); 2.0-5.0% (gloss control) (on total formula weight)",
@@ -6432,9 +6425,9 @@
     "composition_zh": "改性氧化高密度聚乙烯",
     "composition_en": "Modified oxidized HDPE",
     "chemical_component": "Modified oxidized HDPE",
-    "recommended_system_type_zh": "水性、溶劑系統。",
+    "recommended_system_type_zh": "水性、溶劑系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings and inks.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器塗料；印刷油墨（柔印和凹印）；捲鋼塗料；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；捲鋼塗料；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); coil coatings.",
     "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
@@ -6565,9 +6558,9 @@
     "composition_zh": "改性氧化高密度聚乙烯",
     "composition_en": "Modified oxidized HDPE",
     "chemical_component": "Modified oxidized HDPE",
-    "recommended_system_type_zh": "水性系統。",
+    "recommended_system_type_zh": "水性系統",
     "recommended_system_type_en": "Water-based coatings.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；捲鋼塗料；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；捲鋼塗料；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); coil coatings.",
     "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
@@ -6632,9 +6625,9 @@
     "composition_zh": "高密度聚乙烯/醯胺",
     "composition_en": "HDPE / amide wax composite",
     "chemical_component": "HDPE/amide",
-    "recommended_system_type_zh": "溶劑系統及UV系統。",
+    "recommended_system_type_zh": "溶劑系統及UV系統",
     "recommended_system_type_en": "Solvent-based and energy curable (UV) coatings and inks.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器塗料；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；觸感塗料；皮革塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；觸感塗料；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; soft touch coatings.",
     "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
@@ -6737,9 +6730,9 @@
     "composition_zh": "高密度聚乙烯",
     "composition_en": "High density polyethylene",
     "chemical_component": "High density polyethylene",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統。",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
     "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器塗料；印刷油墨（包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料。",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
     "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
     "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
@@ -6785,7 +6778,7 @@
           "abrasion_resistance": "提升塗層的耐磨與耐磨擦性能。",
           "block_resistance": "優異的抗黏結性能。增加耐熱性。",
           "metal_mark_resistance": "賦予優異的耐磨、抗擦傷和抗劃痕性。",
-          "apparent_hardness": "與合成蠟相比，具有更好的抗溶劑吸收與膨潤能力。",
+          "chemical_resistance": "與合成蠟相比，具有更好的抗溶劑吸收與耐膨潤能力。",
           "slip_lubricity": "高性能微粉化聚乙烯蠟提供獨特的表面滑爽性結合。"
         },
         "performance_descriptions_en": {
@@ -6793,7 +6786,7 @@
           "abrasion_resistance": "Enhances coating abrasion and rub resistance.",
           "block_resistance": "Provides excellent antiblocking properties and adds heat resistance.",
           "metal_mark_resistance": "Imparts excellent abrasion, scuff, and metal mark resistance.",
-          "apparent_hardness": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax.",
+          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax.",
           "slip_lubricity": "High-performance micronized polyethylene wax provides a unique combination of surface slip."
         }
       },
@@ -6818,7 +6811,7 @@
           "increased_cof": 0,
           "clarity": 0,
           "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "chemical_resistance": 0
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予優異的抗刮傷性能。與合成蠟相比，具有更好的抗溶劑吸收和耐溶脹性",
@@ -6827,7 +6820,7 @@
           "slip_lubricity": "提供良好表面滑爽性",
           "block_resistance": "提供優異的抗黏結性能",
           "heat_resistance": "提高耐熱性",
-          "intercoat_adhesion": "與常規合成蠟相比，對溶劑吸收與膨潤（溶脹）具有更好的抵抗性"
+          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Imparts excellent mar resistance with better resistance to solvent absorption and swelling versus synthetic wax.",
@@ -6836,7 +6829,7 @@
           "slip_lubricity": "Provides good surface slip.",
           "block_resistance": "Imparts excellent antiblocking properties.",
           "heat_resistance": "Enhances coating heat resistance.",
-          "intercoat_adhesion": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax."
+          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax."
         }
       }
     }
@@ -6848,9 +6841,9 @@
     "composition_zh": "緻密化改性合成蠟",
     "composition_en": "Densified modified synthetic wax",
     "chemical_component": "Densified modified synthetic wax",
-    "recommended_system_type_zh": "水性建築漆；木器塗料。",
+    "recommended_system_type_zh": "水性建築漆；木器漆。",
     "recommended_system_type_en": "Water-based architectural wall and trim paints; stains, sealers, and varnishes; wood coatings.",
-    "application_fields_zh": "水性建築漆；木器塗料。",
+    "application_fields_zh": "水性建築漆；木器漆。",
     "application_fields_en": "Water-based architectural paints and wood coatings.",
     "suggested_use_level_zh": "1.0-4.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-4.0% (on total formula weight)",
@@ -6982,9 +6975,9 @@
     "composition_zh": "疏水改性合成蠟",
     "composition_en": "Hydrophobically modified synthetic wax",
     "chemical_component": "Hydrophobically modified synthetic wax",
-    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統。",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
     "recommended_system_type_en": "Water-based and solvent-based coatings.",
-    "application_fields_zh": "工業塗料（包括金屬)；木器塗料；汽車蠟。",
+    "application_fields_zh": "工業塗料（包括金屬)；木器漆；汽車蠟。",
     "application_fields_en": "Industrial coatings (including metals); wood coatings; automotive polishes.",
     "suggested_use_level_zh": "1.0-4.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-4.0% (on total formula weight)",
