@@ -1,30 +1,49 @@
 /* ==========================================
- * 1. 統一字體與文字系統 (Typography System)
+ * ATTech Web Interface System
+ * Built according to Web Interface Guidelines
  * ========================================== */
+
 :root {
-    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-base-size: 15px;
+    --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans TC', sans-serif;
 
-    /* 字體大小階層 */
-    --text-xs: 0.75rem; /* 11.25px */
-    --text-sm: 0.875rem; /* 13.125px */
-    --text-base: 1rem; /* 15px */
-    --text-lg: 1.125rem; /* 16.875px */
-    --text-xl: 1.25rem; /* 18.75px */
-    --text-2xl: 1.5rem; /* 22.5px */
-    --text-3xl: 1.875rem; /* 28.125px */
-    --text-4xl: 2.25rem; /* 33.75px */
+    /* 字體大小階層 (標準 16px 基準，確保中文字級不低於 12px) */
+    --text-xs: 0.75rem;    /* 12px */
+    --text-sm: 0.875rem;   /* 14px */
+    --text-base: 1rem;     /* 16px */
+    --text-lg: 1.125rem;   /* 18px */
+    --text-xl: 1.25rem;    /* 20px */
+    --text-2xl: 1.5rem;    /* 24px */
+    --text-3xl: 1.875rem;  /* 30px */
+    --text-4xl: 2.25rem;   /* 36px */
 
-    /* 字重 */
+    /* 流體標題字級 (Fluid clamp) */
+    --heading-hero: clamp(1.75rem, 3.5vw + 1rem, 2.5rem);
+    --heading-section: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
+    --heading-card: clamp(1.05rem, 1.2vw + 0.5rem, 1.25rem);
+
+    /* 字重標準：嚴格遵守字重 >= 400，消除過輕 (<400) 與過重 (800+) 造成的文字模糊與抖動 */
     --weight-normal: 400;
     --weight-medium: 500;
+    --weight-semibold: 600;
     --weight-bold: 700;
-    --weight-extrabold: 800;
+
+    /* 互動微動畫時間常數 (<= 200ms 即時回饋) */
+    --motion-duration-fast: 0.12s;
+    --motion-duration-base: 0.18s;
+    --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ==========================================
+ * 1. 全域渲染與文字排版 (Typography & Rendering)
+ * ========================================== */
 html {
-    scroll-behavior: auto;
-    font-size: var(--font-base-size);
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -32,84 +51,170 @@ body {
     font-size: var(--text-base);
     font-weight: var(--weight-normal);
     line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 全域選取色彩與漸層文字選取保護 */
+::selection {
+    background-color: #dbeafe; /* Tailwind blue-100 */
+    color: #1e3a8a;            /* Tailwind blue-950 */
+}
+
+.bg-clip-text::selection,
+[class*="text-transparent"]::selection {
+    -webkit-text-fill-color: #1e3a8a;
+    background: #dbeafe;
+}
+
+/* 等寬數字 (Tabular Figures) 排版：防止數值跳動、表格欄位位移 */
+table,
+.table-container table,
+.sticky-table,
+.compare-matrix-table,
+.font-tabular,
+#compare-count-badge,
+#header-compare-badge,
+#dir-match-count,
+.stat-number,
+[data-tabular="true"] {
+    font-variant-numeric: tabular-nums;
+}
+
+/* 表單控制項字體大小規範：全域確保 >= 16px，徹底防止 iOS Safari 聚焦時畫面自動縮放 */
+input,
+select,
+textarea,
+.global-search-input,
+#attech-contact-form input,
+#attech-contact-form select,
+#attech-contact-form textarea {
+    font-size: 16px !important;
 }
 
 /* ==========================================
- * 2. 搜尋跳轉高亮標示（清爽淺藍底色）
+ * 2. 互動、聚焦與防重複點擊 (Interactivity & Focus)
  * ========================================== */
-/* 目標產品列淺藍底色標示 */
-tr.row-target-highlight {
-    background-color: #dbeafe !important; /* 淺藍底色 (Tailwind blue-100) */
-    transition: background-color 0.3s ease;
+button,
+[role="button"],
+[role="tab"],
+.btn,
+.nav-btn,
+.lang-btn,
+.mobile-nav-btn,
+.compare-icon-btn,
+.compare-toggle-btn,
+.badge-interactive,
+.dir-node,
+.mega-item {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* 凍結欄 (第一欄 sticky) 同步變為淺藍底 */
+/* 鍵盤無障礙聚焦外框 (使用 box-shadow 確保圓角平滑貼合) */
+:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #2563eb !important;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2), 0 0 0 1px #1d4ed8 !important;
+}
+
+/* 按鈕按壓微互動 (比例縮放 ~0.97，不超過 0.95) */
+button:active:not(:disabled),
+[role="button"]:active:not(:disabled),
+.nav-btn:active,
+.mobile-nav-btn:active {
+    transform: scale(0.97);
+    transition: transform var(--motion-duration-fast) var(--motion-ease);
+}
+
+/* 裝飾性元素停用事件捕捉 */
+.pointer-events-none,
+.decorative-glow {
+    pointer-events: none !important;
+}
+
+/* 表單驗證錯誤輸入框即時視覺回饋 */
+.input-error-highlight {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+    animation: inputShake 0.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes inputShake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-2px, 0, 0); }
+    40%, 60% { transform: translate3d(2px, 0, 0); }
+}
+
+/* 錨點跳轉位移修正 (防止頂部黏性導覽列遮擋內容) */
+section[id^="tab-"],
+section[id^="section-"],
+#tab-contact,
+#tab-products,
+#tab-about,
+#tab-partners {
+    scroll-margin-top: 5rem;
+}
+
+/* ==========================================
+ * 3. 側邊目錄與選取狀態 (防版面抖動 Zero Layout Shift)
+ * ========================================== */
+.dir-node {
+    font-weight: 500;
+    transition: background-color var(--motion-duration-base) var(--motion-ease), color var(--motion-duration-base) var(--motion-ease);
+}
+
+/* 目錄選中狀態：固定維持 font-weight 500，使用底色、深藍文字與內凹側邊線標示，徹底消除寬度抖動 */
+.dir-node-active {
+    background-color: #dbeafe !important; /* 淺藍底 (Tailwind blue-100) */
+    color: #1e3a8a !important;            /* 深藍字 (Tailwind blue-950) */
+    font-weight: 500 !important;
+    border-radius: 0.375rem;
+    box-shadow: inset 3px 0 0 0 #1d4ed8;  /* 精緻左側指示線 */
+}
+
+/* 目標產品列淺藍底色高亮 */
+tr.row-target-highlight {
+    background-color: #dbeafe !important;
+    transition: background-color var(--motion-duration-base) ease;
+}
+
 tr.row-target-highlight td,
 tr.row-target-highlight td:first-child {
     background-color: #dbeafe !important;
 }
 
-/* 左側目錄選中項目的樣式 (與圖片一致) */
-.dir-node-active {
-    background-color: #dbeafe !important; /* 淺藍底 */
-    color: #1e3a8a !important;            /* 深藍字 */
-    font-weight: 700 !important;
-    border-radius: 0.375rem;
-}
-
-
 /* ==========================================
- * 3. 語意化字體與字重 Utility Classes
+ * 4. 語意化字體與字重 Utility Classes
  * ========================================== */
-.f-size-xs {
-    font-size: var(--text-xs);
-}
+.f-size-xs { font-size: var(--text-xs); }
+.f-size-sm { font-size: var(--text-sm); }
+.f-size-base { font-size: var(--text-base); }
+.f-size-lg { font-size: var(--text-lg); }
+.f-size-xl { font-size: var(--text-xl); }
+.f-size-2xl { font-size: var(--text-2xl); }
+.f-size-3xl { font-size: var(--text-3xl); }
+.f-size-4xl { font-size: var(--text-4xl); }
 
-.f-size-sm {
-    font-size: var(--text-sm);
-}
+.heading-hero { font-size: var(--heading-hero); }
+.heading-section { font-size: var(--heading-section); }
+.heading-card { font-size: var(--heading-card); }
 
-.f-size-base {
-    font-size: var(--text-base);
-}
+.f-weight-normal { font-weight: var(--weight-normal); }
+.f-weight-medium { font-weight: var(--weight-medium); }
+.f-weight-semibold { font-weight: var(--weight-semibold); }
+.f-weight-bold { font-weight: var(--weight-bold); }
 
-.f-size-lg {
-    font-size: var(--text-lg);
-}
-
-.f-size-xl {
-    font-size: var(--text-xl);
-}
-
-.f-size-2xl {
-    font-size: var(--text-2xl);
-}
-
-.f-size-3xl {
-    font-size: var(--text-3xl);
-}
-
-.f-size-4xl {
-    font-size: var(--text-4xl);
-}
-
-.f-weight-normal {
-    font-weight: var(--weight-normal);
-}
-
-.f-weight-medium {
-    font-weight: var(--weight-medium);
-}
-
-.f-weight-bold {
-    font-weight: var(--weight-bold);
-}
-
-.f-weight-extrabold {
-    font-weight: var(--weight-extrabold);
-}
-
-/* 元件專用字體樣式 */
 .nav-btn {
     font-size: var(--text-base);
     font-weight: var(--weight-medium);
@@ -117,10 +222,10 @@ tr.row-target-highlight td:first-child {
 
 .btn-view-specs {
     font-size: var(--text-sm);
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-semibold);
 }
 
-/* 限制全站最大寬度，適度留白 */
+/* 限制全站最大寬度 */
 .optimized-container {
     max-width: 1360px;
     margin-left: auto;
@@ -180,7 +285,7 @@ tr.row-target-highlight td:first-child {
     background-color: rgba(0, 0, 0, 0.05);
     color: #334155;
     font-size: var(--text-sm);
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-semibold);
     text-align: center;
     border-radius: 6px;
     z-index: 2;
@@ -198,7 +303,9 @@ tr.row-target-highlight td:first-child {
     gap: 1rem;
 }
 
-/* 緊湊型 Sticky 表格 */
+/* ==========================================
+ * 5. 產品列表 Sticky 表格系統
+ * ========================================== */
 .table-container {
     width: 100%;
     max-height: 75vh;
@@ -229,7 +336,7 @@ tr.row-target-highlight td:first-child {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
     padding: 0.5rem 0.625rem;
     font-size: var(--text-sm);
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-semibold);
 }
 
 .sticky-table table td {
@@ -258,8 +365,10 @@ tr.row-target-highlight td:first-child {
     background-color: #eff6ff !important;
 }
 
-.sticky-table tr:hover td:first-child {
-    background-color: #f0f9ff;
+@media (hover: hover) {
+    .sticky-table tr:hover td:first-child {
+        background-color: #f0f9ff;
+    }
 }
 
 .sticky-table table td.whitespace-nowrap {
@@ -267,14 +376,273 @@ tr.row-target-highlight td:first-child {
 }
 
 @keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .4;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: .4; }
 }
 
 .animate-pulse {
     animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ==========================================
+ * 6. 產品比較懸浮欄與比照表 (Comparison System)
+ * ========================================== */
+#compare-dock {
+    position: fixed !important;
+    bottom: 1.5rem !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: 40 !important;
+    width: 95% !important;
+    max-width: 860px !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
+    animation: slideUpDock var(--motion-duration-base) var(--motion-ease) forwards;
+}
+
+@keyframes slideUpDock {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 比照表樣式 - 遵循 Web Interface Guidelines (Typography & Interactivity) */
+.compare-matrix-table {
+    width: 100%;
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1.5;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-variant-numeric: tabular-nums;
+    -webkit-text-size-adjust: 100%;
+}
+
+.compare-matrix-table th,
+.compare-matrix-table td {
+    padding: 0.625rem 0.875rem;
+    border-bottom: 1px solid #f1f5f9;
+    border-right: 1px solid #f1f5f9;
+    vertical-align: middle;
+    font-variant-numeric: tabular-nums;
+}
+
+.compare-matrix-table th:last-child,
+.compare-matrix-table td:last-child {
+    border-right: none;
+}
+
+/* 僅在支援 hover 的游標裝置啟用 hover 反白，防止行動觸控殘留 */
+@media (hover: hover) {
+    .compare-matrix-table tr:hover td:not(.compare-category-cell) {
+        background-color: #f8fafc;
+    }
+    .compare-matrix-table tr:hover td.col-prop-label {
+        background-color: #f1f5f9;
+        color: #0f172a;
+    }
+}
+
+/* 比照表固定首欄 (產品規格與性能項目 凍結窗格) */
+.compare-matrix-table td.col-prop-label {
+    position: sticky;
+    left: 0;
+    z-index: 20;
+    background-color: #f8fafc;
+    font-weight: 500;
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1.4;
+    color: #1e293b;
+    box-shadow: 3px 0 8px -2px rgba(0, 0, 0, 0.06);
+    width: 190px;
+    min-width: 175px;
+    max-width: 220px;
+    border-right: 2px solid #e2e8f0;
+    word-break: break-word;
+    white-space: normal;
+}
+
+/* 比照表左上角交叉儲存格 (最高層級固定) */
+.compare-matrix-table th.col-prop-label-head {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 40;
+    background-color: #f1f5f9;
+    font-size: 0.75rem; /* 12px */
+    font-weight: 600;
+    color: #334155;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.1);
+    width: 190px;
+    min-width: 175px;
+    max-width: 220px;
+    border-right: 2px solid #cbd5e1;
+    border-bottom: 2px solid #94a3b8;
+    user-select: none;
+}
+
+/* 比照表固定表頭 (產品資訊 頂部凍結) */
+.compare-matrix-table th.col-product-head {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.06);
+    min-width: 220px;
+    max-width: 320px;
+    border-bottom: 2px solid #1e3a8a;
+    border-right: 1px solid #e2e8f0;
+    user-select: none;
+}
+
+.col-product-head .product-brand-tag {
+    font-size: 0.6875rem; /* 11px */
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.col-product-head .product-name-title {
+    font-size: 0.9375rem; /* 15px */
+    font-weight: 600;
+    line-height: 1.35;
+    color: #0f172a;
+}
+
+/* 分類標題列與水平滑動凍結標題 */
+.compare-category-row td {
+    background: linear-gradient(90deg, #f1f5f9 0%, #f8fafc 100%) !important;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.75rem; /* 12px */
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.55rem 0.875rem;
+    user-select: none;
+}
+
+.sticky-cat-title {
+    position: sticky;
+    left: 0.875rem;
+    z-index: 15;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 差異高亮標記 (支援凍結欄位) */
+.compare-diff-cell {
+    background-color: #fefce8 !important; /* 柔和琥珀晨曦黃 */
+    color: #78350f !important;
+}
+
+.compare-diff-cell.col-prop-label {
+    background-color: #fef9c3 !important;
+    border-left: 4px solid #eab308;
+    border-right: 2px solid #fde047;
+}
+
+@media (hover: hover) {
+    .compare-matrix-table tr:hover td.col-prop-label.compare-diff-cell {
+        background-color: #fef08a !important;
+    }
+}
+
+/* 比較 Icon 按鈕樣式 */
+.compare-icon-btn {
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--motion-duration-fast) var(--motion-ease);
+}
+
+.compare-icon-btn:active {
+    transform: scale(0.94);
+}
+
+/* 彈窗微動畫 (從 0.96 柔和放大淡入，符合 Guidelines 規定) */
+@keyframes modalPopIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#compare-modal > div:last-child,
+#doc-modal > div:last-child {
+    animation: modalPopIn var(--motion-duration-base) var(--motion-ease) forwards;
+}
+
+/* ==========================================
+ * 7. 行動裝置排版與觸控優化 (Mobile Enhancements)
+ * ========================================== */
+@media (max-width: 767px) {
+    /* 防止 iOS Safari 聚焦輸入框時自動縮放畫面 */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+    .compare-matrix-table {
+        font-size: 0.75rem !important; /* 12px */
+    }
+
+    .compare-matrix-table td.col-prop-label,
+    .compare-matrix-table th.col-prop-label-head {
+        width: 120px !important;
+        min-width: 110px !important;
+        max-width: 130px !important;
+        font-size: 0.6875rem !important; /* 11px */
+        padding: 0.45rem 0.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .compare-matrix-table th.col-product-head {
+        min-width: 160px !important;
+        max-width: 200px !important;
+        padding: 0.5rem 0.55rem !important;
+    }
+
+    .col-product-head .product-name-title {
+        font-size: 0.8125rem !important; /* 13px */
+    }
+
+    .compare-matrix-table td {
+        padding: 0.45rem 0.5rem !important;
+        font-size: 0.75rem !important; /* 12px */
+    }
+
+    .sticky-cat-title {
+        left: 0.5rem !important;
+    }
+
+    #compare-dock {
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: calc(100% - 1.25rem) !important;
+        max-width: calc(100% - 1.25rem) !important;
+        bottom: 0.75rem !important;
+        padding: 0.625rem 0.75rem !important;
+    }
 }
