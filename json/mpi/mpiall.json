@@ -32,25 +32,17 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
           "water_repellency": 2,
           "block_resistance": 1,
           "improved_extrusion_flow": 1,
           "metal_mark_resistance": 1,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2,
           "anti_gassing": 2,
-          "clarity": 2,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "clarity": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -74,21 +66,14 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 1,
           "improved_extrusion_flow": 1,
           "anti_gassing": 2,
-          "metal_mark_resistance": 1,
-          "apparent_hardness": 0
+          "metal_mark_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -114,21 +99,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "罐頭塗料",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "improved_extrusion_flow": 1,
           "metal_mark_resistance": 1,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
@@ -144,7 +121,9 @@
           "metal_mark_resistance": "Improves scratch, scuff, and mar resistance.",
           "matting_gloss_control": "Choose G grade for maximum gloss reduction and burnish resistance; choose XF grade for maximum gloss retention.",
           "slip_lubricity": "Adds surface slip and lubricity."
-        }
+        },
+        "example_zh": "罐頭塗料",
+        "example_en": "Can coatings"
       },
       "ink": {
         "application_key": "ink",
@@ -153,21 +132,14 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
           "slip_lubricity": 2,
           "matting_gloss_control": 1,
           "soft_touch": 1,
-          "texture_structure": 0,
           "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 2,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "clarity": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -193,18 +165,11 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "anti_slip": 0,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "block_resistance": 0,
           "matting_gloss_control": 2,
-          "texture_structure": 0,
-          "cleanability": 0,
-          "water_repellency": 2,
-          "no_silica_dust": 0
+          "water_repellency": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -222,23 +187,15 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "木器漆",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
           "texture_structure": 1,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 1,
           "clarity": 1,
           "gloss_retention": 1,
-          "lubricity_smooth_feel": 1,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "lubricity_smooth_feel": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -249,7 +206,9 @@
           "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
           "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
           "lubricity_smooth_feel": "Adds surface slip and lubricity."
-        }
+        },
+        "example_zh": "木器漆",
+        "example_en": "Wood coatings"
       },
       "leather": {
         "application_key": "leather",
@@ -258,19 +217,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "burnish_resistance": 1,
           "slip": 2,
           "matting_gloss_control": 1,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -301,8 +254,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "energy curable coatings and inks": 1
     },
     "typical_properties": {
       "melt_point_c": "114-118",
@@ -318,25 +270,17 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
           "water_repellency": 2,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
           "metal_mark_resistance": 1,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2,
           "anti_gassing": 2,
-          "clarity": 2,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "clarity": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -360,23 +304,15 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
           "texture_structure": 1,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 1,
           "clarity": 1,
           "gloss_retention": 1,
-          "lubricity_smooth_feel": 1,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "lubricity_smooth_feel": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -400,19 +336,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "burnish_resistance": 1,
           "slip": 2,
           "matting_gloss_control": 1,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -446,7 +376,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "114-118",
@@ -462,25 +392,17 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
           "water_repellency": 2,
           "block_resistance": 1,
           "improved_extrusion_flow": 1,
           "metal_mark_resistance": 1,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2,
           "anti_gassing": 2,
-          "clarity": 2,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "clarity": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -506,23 +428,15 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
           "texture_structure": 1,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 1,
           "clarity": 1,
           "gloss_retention": 1,
-          "lubricity_smooth_feel": 1,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "lubricity_smooth_feel": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -546,19 +460,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "burnish_resistance": 1,
           "slip": 2,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
@@ -610,25 +518,15 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
-          "water_repellency": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2,
           "anti_gassing": 1,
-          "clarity": 1,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "clarity": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
@@ -648,27 +546,19 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
           "anti_gassing": 1,
-          "metal_mark_resistance": 2,
-          "apparent_hardness": 0
+          "metal_mark_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟粉的有效替代品",
           "scratch_resistance": "複配奈米氧化鋁顆粒（莫氏硬度 9)。提供良好的抗刮性能。",
           "slip_lubricity": "具備滑爽性與潤滑性",
-          "apparent_hardness": "複配奈米氧化鋁(莫氏硬度 9)，有效提升表面硬度"
+          "apparent_hardness": "複配奈米氧化鋁(莫氏硬度 9)，有效提升表面硬度",
+          "abrasion_resistance": "具有優異的耐磨損與抗磨耗性能。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE powder additives, providing superior scratch resistance.",
@@ -685,21 +575,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "水性鋁罐塗料",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
@@ -713,7 +594,9 @@
           "scratch_resistance": "Improves coating scratch and mar resistance while imparting surface slip and lubricity.",
           "apparent_hardness": "Utilizes 300 nm aluminum oxide nanoparticles (Mohs hardness 9) to enhance film surface hardness.",
           "slip_lubricity": "Enhances surface slip and lubricity."
-        }
+        },
+        "example_zh": "水性鋁罐塗料",
+        "example_en": "Water-based aluminum can coatings"
       },
       "ink": {
         "application_key": "ink",
@@ -722,21 +605,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
           "slip_lubricity": 2,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
@@ -760,23 +634,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
           "clarity": 2,
           "gloss_retention": 3,
-          "lubricity_smooth_feel": 2,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "lubricity_smooth_feel": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
@@ -796,19 +659,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 1,
           "slip": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
@@ -828,17 +684,10 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "slip_lubricity": 1,
-          "water_beading": 0,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "slip_lubricity": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
@@ -870,7 +719,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "120-124",
@@ -886,25 +735,15 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
-          "water_repellency": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2,
           "anti_gassing": 1,
-          "clarity": 1,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "clarity": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
@@ -924,22 +763,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 3,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
           "cleanability": 3
         },
         "performance_descriptions_zh": {
@@ -964,18 +793,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 3,
-          "slip": 0,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 3,
-          "polish": 0,
           "cleanability": 3
         },
         "performance_descriptions_zh": {
@@ -998,17 +821,10 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "slip_lubricity": 1,
-          "water_beading": 0,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "slip_lubricity": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效的 PTFE 替代品。",
@@ -1042,7 +858,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "81-86",
@@ -1058,25 +874,11 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 3,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
-          "water_repellency": 0,
-          "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0,
-          "anti_gassing": 0,
-          "clarity": 0,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，奈米氧化鋁，莫氏硬度高達9",
@@ -1098,21 +900,9 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "scratch_resistance": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效替代PTFE蠟粉",
@@ -1136,29 +926,19 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "水性鋁罐塗料",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 3,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
           "scratch_resistance": "提供良好的抗刮性能。",
           "apparent_hardness": "複配奈米氧化鋁，(莫氏硬度9)，提高塗層硬度",
           "gloss_retention": "不影響塗層透明度和光澤度。",
-          "slip_lubricity": "提供優異的表面潤滑性。"
+          "slip_lubricity": "提供優異的表面潤滑性。",
+          "block_resistance": "提供優異的防粘結與抗回黏性能。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives.",
@@ -1167,7 +947,9 @@
           "apparent_hardness": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to enhance film hardness.",
           "gloss_retention": "Does not adversely affect coating clarity or gloss.",
           "slip_lubricity": "Provides excellent surface lubricity."
-        }
+        },
+        "example_zh": "水性鋁罐塗料",
+        "example_en": "Water-based aluminum can coatings"
       },
       "ink": {
         "application_key": "ink",
@@ -1176,21 +958,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
           "slip_lubricity": 3,
           "matting_gloss_control": 1,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 2,
-          "increased_cof": 0,
-          "clarity": 3,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "clarity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
@@ -1216,23 +990,14 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "水性木器漆",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "water_repellency": 1,
-          "moisture_resistance": 0,
           "block_resistance": 1,
           "clarity": 2,
           "gloss_retention": 2,
-          "lubricity_smooth_feel": 3,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "lubricity_smooth_feel": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
@@ -1247,7 +1012,9 @@
           "clarity": "Does not adversely affect coating clarity or gloss.",
           "gloss_retention": "Does not adversely impact clarity or gloss retention.",
           "lubricity_smooth_feel": "Enhances surface lubricity and smooth feel."
-        }
+        },
+        "example_zh": "水性木器漆",
+        "example_en": "Water-based wood coatings"
       },
       "automotive_polishes": {
         "application_key": "automotive_polishes",
@@ -1256,17 +1023,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
           "slip_lubricity": 2,
           "water_beading": 1,
           "soil_resistance": 2,
-          "cleanability": 1,
-          "gloss_retention": 0
+          "cleanability": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
@@ -1302,7 +1065,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "139-145",
@@ -1318,25 +1081,13 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "slip_lubricity": 3,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
-          "water_repellency": 0,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 3,
-          "increased_cof": 0,
-          "burnish_resistance": 0,
-          "anti_gassing": 0,
-          "clarity": 0,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "apparent_hardness": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
@@ -1360,20 +1111,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "slip_lubricity": 3,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
           "apparent_hardness": 3
         },
         "performance_descriptions_zh": {
@@ -1381,7 +1124,8 @@
           "scratch_resistance": "複配奈米氧化鋁（莫氏硬度 9）增強塗層的硬度。產生良好的抗刮性能。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
-          "apparent_hardness": "提高複配奈米氧化鋁(莫氏硬度9)，有效提升表面硬度"
+          "apparent_hardness": "提高複配奈米氧化鋁(莫氏硬度9)，有效提升表面硬度",
+          "abrasion_resistance": "提供優異的耐磨損性能。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Superior scratch resistance, equal in performance to PE/PTFE wax powders.",
@@ -1399,22 +1143,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "塑膠、鋁圈",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
-          "metal_mark_resistance": 0,
           "apparent_hardness": 3,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 3,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
@@ -1431,7 +1166,9 @@
           "block_resistance": "Amide wax component provides superior antiblocking and release properties.",
           "apparent_hardness": "Fortified with aluminum oxide nanoparticles to enhance film hardness and toughness.",
           "slip_lubricity": "Delivers excellent surface slip and lubricity."
-        }
+        },
+        "example_zh": "塑膠、鋁圈",
+        "example_en": "Plastics, aluminum wheel rims"
       },
       "ink": {
         "application_key": "ink",
@@ -1440,21 +1177,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
           "slip_lubricity": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 2,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
@@ -1480,23 +1208,16 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 3,
-          "matting_gloss_control": 0,
           "soft_touch": 2,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 2,
           "clarity": 2,
           "gloss_retention": 3,
           "lubricity_smooth_feel": 3,
-          "sanding_efficiency": 2,
-          "cleanability": 0
+          "sanding_efficiency": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
@@ -1520,18 +1241,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "burnish_resistance": 2,
           "slip": 2,
-          "matting_gloss_control": 0,
           "soft_touch": 1,
-          "texture_structure": 0,
           "block_resistance": 3,
-          "polish": 0,
           "cleanability": 2
         },
         "performance_descriptions_zh": {
@@ -1556,17 +1272,10 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "slip_lubricity": 3,
-          "water_beading": 0,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
@@ -1600,7 +1309,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "109-115",
@@ -1616,25 +1325,12 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "slip_lubricity": 3,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
-          "water_repellency": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 3,
-          "anti_gassing": 0,
-          "clarity": 0,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
@@ -1654,21 +1350,11 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "slip_lubricity": 2,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
-          "block_resistance": 1,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟粉的有效替代品，(Taber)耐磨性更佳",
@@ -1688,21 +1374,11 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 3,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
@@ -1723,21 +1399,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
-          "rub_resistance": 0,
           "slip_lubricity": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 2,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
@@ -1757,18 +1424,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "burnish_resistance": 3,
           "slip": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 2,
-          "polish": 0,
           "cleanability": 2
         },
         "performance_descriptions_zh": {
@@ -1789,17 +1450,10 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "slip_lubricity": 3,
-          "water_beading": 0,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
@@ -1831,7 +1485,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "141-146",
@@ -1847,25 +1501,14 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
           "slip_lubricity": 3,
-          "anti_slip": 0,
-          "matting_gloss_control": 0,
-          "water_repellency": 0,
           "block_resistance": 3,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0,
-          "anti_gassing": 3,
-          "clarity": 0,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "anti_gassing": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "具有良好的抗刮與耐磨性能。",
@@ -1889,21 +1532,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "slip_lubricity": 3,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 3,
-          "improved_extrusion_flow": 0,
           "anti_gassing": 3,
-          "metal_mark_resistance": 2,
-          "apparent_hardness": 0
+          "metal_mark_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效替代PTFE蠟粉，具有優異的抗刮和耐磨性能",
@@ -1927,22 +1562,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "罐頭塗料",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "block_resistance": 3,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 3,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "具有出色的抗刮與耐磨性能。",
@@ -1959,7 +1584,9 @@
           "block_resistance": "High melting point enhances heat resistance and antiblocking performance.",
           "metal_mark_resistance": "Hard nanoceramic particles combined with amide wax provide superior surface scratch and metal marking resistance.",
           "slip_lubricity": "Adds slip, release, and lubricity with an excellent surface tactile feel while lowering COF."
-        }
+        },
+        "example_zh": "罐頭塗料",
+        "example_en": "Can coatings"
       },
       "ink": {
         "application_key": "ink",
@@ -1968,21 +1595,11 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
-          "rub_resistance": 0,
           "slip_lubricity": 3,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 2,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "具有出色的抗刮與耐磨性能。",
@@ -2008,23 +1625,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "木器漆",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "burnish_resistance": 2,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 3,
-          "clarity": 0,
-          "gloss_retention": 0,
           "lubricity_smooth_feel": 3,
-          "sanding_efficiency": 2,
-          "cleanability": 0
+          "sanding_efficiency": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "具有出色的抗刮與耐磨性能。",
@@ -2039,7 +1646,9 @@
           "abrasion_resistance": "Delivers outstanding abrasion and rub resistance.",
           "block_resistance": "High melting point enhances heat and block resistance.",
           "slip_lubricity": "Adds slip, release, and lubricity with an excellent surface feel."
-        }
+        },
+        "example_zh": "木器漆",
+        "example_en": "Wood coatings"
       }
     }
   },
@@ -2060,7 +1669,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "110-113",
@@ -2076,23 +1685,18 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
           "slip_lubricity": 1,
           "anti_slip": 3,
-          "matting_gloss_control": 0,
-          "water_repellency": 0,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
           "increased_cof": 1,
           "burnish_resistance": 3,
           "anti_gassing": 1,
-          "clarity": 0,
           "cleanability": 2,
           "no_silica_dust": 3
         },
@@ -2116,21 +1720,14 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "儲存槽",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
-          "slip_lubricity": 0,
           "matting_gloss_control": 1,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
           "anti_gassing": 1,
-          "metal_mark_resistance": 2,
-          "apparent_hardness": 0
+          "metal_mark_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效取代PTFE蠟粉",
@@ -2141,7 +1738,9 @@
           "ptfe_alternative": "Effective replacement for PTFE powder additives.",
           "scratch_resistance": "Provides superior surface scratch and mar resistance.",
           "abrasion_resistance": "Maximizes surface Taber abrasion resistance and film toughness, fortified with hard ceramic particles."
-        }
+        },
+        "example_zh": "儲存槽",
+        "example_en": "Storage tanks"
       },
       "industrial": {
         "application_key": "industrial",
@@ -2150,21 +1749,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 1,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
@@ -2187,21 +1778,11 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
-          "rub_resistance": 0,
           "slip_lubricity": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 0,
-          "increased_cof": 1,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "increased_cof": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效取代PTFE蠟粉",
@@ -2225,17 +1806,13 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "anti_slip": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "block_resistance": 3,
           "matting_gloss_control": 3,
-          "texture_structure": 0,
           "cleanability": 2,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -2258,23 +1835,12 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "burnish_resistance": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 1,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 2,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "lubricity_smooth_feel": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效取代PTFE蠟粉",
@@ -2294,16 +1860,11 @@
         "featured_categories": [
           "PTFE 取代"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "burnish_resistance": 2,
-          "slip": 0,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 2,
           "polish": 1,
           "cleanability": 1
@@ -2338,7 +1899,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "260",
@@ -2354,27 +1915,17 @@
         "featured_categories": [
           "耐高溫"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
-          "slip_lubricity": 0,
           "anti_slip": 2,
           "matting_gloss_control": 2,
           "moisture_resistance": 2,
           "heat_resistance": 3,
-          "water_repellency": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
           "apparent_hardness": 3,
-          "increased_cof": 0,
           "burnish_resistance": 2,
-          "anti_gassing": 0,
-          "clarity": 2,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "clarity": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "優異的抗刮性能。",
@@ -2400,24 +1951,17 @@
         "featured_categories": [
           "耐高溫"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
           "burnish_resistance": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
           "moisture_resistance": 2,
           "heat_resistance": 3,
           "block_resistance": 2,
           "clarity": 3,
-          "gloss_retention": 2,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "gloss_retention": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "優異的抗刮性能。",
@@ -2454,8 +1998,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "energy curable coatings and inks": 1
     },
     "typical_properties": {
       "melt_point_c": "260",
@@ -2471,28 +2014,17 @@
         "featured_categories": [
           "耐高溫"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
-          "slip_lubricity": 0,
           "anti_slip": 2,
           "matting_gloss_control": 2,
           "moisture_resistance": 3,
           "heat_resistance": 3,
-          "heat_resistance": 3,
-          "water_repellency": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
           "apparent_hardness": 3,
-          "increased_cof": 0,
           "burnish_resistance": 2,
-          "anti_gassing": 0,
-          "clarity": 2,
-          "cleanability": 0,
-          "no_silica_dust": 0
+          "clarity": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "優異的抗刮性能。",
@@ -2516,24 +2048,17 @@
         "featured_categories": [
           "耐高溫"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
           "burnish_resistance": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
           "moisture_resistance": 3,
           "heat_resistance": 3,
           "block_resistance": 2,
           "clarity": 3,
-          "gloss_retention": 2,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "gloss_retention": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "優異的抗刮性能。",
@@ -2569,7 +2094,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "110-115",
@@ -2585,22 +2110,11 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "water_repellency": 2,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
           "improved_extrusion_flow": 1,
-          "anti_gassing": 2,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "anti_gassing": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗刮性能。",
@@ -2632,7 +2146,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "110-115",
@@ -2648,22 +2162,11 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "water_repellency": 2,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
           "improved_extrusion_flow": 1,
-          "anti_gassing": 2,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "anti_gassing": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升耐刮性能。",
@@ -2683,22 +2186,11 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 2,
-          "texture_structure": 0,
           "water_repellency": 2,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 1
         },
         "performance_descriptions_zh": {
@@ -2721,22 +2213,12 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "rub_resistance": 3,
           "slip_lubricity": 3,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "water_repellency": 2,
-          "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "具有抗刮傷（刻痕）防護。",
@@ -2758,19 +2240,11 @@
         "featured_categories": [
           "撥水"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
-          "anti_slip": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
-          "matting_gloss_control": 0,
-          "texture_structure": 0,
           "water_repellency": 2,
-          "cleanability": 1,
-          "water_repellency": 2,
-          "no_silica_dust": 0
+          "cleanability": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予塗層耐刮擦和耐刮傷性能。",
@@ -2792,23 +2266,11 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "water_repellency": 3,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
-          "clarity": 0,
           "gloss_retention": 2,
-          "lubricity_smooth_feel": 1,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "lubricity_smooth_feel": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "具備抗摩擦與抗擦傷性。",
@@ -2830,17 +2292,10 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
           "slip_lubricity": 1,
-          "water_beading": 1,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "water_beading": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "具有耐刮特性。",
@@ -2872,7 +2327,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "110-116",
@@ -2888,20 +2343,9 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
           "apparent_hardness": 2
         },
         "performance_descriptions_zh": {
@@ -2924,22 +2368,11 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
           "apparent_hardness": 2,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升塗層抗劃痕性",
@@ -2991,21 +2424,12 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 3,
           "improved_extrusion_flow": 3,
           "anti_gassing": 3,
-          "metal_mark_resistance": 2,
-          "apparent_hardness": 0
+          "metal_mark_resistance": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予優異的耐刮和抗劃痕性。",
@@ -3029,22 +2453,12 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "block_resistance": 3,
           "improved_extrusion_flow": 3,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升塗層抗劃痕性能。",
@@ -3070,20 +2484,11 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "rub_resistance": 2,
           "slip_lubricity": 2,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
           "chemical_resistance": 3
         },
         "performance_descriptions_zh": {
@@ -3112,23 +2517,10 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
-          "burnish_resistance": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
           "clarity": 2,
-          "gloss_retention": 2,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "gloss_retention": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升塗層的抗擦傷性能。",
@@ -3150,19 +2542,11 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "burnish_resistance": 1,
           "slip": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "提升塗層的耐磨、抗摩擦與抗磨損性能。",
@@ -3182,17 +2566,9 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "slip_lubricity": 1,
-          "water_beading": 0,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "slip_lubricity": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升塗層的防劃傷性能。",
@@ -3238,21 +2614,9 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
-          "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升耐刮、高熔點提升抗擦傷和耐刮性能。",
@@ -3276,20 +2640,11 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 3,
           "rub_resistance": 3,
           "slip_lubricity": 3,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 2,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
           "intercoat_adhesion": 3
         },
         "performance_descriptions_zh": {
@@ -3329,7 +2684,6 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
       "powder_coating": 1
     },
     "typical_properties": {
@@ -3346,21 +2700,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
           "slip_lubricity": 1,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 2,
-          "apparent_hardness": 0
+          "metal_mark_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "賦予塗層良好的耐磨性",
@@ -3380,20 +2724,10 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 3,
-          "slip_lubricity": 0,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
           "increased_cof": 2,
           "burnish_resistance": 3
         },
@@ -3417,21 +2751,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
-          "rub_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 1,
-          "increased_cof": 3,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "increased_cof": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "高分子量可提升塗層耐刮。",
@@ -3455,18 +2779,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "block_resistance": 0,
           "matting_gloss_control": 3,
-          "texture_structure": 0,
-          "cleanability": 2,
-          "water_repellency": 0,
-          "no_silica_dust": 0
+          "cleanability": 2
         },
         "performance_descriptions_zh": {
           "anti_slip": "賦予防滑特性。",
@@ -3488,23 +2805,13 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
           "burnish_resistance": 2,
           "matting_gloss_control": 3,
           "soft_touch": 1,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 2,
-          "clarity": 0,
-          "gloss_retention": 0,
           "lubricity_smooth_feel": 2,
-          "sanding_efficiency": 1,
-          "cleanability": 0
+          "sanding_efficiency": 1
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "高分子量聚合物提升耐磨性能。",
@@ -3526,18 +2833,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "burnish_resistance": 3,
-          "slip": 0,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 1,
-          "polish": 0,
           "cleanability": 1
         },
         "performance_descriptions_zh": {
@@ -3572,7 +2872,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "140-143",
@@ -3588,21 +2888,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 1,
-          "apparent_hardness": 0
+          "metal_mark_resistance": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高抗劃痕、抗刮傷和抗金屬刮痕性能。",
@@ -3626,21 +2916,10 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
-          "rub_resistance": 0,
           "slip_lubricity": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高抗擦傷、刮傷以及金屬劃痕性能",
@@ -3666,23 +2945,13 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "burnish_resistance": 2,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "water_repellency": 2,
-          "moisture_resistance": 0,
           "block_resistance": 3,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 1,
-          "cleanability": 0
+          "sanding_efficiency": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗擦傷、抗劃痕與抗金屬劃痕性能。",
@@ -3715,7 +2984,6 @@
     "suggested_use_level_zh": "0.5-3.0%",
     "suggested_use_level_en": "0.5-3.0%",
     "system": {
-      "waterborne": 0,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
       "powder_coating": 1
@@ -3734,21 +3002,10 @@
         "featured_categories": [
           "高光澤"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "slip_lubricity": 2,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 3,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "anti_gassing": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "良好的抗刮性。",
@@ -3768,22 +3025,10 @@
         "featured_categories": [
           "高光澤"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 3,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高抗刮傷性能。",
@@ -3803,21 +3048,9 @@
         "featured_categories": [
           "高光澤"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
-          "slip_lubricity": 3,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 0,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高表面滑爽、抗刮傷性能",
@@ -3866,21 +3099,9 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 3,
-          "soft_touch": 3,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "soft_touch": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高拋光抗性、抗刮傷性和抗劃痕性。",
@@ -3902,20 +3123,10 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 3,
-          "slip_lubricity": 0,
           "texture_structure": 1,
           "soft_touch": 3,
-          "corrosion_resistance": 0,
           "increased_cof": 2,
           "burnish_resistance": 3
         },
@@ -3939,21 +3150,12 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 3,
           "soft_touch": 2,
           "texture_structure": 1,
-          "block_resistance": 0,
-          "increased_cof": 1,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "increased_cof": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高防刮與抗刮傷性能",
@@ -3977,18 +3179,9 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "anti_slip": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "block_resistance": 0,
           "matting_gloss_control": 1,
-          "texture_structure": 3,
-          "cleanability": 0,
-          "water_repellency": 0,
-          "no_silica_dust": 0
+          "texture_structure": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "聚氨酯微粉，可提升耐刮擦與耐刮傷性。",
@@ -4010,23 +3203,12 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
           "burnish_resistance": 1,
           "matting_gloss_control": 3,
-          "soft_touch": 3,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "soft_touch": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗劃傷性能。",
@@ -4050,19 +3232,12 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "burnish_resistance": 3,
-          "slip": 0,
           "matting_gloss_control": 2,
           "soft_touch": 3,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗刮性能。",
@@ -4115,21 +3290,9 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 3,
-          "soft_touch": 3,
-          "texture_structure": 0,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "soft_touch": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高抗拋光性、抗刮傷性和抗劃痕性。",
@@ -4151,20 +3314,10 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 3,
-          "slip_lubricity": 0,
           "texture_structure": 2,
           "soft_touch": 3,
-          "corrosion_resistance": 0,
           "increased_cof": 2,
           "burnish_resistance": 3
         },
@@ -4188,21 +3341,12 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 3,
           "soft_touch": 1,
           "texture_structure": 3,
-          "block_resistance": 0,
-          "increased_cof": 3,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "increased_cof": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高防刮與抗刮傷性能",
@@ -4226,18 +3370,10 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 2,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "block_resistance": 0,
           "matting_gloss_control": 1,
-          "texture_structure": 3,
-          "cleanability": 0,
-          "water_repellency": 0,
-          "no_silica_dust": 0
+          "texture_structure": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "聚氨酯微粉，提升耐刮擦與耐刮傷性。",
@@ -4259,23 +3395,12 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
           "burnish_resistance": 1,
           "matting_gloss_control": 3,
-          "soft_touch": 3,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "soft_touch": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗劃傷性能。",
@@ -4299,19 +3424,13 @@
         "featured_categories": [
           "柔感"
         ],
-        "example": "機車坐墊",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "burnish_resistance": 3,
-          "slip": 0,
           "matting_gloss_control": 2,
           "soft_touch": 3,
           "texture_structure": 3,
-          "block_resistance": 1,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗刮性能。",
@@ -4328,7 +3447,9 @@
           "matting_gloss_control": "Provides effective gloss reduction.",
           "soft_touch": "Delivers varied tactile effects from silky, rubbery to leathery in properly formulated finishes.",
           "texture_structure": "Utilizes specific particle sizes to create a unique surface tactile touch."
-        }
+        },
+        "example_zh": "機車坐墊",
+        "example_en": "Motorcycle seat cushions"
       }
     }
   },
@@ -4346,9 +3467,6 @@
     "suggested_use_level_zh": "3.0-7.0%（視所需的紋路深淺而定）",
     "suggested_use_level_en": "3.0-7.0% (depending on the desired level of texture)",
     "system": {
-      "waterborne": 0,
-      "solvent_borne": 0,
-      "energy curable coatings and inks": 0,
       "powder_coating": 1
     },
     "typical_properties": {
@@ -4363,21 +3481,9 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 3,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "texture_structure": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE (PFAS)",
@@ -4406,9 +3512,6 @@
     "suggested_use_level_zh": "4.0-6.0%（視所需的紋路深淺而定）",
     "suggested_use_level_en": "4.0-6.0% (depending on the desired texture level)",
     "system": {
-      "waterborne": 0,
-      "solvent_borne": 0,
-      "energy curable coatings and inks": 0,
       "powder_coating": 1
     },
     "typical_properties": {
@@ -4423,21 +3526,10 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "車漆",
         "performance_ratings": {
           "ptfe_alternative": 1,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 3,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "texture_structure": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE。",
@@ -4448,7 +3540,9 @@
           "ptfe_alternative": "PTFE-free texturing additive.",
           "matting_gloss_control": "Provides PTFE-like low-gloss texturing; single-digit gloss levels are optimally achieved at 6% addition.",
           "texture_structure": "Delivers uniform fine surface texturing."
-        }
+        },
+        "example_zh": "車漆",
+        "example_en": "Automotive coatings"
       }
     }
   },
@@ -4480,21 +3574,10 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 3,
-          "corrosion_resistance": 0,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "texture_structure": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE。",
@@ -4522,12 +3605,6 @@
     "application_fields_en": "Powder coatings, industrial coatings.",
     "suggested_use_level_zh": "1.0-3.0%\n(必須與其他添加劑一起預混合，理想溫度最好超過110°C)",
     "suggested_use_level_en": "1.0-3.0%",
-    "system": {
-      "waterborne": 0,
-      "solvent_borne": 0,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
-    },
     "typical_properties": {
       "melt_point_c": "108-113",
       "mean_particle_size_um": "8.0-12.0",
@@ -4542,21 +3619,8 @@
         "featured_categories": [
           "防腐蝕"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "slip_lubricity": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "corrosion_resistance": 3,
-          "block_resistance": 0,
-          "improved_extrusion_flow": 0,
-          "anti_gassing": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0
+          "corrosion_resistance": 3
         },
         "performance_descriptions_zh": {
           "corrosion_resistance": "與二氧化鈦或其他無機顏料一起配製時，可提高塗層的耐腐蝕性能。"
@@ -4572,18 +3636,11 @@
         "featured_categories": [
           "防腐蝕"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
           "slip_lubricity": 2,
           "corrosion_resistance": 3,
-          "water_beading": 2,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "water_beading": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "與二氧化鈦或其他無機顏料配合使用時，可提升塗層的防腐蝕性能。",
@@ -4613,9 +3670,7 @@
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -4631,20 +3686,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "anti_slip": 3,
           "burnish_resistance": 2
         },
@@ -4668,17 +3715,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 2,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -4711,9 +3754,7 @@
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -4729,20 +3770,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "anti_slip": 2,
           "burnish_resistance": 2
         },
@@ -4766,17 +3799,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 2,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 2,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -4809,9 +3838,7 @@
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -4827,20 +3854,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "anti_slip": 2,
           "burnish_resistance": 2
         },
@@ -4864,17 +3883,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 2,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 2,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -4907,9 +3922,7 @@
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -4925,20 +3938,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "anti_slip": 2,
           "burnish_resistance": 2
         },
@@ -4962,17 +3967,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 2,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 2,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5005,9 +4006,7 @@
     "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -5023,20 +4022,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 3,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "anti_slip": 2,
           "burnish_resistance": 2
         },
@@ -5060,17 +4051,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 3,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5095,23 +4082,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "burnish_resistance": 1,
           "matting_gloss_control": 3,
           "soft_touch": 1,
-          "texture_structure": 3,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "texture_structure": 3
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
@@ -5133,19 +4109,13 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "burnish_resistance": 2,
-          "slip": 0,
           "matting_gloss_control": 3,
           "soft_touch": 1,
           "texture_structure": 3,
-          "block_resistance": 2,
-          "polish": 0,
-          "cleanability": 0
+          "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
@@ -5179,9 +4149,7 @@
     "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -5197,20 +4165,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 3,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "anti_slip": 2,
           "burnish_resistance": 2
         },
@@ -5234,17 +4194,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 3,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5279,9 +4235,7 @@
     "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -5297,20 +4251,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "increased_cof": 3,
           "burnish_resistance": 2
         },
@@ -5334,17 +4280,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 3,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5369,23 +4311,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "burnish_resistance": 1,
           "matting_gloss_control": 3,
           "soft_touch": 1,
-          "texture_structure": 3,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "texture_structure": 3
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
@@ -5407,19 +4338,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "burnish_resistance": 2,
-          "slip": 0,
           "matting_gloss_control": 3,
           "soft_touch": 1,
-          "texture_structure": 2,
-          "block_resistance": 0,
-          "polish": 0,
-          "cleanability": 0
+          "texture_structure": 2
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
@@ -5453,9 +4377,7 @@
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "166-168",
@@ -5471,20 +4393,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "increased_cof": 3,
           "burnish_resistance": 2
         },
@@ -5508,17 +4422,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 2,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 2,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5551,9 +4461,7 @@
     "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "166-168",
@@ -5569,20 +4477,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
           "increased_cof": 3,
           "burnish_resistance": 2
         },
@@ -5606,17 +4506,13 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 2,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
           "matting_gloss_control": 2,
           "texture_structure": 3,
           "cleanability": 1,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5650,7 +4546,6 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
       "powder_coating": 1
     },
     "typical_properties": {
@@ -5667,22 +4562,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 3,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 0,
           "texture_structure": 3,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 3,
-          "burnish_resistance": 0
+          "increased_cof": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
@@ -5702,17 +4587,11 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
-          "block_resistance": 0,
-          "matting_gloss_control": 0,
           "texture_structure": 3,
-          "cleanability": 0,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5742,8 +4621,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "257-267",
@@ -5759,22 +4637,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 3,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 0,
           "texture_structure": 3,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 3,
-          "burnish_resistance": 0
+          "increased_cof": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
@@ -5794,17 +4662,11 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
-          "block_resistance": 0,
-          "matting_gloss_control": 0,
           "texture_structure": 3,
-          "cleanability": 0,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5834,8 +4696,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "257-267",
@@ -5851,22 +4712,13 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 0,
           "texture_structure": 3,
           "soft_touch": 1,
-          "corrosion_resistance": 0,
-          "increased_cof": 2,
-          "burnish_resistance": 0
+          "increased_cof": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
@@ -5886,17 +4738,11 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
-          "block_resistance": 0,
-          "matting_gloss_control": 0,
           "texture_structure": 3,
-          "cleanability": 0,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -5926,8 +4772,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "257-267",
@@ -5943,22 +4788,12 @@
         "featured_categories": [
           "織紋"
         ],
-        "example": "",
         "performance_ratings": {
           "ptfe_alternative": 1,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 0,
           "texture_structure": 3,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 2,
-          "burnish_resistance": 0
+          "increased_cof": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
@@ -5978,17 +4813,11 @@
         "featured_categories": [
           "防滑"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "anti_slip": 3,
           "scratch_resistance": 3,
           "abrasion_resistance": 3,
-          "block_resistance": 0,
-          "matting_gloss_control": 0,
           "texture_structure": 3,
-          "cleanability": 0,
-          "water_repellency": 0,
           "no_silica_dust": 3
         },
         "performance_descriptions_zh": {
@@ -6018,8 +4847,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "energy curable coatings and inks": 1
     },
     "typical_properties": {
       "melt_point_c": "119-124",
@@ -6035,21 +4863,10 @@
         "featured_categories": [
           "高光澤"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "block_resistance": 3,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 1
         },
         "performance_descriptions_zh": {
@@ -6074,21 +4891,12 @@
         "featured_categories": [
           "高光澤"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
           "slip_lubricity": 1,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 3,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "clarity": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提供滑爽性、耐磨性與抗刮傷性的優異結合。",
@@ -6125,8 +4933,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "energy curable coatings and inks": 1
     },
     "typical_properties": {
       "melt_point_c": "81-86",
@@ -6142,22 +4949,10 @@
         "featured_categories": [
           "高光澤"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 3,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升表面潤滑性與抗刮傷性。",
@@ -6181,12 +4976,8 @@
         "featured_categories": [
           "高光澤"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
           "slip_lubricity": 2,
           "water_beading": 1,
           "soil_resistance": 2,
@@ -6223,9 +5014,7 @@
     "suggested_use_level_en": "2.0-5.0% depending on the level of gloss reduction desired (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 0,
-      "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "energy curable coatings and inks": 1
     },
     "typical_properties": {
       "melt_point_c": "160-170",
@@ -6241,20 +5030,10 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
           "matting_gloss_control": 3,
-          "slip_lubricity": 0,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
           "increased_cof": 2,
           "burnish_resistance": 3
         },
@@ -6278,21 +5057,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 1,
-          "rub_resistance": 0,
-          "slip_lubricity": 0,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 2,
-          "increased_cof": 3,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "increased_cof": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "與二氧化矽消光劑相比，提高了消光性",
@@ -6325,10 +5094,7 @@
     "suggested_use_level_zh": "0.5-2.0%（耐磨）；2.0-5.0%（光澤控制）（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (mar and abrasion resistance); 2.0-5.0% (gloss control) (on total formula weight)",
     "system": {
-      "waterborne": 1,
-      "solvent_borne": 0,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "waterborne": 1
     },
     "typical_properties": {
       "melt_point_c": "150-156",
@@ -6344,21 +5110,12 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "block_resistance": 2,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 1,
-          "apparent_hardness": 0,
           "matting_gloss_control": 2,
           "slip_lubricity": 1,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
@@ -6383,23 +5140,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "burnish_resistance": 2,
           "matting_gloss_control": 2,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
-          "block_resistance": 3,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "block_resistance": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗擦傷、抗劃痕與抗金屬劃痕性能。",
@@ -6433,9 +5178,7 @@
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
     "system": {
       "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "solvent_borne": 1
     },
     "typical_properties": {
       "melt_point_c": "117-123",
@@ -6451,22 +5194,12 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "捲鋼",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
           "metal_mark_resistance": 3,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE 的替代選擇。",
@@ -6479,7 +5212,9 @@
           "scratch_resistance": "Provides optimum levels of scuff and mar resistance.",
           "abrasion_resistance": "Delivers optimum levels of scuff and scratch resistance.",
           "slip_lubricity": "Imparts excellent surface slip and mobility."
-        }
+        },
+        "example_zh": "捲鋼",
+        "example_en": "Coil coatings"
       },
       "ink": {
         "application_key": "ink",
@@ -6488,21 +5223,12 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
           "rub_resistance": 3,
           "slip_lubricity": 3,
-          "matting_gloss_control": 0,
           "soft_touch": 2,
-          "texture_structure": 0,
           "block_resistance": 3,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 1,
-          "intercoat_adhesion": 0
+          "heat_resistance": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE 的替代選擇。",
@@ -6528,17 +5254,9 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 3,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "slip_lubricity": 3,
-          "water_beading": 0,
-          "soil_resistance": 0,
-          "cleanability": 0,
-          "gloss_retention": 0
+          "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提供優異的防刮傷與防擦傷特性。",
@@ -6565,10 +5283,7 @@
     "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
     "system": {
-      "waterborne": 1,
-      "solvent_borne": 0,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "waterborne": 1
     },
     "typical_properties": {
       "melt_point_c": "117-123",
@@ -6584,21 +5299,11 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "罐頭塗料",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 1
         },
         "performance_descriptions_zh": {
@@ -6614,7 +5319,9 @@
           "block_resistance": "Imparts antiblocking properties.",
           "metal_mark_resistance": "Provides outstanding rub, mar, and metal mark resistance.",
           "slip_lubricity": "Enhances surface slip properties."
-        }
+        },
+        "example_zh": "罐頭塗料",
+        "example_en": "Can coatings"
       }
     }
   },
@@ -6632,10 +5339,8 @@
     "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
     "system": {
-      "waterborne": 0,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "energy curable coatings and inks": 1
     },
     "typical_properties": {
       "melt_point_c": "96-109",
@@ -6651,22 +5356,10 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
-          "improved_extrusion_flow": 0,
-          "metal_mark_resistance": 0,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
-          "slip_lubricity": 1,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
-          "burnish_resistance": 0
+          "slip_lubricity": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "複合蠟，提升塗層耐刮性。",
@@ -6688,21 +5381,11 @@
         "featured_categories": [
           "耐刮"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
           "rub_resistance": 1,
           "slip_lubricity": 2,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提供抗刮傷性",
@@ -6740,7 +5423,7 @@
       "waterborne": 1,
       "solvent_borne": 1,
       "energy curable coatings and inks": 1,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "120-124",
@@ -6756,21 +5439,11 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "block_resistance": 1,
-          "improved_extrusion_flow": 0,
           "metal_mark_resistance": 2,
-          "apparent_hardness": 0,
-          "matting_gloss_control": 0,
           "slip_lubricity": 2,
-          "texture_structure": 0,
-          "soft_touch": 0,
-          "corrosion_resistance": 0,
-          "increased_cof": 0,
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
@@ -6797,21 +5470,11 @@
         "featured_categories": [
           "耐磨"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
           "abrasion_resistance": 2,
           "rub_resistance": 2,
           "slip_lubricity": 1,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 1,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "chemical_resistance": 0
+          "block_resistance": 1
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "賦予優異的抗刮傷性能。與合成蠟相比，具有更好的抗溶劑吸收和耐溶脹性",
@@ -6841,17 +5504,14 @@
     "composition_zh": "緻密化改性合成蠟",
     "composition_en": "Densified modified synthetic wax",
     "chemical_component": "Densified modified synthetic wax",
-    "recommended_system_type_zh": "水性建築漆；木器漆。",
-    "recommended_system_type_en": "Water-based architectural wall and trim paints; stains, sealers, and varnishes; wood coatings.",
+    "recommended_system_type_zh": "水性系統。",
+    "recommended_system_type_en": "Water-based",
     "application_fields_zh": "水性建築漆；木器漆。",
     "application_fields_en": "Water-based architectural paints and wood coatings.",
     "suggested_use_level_zh": "1.0-4.0%（佔總配方重量）",
     "suggested_use_level_en": "1.0-4.0% (on total formula weight)",
     "system": {
-      "waterborne": 1,
-      "solvent_borne": 0,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "waterborne": 1
     },
     "typical_properties": {
       "melt_point_c": "136-140",
@@ -6867,21 +5527,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
-          "rub_resistance": 0,
           "slip_lubricity": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "block_resistance": 2,
-          "increased_cof": 0,
-          "clarity": 0,
-          "heat_resistance": 0,
-          "intercoat_adhesion": 0
+          "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升建築塗料的消光與抗沾污性能。與無機消光劑相比，複合蠟能顯著提升防沾污性 (DPUR)",
@@ -6903,22 +5553,11 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "burnish_resistance": 3,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 0,
-          "moisture_resistance": 0,
           "block_resistance": 3,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
           "cleanability": 3
         },
         "performance_descriptions_zh": {
@@ -6941,18 +5580,12 @@
         "featured_categories": [
           "消光"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 2,
-          "abrasion_resistance": 0,
           "burnish_resistance": 3,
           "slip": 2,
           "matting_gloss_control": 3,
-          "soft_touch": 0,
-          "texture_structure": 0,
           "block_resistance": 2,
-          "polish": 0,
           "cleanability": 2
         },
         "performance_descriptions_zh": {
@@ -6984,8 +5617,7 @@
     "system": {
       "waterborne": 1,
       "solvent_borne": 1,
-      "energy curable coatings and inks": 0,
-      "powder_coating": 0
+      "powder_coating": 1
     },
     "typical_properties": {
       "melt_point_c": "126-132",
@@ -7001,18 +5633,10 @@
         "featured_categories": [
           "撥水"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "anti_slip": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
           "block_resistance": 1,
-          "matting_gloss_control": 0,
-          "texture_structure": 0,
           "cleanability": 1,
-          "water_repellency": 2,
-          "no_silica_dust": 0
+          "water_repellency": 2
         },
         "performance_descriptions_zh": {
           "water_repellency": "提供水珠效果與持久的撥水性。"
@@ -7028,23 +5652,8 @@
         "featured_categories": [
           "撥水"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
-          "scratch_resistance": 0,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "matting_gloss_control": 0,
-          "soft_touch": 0,
-          "texture_structure": 0,
-          "water_repellency": 3,
-          "moisture_resistance": 0,
-          "block_resistance": 0,
-          "clarity": 0,
-          "gloss_retention": 0,
-          "lubricity_smooth_feel": 0,
-          "sanding_efficiency": 0,
-          "cleanability": 0
+          "water_repellency": 3
         },
         "performance_descriptions_zh": {
           "water_repellency": "提供水珠效果與持久的撥水性。"
@@ -7060,13 +5669,8 @@
         "featured_categories": [
           "撥水"
         ],
-        "example": "",
         "performance_ratings": {
-          "ptfe_alternative": 0,
           "scratch_resistance": 1,
-          "abrasion_resistance": 0,
-          "burnish_resistance": 0,
-          "slip_lubricity": 0,
           "water_beading": 3,
           "soil_resistance": 1,
           "cleanability": 1,

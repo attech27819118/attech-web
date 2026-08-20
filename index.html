@@ -1419,8 +1419,8 @@
             "ptfe_alternative": "PTFE取代", "scratch_resistance": "耐刮", "abrasion_resistance": "耐磨",
             "burnish_resistance": "耐拋光", "rub_resistance": "耐摩擦",
             "slip_lubricity": "滑爽", "anti_slip": "防滑", "increased_cof": "高摩擦",
-            "matting_gloss_control": "消光", "gloss_retention": "光澤保持", "clarity": "高透明",
-            "soft_touch": "柔感", "texture_structure": "織紋", "corrosion_resistance": "防腐蝕","chemical_resistance":"提升耐化性",
+            "matting_gloss_control": "消光", "gloss_retention": "保持光澤", "clarity": "高透明",
+            "soft_touch": "柔感", "texture_structure": "織紋", "corrosion_resistance": "防腐蝕",
             "block_resistance": "抗黏性", "improved_extrusion_flow": "改善流動", "anti_gassing": "防氣泡",
             "metal_mark_resistance": "抗金屬劃痕", "apparent_hardness": "提升表面硬度", "water_beading": "撥水",
             "water_repellency": "撥水", "heat_resistance": "耐高溫", "soil_resistance": "防污性",
@@ -2645,7 +2645,7 @@
         const usage = p['suggested_use_level_' + AppState.lang] || p.suggested_use_level_zh || p.suggested_use_level || '—';
         const systemType = p['recommended_system_type_' + AppState.lang] || p.recommended_system_type_zh || '—';
         const appFields = p['application_fields_' + AppState.lang] || p.application_fields_zh || '—';
-        const examples = p.examples && p.examples !== 'N/A' ? p.examples : '—';
+        const examples = appData['example_' + AppState.lang] || appData.example_zh || appData.example || p['examples_' + AppState.lang] || p.examples || p.example || '—';
         const maxParticleSize = p.typical_properties?.max_particle_size_um || '—';
         const meanParticleSize = (p.typical_properties?.mean_particle_size_um && p.typical_properties.mean_particle_size_um !== '—')
             ? p.typical_properties.mean_particle_size_um
