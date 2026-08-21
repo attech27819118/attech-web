@@ -149,6 +149,14 @@ button:active:not(:disabled),
     animation: inputShake 0.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
+/* 索樣產品帶入表單時之柔和高亮聚焦回饋 */
+.input-prefilled-highlight {
+    border-color: #2563eb !important;
+    background-color: #eff6ff !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25) !important;
+    transition: all 0.3s ease;
+}
+
 @keyframes inputShake {
     10%, 90% { transform: translate3d(-1px, 0, 0); }
     20%, 80% { transform: translate3d(2px, 0, 0); }
@@ -642,7 +650,49 @@ tr.row-target-highlight td:first-child {
         margin-right: auto !important;
         width: calc(100% - 1.25rem) !important;
         max-width: calc(100% - 1.25rem) !important;
-        bottom: 0.75rem !important;
+        bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px)) !important;
         padding: 0.625rem 0.75rem !important;
+    }
+}
+
+/* ==========================================
+ * 8. 手機端產品專用卡片系統 (Mobile Product Cards System)
+ * ========================================== */
+.mobile-category-scroll {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.mobile-category-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-product-card {
+    transition: transform var(--motion-duration-fast) var(--motion-ease), box-shadow var(--motion-duration-base) var(--motion-ease), border-color var(--motion-duration-base) var(--motion-ease);
+}
+
+.mobile-product-card:active {
+    transform: scale(0.99);
+}
+
+.mobile-product-card.row-target-highlight {
+    background-color: #eff6ff !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25) !important;
+}
+
+.fade-in-down {
+    animation: fadeInDown var(--motion-duration-base) var(--motion-ease) forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
