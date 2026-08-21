@@ -912,14 +912,14 @@
                                 </div>
                             </div>
                             <div class="flex items-center gap-1.5 shrink-0 self-end md:self-center">
-                                <span class="f-size-xs text-blue-900 f-weight-bold hidden sm:inline">紙本下載：</span>
+                                <span class="f-size-xs text-blue-900 f-weight-bold hidden sm:inline">傳真單下載：</span>
                                 <a href="./doc/Sample_Request_Form_Quick.docx" download="宏威應用材料_簡易樣品申請單.docx"
                                    class="inline-flex items-center gap-1 text-slate-700 hover:text-blue-900 bg-white border border-slate-300 hover:border-blue-400 hover:bg-blue-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載簡易樣品申請單 Word 檔">
-                                    <i class="fa-solid fa-file-word text-blue-700" aria-hidden="true"></i> Word
+                                    <i class="fa-solid fa-file-word text-blue-700" aria-hidden="true"></i> 簡易單(Word)
                                 </a>
                                 <a href="./doc/Sample_Request_Form_Quick.pdf" download="宏威應用材料_簡易樣品申請單.pdf"
                                    class="inline-flex items-center gap-1 text-slate-700 hover:text-red-900 bg-white border border-slate-300 hover:border-red-400 hover:bg-red-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載簡易樣品申請單 PDF 檔">
-                                    <i class="fa-solid fa-file-pdf text-red-600" aria-hidden="true"></i> PDF
+                                    <i class="fa-solid fa-file-pdf text-red-600" aria-hidden="true"></i> 簡易單(PDF)
                                 </a>
                             </div>
                         </div>
@@ -998,14 +998,14 @@
                                 </div>
                             </div>
                             <div class="flex items-center gap-1.5 shrink-0 self-end md:self-center">
-                                <span class="f-size-xs text-indigo-900 f-weight-bold hidden sm:inline">紙本下載：</span>
+                                <span class="f-size-xs text-indigo-900 f-weight-bold hidden sm:inline">傳真單下載：</span>
                                 <a href="./doc/Sample_Request_Form_Detailed.docx" download="宏威應用材料_詳細樣品申請單.docx"
                                    class="inline-flex items-center gap-1 text-slate-700 hover:text-blue-900 bg-white border border-slate-300 hover:border-blue-400 hover:bg-blue-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載詳細技術評估樣品申請單 Word 檔">
-                                    <i class="fa-solid fa-file-word text-blue-700" aria-hidden="true"></i> Word
+                                    <i class="fa-solid fa-file-word text-blue-700" aria-hidden="true"></i> 詳細單(Word)
                                 </a>
                                 <a href="./doc/Sample_Request_Form_Detailed.pdf" download="宏威應用材料_詳細樣品申請單.pdf"
                                    class="inline-flex items-center gap-1 text-slate-700 hover:text-red-900 bg-white border border-slate-300 hover:border-red-400 hover:bg-red-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載詳細技術評估樣品申請單 PDF 檔">
-                                    <i class="fa-solid fa-file-pdf text-red-600" aria-hidden="true"></i> PDF
+                                    <i class="fa-solid fa-file-pdf text-red-600" aria-hidden="true"></i> 詳細單(PDF)
                                 </a>
                             </div>
                         </div>
@@ -4193,7 +4193,7 @@
         lastSubmitTime = now;
 
         // 後端 API 網址設定：本地開發連 localhost:3000，線上環境連 Render 雲端伺服器
-        const PROD_API_BASE = 'https://attech-backend.onrender.com';
+        const PROD_API_BASE = 'https://attech-web.onrender.com';
         const isLocalHost = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
         const apiBase = isLocalHost ? 'http://localhost:3000' : PROD_API_BASE;
 
