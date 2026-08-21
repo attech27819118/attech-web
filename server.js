@@ -6,28 +6,54 @@ const path = require('path');
 
 const app = express();
 
+const allowedOrigins = [
+    'http://localhost:63342',
+    'http://127.0.0.1:63342',
+    'http://localhost:5500',
+    'http://127.0.0.1:5500',
+    'http://localhost:5501',
+    'http://127.0.0.1:5501',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://www.attech.com.tw',
+    'https://attech.com.tw',
+    'https://rosf000.github.io'
+];
+
 app.use(cors({
-    origin: [
-        'http://localhost:63342',
-        'http://127.0.0.1:63342',
-        'http://localhost:5500',
-        'http://127.0.0.1:5500',
-        'http://localhost:5501',
-        'http://127.0.0.1:5501',
-        'http://localhost:3000',
-        'http://127.0.0.1:3000',
-        'https://www.attech.com.tw'
-    ]
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) !== -1 || origin.endsWith('.github.io') || origin.endsWith('.onrender.com')) {
+            return callback(null, true);
+        }
+        return callback(null, true);
+    },
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
+// 健康檢查路由 (供 Render 等雲端平台與連線測試使用)
+app.get('/', (req, res) => {
+    res.json({
+        status: 'online',
+        service: 'ATTech Materials API Server',
+        version: '1.0.0',
+        timestamp: new Date().toISOString()
+    });
+});
+
+app.get('/api/health', (req, res) => {
+    res.json({ status: 'ok', uptime: process.uptime() });
+});
+
 const transporter = nodemailer.createTransport({
-    host: 'mail.attech.com.tw',
-    port: 465,
-    secure: true,
+    host: process.env.SMTP_HOST || 'mail.attech.com.tw',
+    port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 465,
+    secure: process.env.SMTP_SECURE === 'false' ? false : true,
     auth: {
-        user: 'atservice@attech.com.tw',
-        pass: '27819118'
+        user: process.env.SMTP_USER || 'atservice@attech.com.tw',
+        pass: process.env.SMTP_PASS || '27819118'
     },
     tls: {
         rejectUnauthorized: false
@@ -440,4 +466,5 @@ ${message}
     }
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

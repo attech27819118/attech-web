@@ -3799,9 +3799,10 @@
 
         lastSubmitTime = now;
 
-        const apiBase = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-            ? 'http://localhost:3000'
-            : '';
+        // 後端 API 網址設定：本地開發連 localhost:3000，線上環境連 Render 雲端伺服器
+        const PROD_API_BASE = 'https://attech-backend.onrender.com';
+        const isLocalHost = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+        const apiBase = isLocalHost ? 'http://localhost:3000' : PROD_API_BASE;
 
         try {
             const response = await fetch(`${apiBase}/api/send-email`, {
@@ -3822,7 +3823,9 @@
             }
         } catch (err) {
             console.error('Submit form error:', err);
-            showToast('無法連線至後端伺服器 (port 3000)，請確認後端已啟動。', 'error');
+            showToast(isLocalHost 
+                ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 server.js 已啟動。' 
+                : '連線至伺服器超時或失敗。若伺服器處於休眠喚醒中，請稍候 30 秒後重新送出。', 'error');
         } finally {
             if (submitBtn) {
                 submitBtn.disabled = false;
