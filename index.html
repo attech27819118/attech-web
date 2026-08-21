@@ -112,7 +112,7 @@
             <div class="flex-1 max-w-sm mx-2 hidden sm:block">
                 <form role="search" onsubmit="event.preventDefault();" class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <i class="fa-solid fa-search text-gray-500 f-size-sm" aria-hidden="true"></i>
+                        <i class="fa-solid fa-magnifying-glass text-gray-500 f-size-sm" aria-hidden="true"></i>
                     </div>
                     <input type="search" aria-label="桌面版全域產品搜尋"
                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
@@ -335,7 +335,7 @@
         <div class="block sm:hidden pb-2.5">
             <form role="search" onsubmit="event.preventDefault();" class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <i class="fa-solid fa-search text-slate-500 f-size-sm" aria-hidden="true"></i>
+                    <i class="fa-solid fa-magnifying-glass text-slate-500 f-size-sm" aria-hidden="true"></i>
                 </div>
                 <input type="search" aria-label="行動版全域產品搜尋"
                        autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
@@ -852,7 +852,7 @@
                     </div>
                     <div class="flex items-start gap-2.5">
                         <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-900 flex items-center justify-center shrink-0 f-size-base">
-                            <i class="fa-solid fa-building" aria-hidden="true"></i>
+                            <i class="fa-solid fa-fax" aria-hidden="true"></i>
                         </div>
                         <div>
                             <h3 class="f-weight-bold text-slate-900 f-size-base" id="contact-company">傳真</h3>
@@ -879,7 +879,7 @@
 
                     <button type="button" onclick="switchFormMode('detailed')" id="mode-btn-detailed"
                             class="flex items-center justify-center gap-2.5 p-2.5 rounded-lg border border-transparent hover:bg-slate-200/60 text-left text-slate-700 f-weight-medium">
-                        <i class="fa-solid fa-vial-circle-check text-blue-800 f-size-lg shrink-0"
+                        <i class="fa-solid fa-clipboard-list text-blue-800 f-size-lg shrink-0"
                            aria-hidden="true"></i>
                         <div>
                             <div class="f-size-base f-weight-bold" id="mode-detailed-title">詳細應用需求評估
@@ -911,11 +911,15 @@
                                     <span>若您已確定欲索取的樣品名稱（如：MP-22），填寫此表單即可快速寄送。</span>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0 self-end md:self-center">
-
-                                <a href="./doc/Sample_Request_Form.docx" download
-                                   class="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-900 bg-white border border-slate-300 hover:bg-slate-50 px-2.5 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all">
-                                    <i class="fa-solid fa-file-word text-blue-800" aria-hidden="true"></i> 下載紙本傳真單
+                            <div class="flex items-center gap-1.5 shrink-0 self-end md:self-center">
+                                <span class="f-size-xs text-blue-900 f-weight-bold hidden sm:inline">紙本下載：</span>
+                                <a href="./doc/Sample_Request_Form_Quick.docx" download="宏威應用材料_簡易樣品申請單.docx"
+                                   class="inline-flex items-center gap-1 text-slate-700 hover:text-blue-900 bg-white border border-slate-300 hover:border-blue-400 hover:bg-blue-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載簡易樣品申請單 Word 檔">
+                                    <i class="fa-solid fa-file-word text-blue-700" aria-hidden="true"></i> Word
+                                </a>
+                                <a href="./doc/Sample_Request_Form_Quick.pdf" download="宏威應用材料_簡易樣品申請單.pdf"
+                                   class="inline-flex items-center gap-1 text-slate-700 hover:text-red-900 bg-white border border-slate-300 hover:border-red-400 hover:bg-red-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載簡易樣品申請單 PDF 檔">
+                                    <i class="fa-solid fa-file-pdf text-red-600" aria-hidden="true"></i> PDF
                                 </a>
                             </div>
                         </div>
@@ -925,6 +929,7 @@
                                 <label for="quick-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-company" name="quick_company" required
+                                       autocomplete="off" spellcheck="false"
                                        placeholder="請輸入公司名稱"
                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                             </div>
@@ -932,6 +937,7 @@
                                 <label for="quick-contact" class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-contact" name="quick_contact" required
+                                       autocomplete="off" spellcheck="false"
                                        placeholder="請輸入聯絡人姓名與職稱"
                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                             </div>
@@ -939,6 +945,7 @@
                                 <label for="quick-email" class="block f-weight-bold text-slate-900 mb-1">電子信箱 <span
                                         class="text-red-600">*</span></label>
                                 <input type="email" id="quick-email" name="quick_email" required
+                                       autocomplete="off" spellcheck="false"
                                        placeholder="example@company.com"
                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                             </div>
@@ -946,6 +953,7 @@
                                 <label for="quick-contact-tel" class="block f-weight-bold text-slate-900 mb-1">聯絡電話
                                     / 手機 <span class="text-red-600">*</span></label>
                                 <input type="tel" id="quick-contact-tel" name="quick_contact_tel" required
+                                       autocomplete="off" spellcheck="false"
                                        pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$|^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
                                        title="請輸入手機或市話號碼（如：0912-345-678 或 04-2239-8056#123）"
                                        placeholder="如：0912-345-678 或 04-2239-8056#123"
@@ -955,6 +963,7 @@
                                 <label for="quick-sample" class="block f-weight-bold text-slate-900 mb-1">指定索樣產品與數量
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-sample" name="quick_sample" required
+                                       autocomplete="off" spellcheck="false"
                                        placeholder="例如：MP-22 (100g)"
                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                             </div>
@@ -962,6 +971,7 @@
                                 <label for="quick-address" class="block f-weight-bold text-slate-900 mb-1">樣品寄送地址
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-address" name="quick_address" required
+                                       autocomplete="off" spellcheck="false"
                                        placeholder="請輸入完整的收件地址"
                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                             </div>
@@ -969,6 +979,7 @@
                                 <label for="quick-msg" class="block f-weight-bold text-slate-900 mb-1">備註 /
                                     詢問內容</label>
                                 <textarea id="quick-msg" name="quick_msg" rows="3"
+                                          autocomplete="off" spellcheck="false"
                                           placeholder="請輸入您的其他需求或疑問..."
                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
                             </div>
@@ -982,15 +993,19 @@
                                 <i class="fa-solid fa-circle-info text-indigo-700 f-size-base shrink-0 mt-0.5"
                                    aria-hidden="true"></i>
                                 <div>
-                                    <span>提供詳細底材與加工條件，由專人為您客製化評估與推薦適合助劑與樹脂。</span>
+                                    <span>提供詳細底材與加工條件，由專人為您評估與推薦適合的產品。</span>
 
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0 self-end md:self-center">
-
-                                <a href="./doc/Sample_Request_Form.docx" download
-                                   class="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-900 bg-white border border-slate-300 hover:bg-slate-50 px-2.5 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all">
-                                    <i class="fa-solid fa-file-word text-blue-800" aria-hidden="true"></i> 下載紙本傳真單
+                            <div class="flex items-center gap-1.5 shrink-0 self-end md:self-center">
+                                <span class="f-size-xs text-indigo-900 f-weight-bold hidden sm:inline">紙本下載：</span>
+                                <a href="./doc/Sample_Request_Form_Detailed.docx" download="宏威應用材料_詳細樣品申請單.docx"
+                                   class="inline-flex items-center gap-1 text-slate-700 hover:text-blue-900 bg-white border border-slate-300 hover:border-blue-400 hover:bg-blue-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載詳細技術評估樣品申請單 Word 檔">
+                                    <i class="fa-solid fa-file-word text-blue-700" aria-hidden="true"></i> Word
+                                </a>
+                                <a href="./doc/Sample_Request_Form_Detailed.pdf" download="宏威應用材料_詳細樣品申請單.pdf"
+                                   class="inline-flex items-center gap-1 text-slate-700 hover:text-red-900 bg-white border border-slate-300 hover:border-red-400 hover:bg-red-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all" title="下載詳細技術評估樣品申請單 PDF 檔">
+                                    <i class="fa-solid fa-file-pdf text-red-600" aria-hidden="true"></i> PDF
                                 </a>
                             </div>
                         </div>
@@ -1009,6 +1024,7 @@
                                     <label for="detail-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
                                         <span class="text-red-600">*</span></label>
                                     <input type="text" id="detail-company" name="detail_company"
+                                           autocomplete="off" spellcheck="false"
                                            placeholder="請輸入公司名稱"
                                            class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                 </div>
@@ -1016,6 +1032,7 @@
                                     <label for="detail-contact" class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
                                         <span class="text-red-600">*</span></label>
                                     <input type="text" id="detail-contact" name="detail_contact"
+                                           autocomplete="off" spellcheck="false"
                                            placeholder="請輸入聯絡人姓名與職稱"
                                            class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                 </div>
@@ -1023,6 +1040,7 @@
                                     <label for="detail-email" class="block f-weight-bold text-slate-900 mb-1">Email
                                         <span class="text-red-600">*</span></label>
                                     <input type="email" id="detail-email" name="detail_email"
+                                           autocomplete="off" spellcheck="false"
                                            placeholder="example@company.com"
                                            class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                 </div>
@@ -1030,6 +1048,7 @@
                                     <label for="detail-contact-tel" class="block f-weight-bold text-slate-900 mb-1">聯絡電話
                                         / 手機 <span class="text-red-600">*</span></label>
                                     <input type="tel" id="detail-contact-tel" name="detail_contact_tel"
+                                           autocomplete="off" spellcheck="false"
                                            pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$|^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
                                            title="請輸入手機或市話號碼（如：0912-345-678 或 04-2239-8056#123）"
                                            placeholder="如：0912-345-678 或 04-2239-8056#123"
@@ -1039,12 +1058,14 @@
                                     <label for="detail-fax"
                                            class="block f-weight-bold text-slate-900 mb-1">傳真號碼</label>
                                     <input type="text" id="detail-fax" name="detail_fax" placeholder="例如：04-2239-5165"
+                                           autocomplete="off" spellcheck="false"
                                            class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                 </div>
                                 <div class="md:col-span-2">
                                     <label for="detail-address" class="block f-weight-bold text-slate-900 mb-1">寄送地址
                                         <span class="text-red-600">*</span></label>
                                     <input type="text" id="detail-address" name="detail_address"
+                                           autocomplete="off" spellcheck="false"
                                            placeholder="請輸入完整的樣品收件地址"
                                            class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                 </div>
@@ -1364,13 +1385,14 @@
                                     <div>
                                         <label for="detail-restricted" class="block f-weight-bold text-slate-900 mb-1">其他資訊（限用物質）</label>
                                         <input type="text" id="detail-restricted" name="detail_restricted"
+                                               autocomplete="off" spellcheck="false"
                                                placeholder="例如：八大重金屬、EN-71、RoHS..."
                                                class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
                                     <div>
                                         <label for="detail-sample-req" class="block f-weight-bold text-slate-900 mb-1">索樣產品
-                                            <span class="text-red-600">*</span></label>
                                         <input type="text" id="detail-sample-req" name="detail_sample_req"
+                                               autocomplete="off" spellcheck="false"
                                                placeholder="請填寫預計索取的產品名稱與數量"
                                                class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
@@ -1408,6 +1430,7 @@
                                 <label for="detail-past-samples" class="block f-weight-bold text-slate-900 mb-1">D.
                                     曾試過的相關樣品</label>
                                 <textarea id="detail-past-samples" name="detail_past_samples" rows="2.5"
+                                          autocomplete="off" spellcheck="false"
                                           placeholder="請填寫曾經試用過的樣品名稱、編號或評估結果..."
                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
                             </div>
@@ -1415,6 +1438,7 @@
                                 <label for="detail-remarks" class="block f-weight-bold text-slate-900 mb-1">E. 備註 /
                                     其他說明</label>
                                 <textarea id="detail-remarks" name="detail_remarks" rows="2.5"
+                                          autocomplete="off" spellcheck="false"
                                           placeholder="請輸入其他補充說明事項..."
                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
                             </div>
@@ -1425,12 +1449,20 @@
                     <div class="mt-6 pt-3.5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
                         <div class="f-size-xs text-slate-600 f-weight-medium leading-relaxed">
                             <p>※ 本調查表內所含之個人資料將受我司嚴格保護，並僅作為公司業務聯繫使用。</p>
-                            <p class="mt-0.5">習慣傳真作業？
-                                <a href="./doc/Sample_Request_Form.docx" download
-                                   class="text-blue-900 f-weight-bold hover:underline inline-flex items-center gap-1">
-                                    <i class="fa-solid fa-download f-size-xs" aria-hidden="true"></i> 點此下載紙本傳真申請單
-                                    (Word/PDF)
-                                </a>，傳真至 <strong>04-2239-5165</strong>。
+                            <p class="mt-1">習慣傳真作業？點此下載紙本傳真申請單：
+                                <span class="inline-flex items-center gap-1 ml-0.5">
+                                    <span class="text-slate-700 f-weight-bold">[簡易申請單]</span>
+                                    <a href="./doc/Sample_Request_Form_Quick.docx" download="宏威應用材料_簡易樣品申請單.docx" class="text-blue-900 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i class="fa-solid fa-file-word text-blue-700 f-size-xs"></i>Word</a>
+                                    <span class="text-slate-400">/</span>
+                                    <a href="./doc/Sample_Request_Form_Quick.pdf" download="宏威應用材料_簡易樣品申請單.pdf" class="text-red-700 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i class="fa-solid fa-file-pdf text-red-600 f-size-xs"></i>PDF</a>
+                                </span>
+                                <span class="text-slate-400 mx-1">|</span>
+                                <span class="inline-flex items-center gap-1">
+                                    <span class="text-slate-700 f-weight-bold">[詳細評估單]</span>
+                                    <a href="./doc/Sample_Request_Form_Detailed.docx" download="宏威應用材料_詳細樣品申請單.docx" class="text-blue-900 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i class="fa-solid fa-file-word text-blue-700 f-size-xs"></i>Word</a>
+                                    <span class="text-slate-400">/</span>
+                                    <a href="./doc/Sample_Request_Form_Detailed.pdf" download="宏威應用材料_詳細樣品申請單.pdf" class="text-red-700 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i class="fa-solid fa-file-pdf text-red-600 f-size-xs"></i>PDF</a>
+                                </span><br>填妥請傳真至 <strong>04-2239-5165</strong>。
                             </p>
                         </div>
                         <button type="submit" id="form-submit"
@@ -1505,12 +1537,12 @@
             </div>
             <!-- 行動端清空與開始按鈕快捷 -->
             <div class="flex sm:hidden items-center gap-1.5">
-                <button onclick="clearCompare()" class="px-2 py-1 text-xs text-slate-300 hover:text-white" title="清空">
+                <button onclick="clearCompare()" class="px-2 py-1 text-xs text-slate-300 hover:text-white" title="清空" aria-label="清空比較清單">
                     <i class="fa-solid fa-trash-can"></i>
                 </button>
                 <button onclick="openCompareModal()"
                         class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold shadow flex items-center gap-1">
-                    <i class="fa-solid fa-code-compare"></i>
+                    <i class="fa-solid fa-chart-simple"></i>
                     <span>比較</span>
                 </button>
             </div>
@@ -1526,12 +1558,12 @@
         <div class="hidden sm:flex items-center gap-2 shrink-0">
             <button onclick="clearCompare()"
                     class="px-3 py-1.5 text-xs text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg font-medium transition-colors"
-                    id="btn-clear-compare">
+                    id="btn-clear-compare" aria-label="清空比較清單">
                 <i class="fa-solid fa-trash-can mr-1"></i> <span id="btn-clear-compare-text">清空</span>
             </button>
             <button onclick="openCompareModal()" id="btn-open-compare"
                     class="px-4 py-2 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-blue-600/30 flex items-center gap-1.5 transition-all">
-                <i class="fa-solid fa-code-compare"></i>
+                <i class="fa-solid fa-chart-simple"></i>
                 <span id="btn-open-compare-text">開始比較</span>
             </button>
         </div>
@@ -1564,7 +1596,7 @@
                 <button onclick="clearCompare(); closeCompareModal();"
                         class="text-xs text-slate-300 hover:text-white px-2.5 py-1.5 rounded hover:bg-slate-800 font-medium transition-colors"
                         id="compare-modal-clear-btn">
-                    <i class="fa-solid fa-trash-can mr-1"></i> 清空重選
+                    <i class="fa-solid fa-arrow-rotate-left mr-1"></i> 清空重選
                 </button>
                 <button onclick="closeCompareModal()" aria-label="關閉比較表"
                         class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800 transition-colors">
@@ -1605,7 +1637,7 @@
         <!-- Footer -->
         <div class="px-4 sm:px-6 py-3 border-t border-gray-200 bg-white flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 shrink-0">
             <div class="flex items-center gap-2 text-slate-600">
-                <i class="fa-solid fa-circle-info text-blue-600"></i>
+                <i class="fa-solid fa-lightbulb text-amber-500"></i>
                 <span id="compare-footer-hint">提示：點擊任一產品欄位下方的「索樣諮詢」，可直接將該產品帶入需求評估表單。</span>
             </div>
             <button onclick="closeCompareModal()"
@@ -1821,6 +1853,10 @@
         if ((cat === '柔感' || cat.includes('soft')) && key === 'soft_touch') return true;
         if ((cat === '防滑' || cat.includes('anti-slip')) && key === 'anti_slip') return true;
         if ((cat === '滑爽' || cat.includes('slip')) && key === 'slip_lubricity') return true;
+        if ((cat === '撥水' || cat.includes('water_repellency')) && key === 'water_repellency') return true;
+        if ((cat === '耐高溫' || cat.includes('heat')) && key === 'heat_resistance') return true;
+        if ((cat === '防腐蝕' || cat.includes('corrosion')) && key === 'corrosion_resistance') return true;
+        if ((cat === '撥水' || cat.includes('water_beading')) && key === 'water_beading') return true;
 
         return false;
     }
@@ -3023,19 +3059,19 @@
                 <div><span class="text-slate-800 f-weight-bold f-size-xs block mb-0.5">${t.max_size}</span><strong class="f-size-base f-weight-bold text-slate-950">${maxParticleSize} µm</strong></div>
             </div>
             <div class="bg-white p-3.5 rounded-lg border border-gray-300 shadow-sm">
-                <span class="f-size-xs text-blue-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-flask"></i> ${t.suggested_use_level_title}</span>
+                <span class="f-size-xs text-blue-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-prescription-bottle-droplet"></i> ${t.suggested_use_level_title}</span>
                 <p class="text-slate-900 leading-relaxed f-weight-bold f-size-sm whitespace-pre-line">${usage}</p>
             </div>
             <div class="bg-white p-3.5 rounded-lg border border-gray-300 shadow-sm">
-                <span class="f-size-xs text-blue-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> ${t.system_type_title}</span>
+                <span class="f-size-xs text-blue-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-network-wired"></i> ${t.system_type_title}</span>
                 <p class="text-slate-900 f-weight-normal f-size-sm leading-relaxed whitespace-pre-line">${systemType}</p>
             </div>
             <div class="bg-white p-3.5 rounded-lg border border-gray-300 shadow-sm">
-                <span class="f-size-xs text-blue-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-industry"></i> ${t.app_fields_title}</span>
+                <span class="f-size-xs text-blue-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-bullseye"></i> ${t.app_fields_title}</span>
                 <p class="text-slate-900 f-weight-normal f-size-sm leading-relaxed whitespace-pre-line">${appFields}</p>
             </div>
             <div class="bg-white p-3.5 rounded-lg border border-gray-300 shadow-sm">
-                <span class="f-size-xs text-amber-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> ${t.example}</span>
+                <span class="f-size-xs text-amber-950 f-weight-bold block mb-1 flex items-center gap-1.5"><i class="fa-solid fa-tag"></i> ${t.example}</span>
                 <p class="text-slate-900 f-weight-normal f-size-sm leading-relaxed whitespace-pre-line">${examples}</p>
             </div>
         </div>
@@ -3151,20 +3187,23 @@
             'ptfe': 'fa-leaf',
             'powder': 'fa-cubes',
             'industrial': 'fa-industry',
-            'ink': 'fa-newspaper',
-            'ink_impact': 'fa-newspaper',
-            'industrial_floor': 'fa-layer-group',
+            'ink': 'fa-palette',
+            'ink_impact': 'fa-stamp',
+            'industrial_floor': 'fa-border-all',
             'leather': 'fa-shoe-prints',
             'wood': 'fa-tree',
             'automotive_polishes': 'fa-car',
             'tyzor': 'fa-vial',
+            'px': 'fa-oil-can',
+            'chain': 'fa-circle-nodes',
             'silane': 'fa-atom',
             'coating': 'fa-spray-can',
-            'carbon_black': 'fa-circle',
-            'coating_additive': 'fa-vial-circle-check',
-            'matting_agent': 'fa-border-none',
+            'carbon_black': 'fa-gem',
+            'coating_additive': 'fa-flask-vial',
+            'matting_agent': 'fa-cloud',
             'cpo_adhesion_promoter': 'fa-link',
-            'maleic_acid_resin': 'fa-flask'
+            'adhesion_promoter': 'fa-magnet',
+            'maleic_acid_resin': 'fa-dna'
         };
 
         treeMenu.innerHTML = brandConfig.files.map(file => {
@@ -3553,7 +3592,7 @@
                     <td colspan="4" class="py-2.5 px-4 tracking-wide">
                         <div class="flex items-center justify-between">
                             <span class="flex items-center gap-2 f-size-sm f-weight-bold text-slate-900">
-                                <i class="fa-solid fa-layer-group text-blue-700"></i>
+                                <i class="fa-solid fa-folder-open text-blue-700"></i>
                                 【${brand.brandName}】 ${sectionTitle}
                                 <span class="f-size-xs f-weight-normal text-slate-700">(${matchedProducts.length} 項結果)</span>
                             </span>
@@ -3596,7 +3635,7 @@
                                         title="查看 ${name} 詳細資訊"
                                         aria-label="查看 ${name} 詳細資訊"
                                         class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded f-weight-bold f-size-xs shadow-sm flex items-center gap-1 transition-all active:scale-95">
-                                    <i class="fa-solid fa-location-arrow f-size-xs text-blue-700" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-circle-info f-size-xs text-blue-700" aria-hidden="true"></i>
                                     <span>詳細資訊</span>
                                 </button>
                             </div>
@@ -3777,7 +3816,7 @@
         const modalSub = document.getElementById('compare-modal-sub');
         if (modalSub) modalSub.innerText = uiText[AppState.lang].compare_modal_sub;
         const modalClearBtn = document.getElementById('compare-modal-clear-btn');
-        if (modalClearBtn) modalClearBtn.innerHTML = `<i class="fa-solid fa-trash-can mr-1"></i> ${uiText[AppState.lang].btn_clear_compare}`;
+        if (modalClearBtn) modalClearBtn.innerHTML = `<i class="fa-solid fa-arrow-rotate-left mr-1"></i> ${uiText[AppState.lang].btn_clear_compare}`;
 
         renderDirectoryTree();
         initFilters();
@@ -4521,7 +4560,7 @@
                     <div class="flex items-center gap-1.5 px-2.5 py-1 bg-slate-800/90 hover:bg-slate-800 border border-slate-700 rounded-lg text-xs font-bold text-white shadow-sm shrink-0 transition-all">
                         <span class="text-blue-400 font-bold text-xs uppercase tracking-wider bg-blue-950/80 px-1.5 py-0.5 rounded border border-blue-800/60">${item.partnerKey || 'MPI'}</span>
                         <span class="max-w-[85px] sm:max-w-[125px] truncate font-medium" title="${item.product_name}">${item.product_name}</span>
-                        <button onclick="removeCompareProduct('${safeName}')" class="text-slate-400 hover:text-rose-400 ml-0.5 p-0.5 transition-colors" title="${t.btn_remove_compare}">
+                        <button onclick="removeCompareProduct('${safeName}')" class="text-slate-400 hover:text-rose-400 ml-0.5 p-0.5 transition-colors" title="${t.btn_remove_compare}" aria-label="${t.btn_remove_compare}">
                             <i class="fa-solid fa-xmark text-xs"></i>
                         </button>
                     </div>`;
@@ -4783,7 +4822,7 @@
         {
             categoryId: 'basic',
             categoryTitle: {zh: '基本化學資訊與成分', en: 'Basic Chemical Information & Composition'},
-            categoryIcon: 'fa-layer-group',
+            categoryIcon: 'fa-microscope',
             rows: [
                 {key: 'comp', label: {zh: '化學組成 / 主成分', en: 'Chemical Composition'}, type: 'text'},
                 {key: 'production_method', label: {zh: '生產方法 / 製程', en: 'Production Method'}, type: 'badge'},
@@ -4795,7 +4834,7 @@
         {
             categoryId: 'physical',
             categoryTitle: {zh: '物理、化學特性與性能指標', en: 'Physical & Chemical Properties & Features'},
-            categoryIcon: 'fa-flask',
+            categoryIcon: 'fa-gauge-high',
             rows: [
                 {key: 'melt_point', label: {zh: '熔點 (°C)', en: 'Melt Point (°C)'}, type: 'value'},
                 {key: 'mean_size', label: {zh: '平均粒徑 D50 (µm)', en: 'Mean Size D50 (µm)'}, type: 'value'},
@@ -4835,7 +4874,7 @@
         {
             categoryId: 'systems',
             categoryTitle: {zh: '適用體系與建議用量', en: 'Recommended Systems & Usage'},
-            categoryIcon: 'fa-industry',
+            categoryIcon: 'fa-sliders',
             rows: [
                 {key: 'sysType', label: {zh: '適用系統類型', en: 'Recommended Systems'}, type: 'text'},
                 {key: 'useLevel', label: {zh: '建議添加比例 / 用法', en: 'Suggested Use Level'}, type: 'text'}
@@ -4844,7 +4883,7 @@
         {
             categoryId: 'applications_check',
             categoryTitle: {zh: '應用領域適用對照', en: 'Application Field Compatibility'},
-            categoryIcon: 'fa-circle-check',
+            categoryIcon: 'fa-table-cells',
             rows: [
                 {key: 'app_wood', label: {zh: '木器漆塗料', en: 'Wood Coating'}, type: 'check'},
                 {key: 'app_baking', label: {zh: '烤漆 / 粉體塗料', en: 'Baking / Powder Coating'}, type: 'check'},
@@ -4921,8 +4960,8 @@
                         <th class="col-product-head text-center py-2.5 px-3 sm:px-4 bg-white border-b-2 border-blue-600 align-top" style="width: ${colWidthPct}%">
                             <div class="flex items-center justify-between mb-1.5">
                                 <span class="product-brand-tag inline-block px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-900 border border-blue-200">${pd.partnerKey}</span>
-                                <button onclick="removeCompareProduct('${safeName}')" class="text-slate-400 hover:text-rose-600 text-xs p-1 transition-colors" title="${t.btn_remove_compare}">
-                                    <i class="fa-solid fa-trash-can"></i>
+                                <button onclick="removeCompareProduct('${safeName}')" class="text-slate-400 hover:text-rose-600 text-xs p-1 transition-colors" title="${t.btn_remove_compare}" aria-label="${t.btn_remove_compare}">
+                                    <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
                             <div class="product-name-title mb-1 break-words">${pd.name}</div>
