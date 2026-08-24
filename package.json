@@ -23,8 +23,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./css/output.css --minify"
+    "build": "echo \"Static assets ready\"",
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./css/output.css --watch"
   },
   "repository": {
     "type": "git",
