@@ -1983,14 +1983,14 @@
             : (AppState.lang === 'zh' ? '比較' : 'Compare');
 
         return `
-        <div class="flex items-center gap-1.5 shrink-0 select-none mt-1.5">
-            <button data-action="request-sample" data-product="${p.product_name}" class="product-sample-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-50 hover:bg-blue-900 text-blue-900 hover:text-white border border-blue-200 active:scale-90 shadow-2xs text-[11px] font-medium cursor-pointer" title="${sampleTitle}" aria-label="索樣">
-                <i class="fa-solid fa-paper-plane text-[10px]"></i>
-                <span>${sampleLabel}</span>
+        <div class="flex items-center gap-1.5 shrink-0 select-none mt-1.5 whitespace-nowrap">
+            <button data-action="request-sample" data-product="${p.product_name}" class="product-sample-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-50 hover:bg-blue-900 text-blue-900 hover:text-white border border-blue-200 active:scale-90 shadow-2xs text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap" title="${sampleTitle}" aria-label="索樣">
+                <i class="fa-solid fa-paper-plane text-[10px] shrink-0"></i>
+                <span class="shrink-0 whitespace-nowrap">${sampleLabel}</span>
             </button>
-            <button data-action="toggle-compare" data-product="${p.product_name}" data-partner="${pKey}" data-line="${lKey}" class="compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all ${isSelected ? 'bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900' : 'text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200'} active:scale-90 text-[11px] font-medium cursor-pointer" title="${compareTitle}" aria-label="${isSelected ? '從比較清單移除' : '加入比較'}">
-                <i class="fa-solid ${isSelected ? 'fa-check text-emerald-300' : 'fa-scale-balanced'} text-[10px]"></i>
-                <span>${compareLabel}</span>
+            <button data-action="toggle-compare" data-product="${p.product_name}" data-partner="${pKey}" data-line="${lKey}" class="compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all ${isSelected ? 'bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900' : 'text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200'} active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap" title="${compareTitle}" aria-label="${isSelected ? '從比較清單移除' : '加入比較'}">
+                <i class="fa-solid ${isSelected ? 'fa-check text-emerald-300' : 'fa-scale-balanced'} text-[10px] shrink-0"></i>
+                <span class="shrink-0 whitespace-nowrap">${compareLabel}</span>
             </button>
         </div>`;
     }
@@ -2039,15 +2039,15 @@
                 headerRows: [
                     [
                         {title: '產品名稱', class: 'w-[15%] min-w-[140px] text-center'},
-                        {title: '表面處理\n化學性質', class: 'w-[10%] min-w-[130px] text-center'},
-                        {title: '適用系統', class: 'w-[8%] min-w-[80px] text-center'},
+                        {title: '表面處理\n化學性質', class: 'w-[12%] min-w-[130px] text-center'},
+                        {title: '適用系統', class: 'w-[10%] min-w-[80px] text-center'},
                         {
                             title: '粒徑<br><span class="f-size-xs f-weight-normal text-slate-500">(µm)</span>',
                             class: 'w-[6%] min-w-[55px] text-center'
                         },
                         {
                             title: '吸油量<br><span class="f-size-xs f-weight-normal text-slate-500">(g/100g)</span>',
-                            class: 'w-[6%] min-w-[60px] text-center'
+                            class: 'w-[8%] min-w-[60px] text-center'
                         },
                         {
                             title: '密度<br><span class="f-size-xs f-weight-normal text-slate-500">(g/cm³)</span>',
@@ -2083,7 +2083,7 @@
                     },
                     {
                         id: 'system',
-                        class: 'w-[8%] min-w-[80px]',
+                        class: 'w-[8%] min-w-[80px] text-center',
                         getValue: p => p.recommended_system_type_zh || p.recommended_system_type || p.system,
                         render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.recommended_system_type_zh || p.recommended_system_type || (typeof p.system === 'string' ? p.system : '') || '—'}</span>`
                     },
@@ -2341,10 +2341,10 @@
                         {title: '產品名稱', class: 'w-[16%] min-w-[140px] text-center'},
                         {title: '化學性質', class: 'w-[14%] min-w-[130px] text-center'},
                         {title: '適用系統', class: 'w-[12%] min-w-[100px] text-center'},
-                        {title: 'Tg°C 玻璃轉化點', class: 'w-[9%] min-w-[70px] text-center'},
+                        {title: '玻璃轉化點\nTg°C', class: 'w-[10%] min-w-[70px] text-center'},
                         {title: '氯含量', class: 'w-[8%] min-w-[60px] text-center'},
                         {title: '黏度mPa.s', class: 'w-[8%] min-w-[60px] text-center'},
-                        {title: '作用', class: 'w-[22%] min-w-[150px]'},
+                        {title: '作用', class: 'w-[20%] min-w-[150px]'},
                         {title: '油墨', class: 'w-[6%] min-w-[45px] text-center'},
                         {title: '塗料', class: 'w-[6%] min-w-[45px] text-center'}
                     ]
@@ -2368,7 +2368,7 @@
                     },
                     {
                         id: 'system',
-                        class: 'w-[12%] min-w-[100px]',
+                        class: 'w-[12%] min-w-[100px] text-center',
                         getValue: p => p.recommended_system_type_zh,
                         render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.recommended_system_type_zh || (typeof p.system === 'string' ? p.system : '') || '—'}</span>`
                     },
@@ -2411,7 +2411,7 @@
                         {title: '產品名稱', class: 'w-[15%] min-w-[145px] text-center'},
                         {title: '化學性質', class: 'w-[15%] min-w-[120px] text-center'},
                         {title: '適用系統', class: 'w-[10%] min-w-[85px] text-center'},
-                        {title: 'Tg°C 玻璃轉化點', class: 'w-[8%] min-w-[65px] text-center'},
+                        {title: '玻璃轉化點\nTg°C', class: 'w-[12%] min-w-[70px] text-center'},
                         {title: '羥基OH value', class: 'w-[8%] min-w-[65px] text-center'},
                         {title: '酸價', class: 'w-[7%] min-w-[55px] text-center'},
                         {title: '作用', class: 'w-[18%] min-w-[140px]'},
@@ -2458,7 +2458,7 @@
                     },
                     {
                         id: 'system',
-                        class: 'w-[10%] min-w-[85px]',
+                        class: 'w-[10%] min-w-[85px] text-center',
                         getValue: p => p.recommended_system_type_zh || p.recommended_system_type || p.system,
                         render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.recommended_system_type_zh || p.recommended_system_type || (typeof p.system === 'string' ? p.system : '') || '—'}</span>`
                     },
@@ -4631,12 +4631,12 @@
             const isSelected = AppState.compareList.some(item => item.product_name === prodName);
             if (btn.classList.contains('compare-icon-btn')) {
                 if (isSelected) {
-                    btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900 active:scale-90 text-[11px] font-medium cursor-pointer";
-                    btn.innerHTML = `<i class="fa-solid fa-check text-[10px] text-emerald-300"></i><span>${AppState.lang === 'zh' ? '已比' : 'Added'}</span>`;
+                    btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900 active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap";
+                    btn.innerHTML = `<i class="fa-solid fa-check text-[10px] text-emerald-300 shrink-0"></i><span class="shrink-0 whitespace-nowrap">${AppState.lang === 'zh' ? '已比' : 'Added'}</span>`;
                     btn.title = AppState.lang === 'zh' ? '從比較清單移除' : 'Remove from compare';
                 } else {
-                    btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200 active:scale-90 text-[11px] font-medium cursor-pointer";
-                    btn.innerHTML = `<i class="fa-solid fa-scale-balanced text-[10px]"></i><span>${AppState.lang === 'zh' ? '比較' : 'Compare'}</span>`;
+                    btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200 active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap";
+                    btn.innerHTML = `<i class="fa-solid fa-scale-balanced text-[10px] shrink-0"></i><span class="shrink-0 whitespace-nowrap">${AppState.lang === 'zh' ? '比較' : 'Compare'}</span>`;
                     btn.title = AppState.lang === 'zh' ? '加入比較 (最多4項)' : 'Add to compare (max 4)';
                 }
             } else if (btn.classList.contains('compare-toggle-btn')) {
