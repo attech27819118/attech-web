@@ -567,15 +567,17 @@ tr.row-target-highlight td:first-child {
     }
 }
 
-/* 比較 Icon 按鈕樣式 */
+/* 產品操作按鈕樣式 (索樣與比較) */
+.product-sample-btn,
 .compare-icon-btn {
     cursor: pointer;
     outline: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    transition: transform var(--motion-duration-fast) var(--motion-ease);
+    transition: transform var(--motion-duration-fast) var(--motion-ease), background-color var(--motion-duration-fast), color var(--motion-duration-fast), border-color var(--motion-duration-fast);
 }
 
+.product-sample-btn:active,
 .compare-icon-btn:active {
     transform: scale(0.94);
 }

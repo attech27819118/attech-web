@@ -883,7 +883,7 @@
                            aria-hidden="true"></i>
                         <div>
                             <div class="f-size-base f-weight-bold" id="mode-detailed-title">詳細應用需求評估
-                                (完整申請單)
+
                             </div>
                             <div class="f-size-sm text-slate-700 f-weight-medium" id="mode-detailed-sub">
                                 提供配方條件與底材資訊，由專人為您選擇適合產品
@@ -1390,7 +1390,7 @@
                                                class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
                                     <div>
-                                        <label for="detail-sample-req" class="block f-weight-bold text-slate-900 mb-1">索樣產品
+                                        <label for="detail-sample-req" class="block f-weight-bold text-slate-900 mb-1">索樣產品</label>
                                         <input type="text" id="detail-sample-req" name="detail_sample_req"
                                                autocomplete="off" spellcheck="false"
                                                placeholder="請填寫預計索取的產品名稱與數量"
@@ -1977,14 +1977,20 @@
         const compareTitle = isSelected
             ? (AppState.lang === 'zh' ? '從比較清單移除' : 'Remove from compare')
             : (AppState.lang === 'zh' ? '加入比較 (最多4項)' : 'Add to compare (max 4)');
+        const sampleLabel = AppState.lang === 'zh' ? '索樣' : 'Sample';
+        const compareLabel = isSelected
+            ? (AppState.lang === 'zh' ? '已比' : 'Added')
+            : (AppState.lang === 'zh' ? '比較' : 'Compare');
 
         return `
-        <div class="flex items-center gap-1 shrink-0 select-none">
-            <button data-action="request-sample" data-product="${p.product_name}" class="product-sample-btn shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all bg-blue-50 hover:bg-blue-900 text-blue-900 hover:text-white border border-blue-200 active:scale-90 shadow-xs" title="${sampleTitle}" aria-label="索樣">
-                <i class="fa-solid fa-paper-plane text-xs"></i>
+        <div class="flex items-center gap-1.5 shrink-0 select-none mt-1.5">
+            <button data-action="request-sample" data-product="${p.product_name}" class="product-sample-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-50 hover:bg-blue-900 text-blue-900 hover:text-white border border-blue-200 active:scale-90 shadow-2xs text-[11px] font-medium cursor-pointer" title="${sampleTitle}" aria-label="索樣">
+                <i class="fa-solid fa-paper-plane text-[10px]"></i>
+                <span>${sampleLabel}</span>
             </button>
-            <button data-action="toggle-compare" data-product="${p.product_name}" data-partner="${pKey}" data-line="${lKey}" class="compare-icon-btn shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all ${isSelected ? 'bg-blue-900 text-white shadow-sm ring-2 ring-blue-400' : 'text-slate-400 hover:text-blue-900 hover:bg-blue-50 border border-slate-200'} active:scale-90" title="${compareTitle}" aria-label="${isSelected ? '從比較清單移除' : '加入比較'}">
-                <i class="fa-solid ${isSelected ? 'fa-check' : 'fa-scale-balanced'} text-xs"></i>
+            <button data-action="toggle-compare" data-product="${p.product_name}" data-partner="${pKey}" data-line="${lKey}" class="compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all ${isSelected ? 'bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900' : 'text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200'} active:scale-90 text-[11px] font-medium cursor-pointer" title="${compareTitle}" aria-label="${isSelected ? '從比較清單移除' : '加入比較'}">
+                <i class="fa-solid ${isSelected ? 'fa-check text-emerald-300' : 'fa-scale-balanced'} text-[10px]"></i>
+                <span>${compareLabel}</span>
             </button>
         </div>`;
     }
@@ -2002,8 +2008,8 @@
                     class: 'w-[22%] min-w-[150px]',
                     getValue: p => p.product_name,
                     render: p => `
-                    <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                         ${renderCompareIcon(p, 'Others', 'powder_coating_additive')}
                     </div>`
                 },
@@ -2064,8 +2070,8 @@
                         class: 'w-[15%] min-w-[140px]',
                         getValue: p => p.product_name,
                         render: p => `
-                        <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                        <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                             ${renderCompareIcon(p, 'Others', 'matting_agent')}
                         </div>`
                     },
@@ -2170,8 +2176,8 @@
                         class: 'w-[18%] min-w-[145px]',
                         getValue: p => p.product_name,
                         render: p => `
-                        <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                        <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                             ${renderCompareIcon(p, 'Others', 'maleic_acid_resin')}
                         </div>`
                     },
@@ -2265,8 +2271,8 @@
                         class: 'w-[16%] min-w-[140px]',
                         getValue: p => p.product_name,
                         render: p => `
-                        <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                        <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                             ${renderCompareIcon(p, 'Others', 'silane')}
                         </div>`
                     },
@@ -2349,8 +2355,8 @@
                         class: 'w-[16%] min-w-[140px]',
                         getValue: p => p.product_name,
                         render: p => `
-                        <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                        <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                             ${renderCompareIcon(p, 'Others', 'cpo_adhesion_promoter')}
                         </div>`
                     },
@@ -2439,8 +2445,8 @@
                         class: 'w-[15%] min-w-[145px]',
                         getValue: p => p.product_name,
                         render: p => `
-                        <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                        <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                            <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                             ${renderCompareIcon(p, 'Others', 'adhesion_promoter')}
                         </div>`
                     },
@@ -2528,15 +2534,13 @@
                         const compRaw = p['composition_' + AppState.lang] || p.composition_zh || p.composition || p.chemistry || '';
                         const comp = compRaw && compRaw !== '—' ? `<div class="f-size-xs text-slate-600 f-weight-normal leading-tight mt-0.5 break-words whitespace-pre-line">${compRaw}</div>` : '';
                         return `
-            <div class="flex items-start justify-between gap-1.5 w-full select-none py-0.5">
-                <div class="flex items-start gap-1.5 flex-1 min-w-0">
-                    <i class="fa-solid fa-chevron-right f-size-xs text-slate-500 shrink-0 transform transition-transform mt-1 ${arrowClass}" id="arrow-${index}"></i>
-                    <div class="min-w-0 flex-1">
-                        <span class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</span>
-                        ${comp}
-                    </div>
+            <div class="flex items-start gap-2 w-full select-none py-0.5">
+                <i class="fa-solid fa-chevron-right f-size-xs text-slate-500 shrink-0 transform transition-transform mt-1.5 ${arrowClass}" id="arrow-${index}"></i>
+                <div class="min-w-0 flex-1">
+                    <span class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</span>
+                    ${comp}
+                    ${renderCompareIcon(p, 'MPI', AppState.productLine || 'ptfe')}
                 </div>
-                ${renderCompareIcon(p, 'MPI', AppState.productLine || 'ptfe')}
             </div>`;
                     }
                 },
@@ -2594,8 +2598,8 @@
                     class: 'w-[22%] min-w-[150px] f-weight-bold text-blue-950',
                     getValue: p => p.product_name,
                     render: p => `
-                    <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                         ${renderCompareIcon(p, 'DorfKetal', 'tyzor')}
                     </div>`
                 },
@@ -2622,8 +2626,8 @@
                     class: 'w-[16%] min-w-[140px] f-weight-bold text-blue-950',
                     getValue: p => p.product_name,
                     render: p => `
-                    <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                         ${renderCompareIcon(p, 'DorfKetal', 'px')}
                     </div>`
                 },
@@ -2657,8 +2661,8 @@
                     class: 'w-[14%] min-w-[145px] f-weight-bold text-blue-950 text-center',
                     getValue: p => p.product_name,
                     render: p => `
-                    <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1 text-left">${p.product_name}</span>
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                         ${renderCompareIcon(p, 'DorfKetal', 'chain')}
                     </div>`
                 },
@@ -2742,8 +2746,8 @@
                     class: 'w-[20%] min-w-[150px] f-weight-bold text-blue-950',
                     getValue: p => p.product_name,
                     render: p => `
-                    <div class="flex items-start justify-between gap-1.5 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 flex-1">${p.product_name}</span>
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
                         ${renderCompareIcon(p, 'Orion', AppState.productLine || 'coating')}
                     </div>`
                 },
@@ -3618,8 +3622,8 @@
                         groupedHTML += `
                     <tr class="hover:bg-blue-50/50 border-b border-gray-200 f-size-sm transition-colors">
                         <td class="py-3 px-3.5 f-weight-bold text-slate-900 align-top">
-                            <div class="flex items-start justify-between gap-1.5 w-full">
-                                <div class="min-w-0 flex-1">
+                            <div class="flex flex-col items-start gap-1 w-full">
+                                <div class="min-w-0 w-full">
                                     <div class="text-blue-950 f-weight-extrabold f-size-sm break-words leading-snug">${name}</div>
                                     <div class="f-size-xs text-slate-600 f-weight-normal mt-0.5 break-words">${comp}</div>
                                 </div>
@@ -3763,6 +3767,8 @@
             if (shouldUpdatePartnerUI) {
                 updatePartnerUI();
             }
+        } else if (tabId === 'contact') {
+            prewarmBackendServer();
         }
         updateCompareUI();
         if (updateUrl) updateHashRoute(true);
@@ -4184,10 +4190,24 @@
 
         const submitBtn = document.getElementById('form-submit');
         const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+        let stepTimer = null;
+
         if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在傳送需求...';
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在連線伺服器...';
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            let elapsed = 0;
+            stepTimer = setInterval(() => {
+                elapsed += 1;
+                if (elapsed === 3) {
+                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在傳送需求資料...';
+                } else if (elapsed === 6) {
+                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 伺服器喚醒中，請稍候...';
+                } else if (elapsed === 12) {
+                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在生成 PDF 申請單並寄出...';
+                }
+            }, 1000);
         }
 
         lastSubmitTime = now;
@@ -4197,14 +4217,20 @@
         const isLocalHost = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
         const apiBase = isLocalHost ? 'http://localhost:3000' : PROD_API_BASE;
 
+        // 設置 20 秒逾時中斷控制器 (防止無限轉圈)
+        const abortController = new AbortController();
+        const timeoutId = setTimeout(() => abortController.abort(), 20000);
+
         try {
             const response = await fetch(`${apiBase}/api/send-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
+                signal: abortController.signal
             });
+            clearTimeout(timeoutId);
 
             const result = await response.json();
 
@@ -4215,17 +4241,41 @@
                 showToast(result.message || '伺服器傳送失敗，請稍後再試。', 'error');
             }
         } catch (err) {
+            clearTimeout(timeoutId);
             console.error('Submit form error:', err);
-            showToast(isLocalHost
-                ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 server.js 已啟動。'
-                : '連線至伺服器超時或失敗。若伺服器處於休眠喚醒中，請稍候 30 秒後重新送出。', 'error');
+            if (err.name === 'AbortError') {
+                showToast('連線逾時 (超過 20 秒)。若伺服器處於休眠喚醒中，請稍候 10 秒後重新點擊送出。', 'error');
+            } else {
+                showToast(isLocalHost
+                    ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 server.js 已啟動。'
+                    : '連線至伺服器超時或失敗。若伺服器處於休眠喚醒中，請稍候片刻後重新送出。', 'error');
+            }
         } finally {
+            if (stepTimer) clearInterval(stepTimer);
             if (submitBtn) {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnHTML;
                 submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
             }
         }
+    }
+
+    // 預先喚醒 Render 後端伺服器 (避免使用者填寫完畢送出時遭遇 30~50 秒冷啟動延遲)
+    let isPrewarming = false;
+    function prewarmBackendServer() {
+        if (isPrewarming) return;
+        const isLocalHost = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+        if (isLocalHost) return;
+
+        isPrewarming = true;
+        fetch('https://attech-web.onrender.com/api/health', { method: 'GET', mode: 'cors' })
+            .then(res => res.json())
+            .then(data => {
+                console.log('✅ 後端伺服器已就緒 (Pre-warmed):', data.status);
+            })
+            .catch(err => {
+                console.log('ℹ️ 後端喚醒訊號已送出:', err.message);
+            });
     }
 
     function parseHashRoute() {
@@ -4581,12 +4631,12 @@
             const isSelected = AppState.compareList.some(item => item.product_name === prodName);
             if (btn.classList.contains('compare-icon-btn')) {
                 if (isSelected) {
-                    btn.className = "compare-icon-btn shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all bg-blue-900 text-white shadow-sm ring-2 ring-blue-400";
-                    btn.innerHTML = `<i class="fa-solid fa-check text-xs"></i>`;
+                    btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900 active:scale-90 text-[11px] font-medium cursor-pointer";
+                    btn.innerHTML = `<i class="fa-solid fa-check text-[10px] text-emerald-300"></i><span>${AppState.lang === 'zh' ? '已比' : 'Added'}</span>`;
                     btn.title = AppState.lang === 'zh' ? '從比較清單移除' : 'Remove from compare';
                 } else {
-                    btn.className = "compare-icon-btn shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all text-slate-400 hover:text-blue-900 hover:bg-blue-50 border border-slate-200";
-                    btn.innerHTML = `<i class="fa-solid fa-scale-balanced text-xs"></i>`;
+                    btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200 active:scale-90 text-[11px] font-medium cursor-pointer";
+                    btn.innerHTML = `<i class="fa-solid fa-scale-balanced text-[10px]"></i><span>${AppState.lang === 'zh' ? '比較' : 'Compare'}</span>`;
                     btn.title = AppState.lang === 'zh' ? '加入比較 (最多4項)' : 'Add to compare (max 4)';
                 }
             } else if (btn.classList.contains('compare-toggle-btn')) {
@@ -5112,10 +5162,12 @@
                 AppState.configs = configData;
                 parseHashRoute();
                 if (!window.location.hash) updatePartnerUI();
+                prewarmBackendServer();
             })
             .catch(() => {
                 parseHashRoute();
                 if (!window.location.hash) updatePartnerUI();
+                prewarmBackendServer();
             });
     });
 </script>
