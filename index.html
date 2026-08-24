@@ -4194,17 +4194,13 @@
 
         if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在連線伺服器...';
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在傳送需求資料...';
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
             let elapsed = 0;
             stepTimer = setInterval(() => {
                 elapsed += 1;
-                if (elapsed === 3) {
-                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在傳送需求資料...';
-                } else if (elapsed === 6) {
-                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 伺服器喚醒中，請稍候...';
-                } else if (elapsed === 12) {
+                if (elapsed === 2) {
                     submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在生成 PDF 申請單並寄出...';
                 }
             }, 1000);
@@ -4212,14 +4208,16 @@
 
         lastSubmitTime = now;
 
-        // 後端 API 網址設定：本地開發連 localhost:3000，線上環境連 Render 雲端伺服器
-        const PROD_API_BASE = 'https://attech-web.onrender.com';
+        // 後端 API 網址設定：本地連 localhost:3000，Vercel 站點連同源 /api，GitHub Pages 連 Vercel 雲端
         const isLocalHost = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
-        const apiBase = isLocalHost ? 'http://localhost:3000' : PROD_API_BASE;
+        const isVercelHost = window.location.hostname.endsWith('.vercel.app');
+        // Vercel 專案分配網址（若您在 Vercel 綁定其他網址可一併更新）
+        const VERCEL_API_BASE = 'https://attech-web.vercel.app';
+        const apiBase = isLocalHost ? 'http://localhost:3000' : (isVercelHost ? '' : VERCEL_API_BASE);
 
-        // 設置 20 秒逾時中斷控制器 (防止無限轉圈)
+        // 設置 15 秒逾時中斷控制器
         const abortController = new AbortController();
-        const timeoutId = setTimeout(() => abortController.abort(), 20000);
+        const timeoutId = setTimeout(() => abortController.abort(), 15000);
 
         try {
             const response = await fetch(`${apiBase}/api/send-email`, {
@@ -4244,11 +4242,11 @@
             clearTimeout(timeoutId);
             console.error('Submit form error:', err);
             if (err.name === 'AbortError') {
-                showToast('連線逾時 (超過 20 秒)。若伺服器處於休眠喚醒中，請稍候 10 秒後重新點擊送出。', 'error');
+                showToast('連線逾時，請檢查網路連線或稍後再試。', 'error');
             } else {
                 showToast(isLocalHost
                     ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 server.js 已啟動。'
-                    : '連線至伺服器超時或失敗。若伺服器處於休眠喚醒中，請稍候片刻後重新送出。', 'error');
+                    : '連線至伺服器失敗，請確認 Vercel 服務或網路連線正常。', 'error');
             }
         } finally {
             if (stepTimer) clearInterval(stepTimer);
