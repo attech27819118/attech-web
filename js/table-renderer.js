@@ -8,21 +8,15 @@ function renderProductActions(p, partnerKey = null, lineKey = null) {
     const isSelected = AppState.compareList.some(item => item.product_name === p.product_name);
     const pKey = partnerKey || AppState.partner;
     const lKey = lineKey || AppState.productLine;
-    const sampleTitle = AppState.lang === 'zh' ? `索樣 / 詢價「${p.product_name}」` : `Request sample for "${p.product_name}"`;
     const compareTitle = isSelected
         ? (AppState.lang === 'zh' ? '從比較清單移除' : 'Remove from compare')
         : (AppState.lang === 'zh' ? '加入比較 (最多4項)' : 'Add to compare (max 4)');
-    const sampleLabel = AppState.lang === 'zh' ? '索樣' : 'Sample';
     const compareLabel = isSelected
         ? (AppState.lang === 'zh' ? '已比' : 'Added')
         : (AppState.lang === 'zh' ? '比較' : 'Compare');
 
     return `
     <div class="flex items-center gap-1.5 shrink-0 select-none mt-1.5 whitespace-nowrap">
-        <button data-action="request-sample" data-product="${p.product_name}" class="product-sample-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-50 hover:bg-blue-900 text-blue-900 hover:text-white border border-blue-200 active:scale-90 shadow-2xs text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap" title="${sampleTitle}" aria-label="索樣">
-            <i class="fa-solid fa-paper-plane text-[10px] shrink-0"></i>
-            <span class="shrink-0 whitespace-nowrap">${sampleLabel}</span>
-        </button>
         <button data-action="toggle-compare" data-product="${p.product_name}" data-partner="${pKey}" data-line="${lKey}" class="compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all ${isSelected ? 'bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900' : 'text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200'} active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap" title="${compareTitle}" aria-label="${isSelected ? '從比較清單移除' : '加入比較'}">
             <i class="fa-solid ${isSelected ? 'fa-check text-emerald-300' : 'fa-scale-balanced'} text-[10px] shrink-0"></i>
             <span class="shrink-0 whitespace-nowrap">${compareLabel}</span>
@@ -1127,10 +1121,6 @@ function renderAccordionDetailCard(p) {
             <i class="fa-solid fa-scale-balanced text-blue-700"></i> 可加入比較表橫向對比最多 4 款產品規格
         </span>
         <div class="flex items-center gap-2">
-            <button onclick="event.stopPropagation(); requestProductSample('${p.product_name}')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 bg-blue-900 hover:bg-blue-800 text-white shadow-sm active:scale-95">
-                <i class="fa-solid fa-paper-plane text-xs"></i>
-                <span>${t.btn_req_sample || '索樣 / 詢價'}</span>
-            </button>
             <button data-product="${p.product_name}" onclick="event.stopPropagation(); toggleCompareProduct('${p.product_name}', 'MPI', '${AppState.productLine}')" class="compare-toggle-btn px-3.5 py-1.5 rounded-lg border text-xs font-bold transition-all flex items-center gap-1.5 ${AppState.compareList.some(item => item.product_name === p.product_name) ? 'bg-blue-900 text-white border-blue-900 shadow-sm' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-300'}">
                 <i class="fa-solid ${AppState.compareList.some(item => item.product_name === p.product_name) ? 'fa-check' : 'fa-plus'}"></i>
                 <span>${AppState.compareList.some(item => item.product_name === p.product_name) ? t.compared : t.compare}</span>
