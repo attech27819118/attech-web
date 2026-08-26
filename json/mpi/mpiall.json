@@ -1760,15 +1760,15 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效取代PTFE蠟粉",
-          "scratch_resistance": "低密度聚乙烯蠟提供優異的表面耐刮。",
+          "scratch_resistance": "聚乙烯蠟提供優異的表面耐刮。",
           "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
-          "apparent_hardness": "非常適合步行路面。"
+          "anti_slip": "不影響摩擦係數，非常適合步行路面。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative to PTFE additives.",
           "scratch_resistance": "Low-density polyethylene provides superior surface toughness, durability, and mar resistance.",
           "abrasion_resistance": "Maximizes surface Taber abrasion resistance and film toughness.",
-          "apparent_hardness": "Enhances film hardness, making it ideal for walking surfaces."
+          "anti_slip": "Enhances film hardness, making it ideal for walking surfaces."
         }
       },
       "ink": {
@@ -1789,14 +1789,14 @@
           "scratch_resistance": "低密度聚乙烯蠟提高的表面耐刮。",
           "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
           "apparent_hardness": "提高，非常適合步行路面。",
-          "increased_cof": "具備防滑特性"
+          "anti_slip": "具備防滑特性"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative to PTFE additives.",
           "scratch_resistance": "Low-density polyethylene enhances surface toughness and mar resistance.",
           "abrasion_resistance": "Enhances surface Taber abrasion resistance and film toughness.",
           "apparent_hardness": "Increases hardness, ideal for walking surfaces.",
-          "increased_cof": "Imparts anti-slip properties with high COF."
+          "anti_slip": "Imparts anti-slip properties with high COF."
         }
       },
       "industrial_floor": {
@@ -2622,12 +2622,12 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升塗層抗劃痕性。",
-          "abrasion_resistance": "提升塗層的耐磨與耐磨擦性能。",
+          "scratch_resistance": "提升塗層的抗劃痕性。",
+          "abrasion_resistance": "提高塗層的耐磨與耐磨擦性能。",
           "block_resistance": "優異的抗黏結性能。增加耐熱性。",
-          "metal_mark_resistance": "賦予優異的耐磨、抗擦傷和抗劃痕性。",
-          "chemical_resistance": "與合成蠟相比，具有更好的抗溶劑吸收與耐膨潤能力。",
-          "slip_lubricity": "高性能微粉化聚乙烯蠟提供獨特的表面滑爽性結合。"
+          "metal_mark_resistance": "賦予優異的耐磨、抗擦傷和金屬抗劃痕性。",
+          "chemical_resistance": "有更好的耐溶劑性與耐膨潤能力。",
+          "slip_lubricity": "提供良好的表面滑爽性。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Imparts excellent mar resistance with good surface slip.",
@@ -2652,7 +2652,7 @@
           "block_resistance": 1
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予優異的抗刮傷性能。與合成蠟相比，具有更好的抗溶劑吸收和耐溶脹性",
+          "scratch_resistance": "賦予優異的抗刮傷性能。與合成蠟相比，具有更好的耐溶劑性和耐溶脹性",
           "abrasion_resistance": "賦予極佳的耐磨和耐摩擦性。高效微粉化聚乙烯蠟，提供表面滑爽性、耐磨/耐磨擦以及防黏結的獨特結合",
           "rub_resistance": "賦予優異的耐磨擦性能",
           "slip_lubricity": "提供良好表面滑爽性",
@@ -2739,13 +2739,13 @@
           "intercoat_adhesion": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "高分子量和高硬度提升了對溶劑吸收與溶脹的抵抗性",
+          "scratch_resistance": "高分子量和高硬度提升了對溶劑性與溶脹的抵抗性",
           "abrasion_resistance": "結晶型、高熔點蠟，提供卓越的耐磨擦與耐磨性能",
           "rub_resistance": "提供卓越的抗擦損、耐摩擦耐磨防護",
           "slip_lubricity": "易於分散的細粉，可經由高速混合直接加入",
           "block_resistance": "賦予優異的抗黏結（防黏）性能",
           "heat_resistance": "結晶型、高熔點蠟",
-          "intercoat_adhesion": "高分子量和硬度可提升抗溶劑吸收與溶脹的能力"
+          "intercoat_adhesion": "高分子量和硬度可提升耐溶劑性與溶脹的能力"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "High molecular weight and hardness improve resistance to solvent absorption and swelling.",
@@ -4495,9 +4495,9 @@
         },
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
-          "matting_gloss_control": "均勻粗糙織紋塗層表面以降低光澤。",
+          "matting_gloss_control": "粗糙化塗層表面來降低光澤。",
           "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
-          "texture_structure": "提供均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。"
+          "texture_structure": "均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。"
         },
         "performance_descriptions_en": {
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability.",
@@ -4963,15 +4963,15 @@
         "performance_descriptions_zh": {
           "scratch_resistance": "提供滑爽性、耐磨性和抗刮傷性的優異結合。適合需要高光澤度和透明度的應用。",
           "abrasion_resistance": "提供滑爽性、耐磨性和抗刮傷性的優異結合。",
-          "block_resistance": "在金屬包裝塗料中提供優異的滑爽性、抗刮傷性和脫模性能。",
-          "matting_gloss_control": "專為保持透明度和光澤度而設計；可減少捲鋼塗層烘烤後的表面霧影。",
+          "block_resistance": "在金屬包裝塗料中提供優異的抗刮傷性和脫模性能。",
+          "gloss_retention": "專為保持透明度和光澤度而設計；可減少捲鋼塗層烘烤後的表面霧影。",
           "slip_lubricity": "在捲鋼塗料中，為捲鋼成品的成型和加工提供最大的滑爽性。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Provides an excellent combination of slip, abrasion resistance, and scratch resistance. Ideal for applications where high gloss and clarity are required.",
           "abrasion_resistance": "Delivers an optimal balance of slip, abrasion resistance, and scratch resistance.",
           "block_resistance": "Provides excellent slip, scratch resistance, and food release properties in metal packaging coatings.",
-          "matting_gloss_control": "Specially designed for clarity and gloss retention; reduces surface haze in coil coatings post-bake.",
+          "gloss_retention": "Specially designed for clarity and gloss retention; reduces surface haze in coil coatings post-bake.",
           "slip_lubricity": "In coil coatings, provides maximum surface slip for forming and fabrication of finished coil."
         }
       },
@@ -4985,7 +4985,7 @@
         "performance_ratings": {
           "scratch_resistance": 1,
           "slip_lubricity": 1,
-          "matting_gloss_control": 3,
+          "gloss_retention": 3,
           "block_resistance": 1,
           "clarity": 3
         },
@@ -4993,7 +4993,7 @@
           "scratch_resistance": "提供滑爽性、耐磨性與抗刮傷性的優異結合。",
           "abrasion_resistance": "提供優異的耐磨性",
           "slip_lubricity": "提供極佳的滑爽性。在捲鋼塗料中，為成品捲鋼的成型與加工提供最大的滑爽度",
-          "matting_gloss_control": "提供優異的光澤保留性",
+          "gloss_retention": "提供優異的光澤保留性",
           "block_resistance": "在金屬包裝塗料中提供脫模性能",
           "clarity": "非常適合需要極佳光澤與透明度的應用。在烘烤後能減少捲鋼塗料表面霧影"
         },
@@ -5049,14 +5049,14 @@
           "scratch_resistance": "提升表面潤滑性與抗刮傷性。",
           "abrasion_resistance": "改善耐磨性。",
           "block_resistance": "改善抗黏結性、流動性。",
-          "matting_gloss_control": "透明度或光澤影響很小。",
+          "gloss_retention": "對透明度或光澤影響減到最小。",
           "slip_lubricity": "提供表面潤滑性。是一種生物降解蠟。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Provides surface lubricity and scratch resistance.",
           "abrasion_resistance": "Improves abrasion resistance in specialty and seed coatings.",
           "block_resistance": "Improves antiblocking, flow, and handling properties.",
-          "matting_gloss_control": "Does not adversely affect coating clarity or gloss.",
+          "gloss_retention": "Does not adversely affect coating clarity or gloss.",
           "slip_lubricity": "Delivers superior surface lubricity; 100% natural and biodegradable prime carnauba wax."
         }
       },
@@ -5079,7 +5079,7 @@
           "scratch_resistance": "提供抗刮傷性能，提升抗黏結、流動性與耐磨性。",
           "slip_lubricity": "提供表面潤滑性。",
           "cleanability": "不影響透明度或光澤度。",
-          "gloss_retention": "具有極佳的透明度與光澤保持性。"
+          "gloss_retention": "具有極佳的透明度與光澤保持特性。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Provides scratch resistance while enhancing flow and surface protection.",
@@ -5211,7 +5211,7 @@
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高抗刮傷、抗劃痕和抗金屬劃痕性能。",
-          "abrasion_resistance": "提升塗慈耐磨性能。",
+          "abrasion_resistance": "提升塗層耐磨性能。",
           "metal_mark_resistance": "提高抗金屬劃痕性能。",
           "matting_gloss_control": "在塗層中提供均勻的消光效果。",
           "slip_lubricity": "賦予平滑的表面「觸感」。"
@@ -5294,9 +5294,9 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE 的替代選擇。",
-          "scratch_resistance": "提升抗擦傷與抗劃痕性能。",
-          "abrasion_resistance": "可提供最佳水平的抗擦傷與抗劃痕性能。",
-          "slip_lubricity": "具有優異的滑爽性與混滑度。"
+          "scratch_resistance": "提升抗刮與抗劃痕性能。",
+          "abrasion_resistance": "可提供最佳的耐磨與抗劃痕性能。",
+          "slip_lubricity": "具有優異的滑爽性與潤滑度。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative for water-based and solvent systems.",
@@ -5425,7 +5425,7 @@
     "chemical_component": "HDPE/amide",
     "recommended_system_type_zh": "溶劑系統及UV系統",
     "recommended_system_type_en": "Solvent-based and energy curable (UV) coatings and inks.",
-    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；觸感塗料；皮革塗料",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；螺絲漆；皮革塗料",
     "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; soft touch coatings.",
     "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
     "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
