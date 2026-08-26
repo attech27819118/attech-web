@@ -2582,6 +2582,97 @@
     }
   },
   {
+    "product_name": "MPP-620XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mpp-620xf.html",
+    "composition_zh": "高密度聚乙烯",
+    "composition_en": "High density polyethylene",
+    "chemical_component": "High density polyethylene",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "120-124",
+      "mean_particle_size_um": "4.5-5.5",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.96"
+    },
+    "applications_data": {
+      "industrial": {
+        "application_key": "industrial",
+        "application_title_zh": "工業塗料",
+        "application_title_en": "Industrial Coating",
+        "featured_categories": [
+          "耐磨"
+        ],
+        "performance_ratings": {
+          "abrasion_resistance": 2,
+          "block_resistance": 1,
+          "metal_mark_resistance": 2,
+          "slip_lubricity": 2,
+          "burnish_resistance": 2
+        },
+        "performance_descriptions_zh": {
+          "scratch_resistance": "提升塗層抗劃痕性。",
+          "abrasion_resistance": "提升塗層的耐磨與耐磨擦性能。",
+          "block_resistance": "優異的抗黏結性能。增加耐熱性。",
+          "metal_mark_resistance": "賦予優異的耐磨、抗擦傷和抗劃痕性。",
+          "chemical_resistance": "與合成蠟相比，具有更好的抗溶劑吸收與耐膨潤能力。",
+          "slip_lubricity": "高性能微粉化聚乙烯蠟提供獨特的表面滑爽性結合。"
+        },
+        "performance_descriptions_en": {
+          "scratch_resistance": "Imparts excellent mar resistance with good surface slip.",
+          "abrasion_resistance": "Enhances coating abrasion and rub resistance.",
+          "block_resistance": "Provides excellent antiblocking properties and adds heat resistance.",
+          "metal_mark_resistance": "Imparts excellent abrasion, scuff, and metal mark resistance.",
+          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax.",
+          "slip_lubricity": "High-performance micronized polyethylene wax provides a unique combination of surface slip."
+        }
+      },
+      "ink": {
+        "application_key": "ink",
+        "application_title_zh": "油墨",
+        "application_title_en": "Energy Curable Inks & OPVs",
+        "featured_categories": [
+          "耐磨"
+        ],
+        "performance_ratings": {
+          "abrasion_resistance": 2,
+          "rub_resistance": 2,
+          "slip_lubricity": 1,
+          "block_resistance": 1
+        },
+        "performance_descriptions_zh": {
+          "scratch_resistance": "賦予優異的抗刮傷性能。與合成蠟相比，具有更好的抗溶劑吸收和耐溶脹性",
+          "abrasion_resistance": "賦予極佳的耐磨和耐摩擦性。高效微粉化聚乙烯蠟，提供表面滑爽性、耐磨/耐磨擦以及防黏結的獨特結合",
+          "rub_resistance": "賦予優異的耐磨擦性能",
+          "slip_lubricity": "提供良好表面滑爽性",
+          "block_resistance": "提供優異的抗黏結性能",
+          "heat_resistance": "提高耐熱性",
+          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力"
+        },
+        "performance_descriptions_en": {
+          "scratch_resistance": "Imparts excellent mar resistance with better resistance to solvent absorption and swelling versus synthetic wax.",
+          "abrasion_resistance": "Provides excellent abrasion and rub resistance combined with surface slip and antiblocking.",
+          "rub_resistance": "Delivers superior rub and scuff resistance.",
+          "slip_lubricity": "Provides good surface slip.",
+          "block_resistance": "Imparts excellent antiblocking properties.",
+          "heat_resistance": "Enhances coating heat resistance.",
+          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax."
+        }
+      }
+    }
+  },
+  {
     "product_name": "MPP-635VF",
     "brand_code": "MPI",
     "website": "https://www.micropowders.com/mpp-635vf.html",
@@ -5000,7 +5091,7 @@
     }
   },
   {
-    "product_name": "PropylMatte 31 HD",
+    "product_name": "PropylMatte 31HD",
     "brand_code": "MPI",
     "website": "https://www.micropowders.com/propylmatte-31hd.html",
     "composition_zh": "加重聚丙烯",
@@ -5164,7 +5255,7 @@
     }
   },
   {
-    "product_name": "Aquapoly 511",
+    "product_name": "AquaPoly 511",
     "brand_code": "MPI",
     "website": "https://www.micropowders.com/aquapoly-511.html",
     "composition_zh": "改性氧化高密度聚乙烯",
@@ -5270,7 +5361,7 @@
     }
   },
   {
-    "product_name": "Aquapoly 250",
+    "product_name": "AquaPoly 250",
     "brand_code": "MPI",
     "website": "https://www.micropowders.com/aquapoly-250.html",
     "composition_zh": "改性氧化高密度聚乙烯",
@@ -5406,97 +5497,7 @@
       }
     }
   },
-  {
-    "product_name": "MPP-620XF",
-    "brand_code": "MPI",
-    "website": "https://www.micropowders.com/mpp-620xf.html",
-    "composition_zh": "高密度聚乙烯",
-    "composition_en": "High density polyethylene",
-    "chemical_component": "High density polyethylene",
-    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
-    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
-    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
-    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
-    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
-    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
-    "system": {
-      "waterborne": 1,
-      "solvent_borne": 1,
-      "energy curable coatings and inks": 1,
-      "powder_coating": 1
-    },
-    "typical_properties": {
-      "melt_point_c": "120-124",
-      "mean_particle_size_um": "4.5-5.5",
-      "max_particle_size_um": "22.00",
-      "density_g_cc_25c": "0.96"
-    },
-    "applications_data": {
-      "industrial": {
-        "application_key": "industrial",
-        "application_title_zh": "工業塗料",
-        "application_title_en": "Industrial Coating",
-        "featured_categories": [
-          "耐磨"
-        ],
-        "performance_ratings": {
-          "abrasion_resistance": 2,
-          "block_resistance": 1,
-          "metal_mark_resistance": 2,
-          "slip_lubricity": 2,
-          "burnish_resistance": 2
-        },
-        "performance_descriptions_zh": {
-          "scratch_resistance": "提升塗層抗劃痕性。",
-          "abrasion_resistance": "提升塗層的耐磨與耐磨擦性能。",
-          "block_resistance": "優異的抗黏結性能。增加耐熱性。",
-          "metal_mark_resistance": "賦予優異的耐磨、抗擦傷和抗劃痕性。",
-          "chemical_resistance": "與合成蠟相比，具有更好的抗溶劑吸收與耐膨潤能力。",
-          "slip_lubricity": "高性能微粉化聚乙烯蠟提供獨特的表面滑爽性結合。"
-        },
-        "performance_descriptions_en": {
-          "scratch_resistance": "Imparts excellent mar resistance with good surface slip.",
-          "abrasion_resistance": "Enhances coating abrasion and rub resistance.",
-          "block_resistance": "Provides excellent antiblocking properties and adds heat resistance.",
-          "metal_mark_resistance": "Imparts excellent abrasion, scuff, and metal mark resistance.",
-          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax.",
-          "slip_lubricity": "High-performance micronized polyethylene wax provides a unique combination of surface slip."
-        }
-      },
-      "ink": {
-        "application_key": "ink",
-        "application_title_zh": "油墨",
-        "application_title_en": "Energy Curable Inks & OPVs",
-        "featured_categories": [
-          "耐磨"
-        ],
-        "performance_ratings": {
-          "abrasion_resistance": 2,
-          "rub_resistance": 2,
-          "slip_lubricity": 1,
-          "block_resistance": 1
-        },
-        "performance_descriptions_zh": {
-          "scratch_resistance": "賦予優異的抗刮傷性能。與合成蠟相比，具有更好的抗溶劑吸收和耐溶脹性",
-          "abrasion_resistance": "賦予極佳的耐磨和耐摩擦性。高效微粉化聚乙烯蠟，提供表面滑爽性、耐磨/耐磨擦以及防黏結的獨特結合",
-          "rub_resistance": "賦予優異的耐磨擦性能",
-          "slip_lubricity": "提供良好表面滑爽性",
-          "block_resistance": "提供優異的抗黏結性能",
-          "heat_resistance": "提高耐熱性",
-          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力"
-        },
-        "performance_descriptions_en": {
-          "scratch_resistance": "Imparts excellent mar resistance with better resistance to solvent absorption and swelling versus synthetic wax.",
-          "abrasion_resistance": "Provides excellent abrasion and rub resistance combined with surface slip and antiblocking.",
-          "rub_resistance": "Delivers superior rub and scuff resistance.",
-          "slip_lubricity": "Provides good surface slip.",
-          "block_resistance": "Imparts excellent antiblocking properties.",
-          "heat_resistance": "Enhances coating heat resistance.",
-          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax."
-        }
-      }
-    }
-  },
+
   {
     "product_name": "MicroMatte 1415-EZ",
     "brand_code": "MPI",
