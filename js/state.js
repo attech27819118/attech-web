@@ -59,7 +59,7 @@ const featureConfig = {
         "ptfe_alternative": "PTFE取代", "scratch_resistance": "耐刮", "abrasion_resistance": "耐磨",
         "burnish_resistance": "耐拋光", "rub_resistance": "耐摩擦",
         "slip_lubricity": "滑爽", "slip": "滑爽", "anti_slip": "防滑", "increased_cof": "高摩擦",
-        "matting_gloss_control": "消光", "gloss_retention": "保持光澤", "clarity": "透明",
+        "matting_gloss_control": "消光","v_matting_gloss_control": "更消光","gloss_retention": "保持光澤", "clarity": "透明","v_clarity": "更透明",
         "soft_touch": "柔感", "texture_structure": "織紋", "corrosion_resistance": "防腐蝕",
         "block_resistance": "抗黏性", "improved_extrusion_flow": "改善流動", "anti_gassing": "防氣泡",
         "metal_mark_resistance": "抗金屬劃痕", "apparent_hardness": "提升表面硬度", "water_beading": "撥水",
