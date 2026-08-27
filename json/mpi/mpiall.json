@@ -5323,11 +5323,11 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE 的替代選擇。",
-          "scratch_resistance": "提供最佳水平的抗擦傷和抗磨損（防勒痕）性能。獨特的微粉化氧化聚乙烯合成蠟，用於提升抗刮損性",
-          "rub_resistance": "在水性與溶劑型系統中提供最佳水平的抗擦傷和抗磨損（防勒痕）防護",
+          "scratch_resistance": "提供最佳水平的抗刮性能。",
+          "rub_resistance": "提供最佳水平的抗擦傷和抗磨損（防勒痕）防護",
           "slip_lubricity": "提供極佳的滑爽性與潤滑度",
           "soft_touch": "提供獨特的柔軟觸感",
-          "block_resistance": "易於分散的細粉，可通過高速攪拌混合，提供優異的抗黏結性"
+          "high_dispersibility": "易於分散的細粉，可通過高速攪拌混合"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative additive.",
@@ -5335,7 +5335,7 @@
           "rub_resistance": "Provides optimum levels of scuff and rub resistance in water-based and solvent systems.",
           "slip_lubricity": "Provides optimum levels of slip and mobility.",
           "soft_touch": "Imparts a unique soft-touch feel to inks and coatings.",
-          "block_resistance": "Easily dispersible fine powder providing excellent antiblocking properties."
+          "high_dispersibility": "Easily dispersible fine powder."
         }
       },
       "automotive_polishes": {
@@ -5479,17 +5479,15 @@
           "block_resistance": 1
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提供抗刮傷性",
+          "scratch_resistance": "提供抗刮性",
           "abrasion_resistance": "提供耐磨性",
-          "rub_resistance": "提供抗摩擦、耐磨擦性能",
           "slip_lubricity": "增加潤滑性與平滑表面手感。",
-          "soft_touch": "增加潤滑性與柔軟手感",
+          "soft_touch": "增加柔軟手感",
           "block_resistance": "提升抗黏結性"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Provides scratch and mar resistance.",
           "abrasion_resistance": "Provides abrasion resistance.",
-          "rub_resistance": "Delivers rub and scuff resistance.",
           "slip_lubricity": "Adds lubricity and a smooth surface feel with easy high-speed dispersibility.",
           "soft_touch": "Adds lubricity and a soft-touch tactile feel.",
           "block_resistance": "Improves antiblocking properties."

@@ -33,10 +33,21 @@ class SearchEngine {
         const appData = getAppSpecificData(p, lineKey);
         const appCats = (appData.featured_categories || p.featured_categories || []).join(' ');
 
-        let propsText = '';
-        if (p.typical_properties && typeof p.typical_properties === 'object') {
-            propsText = Object.values(p.typical_properties).filter(v => v !== null && v !== undefined && v !== '').join(' ');
-        }
+        const extractValues = (obj) => {
+            if (!obj || typeof obj !== 'object') return '';
+            return Object.entries(obj).map(([k, v]) => {
+                if (v === null || v === undefined || v === false || v === '' || v === '—' || v === 'N/A') return '';
+                if (typeof v === 'object') return extractValues(v);
+                if (typeof v === 'boolean') return v ? k : '';
+                return `${k} ${v}`;
+            }).join(' ');
+        };
+
+        const propsText = extractValues(p.typical_properties);
+        const perfDescZh = extractValues(appData.performance_descriptions_zh || p.performance_descriptions_zh);
+        const perfDescEn = extractValues(appData.performance_descriptions_en || p.performance_descriptions_en);
+        const systemText = extractValues(p.system);
+        const appsText = extractValues(p.applications);
 
         return [
             p.product_name || '',
@@ -56,8 +67,23 @@ class SearchEngine {
             p.suggested_use_level_en || '',
             p.appearance || '',
             p.active_content || '',
+            p.production_method || '',
+            p.examples || '',
+            appData.examples || '',
+            appData.application_fields_zh || '',
+            appData.application_fields_en || '',
+            appData.recommended_system_type_zh || '',
+            appData.recommended_system_type_en || '',
+            appData.suggested_use_level_zh || '',
+            appData.suggested_use_level_en || '',
+            p.features || '',
+            p.function || '',
             appCats,
-            propsText
+            propsText,
+            perfDescZh,
+            perfDescEn,
+            systemText,
+            appsText
         ].join(' ').toLowerCase();
     }
 

@@ -266,7 +266,13 @@ function toggleMobileSidebar() {
 }
 
 function navigateToCategory(partner, lineKey, categoryKey = 'all', productName = null) {
+    if (typeof searchDebounceTimer !== 'undefined' && searchDebounceTimer) {
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = null;
+    }
     if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
+    AppState.filters = {};
+    if (typeof initFilters === 'function') initFilters();
 
     // 先設定好目標品牌、產品線與分類，確保狀態即時就緒
     AppState.partner = partner;
@@ -275,6 +281,10 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
 
     if (!AppState.expandedMenus.includes(lineKey)) {
         AppState.expandedMenus.push(lineKey);
+    }
+
+    if (productName) {
+        AppState.expandedDetails = [productName];
     }
 
     // 切換分頁外觀，但不觸發多餘的非同步渲染
@@ -294,19 +304,71 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                 updateNodeActiveStyles(lineKey, categoryKey || 'all');
             }
 
-            setTimeout(() => {
+            const scrollToTarget = () => {
                 if (productName) {
                     document.querySelectorAll('.row-target-highlight').forEach(el => el.classList.remove('row-target-highlight'));
 
-                    // 尋找目標產品列 (使用屬性值比對，避免特殊字元造成 CSS selector 錯誤)
-                    const targetRow = Array.from(document.querySelectorAll('tr[data-product-name]'))
-                        .find(row => row.getAttribute('data-product-name') === productName);
+                    const cleanStr = s => (s || '')
+                        .replace(/&[a-z0-9#]+;/gi, '')
+                        .replace(/[®™©]/g, '')
+                        .trim()
+                        .replace(/[\r\n\s]+/g, ' ')
+                        .toLowerCase();
+
+                    const targetClean = cleanStr(productName);
+                    const rows = Array.from(document.querySelectorAll('tr[data-product-name]'));
+
+                    // 尋找目標產品列 (多層級比對：精確比對 -> 淨化標準化比對 -> 子字串比對)
+                    let targetRow = rows.find(row => {
+                        const rowName = row.getAttribute('data-product-name') || row.dataset?.productName;
+                        return rowName === productName;
+                    });
+
+                    if (!targetRow) {
+                        targetRow = rows.find(row => {
+                            const rowName = row.getAttribute('data-product-name') || row.dataset?.productName;
+                            return cleanStr(rowName) === targetClean;
+                        });
+                    }
+
+                    if (!targetRow) {
+                        targetRow = rows.find(row => {
+                            const rowClean = cleanStr(row.getAttribute('data-product-name') || row.dataset?.productName);
+                            return rowClean.length > 0 && targetClean.length > 0 && (rowClean.includes(targetClean) || targetClean.includes(rowClean));
+                        });
+                    }
 
                     if (targetRow) {
-                        const rect = targetRow.getBoundingClientRect();
-                        const top = window.pageYOffset + rect.top - 85;
-                        window.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
                         targetRow.classList.add('row-target-highlight');
+
+                        // 滾動水平容器至最左側
+                        const scrollContainer = targetRow.closest('.table-container') || targetRow.closest('.overflow-x-auto');
+                        if (scrollContainer && scrollContainer.scrollLeft > 0) {
+                            scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+                        }
+
+                        // 執行平滑滾動並置頂顯示
+                        try {
+                            targetRow.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start',
+                                inline: 'nearest'
+                            });
+                        } catch (e) {
+                            const rect = targetRow.getBoundingClientRect();
+                            const top = window.pageYOffset + rect.top - 115;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        }
+
+                        // 若該列具備可點擊展開功能 (MPI 產品卡片) 且未展開，自動觸發展開
+                        const idx = targetRow.getAttribute('data-index');
+                        const detailRow = idx !== null ? document.getElementById(`detail-${idx}`) : null;
+                        if (detailRow && detailRow.classList.contains('hidden')) {
+                            if (typeof toggleProductDetail === 'function') {
+                                toggleProductDetail(idx, productName);
+                            }
+                        }
+
                         return;
                     }
                 }
@@ -315,10 +377,18 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                 if (targetSection) {
                     const rect = targetSection.getBoundingClientRect();
                     const top = window.pageYOffset + rect.top - 75;
-                    window.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
+                    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
                 }
-            }, 80);
-        });
+            };
+
+            if (typeof requestAnimationFrame === 'function') {
+                requestAnimationFrame(scrollToTarget);
+            } else {
+                setTimeout(scrollToTarget, 16);
+            }
+            setTimeout(scrollToTarget, 80);
+            setTimeout(scrollToTarget, 240);
+        }, !!productName);
     }
 
     updateHashRoute(true);
