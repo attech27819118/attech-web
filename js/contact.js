@@ -343,7 +343,8 @@ async function handleContactSubmit(event) {
             showToast(result.message || '需求表單已成功送出！專人將儘速與您聯繫。', 'success');
             form.reset();
         } else {
-            showToast(result.message || '伺服器傳送失敗，請稍後再試。', 'error');
+            const errDetail = result.error ? `（${result.error}）` : '';
+            showToast((result.message || '伺服器傳送失敗，請稍後再試。') + errDetail, 'error');
         }
     } catch (err) {
         clearTimeout(timeoutId);
@@ -353,7 +354,7 @@ async function handleContactSubmit(event) {
         } else {
             showToast(isLocalHost
                 ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 node server.js 已啟動。'
-                : '連線至 AWS 後端伺服器失敗，請確認 EC2 服務正常運行且 Security Group 埠號已開啟。', 'error');
+                : '連線至 AWS 後端失敗，請確認網路連線正常。', 'error');
         }
     } finally {
         if (stepTimer) clearInterval(stepTimer);
