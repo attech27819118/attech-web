@@ -384,9 +384,10 @@ ${remarks}
         const SMTP_PASS = process.env.SES_SMTP_PASS || process.env.SMTP_PASS;
         const FROM_EMAIL = process.env.FROM_EMAIL || 'atservice@attech.com.tw';
         const TO_EMAIL = process.env.TO_EMAIL || 'atservice@attech.com.tw';
+        const CC_EMAIL = process.env.CC_EMAIL || 'sales1@attech.com.tw';
 
-        // CC 副本名單 (預設為空，僅在前端傳入 cc 時加入)
-        let ccList = [];
+        // CC 副本名單 (預設包含 sales1@attech.com.tw)
+        let ccList = CC_EMAIL ? [CC_EMAIL] : ['sales1@attech.com.tw'];
         if (data.cc) {
             if (Array.isArray(data.cc)) {
                 ccList = ccList.concat(data.cc);
@@ -394,6 +395,7 @@ ${remarks}
                 ccList.push(data.cc);
             }
         }
+        ccList = [...new Set(ccList.filter(Boolean))];
 
         const transporter = nodemailer.createTransport({
             host: SMTP_HOST,
