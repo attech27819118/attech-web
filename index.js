@@ -377,17 +377,21 @@ ${remarks}
             console.error('PDF 生成錯誤:', pdfErr);
         }
 
-        // 郵件傳輸設定（優先支援 SES SMTP 或企業 SMTP）
+        // 郵件傳輸設定（支援 SES SMTP 或企業自建 SMTP 如 mail.attech.com.tw）
         const SMTP_HOST = process.env.SES_SMTP_HOST || process.env.SMTP_HOST || 'email-smtp.us-east-1.amazonaws.com';
         const SMTP_PORT = parseInt(process.env.SES_SMTP_PORT || process.env.SMTP_PORT || '465', 10);
         const SMTP_USER = process.env.SES_SMTP_USER || process.env.SMTP_USER;
         const SMTP_PASS = process.env.SES_SMTP_PASS || process.env.SMTP_PASS;
         const FROM_EMAIL = process.env.FROM_EMAIL || 'atservice@attech.com.tw';
         const TO_EMAIL = process.env.TO_EMAIL || 'atservice@attech.com.tw';
-        const CC_EMAIL = process.env.CC_EMAIL || 'sales1@attech.com.tw';
+        const CC_EMAIL = process.env.CC_EMAIL || '';
 
-        // CC 副本名單 (預設包含 sales1@attech.com.tw)
-        let ccList = CC_EMAIL ? [CC_EMAIL] : ['sales1@attech.com.tw'];
+        if (!SMTP_USER || !SMTP_PASS) {
+            throw new Error(`SMTP 帳號密碼尚未設定（請於 AWS Lambda 環境變數中設定 SMTP_USER 與 SMTP_PASS）`);
+        }
+
+        // CC 副本名單 (若有設定才加入)
+        let ccList = CC_EMAIL ? [CC_EMAIL] : [];
         if (data.cc) {
             if (Array.isArray(data.cc)) {
                 ccList = ccList.concat(data.cc);
@@ -407,7 +411,10 @@ ${remarks}
             },
             tls: {
                 rejectUnauthorized: false
-            }
+            },
+            connectionTimeout: 8000,
+            greetingTimeout: 8000,
+            socketTimeout: 8000
         });
 
         const mailOptions = {
@@ -425,7 +432,7 @@ ${remarks}
         }
 
         await transporter.sendMail(mailOptions);
-        console.log(`[Lambda SES Sent] ${company} - ${contact} (${type})`);
+        console.log(`[Lambda Sent] ${company} - ${contact} (${type})`);
 
         return {
             statusCode: 200,
