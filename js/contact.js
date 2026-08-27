@@ -314,18 +314,20 @@ async function handleContactSubmit(event) {
 
     lastSubmitTime = now;
 
-    // 後端 API 網址設定：本地連 localhost:3000，Vercel 站點連同源 /api，GitHub Pages 連 Vercel 雲端
+    // 後端 API 網址設定：
+    // 1. 本機開發自動連線 localhost:3000
+    // 2. 正式線上環境預設連線 AWS EC2 API 端點 (可設定自訂網域如 https://api.attech.com.tw 或 EC2 IP/DNS)
+    // 3. 若使用 AWS CloudFront 整合路徑，可直接使用同源相對路徑
     const isLocalHost = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
-    const isVercelHost = window.location.hostname.endsWith('.vercel.app');
-    const VERCEL_API_BASE = 'https://attech-web.vercel.app';
-    const apiBase = isLocalHost ? 'http://localhost:3000' : (isVercelHost ? '' : VERCEL_API_BASE);
+    const AWS_API_BASE = window.ATTECH_API_BASE || 'https://uib4yezvl3.execute-api.us-east-1.amazonaws.com/default/attech-send-email';
+    const targetUrl = isLocalHost ? 'http://localhost:3000/api/send-email' : AWS_API_BASE;
 
     // 設置 15 秒逾時中斷控制器
     const abortController = new AbortController();
     const timeoutId = setTimeout(() => abortController.abort(), 15000);
 
     try {
-        const response = await fetch(`${apiBase}/api/send-email`, {
+        const response = await fetch(targetUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -350,8 +352,8 @@ async function handleContactSubmit(event) {
             showToast('連線逾時，請檢查網路連線或稍後再試。', 'error');
         } else {
             showToast(isLocalHost
-                ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 server.js 已啟動。'
-                : '連線至伺服器失敗，請確認 Vercel 服務或網路連線正常。', 'error');
+                ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 node server.js 已啟動。'
+                : '連線至 AWS 後端伺服器失敗，請確認 EC2 服務正常運行且 Security Group 埠號已開啟。', 'error');
         }
     } finally {
         if (stepTimer) clearInterval(stepTimer);
@@ -387,7 +389,7 @@ function requestProductSample(productName, preferredMode = 'quick') {
 
     const activeInput = preferredMode === 'detailed' ? detailInput : quickInput;
     if (activeInput) {
-        activeInput.focus({preventScroll: true});
+        activeInput.focus({ preventScroll: true });
     }
 
     const t = uiText[AppState.lang] || uiText.zh;
@@ -399,6 +401,6 @@ function requestProductSample(productName, preferredMode = 'quick') {
         const navEl = document.querySelector('nav');
         const navHeight = navEl ? navEl.offsetHeight : 64;
         const targetY = targetCard.getBoundingClientRect().top + window.pageYOffset - (navHeight + 16);
-        window.scrollTo({top: Math.max(0, targetY), behavior: 'smooth'});
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
     }
 }
