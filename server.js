@@ -115,17 +115,20 @@ function createStyledPDF(title, sections, companyName) {
         const regularFontPath = path.join(__dirname, 'fonts', 'NotoSansTC-Regular.ttf');
         const boldFontPath = path.join(__dirname, 'fonts', 'NotoSansTC-Bold.ttf');
 
+        let fontRegular = 'Helvetica';
+        let fontBold = 'Helvetica-Bold';
+
         if (fs.existsSync(regularFontPath)) {
             doc.registerFont('ChineseRegular', regularFontPath);
+            fontRegular = 'ChineseRegular';
         }
         if (fs.existsSync(boldFontPath)) {
             doc.registerFont('ChineseBold', boldFontPath);
+            fontBold = 'ChineseBold';
         } else if (fs.existsSync(regularFontPath)) {
             doc.registerFont('ChineseBold', regularFontPath);
+            fontBold = 'ChineseBold';
         }
-
-        const fontRegular = doc._fontFamilies && doc._fontFamilies['ChineseRegular'] ? 'ChineseRegular' : 'Helvetica';
-        const fontBold = doc._fontFamilies && doc._fontFamilies['ChineseBold'] ? 'ChineseBold' : 'Helvetica-Bold';
 
         const pageWidth = doc.page.width - 56; // Left 28 + Right 28 = 56
         const startX = 28;
