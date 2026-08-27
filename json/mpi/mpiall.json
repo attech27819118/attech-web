@@ -142,12 +142,12 @@
           "clarity": 2
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
-          "scratch_resistance": "提升抗刮傷、抗擦傷與抗磨損性能。",
-          "abrasion_resistance": "提升耐擦傷、抗擦碰性能",
+          "ptfe_alternative": "耐刮、高滑度，合成蠟/奈米氧化鋁複合蠟。",
+          "scratch_resistance": "提升抗刮傷、抗擦傷性能。",
+          "abrasion_resistance": "提升耐磨性能",
           "slip_lubricity": "增加表面滑爽度與潤滑性",
-          "matting_gloss_control": "選擇 G 規格可實現最大程度的消光與消光性能",
-          "clarity": "選擇 XF 規格可獲得最高的光澤保留度"
+          "v_matting_gloss_control": "選擇 G 規格可使塗層更消光",
+          "v_clarity": "選擇 XF 規格可獲得最高的光澤保留度"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
@@ -614,10 +614,9 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
-          "scratch_resistance": "300 奈米氧化鋁（莫氏硬度9），提升塗層抗刮與抗擦傷性能。",
+          "scratch_resistance": "奈米氧化鋁（莫氏硬度9），提升塗層抗刮與抗擦傷性能。",
           "slip_lubricity": "提高滑爽性與潤滑性",
-          "matting_gloss_control": "複合微粒密度能夠最大化效率並使沉降降至最低",
-          "intercoat_adhesion": "複合粒子密度將功效最大化並使沉澱降至最低"
+          "matting_gloss_control": "能有效較低塗層光澤度，產生消光效果"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives.",
@@ -962,25 +961,23 @@
           "ptfe_alternative": 3,
           "scratch_resistance": 3,
           "slip_lubricity": 3,
-          "matting_gloss_control": 1,
+          "gloss_retention": 1,
           "block_resistance": 2,
           "clarity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
           "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
-          "abrasion_resistance": "有效降低磨損",
+          "abrasion_resistance": "有效提升耐磨性能",
           "slip_lubricity": "提供優異的表面潤滑性。",
-          "matting_gloss_control": "透明度或光澤度產生影響減到最小",
-          "clarity": "不會影響塗層透明度或光澤度。"
+          "gloss_retention": "透明度或光澤度產生影響減到最小"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives.",
           "scratch_resistance": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to deliver excellent scratch resistance.",
           "abrasion_resistance": "Effectively reduces wear and abrasion.",
           "slip_lubricity": "Provides superior surface lubricity.",
-          "matting_gloss_control": "Does not adversely affect clarity or gloss level.",
-          "clarity": "Does not adversely affect coating clarity or gloss."
+          "gloss_retention": "Does not adversely affect clarity or gloss level."
         }
       },
       "wood": {
@@ -1090,7 +1087,7 @@
           "apparent_hardness": 3
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
+          "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
           "scratch_resistance": "良好的抗刮性。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
@@ -1152,7 +1149,7 @@
           "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
+          "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
           "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "良好的耐磨性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
@@ -1185,20 +1182,18 @@
           "block_resistance": 2
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
+          "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
           "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
-          "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
-          "heat_resistance": "高熔點醯胺蠟複合物"
+          "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Maximum scratch resistance, equal to PE/PTFE additives.",
           "scratch_resistance": "Maximum scratch resistance. Highly engineered HDPE/EBS composite reinforced with 300 nm aluminum oxide nanoparticles (Mohs hardness 9).",
           "abrasion_resistance": "Provides good abrasion resistance.",
           "slip_lubricity": "Imparts surface slip and lubricity.",
-          "block_resistance": "Amide wax component delivers excellent antiblocking and release properties.",
-          "heat_resistance": "High melting point amide wax composite enhances heat resistance."
+          "block_resistance": "Amide wax component delivers excellent antiblocking and release properties."
         }
       },
       "wood": {
@@ -1220,7 +1215,7 @@
           "sanding_efficiency": 2
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
+          "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
           "scratch_resistance": "最大的抗刮性。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
@@ -1251,7 +1246,7 @@
           "cleanability": 2
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
+          "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
           "scratch_resistance": "最大的抗刮性；等同於 PE/PTFE 添加劑。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
@@ -1278,7 +1273,7 @@
           "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
-          "ptfe_alternative": "抗刮性佳；等同於 PE/PTFE蠟。",
+          "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
           "scratch_resistance": "提供最高程度的抗刮性與防擦傷性。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "slip_lubricity": "具備滑爽性與潤滑性。"
@@ -1383,7 +1378,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
-          "abrasion_resistance": "複配堅硬的奈米陶瓷微粉和高密度聚乙烯做成複合蠟。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
+          "abrasion_resistance": "複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
           "slip_lubricity": "提高滑爽性與潤滑性。適合罐頭塗料(內罐及外罐)、貨櫃漆；通過 21CFR 175.300 認證。"
         },
         "performance_descriptions_en": {
@@ -1408,7 +1403,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
-          "abrasion_resistance": "複配堅硬的奈米陶瓷微粉和高密度聚乙烯做成複合蠟。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
+          "abrasion_resistance": "複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
           "slip_lubricity": "提供滑爽性與潤滑度"
         },
         "performance_descriptions_en": {
@@ -1606,16 +1601,14 @@
           "scratch_resistance": "具有良好的抗刮性能。",
           "abrasion_resistance": "具有良好的耐磨性能。",
           "slip_lubricity": "增加滑爽性、離型性與潤滑性，提供極佳的表面「手感」。",
-          "block_resistance": "高熔點可提高耐熱性與防粘結性。",
-          "heat_resistance": "高熔點用以提高耐高溫性能"
+          "block_resistance": "高熔點可提高耐熱性與防粘結性。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Delivers outstanding scratch and abrasion resistance compared to PTFE-based additives.",
           "scratch_resistance": "Provides excellent scratch and mar resistance.",
           "abrasion_resistance": "Provides superior abrasion resistance.",
           "slip_lubricity": "Adds slip, release, and lubricity with an excellent surface feel while lowering COF.",
-          "block_resistance": "High melting point enhances heat and block resistance.",
-          "heat_resistance": "High melting point provides enhanced high-temperature resistance."
+          "block_resistance": "High melting point enhances heat and block resistance."
         }
       },
       "wood": {
@@ -1788,8 +1781,7 @@
           "ptfe_alternative": "有效取代PTFE蠟粉",
           "scratch_resistance": "低密度聚乙烯蠟提高的表面耐刮。",
           "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
-          "apparent_hardness": "提高，非常適合步行路面。",
-          "anti_slip": "具備防滑特性"
+          "anti_slip": "具備防滑特性，非常適合步行路面"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative to PTFE additives.",
@@ -2651,13 +2643,11 @@
           "block_resistance": 1
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "賦予優異的抗刮傷性能。與合成蠟相比，具有更好的耐溶劑性和耐溶脹性",
-          "abrasion_resistance": "賦予極佳的耐磨和耐摩擦性。高效微粉化聚乙烯蠟，提供表面滑爽性、耐磨/耐磨擦以及防黏結的獨特結合",
-          "rub_resistance": "賦予優異的耐磨擦性能",
+          "scratch_resistance": "賦予優異的抗刮傷性能與耐溶劑性。",
+          "abrasion_resistance": "賦予極佳的耐磨和耐摩擦性。",
           "slip_lubricity": "提供良好表面滑爽性",
           "block_resistance": "提供優異的抗黏結性能",
-          "heat_resistance": "提高耐熱性",
-          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力"
+          "heat_resistance": "提高耐熱性"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Imparts excellent mar resistance with better resistance to solvent absorption and swelling versus synthetic wax.",
@@ -2665,8 +2655,7 @@
           "rub_resistance": "Delivers superior rub and scuff resistance.",
           "slip_lubricity": "Provides good surface slip.",
           "block_resistance": "Imparts excellent antiblocking properties.",
-          "heat_resistance": "Enhances coating heat resistance.",
-          "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax."
+          "heat_resistance": "Enhances coating heat resistance."
         }
       }
     }
@@ -2747,7 +2736,6 @@
         "performance_descriptions_en": {
           "scratch_resistance": "High molecular weight and hardness improve resistance to solvent absorption and swelling.",
           "abrasion_resistance": "Crystalline, high-melting-point wax provides outstanding rub and abrasion resistance.",
-
           "high_dispersibility": "Easily dispersible fine powder that can be incorporated directly via high-speed mixing to provide surface slip.",
           "block_resistance": "Imparts excellent antiblocking properties.",
           "heat_resistance": "Crystalline, high-melting-point wax enhances heat resistance."
@@ -4147,8 +4135,8 @@
           "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
           "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
-          "matting_gloss_control": "提供消光效果，且與二氧化矽相比，能提供更好的消光性。",
-          "texture_structure": "塗層表面建構細緻的織紋效果。"
+          "matting_gloss_control": "提供有消光效果。",
+          "texture_structure": "塗層表面建構細緻的織紋效果。粒徑分布窄，實現最佳織紋控制"
         },
         "performance_descriptions_en": {
           "anti_slip": "Maintains COF; highly suitable for anti-skid and non-slip floor surfaces.",
@@ -4376,7 +4364,7 @@
           "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
           "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
-          "matting_gloss_control": "與二氧化矽相比，能提供更好的消光性。",
+          "matting_gloss_control": "提供良好的消光效果。",
           "texture_structure": "塗層表面建構細緻的織紋效果。"
         },
         "performance_descriptions_en": {
@@ -5523,16 +5511,14 @@
           "block_resistance": 2
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升建築塗料的消光與抗沾污性能。與無機消光劑相比，複合蠟能顯著提升防沾污性 (DPUR)",
-          "slip_lubricity": "表面經過處理，易於引入水性體系。提升污垢釋放性與抗沾污性",
-          "matting_gloss_control": "提供高效的消光作用",
-          "block_resistance": "微粒密度優化，提供最佳的罐內穩定性"
+          "scratch_resistance": "提升耐刮性能",
+          "slip_lubricity": "提升滑度與抗沾污性",
+          "matting_gloss_control": "提供高效的消光作用"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves burnish resistance and dirt pickup resistance (DPUR) in architectural coatings compared to inorganic flattening agents.",
           "slip_lubricity": "Surface-treated for easy incorporation into water-based systems; improves soil release and dirt resistance.",
-          "matting_gloss_control": "Provides highly efficient gloss reduction and matting.",
-          "block_resistance": "Optimized particle density provides superior in-can stability."
+          "matting_gloss_control": "Provides highly efficient gloss reduction and matting."
         }
       },
       "wood": {
