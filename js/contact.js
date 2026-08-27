@@ -337,7 +337,15 @@ async function handleContactSubmit(event) {
         });
         clearTimeout(timeoutId);
 
-        const result = await response.json();
+        let result = {};
+        try {
+            result = await response.json();
+        } catch (jsonErr) {
+            result = {
+                success: false,
+                message: `伺服器回應異常 (HTTP ${response.status})`
+            };
+        }
 
         if (response.ok && result.success) {
             showToast(result.message || '需求表單已成功送出！專人將儘速與您聯繫。', 'success');
