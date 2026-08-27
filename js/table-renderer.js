@@ -928,7 +928,8 @@ const DynamicTableRenderer = {
             return `<td class="py-3 px-3.5 border-r border-gray-200 text-slate-800 ${f.class || ''}">${displayVal}</td>`;
         }).join('');
 
-        const primaryRow = `<tr class="hover:bg-blue-50/50 border-b border-gray-200 f-size-sm ${partnerKey === 'mpi' ? 'cursor-pointer' : ''} ${trHighlight}" data-index="${index}" data-product-name="${p.product_name}">${cellsHTML}</tr>`;
+        const safeProductName = (p.product_name || '').replace(/"/g, '&quot;');
+        const primaryRow = `<tr class="hover:bg-blue-50/50 border-b border-gray-200 f-size-sm ${partnerKey === 'mpi' ? 'cursor-pointer' : ''} ${trHighlight}" data-index="${index}" data-product-name="${safeProductName}">${cellsHTML}</tr>`;
 
         if (partnerKey !== 'mpi') return primaryRow;
 

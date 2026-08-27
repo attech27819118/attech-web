@@ -157,7 +157,7 @@ function renderGroupedSearchResults(query) {
                     <td class="py-3 px-3.5 text-slate-600 align-top text-center">
                         <div class="flex flex-col items-center gap-1.5">
                             <span class="f-size-xs text-slate-600 f-weight-bold">${partnerName}</span>
-                            <button onclick="navigateToCategory('${partnerName}', '${file.key}', 'all', decodeURIComponent('${encodeURIComponent(rawName)}'))"
+                            <button onclick="navigateToCategory('${partnerName}', '${file.key}', 'all', decodeURIComponent('${encodeURIComponent(rawName).replace(/'/g, '%27')}'))"
                                     title="查看 ${safeTitleName} 詳細資訊"
                                     aria-label="查看 ${safeTitleName} 詳細資訊"
                                     class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded f-weight-bold f-size-xs shadow-sm flex items-center gap-1 transition-all active:scale-95">
@@ -200,6 +200,10 @@ function renderGroupedSearchResults(query) {
 }
 
 function resetSearchInputFields() {
+    if (typeof searchDebounceTimer !== 'undefined' && searchDebounceTimer) {
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = null;
+    }
     AppState.searchQuery = '';
     document.querySelectorAll('.global-search-input').forEach(input => input.value = '');
 }
@@ -231,8 +235,10 @@ function selectPartnerAndSwitch(partnerKey) {
     switchPartner(partnerKey);
 }
 
-function updatePartnerUI(onRenderComplete = null) {
-    AppState.expandedDetails = [];
+function updatePartnerUI(onRenderComplete = null, preserveExpanded = false) {
+    if (!preserveExpanded) {
+        AppState.expandedDetails = [];
+    }
     const partner = AppState.partner;
 
     ['MPI', 'DorfKetal', 'Orion', 'Others'].forEach(p => {
@@ -267,7 +273,7 @@ function updatePartnerUI(onRenderComplete = null) {
             if (AppState.searchQuery) {
                 renderGroupedSearchResults(AppState.searchQuery);
             } else {
-                selectDirectoryNode(AppState.productLine, AppState.category || 'all');
+                selectDirectoryNode(AppState.productLine, AppState.category || 'all', preserveExpanded);
             }
 
             if (typeof onRenderComplete === 'function') {
@@ -519,8 +525,10 @@ function toggleFilterCheckbox(key, isChecked) {
     renderProducts();
 }
 
-function selectDirectoryNode(lineKey, categoryKey = 'all') {
-    AppState.expandedDetails = [];
+function selectDirectoryNode(lineKey, categoryKey = 'all', preserveExpanded = false) {
+    if (!preserveExpanded) {
+        AppState.expandedDetails = [];
+    }
     AppState.productLine = lineKey;
     AppState.category = categoryKey;
     resetSearchInputFields();

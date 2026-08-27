@@ -66,7 +66,7 @@ const featureConfig = {
         "water_repellency": "撥水", "heat_resistance": "耐高溫", "soil_resistance": "防污性",
         "cleanability": "易潔性", "no_silica_dust": "無矽塵",
         "lubricity_smooth_feel": "滑爽/滑度", "lubricity": "滑爽/潤滑", "flow_leveling": "流平性",
-        "recoatability": "重塗性", "weather_resistance": "耐候性", "chemical_resistance": "耐化學性"
+        "recoatability": "重塗性", "weather_resistance": "耐候性", "chemical_resistance": "耐化學性","high_dispersibility":"易分散"
     },
     "en": {
         "ptfe_alternative": "PTFE Alt.",
@@ -100,7 +100,8 @@ const featureConfig = {
         "flow_leveling": "Flow & Leveling",
         "recoatability": "Recoatability",
         "weather_resistance": "Weather Res.",
-        "chemical_resistance": "Chemical Res."
+        "chemical_resistance": "Chemical Res.",
+        "high_dispersibility":"High dispersibility"
     }
 };
 
