@@ -34,7 +34,7 @@ class ProductRepository {
             }
             renderTableSkeleton(6, 6);
             try {
-                const res = await fetch(brandConfig.masterPath || './json/mpi/master_database_clear.json');
+                const res = await fetch(brandConfig.masterPath || './json/mpi/mpiall.json');
                 const data = await res.json();
                 AppState.allProductsCache['mpi_master'] = data;
                 brandConfig.files.forEach(file => {
