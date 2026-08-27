@@ -2494,7 +2494,6 @@
         "performance_descriptions_zh": {
           "scratch_resistance": "提升塗層的抗刮傷性能。",
           "abrasion_resistance": "提升塗層的耐磨和耐摩擦性。",
-          "rub_resistance": "賦予優異的耐磨擦性能",
           "slip_lubricity": "提供良好表面滑爽性",
           "block_resistance": "提供優異的抗黏結性能",
           "heat_resistance": "提高耐熱性",
@@ -2739,23 +2738,20 @@
           "intercoat_adhesion": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "高分子量和高硬度提升了對溶劑性與溶脹的抵抗性",
-          "abrasion_resistance": "結晶型、高熔點蠟，提供卓越的耐磨擦與耐磨性能",
-          "rub_resistance": "提供卓越的抗擦損、耐摩擦耐磨防護",
-          "slip_lubricity": "易於分散的細粉，可經由高速混合直接加入",
+          "scratch_resistance": "高分子量和高硬度提升了塗層的耐刮性",
+          "abrasion_resistance": "提供卓越的耐磨擦與耐磨性能",
+          "high_dispersibility": "易於分散的細粉，可經由高速混合直接加入",
           "block_resistance": "賦予優異的抗黏結（防黏）性能",
-          "heat_resistance": "結晶型、高熔點蠟",
-          "intercoat_adhesion": "高分子量和硬度可提升耐溶劑性與溶脹的能力"
+          "heat_resistance": "結晶型、高熔點蠟"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "High molecular weight and hardness improve resistance to solvent absorption and swelling.",
           "abrasion_resistance": "Crystalline, high-melting-point wax provides outstanding rub and abrasion resistance.",
-          "rub_resistance": "Delivers superior protection against scuffing, rubbing, and abrasion.",
-          "slip_lubricity": "Easily dispersible fine powder that can be incorporated directly via high-speed mixing to provide surface slip.",
+
+          "high_dispersibility": "Easily dispersible fine powder that can be incorporated directly via high-speed mixing to provide surface slip.",
           "block_resistance": "Imparts excellent antiblocking properties.",
           "heat_resistance": "Crystalline, high-melting-point wax enhances heat resistance.",
-          "intercoat_adhesion": "High molecular weight and hardness improve resistance to solvent absorption and swelling."
-        }
+          }
       }
     }
   },
@@ -2850,17 +2846,15 @@
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "高分子量可提升塗層耐刮。",
-          "abrasion_resistance": "高分子量聚合物，可賦予耐磨性。",
-          "slip_lubricity": "賦予防滑性能",
-          "matting_gloss_control": "提供一致的消光效果，且不影響塗料黏度",
-          "increased_cof": "賦予防滑性能"
+          "abrasion_resistance": "高分子量，可賦予耐磨性。",
+          "anti_slip": "賦予防滑性能",
+          "matting_gloss_control": "提供高效能的消光效果，且不影響塗料黏度"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "High molecular weight polymer improves burnish and scratch resistance.",
           "abrasion_resistance": "High molecular weight polymer imparts abrasion resistance.",
-          "slip_lubricity": "Imparts anti-slip properties.",
-          "matting_gloss_control": "Provides consistent gloss reduction with no adverse effect on viscosity.",
-          "increased_cof": "Imparts anti-slip properties by maintaining high COF."
+          "anti_slip": "Imparts anti-slip properties.",
+          "matting_gloss_control": "Provides consistent gloss reduction with no adverse effect on viscosity."
         }
       },
       "industrial_floor": {
@@ -3014,19 +3008,17 @@
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提高抗擦傷、刮傷以及金屬劃痕性能",
-          "abrasion_resistance": "提高耐磨性。改性高熔點雜化聚丙烯蠟，在提供表面滑爽、抗擦傷和耐磨的同時，實現一致的光澤控制",
-          "slip_lubricity": "極易分散於極性與非極性體系中，提供表面滑爽性",
-          "matting_gloss_control": "高效的光澤控制劑，在低或中光澤漆面中具有良好的消光性能",
-          "block_resistance": "提供抗黏結性能。其低密度也有助於使二氧化矽消光添加劑保持懸浮狀態",
-          "heat_resistance": "改性高熔點聚丙烯"
+          "abrasion_resistance": "提高耐磨性。",
+          "slip_lubricity": "提供表面滑爽性",
+          "matting_gloss_control": "高效的消光劑",
+          "block_resistance": "提供抗黏結性能。狀態"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves mar, scratch, and metal marking resistance.",
           "abrasion_resistance": "Enhances abrasion resistance. Modified high-melting-point polypropylene wax provides consistent gloss control combined with surface slip, mar, and abrasion resistance.",
           "slip_lubricity": "Easily dispersible in polar and non-polar systems, providing surface slip.",
           "matting_gloss_control": "Effective gloss control agent with good burnish resistance in low- or medium-gloss finishes.",
-          "block_resistance": "Provides antiblocking properties. Low density helps keep silica matting agents in suspension.",
-          "heat_resistance": "Modified high-melting-point polypropylene provides heat resistance."
+          "block_resistance": "Provides antiblocking properties. Low density helps keep silica matting agents in suspension."
         }
       },
       "wood": {
@@ -4990,12 +4982,11 @@
           "clarity": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提供滑爽性、耐磨性與抗刮傷性的優異結合。",
+          "scratch_resistance": "提供抗刮傷性能。",
           "abrasion_resistance": "提供優異的耐磨性",
           "slip_lubricity": "提供極佳的滑爽性。在捲鋼塗料中，為成品捲鋼的成型與加工提供最大的滑爽度",
-          "gloss_retention": "提供優異的光澤保留性",
           "block_resistance": "在金屬包裝塗料中提供脫模性能",
-          "clarity": "非常適合需要極佳光澤與透明度的應用。在烘烤後能減少捲鋼塗料表面霧影"
+          "gloss_retention": "適合保持極佳光澤與透明度的應用。在烘烤後能減少捲鋼塗料表面霧影"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Provides an excellent combination of slip, abrasion resistance, and scratch resistance.",
@@ -5155,18 +5146,18 @@
           "increased_cof": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "與二氧化矽消光劑相比，提高了消光性",
+          "scratch_resistance": "與二氧化矽消光劑相比，提高了耐刮性",
           "slip_lubricity": "賦予防滑性能",
           "matting_gloss_control": "降低光澤，從半消光到全消光的表面效果",
           "block_resistance": "改善抗黏結性和流動性",
-          "increased_cof": "增加防滑性能"
+          "anti_slip": "增加防滑性能"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves burnish and mar resistance versus silica mattifiers.",
           "slip_lubricity": "Imparts anti-slip properties.",
           "matting_gloss_control": "Efficiently reduces gloss from satin to matte finish.",
           "block_resistance": "Optimized particle density improves in-can stability in water-based inks and coatings.",
-          "increased_cof": "Maintains high COF for non-skid properties."
+          "anti_slip": "Maintains high COF for non-skid properties."
         }
       }
     }
@@ -5495,7 +5486,6 @@
       }
     }
   },
-
   {
     "product_name": "MicroMatte 1415-EZ",
     "brand_code": "MPI",

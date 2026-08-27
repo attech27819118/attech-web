@@ -1,4 +1,10 @@
-const { Resend } = require('resend');
+/**
+ * ====================================================================
+ * ATTech Materials - AWS Lambda 專用郵件與 PDF 生成 Handler (lambda.js)
+ * ====================================================================
+ */
+
+const nodemailer = require('nodemailer');
 const PDFDocument = require('pdfkit');
 const path = require('path');
 const fs = require('fs');
@@ -11,7 +17,7 @@ function formatList(val) {
     return val || '無';
 }
 
-// 動態生成美觀單頁 PDF 附件
+// 動態生成單頁 PDF 附件
 function createStyledPDF(title, sections, companyName) {
     return new Promise((resolve, reject) => {
         const doc = new PDFDocument({
@@ -25,27 +31,16 @@ function createStyledPDF(title, sections, companyName) {
         doc.on('end', () => resolve(Buffer.concat(buffers)));
         doc.on('error', reject);
 
-        // 字型路徑 (支援 Vercel Serverless 與本機環境)
-        const regularFontCandidates = [
-            path.join(process.cwd(), 'fonts', 'NotoSansTC-Regular.ttf'),
-            path.join(__dirname, '..', 'fonts', 'NotoSansTC-Regular.ttf'),
-            path.join(__dirname, 'fonts', 'NotoSansTC-Regular.ttf')
-        ];
-        const regularFontPath = regularFontCandidates.find(p => fs.existsSync(p));
+        // 字型路徑 (支援 Lambda 環境)
+        const regularFontPath = path.join(__dirname, 'fonts', 'NotoSansTC-Regular.ttf');
+        const boldFontPath = path.join(__dirname, 'fonts', 'NotoSansTC-Bold.ttf');
 
-        const boldFontCandidates = [
-            path.join(process.cwd(), 'fonts', 'NotoSansTC-Bold.ttf'),
-            path.join(__dirname, '..', 'fonts', 'NotoSansTC-Bold.ttf'),
-            path.join(__dirname, 'fonts', 'NotoSansTC-Bold.ttf')
-        ];
-        const boldFontPath = boldFontCandidates.find(p => fs.existsSync(p));
-
-        if (regularFontPath) {
+        if (fs.existsSync(regularFontPath)) {
             doc.registerFont('ChineseRegular', regularFontPath);
         }
-        if (boldFontPath) {
+        if (fs.existsSync(boldFontPath)) {
             doc.registerFont('ChineseBold', boldFontPath);
-        } else if (regularFontPath) {
+        } else if (fs.existsSync(regularFontPath)) {
             doc.registerFont('ChineseBold', regularFontPath);
         }
 
@@ -55,10 +50,9 @@ function createStyledPDF(title, sections, companyName) {
         const pageWidth = doc.page.width - 56;
         const startX = 28;
 
-        // Header 頂部公司抬頭
+        // Header 公司抬頭
         doc.font(fontBold).fontSize(14).fillColor('#0F2C59').text('宏威應用材料 ATTech Materials', startX, 22, { align: 'left' });
         doc.font(fontRegular).fontSize(8).fillColor('#475569').text('Discover The Link To Life | 40661 台中市北屯區廍子巷116號1樓 | TEL: +886-4-2239-8056', startX, 38, { align: 'left' });
-
         doc.moveTo(startX, 50).lineTo(startX + pageWidth, 50).strokeColor('#1E3A8A').lineWidth(1.5).stroke();
 
         // 表單大標題
@@ -66,7 +60,6 @@ function createStyledPDF(title, sections, companyName) {
         doc.font(fontBold).fontSize(12).fillColor('#1E3A8A').text(title, { align: 'center' });
         doc.moveDown(0.25);
 
-        // 計算列高與版面緊湊度
         let totalRows = 0;
         sections.forEach(sec => {
             totalRows += (sec.rows ? sec.rows.length : 0);
@@ -77,17 +70,12 @@ function createStyledPDF(title, sections, companyName) {
         const fontSize = isCompact ? 8 : 8.5;
         const sectionHeaderHeight = isCompact ? 16 : 18;
 
-        // 逐區塊繪製表格
         sections.forEach(section => {
             const secHeaderY = doc.y;
-
-            // 區塊標題列
             doc.rect(startX, secHeaderY, pageWidth, sectionHeaderHeight).fill('#E2E8F0');
             doc.font(fontBold).fontSize(8.5).fillColor('#0F2C59').text(`  ${section.title}`, startX + 4, secHeaderY + 3.5);
-
             doc.y = secHeaderY + sectionHeaderHeight;
 
-            // 內容行
             section.rows.forEach(row => {
                 const currentY = doc.y;
                 const labelWidth = isCompact ? 120 : 130;
@@ -112,7 +100,6 @@ function createStyledPDF(title, sections, companyName) {
             doc.y += 4;
         });
 
-        // 頁尾 Footer
         const currentDate = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
         const footerY = doc.page.height - 24;
 
@@ -124,60 +111,46 @@ function createStyledPDF(title, sections, companyName) {
     });
 }
 
-// Vercel Serverless Function 進入點
-module.exports = async (req, res) => {
-    // 設定 CORS 標頭
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-    res.setHeader(
-        'Access-Control-Allow-Headers',
-        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization'
-    );
+// AWS Lambda 核心進入點
+exports.handler = async (event, context) => {
+    // 跨域 CORS 標頭
+    const corsHeaders = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type,Authorization,X-Requested-With',
+        'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
+    };
 
     // 處理 OPTIONS 預檢請求
-    if (req.method === 'OPTIONS') {
-        res.status(200).end();
-        return;
-    }
-
-    // 支援 GET 健康檢查
-    if (req.method === 'GET') {
-        return res.status(200).json({
-            status: 'ok',
-            service: 'ATTech Vercel Resend Serverless API',
-            timestamp: new Date().toISOString()
-        });
-    }
-
-    if (req.method !== 'POST') {
-        return res.status(405).json({ success: false, message: 'Method Not Allowed' });
+    if (event.httpMethod === 'OPTIONS' || event.requestContext?.http?.method === 'OPTIONS') {
+        return {
+            statusCode: 200,
+            headers: corsHeaders,
+            body: ''
+        };
     }
 
     try {
-        const data = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-        const { company, contact, email, type } = data || {};
+        let data = {};
+        if (event.body) {
+            const bodyStr = event.isBase64Encoded ? Buffer.from(event.body, 'base64').toString('utf-8') : event.body;
+            data = typeof bodyStr === 'string' ? JSON.parse(bodyStr) : bodyStr;
+        }
+
+        const { company, contact, email, type } = data;
 
         if (!company || !contact || !email) {
-            return res.status(400).json({
-                success: false,
-                message: '請填寫必填欄位（公司名稱、聯絡人、電子信箱）'
-            });
+            return {
+                statusCode: 400,
+                headers: corsHeaders,
+                body: JSON.stringify({
+                    success: false,
+                    message: '請填寫必填欄位（公司名稱、聯絡人、電子信箱）'
+                })
+            };
         }
-
-        const apiKey = process.env.RESEND_API_KEY;
-        if (!apiKey) {
-            console.error('缺少 RESEND_API_KEY 環境變數');
-            return res.status(500).json({
-                success: false,
-                message: '伺服器尚未設定 RESEND_API_KEY，請在 Vercel 後台 Environment Variables 中設定。'
-            });
-        }
-
-        const resend = new Resend(apiKey);
 
         const isQuickMode = (type === '快速詢價' || !data.appFields);
-        const subject = `【官網需求單】${company} - ${contact}（${isQuickMode ? '指定樣品/快速詢價' : '詳細應用需求評估'}）`;
+        let subject = `【官網需求單】${company} - ${contact}（${isQuickMode ? '指定樣品/快速詢價' : '詳細應用需求評估'}）`;
         let textContent = '';
         let htmlContent = '';
         let attachments = [];
@@ -240,7 +213,7 @@ module.exports = async (req, res) => {
             ];
         } else {
             const mobile = data.mobile || data.phone || '未提供';
-            const fax = data.fax || '無';
+            const fax = data.fax || '未提供';
             const address = data.address || '未提供';
             const appFields = formatList(data.appFields);
             const functions = formatList(data.functions);
@@ -303,7 +276,7 @@ ${remarks}
                     <p style="color: #1e3a8a; font-weight: bold; margin: 0; font-size: 15px;">詳細應用需求評估單 (完整樣品申請單)</p>
                 </div>
                 
-                <h3 style="color: #1e3a8a; font-size: 15px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">A. 基本聯絡資訊</h3>
+                <h3 style="color: #1e3a8a; font-size: 14px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">A. 基本聯絡資訊</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">公司名稱：</td><td style="padding: 6px;">${company}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">聯絡人（職稱）：</td><td style="padding: 6px;">${contact}</td></tr>
@@ -313,7 +286,7 @@ ${remarks}
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">樣品寄送地址：</td><td style="padding: 6px;">${address}</td></tr>
                 </table>
 
-                <h3 style="color: #1e3a8a; font-size: 15px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">B. 應用需求與系統</h3>
+                <h3 style="color: #1e3a8a; font-size: 14px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">B. 應用需求與系統</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">應用領域：</td><td style="padding: 6px;">${appFields}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">功能需求：</td><td style="padding: 6px;">${functions} (其他: ${otherFunc})</td></tr>
@@ -321,7 +294,7 @@ ${remarks}
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">組份 / 外觀：</td><td style="padding: 6px;">${compType} / ${appType}</td></tr>
                 </table>
 
-                <h3 style="color: #1e3a8a; font-size: 15px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">C. 基本規格與限制</h3>
+                <h3 style="color: #1e3a8a; font-size: 14px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">C. 基本規格與限制</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">底材類型：</td><td style="padding: 6px;">${substrates} (其它: ${otherSubstrate})</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">乾膜厚度：</td><td style="padding: 6px;">${filmThick}</td></tr>
@@ -332,7 +305,7 @@ ${remarks}
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">需求文件：</td><td style="padding: 6px;">${docs}</td></tr>
                 </table>
 
-                <h3 style="color: #1e3a8a; font-size: 15px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">D & E. 曾測試紀錄與備註</h3>
+                <h3 style="color: #1e3a8a; font-size: 14px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">D & E. 曾測試紀錄與備註</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px;">
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">曾試過樣品：</td><td style="padding: 6px;">${pastSamples}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">備註 / 其他說明：</td><td style="padding: 6px; white-space: pre-wrap;">${remarks}</td></tr>
@@ -397,17 +370,23 @@ ${remarks}
 
             attachments.push({
                 filename: isQuickMode ? `${company}_快速樣品申請單.pdf` : `${company}_詳細樣品申請單.pdf`,
-                content: pdfBuffer
+                content: pdfBuffer,
+                contentType: 'application/pdf'
             });
         } catch (pdfErr) {
             console.error('PDF 生成錯誤:', pdfErr);
         }
 
-        // 寄件者與收件者設定
-        const fromEmail = process.env.FROM_EMAIL || 'ATTech 官網系統 <onboarding@resend.dev>';
-        const toEmail = process.env.TO_EMAIL || 'atservice@attech.com.tw';
+        // 郵件傳輸設定（優先支援 SES SMTP 或企業 SMTP）
+        const SMTP_HOST = process.env.SES_SMTP_HOST || process.env.SMTP_HOST || 'email-smtp.us-east-1.amazonaws.com';
+        const SMTP_PORT = parseInt(process.env.SES_SMTP_PORT || process.env.SMTP_PORT || '465', 10);
+        const SMTP_USER = process.env.SES_SMTP_USER || process.env.SMTP_USER;
+        const SMTP_PASS = process.env.SES_SMTP_PASS || process.env.SMTP_PASS;
+        const FROM_EMAIL = process.env.FROM_EMAIL || 'atservice@attech.com.tw';
+        const TO_EMAIL = process.env.TO_EMAIL || 'atservice@attech.com.tw';
 
-        let ccList = ['sales1@attech.com.tw'];
+        // CC 副本名單 (預設為空，僅在前端傳入 cc 時加入)
+        let ccList = [];
         if (data.cc) {
             if (Array.isArray(data.cc)) {
                 ccList = ccList.concat(data.cc);
@@ -416,41 +395,55 @@ ${remarks}
             }
         }
 
-        // 呼叫 Resend 發送郵件
-        const sendResult = await resend.emails.send({
-            from: fromEmail,
-            to: [toEmail],
-            cc: ccList,
-            reply_to: email,
+        const transporter = nodemailer.createTransport({
+            host: SMTP_HOST,
+            port: SMTP_PORT,
+            secure: SMTP_PORT === 465,
+            auth: {
+                user: SMTP_USER,
+                pass: SMTP_PASS
+            },
+            tls: {
+                rejectUnauthorized: false
+            }
+        });
+
+        const mailOptions = {
+            from: `"ATTech 官網表單" <${FROM_EMAIL}>`,
+            to: TO_EMAIL,
+            replyTo: email,
             subject: subject,
             text: textContent,
             html: htmlContent,
             attachments: attachments
-        });
+        };
 
-        if (sendResult.error) {
-            console.error('Resend 發送錯誤:', sendResult.error);
-            return res.status(500).json({
-                success: false,
-                message: sendResult.error.message || 'Resend 發信失敗',
-                error: sendResult.error
-            });
+        if (ccList.length > 0) {
+            mailOptions.cc = ccList;
         }
 
-        console.log(`[Resend Sent Success] ${company} - ${contact} (ID: ${sendResult.data?.id})`);
+        await transporter.sendMail(mailOptions);
+        console.log(`[Lambda SES Sent] ${company} - ${contact} (${type})`);
 
-        return res.status(200).json({
-            success: true,
-            message: '需求表單及 PDF 申請單已成功寄出！專人將儘速與您聯繫。',
-            id: sendResult.data?.id
-        });
+        return {
+            statusCode: 200,
+            headers: corsHeaders,
+            body: JSON.stringify({
+                success: true,
+                message: '需求表單及 PDF 申請單已成功寄出！專人將儘速與您聯繫。'
+            })
+        };
 
     } catch (error) {
-        console.error('Vercel API 處理錯誤:', error);
-        return res.status(500).json({
-            success: false,
-            message: '伺服器處理郵件發送失敗，請稍後再試或直接聯繫客服。',
-            error: error.message
-        });
+        console.error('Lambda 處理郵件失敗:', error);
+        return {
+            statusCode: 500,
+            headers: corsHeaders,
+            body: JSON.stringify({
+                success: false,
+                message: '伺服器處理郵件發送失敗，請稍後再試或直接聯繫客服。',
+                error: error.message
+            })
+        };
     }
 };
