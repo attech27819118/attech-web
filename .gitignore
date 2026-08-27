@@ -6,4 +6,5 @@ node_modules/
 *.log
 *.csv
 *.zip
+_archive/
 
