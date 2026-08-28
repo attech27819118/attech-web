@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap 定位
+Sitemap: https://www.attech.com.tw/sitemap.xml
