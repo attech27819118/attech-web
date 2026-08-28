@@ -49,11 +49,28 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+// 安全性回應標頭與快取中介軟體
+app.use((req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    next();
+});
+
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// 靜態資源目錄（提供 doc 下載與本機除錯）
-app.use(express.static(path.join(__dirname)));
+// 靜態資源目錄（提供 doc, tds, img 下載與靜態託管，並配置快取）
+app.use(express.static(path.join(__dirname), {
+    maxAge: '1d',
+    setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'no-cache, must-revalidate');
+        } else if (filePath.match(/\.(jpg|jpeg|png|gif|webp|svg|pdf|docx|woff2?)$/)) {
+            res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
+        }
+    }
+}));
 
 // ----------------------------------------------------
 // 2. 郵件發送器配置（優先 Resend，次之 SMTP）
