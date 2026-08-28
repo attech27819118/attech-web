@@ -191,6 +191,29 @@ function showToast(msg, type = 'success') {
     }, 4000);
 }
 
+function copyProductLink(productName, partner = null, line = null, category = null) {
+    const p = partner || AppState.partner || 'MPI';
+    const l = line || AppState.productLine || 'ptfe';
+    const c = (category && category !== 'all') ? category : (AppState.category !== 'all' ? AppState.category : '');
+
+    let url = `${window.location.origin}${window.location.pathname}#products?partner=${encodeURIComponent(p)}&line=${encodeURIComponent(l)}`;
+    if (c) url += `&category=${encodeURIComponent(c)}`;
+    url += `&product=${encodeURIComponent(productName)}`;
+
+    AppState.selectedProduct = productName;
+    updateHashRoute(false);
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+            showToast(`已複製「${productName}」專屬網址！`, 'success');
+        }).catch(() => {
+            prompt('請複製以下產品專屬連結：', url);
+        });
+    } else {
+        prompt('請複製以下產品專屬連結：', url);
+    }
+}
+
 function parseHashRoute() {
     const hash = window.location.hash.replace(/^#/, '');
     if (!hash) return;
@@ -220,6 +243,51 @@ function parseHashRoute() {
         const partner = params.get('partner');
         const line = params.get('line');
         const category = params.get('category');
+        const productName = params.get('product') || params.get('item');
+
+        if (productName) {
+            AppState.selectedProduct = productName;
+            if (partner && line) {
+                navigateToCategory(partner, line, category || 'all', productName);
+                return;
+            }
+
+            // 若只有 product 參數，全域比對所屬品牌與系列
+            loadAllBrandsData().then(() => {
+                const cleanStr = s => (s || '').replace(/&[a-z0-9#]+;/gi, '').replace(/[®™©]/g, '').trim().toLowerCase();
+                const targetClean = cleanStr(productName);
+
+                if (AppState.allProductsCache['mpi_master']) {
+                    const mpiFound = AppState.allProductsCache['mpi_master'].find(item => cleanStr(item.product_name) === targetClean || cleanStr(item.product_name).includes(targetClean));
+                    if (mpiFound) {
+                        const appKeys = mpiFound.applications_data ? Object.keys(mpiFound.applications_data) : [];
+                        const targetLine = appKeys.length > 0 ? appKeys[0] : 'ptfe';
+                        navigateToCategory('MPI', targetLine, 'all', mpiFound.product_name);
+                        return;
+                    }
+                }
+
+                for (const [pKey, brandObj] of Object.entries(AppState.configs)) {
+                    if (brandObj.files) {
+                        for (const file of brandObj.files) {
+                            const cached = AppState.allProductsCache[file.key];
+                            if (Array.isArray(cached)) {
+                                const found = cached.find(item => cleanStr(item.product_name) === targetClean || (item.product_name && cleanStr(item.product_name).includes(targetClean)));
+                                if (found) {
+                                    const matchedPartner = Object.keys(partnerConfigMap).find(k => partnerConfigMap[k] === pKey) || 'Others';
+                                    navigateToCategory(matchedPartner, file.key, 'all', found.product_name);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (partner) AppState.partner = partner;
+                if (typeof updatePartnerUI === 'function') updatePartnerUI();
+            });
+            return;
+        }
 
         if (partner) AppState.partner = partner;
 
@@ -252,6 +320,7 @@ function updateHashRoute(usePush = false) {
             if (AppState.partner) params.set('partner', AppState.partner);
             if (AppState.productLine) params.set('line', AppState.productLine);
             if (AppState.category && AppState.category !== 'all') params.set('category', AppState.category);
+            if (AppState.selectedProduct) params.set('product', AppState.selectedProduct);
         }
     } else if (activeTab === 'contact') {
         const isDetailed = !document.getElementById('form-mode-detailed')?.classList.contains('hidden');

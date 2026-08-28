@@ -524,11 +524,17 @@ function toggleProductDetail(index, productName) {
         if (arrowIcon) arrowIcon.classList.add('rotate-90', 'text-blue-900');
         if (parentRow) parentRow.classList.add('row-expanded');
         if (!AppState.expandedDetails.includes(productName)) AppState.expandedDetails.push(productName);
+        AppState.selectedProduct = productName;
+        if (typeof updateHashRoute === 'function') updateHashRoute(false);
     } else {
         detailRow.classList.add('hidden');
         if (arrowIcon) arrowIcon.classList.remove('rotate-90', 'text-blue-900');
         if (parentRow) parentRow.classList.remove('row-expanded');
         AppState.expandedDetails = AppState.expandedDetails.filter(name => name !== productName);
+        if (AppState.selectedProduct === productName) {
+            AppState.selectedProduct = null;
+            if (typeof updateHashRoute === 'function') updateHashRoute(false);
+        }
     }
 }
 

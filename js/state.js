@@ -235,6 +235,7 @@ const AppState = {
     sortColumn: null,
     sortOrder: 'desc',
     compareList: [],
+    selectedProduct: null,
 
     set(key, value) {
         if (this[key] === value) return;
