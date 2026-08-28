@@ -15,11 +15,17 @@ function renderProductActions(p, partnerKey = null, lineKey = null) {
         ? (AppState.lang === 'zh' ? '已比' : 'Added')
         : (AppState.lang === 'zh' ? '比較' : 'Compare');
 
+    const safeName = (p.product_name || '').replace(/"/g, '&quot;').replace(/'/g, "\\'");
+    const shareTitle = AppState.lang === 'zh' ? '複製此產品專屬網址' : 'Copy direct link to this product';
+
     return `
     <div class="flex items-center gap-1.5 shrink-0 select-none mt-1.5 whitespace-nowrap">
         <button data-action="toggle-compare" data-product="${p.product_name}" data-partner="${pKey}" data-line="${lKey}" class="compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all ${isSelected ? 'bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900' : 'text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200'} active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap" title="${compareTitle}" aria-label="${isSelected ? '從比較清單移除' : '加入比較'}">
             <i class="fa-solid ${isSelected ? 'fa-check text-emerald-300' : 'fa-scale-balanced'} text-[10px] shrink-0"></i>
             <span class="shrink-0 whitespace-nowrap">${compareLabel}</span>
+        </button>
+        <button type="button" onclick="event.stopPropagation(); copyProductLink('${safeName}', '${pKey}', '${lKey}')" class="inline-flex items-center gap-1 px-1.5 py-0.5 h-6 rounded-md transition-all text-slate-500 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200 active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap" title="${shareTitle}" aria-label="${shareTitle}">
+            <i class="fa-solid fa-link text-[10px] shrink-0"></i>
         </button>
     </div>`;
 }

@@ -18,19 +18,29 @@
 ### 1. Micro Powders, Inc. (MPI 微粉蠟 / PTFE 取代)
 - **PTFE 取代系列 (PFAS Free)**: 環保無氟耐磨、耐刮、表面滑爽改質劑。
 - **塗料微粉蠟**: 粉體塗料、工業塗料、地板塗料、木器漆、皮革塗料專用微粉蠟。
-- **油墨用微粉蠟**: UV 固化油墨、能量固化油墨與 OPV 上光油耐磨助劑。
-- **天然生質蠟**: 環保生質蠟系列。
+- **代表型號與直連網址**:
+  - MP-22 (耐磨耐刮微粉蠟): https://www.attech.com.tw/#products?partner=MPI&line=ptfe&product=MP-22
+  - AquaPoly 250 (水性改質蠟): https://www.attech.com.tw/#products?partner=MPI&line=ptfe&product=AquaPoly%20250
+  - SuperGlide 1231 (高滑度耐刮助劑): https://www.attech.com.tw/#products?partner=MPI&line=ptfe&product=SuperGlide%201231
 - **線上型錄**: https://www.attech.com.tw/#products?partner=MPI&line=ptfe
 
 ### 2. Dorf Ketal (特種催化劑與潤滑添加劑)
 - **Tyzor® 鈦酸酯與鋯酸酯**: PET/PBT 酯化催化劑、通用反應催化劑、塗料與油墨密著促進劑、交聯劑、玻璃表面處理劑。
 - **PX 潤滑油添加劑 (原 ExxonMobil 產品線)**: 引擎機油、車用/工業齒輪油、液壓油、壓縮機油、導軌油、循環油、金屬切削加工液添加劑。
 - **Unilink & Clearlink 擴鏈劑**: 聚脲 (Polyurea)、聚氨酯 (PU)、環氧樹脂 (Epoxy) 擴鏈劑。
+- **代表型號與直連網址**:
+  - Tyzor TE (水性交聯與催化劑): https://www.attech.com.tw/#products?partner=DorfKetal&line=tyzor&product=Tyzor%20TE
+  - Tyzor TPT (四異丙醇鈦酯化催化劑): https://www.attech.com.tw/#products?partner=DorfKetal&line=tyzor&product=Tyzor%20TPT
+  - Clearlink 1100 (無黃變聚氨酯擴鏈劑): https://www.attech.com.tw/#products?partner=DorfKetal&line=chain&product=Clearlink%201100
 - **線上型錄**: https://www.attech.com.tw/#products?partner=DorfKetal&line=tyzor
 
 ### 3. Orion Engineered Carbons (特級碳黑)
 - **塗料用碳黑**: 汽車塗料、電著塗料、一般工業塗料、金屬漆、建築塗料、防靜電與導電塗料（水性 / 溶劑型 / 粉體）。
 - **油墨用碳黑**: 單張紙凸版、出版凹版、UV 固化油墨、水性/非水性噴墨油墨、碳粉。
+- **代表型號與直連網址**:
+  - Special Black 4 (高光澤高級工業與汽車塗料碳黑): https://www.attech.com.tw/#products?partner=Orion&line=coating&product=Special%20Black%204
+  - Color Black FW 200 (極致高黑度塗料碳黑): https://www.attech.com.tw/#products?partner=Orion&line=coating&product=Color%20Black%20FW%20200
+  - Printex 35 (印刷油墨標準碳黑): https://www.attech.com.tw/#products?partner=Orion&line=ink_impact&product=PRINTEX%2035
 - **線上型錄**: https://www.attech.com.tw/#products?partner=Orion&line=coating
 
 ### 4. 其他功能性特化材料 (Other Specialty Additives)
@@ -39,6 +49,9 @@
 - **馬林酸樹脂 (Maleic Acid Resin)**: 松香改性馬林酸樹脂、醇溶型樹脂、酯化松香。
 - **矽烷偶合劑 (Silane Coupling Agents)**: Dynasylan, Dynasylan Sivo, Hydrosil 系列。
 - **密著促進劑 (Adhesion Promoters)**: 氯化聚烯烴 (CPO) 與非氯系環保密著樹脂。
+- **代表型號與直連網址**:
+  - Dynasylan GLYMO (環氧矽烷偶合劑): https://www.attech.com.tw/#products?partner=Others&line=silane&product=Dynasylan%20GLYMO
+  - TS-530 (表面處理型二氧化矽消光粉): https://www.attech.com.tw/#products?partner=Others&line=matting_agent&product=TS-530
 - **線上型錄**: https://www.attech.com.tw/#products?partner=Others&line=coating_additive
 
 ---
