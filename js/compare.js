@@ -104,7 +104,6 @@ function clearCompare() {
 function updateCompareUI() {
     const dock = document.getElementById('compare-dock');
     const countBadge = document.getElementById('compare-count-badge');
-    const headerBadge = document.getElementById('header-compare-badge');
     const slotsContainer = document.getElementById('compare-slots-container');
     const t = uiText[AppState.lang];
 
@@ -124,15 +123,6 @@ function updateCompareUI() {
 
     if (countBadge) {
         countBadge.innerText = `${count} / 4`;
-    }
-
-    if (headerBadge) {
-        if (count > 0) {
-            headerBadge.innerText = count;
-            headerBadge.classList.remove('hidden');
-        } else {
-            headerBadge.classList.add('hidden');
-        }
     }
 
     // 更新 4 個槽位

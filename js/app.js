@@ -6,6 +6,19 @@
 
 let searchDebounceTimer = null;
 
+function updateSearchLayout(isSearching) {
+    const partnerSection = document.getElementById('section-partner');
+    const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
+    if (partnerSection) {
+        if (isSearching) partnerSection.classList.add('hidden');
+        else partnerSection.classList.remove('hidden');
+    }
+    if (directorySidebar) {
+        if (isSearching) directorySidebar.classList.add('hidden');
+        else directorySidebar.classList.remove('hidden');
+    }
+}
+
 function debouncedSearch(val) {
     document.querySelectorAll('.global-search-input').forEach(input => {
         if (input.value !== val) input.value = val;
@@ -17,11 +30,21 @@ function debouncedSearch(val) {
         AppState.searchQuery = query;
 
         if (query !== '') {
-            switchTab('products', false);
+            updateSearchLayout(true);
+            switchTab('products', false, false);
             await loadAllBrandsData();
             renderGroupedSearchResults(query);
             updateHashRoute(false);
+
+            // 搜尋後平滑捲動至搜尋結果區域，確保使用者第一時間看到結果
+            const targetSection = document.getElementById('section-directory-finder');
+            if (targetSection) {
+                const rect = targetSection.getBoundingClientRect();
+                const top = window.pageYOffset + rect.top - 75;
+                window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+            }
         } else {
+            updateSearchLayout(false);
             renderProducts();
             updateHashRoute(false);
         }
@@ -36,15 +59,18 @@ function removeSearchToken(tokenToRemove) {
     document.querySelectorAll('.global-search-input').forEach(input => input.value = newQuery);
 
     if (newQuery !== '') {
+        updateSearchLayout(true);
         renderGroupedSearchResults(newQuery);
         updateHashRoute(false);
     } else {
+        updateSearchLayout(false);
         renderProducts();
         updateHashRoute(false);
     }
 }
 
 function renderGroupedSearchResults(query) {
+    updateSearchLayout(true);
     updateRatingLegend();
     const tokens = SearchEngine.parseTokens(query);
     const tbody = document.getElementById('directory-matrix-body');
@@ -206,11 +232,13 @@ function resetSearchInputFields() {
     }
     AppState.searchQuery = '';
     document.querySelectorAll('.global-search-input').forEach(input => input.value = '');
+    updateSearchLayout(false);
 }
 
 function resetFilters() {
     AppState.filters = {};
     resetSearchInputFields();
+    updateSearchLayout(false);
     initFilters();
     renderProducts();
     updateHashRoute(false);
@@ -218,6 +246,7 @@ function resetFilters() {
 
 function switchPartner(partnerKey) {
     resetSearchInputFields();
+    updateSearchLayout(false);
     AppState.partner = partnerKey;
     const configKey = partnerConfigMap[partnerKey] || 'mpi';
     const brandConfig = AppState.configs[configKey];
@@ -253,6 +282,10 @@ function updatePartnerUI(onRenderComplete = null, preserveExpanded = false) {
     const comingSoon = document.getElementById('section-coming-soon');
     const configKey = partnerConfigMap[partner] || 'mpi';
     const brandConfig = AppState.configs[configKey];
+
+    if (!AppState.searchQuery) {
+        updateSearchLayout(false);
+    }
 
     updateRatingLegend();
     updateCompareUI();
@@ -396,16 +429,27 @@ function updateBreadcrumbPath() {
     const configKey = partnerConfigMap[AppState.partner] || 'mpi';
     const brandConfig = AppState.configs[configKey];
 
+    let brandDisplayName = brandConfig?.brandName || AppState.partner;
+    if (configKey === 'others' && AppState.lang === 'zh') {
+        brandDisplayName = '其他特化材料';
+    }
+
     const currentFile = brandConfig?.files?.find(f => f.key === AppState.productLine);
     const lineTitle = currentFile
         ? (AppState.lang === 'zh' ? currentFile.titleZh : currentFile.titleEn)
         : AppState.productLine;
 
-    if (AppState.category && AppState.category !== 'all') {
-        pathElem.innerHTML = `${lineTitle} <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-500"></i> <span class="f-weight-bold text-blue-950">${AppState.category}</span>`;
-    } else {
-        pathElem.innerHTML = `${lineTitle} <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-500"></i> <span class="f-weight-bold text-blue-950">${uiText[AppState.lang].cat_all}</span>`;
-    }
+    const catDisplay = (AppState.category && AppState.category !== 'all')
+        ? AppState.category
+        : uiText[AppState.lang].cat_all;
+
+    pathElem.innerHTML = `
+        <span class="text-slate-600 font-semibold">${brandDisplayName}</span>
+        <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i>
+        <span class="text-slate-700 font-semibold">${lineTitle}</span>
+        <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i>
+        <span class="f-weight-bold text-blue-950">${catDisplay}</span>
+    `;
 }
 
 function renderProducts() {
