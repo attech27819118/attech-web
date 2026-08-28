@@ -191,31 +191,8 @@ function showToast(msg, type = 'success') {
     }, 4000);
 }
 
-function copyProductLink(productName, partner = null, line = null, category = null) {
-    const p = partner || AppState.partner || 'MPI';
-    const l = line || AppState.productLine || 'ptfe';
-    const c = (category && category !== 'all') ? category : (AppState.category !== 'all' ? AppState.category : '');
-
-    let url = `${window.location.origin}${window.location.pathname}#products?partner=${encodeURIComponent(p)}&line=${encodeURIComponent(l)}`;
-    if (c) url += `&category=${encodeURIComponent(c)}`;
-    url += `&product=${encodeURIComponent(productName)}`;
-
-    AppState.selectedProduct = productName;
-    updateHashRoute(false);
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(() => {
-            showToast(`已複製「${productName}」專屬網址！`, 'success');
-        }).catch(() => {
-            prompt('請複製以下產品專屬連結：', url);
-        });
-    } else {
-        prompt('請複製以下產品專屬連結：', url);
-    }
-}
-
 function parseHashRoute() {
-    const hash = window.location.hash.replace(/^#/, '');
+    const hash = window.location.hash.replace(/^#\/?/, '');
     if (!hash) return;
 
     const [tabPart, queryPart] = hash.split('?');
