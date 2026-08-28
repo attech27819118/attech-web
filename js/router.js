@@ -124,30 +124,37 @@ function openModal(productName, type) {
 
     if (type === 'tds') {
         localPath = `./tds/${productName} TDS.pdf`;
-        title.innerText = `${productName} - TDS`;
-        icon.className = "fa-solid fa-file-pdf text-red-600 mr-2 f-size-base";
+        if (title) title.innerText = `${productName} - TDS`;
+        if (icon) icon.className = "fa-solid fa-file-pdf text-red-600 mr-2 f-size-base";
     } else if (type === 'data') {
         localPath = `./coatingsdata/${productName} data.pdf`;
-        title.innerText = `${productName} - Tech Data`;
-        icon.className = "fa-solid fa-file-lines text-blue-700 mr-2 f-size-base";
+        if (title) title.innerText = `${productName} - Tech Data`;
+        if (icon) icon.className = "fa-solid fa-file-lines text-blue-700 mr-2 f-size-base";
     }
 
-    iframe.src = localPath + "#toolbar=0&navpanes=0";
+    if (iframe) iframe.src = localPath + "#toolbar=0&navpanes=0";
     if (downloadBtn) {
         downloadBtn.href = localPath;
         downloadBtn.download = `${productName}_${type.toUpperCase()}.pdf`;
     }
 
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
 }
 
 function toggleTdsModal(open) {
     const modal = document.getElementById('tds-modal');
     const iframe = document.getElementById('tds-iframe');
-    if (!open) {
-        modal.classList.replace('flex', 'hidden');
-        iframe.src = "";
+    if (!modal) return;
+    if (open) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        if (iframe) iframe.src = "";
     }
 }
 

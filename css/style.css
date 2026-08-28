@@ -615,6 +615,12 @@ tr.row-target-highlight td:last-child {
     }
 }
 
+/* 確保 TDS 技術文件預覽彈窗層級高於產品比較表彈窗 (#compare-modal)，置於最頂層 */
+#tds-modal {
+    z-index: 70 !important;
+}
+
+#tds-modal > div:last-child,
 #compare-modal > div:last-child,
 #doc-modal > div:last-child {
     animation: modalPopIn var(--motion-duration-base) var(--motion-ease) forwards;
