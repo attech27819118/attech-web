@@ -34,6 +34,10 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
     }
 
     if (tabId === 'products') {
+        AppState.expandedMenus = [];
+        if (typeof updateSearchLayout === 'function' && !AppState.searchQuery) {
+            updateSearchLayout(false);
+        }
         if (updateUrl && !window.location.hash.includes('?q=')) {
             if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
         }
@@ -48,6 +52,13 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
 }
 
 window.addEventListener('popstate', parseHashRoute);
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+        if (typeof toggleTdsModal === 'function') toggleTdsModal(false);
+        if (typeof closeCompareModal === 'function') closeCompareModal();
+    }
+});
 
 function switchLanguage(lang) {
     AppState.set('lang', lang);
@@ -88,8 +99,6 @@ function updateLanguageUI() {
     if (clearBtnText) clearBtnText.innerText = uiText[AppState.lang].btn_clear_compare;
     const openBtnText = document.getElementById('btn-open-compare-text');
     if (openBtnText) openBtnText.innerText = uiText[AppState.lang].btn_start_compare;
-    const headerCompareText = document.getElementById('header-compare-btn-text');
-    if (headerCompareText) headerCompareText.innerText = uiText[AppState.lang].compare_modal_title_short || uiText[AppState.lang].compare_dock_title;
     const modalTitle = document.getElementById('compare-modal-title');
     if (modalTitle) modalTitle.innerText = uiText[AppState.lang].compare_modal_title;
     const modalSub = document.getElementById('compare-modal-sub');
@@ -197,6 +206,7 @@ function parseHashRoute() {
         if (q) {
             AppState.searchQuery = q;
             document.querySelectorAll('.global-search-input').forEach(input => input.value = q);
+            if (typeof updateSearchLayout === 'function') updateSearchLayout(true);
             loadAllBrandsData().then(() => {
                 if (typeof renderGroupedSearchResults === 'function') {
                     renderGroupedSearchResults(q);
@@ -206,6 +216,7 @@ function parseHashRoute() {
         }
 
         if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
+        if (typeof updateSearchLayout === 'function') updateSearchLayout(false);
         const partner = params.get('partner');
         const line = params.get('line');
         const category = params.get('category');
@@ -278,6 +289,7 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
         searchDebounceTimer = null;
     }
     if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
+    if (typeof updateSearchLayout === 'function') updateSearchLayout(false);
     AppState.filters = {};
     if (typeof initFilters === 'function') initFilters();
 
@@ -286,8 +298,15 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
     AppState.productLine = lineKey;
     AppState.category = categoryKey || 'all';
 
-    if (!AppState.expandedMenus.includes(lineKey)) {
-        AppState.expandedMenus.push(lineKey);
+    // 從導覽列選取產品時，側邊欄子選單預設收起 (expandedMenus 清空)，明確指引當前位置
+    AppState.expandedMenus = [];
+
+    // 若行動版側邊欄處於開啟狀態，自動收合
+    const mobileMenu = document.getElementById('directory-tree-menu');
+    const mobileChevron = document.getElementById('mobile-sidebar-chevron');
+    if (mobileMenu && !mobileMenu.classList.contains('hidden') && window.innerWidth < 768) {
+        mobileMenu.classList.add('hidden');
+        if (mobileChevron) mobileChevron.classList.remove('rotate-180');
     }
 
     if (productName) {
