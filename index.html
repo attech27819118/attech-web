@@ -111,7 +111,7 @@
                     },
                     "potentialAction": {
                         "@type": "SearchAction",
-                        "target": "https://www.attech.com.tw/#products?q={search_term_string}",
+                        "target": "https://www.attech.com.tw/products?q={search_term_string}",
                         "query-input": "required name=search_term_string"
                     }
                 },
@@ -124,25 +124,25 @@
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Micro Powders 微粉蠟與 PTFE 取代系列",
-                            "url": "https://www.attech.com.tw/#products?partner=MPI&line=ptfe"
+                            "url": "https://www.attech.com.tw/products/mpi/ptfe"
                         },
                         {
                             "@type": "ListItem",
                             "position": 2,
                             "name": "Dorf Ketal Tyzor® 鈦酸酯與鋯酸酯催化劑",
-                            "url": "https://www.attech.com.tw/#products?partner=DorfKetal&line=tyzor"
+                            "url": "https://www.attech.com.tw/products/dorfketal/tyzor"
                         },
                         {
                             "@type": "ListItem",
                             "position": 3,
                             "name": "Orion 塗料與油墨特級碳黑",
-                            "url": "https://www.attech.com.tw/#products?partner=Orion&line=coating"
+                            "url": "https://www.attech.com.tw/products/orion/coating"
                         },
                         {
                             "@type": "ListItem",
                             "position": 4,
                             "name": "其他特化材料 (矽烷偶合劑 / 消光粉 / 馬林酸樹脂 / 密著樹脂)",
-                            "url": "https://www.attech.com.tw/#products?partner=Others&line=coating_additive"
+                            "url": "https://www.attech.com.tw/products/others/coating_additive"
                         }
                     ]
                 }
@@ -194,8 +194,8 @@
 <nav class="bg-white shadow-sm sticky top-0 z-50 attech-accent">
     <div class="optimized-container px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16 gap-4">
-            <div class="flex items-center cursor-pointer active:scale-[0.98] shrink-0"
-                 onclick="switchTab('about')" role="button" tabindex="0" aria-label="回到首頁/關於宏威">
+            <a href="/about" class="flex items-center cursor-pointer active:scale-[0.98] shrink-0 no-underline"
+               id="nav-brand-logo" aria-label="回到首頁/關於宏威">
                 <div class="flex-shrink-0 flex flex-col justify-center w-full">
                     <!-- 第一行：中文標題（水平均分） + AT 方塊（靠右） -->
                     <div class="flex items-center justify-between w-full gap-3">
@@ -209,7 +209,7 @@
                     <!-- 第二行：英文副標題 -->
                     <span class="f-size-xs text-slate-600 f-weight-bold tracking-widest uppercase mt-0.5">Discover The Link To Life</span>
                 </div>
-            </div>
+            </a>
 
             <!-- 全域導覽列搜尋框（桌面版） -->
             <div class="flex-1 max-w-sm mx-2 hidden sm:block">
@@ -227,35 +227,35 @@
             </div>
 
             <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="tablist" aria-label="網站主要選單">
-                <button onclick="switchTab('about')" id="nav-about" role="tab" aria-selected="true"
-                        aria-controls="tab-about"
-                        class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1">
+                <a href="/about" id="nav-about" role="tab" aria-selected="true"
+                   aria-controls="tab-about"
+                   class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 h-16 inline-flex items-center">
                     首頁
-                </button>
+                </a>
                 <!-- 導覽列產品項目 (包含 Mega Menu) -->
                 <div class="relative group">
-                    <button onclick="switchTab('products')" id="nav-products" role="tab" aria-selected="false"
-                            class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 inline-flex items-center gap-1.5 h-16">
+                    <a href="/products" id="nav-products" role="tab" aria-selected="false"
+                       class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 inline-flex items-center gap-1.5 h-16">
                         產品
-                    </button>
+                    </a>
 
                     <!-- Mega Menu 下拉容器 -->
                     <div class="hidden group-hover:block fixed left-0 right-0 top-16 w-full bg-white shadow-2xl border-b border-gray-200 z-50 transition-all">
                         <div class="optimized-container max-w-7xl mx-auto px-6 py-7">
                             <div class="flex items-center justify-between pb-3 mb-5 border-b border-gray-100">
-                                <span class="text-xl font-bold uppercase tracking-widest text-slate-400">產品</span>
-                                <span class="text-xl text-blue-900 font-bold hover:underline cursor-pointer"
-                                      onclick="switchTab('products')">
+                                <span class="text-xl font-bold uppercase tracking-widest text-slate-400">產品目錄</span>
+                                <a class="text-xl text-blue-900 font-bold hover:underline cursor-pointer"
+                                   href="/products">
                                     瀏覽所有產品 →
-                                </span>
+                                </a>
                             </div>
 
                             <!-- 4 欄式產品網格 -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                                 <!-- Column 1 -->
                                 <div class="space-y-4">
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('DorfKetal', 'tyzor', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/dorfketal/tyzor">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Organic Titanates and Zirconates
@@ -263,10 +263,10 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">鈦酸酯與鋯酸酯,
                                             Tyzor
                                         </div>
-                                    </div>
+                                    </a>
 
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('Others', 'silane', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/others/silane">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Silane / 矽烷偶合劑
@@ -274,10 +274,10 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">Dynasylan /
                                             hydrosil 系列
                                         </div>
-                                    </div>
+                                    </a>
 
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('DorfKetal', 'chain', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/dorfketal/chain">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Chain Extender / 擴鏈劑
@@ -285,13 +285,13 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">Unilink &
                                             Clearlink 系列
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- Column 2 -->
                                 <div class="space-y-4">
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('Orion', 'coating', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/orion/coating">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Special Carbon Black
@@ -299,10 +299,10 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">特級碳黑 /
                                             導電碳黑
                                         </div>
-                                    </div>
+                                    </a>
 
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('MPI', 'ptfe', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/mpi/ptfe">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Micronized Wax / 微粉蠟
@@ -310,10 +310,10 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">PTFE 取代 /
                                             耐磨耐刮助劑
                                         </div>
-                                    </div>
+                                    </a>
 
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('Others', 'matting_agent', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/others/matting_agent">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Matting Agent / 消光粉
@@ -321,13 +321,13 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">二氧化矽 /
                                             表面處理消光
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- Column 3 -->
                                 <div class="space-y-4">
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('Others', 'maleic_acid_resin', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/others/maleic_acid_resin">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Maleic Resin / 馬林酸樹脂
@@ -335,10 +335,10 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">
                                             松香改性馬林酸樹脂
                                         </div>
-                                    </div>
+                                    </a>
 
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('Others', 'cpo_adhesion_promoter', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/others/cpo_adhesion_promoter">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Adhesion Resin / 密著樹脂
@@ -346,10 +346,10 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">氯化聚烯烴 (CPO) &
                                             非氯系
                                         </div>
-                                    </div>
+                                    </a>
 
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('Others', 'coating_additive', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/others/coating_additive">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             Powder Coating Additive
@@ -357,13 +357,13 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">
                                             粉體塗料專用功能性助劑
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <!-- Column 4 -->
                                 <div class="space-y-4">
-                                    <div class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors"
-                                         onclick="navigateToCategory('DorfKetal', 'px', 'all')">
+                                    <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                       href="/products/dorfketal/px">
                                         <div class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
                                             PX Lubricant Additives
@@ -371,54 +371,54 @@
                                         <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">潤滑油添加劑 (原
                                             ExxonMobil)
                                         </div>
-                                    </div>
+                                    </a>
 
                                     <div class="bg-gradient-to-br from-slate-900 to-blue-950 rounded-lg p-3.5 text-white shadow-sm mt-2">
                                         <div class="text-base font-bold text-blue-300 mb-1">找不到合適產品？</div>
                                         <p class="text-base text-slate-300 leading-relaxed mb-3">
                                             使用規格諮詢表單，由專人為您配對最適配方。</p>
-                                        <button onclick="switchTab('contact'); switchFormMode('detailed')"
-                                                class="w-full text-center py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded text-base font-bold transition-all">
+                                        <a href="/contact?mode=detailed"
+                                           class="block w-full text-center py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded text-base font-bold transition-all">
                                             填寫需求評估
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button onclick="switchTab('partners')" id="nav-partners" role="tab" aria-selected="false"
-                        aria-controls="tab-partners"
-                        class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1">
+                <a href="/partners" id="nav-partners" role="tab" aria-selected="false"
+                   aria-controls="tab-partners"
+                   class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
                     合作夥伴
-                </button>
-                <button onclick="switchTab('contact')" id="nav-contact" role="tab" aria-selected="false"
-                        aria-controls="tab-contact"
-                        class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1">
+                </a>
+                <a href="/contact" id="nav-contact" role="tab" aria-selected="false"
+                   aria-controls="tab-contact"
+                   class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
                     聯絡我們
-                </button>
+                </a>
             </div>
         </div>
 
         <!-- 行動裝置版分頁導覽列 -->
         <div class="flex md:hidden items-center justify-between gap-1.5 pb-2 pt-1 border-t border-gray-100"
              role="tablist" aria-label="行動版主要選單">
-            <button onclick="switchTab('about')" id="mobile-nav-about" role="tab" aria-selected="true"
-                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs">
+            <a href="/about" id="mobile-nav-about" role="tab" aria-selected="true"
+               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs">
                 首頁
-            </button>
-            <button onclick="switchTab('products')" id="mobile-nav-products" role="tab" aria-selected="false"
-                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
+            </a>
+            <a href="/products" id="mobile-nav-products" role="tab" aria-selected="false"
+               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                 產品專區
-            </button>
-            <button onclick="switchTab('partners')" id="mobile-nav-partners" role="tab" aria-selected="false"
-                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
+            </a>
+            <a href="/partners" id="mobile-nav-partners" role="tab" aria-selected="false"
+               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                 合作夥伴
-            </button>
-            <button onclick="switchTab('contact')" id="mobile-nav-contact" role="tab" aria-selected="false"
-                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
+            </a>
+            <a href="/contact" id="mobile-nav-contact" role="tab" aria-selected="false"
+               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                 聯絡我們
-            </button>
+            </a>
         </div>
 
         <!-- 行動裝置版搜尋框 -->
@@ -708,46 +708,46 @@
                 </h2>
 
                 <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
-                    <button onclick="switchPartner('MPI')"
-                            id="btn-partner-MPI"
-                            aria-label="MPI Powders"
-                            class="flex h-14 items-center justify-center rounded border border-transparent bg-white p-2 shadow-sm ring-4 ring-blue-400 transition-all duration-200 active:scale-95">
+                    <a href="/products/mpi/ptfe"
+                       id="btn-partner-MPI"
+                       aria-label="MPI Powders"
+                       class="flex h-14 items-center justify-center rounded border border-transparent bg-white p-2 shadow-sm ring-4 ring-blue-400 transition-all duration-200 active:scale-95 no-underline">
                         <img src="img/MCP-Logo.png"
                              alt="MPI POWDERS"
                              width="160" height="50"
                              loading="lazy" decoding="async"
                              onError="handleImageFallback(this, 'img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
-                    </button>
+                    </a>
 
-                    <button onclick="switchPartner('DorfKetal')"
-                            id="btn-partner-DorfKetal"
-                            aria-label="DORF KETAL"
-                            class="flex h-14 items-center justify-center rounded border border-gray-200 bg-white p-2 opacity-50 shadow-sm transition-all duration-200 hover:bg-gray-50 hover:opacity-100 active:scale-95">
+                    <a href="/products/dorfketal/tyzor"
+                       id="btn-partner-DorfKetal"
+                       aria-label="DORF KETAL"
+                       class="flex h-14 items-center justify-center rounded border border-gray-200 bg-white p-2 opacity-50 shadow-sm transition-all duration-200 hover:bg-gray-50 hover:opacity-100 active:scale-95 no-underline">
                         <img src="img/dorf-ketal.png"
                              alt="DORF KETAL"
                              width="160" height="50"
                              loading="lazy" decoding="async"
                              onError="handleImageFallback(this, 'img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
-                    </button>
+                    </a>
 
-                    <button onclick="switchPartner('Orion')"
-                            id="btn-partner-Orion"
-                            aria-label="ORION"
-                            class="flex h-14 items-center justify-center rounded border border-slate-700 bg-slate-950 p-2 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
+                    <a href="/products/orion/coating"
+                       id="btn-partner-Orion"
+                       aria-label="ORION"
+                       class="flex h-14 items-center justify-center rounded border border-slate-700 bg-slate-950 p-2 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95 no-underline">
                         <img src="img/orion_new_logo_white.png"
                              alt="ORION"
                              width="160" height="50"
                              loading="lazy" decoding="async"
                              onError="handleImageFallback(this, 'img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
-                    </button>
+                    </a>
 
-                    <button onclick="switchPartner('Others')"
-                            id="btn-partner-Others"
-                            aria-label="其他品牌"
-                            class="group relative flex h-14 items-center justify-center overflow-hidden rounded border border-slate-700 bg-slate-950 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
+                    <a href="/products/others/coating_additive"
+                       id="btn-partner-Others"
+                       aria-label="其他品牌"
+                       class="group relative flex h-14 items-center justify-center overflow-hidden rounded border border-slate-700 bg-slate-950 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95 no-underline">
                         <img src="img/others.jpg"
                              alt="其他特化材料"
                              width="160" height="50"
@@ -758,7 +758,7 @@
                               class="absolute inset-0 flex items-center justify-center bg-slate-950/40 text-lg font-bold tracking-wide text-white backdrop-blur-[1px]">
                             其他特化材料
                         </span>
-                    </button>
+                    </a>
                 </div>
             </section>
 

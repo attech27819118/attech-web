@@ -53,6 +53,41 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
 
 window.addEventListener('popstate', parseUrlRoute);
 
+// 全域內部連結攔截器：確保點擊 <a> 標籤時維持平滑 SPA 切換，避免整頁重新整理
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // 排除外部連結、錨點、電話與郵件協定
+    if (
+        href.startsWith('http://') ||
+        href.startsWith('https://') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        href.startsWith('#') ||
+        link.target === '_blank' ||
+        link.hasAttribute('download')
+    ) {
+        return;
+    }
+
+    e.preventDefault();
+    const cleanHref = href.startsWith('/') ? href : ('/' + href);
+    const basePath = getAppBasePath();
+    let fullPath = cleanHref;
+    if (basePath) {
+        fullPath = '/' + basePath + (cleanHref === '/' ? '' : cleanHref);
+    }
+
+    if (window.location.pathname + window.location.search !== fullPath) {
+        history.pushState(null, '', fullPath);
+        parseUrlRoute();
+    }
+});
+
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' || e.key === 'Esc') {
         if (typeof toggleTdsModal === 'function') toggleTdsModal(false);
