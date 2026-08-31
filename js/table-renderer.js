@@ -31,7 +31,7 @@ function renderCompareIcon(p, partnerKey = null, lineKey = null) {
 function getProductUrl(productName, partnerKey = null, lineKey = null) {
     const pKey = (partnerKey || AppState.partner || 'mpi').toLowerCase();
     const lKey = (lineKey || AppState.productLine || 'ptfe').toLowerCase();
-    return `/products/${encodeURIComponent(pKey)}/${encodeURIComponent(lKey)}/${encodeURIComponent(productName)}`;
+    return `/products/${encodeURIComponent(pKey)}/${encodeURIComponent(lKey)}/${encodeURIComponent(productName)}/`;
 }
 
 const DynamicTableRenderer = {

@@ -49,17 +49,17 @@ function addUrl(loc, changefreq = 'weekly', priority = '0.8') {
 
 // 1. Core Static Pages
 addUrl(`${DOMAIN}/`, 'daily', '1.0');
-addUrl(`${DOMAIN}/about`, 'weekly', '0.9');
-addUrl(`${DOMAIN}/products`, 'daily', '0.95');
-addUrl(`${DOMAIN}/partners`, 'monthly', '0.8');
-addUrl(`${DOMAIN}/contact`, 'monthly', '0.9');
+addUrl(`${DOMAIN}/about/`, 'weekly', '0.9');
+addUrl(`${DOMAIN}/products/`, 'daily', '0.95');
+addUrl(`${DOMAIN}/partners/`, 'monthly', '0.8');
+addUrl(`${DOMAIN}/contact/`, 'monthly', '0.9');
 
 // 2. Partner Brand and Product Line Pages
 for (const [brandKey, brandObj] of Object.entries(config)) {
     const partnerSlug = brandKey.toLowerCase();
     
     // Add partner main page
-    addUrl(`${DOMAIN}/products/${partnerSlug}`, 'weekly', '0.9');
+    addUrl(`${DOMAIN}/products/${partnerSlug}/`, 'weekly', '0.9');
 
     if (brandObj.masterPath) {
         const masterFilePath = path.join(rootDir, brandObj.masterPath.replace(/^\.?\//, ''));
@@ -67,14 +67,14 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             const masterData = JSON.parse(fs.readFileSync(masterFilePath, 'utf8'));
             for (const file of brandObj.files) {
                 const lineSlug = file.key;
-                const lineUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}`;
+                const lineUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}/`;
                 addUrl(lineUrl, 'weekly', '0.85');
 
                 const products = masterData.filter(p => p.applications_data && p.applications_data[lineSlug]);
                 for (const p of products) {
                     const pName = p.product_name || p.name;
                     if (pName) {
-                        const productUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(pName.trim())}`;
+                        const productUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(pName.trim())}/`;
                         addUrl(productUrl, 'weekly', '0.8');
                     }
                 }
@@ -83,7 +83,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
     } else {
         for (const file of brandObj.files) {
             const lineSlug = file.key;
-            const lineUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}`;
+            const lineUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}/`;
             addUrl(lineUrl, 'weekly', '0.85');
 
             if (file.jsonPath) {
@@ -96,7 +96,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
                         for (const p of items) {
                             const pName = p.product_name || p.name;
                             if (pName) {
-                                const productUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(pName.trim())}`;
+                                const productUrl = `${DOMAIN}/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(pName.trim())}/`;
                                 addUrl(productUrl, 'weekly', '0.8');
                             }
                         }

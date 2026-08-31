@@ -244,25 +244,25 @@ let generatedCount = 0;
 // 1. 核心頁面
 const corePages = [
     {
-        path: '/about',
+        path: '/about/',
         title: '宏威應用材料 Discover The Link To Life | 專業特用化學品供應商',
         description: '宏威應用材料 Discover The Link To Life - 專業特用化學品供應商，提供PTFE取代方案、Micro Powders微粉蠟、Dorf Ketal鈦鋯酸酯、Orion特級碳黑等高性能材料與免費索樣服務。',
         tab: 'about'
     },
     {
-        path: '/products',
+        path: '/products/',
         title: '特用化學品目錄 | 宏威應用材料 ATTech Materials',
         description: '宏威應用材料特用化學品完整產品目錄，涵蓋微粉蠟、PTFE取代、鈦酸酯/鋯酸酯、特級碳黑、矽烷偶合劑與塗料助劑，支援線上多維度篩選與規格比對。',
         tab: 'products'
     },
     {
-        path: '/partners',
+        path: '/partners/',
         title: '合作夥伴品牌 | 宏威應用材料 Discover The Link To Life',
         description: '宏威應用材料代理銷售 Micro Powders、Dorf Ketal、Orion 等國際領導化學品牌，提供正品保證與原廠技術支援。',
         tab: 'partners'
     },
     {
-        path: '/contact',
+        path: '/contact/',
         title: '樣品索取與技術諮詢 | 宏威應用材料 Discover The Link To Life',
         description: '線上索取特用化學品樣品與配方技術諮詢，提供快速詢價與詳細應用需求評估雙模式表單，自動產製正式 PDF 需求單。',
         tab: 'contact'
@@ -286,7 +286,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
     const brandName = brandObj.brandName || brandKey;
 
     // 品牌首頁
-    const partnerPath = `/products/${partnerSlug}`;
+    const partnerPath = `/products/${partnerSlug}/`;
     const partnerHtml = buildPageHtml({
         title: `${brandName} 特用化學品系列 | 宏威應用材料 ATTech Materials`,
         description: `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、TDS技術資料下載與免費樣品申請服務。`,
@@ -300,7 +300,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
     for (const file of (brandObj.files || [])) {
         const lineSlug = file.key;
         const lineTitle = file.titleZh || file.titleEn || lineSlug;
-        const linePath = `/products/${partnerSlug}/${lineSlug}`;
+        const linePath = `/products/${partnerSlug}/${lineSlug}/`;
         const products = allProductsCache[lineSlug] || [];
 
         const tableContentHtml = products.map((p, idx) => {
@@ -308,7 +308,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             const comp = p.composition_zh || p.chemical_component || p.composition_en || p.chemistry || '—';
             const props = p.properties || p.performance || '—';
             const usage = p.main_usage || p.application_fields_zh || (p.featured_categories || []).join(', ') || '—';
-            const safeUrl = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(name)}`;
+            const safeUrl = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(name)}/`;
 
             return `
             <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
@@ -340,7 +340,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
                 "@type": "ListItem",
                 "position": idx + 1,
                 "name": p.product_name || p.name,
-                "url": `${DOMAIN}${linePath}/${encodeURIComponent((p.product_name || p.name || '').trim())}`
+                "url": `${DOMAIN}${linePath}${encodeURIComponent((p.product_name || p.name || '').trim())}/`
             }))
         };
 
@@ -360,7 +360,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             const pName = (p.product_name || p.name || '').trim();
             if (!pName) continue;
 
-            const productPath = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(pName)}`;
+            const productPath = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(pName)}/`;
             const comp = p.composition_zh || p.chemical_component || p.composition_en || p.chemistry || '';
             const props = p.properties || p.performance || '';
             const usage = p.main_usage || p.application_fields_zh || (p.featured_categories || []).join(', ') || '';
@@ -374,9 +374,9 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
                         "@type": "BreadcrumbList",
                         "itemListElement": [
                             { "@type": "ListItem", "position": 1, "name": "首頁", "item": `${DOMAIN}/` },
-                            { "@type": "ListItem", "position": 2, "name": "產品", "item": `${DOMAIN}/products` },
-                            { "@type": "ListItem", "position": 3, "name": brandName, "item": `${DOMAIN}/products/${partnerSlug}` },
-                            { "@type": "ListItem", "position": 4, "name": lineTitle, "item": `${DOMAIN}/products/${partnerSlug}/${lineSlug}` },
+                            { "@type": "ListItem", "position": 2, "name": "產品", "item": `${DOMAIN}/products/` },
+                            { "@type": "ListItem", "position": 3, "name": brandName, "item": `${DOMAIN}/products/${partnerSlug}/` },
+                            { "@type": "ListItem", "position": 4, "name": lineTitle, "item": `${DOMAIN}/products/${partnerSlug}/${lineSlug}/` },
                             { "@type": "ListItem", "position": 5, "name": pName, "item": `${DOMAIN}${productPath}` }
                         ]
                     },

@@ -474,20 +474,20 @@ function updateUrlRoute(usePush = false) {
         cleanPath = '/';
         updatePageMeta('about');
     } else if (activeTab === 'partners') {
-        cleanPath = '/partners';
+        cleanPath = '/partners/';
         updatePageMeta('partners');
     } else if (activeTab === 'contact') {
         const isDetailed = !document.getElementById('form-mode-detailed')?.classList.contains('hidden');
-        cleanPath = isDetailed ? '/contact?mode=detailed' : '/contact';
+        cleanPath = isDetailed ? '/contact/?mode=detailed' : '/contact/';
         updatePageMeta('contact');
     } else if (activeTab === 'products') {
         if (AppState.searchQuery) {
-            cleanPath = `/products?q=${encodeURIComponent(AppState.searchQuery)}`;
+            cleanPath = `/products/?q=${encodeURIComponent(AppState.searchQuery)}`;
             updatePageMeta('search', AppState.searchQuery);
         } else {
             const partnerSlug = (AppState.partner || 'MPI').toLowerCase();
             const lineSlug = AppState.productLine || 'ptfe';
-            cleanPath = `/products/${encodeURIComponent(partnerSlug)}/${encodeURIComponent(lineSlug)}`;
+            cleanPath = `/products/${encodeURIComponent(partnerSlug)}/${encodeURIComponent(lineSlug)}/`;
 
             if (AppState.selectedProduct) {
                 const realBrand = getProductBrandName(AppState.selectedProduct);
@@ -501,7 +501,7 @@ function updateUrlRoute(usePush = false) {
 
                 // 檢查產品真實品牌是否屬於當前選取之 Partner，防止品牌錯置
                 if (isBrandMatch) {
-                    cleanPath += `/${encodeURIComponent(AppState.selectedProduct)}`;
+                    cleanPath = `/products/${encodeURIComponent(partnerSlug)}/${encodeURIComponent(lineSlug)}/${encodeURIComponent(AppState.selectedProduct)}/`;
                     updatePageMeta('product', AppState.selectedProduct);
                 } else {
                     AppState.selectedProduct = null;
