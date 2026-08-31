@@ -1024,14 +1024,12 @@
           "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
           "slip_lubricity": "提供優異的表面潤滑性。",
-          "cleanability": "不影響透明度或光澤。",
           "gloss_retention": "不影響透明度與光澤保持。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE wax additives.",
           "scratch_resistance": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to provide excellent scratch resistance.",
           "slip_lubricity": "Provides superior surface lubricity.",
-          "cleanability": "Does not adversely affect clarity or gloss.",
           "gloss_retention": "Preserves coating clarity and gloss retention."
         }
       }
@@ -5049,13 +5047,11 @@
         "performance_descriptions_zh": {
           "scratch_resistance": "提供抗刮傷性能，提升抗黏結、流動性與耐磨性。",
           "slip_lubricity": "提供表面潤滑性。",
-          "cleanability": "不影響透明度或光澤度。",
-          "gloss_retention": "具有極佳的透明度與光澤保持特性。"
+          "gloss_retention": "不影響透明度與光澤保持。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Provides scratch resistance while enhancing flow and surface protection.",
           "slip_lubricity": "Imparts surface lubricity and smooth feel.",
-          "cleanability": "Does not adversely affect clarity or gloss level.",
           "gloss_retention": "Provides outstanding clarity and gloss retention."
         }
       }
