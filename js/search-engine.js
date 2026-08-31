@@ -103,22 +103,27 @@ class SearchEngine {
         if (!text || typeof text !== 'string') return text || '';
         if (!tokens || tokens.length === 0) return text;
 
-        const escaped = text
+        const sortedTokens = [...tokens]
+            .filter(t => t && t.trim().length > 0)
+            .sort((a, b) => b.length - a.length);
+
+        if (sortedTokens.length === 0) return text;
+
+        const escapedRegexTokens = sortedTokens.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+        const regex = new RegExp(`(${escapedRegexTokens.join('|')})`, 'gi');
+
+        // 使用保留之 Unicode Private Use Area 字元做標記，避免先跳脫 HTML 導致搜尋關鍵字 (如 amp/quot) 破壞 HTML Entity
+        const marked = text.replace(regex, '\uE000$1\uE001');
+
+        const escaped = marked
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#039;');
 
-        const sortedTokens = [...tokens]
-            .filter(t => t && t.trim().length > 0)
-            .sort((a, b) => b.length - a.length);
-
-        if (sortedTokens.length === 0) return escaped;
-
-        const escapedRegexTokens = sortedTokens.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-        const regex = new RegExp(`(${escapedRegexTokens.join('|')})`, 'gi');
-
-        return escaped.replace(regex, '<mark class="bg-amber-200/90 text-amber-950 px-1 py-0.5 rounded font-semibold shadow-2xs">$1</mark>');
+        return escaped
+            .replace(/\uE000/g, '<mark class="bg-amber-200/90 text-amber-950 px-1 py-0.5 rounded font-semibold shadow-2xs">')
+            .replace(/\uE001/g, '</mark>');
     }
 }

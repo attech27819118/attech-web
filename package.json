@@ -21,13 +21,14 @@
   "directories": {
     "doc": "doc"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "build": "echo \"Static assets ready\"",
-    "build:css": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
-    "dev": "tailwindcss -i ./src/input.css -o ./css/output.css --watch"
-  },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "build": "echo \"Static assets ready\"",
+        "build:css": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
+        "dev": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
+        "sitemap": "node scripts/generate_sitemap.js"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rosf000/test.git"

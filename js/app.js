@@ -248,6 +248,8 @@ function switchPartner(partnerKey) {
     resetSearchInputFields();
     updateSearchLayout(false);
     AppState.partner = partnerKey;
+    AppState.selectedProduct = null;
+    AppState.expandedDetails = [];
     const configKey = partnerConfigMap[partnerKey] || 'mpi';
     const brandConfig = AppState.configs[configKey];
     if (brandConfig && brandConfig.files && brandConfig.files[0]) {
@@ -257,7 +259,7 @@ function switchPartner(partnerKey) {
     AppState.filters = {};
     switchTab('products', false, false);
     updatePartnerUI();
-    updateHashRoute(true);
+    updateUrlRoute(true);
 }
 
 function selectPartnerAndSwitch(partnerKey) {
@@ -267,6 +269,7 @@ function selectPartnerAndSwitch(partnerKey) {
 function updatePartnerUI(onRenderComplete = null, preserveExpanded = false) {
     if (!preserveExpanded) {
         AppState.expandedDetails = [];
+        AppState.selectedProduct = null;
     }
     const partner = AppState.partner;
 
@@ -274,8 +277,11 @@ function updatePartnerUI(onRenderComplete = null, preserveExpanded = false) {
         const btn = document.getElementById(`btn-partner-${p}`);
         if (!btn) return;
         btn.classList.remove('ring-4', 'ring-blue-400', 'scale-[1.02]', 'shadow-lg', 'opacity-50');
-        if (p === partner) btn.classList.add('ring-4', 'ring-blue-400', 'scale-[1.02]', 'shadow-lg');
-        else btn.classList.add('opacity-50');
+        if (p.toLowerCase() === (partner || '').toLowerCase() || partnerConfigMap[p] === partnerConfigMap[partner]) {
+            btn.classList.add('ring-4', 'ring-blue-400', 'scale-[1.02]', 'shadow-lg');
+        } else {
+            btn.classList.add('opacity-50');
+        }
     });
 
     const finderSection = document.getElementById('section-directory-finder');
@@ -578,13 +584,14 @@ function toggleFilterCheckbox(key, isChecked) {
 function selectDirectoryNode(lineKey, categoryKey = 'all', preserveExpanded = false) {
     if (!preserveExpanded) {
         AppState.expandedDetails = [];
+        AppState.selectedProduct = null;
     }
     AppState.productLine = lineKey;
     AppState.category = categoryKey;
     resetSearchInputFields();
     renderDirectoryTree();
     renderProducts();
-    updateHashRoute(true);
+    updateUrlRoute(true);
 
     if (window.innerWidth < 1024 && categoryKey !== 'all') {
         const menu = document.getElementById('directory-tree-menu');
@@ -659,14 +666,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    fetch('config.json')
+    fetch(resolveAssetUrl('config.json'))
         .then(res => res.ok ? res.json() : AppState.configs)
-        .then(configData => {
+        .then(async (configData) => {
             AppState.configs = configData;
+            try {
+                await loadAllBrandsData();
+            } catch (e) {
+                console.error("預先載入品牌資料失敗:", e);
+            }
             parseUrlRoute();
             prewarmBackendServer();
         })
-        .catch(() => {
+        .catch(async (err) => {
+            console.error("載入 config.json 失敗:", err);
+            try {
+                await loadAllBrandsData();
+            } catch (e) {
+                console.error("預先載入品牌資料失敗:", e);
+            }
             parseUrlRoute();
             prewarmBackendServer();
         });

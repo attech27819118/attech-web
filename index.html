@@ -2,8 +2,36 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            var baseHref = '/';
+            if (window.location.hostname.endsWith('github.io')) {
+                var repo = window.location.pathname.split('/').filter(Boolean)[0];
+                if (repo) baseHref = '/' + repo + '/';
+            }
+            var baseEl = document.createElement('base');
+            baseEl.href = baseHref;
+            document.head.appendChild(baseEl);
+
+            window.SVG_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%2394a3b8'%3ENo Image%3C/text%3E%3C/svg%3E";
+
+            window.handleImageFallback = function(img, localSrc) {
+                if (!img) return;
+                if (!img.dataset.fallbackStep) {
+                    img.dataset.fallbackStep = "1";
+                    if (localSrc) {
+                        var clean = localSrc.replace(/^\.?\//, '');
+                        img.src = (baseHref + clean).replace(/\/+/g, '/');
+                        return;
+                    }
+                }
+                img.onerror = null;
+                img.src = window.SVG_PLACEHOLDER;
+                img.classList.add('opacity-70');
+            };
+        })();
+    </script>
     <title id="web-title">宏威應用材料 Discover The Link To Life</title>
 
     <!-- SEO & Metadata -->
@@ -441,14 +469,10 @@
                                 <button onclick="selectPartnerAndSwitch('MPI')"
                                         aria-label="Micro Powders 規格"
                                         class="w-full h-20 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center p-2.5 group active:scale-95 shadow-inner overflow-hidden relative border border-white/10">
-                                    <picture class="flex items-center justify-center w-full h-full">
-                                        <source srcset="https://www.micropowders.com/assets/img/MCP-Logo.png"
-                                                type="image/webp">
-                                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80"
-                                             loading="lazy" decoding="async"
-                                             onError="handleImageFallback(this, './img/MCP-Logo.png');"
-                                             class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
-                                    </picture>
+                                    <img src="img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80"
+                                         loading="lazy" decoding="async"
+                                         onError="handleImageFallback(this, 'img/MCP-Logo.png');"
+                                         class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                 </button>
                                 <div class="flex-1 flex flex-col justify-between w-full pt-3"
                                      onclick="selectPartnerAndSwitch('MPI')">
@@ -489,14 +513,10 @@
                                 <button onclick="selectPartnerAndSwitch('DorfKetal')"
                                         aria-label="DorfKetal 規格"
                                         class="w-full h-20 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center p-2.5 group active:scale-95 shadow-inner overflow-hidden relative border border-white/10">
-                                    <picture class="flex items-center justify-center w-full h-full">
-                                        <source srcset="https://tyzor.dorfketal.com/img/logo/DK-logo-notag1.png"
-                                                type="image/webp">
-                                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80"
-                                             loading="lazy" decoding="async"
-                                             onError="handleImageFallback(this, './img/dorf-ketal.png');"
-                                             class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
-                                    </picture>
+                                    <img src="img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80"
+                                         loading="lazy" decoding="async"
+                                         onError="handleImageFallback(this, 'img/dorf-ketal.png');"
+                                         class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                 </button>
                                 <div class="flex-1 flex flex-col justify-between w-full pt-3">
                                     <div class="w-full">
@@ -539,14 +559,10 @@
                                 <button onclick="selectPartnerAndSwitch('Orion')"
                                         aria-label="Orion 規格"
                                         class="w-full h-20 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center p-2.5 group active:scale-95 shadow-inner overflow-hidden relative border border-white/10">
-                                    <picture class="flex items-center justify-center w-full h-full">
-                                        <source srcset="https://s202.q4cdn.com/321217073/files/design/orion_new_logo_white.png"
-                                                type="image/webp">
-                                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80"
-                                             loading="lazy" decoding="async"
-                                             onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
-                                             class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
-                                    </picture>
+                                    <img src="img/orion_new_logo_white.png" alt="ORION" width="200" height="80"
+                                         loading="lazy" decoding="async"
+                                         onError="handleImageFallback(this, 'img/orion_new_logo_white.png');"
+                                         class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                 </button>
                                 <div class="flex-1 flex flex-col justify-between w-full pt-3">
                                     <div class="w-full">
@@ -589,7 +605,7 @@
                                 <button onclick="selectPartnerAndSwitch('Others')"
                                         aria-label="其他特化產品規格"
                                         class="w-full h-20 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center p-2 group active:scale-95 shadow-inner overflow-hidden relative border border-white/10">
-                                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
+                                    <img src="img/others.jpg"
                                          alt="其他特化塗料產品"
                                          width="800" height="533" loading="lazy" decoding="async"
                                          onError="handleImageFallback(this);"
@@ -696,11 +712,11 @@
                             id="btn-partner-MPI"
                             aria-label="MPI Powders"
                             class="flex h-14 items-center justify-center rounded border border-transparent bg-white p-2 shadow-sm ring-4 ring-blue-400 transition-all duration-200 active:scale-95">
-                        <img src="./img/MCP-Logo.png"
+                        <img src="img/MCP-Logo.png"
                              alt="MPI POWDERS"
                              width="160" height="50"
                              loading="lazy" decoding="async"
-                             onError="handleImageFallback(this, './img/MCP-Logo.png');"
+                             onError="handleImageFallback(this, 'img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
 
@@ -708,11 +724,11 @@
                             id="btn-partner-DorfKetal"
                             aria-label="DORF KETAL"
                             class="flex h-14 items-center justify-center rounded border border-gray-200 bg-white p-2 opacity-50 shadow-sm transition-all duration-200 hover:bg-gray-50 hover:opacity-100 active:scale-95">
-                        <img src="./img/dorf-ketal.png"
+                        <img src="img/dorf-ketal.png"
                              alt="DORF KETAL"
                              width="160" height="50"
                              loading="lazy" decoding="async"
-                             onError="handleImageFallback(this, './img/dorf-ketal.png');"
+                             onError="handleImageFallback(this, 'img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
 
@@ -720,11 +736,11 @@
                             id="btn-partner-Orion"
                             aria-label="ORION"
                             class="flex h-14 items-center justify-center rounded border border-slate-700 bg-slate-950 p-2 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
-                        <img src="./img/orion_new_logo_white.png"
+                        <img src="img/orion_new_logo_white.png"
                              alt="ORION"
                              width="160" height="50"
                              loading="lazy" decoding="async"
-                             onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
+                             onError="handleImageFallback(this, 'img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
 
@@ -732,11 +748,11 @@
                             id="btn-partner-Others"
                             aria-label="其他品牌"
                             class="group relative flex h-14 items-center justify-center overflow-hidden rounded border border-slate-700 bg-slate-950 opacity-50 shadow-sm transition-all duration-200 hover:border-slate-500 hover:opacity-100 active:scale-95">
-                        <img src="./img/others.jpg"
+                        <img src="img/others.jpg"
                              alt="其他特化材料"
                              width="160" height="50"
                              loading="lazy" decoding="async"
-                             onError="handleImageFallback(this, './img/others.jpg');"
+                             onError="handleImageFallback(this, 'img/others.jpg');"
                              class="fallback-img absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-300 group-hover:scale-110">
                         <span id="ui-partner-others"
                               class="absolute inset-0 flex items-center justify-center bg-slate-950/40 text-lg font-bold tracking-wide text-white backdrop-blur-[1px]">
@@ -820,54 +836,54 @@
                 <div class="p-5 border border-gray-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://www.micropowders.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Micro Powders 官網">
-                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80" loading="lazy"
+                        <img src="img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80" loading="lazy"
                              decoding="async"
-                             onError="handleImageFallback(this, './img/MCP-Logo.png');"
+                             onError="handleImageFallback(this, 'img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
                 <div class="p-5 border border-gray-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://dkatalyst.com/products/tyzor/" target="_blank" rel="noopener noreferrer"
                        aria-label="DorfKetal 官網">
-                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80" loading="lazy"
+                        <img src="img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80" loading="lazy"
                              decoding="async"
-                             onError="handleImageFallback(this, './img/dorf-ketal.png');"
+                             onError="handleImageFallback(this, 'img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
                 <div class="p-5 border border-slate-700 bg-slate-950 shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://superblackcoatings.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Orion 官網">
-                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80" loading="lazy"
+                        <img src="img/orion_new_logo_white.png" alt="ORION" width="200" height="80" loading="lazy"
                              decoding="async"
-                             onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
+                             onError="handleImageFallback(this, 'img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
                 <div class="p-5 border border-slate-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://www.evonik.com/en.html" target="_blank" rel="noopener noreferrer"
                        aria-label="Evonik 官網">
-                        <img src="./img/evonik2020.png" alt="Evonik" width="200" height="80" loading="lazy"
+                        <img src="img/evonik2020.png" alt="Evonik" width="200" height="80" loading="lazy"
                              decoding="async"
-                             onError="handleImageFallback(this, './img/jietondachem.png');"
+                             onError="handleImageFallback(this, 'img/evonik2020.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
                 <div class="p-5 border border-slate-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="http://www.jietondachem.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="捷通達 官網">
-                        <img src="./img/jietondachem.png" alt="jietondachem" width="200" height="80" loading="lazy"
+                        <img src="img/jietondachem.png" alt="jietondachem" width="200" height="80" loading="lazy"
                              decoding="async"
-                             onError="handleImageFallback(this, './img/jietondachem.png');"
+                             onError="handleImageFallback(this, 'img/jietondachem.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
                 <div class="p-5 border border-slate-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="http://www.jixin-resin.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="基信 官網">
-                        <img src="./img/jixin.png" alt="jixin" width="200" height="80" loading="lazy"
+                        <img src="img/jixin.png" alt="jixin" width="200" height="80" loading="lazy"
                              decoding="async"
-                             onError="handleImageFallback(this, './img/jietondachem.png');"
+                             onError="handleImageFallback(this, 'img/jixin.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>

@@ -132,11 +132,11 @@ function openModal(productName, type) {
     if (loading) loading.classList.remove('hidden');
 
     if (type === 'tds') {
-        localPath = `./tds/${productName} TDS.pdf`;
+        localPath = resolveAssetUrl(`tds/${productName} TDS.pdf`);
         if (title) title.innerText = `${productName} - TDS`;
         if (icon) icon.className = "fa-solid fa-file-pdf text-red-600 mr-2 f-size-base";
     } else if (type === 'data') {
-        localPath = `./coatingsdata/${productName} data.pdf`;
+        localPath = resolveAssetUrl(`coatingsdata/${productName} data.pdf`);
         if (title) title.innerText = `${productName} - Tech Data`;
         if (icon) icon.className = "fa-solid fa-file-lines text-blue-700 mr-2 f-size-base";
     }
@@ -201,6 +201,37 @@ function normalizeProductSlug(s) {
         .toLowerCase();
 }
 
+function getAppBasePath() {
+    const baseEl = document.querySelector('base');
+    if (baseEl && baseEl.getAttribute('href')) {
+        const href = baseEl.getAttribute('href');
+        if (href.startsWith('http://') || href.startsWith('https://')) {
+            try {
+                return new URL(href).pathname.replace(/\/$/, '') || '';
+            } catch (e) {
+                return '';
+            }
+        }
+        return href.replace(/^\/|\/$/g, '');
+    }
+    return '';
+}
+
+function findProductItemBySlug(items, targetClean) {
+    if (!Array.isArray(items) || !targetClean) return null;
+    let found = items.find(item => normalizeProductSlug(item.product_name || item.name) === targetClean);
+    if (found) return found;
+    found = items.find(item => {
+        const itemClean = normalizeProductSlug(item.product_name || item.name);
+        return itemClean.startsWith(targetClean + ' ') || itemClean.endsWith(' ' + targetClean);
+    });
+    if (found) return found;
+    return items.find(item => {
+        const itemClean = normalizeProductSlug(item.product_name || item.name);
+        return itemClean.includes(targetClean) || targetClean.includes(itemClean);
+    });
+}
+
 /**
  * 解析目前 URL 路徑（支援 HTML5 Clean URL、Query 參數及舊版 Hash 路由）
  */
@@ -231,11 +262,18 @@ function parseUrlRoute() {
             cleanMigratedPath = mode === 'detailed' ? '/contact?mode=detailed' : '/contact';
         }
 
-        history.replaceState(null, '', cleanMigratedPath);
+        const basePath = getAppBasePath();
+        const fullMigratedPath = basePath ? ('/' + basePath + (cleanMigratedPath === '/' ? '' : cleanMigratedPath)) : cleanMigratedPath;
+        history.replaceState(null, '', fullMigratedPath);
     }
 
     // 2. 解析標準路徑與 Query 參數
-    const pathname = window.location.pathname.replace(/^\/|\/$/g, '');
+    let pathname = window.location.pathname;
+    const basePath = getAppBasePath();
+    if (basePath && (pathname === '/' + basePath || pathname.startsWith('/' + basePath + '/'))) {
+        pathname = pathname.slice(basePath.length + 1);
+    }
+    pathname = pathname.replace(/^\/|\/$/g, '');
     const searchParams = new URLSearchParams(window.location.search);
     const segments = pathname.split('/').filter(Boolean);
     const rootSegment = (segments[0] || '').toLowerCase();
@@ -329,10 +367,7 @@ function parseUrlRoute() {
                         for (const file of brandObj.files) {
                             const cached = AppState.allProductsCache[file.key];
                             if (Array.isArray(cached)) {
-                                const found = cached.find(item => {
-                                    const itemClean = normalizeProductSlug(item.product_name);
-                                    return itemClean === targetClean || itemClean.includes(targetClean) || targetClean.includes(itemClean);
-                                });
+                                const found = findProductItemBySlug(cached, targetClean);
                                 if (found) {
                                     matchedItem = found;
                                     matchedLine = file.key;
@@ -354,6 +389,43 @@ function parseUrlRoute() {
         if (typeof updatePartnerUI === 'function') updatePartnerUI();
         updatePageMeta('products');
     }
+}
+
+/**
+ * 取得產品所屬之真實原廠品牌名稱
+ */
+function getProductBrandName(productName) {
+    if (!productName) return '';
+    const targetClean = normalizeProductSlug(productName);
+
+    // 1. 比對 MPI 產品庫
+    if (AppState.allProductsCache && AppState.allProductsCache['mpi_master']) {
+        const found = findProductItemBySlug(AppState.allProductsCache['mpi_master'], targetClean);
+        if (found) {
+            return AppState.configs?.mpi?.brandName || 'Micro Powders';
+        }
+    }
+
+    // 2. 比對 Dorf Ketal, Orion, Others 等品牌產品庫
+    if (AppState.configs) {
+        for (const [pKey, brandObj] of Object.entries(AppState.configs)) {
+            if (brandObj.files) {
+                for (const file of brandObj.files) {
+                    const cached = AppState.allProductsCache ? AppState.allProductsCache[file.key] : null;
+                    if (Array.isArray(cached)) {
+                        const found = findProductItemBySlug(cached, targetClean);
+                        if (found) {
+                            return brandObj.brandName || pKey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    const configKey = partnerConfigMap[AppState.partner] || 'mpi';
+    const brandConfig = AppState.configs ? AppState.configs[configKey] : null;
+    return brandConfig?.brandName || AppState.partner;
 }
 
 /**
@@ -383,8 +455,18 @@ function updateUrlRoute(usePush = false) {
             cleanPath = `/products/${encodeURIComponent(partnerSlug)}/${encodeURIComponent(lineSlug)}`;
 
             if (AppState.selectedProduct) {
-                cleanPath += `/${encodeURIComponent(AppState.selectedProduct)}`;
-                updatePageMeta('product', AppState.selectedProduct);
+                const realBrand = getProductBrandName(AppState.selectedProduct);
+                const currentConfigKey = partnerConfigMap[AppState.partner] || 'mpi';
+                const currentBrandName = AppState.configs?.[currentConfigKey]?.brandName || AppState.partner;
+
+                // 檢查產品真實品牌是否屬於當前選取之 Partner，防止品牌錯置
+                if (realBrand === currentBrandName || !realBrand) {
+                    cleanPath += `/${encodeURIComponent(AppState.selectedProduct)}`;
+                    updatePageMeta('product', AppState.selectedProduct);
+                } else {
+                    AppState.selectedProduct = null;
+                    updatePageMeta('products');
+                }
             } else {
                 updatePageMeta('products');
             }
@@ -395,12 +477,18 @@ function updateUrlRoute(usePush = false) {
         }
     }
 
+    const basePath = getAppBasePath();
+    let fullPath = cleanPath;
+    if (basePath) {
+        fullPath = '/' + basePath + (cleanPath === '/' ? '' : cleanPath);
+    }
+
     const currentUrl = window.location.pathname + window.location.search;
-    if (currentUrl !== cleanPath) {
+    if (currentUrl !== fullPath) {
         if (usePush) {
-            history.pushState(null, '', cleanPath);
+            history.pushState(null, '', fullPath);
         } else {
-            history.replaceState(null, '', cleanPath);
+            history.replaceState(null, '', fullPath);
         }
     }
 }
@@ -423,13 +511,11 @@ function updatePageMeta(type, extra = '') {
     } else if (type === 'search') {
         titleEl.innerText = `「${extra}」搜尋結果 | ${baseTitle}`;
     } else if (type === 'product' && extra) {
-        const configKey = partnerConfigMap[AppState.partner] || 'mpi';
-        const brandConfig = AppState.configs[configKey];
-        const brandName = brandConfig?.brandName || AppState.partner;
+        const brandName = getProductBrandName(extra);
         titleEl.innerText = `${extra} (${brandName}) | 宏威應用材料 ATTech Materials`;
     } else if (type === 'products') {
         const configKey = partnerConfigMap[AppState.partner] || 'mpi';
-        const brandConfig = AppState.configs[configKey];
+        const brandConfig = AppState.configs ? AppState.configs[configKey] : null;
         const currentFile = brandConfig?.files?.find(f => f.key === AppState.productLine);
         const lineTitle = currentFile ? currentFile.titleZh : '特用化學品目錄';
         titleEl.innerText = `${lineTitle} | 宏威應用材料 ATTech Materials`;
