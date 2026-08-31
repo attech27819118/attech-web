@@ -663,13 +663,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.ok ? res.json() : AppState.configs)
         .then(configData => {
             AppState.configs = configData;
-            parseHashRoute();
-            if (!window.location.hash) updatePartnerUI();
+            parseUrlRoute();
             prewarmBackendServer();
         })
         .catch(() => {
-            parseHashRoute();
-            if (!window.location.hash) updatePartnerUI();
+            parseUrlRoute();
             prewarmBackendServer();
         });
 });
