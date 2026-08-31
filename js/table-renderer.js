@@ -28,6 +28,12 @@ function renderCompareIcon(p, partnerKey = null, lineKey = null) {
     return renderProductActions(p, partnerKey, lineKey);
 }
 
+function getProductUrl(productName, partnerKey = null, lineKey = null) {
+    const pKey = (partnerKey || AppState.partner || 'mpi').toLowerCase();
+    const lKey = (lineKey || AppState.productLine || 'ptfe').toLowerCase();
+    return `/products/${encodeURIComponent(pKey)}/${encodeURIComponent(lKey)}/${encodeURIComponent(productName)}`;
+}
+
 const DynamicTableRenderer = {
     layoutDefinitions: {
         powder_coating_additive: [
@@ -38,7 +44,7 @@ const DynamicTableRenderer = {
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                    <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                    <a href="${getProductUrl(p.product_name, 'Others', 'powder_coating_additive')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                     ${renderCompareIcon(p, 'Others', 'powder_coating_additive')}
                 </div>`
             },
@@ -100,7 +106,7 @@ const DynamicTableRenderer = {
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                        <a href="${getProductUrl(p.product_name, 'Others', 'matting_agent')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                         ${renderCompareIcon(p, 'Others', 'matting_agent')}
                     </div>`
                 },
@@ -206,7 +212,7 @@ const DynamicTableRenderer = {
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                        <a href="${getProductUrl(p.product_name, 'Others', 'maleic_acid_resin')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                         ${renderCompareIcon(p, 'Others', 'maleic_acid_resin')}
                     </div>`
                 },
@@ -301,7 +307,7 @@ const DynamicTableRenderer = {
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                        <a href="${getProductUrl(p.product_name, 'Others', 'silane')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                         ${renderCompareIcon(p, 'Others', 'silane')}
                     </div>`
                 },
@@ -385,7 +391,7 @@ const DynamicTableRenderer = {
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                        <a href="${getProductUrl(p.product_name, 'Others', 'cpo_adhesion_promoter')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                         ${renderCompareIcon(p, 'Others', 'cpo_adhesion_promoter')}
                     </div>`
                 },
@@ -475,7 +481,7 @@ const DynamicTableRenderer = {
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                        <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                        <a href="${getProductUrl(p.product_name, 'Others', 'adhesion_promoter')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                         ${renderCompareIcon(p, 'Others', 'adhesion_promoter')}
                     </div>`
                 },
@@ -566,7 +572,7 @@ const DynamicTableRenderer = {
         <div class="flex items-start gap-2 w-full select-none py-0.5">
             <i class="fa-solid fa-chevron-right f-size-xs text-slate-500 shrink-0 transform transition-transform mt-1.5 ${arrowClass}" id="arrow-${index}"></i>
             <div class="min-w-0 flex-1">
-                <span class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</span>
+                <a href="${getProductUrl(p.product_name, 'MPI', AppState.productLine || 'ptfe')}" class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</a>
                 ${comp}
                 ${renderCompareIcon(p, 'MPI', AppState.productLine || 'ptfe')}
             </div>
@@ -628,7 +634,7 @@ const DynamicTableRenderer = {
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                    <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                    <a href="${getProductUrl(p.product_name, 'DorfKetal', 'tyzor')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                     ${renderCompareIcon(p, 'DorfKetal', 'tyzor')}
                 </div>`
             },
@@ -656,7 +662,7 @@ const DynamicTableRenderer = {
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                    <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                    <a href="${getProductUrl(p.product_name, 'DorfKetal', 'px')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                     ${renderCompareIcon(p, 'DorfKetal', 'px')}
                 </div>`
             },
@@ -691,7 +697,7 @@ const DynamicTableRenderer = {
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                    <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                    <a href="${getProductUrl(p.product_name, 'DorfKetal', 'chain')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                     ${renderCompareIcon(p, 'DorfKetal', 'chain')}
                 </div>`
             },
@@ -776,7 +782,7 @@ const DynamicTableRenderer = {
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                    <span class="f-weight-bold text-blue-950 break-words leading-snug min-w-0 w-full text-left">${p.product_name}</span>
+                    <a href="${getProductUrl(p.product_name, 'Orion', AppState.productLine || 'coating')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
                     ${renderCompareIcon(p, 'Orion', AppState.productLine || 'coating')}
                 </div>`
             },
