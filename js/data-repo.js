@@ -8,9 +8,9 @@ function renderTableSkeleton(rowCount = 5, colCount = 5) {
     const tbody = document.getElementById('directory-matrix-body');
     if (!tbody) return;
 
-    const skeletonRows = Array.from({length: rowCount}).map(() => `
+    const skeletonRows = Array.from({ length: rowCount }).map(() => `
         <tr class="animate-pulse border-b border-gray-200">
-            ${Array.from({length: colCount}).map(() => `
+            ${Array.from({ length: colCount }).map(() => `
                 <td class="py-3 px-3.5">
                     <div class="h-4 bg-slate-200 rounded w-3/4 mb-1"></div>
                     <div class="h-3 bg-slate-100 rounded w-1/2"></div>
@@ -56,7 +56,7 @@ class ProductRepository {
 
         const loadPromises = (brandConfig.files || []).map(file => {
             if (AppState.allProductsCache[file.key]) {
-                return Promise.resolve({key: file.key, data: AppState.allProductsCache[file.key]});
+                return Promise.resolve({ key: file.key, data: AppState.allProductsCache[file.key] });
             }
             const targetUrl = resolveAssetUrl(file.jsonPath);
             return fetch(targetUrl)
@@ -66,12 +66,12 @@ class ProductRepository {
                 })
                 .then(data => {
                     AppState.allProductsCache[file.key] = Array.isArray(data) ? data : [];
-                    return {key: file.key, data: AppState.allProductsCache[file.key]};
+                    return { key: file.key, data: AppState.allProductsCache[file.key] };
                 })
                 .catch(err => {
                     console.error(`載入產品線 ${file.key} (${targetUrl}) 失敗:`, err);
                     AppState.allProductsCache[file.key] = [];
-                    return {key: file.key, data: []};
+                    return { key: file.key, data: [] };
                 });
         });
         return Promise.all(loadPromises);

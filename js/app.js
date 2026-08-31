@@ -562,11 +562,10 @@ function initFilters() {
     Object.entries(featureConfig[AppState.lang]).forEach(([key, label]) => {
         const isChecked = AppState.filters[key] === true;
         const checkboxItem = document.createElement('label');
-        checkboxItem.className = `cursor-pointer inline-flex items-center gap-1 px-3 py-1 rounded-lg f-size-xs f-weight-bold border select-none ${
-            isChecked
+        checkboxItem.className = `cursor-pointer inline-flex items-center gap-1 px-3 py-1 rounded-lg f-size-xs f-weight-bold border select-none ${isChecked
                 ? 'bg-blue-950 text-white border-blue-950 shadow-sm'
                 : 'bg-white text-slate-800 border-slate-300 hover:border-blue-400 hover:bg-blue-50'
-        }`;
+            }`;
         checkboxItem.innerHTML = `
     <input type="checkbox" value="${key}" ${isChecked ? 'checked' : ''} onchange="toggleFilterCheckbox('${key}', this.checked)" class="sr-only" aria-label="${label}">
     <span>${label}</span>`;
@@ -591,7 +590,7 @@ function selectDirectoryNode(lineKey, categoryKey = 'all', preserveExpanded = fa
     resetSearchInputFields();
     renderDirectoryTree();
     renderProducts();
-    updateUrlRoute(true);
+    updateUrlRoute(!preserveExpanded);
 
     if (window.innerWidth < 1024 && categoryKey !== 'all') {
         const menu = document.getElementById('directory-tree-menu');
