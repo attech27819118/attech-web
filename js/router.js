@@ -1,6 +1,6 @@
 /**
  * ====================================================================
- * ATTech Web - Navigation, Hash Router, Modals & Toast (router.js)
+ * ATTech Web - Navigation, Clean URL Router, Modals & Toast (router.js)
  * ====================================================================
  */
 
@@ -38,7 +38,7 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
         if (typeof updateSearchLayout === 'function' && !AppState.searchQuery) {
             updateSearchLayout(false);
         }
-        if (updateUrl && !window.location.hash.includes('?q=')) {
+        if (updateUrl && !window.location.search.includes('q=')) {
             if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
         }
         if (shouldUpdatePartnerUI && typeof updatePartnerUI === 'function') {
@@ -48,10 +48,10 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
         if (typeof prewarmBackendServer === 'function') prewarmBackendServer();
     }
     if (typeof updateCompareUI === 'function') updateCompareUI();
-    if (updateUrl) updateHashRoute(true);
+    if (updateUrl) updateUrlRoute(true);
 }
 
-window.addEventListener('popstate', parseHashRoute);
+window.addEventListener('popstate', parseUrlRoute);
 
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' || e.key === 'Esc') {
@@ -191,130 +191,254 @@ function showToast(msg, type = 'success') {
     }, 4000);
 }
 
-function parseHashRoute() {
-    const hash = window.location.hash.replace(/^#\/?/, '');
-    if (!hash) return;
+// 輔助標準化字串 (比對產品名稱與 URL slug)
+function normalizeProductSlug(s) {
+    return (s || '')
+        .replace(/&[a-z0-9#]+;/gi, '')
+        .replace(/[®™©]/g, '')
+        .replace(/[-_\s]+/g, ' ')
+        .trim()
+        .toLowerCase();
+}
 
-    const [tabPart, queryPart] = hash.split('?');
-    const tabId = tabPart || 'about';
-    const params = new URLSearchParams(queryPart || '');
+/**
+ * 解析目前 URL 路徑（支援 HTML5 Clean URL、Query 參數及舊版 Hash 路由）
+ */
+function parseUrlRoute() {
+    // 1. 檢查並平滑遷移舊版 Hash 路由 (如 /#products?partner=MPI...)
+    if (window.location.hash && window.location.hash.length > 1) {
+        const legacyHash = window.location.hash.replace(/^#\/?/, '');
+        const [hTab, hQuery] = legacyHash.split('?');
+        const hParams = new URLSearchParams(hQuery || '');
 
-    switchTab(tabId, false, false);
+        let cleanMigratedPath = '/';
+        if (hTab === 'products') {
+            const hPartner = (hParams.get('partner') || 'mpi').toLowerCase();
+            const hLine = hParams.get('line') || 'ptfe';
+            const hProduct = hParams.get('product') || hParams.get('item');
+            cleanMigratedPath = `/products/${hPartner}/${hLine}`;
+            if (hProduct) cleanMigratedPath += `/${encodeURIComponent(hProduct)}`;
+            if (hParams.get('category') && hParams.get('category') !== 'all') {
+                cleanMigratedPath += `?category=${encodeURIComponent(hParams.get('category'))}`;
+            }
+            if (hParams.get('q')) {
+                cleanMigratedPath = `/products?q=${encodeURIComponent(hParams.get('q'))}`;
+            }
+        } else if (hTab === 'partners') {
+            cleanMigratedPath = '/partners';
+        } else if (hTab === 'contact') {
+            const mode = hParams.get('mode');
+            cleanMigratedPath = mode === 'detailed' ? '/contact?mode=detailed' : '/contact';
+        }
 
-    if (tabId === 'products') {
-        const q = params.get('q');
-        if (q) {
-            AppState.searchQuery = q;
-            document.querySelectorAll('.global-search-input').forEach(input => input.value = q);
+        history.replaceState(null, '', cleanMigratedPath);
+    }
+
+    // 2. 解析標準路徑與 Query 參數
+    const pathname = window.location.pathname.replace(/^\/|\/$/g, '');
+    const searchParams = new URLSearchParams(window.location.search);
+    const segments = pathname.split('/').filter(Boolean);
+    const rootSegment = (segments[0] || '').toLowerCase();
+
+    const partnerSlugMap = {
+        'mpi': 'MPI',
+        'dorfketal': 'DorfKetal',
+        'orion': 'Orion',
+        'others': 'Others'
+    };
+
+    // 首頁 (About)
+    if (!rootSegment || rootSegment === 'about' || rootSegment === 'index.html') {
+        switchTab('about', false, false);
+        updatePageMeta('about');
+        return;
+    }
+
+    // 合作夥伴 (Partners)
+    if (rootSegment === 'partners') {
+        switchTab('partners', false, false);
+        updatePageMeta('partners');
+        return;
+    }
+
+    // 索樣與諮詢 (Contact)
+    if (rootSegment === 'contact') {
+        switchTab('contact', false, false);
+        const mode = segments[1] || searchParams.get('mode') || 'quick';
+        if (typeof switchFormMode === 'function') {
+            switchFormMode(mode === 'detailed' ? 'detailed' : 'quick');
+        }
+        updatePageMeta('contact');
+        return;
+    }
+
+    // 產品專區 (Products)
+    if (rootSegment === 'products') {
+        switchTab('products', false, false);
+
+        // 全域搜尋
+        const query = searchParams.get('q');
+        if (query) {
+            AppState.searchQuery = query;
+            document.querySelectorAll('.global-search-input').forEach(input => input.value = query);
             if (typeof updateSearchLayout === 'function') updateSearchLayout(true);
             loadAllBrandsData().then(() => {
                 if (typeof renderGroupedSearchResults === 'function') {
-                    renderGroupedSearchResults(q);
+                    renderGroupedSearchResults(query);
                 }
             });
+            updatePageMeta('search', query);
             return;
         }
 
         if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
         if (typeof updateSearchLayout === 'function') updateSearchLayout(false);
-        const partner = params.get('partner');
-        const line = params.get('line');
-        const category = params.get('category');
-        const productName = params.get('product') || params.get('item');
 
-        if (productName) {
-            AppState.selectedProduct = productName;
-            if (partner && line) {
-                navigateToCategory(partner, line, category || 'all', productName);
-                return;
-            }
+        const rawPartner = segments[1] || searchParams.get('partner');
+        const rawLine = segments[2] || searchParams.get('line');
+        const rawProduct = segments[3] || searchParams.get('product') || searchParams.get('item');
+        const rawCategory = searchParams.get('category');
 
-            // 若只有 product 參數，全域比對所屬品牌與系列
+        const resolvedPartner = rawPartner ? (partnerSlugMap[rawPartner.toLowerCase()] || rawPartner) : 'MPI';
+        if (resolvedPartner) AppState.partner = resolvedPartner;
+
+        const configKey = partnerConfigMap[AppState.partner] || 'mpi';
+        const brandConfig = AppState.configs[configKey];
+
+        if (rawLine && brandConfig?.files?.some(f => f.key === rawLine)) {
+            AppState.productLine = rawLine;
+        } else if (brandConfig?.files?.[0]) {
+            AppState.productLine = brandConfig.files[0].key;
+        }
+
+        AppState.category = rawCategory || 'all';
+
+        if (rawProduct) {
+            const decodedProductName = decodeURIComponent(rawProduct);
+            AppState.selectedProduct = decodedProductName;
+
             loadAllBrandsData().then(() => {
-                const cleanStr = s => (s || '').replace(/&[a-z0-9#]+;/gi, '').replace(/[®™©]/g, '').trim().toLowerCase();
-                const targetClean = cleanStr(productName);
+                const targetClean = normalizeProductSlug(decodedProductName);
+                let matchedItem = null;
+                let matchedPartner = AppState.partner;
+                let matchedLine = AppState.productLine;
 
-                if (AppState.allProductsCache['mpi_master']) {
-                    const mpiFound = AppState.allProductsCache['mpi_master'].find(item => cleanStr(item.product_name) === targetClean || cleanStr(item.product_name).includes(targetClean));
-                    if (mpiFound) {
-                        const appKeys = mpiFound.applications_data ? Object.keys(mpiFound.applications_data) : [];
-                        const targetLine = appKeys.length > 0 ? appKeys[0] : 'ptfe';
-                        navigateToCategory('MPI', targetLine, 'all', mpiFound.product_name);
-                        return;
-                    }
-                }
-
+                // 搜尋所有已快取的產品清單
                 for (const [pKey, brandObj] of Object.entries(AppState.configs)) {
                     if (brandObj.files) {
                         for (const file of brandObj.files) {
                             const cached = AppState.allProductsCache[file.key];
                             if (Array.isArray(cached)) {
-                                const found = cached.find(item => cleanStr(item.product_name) === targetClean || (item.product_name && cleanStr(item.product_name).includes(targetClean)));
+                                const found = cached.find(item => {
+                                    const itemClean = normalizeProductSlug(item.product_name);
+                                    return itemClean === targetClean || itemClean.includes(targetClean) || targetClean.includes(itemClean);
+                                });
                                 if (found) {
-                                    const matchedPartner = Object.keys(partnerConfigMap).find(k => partnerConfigMap[k] === pKey) || 'Others';
-                                    navigateToCategory(matchedPartner, file.key, 'all', found.product_name);
-                                    return;
+                                    matchedItem = found;
+                                    matchedLine = file.key;
+                                    matchedPartner = Object.keys(partnerConfigMap).find(k => partnerConfigMap[k] === pKey) || 'Others';
+                                    break;
                                 }
                             }
                         }
                     }
+                    if (matchedItem) break;
                 }
 
-                if (partner) AppState.partner = partner;
-                if (typeof updatePartnerUI === 'function') updatePartnerUI();
+                const finalName = matchedItem ? matchedItem.product_name : decodedProductName;
+                navigateToCategory(matchedPartner, matchedLine, AppState.category, finalName);
             });
             return;
         }
 
-        if (partner) AppState.partner = partner;
-
-        const configKey = partnerConfigMap[AppState.partner] || 'mpi';
-        const brandConfig = AppState.configs[configKey];
-
-        if (line && brandConfig?.files?.some(f => f.key === line)) {
-            AppState.productLine = line;
-        } else if (brandConfig?.files?.[0]) {
-            AppState.productLine = brandConfig.files[0].key;
-        }
-
-        AppState.category = category || 'all';
-
         if (typeof updatePartnerUI === 'function') updatePartnerUI();
-    } else if (tabId === 'contact') {
-        const mode = params.get('mode');
-        if (mode && typeof switchFormMode === 'function') switchFormMode(mode);
+        updatePageMeta('products');
     }
 }
 
-function updateHashRoute(usePush = false) {
+/**
+ * 依據當前狀態平滑更新 Clean URL 與頁面 Meta 資訊
+ */
+function updateUrlRoute(usePush = false) {
     const activeTab = document.querySelector('.tab-content.active')?.id.replace('tab-', '') || 'about';
-    const params = new URLSearchParams();
+    let cleanPath = '/';
 
-    if (activeTab === 'products') {
-        if (AppState.searchQuery) {
-            params.set('q', AppState.searchQuery);
-        } else {
-            if (AppState.partner) params.set('partner', AppState.partner);
-            if (AppState.productLine) params.set('line', AppState.productLine);
-            if (AppState.category && AppState.category !== 'all') params.set('category', AppState.category);
-            if (AppState.selectedProduct) params.set('product', AppState.selectedProduct);
-        }
+    if (activeTab === 'about') {
+        cleanPath = '/';
+        updatePageMeta('about');
+    } else if (activeTab === 'partners') {
+        cleanPath = '/partners';
+        updatePageMeta('partners');
     } else if (activeTab === 'contact') {
         const isDetailed = !document.getElementById('form-mode-detailed')?.classList.contains('hidden');
-        params.set('mode', isDetailed ? 'detailed' : 'quick');
+        cleanPath = isDetailed ? '/contact?mode=detailed' : '/contact';
+        updatePageMeta('contact');
+    } else if (activeTab === 'products') {
+        if (AppState.searchQuery) {
+            cleanPath = `/products?q=${encodeURIComponent(AppState.searchQuery)}`;
+            updatePageMeta('search', AppState.searchQuery);
+        } else {
+            const partnerSlug = (AppState.partner || 'MPI').toLowerCase();
+            const lineSlug = AppState.productLine || 'ptfe';
+            cleanPath = `/products/${encodeURIComponent(partnerSlug)}/${encodeURIComponent(lineSlug)}`;
+
+            if (AppState.selectedProduct) {
+                cleanPath += `/${encodeURIComponent(AppState.selectedProduct)}`;
+                updatePageMeta('product', AppState.selectedProduct);
+            } else {
+                updatePageMeta('products');
+            }
+
+            if (AppState.category && AppState.category !== 'all') {
+                cleanPath += `?category=${encodeURIComponent(AppState.category)}`;
+            }
+        }
     }
 
-    const queryString = params.toString();
-    const newHash = `#${activeTab}${queryString ? '?' + queryString : ''}`;
-
-    if (window.location.hash !== newHash) {
+    const currentUrl = window.location.pathname + window.location.search;
+    if (currentUrl !== cleanPath) {
         if (usePush) {
-            history.pushState(null, '', newHash);
+            history.pushState(null, '', cleanPath);
         } else {
-            history.replaceState(null, '', newHash);
+            history.replaceState(null, '', cleanPath);
         }
     }
 }
+
+/**
+ * 動態更新頁面標題 (SEO Title) 與標準網址 (Canonical)
+ */
+function updatePageMeta(type, extra = '') {
+    const titleEl = document.getElementById('web-title') || document.querySelector('title');
+    const baseTitle = '宏威應用材料 Discover The Link To Life';
+
+    if (!titleEl) return;
+
+    if (type === 'about') {
+        titleEl.innerText = `${baseTitle} | 專業特用化學品供應商`;
+    } else if (type === 'partners') {
+        titleEl.innerText = `合作夥伴品牌 | ${baseTitle}`;
+    } else if (type === 'contact') {
+        titleEl.innerText = `樣品索取與技術諮詢 | ${baseTitle}`;
+    } else if (type === 'search') {
+        titleEl.innerText = `「${extra}」搜尋結果 | ${baseTitle}`;
+    } else if (type === 'product' && extra) {
+        const configKey = partnerConfigMap[AppState.partner] || 'mpi';
+        const brandConfig = AppState.configs[configKey];
+        const brandName = brandConfig?.brandName || AppState.partner;
+        titleEl.innerText = `${extra} (${brandName}) | 宏威應用材料 ATTech Materials`;
+    } else if (type === 'products') {
+        const configKey = partnerConfigMap[AppState.partner] || 'mpi';
+        const brandConfig = AppState.configs[configKey];
+        const currentFile = brandConfig?.files?.find(f => f.key === AppState.productLine);
+        const lineTitle = currentFile ? currentFile.titleZh : '特用化學品目錄';
+        titleEl.innerText = `${lineTitle} | 宏威應用材料 ATTech Materials`;
+    }
+}
+
+// 相容性函式別名
+function parseHashRoute() { parseUrlRoute(); }
+function updateHashRoute(usePush = false) { updateUrlRoute(usePush); }
 
 function toggleMobileSidebar() {
     const menu = document.getElementById('directory-tree-menu');
@@ -339,15 +463,12 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
     AppState.filters = {};
     if (typeof initFilters === 'function') initFilters();
 
-    // 先設定好目標品牌、產品線與分類，確保狀態即時就緒
     AppState.partner = partner;
     AppState.productLine = lineKey;
     AppState.category = categoryKey || 'all';
 
-    // 從導覽列選取產品時，側邊欄子選單預設收起 (expandedMenus 清空)，明確指引當前位置
     AppState.expandedMenus = [];
 
-    // 若行動版側邊欄處於開啟狀態，自動收合
     const mobileMenu = document.getElementById('directory-tree-menu');
     const mobileChevron = document.getElementById('mobile-sidebar-chevron');
     if (mobileMenu && !mobileMenu.classList.contains('hidden') && window.innerWidth < 768) {
@@ -356,15 +477,16 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
     }
 
     if (productName) {
+        AppState.selectedProduct = productName;
         AppState.expandedDetails = [productName];
+    } else {
+        AppState.selectedProduct = null;
     }
 
-    // 切換分頁外觀，但不觸發多餘的非同步渲染
     switchTab('products', false, false);
 
     if (typeof updatePartnerUI === 'function') {
         updatePartnerUI(() => {
-            // 如果有指定產品名稱，確保在表格渲染後加入 expandedDetails 並展開卡片
             if (productName) {
                 if (!AppState.expandedDetails.includes(productName)) {
                     AppState.expandedDetails.push(productName);
@@ -380,17 +502,9 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                 if (productName) {
                     document.querySelectorAll('.row-target-highlight').forEach(el => el.classList.remove('row-target-highlight'));
 
-                    const cleanStr = s => (s || '')
-                        .replace(/&[a-z0-9#]+;/gi, '')
-                        .replace(/[®™©]/g, '')
-                        .trim()
-                        .replace(/[\r\n\s]+/g, ' ')
-                        .toLowerCase();
-
-                    const targetClean = cleanStr(productName);
+                    const targetClean = normalizeProductSlug(productName);
                     const rows = Array.from(document.querySelectorAll('tr[data-product-name]'));
 
-                    // 尋找目標產品列 (多層級比對：精確比對 -> 淨化標準化比對 -> 子字串比對)
                     let targetRow = rows.find(row => {
                         const rowName = row.getAttribute('data-product-name') || row.dataset?.productName;
                         return rowName === productName;
@@ -399,13 +513,13 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                     if (!targetRow) {
                         targetRow = rows.find(row => {
                             const rowName = row.getAttribute('data-product-name') || row.dataset?.productName;
-                            return cleanStr(rowName) === targetClean;
+                            return normalizeProductSlug(rowName) === targetClean;
                         });
                     }
 
                     if (!targetRow) {
                         targetRow = rows.find(row => {
-                            const rowClean = cleanStr(row.getAttribute('data-product-name') || row.dataset?.productName);
+                            const rowClean = normalizeProductSlug(row.getAttribute('data-product-name') || row.dataset?.productName);
                             return rowClean.length > 0 && targetClean.length > 0 && (rowClean.includes(targetClean) || targetClean.includes(rowClean));
                         });
                     }
@@ -413,13 +527,11 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                     if (targetRow) {
                         targetRow.classList.add('row-target-highlight');
 
-                        // 滾動水平容器至最左側
                         const scrollContainer = targetRow.closest('.table-container') || targetRow.closest('.overflow-x-auto');
                         if (scrollContainer && scrollContainer.scrollLeft > 0) {
                             scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
                         }
 
-                        // 執行平滑滾動並置頂顯示
                         try {
                             targetRow.scrollIntoView({
                                 behavior: 'smooth',
@@ -432,7 +544,6 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                             window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
                         }
 
-                        // 若該列具備可點擊展開功能 (MPI 產品卡片) 且未展開，自動觸發展開
                         const idx = targetRow.getAttribute('data-index');
                         const detailRow = idx !== null ? document.getElementById(`detail-${idx}`) : null;
                         if (detailRow && detailRow.classList.contains('hidden')) {
@@ -463,5 +574,6 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
         }, !!productName);
     }
 
-    updateHashRoute(true);
+    updateUrlRoute(true);
 }
+
