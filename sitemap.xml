@@ -35,55 +35,13 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/contact?mode=detailed</loc>
+        <loc>https://www.attech.com.tw/products/mpi</loc>
         <lastmod>2026-08-31</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://www.attech.com.tw/products/mpi/ptfe</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -95,55 +53,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder/MP-28AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MP-28AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MP-28AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MP-28AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MP-28AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MP-28AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/ptfe/MP-28AL-XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MP-28AL-XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MP-28AL-XF</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -155,55 +65,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MP-28AL-G</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MP-28AL-G</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/ptfe/MPP-611AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder/MPP-611AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-611AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-611AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MPP-611AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MPP-611AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MPP-611AL</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -215,55 +77,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MPP-620AL-XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MPP-620AL-XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MPP-620AL-XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/ptfe/MicroKlear%20418AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder/MicroKlear%20418AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MicroKlear%20418AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MicroKlear%20418AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MicroKlear%20418AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MicroKlear%20418AL</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -275,73 +89,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder/Superslip%206515AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/Superslip%206515AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/Superslip%206515AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/Superslip%206515AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/Superslip%206515AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/Superslip%206515AL</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/ptfe/PolyGlide%201226XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder/PolyGlide%201226XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/PolyGlide%201226XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/PolyGlide%201226XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/PolyGlide%201226XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/PolyGlide%201226XF</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -353,67 +101,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder/SuperGlide%201231</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/SuperGlide%201231</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/SuperGlide%201231</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/SuperGlide%201231</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/ptfe/PolyTuf%201229</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/powder/PolyTuf%201229</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/PolyTuf%201229</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/PolyTuf%201229</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PolyTuf%201229</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/PolyTuf%201229</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/PolyTuf%201229</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -425,19 +113,55 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/Spherex%20200</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/ptfe/Spherex%20200XF</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/Spherex%20200XF</loc>
+        <loc>https://www.attech.com.tw/products/mpi/powder</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/powder/MP-28AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/powder/MPP-611AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/powder/MicroKlear%20418AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/powder/Superslip%206515AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/powder/PolyGlide%201226XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/powder/SuperGlide%201231</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/powder/PolyTuf%201229</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -455,43 +179,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MP-22XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MP-22XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MP-22XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MP-22XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MP-22XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/powder/MPP-611XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-611XF</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -503,55 +191,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-620VF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-620VF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MPP-620VF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MPP-620VF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MPP-620VF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-620XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-620XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/powder/MPP-635VF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-635VF</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -563,49 +203,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/PropylMatte%2031</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/PropylMatte%2031</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylMatte%2031</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/PropylMatte%2031</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/PropylMatte%2031</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/powder/Micropro%20400</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/Micropro%20400</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/Micropro%20400</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -617,85 +215,13 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/Micromide%20520</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/Micromide%20520</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/powder/MicroTouch%20800XF</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MicroTouch%20800XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MicroTouch%20800XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MicroTouch%20800XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MicroTouch%20800XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MicroTouch%20800XF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/powder/MicroTouch%20800F</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial/MicroTouch%20800F</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MicroTouch%20800F</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MicroTouch%20800F</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MicroTouch%20800F</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MicroTouch%20800F</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -725,7 +251,97 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/GraphShield%20730</loc>
+        <loc>https://www.attech.com.tw/products/mpi/industrial</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MP-28AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-611AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MicroKlear%20418AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/Superslip%206515AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/PolyGlide%201226XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/SuperGlide%201231</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/PolyTuf%201229</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MP-22XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-611XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-620VF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MPP-620XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/PropylMatte%2031</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/Micromide%20520</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MicroTouch%20800XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial/MicroTouch%20800F</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -737,19 +353,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20100S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/PropylTex%20140S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20140S</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -761,19 +365,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20200S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/PropylTex%20200SF</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20200SF</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -785,31 +377,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20270S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/PropylTex%20270S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/PropylTex%20270S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/PropylTex%20270S-1518</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20270S-1518</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -821,31 +389,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20325S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/PropylTex%20325S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/PropylTex%20325S</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/PropylTex%2050</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%2050</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -857,19 +401,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%2020</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/NyloTex%2050</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%2050</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -881,19 +413,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%20100</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/NyloTex%20140</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%20140</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -905,19 +425,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%20200</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/MicroKlear%20116</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/MicroKlear%20116</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -929,19 +437,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MicroKlear%20418</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/PropylMatte%2031HD</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/PropylMatte%2031HD</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -953,25 +449,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/Micropro%20440W</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.attech.com.tw/products/mpi/industrial/AquaPoly%20511</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/ink/AquaPoly%20511</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/AquaPoly%20511</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -989,6 +467,126 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MP-28AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-611AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MicroKlear%20418AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/Superslip%206515AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/PolyGlide%201226XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/SuperGlide%201231</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/PolyTuf%201229</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MP-22XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-620VF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-620XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MPP-635VF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/PropylMatte%2031</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/Micropro%20400</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/Micromide%20520</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MicroTouch%20800XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MicroTouch%20800F</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/MicroKlear%20116</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/PropylMatte%2031HD</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/ink/AquaPoly%20511</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.attech.com.tw/products/mpi/ink/Polysilk%20750</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
@@ -1001,13 +599,121 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/wood/MicroMatte%201415-EZ</loc>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MP-28AL</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.attech.com.tw/products/mpi/leather/MicroMatte%201415-EZ</loc>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PolyTuf%201229</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MP-22XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylMatte%2031</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MicroTouch%20800XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/MicroTouch%20800F</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20100S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20140S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20200S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20200SF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20270S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20270S-1518</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%20325S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%2050</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/PropylTex%2020</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%2050</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%20100</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%20140</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/industrial_floor/NyloTex%20200</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -1019,7 +725,301 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MP-28AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MP-28AL-XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MP-28AL-G</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MPP-611AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MPP-620AL-XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MicroKlear%20418AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/Superslip%206515AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/SuperGlide%201231</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/PolyTuf%201229</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/Spherex%20200</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/Spherex%20200XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MP-22XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MPP-620VF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/PropylMatte%2031</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/Micropro%20400</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MicroTouch%20800XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MicroTouch%20800F</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/PropylTex%20270S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/PropylTex%20325S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/Micropro%20440W</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/wood/MicroMatte%201415-EZ</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.attech.com.tw/products/mpi/wood/AquaBead%20519</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MP-28AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MP-28AL-XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MP-28AL-G</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MPP-611AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MPP-620AL-XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/Superslip%206515AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/PolyGlide%201226XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/PolyTuf%201229</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MPP-620VF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/PropylMatte%2031</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MicroTouch%20800XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MicroTouch%20800F</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/PropylTex%20270S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/PropylTex%20325S</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/leather/MicroMatte%201415-EZ</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MPP-611AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MPP-620AL-XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MicroKlear%20418AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/Superslip%206515AL</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/PolyGlide%201226XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MP-22XF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MPP-620VF</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/GraphShield%20730</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/MicroKlear%20418</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/mpi/automotive_polishes/AquaPoly%20511</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -1029,6 +1029,12 @@
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/dorfketal</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://www.attech.com.tw/products/dorfketal/tyzor</loc>
@@ -1401,6 +1407,12 @@
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.attech.com.tw/products/orion</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://www.attech.com.tw/products/orion/coating</loc>
@@ -1871,6 +1883,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.attech.com.tw/products/others</loc>
+        <lastmod>2026-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://www.attech.com.tw/products/others/coating_additive</loc>
         <lastmod>2026-08-31</lastmod>
         <changefreq>weekly</changefreq>
@@ -2296,4 +2314,5 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+
 </urlset>

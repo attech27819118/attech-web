@@ -6,11 +6,43 @@
 
 const SVG_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%2394a3b8'%3ENo Image%3C/text%3E%3C/svg%3E";
 
+function getAppBaseUrl() {
+    const baseEl = document.querySelector('base');
+    if (baseEl && baseEl.href) {
+        return baseEl.href;
+    }
+    const stateScript = document.querySelector('script[src*="state.js"]');
+    if (stateScript && stateScript.src) {
+        try {
+            const scriptUrl = new URL(stateScript.src, window.location.href);
+            const pathname = scriptUrl.pathname;
+            const rootPath = pathname.substring(0, pathname.lastIndexOf('/js/')) + '/';
+            return new URL(rootPath, scriptUrl.origin).href;
+        } catch (e) {
+            // fallback
+        }
+    }
+    return (window.location.origin || '') + '/';
+}
+
+function resolveAssetUrl(relPath) {
+    if (!relPath) return '';
+    if (relPath.startsWith('http://') || relPath.startsWith('https://') || relPath.startsWith('//') || relPath.startsWith('data:')) {
+        return relPath;
+    }
+    const cleanPath = relPath.replace(/^\.?\//, '');
+    try {
+        return new URL(cleanPath, getAppBaseUrl()).href;
+    } catch (e) {
+        return relPath;
+    }
+}
+
 function handleImageFallback(img, localSrc) {
     if (!img.dataset.fallbackStep) {
         img.dataset.fallbackStep = "1";
         if (localSrc) {
-            img.src = localSrc;
+            img.src = resolveAssetUrl(localSrc);
             return;
         }
     }
@@ -21,9 +53,15 @@ function handleImageFallback(img, localSrc) {
 
 const partnerConfigMap = {
     'MPI': 'mpi',
+    'mpi': 'mpi',
     'DorfKetal': 'dorfketal',
+    'dorfketal': 'dorfketal',
+    'Dorf-Ketal': 'dorfketal',
+    'dorf-ketal': 'dorfketal',
     'Orion': 'orion',
-    'Others': 'others'
+    'orion': 'orion',
+    'Others': 'others',
+    'others': 'others'
 };
 
 const featureCategories = {

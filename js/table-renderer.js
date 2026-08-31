@@ -533,9 +533,9 @@ const DynamicTableRenderer = {
                     getValue: p => (p.applications?.solvent_base_leather_coatings || p.solvent_base_leather_coatings) ? '✓' : ' '
                 },
                 {
-                    id: 'nylon',
+                    id: 'ink',
                     class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
-                    getValue: p => (p.applications?.solvent_base_nylon_coated_fabric || p.solvent_base_nylon_coated_fabric) ? '✓' : ' '
+                    getValue: p => (p.applications?.solvent_base_inks || p.solvent_base_inks || p.applications?.ink || p.ink) ? '✓' : ' '
                 },
                 {
                     id: 'waterbased',
@@ -847,7 +847,8 @@ const DynamicTableRenderer = {
     },
 
     getActiveFields(partnerKey, products) {
-        if (partnerKey === 'others') {
+        const pKey = (partnerConfigMap[partnerKey] || partnerKey || 'mpi').toLowerCase();
+        if (pKey === 'others') {
             switch (AppState.productLine) {
                 case 'matting_agent':
                     return this.layoutDefinitions.matting_agent;
@@ -864,8 +865,8 @@ const DynamicTableRenderer = {
             }
         }
 
-        let keyToUse = partnerKey;
-        if (partnerKey === 'dorfketal') {
+        let keyToUse = pKey;
+        if (pKey === 'dorfketal') {
             if (AppState.productLine === 'px') keyToUse = 'dorfketal_px';
             else if (AppState.productLine === 'chain' || AppState.productLine === 'dorfketal_chain') keyToUse = 'dorfketal_chain';
             else keyToUse = 'dorfketal_tyzor';
@@ -886,7 +887,7 @@ const DynamicTableRenderer = {
             }).join('');
         }
 
-        const currentPartnerKey = partnerConfigMap[AppState.partner] || 'mpi';
+        const currentPartnerKey = (partnerConfigMap[AppState.partner] || AppState.partner || 'mpi').toLowerCase();
 
         const colsHTML = activeFields.map(f => {
             let sortIcon = '';
@@ -912,6 +913,8 @@ const DynamicTableRenderer = {
     },
 
     getRowHTML(p, index, activeFields, partnerKey) {
+        const pKey = (partnerConfigMap[partnerKey] || partnerKey || 'mpi').toLowerCase();
+        const isMpi = pKey === 'mpi';
         const columns = activeFields.columns || activeFields;
         const isExpanded = AppState.expandedDetails.includes(p.product_name);
         const trHighlight = isExpanded ? 'row-expanded' : '';
@@ -919,7 +922,7 @@ const DynamicTableRenderer = {
 
         const cellsHTML = columns.map(f => {
             let displayVal = '—';
-            if (f.id === 'product_name' && partnerKey === 'mpi') {
+            if (f.id === 'product_name' && isMpi) {
                 displayVal = f.render ? f.render(p, index, arrowClass) : p.product_name;
             } else {
                 const rawVal = f.getValue ? f.getValue(p) : '—';
@@ -929,9 +932,9 @@ const DynamicTableRenderer = {
         }).join('');
 
         const safeProductName = (p.product_name || '').replace(/"/g, '&quot;');
-        const primaryRow = `<tr class="hover:bg-blue-50/50 border-b border-gray-200 f-size-sm ${partnerKey === 'mpi' ? 'cursor-pointer' : ''} ${trHighlight}" data-index="${index}" data-product-name="${safeProductName}">${cellsHTML}</tr>`;
+        const primaryRow = `<tr class="hover:bg-blue-50/50 border-b border-gray-200 f-size-sm ${isMpi ? 'cursor-pointer' : ''} ${trHighlight}" data-index="${index}" data-product-name="${safeProductName}">${cellsHTML}</tr>`;
 
-        if (partnerKey !== 'mpi') return primaryRow;
+        if (!isMpi) return primaryRow;
 
         const detailCardHTML = renderAccordionDetailCard(p);
 

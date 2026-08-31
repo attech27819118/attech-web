@@ -34,10 +34,12 @@ class ProductRepository {
             }
             renderTableSkeleton(6, 6);
             try {
-                const res = await fetch(brandConfig.masterPath || './json/mpi/mpiall.json');
+                const targetUrl = resolveAssetUrl(brandConfig.masterPath || './json/mpi/mpiall.json');
+                const res = await fetch(targetUrl);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 const data = await res.json();
                 AppState.allProductsCache['mpi_master'] = data;
-                brandConfig.files.forEach(file => {
+                (brandConfig.files || []).forEach(file => {
                     AppState.allProductsCache[file.key] = data.filter(p => p.applications_data && p.applications_data[file.key]);
                 });
                 return data;
@@ -56,14 +58,19 @@ class ProductRepository {
             if (AppState.allProductsCache[file.key]) {
                 return Promise.resolve({key: file.key, data: AppState.allProductsCache[file.key]});
             }
-            return fetch(file.jsonPath)
-                .then(res => res.ok ? res.json() : [])
+            const targetUrl = resolveAssetUrl(file.jsonPath);
+            return fetch(targetUrl)
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    return res.json();
+                })
                 .then(data => {
-                    AppState.allProductsCache[file.key] = data;
-                    return {key: file.key, data};
+                    AppState.allProductsCache[file.key] = Array.isArray(data) ? data : [];
+                    return {key: file.key, data: AppState.allProductsCache[file.key]};
                 })
                 .catch(err => {
-                    console.error(`載入產品線 ${file.key} 失敗:`, err);
+                    console.error(`載入產品線 ${file.key} (${targetUrl}) 失敗:`, err);
+                    AppState.allProductsCache[file.key] = [];
                     return {key: file.key, data: []};
                 });
         });
@@ -74,9 +81,7 @@ class ProductRepository {
 async function loadAllBrandsData() {
     if (AppState.allLoaded) return;
     const partners = ['MPI', 'DorfKetal', 'Orion', 'Others'];
-    for (const p of partners) {
-        await ProductRepository.loadBrandData(p);
-    }
+    await Promise.all(partners.map(p => ProductRepository.loadBrandData(p)));
     AppState.allLoaded = true;
 }
 

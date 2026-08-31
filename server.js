@@ -549,7 +549,7 @@ D & E. 測試紀錄與備註
 // ----------------------------------------------------
 // 5. SPA 萬用路由回退機制 (HTML5 History API Clean URLs)
 // ----------------------------------------------------
-app.get('*', (req, res) => {
+app.get('{*splat}', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
