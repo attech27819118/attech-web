@@ -308,7 +308,7 @@ function parseUrlRoute() {
     if (basePath && (pathname === '/' + basePath || pathname.startsWith('/' + basePath + '/'))) {
         pathname = pathname.slice(basePath.length + 1);
     }
-    pathname = pathname.replace(/^\/|\/$/g, '');
+    pathname = pathname.replace(/(^|\/)index\.html$/i, '').replace(/^\/|\/$/g, '');
     const searchParams = new URLSearchParams(window.location.search);
     const segments = pathname.split('/').filter(Boolean);
     const rootSegment = (segments[0] || '').toLowerCase();
@@ -494,8 +494,13 @@ function updateUrlRoute(usePush = false) {
                 const currentConfigKey = partnerConfigMap[AppState.partner] || 'mpi';
                 const currentBrandName = AppState.configs?.[currentConfigKey]?.brandName || AppState.partner;
 
+                const isBrandMatch = !realBrand || 
+                    realBrand === currentBrandName || 
+                    realBrand.toLowerCase() === (AppState.partner || '').toLowerCase() ||
+                    (partnerConfigMap[realBrand] && partnerConfigMap[realBrand] === currentConfigKey);
+
                 // 檢查產品真實品牌是否屬於當前選取之 Partner，防止品牌錯置
-                if (realBrand === currentBrandName || !realBrand) {
+                if (isBrandMatch) {
                     cleanPath += `/${encodeURIComponent(AppState.selectedProduct)}`;
                     updatePageMeta('product', AppState.selectedProduct);
                 } else {
@@ -638,12 +643,6 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                         });
                     }
 
-                    if (!targetRow) {
-                        targetRow = rows.find(row => {
-                            const rowClean = normalizeProductSlug(row.getAttribute('data-product-name') || row.dataset?.productName);
-                            return rowClean.length > 0 && targetClean.length > 0 && (rowClean.includes(targetClean) || targetClean.includes(rowClean));
-                        });
-                    }
 
                     if (targetRow) {
                         targetRow.classList.add('row-target-highlight');

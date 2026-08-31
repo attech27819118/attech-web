@@ -317,14 +317,12 @@
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
           "scratch_resistance": "提升抗刮、抗擦傷與抗磨損性能。",
-          "clarity": "選擇 XF 規格以獲得最大的光澤保持率。",
           "gloss_retention": "選擇 XF 規格以獲得最大的光澤保持率。",
           "lubricity_smooth_feel": "增加表面滑爽性與潤滑性。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
           "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
-          "clarity": "Choose XF grade for maximum gloss retention.",
           "gloss_retention": "Choose XF grade for maximum gloss retention.",
           "lubricity_smooth_feel": "Adds surface slip and lubricity."
         }
@@ -772,17 +770,15 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE 添加劑的有效替代品。",
-          "scratch_resistance": "提供最大的抗刮與抗擦傷性能，並具備滑爽性與潤滑性。",
-          "abrasion_resistance": "提供滑爽性以及耐磨/抗摩擦性能。",
-          "block_resistance": "提供滑爽性、耐磨/抗摩擦性能，以及防黏結性能。",
-          "lubricity_smooth_feel": "提供滑爽性以及耐磨/抗摩擦性能。"
+          "scratch_resistance": "提供最大的抗刮與抗擦傷性能。",
+          "abrasion_resistance": "提供耐磨/抗摩擦性能。",
+          "block_resistance": "提供滑爽性能，以及防黏結性能。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives.",
           "scratch_resistance": "Provides maximum scratch and scuff resistance with surface slip and lubricity.",
           "abrasion_resistance": "Provides surface slip and abrasion/rub resistance.",
-          "block_resistance": "Provides surface slip, abrasion/rub resistance, and antiblocking properties.",
-          "lubricity_smooth_feel": "Provides surface slip and abrasion/rub resistance."
+          "block_resistance": "Provides surface slip, abrasion/rub resistance, and antiblocking properties."
         }
       },
       "leather": {
@@ -999,14 +995,12 @@
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
           "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
-          "clarity": "不會影響塗層透明度或光澤度。",
-          "gloss_retention": "不會對透明度或光澤度產生不利影響。",
+          "gloss_retention": "對透明度或光澤度影響最小。",
           "lubricity_smooth_feel": "提高表面潤滑性。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE wax additives.",
           "scratch_resistance": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to provide superior scratch resistance.",
-          "clarity": "Does not adversely affect coating clarity or gloss.",
           "gloss_retention": "Does not adversely impact clarity or gloss retention.",
           "lubricity_smooth_feel": "Enhances surface lubricity and smooth feel."
         },
@@ -1216,10 +1210,10 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
-          "scratch_resistance": "最大的抗刮性。",
+          "scratch_resistance": "良好的抗刮性。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
-          "lubricity_smooth_feel": "具有良好的耐磨性，並具備滑爽性與潤滑性。"
+          "lubricity_smooth_feel": "具備滑爽性與潤滑性。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Maximum scratch resistance, equivalent to PE/PTFE wax additives.",
@@ -2265,10 +2259,10 @@
           "lubricity_smooth_feel": 1
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "具備抗摩擦與抗擦傷性。",
+          "scratch_resistance": "具備耐刮及抗擦傷性。",
           "water_repellency": "提供持久的撥水性能。",
           "block_resistance": "提供防黏結特性。",
-          "lubricity_smooth_feel": "賦予塗層高度潤滑與滑爽性，並具備抗摩擦與抗擦傷性。"
+          "lubricity_smooth_feel": "賦予塗層高度潤滑與滑爽性。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Imparts rub and mar resistance.",
@@ -3025,10 +3019,10 @@
           "sanding_efficiency": 1
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升抗擦傷、抗劃痕與抗金屬劃痕性能。",
-          "abrasion_resistance": "提升抗擦傷、抗劃痕與抗金屬劃痕性能。",
-          "burnish_resistance": "低或中等光澤塗層中高效的光澤控制劑，具備良好的抗拋光性。",
-          "matting_gloss_control": "低或中等光澤塗層中高效的光澤控制劑，具備良好的抗拋光性。",
+          "scratch_resistance": "提升抗擦傷、抗金屬劃痕性能。",
+          "abrasion_resistance": "提升耐磨性能。",
+          "burnish_resistance": "具備良好的抗拋光。",
+          "matting_gloss_control": "低或中等光澤塗層中，高效的光澤控制劑。",
           "block_resistance": "提供防黏結特性。"
         },
         "performance_descriptions_en": {
@@ -3283,7 +3277,7 @@
         },
         "performance_descriptions_zh": {
           "scratch_resistance": "提升抗劃傷性能。",
-          "abrasion_resistance": "提升與耐磨性能。",
+          "abrasion_resistance": "提升耐磨性能。",
           "burnish_resistance": "提升抗拋光。",
           "matting_gloss_control": "有效降低光澤。",
           "soft_touch": "提供從絲滑柔順到橡膠感、皮革感的不同觸感效果。"
@@ -4163,7 +4157,7 @@
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "burnish_resistance": "提升抗拋光性能。",
-          "matting_gloss_control": "與二氧化矽相比，提供消光效果。",
+          "matting_gloss_control": "提供消光效果。",
           "texture_structure": "塗層表面建構細緻的織紋效果"
         },
         "performance_descriptions_en": {
@@ -4278,7 +4272,7 @@
           "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
           "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
-          "matting_gloss_control": "且與二氧化矽相比，能提供更好的消光性。",
+          "matting_gloss_control": "提供更好的消光性。",
           "texture_structure": "塗層表面建構細緻的織紋效果。特別粒徑分布規格實現最佳織紋控制。"
         },
         "performance_descriptions_en": {
@@ -4392,7 +4386,7 @@
         "performance_descriptions_zh": {
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "burnish_resistance": "提升抗拋光性能。",
-          "matting_gloss_control": "與二氧化矽相比，提供消光效果。",
+          "matting_gloss_control": "提供消光效果。",
           "texture_structure": "塗層表面建構細緻的織紋效果"
         },
         "performance_descriptions_en": {
@@ -4420,7 +4414,7 @@
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "burnish_resistance": "提升抗拋光性。",
           "slip": "不會降低摩擦係數（COF）；非常適合防滑表面。",
-          "matting_gloss_control": "與二氧化矽相比，提供光澤降低並。",
+          "matting_gloss_control": "提供光澤降低。",
           "texture_structure": "提供穩定的表面織紋與結構。"
         },
         "performance_descriptions_en": {
@@ -5217,10 +5211,10 @@
           "block_resistance": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升抗擦傷、抗劃痕與抗金屬劃痕性能。",
-          "abrasion_resistance": "提升抗擦傷、抗劃痕與抗金屬劃痕性能。",
-          "burnish_resistance": "均勻消光，在低或中等光澤塗層中具備良好的抗拋光性。",
-          "matting_gloss_control": "均勻消光，在低或中等光澤塗層中具備良好的抗拋光性。",
+          "scratch_resistance": "提升抗刮傷、抗劃痕與抗金屬劃痕性能。",
+          "abrasion_resistance": "提升耐磨性能。",
+          "burnish_resistance": "在低或中等光澤塗層中具備良好的抗拋光性。",
+          "matting_gloss_control": "有效均勻的消光。",
           "lubricity_smooth_feel": "賦予平滑的表面「手感」。"
         },
         "performance_descriptions_en": {
@@ -5536,10 +5530,10 @@
           "cleanability": 3
         },
         "performance_descriptions_zh": {
-          "scratch_resistance": "提升抗拋光性與表面耐用性。",
+          "scratch_resistance": "提升抗拋光性與表面耐刮性。",
           "burnish_resistance": "提升抗拋光性能。",
           "matting_gloss_control": "提供高效的消光效果。",
-          "cleanability": "與無機消光劑相比，顯著提高抗污沾性（DPUR）。"
+          "cleanability": "與無機消光劑相比，顯著提高抗污沾性。"
         },
         "performance_descriptions_en": {
           "scratch_resistance": "Improves burnish resistance and surface durability.",
