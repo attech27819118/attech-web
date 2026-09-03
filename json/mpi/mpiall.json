@@ -236,7 +236,12 @@
           "slip": "Adds surface slip and lubricity."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MP-28AL-XF",
@@ -355,7 +360,12 @@
           "matting_gloss_control": "Choose XF grade for maximum gloss retention."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MP-28AL-G",
@@ -481,7 +491,12 @@
           "matting_gloss_control": "Choose G grade for maximum gloss reduction."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MPP-611AL",
@@ -697,7 +712,12 @@
           "slip_lubricity": "Enhances surface slip and lubricity."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MPP-620AL-XF",
@@ -832,7 +852,12 @@
           "slip_lubricity": "Provides surface slip and lubricity."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroKlear 418AL",
@@ -1033,7 +1058,12 @@
           "gloss_retention": "Preserves coating clarity and gloss retention."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "Superslip 6515AL",
@@ -1275,7 +1305,12 @@
           "slip_lubricity": "Imparts surface slip and lubricity."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PolyGlide 1226XF",
@@ -1451,7 +1486,12 @@
           "slip_lubricity": "Provides good surface slip and lubricity."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "SuperGlide 1231",
@@ -1633,7 +1673,12 @@
         "example_zh": "木器漆",
         "example_en": "Wood coatings"
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PolyTuf 1229",
@@ -1862,7 +1907,12 @@
           "abrasion_resistance": "Maximizes surface Taber abrasion resistance and film durability."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "Spherex 200",
@@ -1962,7 +2012,12 @@
           "heat_resistance": "High melting point (260°C) allows use in high-bake curing systems."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "Spherex 200XF",
@@ -2057,7 +2112,12 @@
           "heat_resistance": "High melting point (260°C) for high-temperature baking systems."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MP-22VF",
@@ -2109,7 +2169,12 @@
           "block_resistance": "Provides excellent antiblocking properties."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MP-22XF",
@@ -2290,7 +2355,12 @@
           "water_beading": "Imparts water beading performance."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MPP-611XF",
@@ -2371,7 +2441,12 @@
           "slip_lubricity": "Enhances coating surface slip."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MPP-620VF",
@@ -2560,7 +2635,12 @@
           "slip_lubricity": "Imparts good surface slip."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MPP-620XF",
@@ -2648,7 +2728,12 @@
           "heat_resistance": "Enhances coating heat resistance."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MPP-635VF",
@@ -2731,7 +2816,12 @@
           "heat_resistance": "Crystalline, high-melting-point wax enhances heat resistance."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylMatte 31",
@@ -2916,7 +3006,12 @@
           "matting_gloss_control": "Finely micronized polypropylene for efficient matting and gloss control in paints, coatings, and inks."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "Micropro 400",
@@ -3029,7 +3124,12 @@
           "block_resistance": "Delivers antiblocking properties."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "Micromide 520",
@@ -3126,7 +3226,12 @@
           "heat_resistance": "High melting point provides enhanced heat resistance."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroTouch 800XF",
@@ -3317,7 +3422,12 @@
           "texture_structure": "Available in various particle sizes to create a customized surface tactile feel."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroTouch 800F",
@@ -3512,7 +3622,12 @@
         "example_zh": "機車坐墊",
         "example_en": "Motorcycle seat cushions"
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroTex 580",
@@ -3557,7 +3672,12 @@
           "texture_structure": "Imparts a uniform sandpaper-like surface texture in matte polyester/acrylic systems; provides a smoother, scattered granular surface texture in polyester/epoxy and polyester/HAA systems."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroTex 950",
@@ -3605,7 +3725,9 @@
         "example_zh": "車漆",
         "example_en": "Automotive coatings"
       }
-    }
+    },
+    "fda_compliant": false,
+    "fda_regulations": []
   },
   {
     "product_name": "MicroTex 975",
@@ -3651,7 +3773,9 @@
           "texture_structure": "Delivers uniform fine surface texturing."
         }
       }
-    }
+    },
+    "fda_compliant": false,
+    "fda_regulations": []
   },
   {
     "product_name": "GraphShield 730",
@@ -3714,7 +3838,12 @@
           "water_beading": "Provide water beading."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 100S",
@@ -3798,7 +3927,12 @@
           "texture_structure": "Delivers a consistent medium surface texture effect."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 140S",
@@ -3882,7 +4016,12 @@
           "texture_structure": "Provides a uniform, consistent medium surface texture effect."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 200S",
@@ -3966,7 +4105,12 @@
           "texture_structure": "Provides a uniform medium surface texturing effect."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 200SF",
@@ -4050,7 +4194,12 @@
           "texture_structure": "Delivers a consistent medium surface texture effect."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 270S",
@@ -4193,7 +4342,12 @@
           "texture_structure": "Adds consistent surface texture and structure to finishes."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 270S-1518",
@@ -4279,7 +4433,12 @@
           "texture_structure": "Builds a fine texture effect on the coating surface. Narrow-cut mean particle size allows optimal texture control."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 325S",
@@ -4421,7 +4580,12 @@
           "texture_structure": "Adds consistent surface texture and structure to a wide variety of coatings."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 50",
@@ -4505,7 +4669,12 @@
           "texture_structure": "Delivers a uniform coarse-textured surface effect. Easily incorporated via high-speed mixing."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylTex 20",
@@ -4589,7 +4758,12 @@
           "texture_structure": "Provides a consistent coarse textured coating surface. Easily incorporated with high-speed mixing."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "NyloTex 50",
@@ -4664,7 +4838,12 @@
           "texture_structure": "Provides a uniform surface texture. Easily dispersed using high-speed mixing."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "NyloTex 100",
@@ -4739,7 +4918,12 @@
           "texture_structure": "Provides a uniform and controlled surface texture. Easily incorporated via high-speed mixing."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "NyloTex 140",
@@ -4815,7 +4999,12 @@
           "texture_structure": "Provides a uniform, controlled surface texture. Easily incorporated using high-speed mixing."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "NyloTex 200",
@@ -4890,7 +5079,12 @@
           "texture_structure": "Provides a uniform and controlled surface texture. Easily incorporated via high-speed mixing."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroKlear 116",
@@ -4975,7 +5169,12 @@
           "clarity": "Ideal for applications requiring high clarity and gloss; reduces post-bake haze in coil coatings."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroKlear 418",
@@ -5055,7 +5254,12 @@
           "gloss_retention": "Provides outstanding clarity and gloss retention."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "PropylMatte 31HD",
@@ -5136,7 +5340,12 @@
           "anti_slip": "Maintains high COF for non-skid properties."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "Micropro 440W",
@@ -5219,7 +5428,9 @@
           "lubricity_smooth_feel": "Imparts a smooth surface tactile feel."
         }
       }
-    }
+    },
+    "fda_compliant": false,
+    "fda_regulations": []
   },
   {
     "product_name": "AquaPoly 511",
@@ -5325,7 +5536,12 @@
           "slip_lubricity": "Delivers excellent surface slip and mobility."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "AquaPoly 250",
@@ -5381,7 +5597,12 @@
         "example_zh": "罐頭塗料",
         "example_en": "Can coatings"
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "Polysilk 750",
@@ -5460,7 +5681,12 @@
           "block_resistance": "Improves antiblocking properties."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "MicroMatte 1415-EZ",
@@ -5562,7 +5788,12 @@
           "cleanability": "Multifunctional matting additive that improves soil release and dirt pickup resistance."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   },
   {
     "product_name": "AquaBead 519",
@@ -5654,6 +5885,11 @@
           "gloss_retention": "Provides gloss retention and durability."
         }
       }
-    }
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ]
   }
 ]
