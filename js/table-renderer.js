@@ -568,11 +568,18 @@ const DynamicTableRenderer = {
                 render: (p, index, arrowClass) => {
                     const compRaw = p['composition_' + AppState.lang] || p.composition_zh || p.composition || p.chemistry || '';
                     const comp = compRaw && compRaw !== '—' ? `<div class="f-size-xs text-slate-600 f-weight-normal leading-tight mt-0.5 break-words whitespace-pre-line">${compRaw}</div>` : '';
+                    const isFdaLine = (AppState.productLine === 'industrial' || AppState.productLine === 'ink');
+                    const fdaBadge = (isFdaLine && p.fda_compliant)
+                        ? `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-[9px] text-emerald-600"></i> FDA</span>`
+                        : '';
                     return `
         <div class="flex items-start gap-2 w-full select-none py-0.5">
             <i class="fa-solid fa-chevron-right f-size-xs text-slate-500 shrink-0 transform transition-transform mt-1.5 ${arrowClass}" id="arrow-${index}"></i>
             <div class="min-w-0 flex-1">
-                <a href="${getProductUrl(p.product_name, 'MPI', AppState.productLine || 'ptfe')}" class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</a>
+                <div class="flex items-center flex-wrap gap-y-0.5">
+                    <a href="${getProductUrl(p.product_name, 'MPI', AppState.productLine || 'ptfe')}" class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</a>
+                    ${fdaBadge}
+                </div>
                 ${comp}
                 ${renderCompareIcon(p, 'MPI', AppState.productLine || 'ptfe')}
             </div>
