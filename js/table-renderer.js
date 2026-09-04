@@ -39,8 +39,8 @@ const DynamicTableRenderer = {
         powder_coating_additive: [
             {
                 id: 'product_name',
-                title: '產品名稱',
-                class: 'w-[22%] min-w-[150px]',
+                title: '<span class="th-title">產品名稱</span>',
+                class: 'min-w-[140px]',
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -50,22 +50,22 @@ const DynamicTableRenderer = {
             },
             {
                 id: 'main_usage',
-                title: '主要用途',
-                class: 'w-[25%] min-w-[150px]',
+                title: '<span class="th-title">主要用途</span>',
+                class: 'min-w-[130px]',
                 getValue: p => p.main_usage || p.composition_zh,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.main_usage || p.composition_zh || '—'}</span>`
             },
             {
                 id: 'performance',
-                title: '應用性能',
-                class: 'w-[25%] min-w-[180px]',
+                title: '<span class="th-title">應用性能</span>',
+                class: 'min-w-[150px]',
                 getValue: p => p.performance || p.properties,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.performance || p.properties || '—'}</span>`
             },
             {
                 id: 'usage',
-                title: '用法與用量',
-                class: 'w-[28%] min-w-[130px]',
+                title: '<span class="th-title">用法與用量</span>',
+                class: 'min-w-[120px]',
                 getValue: p => p.suggested_use_level_zh || p.suggested_use_level || p.dosage,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.suggested_use_level_zh || p.suggested_use_level || p.dosage || '—'}</span>`
             }
@@ -73,36 +73,36 @@ const DynamicTableRenderer = {
         matting_agent: {
             headerRows: [
                 [
-                    {title: '產品名稱', class: 'w-[15%] min-w-[140px] text-center'},
-                    {title: '表面處理\n化學性質', class: 'w-[12%] min-w-[130px] text-center'},
-                    {title: '適用系統', class: 'w-[10%] min-w-[80px] text-center'},
+                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
+                    {title: '<span class="th-title">表面處理</span><br><span class="th-title">化學性質</span>', class: 'min-w-[105px] text-center'},
+                    {title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center'},
                     {
-                        title: '粒徑<br><span class="f-size-xs f-weight-normal text-slate-500">(µm)</span>',
-                        class: 'w-[6%] min-w-[55px] text-center'
+                        title: '<span class="th-title">粒徑</span><span class="th-unit">(µm)</span>',
+                        class: 'min-w-[55px] text-center'
                     },
                     {
-                        title: '吸油量<br><span class="f-size-xs f-weight-normal text-slate-500">(g/100g)</span>',
-                        class: 'w-[8%] min-w-[60px] text-center'
+                        title: '<span class="th-title">吸油量</span><span class="th-unit">(g/100g)</span>',
+                        class: 'min-w-[72px] text-center'
                     },
                     {
-                        title: '密度<br><span class="f-size-xs f-weight-normal text-slate-500">(g/cm³)</span>',
-                        class: 'w-[6%] min-w-[55px] text-center'
+                        title: '<span class="th-title">密度</span><span class="th-unit">(g/cm³)</span>',
+                        class: 'min-w-[62px] text-center'
                     },
-                    {title: '作用', class: 'w-[21%] min-w-[160px]'},
-                    {title: '木器漆', class: 'w-[3.5%] min-w-[35px] text-center'},
-                    {title: '烤漆', class: 'w-[3.5%] min-w-[35px] text-center'},
-                    {title: '塑膠塗料', class: 'w-[3.5%] min-w-[35px] text-center'},
-                    {title: '皮革塗料', class: 'w-[3.5%] min-w-[35px] text-center'},
-                    {title: '尼龍織物', class: 'w-[3.5%] min-w-[35px] text-center'},
-                    {title: '油墨', class: 'w-[3.5%] min-w-[35px] text-center'},
-                    {title: '水性', class: 'w-[3.5%] min-w-[35px] text-center'},
-                    {title: 'UV', class: 'w-[3.5%] min-w-[35px] text-center'}
+                    {title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center'},
+                    {title: '<span class="th-app">木器<br>漆</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">烤漆</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">塑膠<br>塗料</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">皮革<br>塗料</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">尼龍<br>織物</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">油墨</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">水性</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">UV</span>', class: 'min-w-[36px] px-1 text-center'}
                 ]
             ],
             columns: [
                 {
                     id: 'product_name',
-                    class: 'w-[15%] min-w-[140px]',
+                    class: 'min-w-[130px]',
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -112,75 +112,75 @@ const DynamicTableRenderer = {
                 },
                 {
                     id: 'surface_treatment',
-                    class: 'w-[13%] min-w-[130px]',
+                    class: 'min-w-[105px]',
                     getValue: p => p.surface_treatment || p.chemical_component || (Array.isArray(p.featured_categories) ? p.featured_categories.join(', ') : p.featured_categories),
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.featured_categories || '—'}</span>`
                 },
                 {
                     id: 'system',
-                    class: 'w-[8%] min-w-[80px] text-center',
+                    class: 'min-w-[75px] text-center',
                     getValue: p => p.recommended_system_type_zh || p.recommended_system_type || p.system,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.recommended_system_type_zh || p.recommended_system_type || (typeof p.system === 'string' ? p.system : '') || '—'}</span>`
                 },
                 {
                     id: 'mean_size',
-                    class: 'w-[6%] min-w-[55px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[55px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.mean_particle_size_um || p.particle_size
                 },
                 {
                     id: 'oil',
-                    class: 'w-[6%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[72px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.oil_absorption_number || p.oil_absorption
                 },
                 {
                     id: 'density',
-                    class: 'w-[6%] min-w-[55px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[62px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.density_g_cc_25c || p.density
                 },
                 {
                     id: 'properties',
-                    class: 'w-[21%] min-w-[160px]',
+                    class: 'min-w-[120px]',
                     getValue: p => p.properties,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
                 },
                 {
                     id: 'wood',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_wood_coating || p.solvent_base_wood_coating) ? '✓' : ' '
                 },
                 {
                     id: 'baking',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_powder_coatings || p.solvent_base_powder_coatings) ? '✓' : ' '
                 },
                 {
                     id: 'plastic',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_plastic_coatings || p.solvent_base_plastic_coatings) ? '✓' : ' '
                 },
                 {
                     id: 'leather',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_leather_coatings || p.solvent_base_leather_coatings) ? '✓' : ' '
                 },
                 {
                     id: 'nylon',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_nylon_coated_fabric || p.solvent_base_nylon_coated_fabric) ? '✓' : ' '
                 },
                 {
                     id: 'ink',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_inks || p.solvent_base_inks) ? '✓' : ' '
                 },
                 {
                     id: 'waterbased',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.system?.waterborne || p.waterborne) ? '✓' : ' '
                 },
                 {
                     id: 'uv',
-                    class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.system?.uv_coatings_and_inks || p.uv_coatings_and_inks) ? '✓' : ' '
                 }
             ]
@@ -188,27 +188,27 @@ const DynamicTableRenderer = {
         maleic_acid_resin: {
             headerRows: [
                 [
-                    {title: '產品名稱', class: 'w-[18%] min-w-[145px] text-center'},
-                    {title: '色澤', class: 'w-[8%] min-w-[60px] text-center'},
-                    {title: '軟化點', class: 'w-[8%] min-w-[60px] text-center'},
+                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
+                    {title: '<span class="th-title">色澤</span>', class: 'min-w-[50px] text-center'},
+                    {title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[60px] text-center'},
                     {
-                        title: '酸值<br><span class="f-size-xs f-weight-normal text-slate-500">(mgKOH/g)</span>',
-                        class: 'w-[10%] min-w-[80px] text-center'
+                        title: '<span class="th-title">酸值</span><span class="th-unit">(mgKOH/g)</span>',
+                        class: 'min-w-[85px] text-center'
                     },
-                    {title: '特性', class: 'w-[25%] min-w-[180px] text-center'},
-                    {title: '木器漆', class: 'w-[5%] min-w-[40px] text-center'},
-                    {title: '噴瓷漆', class: 'w-[5%] min-w-[40px] text-center'},
-                    {title: 'PU機械漆', class: 'w-[5%] min-w-[40px] text-center'},
-                    {title: '路標漆', class: 'w-[5%] min-w-[40px] text-center'},
-                    {title: '油墨', class: 'w-[5%] min-w-[40px] text-center'},
-                    {title: '熱熔膠', class: 'w-[5%] min-w-[40px] text-center'},
-                    {title: '密封膠', class: 'w-[5%] min-w-[40px] text-center'}
+                    {title: '<span class="th-title">特性</span>', class: 'min-w-[130px] text-center'},
+                    {title: '<span class="th-app">木器<br>漆</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">噴瓷<br>漆</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">PU<br>機械漆</span>', class: 'min-w-[42px] px-1 text-center'},
+                    {title: '<span class="th-app">路標<br>漆</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">油墨</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">熱熔<br>膠</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">密封<br>膠</span>', class: 'min-w-[36px] px-1 text-center'}
                 ]
             ],
             columns: [
                 {
                     id: 'product_name',
-                    class: 'w-[18%] min-w-[145px]',
+                    class: 'min-w-[130px]',
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -218,58 +218,58 @@ const DynamicTableRenderer = {
                 },
                 {
                     id: 'appearance',
-                    class: 'w-[8%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[50px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.appearance || p.chemical_component || (Array.isArray(p.appearance) ? p.appearance.join(', ') : p.appearance)
                 },
                 {
                     id: 'softening_point',
-                    class: 'w-[8%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[60px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.softening_point || p.softening_point
                 },
                 {
                     id: 'acid_value',
-                    class: 'w-[10%] min-w-[80px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[85px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.acid_value || p.acid_value
                 },
                 {
                     id: 'properties',
-                    class: 'w-[25%] min-w-[180px]',
+                    class: 'min-w-[130px]',
                     getValue: p => p.properties,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
                 },
                 {
                     id: 'wood_coating',
-                    class: 'w-[5%] min-w-[40px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.wood_coating || p.wood_coating) ? '✓' : ' '
                 },
                 {
                     id: 'enamel_paint',
-                    class: 'w-[5%] min-w-[40px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.enamel_paint || p.enamel_paint) ? '✓' : ' '
                 },
                 {
                     id: 'pu_industrial_coating',
-                    class: 'w-[5%] min-w-[40px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[42px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.pu_industrial_coating || p.pu_industrial_coating) ? '✓' : ' '
                 },
                 {
                     id: 'traffic_paint',
-                    class: 'w-[5%] min-w-[40px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.traffic_paint || p.traffic_paint) ? '✓' : ' '
                 },
                 {
                     id: 'ink',
-                    class: 'w-[5%] min-w-[40px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.ink || p.ink) ? '✓' : ' '
                 },
                 {
                     id: 'hot_glue',
-                    class: 'w-[5%] min-w-[40px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.hot_glue || p.hot_glue) ? '✓' : ' '
                 },
                 {
                     id: 'sealant',
-                    class: 'w-[5%] min-w-[40px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.sealant || p.sealant) ? '✓' : ' '
                 }
             ]
@@ -277,33 +277,33 @@ const DynamicTableRenderer = {
         silane: {
             headerRows: [
                 [
-                    {title: '產品名稱', class: 'w-[16%] min-w-[140px] text-center'},
-                    {title: '描述 / 主成分', class: 'w-[15%] min-w-[150px] text-center'},
+                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
+                    {title: '<span class="th-title">描述 / 主成分</span>', class: 'min-w-[115px] text-center'},
                     {
-                        title: '密度<br><span class="f-size-xs f-weight-normal text-slate-500">(g/cm³)</span>',
-                        class: 'w-[7%] min-w-[60px] text-center'
+                        title: '<span class="th-title">密度</span><span class="th-unit">(g/cm³)</span>',
+                        class: 'min-w-[62px] text-center'
                     },
                     {
-                        title: '閃點<br><span class="f-size-xs f-weight-normal text-slate-500">(°C)</span>',
-                        class: 'w-[7%] min-w-[60px] text-center'
+                        title: '<span class="th-title">閃點</span><span class="th-unit">(°C)</span>',
+                        class: 'min-w-[55px] text-center'
                     },
                     {
-                        title: '沸點<br><span class="f-size-xs f-weight-normal text-slate-500">(°C)</span>',
-                        class: 'w-[7%] min-w-[60px] text-center'
+                        title: '<span class="th-title">沸點</span><span class="th-unit">(°C)</span>',
+                        class: 'min-w-[55px] text-center'
                     },
-                    {title: 'pH', class: 'w-[8%] min-w-[50px] text-center'},
-                    {title: '特性 / 優點', class: 'w-[23%] min-w-[180px]'},
-                    {title: '密著促進', class: 'w-[3%] min-w-[35px] text-center'},
-                    {title: '化學合成', class: 'w-[3%] min-w-[35px] text-center'},
-                    {title: '共黏合劑', class: 'w-[3%] min-w-[35px] text-center'},
-                    {title: '交聯劑', class: 'w-[3%] min-w-[35px] text-center'},
-                    {title: '表面改質', class: 'w-[3%] min-w-[35px] text-center'}
+                    {title: '<span class="th-title">pH</span>', class: 'min-w-[45px] text-center'},
+                    {title: '<span class="th-title">特性 / 優點</span>', class: 'min-w-[120px] text-center'},
+                    {title: '<span class="th-app">密著<br>促進</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">化學<br>合成</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">共黏<br>合劑</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">交聯<br>劑</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">表面<br>改質</span>', class: 'min-w-[36px] px-1 text-center'}
                 ]
             ],
             columns: [
                 {
                     id: 'product_name',
-                    class: 'w-[16%] min-w-[140px]',
+                    class: 'min-w-[130px]',
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -313,59 +313,59 @@ const DynamicTableRenderer = {
                 },
                 {
                     id: 'comp',
-                    class: 'w-[15%] min-w-[150px]',
+                    class: 'min-w-[115px]',
                     getValue: p => p.chemical_component || p.composition_zh,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.chemical_component || p.composition_zh || '—'}</span>`
                 },
                 {
                     id: 'density',
-                    class: 'w-[7%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[62px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.density_g_cc_25c || p.density
                 },
                 {
                     id: 'flash_point',
-                    class: 'w-[7%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[55px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.flash_point || p.flash_point
                 },
                 {
                     id: 'boiling_point',
-                    class: 'w-[7%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[55px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.boiling_point || p.boiling_point
                 },
                 {
                     id: 'ph_value',
-                    class: 'w-[8%] min-w-[50px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[45px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.ph_value || p.ph_value
                 },
                 {
                     id: 'properties',
-                    class: 'w-[23%] min-w-[180px]',
+                    class: 'min-w-[120px]',
                     getValue: p => p.properties,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
                 },
                 {
                     id: 'adhesion_promoter',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.adhesion_promoter || p.system?.adhesion_promoter || p.applications?.adhesion_promoter) ? '✓' : ' '
                 },
                 {
                     id: 'chemical_synthesis',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.chemical_synthesis || p.system?.chemical_synthesis || p.applications?.chemical_synthesis) ? '✓' : ' '
                 },
                 {
                     id: 'comonomer',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.comonomer || p.system?.comonomer || p.applications?.comonomer) ? '✓' : ' '
                 },
                 {
                     id: 'crosslinking_agent',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.crosslinking_agent || p.system?.crosslinking_agent || p.applications?.crosslinking_agent) ? '✓' : ' '
                 },
                 {
                     id: 'surface_modifier',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.surface_modifier || p.system?.surface_modifier || p.applications?.surface_modifier) ? '✓' : ' '
                 }
             ]
@@ -373,21 +373,21 @@ const DynamicTableRenderer = {
         cpo_adhesion_promoter: {
             headerRows: [
                 [
-                    {title: '產品名稱', class: 'w-[16%] min-w-[140px] text-center'},
-                    {title: '化學性質', class: 'w-[14%] min-w-[130px] text-center'},
-                    {title: '適用系統', class: 'w-[12%] min-w-[100px] text-center'},
-                    {title: '玻璃轉化點\nTg°C', class: 'w-[10%] min-w-[70px] text-center'},
-                    {title: '氯含量', class: 'w-[8%] min-w-[60px] text-center'},
-                    {title: '黏度mPa.s', class: 'w-[8%] min-w-[60px] text-center'},
-                    {title: '作用', class: 'w-[20%] min-w-[150px]'},
-                    {title: '油墨', class: 'w-[6%] min-w-[45px] text-center'},
-                    {title: '塗料', class: 'w-[6%] min-w-[45px] text-center'}
+                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
+                    {title: '<span class="th-title">化學性質</span>', class: 'min-w-[110px] text-center'},
+                    {title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center'},
+                    {title: '<span class="th-title">玻璃轉化點</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center'},
+                    {title: '<span class="th-title">氯含量</span><span class="th-unit">(%)</span>', class: 'min-w-[55px] text-center'},
+                    {title: '<span class="th-title">黏度</span><span class="th-unit">(mPa·s)</span>', class: 'min-w-[65px] text-center'},
+                    {title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center'},
+                    {title: '<span class="th-app">油墨</span>', class: 'min-w-[38px] px-1 text-center'},
+                    {title: '<span class="th-app">塗料</span>', class: 'min-w-[38px] px-1 text-center'}
                 ]
             ],
             columns: [
                 {
                     id: 'product_name',
-                    class: 'w-[16%] min-w-[140px]',
+                    class: 'min-w-[130px]',
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -397,45 +397,45 @@ const DynamicTableRenderer = {
                 },
                 {
                     id: 'composition',
-                    class: 'w-[14%] min-w-[130px]',
+                    class: 'min-w-[110px]',
                     getValue: p => p.composition_zh || (Array.isArray(p.composition_zh) ? p.composition_zh.join(', ') : p.composition_zh),
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.composition_zh || '—'}</span>`
                 },
                 {
                     id: 'system',
-                    class: 'w-[12%] min-w-[100px] text-center',
+                    class: 'min-w-[75px] text-center',
                     getValue: p => p.recommended_system_type_zh,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.recommended_system_type_zh || (typeof p.system === 'string' ? p.system : '') || '—'}</span>`
                 },
                 {
                     id: 'softening_point',
-                    class: 'w-[9%] min-w-[70px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.softening_point || p.softening_point
                 },
                 {
                     id: 'chlorine_content',
-                    class: 'w-[8%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[55px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.chlorine_content || p.chlorine_content
                 },
                 {
                     id: 'viscosity',
-                    class: 'w-[8%] min-w-[60px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.viscosity || p.viscosity
                 },
                 {
                     id: 'properties',
-                    class: 'w-[22%] min-w-[150px]',
+                    class: 'min-w-[120px]',
                     getValue: p => p.properties,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
                 },
                 {
                     id: 'ink',
-                    class: 'w-[6%] min-w-[45px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[38px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.ink || p.ink) ? '✓' : ' '
                 },
                 {
                     id: 'industrial coating',
-                    class: 'w-[6%] min-w-[45px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[38px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.industrial_coating || p.industrial_coating) ? '✓' : ' '
                 }
             ]
@@ -443,41 +443,41 @@ const DynamicTableRenderer = {
         adhesion_promoter: {
             headerRows: [
                 [
-                    {title: '產品名稱', class: 'w-[15%] min-w-[145px] text-center'},
-                    {title: '化學性質', class: 'w-[15%] min-w-[120px] text-center'},
-                    {title: '適用系統', class: 'w-[10%] min-w-[85px] text-center'},
-                    {title: '玻璃轉化點\nTg°C', class: 'w-[12%] min-w-[70px] text-center'},
-                    {title: '羥基OH value', class: 'w-[8%] min-w-[65px] text-center'},
-                    {title: '酸價', class: 'w-[7%] min-w-[55px] text-center'},
-                    {title: '作用', class: 'w-[18%] min-w-[140px]'},
+                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
+                    {title: '<span class="th-title">化學性質</span>', class: 'min-w-[110px] text-center'},
+                    {title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center'},
+                    {title: '<span class="th-title">玻璃轉化點</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center'},
+                    {title: '<span class="th-title">羥基</span><span class="th-unit">OH value</span>', class: 'min-w-[70px] text-center'},
+                    {title: '<span class="th-title">酸價</span>', class: 'min-w-[50px] text-center'},
+                    {title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center'},
                     {
-                        title: '木器漆',
-                        class: 'w-[3%] min-w-[35px] text-center'
+                        title: '<span class="th-app">木器<br>漆</span>',
+                        class: 'min-w-[36px] px-1 text-center'
                     },
                     {
-                        title: '烤漆',
-                        class: 'w-[3%] min-w-[35px] text-center'
+                        title: '<span class="th-app">烤漆</span>',
+                        class: 'min-w-[36px] px-1 text-center'
                     },
                     {
-                        title: '塑膠塗料',
-                        class: 'w-[3%] min-w-[35px] text-center'
+                        title: '<span class="th-app">塑膠<br>塗料</span>',
+                        class: 'min-w-[36px] px-1 text-center'
                     },
                     {
-                        title: '皮革塗料',
-                        class: 'w-[3%] min-w-[35px] text-center'
+                        title: '<span class="th-app">皮革<br>塗料</span>',
+                        class: 'min-w-[36px] px-1 text-center'
                     },
                     {
-                        title: '油墨',
-                        class: 'w-[3%] min-w-[35px] text-center'
+                        title: '<span class="th-app">油墨</span>',
+                        class: 'min-w-[36px] px-1 text-center'
                     },
-                    {title: '水性', class: 'w-[3%] min-w-[35px] text-center'},
-                    {title: 'UV', class: 'w-[3%] min-w-[35px] text-center'}
+                    {title: '<span class="th-app">水性</span>', class: 'min-w-[36px] px-1 text-center'},
+                    {title: '<span class="th-app">UV</span>', class: 'min-w-[36px] px-1 text-center'}
                 ]
             ],
             columns: [
                 {
                     id: 'product_name',
-                    class: 'w-[15%] min-w-[145px]',
+                    class: 'min-w-[130px]',
                     getValue: p => p.product_name,
                     render: p => `
                     <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -487,70 +487,70 @@ const DynamicTableRenderer = {
                 },
                 {
                     id: 'composition_zh',
-                    class: 'w-[15%] min-w-[120px]',
+                    class: 'min-w-[110px]',
                     getValue: p => p.composition_zh || (Array.isArray(p.composition_zh) ? p.composition_zh.join(', ') : p.composition_zh),
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.composition_zh || '—'}</span>`
                 },
                 {
                     id: 'system',
-                    class: 'w-[10%] min-w-[85px] text-center',
+                    class: 'min-w-[75px] text-center',
                     getValue: p => p.recommended_system_type_zh || p.recommended_system_type || p.system,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.recommended_system_type_zh || p.recommended_system_type || (typeof p.system === 'string' ? p.system : '') || '—'}</span>`
                 },
                 {
                     id: 'softening_point',
-                    class: 'w-[8%] min-w-[65px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.softening_point || p.softening_point
                 },
                 {
                     id: 'OH_value',
-                    class: 'w-[8%] min-w-[65px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.OH_value || p.OH_value
                 },
                 {
                     id: 'acid_value',
-                    class: 'w-[7%] min-w-[55px] text-center f-weight-medium text-slate-900',
+                    class: 'min-w-[50px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.acid_value || p.acid_value
                 },
                 {
                     id: 'properties',
-                    class: 'w-[18%] min-w-[140px]',
+                    class: 'min-w-[120px]',
                     getValue: p => p.properties,
                     render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
                 },
                 {
                     id: 'wood',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_wood_coating || p.solvent_base_wood_coating) ? '✓' : ' '
                 },
                 {
                     id: 'baking',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_powder_coatings || p.solvent_base_powder_coatings) ? '✓' : ' '
                 },
                 {
                     id: 'plastic',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_plastic_coatings || p.solvent_base_plastic_coatings) ? '✓' : ' '
                 },
                 {
                     id: 'leather',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_leather_coatings || p.solvent_base_leather_coatings) ? '✓' : ' '
                 },
                 {
                     id: 'ink',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.applications?.solvent_base_inks || p.solvent_base_inks || p.applications?.ink || p.ink) ? '✓' : ' '
                 },
                 {
                     id: 'waterbased',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.system?.waterborne || p.waterborne) ? '✓' : ' '
                 },
                 {
                     id: 'uv',
-                    class: 'w-[3%] min-w-[35px] text-center f-weight-bold text-blue-950 f-size-sm',
+                    class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
                     getValue: p => (p.system?.uv_coatings_and_inks || p.uv_coatings_and_inks) ? '✓' : ' '
                 }
             ]
@@ -561,8 +561,8 @@ const DynamicTableRenderer = {
         'mpi': [
             {
                 id: 'product_name',
-                title: '產品名稱',
-                class: 'w-[22%] min-w-[190px]',
+                title: '<span class="th-title">產品名稱</span>',
+                class: 'min-w-[160px]',
                 getValue: p => p.product_name,
                 isHtml: true,
                 render: (p, index, arrowClass) => {
@@ -588,20 +588,20 @@ const DynamicTableRenderer = {
             },
             {
                 id: 'melt_point',
-                title: '熔點 (°C)',
-                class: 'w-[9%] min-w-[80px] text-center',
+                title: '<span class="th-title">熔點</span><span class="th-unit">(°C)</span>',
+                class: 'min-w-[65px] text-center',
                 getValue: p => p.typical_properties?.melt_point_c
             },
             {
                 id: 'density',
-                title: '密度',
-                class: 'w-[7%] min-w-[70px] text-center',
+                title: '<span class="th-title">密度</span>',
+                class: 'min-w-[55px] text-center',
                 getValue: p => p.typical_properties?.density_g_cc_25c
             },
             {
                 id: 'mean_size',
-                title: '平均粒徑(µm)',
-                class: 'w-[9%] min-w-[95px] text-center',
+                title: '<span class="th-title">平均粒徑</span><span class="th-unit">(µm)</span>',
+                class: 'min-w-[75px] text-center',
                 getValue: p => p.typical_properties?.mean_particle_size_um,
                 render: p => {
                     const val = p.typical_properties?.mean_particle_size_um;
@@ -610,8 +610,8 @@ const DynamicTableRenderer = {
             },
             {
                 id: 'categories',
-                title: '附加性能評分',
-                class: 'w-[25%] min-w-[160px]',
+                title: '<span class="th-title">附加性能評分</span>',
+                class: 'min-w-[150px]',
                 getValue: p => {
                     const appData = getAppSpecificData(p);
                     return appData.performance_ratings || appData.featured_categories || p.featured_categories;
@@ -620,8 +620,8 @@ const DynamicTableRenderer = {
             },
             {
                 id: 'tds',
-                title: '文件',
-                class: 'w-[8%] min-w-[65px] text-center whitespace-nowrap',
+                title: '<span class="th-title">文件</span>',
+                class: 'min-w-[55px] text-center whitespace-nowrap',
                 getValue: p => (p.website && p.website !== 'N/A') || (p.tech_data_url && p.tech_data_url !== 'N/A'),
                 render: p => {
                     const t = uiText[AppState.lang];
@@ -636,7 +636,7 @@ const DynamicTableRenderer = {
         'dorfketal_tyzor': [
             {
                 id: 'product_name',
-                title: '品項',
+                title: '<span class="th-title">品項</span>',
                 class: 'w-[22%] min-w-[150px] f-weight-bold text-blue-950',
                 getValue: p => p.product_name,
                 render: p => `
@@ -647,14 +647,14 @@ const DynamicTableRenderer = {
             },
             {
                 id: 'comp',
-                title: '主要化學成分',
+                title: '<span class="th-title">主要化學成分</span>',
                 class: 'w-[25%] min-w-[180px]',
                 getValue: p => p.chemical_component || p.composition_zh,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.chemical_component || p.composition_zh || '—'}</span>`
             },
             {
                 id: 'properties',
-                title: '性質 / 特點描述',
+                title: '<span class="th-title">性質 / 特點描述</span>',
                 class: 'w-[40%] min-w-[220px]',
                 getValue: p => p.properties,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
@@ -664,7 +664,7 @@ const DynamicTableRenderer = {
         'dorfketal_px': [
             {
                 id: 'product_name',
-                title: '產品名稱',
+                title: '<span class="th-title">產品名稱</span>',
                 class: 'w-[16%] min-w-[140px] f-weight-bold text-blue-950',
                 getValue: p => p.product_name,
                 render: p => `
@@ -675,21 +675,21 @@ const DynamicTableRenderer = {
             },
             {
                 id: 'comp',
-                title: '主要化學用途',
+                title: '<span class="th-title">主要化學用途</span>',
                 class: 'w-[28%] min-w-[170px]',
                 getValue: p => p.chemical_component || p.composition_zh,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.chemical_component || p.composition_zh || '—'}</span>`
             },
             {
                 id: 'properties',
-                title: '性質 / 特點描述',
+                title: '<span class="th-title">性質 / 特點描述</span>',
                 class: 'w-[36%] min-w-[210px]',
                 getValue: p => p.properties,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
             },
             {
                 id: 'suggested_use_level',
-                title: '應用與用量',
+                title: '<span class="th-title">應用與用量</span>',
                 class: 'w-[20%] min-w-[130px]',
                 getValue: p => p.suggested_use_level_zh,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.suggested_use_level_zh || '—'}</span>`
@@ -699,8 +699,8 @@ const DynamicTableRenderer = {
         'dorfketal_chain': [
             {
                 id: 'product_name',
-                title: '產品名稱',
-                class: 'w-[14%] min-w-[145px] f-weight-bold text-blue-950 text-center',
+                title: '<span class="th-title">產品名稱</span>',
+                class: 'min-w-[130px] f-weight-bold text-blue-950 text-center',
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -710,72 +710,72 @@ const DynamicTableRenderer = {
             },
             {
                 id: 'comp',
-                title: '作用',
-                class: 'w-[12%] min-w-[150px] text-center',
+                title: '<span class="th-title">作用</span>',
+                class: 'min-w-[90px] text-center',
                 getValue: p => p.chemical_component || p.composition_zh,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.chemical_component || p.composition_zh || '—'}</span>`
             },
             {
                 id: 'molecular_weight',
-                title: '分子量\n[g/mol]',
-                class: 'w-[8%] min-w-[60px] text-center',
+                title: '<span class="th-title">分子量</span><span class="th-unit">[g/mol]</span>',
+                class: 'min-w-[65px] text-center',
                 getValue: p => p.typical_properties?.molecular_weight,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800">${p.typical_properties?.molecular_weight || '—'}</span>`
             },
             {
                 id: 'density',
-                title: '密度\n[g/cm3]',
-                class: 'w-[8%] min-w-[60px] text-center',
+                title: '<span class="th-title">密度</span><span class="th-unit">[g/cm³]</span>',
+                class: 'min-w-[65px] text-center',
                 getValue: p => p.typical_properties?.density_g_cc_25c,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800">${p.typical_properties?.density_g_cc_25c || '—'}</span>`
             },
             {
                 id: 'properties',
-                title: '特性',
-                class: 'w-[23%] min-w-[170px]',
+                title: '<span class="th-title">特性</span>',
+                class: 'min-w-[120px]',
                 getValue: p => p.properties,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.properties || '—'}</span>`
             },
             {
                 id: 'industrial_coating',
-                title: '塗料',
-                class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950',
+                title: '<span class="th-app">塗料</span>',
+                class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.industrial_coating || p.industrial_coatings || p.system?.industrial_coating || p.system?.industrial_coatings || p.applications?.industrial_coating || p.applications?.industrial_coatings) ? '✓' : ' '
             },
             {
                 id: 'casting_elastomers',
-                title: '灌注型彈性體',
-                class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950',
+                title: '<span class="th-app">灌注型<br>彈性體</span>',
+                class: 'min-w-[50px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.casting_elastomers || p.casting_elastomer || p.system?.casting_elastomers || p.system?.casting_elastomer || p.applications?.casting_elastomers || p.applications?.casting_elastomer) ? '✓' : ' '
             },
             {
                 id: 'cold_casting_elastomers',
-                title: '灌注型彈性體(冷)',
-                class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950',
+                title: '<span class="th-app">灌注型<br>彈性體(冷)</span>',
+                class: 'min-w-[68px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.cold_casting_elastomers || p.cold_casting_elastomer || p.system?.cold_casting_elastomers || p.system?.cold_casting_elastomer || p.applications?.cold_casting_elastomers || p.applications?.cold_casting_elastomer) ? '✓' : ' '
             },
             {
                 id: 'hot_casting_elastomers',
-                title: '灌注型彈性體(熱)',
-                class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950',
+                title: '<span class="th-app">灌注型<br>彈性體(熱)</span>',
+                class: 'min-w-[68px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.hot_casting_elastomers || p.hot_casting_elastomer || p.system?.hot_casting_elastomers || p.system?.hot_casting_elastomer || p.applications?.hot_casting_elastomers || p.applications?.hot_casting_elastomer) ? '✓' : ' '
             },
             {
                 id: 'pu_foam_soft_and_rigid_foams',
-                title: '軟質及硬質發泡',
-                class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950',
+                title: '<span class="th-app">軟質及<br>硬質發泡</span>',
+                class: 'min-w-[62px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.pu_foam_soft_and_rigid_foams || p.pu_foam || p.system?.pu_foam_soft_and_rigid_foams || p.system?.pu_foam || p.applications?.pu_foam_soft_and_rigid_foams || p.applications?.pu_foam) ? '✓' : ' '
             },
             {
                 id: 'sealants',
-                title: '黏著劑與密封膠',
-                class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950',
+                title: '<span class="th-app">黏著劑與<br>密封膠</span>',
+                class: 'min-w-[62px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.sealants || p.sealant || p.system?.sealants || p.system?.sealant || p.applications?.sealants || p.applications?.sealant) ? '✓' : ' '
             },
             {
                 id: 'composites',
-                title: '複合材料',
-                class: 'w-[3.5%] min-w-[35px] text-center f-weight-bold text-blue-950',
+                title: '<span class="th-app">複合<br>材料</span>',
+                class: 'min-w-[42px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.composites || p.composite || p.system?.composites || p.system?.composite || p.applications?.composites || p.applications?.composite) ? '✓' : ' '
             }
         ],
@@ -784,8 +784,8 @@ const DynamicTableRenderer = {
             {
                 id: 'product_name',
                 propKey: 'product_name',
-                title: '產品名稱',
-                class: 'w-[20%] min-w-[150px] f-weight-bold text-blue-950',
+                title: '<span class="th-title">產品名稱</span>',
+                class: 'min-w-[135px] f-weight-bold text-blue-950',
                 getValue: p => p.product_name,
                 render: p => `
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
@@ -796,64 +796,64 @@ const DynamicTableRenderer = {
             {
                 id: 'production_method',
                 propKey: 'production_method',
-                title: '生產方法',
-                class: 'w-[10%] min-w-[75px] f-weight-bold text-blue-950 text-center',
+                title: '<span class="th-title">生產方法</span>',
+                class: 'min-w-[85px] f-weight-bold text-blue-950 text-center',
                 getValue: p => p.production_method
             },
             {
                 id: 'blackness',
                 propKey: 'blackness_my',
-                title: '黑度 (My)',
-                class: 'w-[8%] min-w-[65px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">黑度</span><span class="th-unit">(My)</span>',
+                class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.blackness_my
             },
             {
                 id: 'tinting',
                 propKey: 'tinting_strength',
-                title: '著色力',
-                class: 'w-[8%] min-w-[65px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">著色力</span>',
+                class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.tinting_strength
             },
             {
                 id: 'particle_size',
                 propKey: 'average_primary_particle_size_nm',
-                title: '原生粒徑 (nm)',
-                class: 'w-[10%] min-w-[80px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">原生粒徑</span><span class="th-unit">(nm)</span>',
+                class: 'min-w-[78px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.average_primary_particle_size_nm
             },
             {
                 id: 'bet',
                 propKey: 'bet_surface_area',
-                title: 'BET (m²/g)',
-                class: 'w-[10%] min-w-[80px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">BET</span><span class="th-unit">(m²/g)</span>',
+                class: 'min-w-[78px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.bet_surface_area
             },
             {
                 id: 'oil',
                 propKey: 'oil_absorption_number',
-                title: '吸油量',
-                class: 'w-[8%] min-w-[65px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">吸油量</span>',
+                class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.oil_absorption_number
             },
             {
                 id: 'ph',
                 propKey: 'ph_value',
-                title: 'pH',
-                class: 'w-[8%] min-w-[50px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">pH</span>',
+                class: 'min-w-[48px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.ph_value
             },
             {
                 id: 'volatile',
                 propKey: 'volatile_matter_950c',
-                title: '揮發分(%)',
-                class: 'w-[9%] min-w-[65px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">揮發分</span><span class="th-unit">(%)</span>',
+                class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.volatile_matter_950c
             },
             {
                 id: 'ash',
                 propKey: 'ash_content',
-                title: '灰分(%)',
-                class: 'w-[9%] min-w-[65px] text-center f-weight-medium text-slate-900',
+                title: '<span class="th-title">灰分</span><span class="th-unit">(%)</span>',
+                class: 'min-w-[60px] text-center f-weight-medium text-slate-900',
                 getValue: p => p.typical_properties?.ash_content
             }
         ]
@@ -893,7 +893,7 @@ const DynamicTableRenderer = {
             return activeFields.headerRows.map(row => {
                 const rowHTML = row.map(col => {
                     const titleWithLineBreak = col.title.replace(/\n/g, '<br>');
-                    return `<th class="py-2.5 px-3 border-r border-b border-gray-200 text-center align-middle f-weight-bold text-slate-900 bg-slate-100 ${col.class || ''}">${titleWithLineBreak}</th>`;
+                    return `<th class="py-2 px-2 border-r border-b border-gray-200 text-center align-middle f-weight-bold text-slate-900 bg-slate-100 ${col.class || ''}">${titleWithLineBreak}</th>`;
                 }).join('');
 
                 return `<tr class="select-none f-size-sm f-weight-bold text-slate-900">${rowHTML}</tr>`;
@@ -910,15 +910,19 @@ const DynamicTableRenderer = {
                 clickAttr = `onclick="handleSort('${f.propKey}')" style="cursor: pointer;"`;
                 if (AppState.sortColumn === f.propKey) {
                     sortIcon = AppState.sortOrder === 'asc'
-                        ? ' <i class="fa-solid fa-arrow-up text-blue-600 f-size-xs"></i>'
-                        : ' <i class="fa-solid fa-arrow-down text-blue-600 f-size-xs"></i>';
+                        ? ' <i class="fa-solid fa-arrow-up text-blue-600 f-size-xs shrink-0"></i>'
+                        : ' <i class="fa-solid fa-arrow-down text-blue-600 f-size-xs shrink-0"></i>';
                 } else {
-                    sortIcon = ' <i class="fa-solid fa-sort text-slate-400 f-size-xs"></i>';
+                    sortIcon = ' <i class="fa-solid fa-sort text-slate-400 f-size-xs shrink-0"></i>';
                 }
             }
 
-            return `<th ${clickAttr} class="py-3 px-3.5 f-weight-bold text-slate-900 bg-slate-100 hover:bg-slate-200/70 transition-colors ${f.class || ''}">
-    ${f.title}${sortIcon}
+            const contentHTML = sortIcon
+                ? `<div class="inline-flex items-center justify-center gap-1 w-full">${f.title}${sortIcon}</div>`
+                : f.title;
+
+            return `<th ${clickAttr} class="py-2 px-2 f-weight-bold text-slate-900 bg-slate-100 hover:bg-slate-200/70 transition-colors align-middle ${f.class || ''}">
+    ${contentHTML}
 </th>`;
         }).join('');
 
@@ -941,7 +945,7 @@ const DynamicTableRenderer = {
                 const rawVal = f.getValue ? f.getValue(p) : '—';
                 displayVal = hasValidValue(rawVal) ? (f.render ? f.render(p) : rawVal) : '—';
             }
-            return `<td class="py-3 px-3.5 border-r border-gray-200 text-slate-800 ${f.class || ''}">${displayVal}</td>`;
+            return `<td class="py-2.5 px-2 border-r border-gray-200 text-slate-800 align-middle ${f.class || ''}">${displayVal}</td>`;
         }).join('');
 
         const safeProductName = (p.product_name || '').replace(/"/g, '&quot;');
@@ -965,8 +969,14 @@ function renderCategorizedBadges(p) {
     if (!ratings) return '—';
 
     const plusMap = {1: '+', 2: '++', 3: '+++'};
-    const primaryBadges = [];
-    const secondaryBadges = [];
+
+    // 依色彩與性能類別嚴格分組（照顏色換行）
+    const groups = {
+        ptfe: [],
+        scratch_and_abrasion: [],
+        texture: [],
+        special: []
+    };
 
     Object.entries(featureConfig[AppState.lang]).forEach(([key, label]) => {
         const score = ratings[key] || 0;
@@ -977,38 +987,58 @@ function renderCategorizedBadges(p) {
         const isTarget = isCurrentCategoryKey(key, AppState.category, AppState.productLine);
 
         let colorClass = "";
-        if (cat === 'ptfe') colorClass = 'bg-blue-700 text-white';
+        if (cat === 'ptfe') colorClass = 'bg-blue-600 text-white';
         else if (cat === 'scratch_and_abrasion') colorClass = 'bg-amber-700 text-white';
         else if (cat === 'texture') colorClass = 'bg-emerald-700 text-white';
         else if (cat === 'special') colorClass = 'bg-purple-700 text-white';
 
-        if (isTarget) {
-            primaryBadges.push(`
-            <span class="f-size-xs px-2 py-0.5 rounded ${colorClass} font-extrabold shadow ring-2 ring-blue-500/40 inline-flex items-center gap-1 shrink-0">
-                <i class="fa-solid fa-star f-size-xs text-amber-300"></i> ${label}
-                <span class="tracking-wider text-amber-200">${displayScore}</span>
-            </span>
-        `);
-        } else if (score >= 3) {
-            secondaryBadges.push(`
-            <span class="f-size-xs px-1.5 py-0.5 rounded ${colorClass} opacity-90 inline-flex items-center gap-0.5 shrink-0">
-                ${label} <span class="font-bold">${displayScore}</span>
-            </span>
-        `);
+        // 1. PTFE 取代標章（旗艦主打，帶星號金色評分）
+        if (cat === 'ptfe') {
+            groups.ptfe.push(`
+                <span class="f-size-xs px-2 py-0.5 rounded ${colorClass} font-extrabold shadow ring-2 ring-blue-500/40 inline-flex items-center gap-1 shrink-0">
+                    <i class="fa-solid fa-star f-size-xs text-amber-300"></i> ${label}
+                    <span class="tracking-wider text-amber-200">${displayScore}</span>
+                </span>
+            `);
+        } else if (score >= 3 || isTarget) {
+            // 2. 其它性能指標（評分 3 分以上或選中指標）
+            const isTargetBadge = isTarget && score >= 1;
+            const badge = `
+                <span class="f-size-xs ${isTargetBadge ? 'px-2 py-0.5 font-extrabold shadow ring-2 ring-blue-500/40' : 'px-1.5 py-0.5 font-bold opacity-95'} rounded ${colorClass} inline-flex items-center gap-0.5 shrink-0">
+                    ${isTargetBadge ? '<i class="fa-solid fa-star f-size-xs text-amber-300"></i> ' : ''}${label} <span class="${isTargetBadge ? 'tracking-wider text-amber-200 font-extrabold' : 'font-bold'}">${displayScore}</span>
+                </span>
+            `;
+            if (groups[cat]) {
+                groups[cat].push(badge);
+            } else {
+                groups.scratch_and_abrasion.push(badge);
+            }
         }
     });
 
-    if (primaryBadges.length > 0) {
-        let html = `<div class="flex flex-wrap gap-1.5 items-center my-0.5 w-full">${primaryBadges.join('')}</div>`;
-        if (secondaryBadges.length > 0) {
-            html += `<div class="border-b border-slate-300/80 my-1 w-full"></div>`;
-            html += `<div class="flex flex-wrap gap-1 items-center my-0.5 w-full">${secondaryBadges.join('')}</div>`;
+    const hasPtfe = groups.ptfe.length > 0;
+    const otherCats = ['scratch_and_abrasion', 'texture', 'special'];
+    const hasOthers = otherCats.some(c => groups[c].length > 0);
+
+    const rows = [];
+
+    // 1. 藍色列 (PTFE取代)
+    if (hasPtfe) {
+        rows.push(`<div class="flex flex-wrap gap-1.5 items-center my-0.5 w-full">${groups.ptfe.join('')}</div>`);
+        if (hasOthers) {
+            rows.push(`<div class="border-b border-slate-200/90 my-1 w-full"></div>`);
         }
-        return html;
     }
 
-    if (secondaryBadges.length > 0) {
-        return `<div class="flex flex-wrap gap-1 items-center my-0.5 w-full">${secondaryBadges.join('')}</div>`;
+    // 2. 依顏色換行：棕色 (耐刮磨)、綠色 (織紋)、紫色 (特殊指標) 各自獨立成行
+    otherCats.forEach(cat => {
+        if (groups[cat].length > 0) {
+            rows.push(`<div class="flex flex-wrap gap-1 items-center my-0.5 w-full">${groups[cat].join('')}</div>`);
+        }
+    });
+
+    if (rows.length > 0) {
+        return rows.join('');
     }
 
     return `<span class="text-slate-500 italic f-size-xs">（展開查看全部指標）</span>`;
