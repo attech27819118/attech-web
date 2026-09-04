@@ -74,6 +74,11 @@ document.addEventListener('click', (e) => {
         return;
     }
 
+    // 若在獨立產品落地頁面上，或在 file:// 協定下，不攔截內部跳轉，讓瀏覽器執行正常導航換頁回到官網
+    if (document.body.classList.contains('is-product-detail') || window.location.protocol === 'file:') {
+        return;
+    }
+
     e.preventDefault();
     const cleanHref = href.startsWith('/') ? href : ('/' + href);
     const basePath = getAppBasePath();
@@ -341,6 +346,10 @@ function parseUrlRoute() {
         if (typeof switchFormMode === 'function') {
             switchFormMode(mode === 'detailed' ? 'detailed' : 'quick');
         }
+        const prod = searchParams.get('product') || searchParams.get('item');
+        if (prod && typeof requestProductSample === 'function') {
+            requestProductSample(decodeURIComponent(prod), mode);
+        }
         updatePageMeta('contact');
         return;
     }
@@ -390,6 +399,19 @@ function parseUrlRoute() {
             const decodedProductName = decodeURIComponent(rawProduct);
             AppState.selectedProduct = decodedProductName;
 
+            // 實體產品專屬頁面：標記狀態並隱藏 1.請選擇品牌 與 2.應用與主要功能
+            document.body.classList.add('is-product-detail');
+            const partnerSection = document.getElementById('section-partner');
+            const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
+            if (partnerSection) partnerSection.classList.add('hidden');
+            if (directorySidebar) directorySidebar.classList.add('hidden');
+
+            // 若頁面已包含預渲染之產品詳情卡片，保持展示，不重新以列表覆蓋
+            if (document.querySelector('.product-seo-detail')) {
+                updatePageMeta('product', decodedProductName);
+                return;
+            }
+
             loadAllBrandsData().then(() => {
                 const targetClean = normalizeProductSlug(decodedProductName);
                 let matchedItem = null;
@@ -419,6 +441,8 @@ function parseUrlRoute() {
                 navigateToCategory(matchedPartner, matchedLine, AppState.category, finalName);
             });
             return;
+        } else {
+            document.body.classList.remove('is-product-detail');
         }
 
         if (typeof updatePartnerUI === 'function') updatePartnerUI();
@@ -494,8 +518,8 @@ function updateUrlRoute(usePush = false) {
                 const currentConfigKey = partnerConfigMap[AppState.partner] || 'mpi';
                 const currentBrandName = AppState.configs?.[currentConfigKey]?.brandName || AppState.partner;
 
-                const isBrandMatch = !realBrand || 
-                    realBrand === currentBrandName || 
+                const isBrandMatch = !realBrand ||
+                    realBrand === currentBrandName ||
                     realBrand.toLowerCase() === (AppState.partner || '').toLowerCase() ||
                     (partnerConfigMap[realBrand] && partnerConfigMap[realBrand] === currentConfigKey);
 
@@ -584,8 +608,17 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
         clearTimeout(searchDebounceTimer);
         searchDebounceTimer = null;
     }
-    if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
-    if (typeof updateSearchLayout === 'function') updateSearchLayout(false);
+    if (productName) {
+        document.body.classList.add('is-product-detail');
+        const partnerSection = document.getElementById('section-partner');
+        const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
+        if (partnerSection) partnerSection.classList.add('hidden');
+        if (directorySidebar) directorySidebar.classList.add('hidden');
+    } else {
+        document.body.classList.remove('is-product-detail');
+        if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
+        if (typeof updateSearchLayout === 'function') updateSearchLayout(false);
+    }
     AppState.filters = {};
     if (typeof initFilters === 'function') initFilters();
 

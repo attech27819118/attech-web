@@ -9,12 +9,13 @@ let searchDebounceTimer = null;
 function updateSearchLayout(isSearching) {
     const partnerSection = document.getElementById('section-partner');
     const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
+    const isProductDetail = document.body.classList.contains('is-product-detail');
     if (partnerSection) {
-        if (isSearching) partnerSection.classList.add('hidden');
+        if (isSearching || isProductDetail) partnerSection.classList.add('hidden');
         else partnerSection.classList.remove('hidden');
     }
     if (directorySidebar) {
-        if (isSearching) directorySidebar.classList.add('hidden');
+        if (isSearching || isProductDetail) directorySidebar.classList.add('hidden');
         else directorySidebar.classList.remove('hidden');
     }
 }
@@ -563,8 +564,8 @@ function initFilters() {
         const isChecked = AppState.filters[key] === true;
         const checkboxItem = document.createElement('label');
         checkboxItem.className = `cursor-pointer inline-flex items-center gap-1 px-3 py-1 rounded-lg f-size-xs f-weight-bold border select-none ${isChecked
-                ? 'bg-blue-950 text-white border-blue-950 shadow-sm'
-                : 'bg-white text-slate-800 border-slate-300 hover:border-blue-400 hover:bg-blue-50'
+            ? 'bg-blue-950 text-white border-blue-950 shadow-sm'
+            : 'bg-white text-slate-800 border-slate-300 hover:border-blue-400 hover:bg-blue-50'
             }`;
         checkboxItem.innerHTML = `
     <input type="checkbox" value="${key}" ${isChecked ? 'checked' : ''} onchange="toggleFilterCheckbox('${key}', this.checked)" class="sr-only" aria-label="${label}">
