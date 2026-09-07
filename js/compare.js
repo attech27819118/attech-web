@@ -157,12 +157,12 @@ function updateCompareUI() {
         const isSelected = AppState.compareList.some(item => item.product_name === prodName);
         if (btn.classList.contains('compare-icon-btn')) {
             if (isSelected) {
-                btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900 active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap";
-                btn.innerHTML = `<i class="fa-solid fa-check text-[10px] text-emerald-300 shrink-0"></i><span class="shrink-0 whitespace-nowrap">${AppState.lang === 'zh' ? '已比' : 'Added'}</span>`;
+                btn.className = "compare-icon-btn inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all bg-blue-900 text-white shadow-xs ring-1 ring-blue-400 border border-blue-900 active:scale-90 text-sm font-medium cursor-pointer shrink-0 whitespace-nowrap";
+                btn.innerHTML = `<i class="fa-solid fa-check text-xs text-emerald-300 shrink-0"></i><span class="shrink-0 whitespace-nowrap">${AppState.lang === 'zh' ? '已比' : 'Added'}</span>`;
                 btn.title = AppState.lang === 'zh' ? '從比較清單移除' : 'Remove from compare';
             } else {
-                btn.className = "compare-icon-btn inline-flex items-center gap-1 px-2 py-0.5 h-6 rounded-md transition-all text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200 active:scale-90 text-[11px] font-medium cursor-pointer shrink-0 whitespace-nowrap";
-                btn.innerHTML = `<i class="fa-solid fa-scale-balanced text-[10px] shrink-0"></i><span class="shrink-0 whitespace-nowrap">${AppState.lang === 'zh' ? '比較' : 'Compare'}</span>`;
+                btn.className = "compare-icon-btn inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200 active:scale-90 text-sm font-medium cursor-pointer shrink-0 whitespace-nowrap";
+                btn.innerHTML = `<i class="fa-solid fa-scale-balanced text-xs shrink-0"></i><span class="shrink-0 whitespace-nowrap">${AppState.lang === 'zh' ? '比較' : 'Compare'}</span>`;
                 btn.title = AppState.lang === 'zh' ? '加入比較 (最多4項)' : 'Add to compare (max 4)';
             }
         } else if (btn.classList.contains('compare-toggle-btn')) {
