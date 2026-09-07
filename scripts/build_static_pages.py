@@ -210,8 +210,10 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
     props = get_product_description(p, partner_key, line_key)
     applications = get_product_applications(p, partner_key, line_key, config_data or {})
 
-    is_fda_line = (partner_key.lower() == 'mpi' and (line_key == 'industrial' or line_key == 'ink'))
-    fda_badge = ('<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-300" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-emerald-600"></i> FDA 食品接觸合規</span>'
+    is_mpi = (partner_key or '').lower() == 'mpi'
+
+    is_fda_line = (is_mpi and (line_key == 'industrial' or line_key == 'ink'))
+    fda_badge = ('<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold bg-emerald-50 text-emerald-800 border border-emerald-300" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-emerald-600"></i> FDA 食品接觸合規</span>'
                  if (is_fda_line and p.get('fda_compliant')) else '')
 
     usage_tags_list = []
@@ -246,6 +248,27 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     </table>
                 </div>''' if extra_rows else ''
 
+    # 針對非 MPI 品牌，完全不提及 TDS
+    quick_spec_text = "官網完整規格與 TDS" if is_mpi else "官網完整規格與特性"
+    service_card_desc = (
+        f"宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。"
+        if is_mpi else
+        f"宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格、樣品庫存與應用技術諮詢服務。"
+    )
+    service_card_tds_item = (
+        '<i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>'
+        if is_mpi else
+        '<i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>'
+    )
+
+    banner_heading = "需要檢視完整技術數據、TDS 下載或產品規格比較？" if is_mpi else "需要檢視完整技術數據或產品規格比較？"
+    banner_desc = (
+        f"原廠技術資料表（TDS）與全品項多規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整技術檔案。"
+        if is_mpi else
+        f"完整產品物性數據與全品項規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整物性與應用資訊。"
+    )
+    banner_button_text = "直達官網看 TDS 與完整規格" if is_mpi else "直達官網看完整規格與特性"
+
     return f'''
     <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
         <!-- 頂部產品基本資訊與快速操作 (純白卡片無漸層) -->
@@ -275,7 +298,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                 <a href="/products/{partner_key}/{line_key}/?product={safe_name}#{safe_name}" 
                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>官網完整規格與 TDS</span>
+                    <span>{quick_spec_text}</span>
                 </a>
             </div>
         </div>
@@ -337,11 +360,11 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">宏威應用材料 專業技術</h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                        宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。
+                        {service_card_desc}
                     </p>
                     <div class="pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-2.5">
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>
+                            {service_card_tds_item}
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速索樣</span>
@@ -366,10 +389,10 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                         <i class="fa-solid fa-building"></i> 宏威應用材料 官方產品資料庫
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-white">
-                        需要檢視完整技術數據、TDS 下載或產品規格比較？
+                        {banner_heading}
                     </h3>
                     <p class="text-xs sm:text-sm text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
-                        原廠技術資料表（TDS）與全品項多規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整技術檔案。
+                        {banner_desc}
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto">
@@ -381,7 +404,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     <a href="/products/{partner_key}/{line_key}/?product={safe_name}#{safe_name}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-sm transition-colors active:scale-95">
                         <i class="fa-solid fa-file-lines"></i>
-                        <span>直達官網看 TDS 與完整規格</span>
+                        <span>{banner_button_text}</span>
                     </a>
                     <a href="/contact?product={safe_name}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
@@ -495,7 +518,12 @@ def main():
         brand_name = brand_obj.get('brandName', brand_key)
 
         p_path = f'/products/{partner_slug}/'
-        p_html = build_page_html(template_html, f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials", f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、TDS技術資料下載與免費樣品申請服務。", p_path, active_tab='products')
+        p_desc = (
+            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、TDS技術資料下載與免費樣品申請服務。"
+            if partner_slug == 'mpi' else
+            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、產品詳細參數與免費樣品申請服務。"
+        )
+        p_html = build_page_html(template_html, f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials", p_desc, p_path, active_tab='products')
         write_static_file(p_path, p_html)
         generated_count += 1
 
@@ -514,7 +542,7 @@ def main():
                 usage_text = '、'.join(a['title'] for a in app_list) or p.get('main_usage') or p.get('application_fields_zh') or '—'
                 safe_url = f'/products/{partner_slug}/{line_slug}/{urllib.parse.quote(name)}/'
                 is_fda_line = (partner_slug == 'mpi' and (line_slug == 'industrial' or line_slug == 'ink'))
-                fda_badge = '<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-[9px] text-emerald-600"></i> FDA</span>' if (is_fda_line and p.get('fda_compliant')) else ''
+                fda_badge = '<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>' if (is_fda_line and p.get('fda_compliant')) else ''
 
                 table_rows.append(f'''
                 <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
@@ -617,10 +645,14 @@ def main():
                     ]
                 }
 
+                is_mpi = (partner_slug == 'mpi')
+                prod_desc_suffix = "提供官網線上規格比較、TDS技術資料與樣品索取。" if is_mpi else "提供官網線上規格比較、詳細物性參數與樣品索取。"
+                prod_desc = f"{brand_name} {p_name} 特用化學品：{comp + '，' if comp else ''}{props.replace(chr(10), ' ')[:100] + '... ' if props else ''}適合應用：{usage_text}。{prod_desc_suffix}"
+
                 prod_page_html = build_page_html(
                     template_html,
                     f"{p_name} ({brand_name}) {line_title} | 宏威應用材料 ATTech Materials",
-                    f"{brand_name} {p_name} 特用化學品：{comp + '，' if comp else ''}{props.replace(chr(10), ' ')[:100] + '... ' if props else ''}適合應用：{usage_text}。提供官網線上規格比較、TDS技術資料與樣品索取。",
+                    prod_desc,
                     product_path,
                     active_tab='products',
                     pre_rendered_content=product_detail_html,

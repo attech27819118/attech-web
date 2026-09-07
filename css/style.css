@@ -422,6 +422,8 @@ tr.row-target-highlight td:last-child {
     line-height: 1.15;
     color: #1e293b;
     text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 }
 
 .sticky-table table th {

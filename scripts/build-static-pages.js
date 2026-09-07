@@ -246,9 +246,10 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
     const props = getProductDescription(p, partnerKey, lineKey);
     const applications = getProductApplications(p, partnerKey, lineKey, configData);
 
-    const isFdaLine = (partnerKey.toLowerCase() === 'mpi' && (lineKey === 'industrial' || lineKey === 'ink'));
+    const isMpi = (partnerKey || '').toLowerCase() === 'mpi';
+    const isFdaLine = (isMpi && (lineKey === 'industrial' || lineKey === 'ink'));
     const fdaBadge = (isFdaLine && p.fda_compliant)
-        ? `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-300" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-emerald-600"></i> FDA 食品接觸合規</span>`
+        ? `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold bg-emerald-50 text-emerald-800 border border-emerald-300" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-emerald-600"></i> FDA 食品接觸合規</span>`
         : '';
 
     // 適合應用標籤 HTML
@@ -270,6 +271,21 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
             <td class="py-2.5 px-4 text-slate-900 font-semibold">${escapeHtml(r.val)}</td>
         </tr>
     `).join('');
+
+    // 針對非 MPI 品牌，完全不提及 TDS
+    const quickSpecText = isMpi ? '官網完整規格與 TDS' : '官網完整規格與特性';
+    const serviceCardDesc = isMpi
+        ? `宏威應用材料為 ${escapeHtml(brandName)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。`
+        : `宏威應用材料為 ${escapeHtml(brandName)} 在台灣之專業特用化學代理商，備有原廠技術規格、樣品庫存與應用技術諮詢服務。`;
+    const serviceCardTdsItem = isMpi
+        ? `<i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>`
+        : `<i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>`;
+
+    const bannerHeading = isMpi ? '需要檢視完整技術數據、TDS 下載或產品規格比較？' : '需要檢視完整技術數據或產品規格比較？';
+    const bannerDesc = isMpi
+        ? `原廠技術資料表（TDS）與全品項多規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 ${escapeHtml(name)} 之完整技術檔案。`
+        : `完整產品物性數據與全品項規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 ${escapeHtml(name)} 之完整物性與應用資訊。`;
+    const bannerButtonText = isMpi ? '直達官網看 TDS 與完整規格' : '直達官網看完整規格與特性';
 
     return `
     <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
@@ -300,7 +316,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                 <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}#${safeName}" 
                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>官網完整規格與 TDS</span>
+                    <span>${quickSpecText}</span>
                 </a>
             </div>
         </div>
@@ -378,11 +394,11 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">宏威應用材料 專業技術</h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                        宏威應用材料為 ${escapeHtml(brandName)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。
+                        ${serviceCardDesc}
                     </p>
                     <div class="pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-2.5">
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>
+                            ${serviceCardTdsItem}
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速索樣</span>
@@ -407,10 +423,10 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                         <i class="fa-solid fa-building"></i> 宏威應用材料 官方產品資料庫
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-white">
-                        需要檢視完整技術數據、TDS 下載或產品規格比較？
+                        ${bannerHeading}
                     </h3>
                     <p class="text-xs sm:text-sm text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
-                        原廠技術資料表（TDS）與全品項多規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 ${escapeHtml(name)} 之完整技術檔案。
+                        ${bannerDesc}
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto">
@@ -422,7 +438,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}#${safeName}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-sm transition-colors active:scale-95">
                         <i class="fa-solid fa-file-lines"></i>
-                        <span>直達官網看 TDS 與完整規格</span>
+                        <span>${bannerButtonText}</span>
                     </a>
                     <a href="/contact?product=${safeName}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
@@ -598,9 +614,12 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
 
     // 品牌首頁
     const partnerPath = `/products/${partnerSlug}/`;
+    const partnerDesc = partnerSlug === 'mpi'
+        ? `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、TDS技術資料下載與免費樣品申請服務。`
+        : `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、產品詳細參數與免費樣品申請服務。`;
     const partnerHtml = buildPageHtml({
         title: `${brandName} 特用化學品系列 | 宏威應用材料 ATTech Materials`,
-        description: `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、TDS技術資料下載與免費樣品申請服務。`,
+        description: partnerDesc,
         canonicalPath: partnerPath,
         activeTab: 'products'
     });
@@ -623,7 +642,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             const safeUrl = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(name)}/`;
             const isFdaLine = (partnerSlug === 'mpi' && (lineSlug === 'industrial' || lineSlug === 'ink'));
             const fdaBadge = (isFdaLine && p.fda_compliant)
-                ? `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-[9px] text-emerald-600"></i> FDA</span>`
+                ? `<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>`
                 : '';
 
             return `
@@ -725,9 +744,10 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
                 ]
             };
 
+            const prodDescSuffix = isMpi ? '提供官網線上規格比較、TDS技術資料與樣品索取。' : '提供官網線上規格比較、詳細物性參數與樣品索取。';
             const prodPageHtml = buildPageHtml({
                 title: `${pName} (${brandName}) ${lineTitle} | 宏威應用材料 ATTech Materials`,
-                description: `${brandName} ${pName} 特用化學品：${comp ? comp + '，' : ''}${props ? props.replace(/\n/g, ' ').slice(0, 100) + '... ' : ''}適合應用：${usageText}。提供官網線上規格比較、TDS技術資料與樣品索取。`,
+                description: `${brandName} ${pName} 特用化學品：${comp ? comp + '，' : ''}${props ? props.replace(/\n/g, ' ').slice(0, 100) + '... ' : ''}適合應用：${usageText}。${prodDescSuffix}`,
                 canonicalPath: productPath,
                 activeTab: 'products',
                 preRenderedContent: productDetailHtml,
