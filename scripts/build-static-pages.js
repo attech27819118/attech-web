@@ -238,7 +238,6 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
     `).join('');
 
     // 僅 MPI 提及 TDS，其餘品牌完全不提及 TDS
-    const isMpi = (partnerKey || '').toLowerCase() === 'mpi';
     const quickSpecText = isMpi ? '官網完整規格與 TDS' : '官網完整規格與特性';
     const serviceCardDesc = isMpi
         ? `宏威應用材料為 ${escapeHtml(brandName)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。`
