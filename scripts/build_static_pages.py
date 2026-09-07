@@ -277,7 +277,6 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                 <div class="flex flex-wrap items-center gap-2 mb-2.5">
                     <span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">{escape_html(brand_name)}</span>
                     {f'<span class="inline-block px-3 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">{escape_html(line_title)}</span>' if line_title else ''}
-                    {fda_badge}
                 </div>
                 <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">{escape_html(name)}</h1>
                 <p class="text-sm text-slate-600 mt-2 font-medium">
@@ -540,18 +539,12 @@ def main():
                 app_list = get_product_applications(p, partner_slug, line_slug, config)
                 usage_text = '、'.join(a['title'] for a in app_list) or p.get('main_usage') or p.get('application_fields_zh') or '—'
                 safe_url = f'/products/{partner_slug}/{line_slug}/{urllib.parse.quote(name)}/'
-                is_fda_line = (partner_slug == 'mpi' and (line_slug == 'industrial' or line_slug == 'ink'))
-                fda_badge = '<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>' if (is_fda_line and p.get('fda_compliant')) else ''
-
                 table_rows.append(f'''
                 <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
                     <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="{safe_url}" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                {escape_html(name)}
-                            </a>
-                            {fda_badge}
-                        </div>
+                        <a href="{safe_url}" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                            {escape_html(name)}
+                        </a>
                         <div class="text-xs text-slate-500 font-normal mt-0.5">{escape_html(comp)}</div>
                     </td>
                     <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">{escape_html(props)}</td>

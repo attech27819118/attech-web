@@ -908,16 +908,19 @@
                         class="w-full md:w-64 shrink-0 md:sticky md:top-20 max-h-[calc(100vh-6rem)] overflow-y-auto custom-scrollbar space-y-3">
                         <div class="bg-white border border-gray-200 rounded-xl p-3.5 shadow-sm">
                             <button onclick="toggleMobileSidebar()" type="button"
-                                class="w-full md:cursor-default flex items-center justify-between text-left">
+                                id="sidebar-toggle-btn"
+                                aria-expanded="true"
+                                aria-controls="directory-tree-menu"
+                                class="w-full cursor-pointer hover:bg-slate-50 p-1 -m-1 rounded-lg transition-colors flex items-center justify-between text-left">
                                 <h3 class="f-size-sm f-weight-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5"
                                     id="ui-step-catalog">
                                     <span
                                         class="flex items-center justify-center w-5 h-5 rounded bg-blue-100 text-blue-900 f-size-xs f-weight-bold">2</span>
                                     應用與主要功能
                                 </h3>
-                                <span class="md:hidden text-xs text-blue-700 font-bold flex items-center gap-1">
-                                    <span id="mobile-sidebar-toggle-text">切換目錄</span>
-                                    <i class="fa-solid fa-chevron-down text-xs transition-transform"
+                                <span class="text-xs text-blue-700 font-bold flex items-center gap-1">
+                                    <span id="mobile-sidebar-toggle-text" class="md:hidden">切換目錄</span>
+                                    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 rotate-180"
                                         id="mobile-sidebar-chevron"></i>
                                 </span>
                             </button>
@@ -953,240 +956,207 @@
                                     <!-- 表頭由 JS 策略動態插入 -->
                                 </thead>
                                 <tbody id="directory-matrix-body" class="divide-y divide-gray-200 text-slate-800 f-weight-normal">
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/MPP-611AL/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MPP-611AL
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/MPP-611AL/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MPP-611AL
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品
 提高的抗刮與抗擦傷性能。
 提高滑爽性與潤滑性。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/MPP-611AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/MPP-620AL-XF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MPP-620AL-XF
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">有效的 PTFE 替代品。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/MPP-611AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/MPP-620AL-XF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MPP-620AL-XF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">有效的 PTFE 替代品。
 提供最高程度的抗刮與防擦傷性。
 提供耐磨/耐擦洗性與防黏結性。
 提供滑爽性與潤滑性。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、木器漆、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/MPP-620AL-XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/MicroKlear%20418AL/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MicroKlear 418AL
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟 / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、木器漆、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/MPP-620AL-XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/MicroKlear%20418AL/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MicroKlear 418AL
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟 / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品
 複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。
 提供優異的表面潤滑性。
 不影響透明度與光澤保持。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/MicroKlear%20418AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/Superslip%206515AL/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                Superslip 6515AL
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / EBS / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">抗刮性佳；可取代 PE/PTFE蠟。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/MicroKlear%20418AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/Superslip%206515AL/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        Superslip 6515AL
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / EBS / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">抗刮性佳；可取代 PE/PTFE蠟。
 提供最高程度的抗刮性與防擦傷性。
 具有良好的耐磨性。
 具備滑爽性與潤滑性。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/Superslip%206515AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/PolyGlide%201226XF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                PolyGlide 1226XF
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米陶瓷</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品，提供極佳耐磨性能
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/Superslip%206515AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/PolyGlide%201226XF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        PolyGlide 1226XF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米陶瓷</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品，提供極佳耐磨性能
 相較於 PE/PTFE 添加劑，可提高泰伯（Taber）耐磨性。
 提供良好爽滑與潤滑性能。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/PolyGlide%201226XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/MP-22XF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MP-22XF
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">合成蠟</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">具有耐刮特性。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/PolyGlide%201226XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/MP-22XF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MP-22XF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">合成蠟</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">具有耐刮特性。
 賦予塗層高程度的潤滑性與滑爽性。
 給予撥水性能。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/MP-22XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/MPP-620VF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MPP-620VF
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提升塗層的防劃傷性能。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/MP-22XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/MPP-620VF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MPP-620VF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提升塗層的防劃傷性能。
 賦予良好表面滑爽性。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/MPP-620VF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/GraphShield%20730/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                GraphShield 730
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">石墨烯/合成蠟</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">與二氧化鈦或其他無機顏料配合使用時，可提升塗層的防腐蝕性能。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/MPP-620VF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/GraphShield%20730/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        GraphShield 730
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">石墨烯/合成蠟</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">與二氧化鈦或其他無機顏料配合使用時，可提升塗層的防腐蝕性能。
 提升表面滑感。
 賦予撥水性</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/GraphShield%20730/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/MicroKlear%20418/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MicroKlear 418
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提供抗刮傷性能，提升抗黏結、流動性與耐磨性。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/GraphShield%20730/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/MicroKlear%20418/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MicroKlear 418
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提供抗刮傷性能，提升抗黏結、流動性與耐磨性。
 提供表面潤滑性。
 不影響透明度與光澤保持。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/MicroKlear%20418/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/AquaPoly%20511/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                AquaPoly 511
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">改性氧化高密度聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提供優異的防刮傷與防擦傷特性。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/MicroKlear%20418/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/AquaPoly%20511/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        AquaPoly 511
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">改性氧化高密度聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提供優異的防刮傷與防擦傷特性。
 提供良好的滑爽性與流動性。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/AquaPoly%20511/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/automotive_polishes/AquaBead%20519/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                AquaBead 519
-                            </a>
-                            
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">疏水改性合成蠟</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提升耐刮性能。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/AquaPoly%20511/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/automotive_polishes/AquaBead%20519/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        AquaBead 519
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">疏水改性合成蠟</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提升耐刮性能。
 提供水珠效果與持久的撥水性。
 提供防塵性。
 容易清潔。
 提供光澤維持。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">地板塗料、木器漆、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/automotive_polishes/AquaBead%20519/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr></tbody>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">地板塗料、木器漆、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/automotive_polishes/AquaBead%20519/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr></tbody>
                             </table>
                         </div>
                     </div>

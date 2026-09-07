@@ -568,18 +568,11 @@ const DynamicTableRenderer = {
                 render: (p, index, arrowClass) => {
                     const compRaw = p['composition_' + AppState.lang] || p.composition_zh || p.composition || p.chemistry || '';
                     const comp = compRaw && compRaw !== '—' ? `<div class="f-size-xs text-slate-600 f-weight-normal leading-tight mt-0.5 break-words whitespace-pre-line">${compRaw}</div>` : '';
-                    const isFdaLine = (AppState.productLine === 'industrial' || AppState.productLine === 'ink');
-                    const fdaBadge = (isFdaLine && p.fda_compliant)
-                        ? `<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>`
-                        : '';
                     return `
         <div class="flex items-start gap-2 w-full select-none py-0.5">
             <i class="fa-solid fa-chevron-right f-size-xs text-slate-500 shrink-0 transform transition-transform mt-1.5 ${arrowClass}" id="arrow-${index}"></i>
             <div class="min-w-0 flex-1">
-                <div class="flex items-center flex-wrap gap-y-0.5">
-                    <a href="${getProductUrl(p.product_name, 'MPI', AppState.productLine || 'ptfe')}" class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</a>
-                    ${fdaBadge}
-                </div>
+                <a href="${getProductUrl(p.product_name, 'MPI', AppState.productLine || 'ptfe')}" class="block f-size-sm break-words f-weight-bold text-blue-950 hover:underline leading-snug" title="${p.product_name}">${p.product_name}</a>
                 ${comp}
                 ${renderCompareIcon(p, 'MPI', AppState.productLine || 'ptfe')}
             </div>
@@ -1000,6 +993,13 @@ function renderCategorizedBadges(p) {
                     <span class="tracking-wider text-amber-200">${displayScore}</span>
                 </span>
             `);
+        } else if (cat === 'fda') {
+            const isTargetBadge = isTarget && score >= 1;
+            groups.ptfe.push(`
+                <span class="f-size-xs px-2 py-0.5 rounded bg-emerald-700 text-white font-extrabold shadow ${isTargetBadge ? 'ring-2 ring-emerald-400' : ''} inline-flex items-center gap-1 shrink-0" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)">
+                    ${label} <span class="tracking-wider text-emerald-200 font-extrabold">${displayScore}</span>
+                </span>
+            `);
         } else if (score >= 3 || isTarget) {
             // 2. 其它性能指標（評分 3 分以上或選中指標）
             const isTargetBadge = isTarget && score >= 1;
@@ -1101,13 +1101,24 @@ function renderAccordionDetailCard(p) {
             if (score === 0) return;
 
             const cat = featureCategories[key] || 'scratch_and_abrasion';
-            const catStyles = categoryHierarchyStyles[cat] || categoryHierarchyStyles["scratch_and_abrasion"];
-            const styleClass = catStyles[score] || catStyles[1];
             const displayScore = plusMap[score] || score;
 
-            const badgeHtml = `<span title="${label}" class="f-size-xs px-2.5 py-0.5 rounded-md ${styleClass} inline-flex items-center gap-1 select-none">${label} <span class="tracking-wider">${displayScore}</span></span>`;
-            if (groupedBadges[cat]) {
-                groupedBadges[cat].push(badgeHtml);
+            if (cat === 'fda') {
+                const fdaStyles = {
+                    1: "bg-emerald-100 text-emerald-950 border border-emerald-300 f-weight-medium",
+                    2: "bg-emerald-600/85 text-white f-weight-semibold shadow-sm",
+                    3: "bg-emerald-700 text-white f-weight-extrabold shadow-md ring-1 ring-emerald-900/30"
+                };
+                const styleClass = fdaStyles[score] || fdaStyles[3];
+                const badgeHtml = `<span title="${label}" class="f-size-xs px-2.5 py-0.5 rounded-md ${styleClass} inline-flex items-center gap-1 select-none">${label} <span class="tracking-wider">${displayScore}</span></span>`;
+                groupedBadges.ptfe.push(badgeHtml);
+            } else {
+                const catStyles = categoryHierarchyStyles[cat] || categoryHierarchyStyles["scratch_and_abrasion"];
+                const styleClass = catStyles[score] || catStyles[1];
+                const badgeHtml = `<span title="${label}" class="f-size-xs px-2.5 py-0.5 rounded-md ${styleClass} inline-flex items-center gap-1 select-none">${label} <span class="tracking-wider">${displayScore}</span></span>`;
+                if (groupedBadges[cat]) {
+                    groupedBadges[cat].push(badgeHtml);
+                }
             }
         });
     }

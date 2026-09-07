@@ -99,11 +99,12 @@ const featureCategories = {
     "soil_resistance": "special",
     "no_silica_dust": "special",
     "cleanability": "special",
+    "fda": "fda",
 };
 
 const featureConfig = {
     "zh": {
-        "ptfe_alternative": "PTFE取代", "scratch_resistance": "耐刮", "abrasion_resistance": "耐磨",
+        "ptfe_alternative": "PTFE取代", "fda": "FDA", "scratch_resistance": "耐刮", "abrasion_resistance": "耐磨",
         "burnish_resistance": "耐拋光", "rub_resistance": "耐摩擦",
         "slip_lubricity": "滑爽", "slip": "滑爽", "anti_slip": "防滑", "increased_cof": "高摩擦",
         "matting_gloss_control": "消光", "v_matting_gloss_control": "更消光", "gloss_retention": "保持光澤", "clarity": "透明", "v_clarity": "更透明",
@@ -117,6 +118,7 @@ const featureConfig = {
     },
     "en": {
         "ptfe_alternative": "PTFE Alt.",
+        "fda": "FDA",
         "scratch_resistance": "Scratch Res.",
         "abrasion_resistance": "Abrasion Res.",
         "burnish_resistance": "Burnish Res.",
@@ -336,6 +338,7 @@ function isCurrentCategoryKey(key, category, productLine) {
     if ((cat === '耐高溫' || cat.includes('heat')) && key === 'heat_resistance') return true;
     if ((cat === '防腐蝕' || cat.includes('corrosion')) && key === 'corrosion_resistance') return true;
     if ((cat === '撥水' || cat.includes('water_beading')) && key === 'water_beading') return true;
+    if ((cat === 'fda' || cat.includes('fda')) && key === 'fda') return true;
 
     return false;
 }

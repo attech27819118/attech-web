@@ -97,10 +97,12 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 1,
           "improved_extrusion_flow": 1,
@@ -110,6 +112,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提高抗刮傷、抗磨損與抗劃痕性能。",
           "metal_mark_resistance": "提高抗刮傷、抗磨損與抗劃痕性能。",
           "matting_gloss_control": "選擇 G 規格可獲得最大的消光效果；選擇 XF 規格可獲得最大的光澤保持。",
@@ -117,6 +120,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
           "metal_mark_resistance": "Improves scratch, scuff, and mar resistance.",
           "matting_gloss_control": "Choose G grade for maximum gloss reduction and burnish resistance; choose XF grade for maximum gloss retention.",
@@ -130,10 +134,12 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "slip_lubricity": 2,
           "matting_gloss_control": 1,
@@ -143,6 +149,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "耐刮、高滑度，合成蠟/奈米氧化鋁複合蠟。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升抗刮傷、抗擦傷性能。",
           "abrasion_resistance": "提升耐磨性能",
           "slip_lubricity": "增加表面滑爽度與潤滑性",
@@ -151,6 +158,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
           "abrasion_resistance": "Improves scuff and rub resistance.",
           "slip_lubricity": "Adds surface slip and lubricity.",
@@ -586,10 +594,12 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 2,
           "metal_mark_resistance": 2,
@@ -598,12 +608,14 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升塗層的抗刮傷及抗磨損。",
           "apparent_hardness": "複配奈米氧化鋁微粉（莫氏硬度 9），提升塗層表面硬度。",
           "slip_lubricity": "提高滑爽性與潤滑性。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives, delivering exceptional scratch resistance.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves coating scratch and mar resistance while imparting surface slip and lubricity.",
           "apparent_hardness": "Utilizes 300 nm aluminum oxide nanoparticles (Mohs hardness 9) to enhance film surface hardness.",
           "slip_lubricity": "Enhances surface slip and lubricity."
@@ -616,10 +628,12 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "slip_lubricity": 2,
           "matting_gloss_control": 2,
@@ -627,12 +641,14 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "奈米氧化鋁（莫氏硬度9），提升塗層抗刮與抗擦傷性能。",
           "slip_lubricity": "提高滑爽性與潤滑性",
           "matting_gloss_control": "能有效降低塗層光澤度，產生消光效果"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Reinforced with 300 nm aluminum oxide (Mohs hardness 9) to improve scratch and scuff resistance.",
           "slip_lubricity": "Enhances surface slip and lubricity.",
           "matting_gloss_control": "Composite particle density maximizes efficiency and minimizes settling.",
@@ -942,16 +958,19 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 2,
           "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提供良好的抗刮性能。",
           "apparent_hardness": "複配奈米氧化鋁，(莫氏硬度9)，提高塗層硬度",
           "gloss_retention": "不影響塗層透明度和光澤度。",
@@ -960,6 +979,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides superior scratch and mar resistance.",
           "block_resistance": "Also suitable for use in seed coatings.",
           "apparent_hardness": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to enhance film hardness.",
@@ -974,10 +994,12 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "slip_lubricity": 3,
           "gloss_retention": 1,
@@ -986,6 +1008,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
           "abrasion_resistance": "有效提升耐磨性能",
           "slip_lubricity": "提供優異的表面潤滑性。",
@@ -993,6 +1016,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Reinforced with aluminum oxide nanoparticles (Mohs hardness 9) to deliver excellent scratch resistance.",
           "abrasion_resistance": "Effectively reduces wear and abrasion.",
           "slip_lubricity": "Provides superior surface lubricity.",
@@ -1158,10 +1182,12 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
@@ -1170,6 +1196,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "良好的耐磨性。",
           "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
@@ -1178,6 +1205,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Excellent scratch resistance, equal to PE/PTFE wax additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Maximum scratch resistance. Highly engineered HDPE/EBS composite reinforced with 300 nm aluminum oxide nanoparticles (Mohs hardness 9).",
           "abrasion_resistance": "Provides good abrasion resistance.",
           "block_resistance": "Amide wax component provides superior antiblocking and release properties.",
@@ -1192,10 +1220,12 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "scratch_resistance": 3,
           "slip_lubricity": 3,
           "matting_gloss_control": 3,
@@ -1203,6 +1233,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。",
           "abrasion_resistance": "具有良好的耐磨性。",
           "slip_lubricity": "具備滑爽性與潤滑性。",
@@ -1210,6 +1241,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Maximum scratch resistance, equal to PE/PTFE additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Maximum scratch resistance. Highly engineered HDPE/EBS composite reinforced with 300 nm aluminum oxide nanoparticles (Mohs hardness 9).",
           "abrasion_resistance": "Provides good abrasion resistance.",
           "slip_lubricity": "Imparts surface slip and lubricity.",
@@ -1392,10 +1424,12 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "abrasion_resistance": 3,
           "block_resistance": 2,
           "slip_lubricity": 3,
@@ -1403,11 +1437,13 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
           "slip_lubricity": "提高滑爽性與潤滑性。適合罐頭塗料(內罐及外罐)、貨櫃漆；通過 21CFR 175.300 認證。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives, providing superior abrasion resistance.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "HDPE composite reinforced with hard nanoceramic particles, offering enhanced Taber abrasion resistance compared to PE/PTFE additives.",
           "slip_lubricity": "Imparts surface slip and lubricity. Ideal for interior and exterior can and container coatings; 21CFR 175.300 compliant."
         }
@@ -1417,10 +1453,12 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "abrasion_resistance": 3,
           "slip_lubricity": 3,
           "matting_gloss_control": 3,
@@ -1428,11 +1466,13 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
           "slip_lubricity": "提供滑爽性與潤滑度"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives, providing superior abrasion resistance.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "HDPE composite reinforced with hard ceramic microspheres, delivering improved Taber abrasion resistance over PE/PTFE additives.",
           "slip_lubricity": "Provides surface slip and lubricity."
         }
@@ -1585,10 +1625,12 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "abrasion_resistance": 3,
           "block_resistance": 3,
           "metal_mark_resistance": 2,
@@ -1596,6 +1638,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "具有出色的抗刮與耐磨性能。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "具有良好的抗刮性能",
           "abrasion_resistance": "具有良好的耐磨性能。",
           "block_resistance": "高熔點可提高耐熱性與防粘結性。",
@@ -1604,6 +1647,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Delivers outstanding scratch and abrasion resistance compared to PTFE-based additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides excellent scratch and mar resistance.",
           "abrasion_resistance": "Provides superior abrasion resistance.",
           "block_resistance": "High melting point enhances heat resistance and antiblocking performance.",
@@ -1618,16 +1662,19 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "abrasion_resistance": 3,
           "slip_lubricity": 3,
           "block_resistance": 2
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "具有出色的抗刮與耐磨性能。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "具有良好的抗刮性能。",
           "abrasion_resistance": "具有良好的耐磨性能。",
           "slip_lubricity": "增加滑爽性、離型性與潤滑性，提供極佳的表面「手感」。",
@@ -1635,6 +1682,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Delivers outstanding scratch and abrasion resistance compared to PTFE-based additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides excellent scratch and mar resistance.",
           "abrasion_resistance": "Provides superior abrasion resistance.",
           "slip_lubricity": "Adds slip, release, and lubricity with an excellent surface feel while lowering COF.",
@@ -1775,10 +1823,12 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "abrasion_resistance": 3,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
@@ -1788,12 +1838,14 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效取代PTFE蠟粉",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "聚乙烯蠟提供優異的表面耐刮。",
           "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
           "anti_slip": "不影響摩擦係數，非常適合步行路面。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative to PTFE additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Low-density polyethylene provides superior surface toughness, durability, and mar resistance.",
           "abrasion_resistance": "Maximizes surface Taber abrasion resistance and film toughness.",
           "anti_slip": "Enhances film hardness, making it ideal for walking surfaces."
@@ -1804,22 +1856,26 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "PTFE 取代"
+          "PTFE 取代",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 3,
+          "fda": 3,
           "abrasion_resistance": 3,
           "slip_lubricity": 1,
           "increased_cof": 1
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "有效取代PTFE蠟粉",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "低密度聚乙烯蠟提高的表面耐刮。",
           "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
           "anti_slip": "具備防滑特性，非常適合步行路面"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative to PTFE additives.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Low-density polyethylene enhances surface toughness and mar resistance.",
           "abrasion_resistance": "Enhances surface Taber abrasion resistance and film toughness.",
           "apparent_hardness": "Increases hardness, ideal for walking surfaces.",
@@ -2231,9 +2287,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "耐刮"
+          "耐刮",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "block_resistance": 2,
           "slip_lubricity": 2,
@@ -2241,12 +2299,14 @@
           "burnish_resistance": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "賦予塗層抗擦傷與抗劃痕性。",
           "abrasion_resistance": "賦予塗層抗耐磨擦性能。",
           "block_resistance": "提供抗黏結性能。提供持久的撥水性能。",
           "slip_lubricity": "賦予塗層潤滑性與滑爽性。若需更好的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。符合 OECD 302C 測試標準的可生物降解特性。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Imparts scuff and mar resistance to the coating.",
           "abrasion_resistance": "Provides coating abrasion and rub resistance.",
           "block_resistance": "Provides antiblocking performance and long-lasting water repellency.",
@@ -2258,9 +2318,11 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "耐刮"
+          "耐刮",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "rub_resistance": 3,
           "slip_lubricity": 3,
@@ -2268,12 +2330,14 @@
           "block_resistance": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "具有抗刮傷（刻痕）防護。",
           "rub_resistance": "提高耐摩擦性能。",
           "slip_lubricity": "賦予塗層潤滑性與滑爽性。",
           "block_resistance": "提供抗黏結性能"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides protection against scratch and marring.",
           "rub_resistance": "Enhances rub and scuff resistance.",
           "slip_lubricity": "Imparts lubricity and surface slip.",
@@ -2418,15 +2482,18 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "耐磨"
+          "耐磨",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 2,
           "block_resistance": 2,
           "apparent_hardness": 2,
           "slip_lubricity": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升塗層抗劃痕性",
           "abrasion_resistance": "提升塗層耐磨擦性。",
           "block_resistance": "提升抗黏結性能並具備良好的耐熱性。",
@@ -2434,6 +2501,7 @@
           "slip_lubricity": "提升塗層表面滑爽性。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves coating mar and scratch resistance.",
           "abrasion_resistance": "Enhances abrasion and rub resistance.",
           "block_resistance": "Improves antiblocking properties with good heat resistance.",
@@ -2508,9 +2576,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "耐磨"
+          "耐磨",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 2,
           "block_resistance": 3,
           "improved_extrusion_flow": 3,
@@ -2518,6 +2588,7 @@
           "slip_lubricity": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升塗層抗劃痕性能。",
           "abrasion_resistance": "提升塗層耐磨與耐磨擦性能。",
           "block_resistance": "提升塗層抗黏結性能。",
@@ -2526,6 +2597,7 @@
           "slip_lubricity": "具有良好的表面滑爽性。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves coating mar resistance.",
           "abrasion_resistance": "Enhances coating abrasion and rub resistance.",
           "block_resistance": "Improves antiblocking properties.",
@@ -2539,9 +2611,11 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "耐磨"
+          "耐磨",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 2,
           "rub_resistance": 2,
           "slip_lubricity": 2,
@@ -2549,6 +2623,7 @@
           "chemical_resistance": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升塗層的抗刮傷性能。",
           "abrasion_resistance": "提升塗層的耐磨和耐摩擦性。",
           "slip_lubricity": "提供良好表面滑爽性",
@@ -2557,6 +2632,7 @@
           "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves scratch and mar resistance.",
           "abrasion_resistance": "Enhances abrasion and rub resistance.",
           "rub_resistance": "Imparts excellent rub resistance.",
@@ -2673,9 +2749,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "耐磨"
+          "耐磨",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 2,
           "block_resistance": 1,
           "metal_mark_resistance": 2,
@@ -2683,6 +2761,7 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升塗層的抗劃痕性。",
           "abrasion_resistance": "提高塗層的耐磨與耐磨擦性能。",
           "block_resistance": "優異的抗黏結性能。增加耐熱性。",
@@ -2691,6 +2770,7 @@
           "slip_lubricity": "提供良好的表面滑爽性。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Imparts excellent mar resistance with good surface slip.",
           "abrasion_resistance": "Enhances coating abrasion and rub resistance.",
           "block_resistance": "Provides excellent antiblocking properties and adds heat resistance.",
@@ -2704,15 +2784,18 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "耐磨"
+          "耐磨",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 2,
           "rub_resistance": 2,
           "slip_lubricity": 1,
           "block_resistance": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "賦予優異的抗刮傷性能與耐溶劑性。",
           "abrasion_resistance": "賦予極佳的耐磨和耐摩擦性。",
           "slip_lubricity": "提供良好表面滑爽性",
@@ -2720,6 +2803,7 @@
           "heat_resistance": "提高耐熱性"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Imparts excellent mar resistance with better resistance to solvent absorption and swelling versus synthetic wax.",
           "abrasion_resistance": "Provides excellent abrasion and rub resistance combined with surface slip and antiblocking.",
           "rub_resistance": "Delivers superior rub and scuff resistance.",
@@ -2792,9 +2876,11 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "耐磨"
+          "耐磨",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 3,
           "rub_resistance": 3,
           "slip_lubricity": 3,
@@ -2802,6 +2888,7 @@
           "intercoat_adhesion": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "高分子量和高硬度提升了塗層的耐刮性",
           "abrasion_resistance": "提供卓越的耐磨擦與耐磨性能",
           "high_dispersibility": "易於分散的細粉，可經由高速混合直接加入",
@@ -2809,6 +2896,7 @@
           "heat_resistance": "結晶型、高熔點蠟"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "High molecular weight and hardness improve resistance to solvent absorption and swelling.",
           "abrasion_resistance": "Crystalline, high-melting-point wax provides outstanding rub and abrasion resistance.",
           "high_dispersibility": "Easily dispersible fine powder that can be incorporated directly via high-speed mixing to provide surface slip.",
@@ -2877,9 +2965,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "消光"
+          "消光",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 3,
@@ -2887,12 +2977,14 @@
           "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "高分子量可提升塗層耐刮。",
           "abrasion_resistance": "高分子量聚合物，可賦予耐磨性。",
           "matting_gloss_control": "用於高效消光和光澤控制。提供穩定的消光效果且不影響塗料黏度。",
           "increased_cof": "賦予防滑性能。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "High molecular weight polymer enhances coating scratch and burnish resistance.",
           "abrasion_resistance": "Tough, high molecular weight polymer imparts abrasion resistance.",
           "matting_gloss_control": "Efficient matting and gloss control; provides consistent gloss reduction with no effect on coating viscosity.",
@@ -2904,21 +2996,25 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "消光"
+          "消光",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "matting_gloss_control": 3,
           "block_resistance": 1,
           "increased_cof": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "高分子量可提升塗層耐刮。",
           "abrasion_resistance": "高分子量，可賦予耐磨性。",
           "anti_slip": "賦予防滑性能",
           "matting_gloss_control": "提供高效能的消光效果，且不影響塗料黏度"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "High molecular weight polymer improves burnish and scratch resistance.",
           "abrasion_resistance": "High molecular weight polymer imparts abrasion resistance.",
           "anti_slip": "Imparts anti-slip properties.",
@@ -3072,14 +3168,17 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "消光"
+          "消光",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 2,
           "slip_lubricity": 1,
           "block_resistance": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提高抗擦傷、刮傷以及金屬劃痕性能",
           "abrasion_resistance": "提高耐磨性。",
           "slip_lubricity": "提供表面滑爽性",
@@ -3087,6 +3186,7 @@
           "block_resistance": "提供抗黏結性能。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves mar, scratch, and metal marking resistance.",
           "abrasion_resistance": "Enhances abrasion resistance. Modified high-melting-point polypropylene wax provides consistent gloss control combined with surface slip, mar, and abrasion resistance.",
           "slip_lubricity": "Easily dispersible in polar and non-polar systems, providing surface slip.",
@@ -3184,19 +3284,23 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "高光澤"
+          "高光澤",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提高抗刮傷性能。",
           "block_resistance": "高熔點可提高耐熱性和抗黏結性。",
           "slip_lubricity": "增加滑爽性、脫模性，並提供極佳的表面手感。降低摩擦係數 (COF)。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Micronized fatty amide wax provides scratch resistance.",
           "block_resistance": "High melting point improves heat resistance and antiblocking properties.",
           "slip_lubricity": "Adds slip, release, and lubricity with an excellent surface tactile feel while lowering COF."
@@ -3207,19 +3311,23 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "高光澤"
+          "高光澤",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提高表面滑爽、抗刮傷性能",
           "slip_lubricity": "增加滑爽、脫模，具有極佳的表面手感。降低摩擦係數 (COF)",
           "block_resistance": "具有抗黏結性",
           "heat_resistance": "高熔點以提升耐熱性能"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves surface slip, scratch resistance, and release properties.",
           "slip_lubricity": "Adds slip and mold release with an exceptional surface feel while lowering COF.",
           "block_resistance": "Delivers antiblocking properties.",
@@ -3287,9 +3395,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "柔感"
+          "柔感",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "matting_gloss_control": 3,
           "texture_structure": 1,
           "soft_touch": 3,
@@ -3297,12 +3407,14 @@
           "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "球形聚氨酯微粉、抗刮傷性能。",
           "abrasion_resistance": "可提高耐磨性能。",
           "matting_gloss_control": "有效降低塗層光澤。",
           "soft_touch": "獨特的表面觸感。提供從絲綢般光滑、橡膠感或皮革感等不同觸感效果。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Highly resilient spherical polyurethane beads provide matting, scratch, and mar resistance.",
           "abrasion_resistance": "Enhances coating abrasion resistance.",
           "matting_gloss_control": "Provides effective gloss reduction for a matte finish.",
@@ -3314,9 +3426,11 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "柔感"
+          "柔感",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "matting_gloss_control": 3,
           "soft_touch": 2,
@@ -3324,6 +3438,7 @@
           "increased_cof": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提高防刮與抗刮傷性能",
           "abrasion_resistance": "提高耐磨性",
           "matting_gloss_control": "有效的降低光澤",
@@ -3331,6 +3446,7 @@
           "texture_structure": "獨特的表面觸感。提供從絲綢般光滑、橡膠感或皮革感等不同的觸感效果。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
           "abrasion_resistance": "Enhances abrasion resistance.",
           "matting_gloss_control": "Provides effective gloss reduction.",
@@ -3483,9 +3599,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "柔感"
+          "柔感",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "matting_gloss_control": 3,
           "texture_structure": 2,
           "soft_touch": 3,
@@ -3493,12 +3611,14 @@
           "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "聚氨酯微粉可提高抗刮傷和抗劃痕性能。",
           "abrasion_resistance": "聚氨酯微粉可提高耐磨性能。",
           "matting_gloss_control": "有效降低光澤。",
           "soft_touch": "提供從絲綢般光滑、橡膠感至皮革感等不同的觸感效果。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Polyurethane beads enhance scratch and mar resistance.",
           "abrasion_resistance": "Polyurethane beads improve coating abrasion resistance.",
           "matting_gloss_control": "Provides effective gloss reduction.",
@@ -3510,9 +3630,11 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "柔感"
+          "柔感",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "matting_gloss_control": 3,
           "soft_touch": 1,
@@ -3520,6 +3642,7 @@
           "increased_cof": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提高防刮與抗刮傷性能",
           "abrasion_resistance": "提高耐磨性",
           "matting_gloss_control": "有效的降低光澤",
@@ -3527,6 +3650,7 @@
           "texture_structure": "提供不同的粒徑以創造出獨特的表面「觸感」"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves scratch and scuff resistance.",
           "abrasion_resistance": "Enhances abrasion resistance.",
           "matting_gloss_control": "Provides effective gloss reduction.",
@@ -3874,9 +3998,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 2,
@@ -3886,12 +4012,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻的中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough, high molecular weight polypropylene imparts good film durability and abrasion resistance.",
           "matting_gloss_control": "Reduces coating surface gloss.",
           "anti_slip": "Maintains high coefficient of friction (COF); ideal for anti-skid and non-slip surfaces.",
@@ -3963,9 +4091,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 2,
@@ -3975,12 +4105,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough polypropylene gives good film durability and abrasion resistance.",
           "matting_gloss_control": "Reduces coating surface gloss consistently.",
           "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
@@ -4052,9 +4184,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 2,
@@ -4064,12 +4198,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability and abrasion resistance.",
           "matting_gloss_control": "Provides consistent gloss reduction.",
           "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
@@ -4141,9 +4277,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 2,
@@ -4153,12 +4291,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻中等織紋塗層表面。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability and abrasion resistance.",
           "matting_gloss_control": "Reduces coating gloss.",
           "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
@@ -4230,9 +4370,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 3,
@@ -4242,12 +4384,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "塗層表面建構細緻的織紋效果。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good durability and abrasion resistance.",
           "matting_gloss_control": "Provides gloss reduction with improved burnish resistance compared to silica.",
           "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
@@ -4378,9 +4522,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 3,
@@ -4390,12 +4536,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供塗層細緻的織紋效果。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good durability.",
           "matting_gloss_control": "Provides gloss reduction with improved burnish resistance compared to silica.",
           "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
@@ -4469,9 +4617,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 2,
@@ -4481,12 +4631,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "塗層表面建構細緻的織紋效果。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough polypropylene provides good film durability and abrasion resistance.",
           "matting_gloss_control": "Provides efficient gloss reduction with improved burnish resistance compared to silica.",
           "increased_cof": "Does not lower COF; ideal for anti-skid surfaces.",
@@ -4616,9 +4768,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 2,
@@ -4628,12 +4782,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "粗糙化塗層表面來降低光澤。",
           "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability.",
           "matting_gloss_control": "Provides a consistent coarse-textured coating surface to reduce gloss.",
           "increased_cof": "Does not lower COF; ideal for anti-skid and non-slip surfaces.",
@@ -4705,9 +4861,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 2,
@@ -4717,12 +4875,14 @@
           "burnish_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
           "matting_gloss_control": "降低塗層表面光澤。",
           "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
           "texture_structure": "提供均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability.",
           "matting_gloss_control": "Provides a consistent coarse textured coating surface to reduce gloss.",
           "increased_cof": "Does not lower COF; ideal for anti-skid surfaces.",
@@ -4795,21 +4955,25 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 1,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 3,
           "texture_structure": 3,
           "increased_cof": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Imparts surface toughness and scratch resistance. High-melting-point polymer is ideal for baking or high-temperature curing systems.",
           "abrasion_resistance": "Imparts surface toughness and abrasion resistance.",
           "texture_structure": "Provides a uniform and controlled surface texture. Easily dispersible with high-speed mixing."
@@ -4875,21 +5039,25 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 1,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 3,
           "texture_structure": 3,
           "increased_cof": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Imparts surface toughness and scratch resistance. High melting point is ideal for high-temperature baking systems.",
           "abrasion_resistance": "Imparts surface toughness and abrasion resistance.",
           "texture_structure": "Provides a uniform surface texture. Easily dispersible via high-speed mixing."
@@ -4955,10 +5123,12 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 1,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 2,
           "texture_structure": 3,
@@ -4966,11 +5136,13 @@
           "increased_cof": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Imparts surface toughness and scratch resistance. High-melting-point polymer is ideal for baking or high-temperature curing systems.",
           "abrasion_resistance": "Imparts surface toughness and abrasion durability.",
           "texture_structure": "Provides a uniform and controlled surface texture. Easily dispersible with high-speed mixing."
@@ -5036,21 +5208,25 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "織紋"
+          "織紋",
+          "FDA"
         ],
         "performance_ratings": {
           "ptfe_alternative": 1,
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 2,
           "texture_structure": 3,
           "increased_cof": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
           "abrasion_resistance": "賦予表面韌性與耐磨性。",
           "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Imparts surface toughness and scratch resistance. High-melting-point polymer is ideal for use in baking or high-temperature curing systems.",
           "abrasion_resistance": "Imparts surface toughness and abrasion resistance.",
           "texture_structure": "Provides a uniform and controlled surface texture. Easily dispersible with high-speed mixing."
@@ -5116,15 +5292,18 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "高光澤"
+          "高光澤",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 2,
           "block_resistance": 3,
           "slip_lubricity": 2,
           "burnish_resistance": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提供滑爽性、耐磨性和抗刮傷性的優異結合。適合需要高光澤度和透明度的應用。",
           "abrasion_resistance": "提供滑爽性、耐磨性和抗刮傷性的優異結合。",
           "block_resistance": "在金屬包裝塗料中提供優異的抗刮傷性和脫模性能。",
@@ -5132,6 +5311,7 @@
           "slip_lubricity": "在捲鋼塗料中，為捲鋼成品的成型和加工提供最大的滑爽性。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides an excellent combination of slip, abrasion resistance, and scratch resistance. Ideal for applications where high gloss and clarity are required.",
           "abrasion_resistance": "Delivers an optimal balance of slip, abrasion resistance, and scratch resistance.",
           "block_resistance": "Provides excellent slip, scratch resistance, and food release properties in metal packaging coatings.",
@@ -5144,9 +5324,11 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "高光澤"
+          "高光澤",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "slip_lubricity": 1,
           "gloss_retention": 3,
@@ -5154,6 +5336,7 @@
           "clarity": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提供抗刮傷性能。",
           "abrasion_resistance": "提供優異的耐磨性",
           "slip_lubricity": "提供極佳的滑爽性。在捲鋼塗料中，為成品捲鋼的成型與加工提供最大的滑爽度",
@@ -5161,6 +5344,7 @@
           "gloss_retention": "適合保持極佳光澤與透明度的應用。在烘烤後能減少捲鋼塗料表面霧影"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides an excellent combination of slip, abrasion resistance, and scratch resistance.",
           "abrasion_resistance": "Provides superior abrasion resistance.",
           "slip_lubricity": "Imparts excellent slip. In coil coatings, provides maximum slip for forming and fabrication.",
@@ -5206,14 +5390,17 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "高光澤"
+          "高光澤",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 2,
           "block_resistance": 2,
           "slip_lubricity": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升表面潤滑性與抗刮傷性。",
           "abrasion_resistance": "改善耐磨性。",
           "block_resistance": "改善抗黏結性、流動性。",
@@ -5221,6 +5408,7 @@
           "slip_lubricity": "提供表面潤滑性。是一種生物降解蠟。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides surface lubricity and scratch resistance.",
           "abrasion_resistance": "Improves abrasion resistance in specialty and seed coatings.",
           "block_resistance": "Improves antiblocking, flow, and handling properties.",
@@ -5290,9 +5478,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "消光"
+          "消光",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "block_resistance": 2,
           "matting_gloss_control": 3,
@@ -5300,12 +5490,14 @@
           "burnish_resistance": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升塗層耐刮性能",
           "block_resistance": "改善抗黏結性和流動性",
           "matting_gloss_control": "有效降低光澤，從半消光到全消光的表面效果。",
           "increased_cof": "賦予塗層防滑性能。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves coating scratch and burnish resistance compared to silica matting agents.",
           "block_resistance": "Optimized particle density prevents flotation or hard settling, ensuring superior in-can stability.",
           "matting_gloss_control": "Efficient gloss reduction providing finishes from satin to matte.",
@@ -5317,15 +5509,18 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "消光"
+          "消光",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "abrasion_resistance": 1,
           "matting_gloss_control": 3,
           "block_resistance": 2,
           "increased_cof": 3
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "與二氧化矽消光劑相比，提高了耐刮性",
           "slip_lubricity": "賦予防滑性能",
           "matting_gloss_control": "降低光澤，從半消光到全消光的表面效果",
@@ -5333,6 +5528,7 @@
           "anti_slip": "增加防滑性能"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves burnish and mar resistance versus silica mattifiers.",
           "slip_lubricity": "Imparts anti-slip properties.",
           "matting_gloss_control": "Efficiently reduces gloss from satin to matte finish.",
@@ -5461,9 +5657,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "耐刮"
+          "耐刮",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 3,
           "block_resistance": 2,
           "improved_extrusion_flow": 1,
@@ -5472,12 +5670,14 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE 的替代選擇。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升抗刮與抗劃痕性能。",
           "abrasion_resistance": "可提供最佳的耐磨與抗劃痕性能。",
           "slip_lubricity": "具有優異的滑爽性與潤滑度。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative for water-based and solvent systems.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides optimum levels of scuff and mar resistance.",
           "abrasion_resistance": "Delivers optimum levels of scuff and scratch resistance.",
           "slip_lubricity": "Imparts excellent surface slip and mobility."
@@ -5490,9 +5690,11 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "耐刮"
+          "耐刮",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "rub_resistance": 3,
           "slip_lubricity": 3,
           "soft_touch": 2,
@@ -5501,6 +5703,7 @@
         },
         "performance_descriptions_zh": {
           "ptfe_alternative": "不含 PTFE 的替代選擇。",
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提供最佳水平的抗刮性能。",
           "rub_resistance": "提供最佳水平的抗擦傷和抗磨損（防勒痕）防護",
           "slip_lubricity": "提供極佳的滑爽性與潤滑度",
@@ -5509,6 +5712,7 @@
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "PTFE-free alternative additive.",
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Unique micronized oxidized polyethylene wax composite for improved scuff and mar resistance.",
           "rub_resistance": "Provides optimum levels of scuff and rub resistance in water-based and solvent systems.",
           "slip_lubricity": "Provides optimum levels of slip and mobility.",
@@ -5571,9 +5775,11 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "耐刮"
+          "耐刮",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 2,
           "block_resistance": 1,
           "metal_mark_resistance": 2,
@@ -5581,6 +5787,7 @@
           "burnish_resistance": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "在水性系統中提供卓越的抗劃痕與抗刮傷性能。",
           "abrasion_resistance": "在水性系統中提供卓越的耐磨擦性能。",
           "block_resistance": "賦予抗黏結性能。",
@@ -5588,6 +5795,7 @@
           "slip_lubricity": "提高塗層滑度。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Hard, modified high-density polyethylene blend provides outstanding mar and scratch resistance in water-based systems.",
           "abrasion_resistance": "Provides outstanding rub and abrasion resistance in aqueous systems.",
           "block_resistance": "Imparts antiblocking properties.",
@@ -5633,20 +5841,24 @@
         "application_title_zh": "工業塗料",
         "application_title_en": "Industrial Coating",
         "featured_categories": [
-          "耐刮"
+          "耐刮",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "block_resistance": 1,
           "slip_lubricity": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "複合蠟，提升塗層耐刮性。",
           "abrasion_resistance": "複合蠟，可提升耐磨與抗擦傷性。",
           "block_resistance": "提升抗黏結性。",
           "slip_lubricity": "增加潤滑性與光滑手感。"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Formulated wax composite providing scratch and mar resistance.",
           "abrasion_resistance": "Improves coating abrasion and rub resistance.",
           "block_resistance": "Imparts antiblocking properties.",
@@ -5658,15 +5870,18 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "耐刮"
+          "耐刮",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 1,
           "rub_resistance": 1,
           "slip_lubricity": 2,
           "block_resistance": 1
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提供抗刮性",
           "abrasion_resistance": "提供耐磨性",
           "slip_lubricity": "增加潤滑性與平滑表面手感。",
@@ -5674,6 +5889,7 @@
           "block_resistance": "提升抗黏結性"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Provides scratch and mar resistance.",
           "abrasion_resistance": "Provides abrasion resistance.",
           "slip_lubricity": "Adds lubricity and a smooth surface feel with easy high-speed dispersibility.",
@@ -5716,20 +5932,24 @@
         "application_title_zh": "油墨",
         "application_title_en": "Energy Curable Inks & OPVs",
         "featured_categories": [
-          "消光"
+          "消光",
+          "FDA"
         ],
         "performance_ratings": {
+          "fda": 3,
           "scratch_resistance": 2,
           "slip_lubricity": 3,
           "matting_gloss_control": 3,
           "block_resistance": 2
         },
         "performance_descriptions_zh": {
+          "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "提升耐刮性能",
           "slip_lubricity": "提升滑度與抗沾污性",
           "matting_gloss_control": "提供高效的消光作用"
         },
         "performance_descriptions_en": {
+          "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "scratch_resistance": "Improves burnish resistance and dirt pickup resistance (DPUR) in architectural coatings compared to inorganic flattening agents.",
           "slip_lubricity": "Surface-treated for easy incorporation into water-based systems; improves soil release and dirt resistance.",
           "matting_gloss_control": "Provides highly efficient gloss reduction and matting."
