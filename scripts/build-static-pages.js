@@ -67,84 +67,53 @@ function getProductApplications(p, partnerKey, lineKey, configData) {
     const pName = p.product_name || p.name || '';
     const safeName = encodeURIComponent(pName);
 
-    if (pLower === 'mpi') {
-        // MPI: 依據 json/mpi/mpiall.json 中的 application_title_zh
-        if (p.applications_data && typeof p.applications_data === 'object') {
-            for (const [appKey, appObj] of Object.entries(p.applications_data)) {
-                if (appObj && appObj.application_title_zh) {
-                    const title = String(appObj.application_title_zh).trim();
-                    if (title && !apps.some(a => a.title === title)) {
-                        apps.push({
-                            title: title,
-                            key: appKey,
-                            url: `/products/mpi/${appKey}/`,
-                            productUrl: `/products/mpi/${appKey}/?product=${safeName}#${safeName}`,
-                            isCurrent: (appKey === lineKey)
-                        });
-                    }
-                }
-            }
-        }
-    } else if (pLower === 'dorfketal') {
-        // dorfketal: 依據 json/dorfketal 中的 featured_categories
-        const cats = Array.isArray(p.featured_categories) ? p.featured_categories : [];
-        for (const cat of cats) {
-            const title = String(cat).trim();
-            if (title && !apps.some(a => a.title === title)) {
-                apps.push({
-                    title: title,
-                    key: lineKey,
-                    url: `/products/dorfketal/${lineKey}/?category=${encodeURIComponent(title)}`,
-                    productUrl: `/products/dorfketal/${lineKey}/?product=${safeName}#${safeName}`,
-                    isCurrent: true
-                });
-            }
-        }
-    } else if (pLower === 'orion') {
-        // orion: 依據 json/orion 中的 featured_categories
-        const cats = Array.isArray(p.featured_categories) ? p.featured_categories : [];
-        for (const cat of cats) {
-            const title = String(cat).trim();
-            if (title && !apps.some(a => a.title === title)) {
-                apps.push({
-                    title: title,
-                    key: lineKey,
-                    url: `/products/orion/${lineKey}/?category=${encodeURIComponent(title)}`,
-                    productUrl: `/products/orion/${lineKey}/?product=${safeName}#${safeName}`,
-                    isCurrent: true
-                });
-            }
-        }
-    } else {
-        // others: 依據 config.json 怎麼分類與各 JSON featured_categories
-        const cats = Array.isArray(p.featured_categories) ? p.featured_categories : [];
-        if (cats.length > 0) {
-            for (const cat of cats) {
-                const title = String(cat).trim();
+    // 1. 若有 applications_data (如 MPI 等)
+    if (p.applications_data && typeof p.applications_data === 'object') {
+        for (const [appKey, appObj] of Object.entries(p.applications_data)) {
+            if (appObj && appObj.application_title_zh) {
+                const title = String(appObj.application_title_zh).trim();
                 if (title && !apps.some(a => a.title === title)) {
                     apps.push({
                         title: title,
-                        key: lineKey,
-                        url: `/products/others/${lineKey}/?category=${encodeURIComponent(title)}`,
-                        productUrl: `/products/others/${lineKey}/?product=${safeName}#${safeName}`,
-                        isCurrent: true
+                        key: appKey,
+                        url: `/products/${pLower}/${appKey}/`,
+                        productUrl: `/products/${pLower}/${appKey}/?product=${safeName}#${safeName}`,
+                        isCurrent: (appKey === lineKey)
                     });
                 }
             }
         }
-        // 若無明確 featured_categories，採用 config.json 該系列之 titleZh 分類名稱
-        if (apps.length === 0) {
-            const othersConfig = configData?.others;
-            const fileConf = (othersConfig?.files || []).find(f => f.key === lineKey);
-            const lineName = fileConf?.titleZh || fileConf?.titleEn || '特化材料助劑';
-            apps.push({
-                title: lineName,
-                key: lineKey,
-                url: `/products/others/${lineKey}/`,
-                productUrl: `/products/others/${lineKey}/?product=${safeName}#${safeName}`,
-                isCurrent: true
-            });
+    }
+
+    // 2. 若有 featured_categories (如 Dorf Ketal, Orion, Others 等)
+    const cats = Array.isArray(p.featured_categories) ? p.featured_categories : [];
+    if (cats.length > 0) {
+        for (const cat of cats) {
+            const title = String(cat).trim();
+            if (title && !apps.some(a => a.title === title)) {
+                apps.push({
+                    title: title,
+                    key: lineKey,
+                    url: `/products/${pLower}/${lineKey}/?category=${encodeURIComponent(title)}`,
+                    productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}#${safeName}`,
+                    isCurrent: true
+                });
+            }
         }
+    }
+
+    // 3. 若皆無，預設採用當前產品線名稱
+    if (apps.length === 0) {
+        const partnerConfig = configData?.[pLower];
+        const fileConf = (partnerConfig?.files || []).find(f => f.key === lineKey);
+        const lineName = fileConf?.titleZh || fileConf?.titleEn || '特化材料助劑';
+        apps.push({
+            title: lineName,
+            key: lineKey,
+            url: `/products/${pLower}/${lineKey}/`,
+            productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}#${safeName}`,
+            isCurrent: true
+        });
     }
 
     return apps;
@@ -268,7 +237,8 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
         </tr>
     `).join('');
 
-    // 針對非 MPI 品牌，完全不提及 TDS
+    // 僅 MPI 提及 TDS，其餘品牌完全不提及 TDS
+    const isMpi = (partnerKey || '').toLowerCase() === 'mpi';
     const quickSpecText = isMpi ? '官網完整規格與 TDS' : '官網完整規格與特性';
     const serviceCardDesc = isMpi
         ? `宏威應用材料為 ${escapeHtml(brandName)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。`
@@ -277,11 +247,11 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
         ? `<i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>`
         : `<i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>`;
 
-    const bannerHeading = isMpi ? '需要檢視完整技術數據、TDS 下載或產品規格比較？' : '需要檢視完整技術數據或產品規格比較？';
+    const bannerHeading = isMpi ? '需要檢視完整技術數據或 TDS 下載？' : '需要檢視完整技術數據？';
     const bannerDesc = isMpi
-        ? `原廠技術資料表（TDS）與全品項多規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 ${escapeHtml(name)} 之完整技術檔案。`
-        : `完整產品物性數據與全品項規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 ${escapeHtml(name)} 之完整物性與應用資訊。`;
-    const bannerButtonText = isMpi ? '直達官網看 TDS 與完整規格' : '直達官網看完整規格與特性';
+        ? `原廠技術資料表（TDS）與全品項規格資料已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 ${escapeHtml(name)} 之完整技術檔案。`
+        : `完整產品物性數據與規格資料已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 ${escapeHtml(name)} 之完整物性與應用資訊。`;
+    const bannerButtonText = isMpi ? 'TDS 與完整規格' : '完整規格與特性';
 
     return `
     <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
@@ -391,10 +361,10 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                             ${serviceCardTdsItem}
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速索樣</span>
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速樣品申請</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供多品項線上規格橫向比較</span>
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供完整產品物性與技術諮詢</span>
                         </div>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 leading-relaxed">
@@ -420,11 +390,6 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto">
-                    <a href="/products/${partnerKey}/${lineKey}/" 
-                       class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-sm font-bold border border-slate-700 transition-colors">
-                        <i class="fa-solid fa-scale-balanced"></i>
-                        <span>比較同系列其他產品</span>
-                    </a>
                     <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}#${safeName}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-sm transition-colors active:scale-95">
                         <i class="fa-solid fa-file-lines"></i>
@@ -433,7 +398,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     <a href="/contact/?product=${safeName}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
                         <i class="fa-solid fa-envelope"></i>
-                        <span>索取免費樣品</span>
+                        <span>申請樣品</span>
                     </a>
                 </div>
             </div>
@@ -534,8 +499,8 @@ ${preRenderedContent}
 
         html = html.replace(/<main class="min-h-\[80vh\]">[\s\S]*?<\/main>/, productMainHtml);
 
-        // 移除獨立產品頁不需使用的 TDS modal 與浮動比較 dock
-        html = html.replace(/<!-- TDS 技術文件預覽彈窗 -->[\s\S]*?<!-- 底部懸浮比較欄[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/, '');
+        // 移除獨立產品頁不需使用的 TDS modal 與浮動比較 dock 及比較彈窗
+        html = html.replace(/<!-- TDS 技術文件預覽彈窗 -->[\s\S]*?(?=<!--\s*={5,})/, '');
     } else if (preRenderedContent) {
         // 列表頁預渲染注入
         html = html.replace(
@@ -620,9 +585,10 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
 
     // 品牌首頁
     const partnerPath = `/products/${partnerSlug}/`;
-    const partnerDesc = partnerSlug === 'mpi'
-        ? `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、TDS技術資料下載與免費樣品申請服務。`
-        : `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、產品詳細參數與免費樣品申請服務。`;
+    const isMpi = partnerSlug === 'mpi';
+    const partnerDesc = isMpi
+        ? `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、TDS技術資料下載與樣品申請服務。`
+        : `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、產品詳細參數與樣品申請服務。`;
     const partnerHtml = buildPageHtml({
         title: `${brandName} 特用化學品系列 | 宏威應用材料 ATTech Materials`,
         description: partnerDesc,
@@ -748,7 +714,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             };
 
             const isMpi = (partnerSlug === 'mpi');
-            const prodDescSuffix = isMpi ? '提供官網線上規格比較、TDS技術資料與樣品索取。' : '提供官網線上規格比較、詳細物性參數與樣品索取。';
+            const prodDescSuffix = isMpi ? '提供產品規格比較、TDS技術資料與樣品申請。' : '提供產品規格比較、詳細物性參數與樣品申請。';
             const prodPageHtml = buildPageHtml({
                 title: `${pName} (${brandName}) ${lineTitle} | 宏威應用材料 ATTech Materials`,
                 description: `${brandName} ${pName} 特用化學品：${comp ? comp + '，' : ''}${props ? props.replace(/\n/g, ' ').slice(0, 100) + '... ' : ''}適合應用：${usageText}。${prodDescSuffix}`,

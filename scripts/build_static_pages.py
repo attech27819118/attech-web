@@ -2,8 +2,8 @@
 """
 Python 版靜態頁面生成器 (SSG)
 與 scripts/build-static-pages.js 同步：
-- 依各品牌規則精確解析適合應用領域 (MPI看 mpiall.json application_title_zh、Dorf Ketal看 featured_categories、Orion看 featured_categories、Others看 config.json 分類)
-- 豐富完整的產品描述與代表性物性表
+- 所有品牌統一產生，不分 MPI 與其他品牌
+- 依各產品規格與分類解析適合應用領域與代表性物性表
 - 畫面不使用任何漸層底色 (純白/極簡現代風格)
 - 移除獨立產品頁的全域搜尋框
 - 引導使用者至官網比較其他產品、查看 TDS 與索樣
@@ -69,79 +69,55 @@ def get_product_applications(p, partner_key, line_key, config_data):
     p_name = p.get('product_name') or p.get('name') or ''
     safe_name = urllib.parse.quote(p_name)
 
-    if p_lower == 'mpi':
-        # MPI: 依據 json/mpi/mpiall.json 中的 application_title_zh
-        apps_data = p.get('applications_data', {})
-        if isinstance(apps_data, dict):
-            for app_key, app_obj in apps_data.items():
-                if isinstance(app_obj, dict) and app_obj.get('application_title_zh'):
-                    title = str(app_obj['application_title_zh']).strip()
-                    if title and not any(a['title'] == title for a in apps):
-                        apps.append({
-                            'title': title,
-                            'key': app_key,
-                            'url': f'/products/mpi/{app_key}/',
-                            'product_url': f'/products/mpi/{app_key}/?product={safe_name}#{safe_name}',
-                            'is_current': (app_key == line_key)
-                        })
-    elif p_lower == 'dorfketal':
-        cats = p.get('featured_categories', [])
-        if isinstance(cats, list):
-            for cat in cats:
-                title = str(cat).strip()
+    # 1. 若有 applications_data (如 MPI 等)
+    apps_data = p.get('applications_data')
+    if isinstance(apps_data, dict) and apps_data:
+        for app_key, app_obj in apps_data.items():
+            if isinstance(app_obj, dict) and app_obj.get('application_title_zh'):
+                title = str(app_obj['application_title_zh']).strip()
                 if title and not any(a['title'] == title for a in apps):
                     apps.append({
                         'title': title,
-                        'key': line_key,
-                        'url': f'/products/dorfketal/{line_key}/?category={urllib.parse.quote(title)}',
-                        'product_url': f'/products/dorfketal/{line_key}/?product={safe_name}#{safe_name}',
-                        'is_current': True
+                        'key': app_key,
+                        'url': f'/products/{p_lower}/{app_key}/',
+                        'product_url': f'/products/{p_lower}/{app_key}/?product={safe_name}#{safe_name}',
+                        'is_current': (app_key == line_key)
                     })
-    elif p_lower == 'orion':
-        cats = p.get('featured_categories', [])
-        if isinstance(cats, list):
-            for cat in cats:
-                title = str(cat).strip()
-                if title and not any(a['title'] == title for a in apps):
-                    apps.append({
-                        'title': title,
-                        'key': line_key,
-                        'url': f'/products/orion/{line_key}/?category={urllib.parse.quote(title)}',
-                        'product_url': f'/products/orion/{line_key}/?product={safe_name}#{safe_name}',
-                        'is_current': True
-                    })
-    else:
-        cats = p.get('featured_categories', [])
-        if isinstance(cats, list) and len(cats) > 0:
-            for cat in cats:
-                title = str(cat).strip()
-                if title and not any(a['title'] == title for a in apps):
-                    apps.append({
-                        'title': title,
-                        'key': line_key,
-                        'url': f'/products/others/{line_key}/?category={urllib.parse.quote(title)}',
-                        'product_url': f'/products/others/{line_key}/?product={safe_name}#{safe_name}',
-                        'is_current': True
-                    })
-        if len(apps) == 0:
-            others_conf = config_data.get('others', {})
-            files_conf = others_conf.get('files', [])
-            f_found = next((f for f in files_conf if f.get('key') == line_key), None)
-            line_name = f_found.get('titleZh') if f_found else '特化材料助劑'
-            apps.append({
-                'title': line_name,
-                'key': line_key,
-                'url': f'/products/others/{line_key}/',
-                'product_url': f'/products/others/{line_key}/?product={safe_name}#{safe_name}',
-                'is_current': True
-            })
+
+    # 2. 若有 featured_categories (如 Dorf Ketal, Orion, Others 等)
+    cats = p.get('featured_categories', [])
+    if isinstance(cats, list) and cats:
+        for cat in cats:
+            title = str(cat).strip()
+            if title and not any(a['title'] == title for a in apps):
+                apps.append({
+                    'title': title,
+                    'key': line_key,
+                    'url': f'/products/{p_lower}/{line_key}/?category={urllib.parse.quote(title)}',
+                    'product_url': f'/products/{p_lower}/{line_key}/?product={safe_name}#{safe_name}',
+                    'is_current': True
+                })
+
+    # 3. 若皆無，預設採用當前產品線名稱
+    if not apps:
+        partner_conf = config_data.get(p_lower, {})
+        files_conf = partner_conf.get('files', [])
+        f_found = next((f for f in files_conf if f.get('key') == line_key), None)
+        line_name = (f_found.get('titleZh') or f_found.get('titleEn')) if f_found else '特化材料助劑'
+        apps.append({
+            'title': line_name,
+            'key': line_key,
+            'url': f'/products/{p_lower}/{line_key}/',
+            'product_url': f'/products/{p_lower}/{line_key}/?product={safe_name}#{safe_name}',
+            'is_current': True
+        })
     return apps
 
 def get_product_description(p, partner_key, line_key):
     p_lower = (partner_key or '').lower()
     desc = p.get('properties') or p.get('performance') or ''
 
-    if not desc and p_lower == 'mpi':
+    if not desc and p.get('applications_data'):
         lines = []
         apps_data = p.get('applications_data', {})
         if isinstance(apps_data, dict):
@@ -168,9 +144,8 @@ def get_product_description(p, partner_key, line_key):
         typical = p.get('typical_properties', {})
         p_name = p.get('product_name') or p.get('name') or ''
         desc = f"{p_name} 為 Orion Engineered Carbons 頂級碳黑材料，採用 {method}。具備優良著色力與分散穩定性，黑度值 (My) 達 {typical.get('blackness_my') or '—'}，原生平均粒徑約 {typical.get('average_primary_particle_size_nm') or '—'} nm。廣泛應用於 {cats or '工業塗料與油墨'} 等高性能著色體系。"
-    elif not desc and p_lower == 'others':
-        if line_key == 'silane':
-            desc = f"高性能矽烷偶合劑（{p.get('composition_zh') or '有機矽烷'}），能顯著改善無機填料與有機基體間之相容性，提升界面附著力、耐水性與力學機械強度。"
+    elif not desc and line_key == 'silane':
+        desc = f"高性能矽烷偶合劑（{p.get('composition_zh') or '有機矽烷'}），能顯著改善無機填料與有機基體間之相容性，提升界面附著力、耐水性與力學機械強度。"
 
     return desc or '提供卓越的加工相容性、表面改質效果與穩定物性，完整配方諮詢與規格建議請洽宏威應用材料業務。'
 
@@ -210,12 +185,6 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
     props = get_product_description(p, partner_key, line_key)
     applications = get_product_applications(p, partner_key, line_key, config_data or {})
 
-    is_mpi = (partner_key or '').lower() == 'mpi'
-
-    is_fda_line = (is_mpi and (line_key == 'industrial' or line_key == 'ink'))
-    fda_badge = ('<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold bg-emerald-50 text-emerald-800 border border-emerald-300" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-emerald-600"></i> FDA 食品接觸合規</span>'
-                 if (is_fda_line and p.get('fda_compliant')) else '')
-
     usage_tags_list = []
     for app in applications:
         current_cls = 'bg-blue-900 text-white font-bold' if app['is_current'] else 'bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300'
@@ -248,7 +217,8 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     </table>
                 </div>''' if extra_rows else ''
 
-    # 針對非 MPI 品牌，完全不提及 TDS
+    # 僅 MPI 提及 TDS，其餘品牌完全不提及 TDS
+    is_mpi = (partner_key or '').lower() == 'mpi'
     quick_spec_text = "官網完整規格與 TDS" if is_mpi else "官網完整規格與特性"
     service_card_desc = (
         f"宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。"
@@ -261,11 +231,11 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
         '<i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>'
     )
 
-    banner_heading = "需要檢視完整技術數據、TDS 下載或產品規格比較？" if is_mpi else "需要檢視完整技術數據或產品規格比較？"
+    banner_heading = "需要檢視完整技術數據或 TDS 下載？" if is_mpi else "需要檢視完整技術數據？"
     banner_desc = (
-        f"原廠技術資料表（TDS）與全品項多規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整技術檔案。"
+        f"原廠技術資料表（TDS）與全品項規格資料已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整技術檔案。"
         if is_mpi else
-        f"完整產品物性數據與全品項規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整物性與應用資訊。"
+        f"完整產品物性數據與規格資料已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整物性與應用資訊。"
     )
     banner_button_text = "TDS 與完整規格" if is_mpi else "完整規格與特性"
 
@@ -287,7 +257,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                 <a href="/contact/?product={safe_name}" 
                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
-                    <span>索取樣品與技術諮詢</span>
+                    <span>申請樣品與技術諮詢</span>
                 </a>
                 <a href="/products/{partner_key}/{line_key}/?product={safe_name}#{safe_name}" 
                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
@@ -361,10 +331,10 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                             {service_card_tds_item}
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速索樣</span>
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速樣品申請</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供多品項線上規格比較</span>
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供完整產品物性與技術諮詢</span>
                         </div>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 leading-relaxed">
@@ -390,11 +360,6 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto">
-                    <a href="/products/{partner_key}/{line_key}/" 
-                       class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-sm font-bold border border-slate-700 transition-colors">
-                        <i class="fa-solid fa-scale-balanced"></i>
-                        <span>比較同系列其他產品</span>
-                    </a>
                     <a href="/products/{partner_key}/{line_key}/?product={safe_name}#{safe_name}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-sm transition-colors active:scale-95">
                         <i class="fa-solid fa-file-lines"></i>
@@ -403,7 +368,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     <a href="/contact/?product={safe_name}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
                         <i class="fa-solid fa-envelope"></i>
-                        <span>索取樣品</span>
+                        <span>申請樣品</span>
                     </a>
                 </div>
             </div>
@@ -468,12 +433,22 @@ def build_page_html(template_html, title, description, canonical_path, active_ta
                 </nav>
             </div>'''
 
-        # 將整個目錄與表格工作區 (section-directory-finder) 乾淨替換為獨立產品詳細區塊
-        html_out = re.sub(
-            r'<div id="section-directory-finder"[\s\S]*?</main>\s*</div>',
-            f'<div id="section-product-detail" class="w-full">{breadcrumb_bar}{pre_rendered_content}</div>',
-            html_out
-        )
+        # 將 <main> 完整置換為獨立產品頁核心內容，徹底剔除重複的 about, partners, contact 區塊 (減重 80% 以上，解決 GSC 未收錄痛點)
+        product_main_html = f'''<main class="min-h-[80vh]">
+        <section id="tab-products" class="tab-content active" role="tabpanel" aria-labelledby="nav-products">
+            <div class="optimized-container px-4 py-6">
+                <div id="section-product-detail" class="w-full">
+{breadcrumb_bar}
+{pre_rendered_content}
+                </div>
+            </div>
+        </section>
+    </main>'''
+
+        html_out = re.sub(r'<main class="min-h-\[80vh\]">[\s\S]*?</main>', product_main_html, html_out)
+
+        # 移除獨立產品頁不需使用的 TDS modal 與浮動比較 dock 及比較彈窗
+        html_out = re.sub(r'<!-- TDS 技術文件預覽彈窗 -->[\s\S]*?(?=<!--\s*={5,})', '', html_out)
     elif pre_rendered_content:
         html_out = re.sub(r'<tbody id="directory-matrix-body"[\s\S]*?</tbody>', f'<tbody id="directory-matrix-body" class="divide-y divide-gray-200 text-slate-800 f-weight-normal">{pre_rendered_content}</tbody>', html_out)
         if category_meta:
@@ -484,6 +459,9 @@ def build_page_html(template_html, title, description, canonical_path, active_ta
     if schema_json:
         schema_str = f'\n    <script type="application/ld+json">\n{json.dumps(schema_json, ensure_ascii=False, indent=2)}\n    </script>'
         html_out = html_out.replace('</head>', f'{schema_str}\n</head>')
+
+    # 確保所有 doc 文件下載連結皆為根目錄絕對路徑，防止深層目錄 404
+    html_out = re.sub(r'href="\./doc/', 'href="/doc/', html_out)
 
     return html_out
 
@@ -500,10 +478,10 @@ def main():
     generated_count = 0
 
     core_pages = [
-        ('/about/', '宏威應用材料 Discover The Link To Life | 專業特用化學品供應商', '宏威應用材料 Discover The Link To Life - 專業特用化學品供應商，提供PTFE取代方案、Micro Powders微粉蠟、Dorf Ketal鈦鋯酸酯、Orion特級碳黑等高性能材料與免費索樣服務。', 'about'),
-        ('/products/', '特用化學品目錄 | 宏威應用材料 ATTech Materials', '宏威應用材料特用化學品完整產品目錄，涵蓋微粉蠟、PTFE取代、鈦酸酯/鋯酸酯、特級碳黑、矽烷偶合劑與塗料助劑，支援線上多維度篩選與規格比對。', 'products'),
+        ('/about/', '宏威應用材料 Discover The Link To Life | 專業特用化學品供應商', '宏威應用材料 Discover The Link To Life - 專業特用化學品供應商，提供PTFE取代方案、Micro Powders微粉蠟、Dorf Ketal鈦鋯酸酯、Orion特級碳黑等高性能材料與申請樣品服務。', 'about'),
+        ('/products/', '特用化學品目錄 | 宏威應用材料 ATTech Materials', '宏威應用材料特用化學品完整產品目錄，涵蓋微粉蠟、PTFE取代、鈦酸酯/鋯酸酯、特級碳黑、矽烷偶合劑與塗料助劑，支援多維篩選與規格比較。', 'products'),
         ('/partners/', '合作夥伴品牌 | 宏威應用材料 Discover The Link To Life', '宏威應用材料代理銷售 Micro Powders、Dorf Ketal、Orion 等國際領導化學品牌，提供正品保證與原廠技術支援。', 'partners'),
-        ('/contact/', '樣品索取與技術諮詢 | 宏威應用材料 Discover The Link To Life', '線上索取特用化學品樣品與配方技術諮詢，提供快速詢價與詳細應用需求評估雙模式表單，自動產製正式 PDF 需求單。', 'contact')
+        ('/contact/', '樣品申請與技術諮詢 | 宏威應用材料 Discover The Link To Life', '線上申請特用化學品樣品與配方技術諮詢，提供快速詢價與詳細應用需求評估表單、PDF 需求單。', 'contact')
     ]
 
     for p_path, p_title, p_desc, p_tab in core_pages:
@@ -515,11 +493,11 @@ def main():
         partner_slug = brand_key.lower()
         brand_name = brand_obj.get('brandName', brand_key)
 
-        p_path = f'/products/{partner_slug}/'
+        is_mpi = (partner_slug == 'mpi')
         p_desc = (
-            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、TDS技術資料下載與免費樣品申請服務。"
-            if partner_slug == 'mpi' else
-            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、產品詳細參數與免費樣品申請服務。"
+            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、TDS技術資料下載與樣品申請服務。"
+            if is_mpi else
+            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、產品詳細參數與樣品申請服務。"
         )
         p_html = build_page_html(template_html, f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials", p_desc, p_path, active_tab='products')
         write_static_file(p_path, p_html)
@@ -578,7 +556,7 @@ def main():
             line_html = build_page_html(
                 template_html,
                 f"{line_title} ({brand_name}) | 宏威應用材料 ATTech Materials",
-                f"宏威應用材料精選 {brand_name} {line_title} 特用化學品，提供 {', '.join([p.get('product_name') or p.get('name', '') for p in products[:8]])} 等品項之物性參數與免費索樣。",
+                f"宏威應用材料精選 {brand_name} {line_title} 特用化學品，提供 {', '.join([p.get('product_name') or p.get('name', '') for p in products[:8]])} 等品項之物性參數與索樣。",
                 line_path,
                 active_tab='products',
                 pre_rendered_content=''.join(table_rows),
@@ -643,7 +621,7 @@ def main():
                 }
 
                 is_mpi = (partner_slug == 'mpi')
-                prod_desc_suffix = "提供官網線上規格比較、TDS技術資料與樣品索取。" if is_mpi else "提供官網線上規格比較、詳細物性參數與樣品索取。"
+                prod_desc_suffix = "提供產品規格比較、TDS技術資料與樣品申請。" if is_mpi else "提供產品規格比較、詳細物性參數與樣品申請。"
                 prod_desc = f"{brand_name} {p_name} 特用化學品：{comp + '，' if comp else ''}{props.replace(chr(10), ' ')[:100] + '... ' if props else ''}適合應用：{usage_text}。{prod_desc_suffix}"
 
                 prod_page_html = build_page_html(
