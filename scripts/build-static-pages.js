@@ -744,6 +744,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
                 ]
             };
 
+            const isMpi = (partnerSlug === 'mpi');
             const prodDescSuffix = isMpi ? '提供官網線上規格比較、TDS技術資料與樣品索取。' : '提供官網線上規格比較、詳細物性參數與樣品索取。';
             const prodPageHtml = buildPageHtml({
                 title: `${pName} (${brandName}) ${lineTitle} | 宏威應用材料 ATTech Materials`,
