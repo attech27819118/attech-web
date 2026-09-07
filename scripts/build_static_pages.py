@@ -267,7 +267,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
         if is_mpi else
         f"完整產品物性數據與全品項規格比較矩陣已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整物性與應用資訊。"
     )
-    banner_button_text = "直達官網看 TDS 與完整規格" if is_mpi else "直達官網看完整規格與特性"
+    banner_button_text = "TDS 與完整規格" if is_mpi else "完整規格與特性"
 
     return f'''
     <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
@@ -365,7 +365,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                             <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速索樣</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供多品項線上規格橫向比較</span>
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供多品項線上規格比較</span>
                         </div>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 leading-relaxed">
@@ -404,7 +404,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     <a href="/contact/?product={safe_name}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
                         <i class="fa-solid fa-envelope"></i>
-                        <span>索取免費樣品</span>
+                        <span>索取樣品</span>
                     </a>
                 </div>
             </div>
