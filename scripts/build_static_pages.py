@@ -322,7 +322,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                 <!-- 性質與特點描述 (單一色底無漸層) -->
                 <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
                     <h2 class="text-sm font-bold text-slate-900 mb-2.5 flex items-center gap-2">
-                        <i class="fa-solid fa-star text-amber-500"></i> 產品描述與性能特點
+                        <i class="fa-solid fa-star text-amber-500"></i> 產品描述與特性
                     </h2>
                     <p class="text-sm text-slate-800 leading-relaxed whitespace-pre-line">{escape_html(props)}</p>
                 </div>
