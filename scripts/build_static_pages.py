@@ -285,7 +285,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                 </p>
             </div>
             <div class="flex flex-wrap items-center gap-2.5 shrink-0">
-                <a href="/contact?product={safe_name}" 
+                <a href="/contact/?product={safe_name}" 
                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
@@ -406,7 +406,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                         <i class="fa-solid fa-file-lines"></i>
                         <span>{banner_button_text}</span>
                     </a>
-                    <a href="/contact?product={safe_name}" 
+                    <a href="/contact/?product={safe_name}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
                         <i class="fa-solid fa-envelope"></i>
                         <span>索取免費樣品</span>
@@ -422,7 +422,7 @@ def build_page_html(template_html, title, description, canonical_path, active_ta
     html_out = re.sub(r'<title id="web-title">.*?</title>', f'<title id="web-title">{escape_html(title)}</title>', html_out)
     html_out = re.sub(r'<meta name="description"\s+content=".*?">', f'<meta name="description" content="{escape_html(description)}">', html_out, flags=re.DOTALL)
 
-    full_canonical = f"{DOMAIN}{'' if canonical_path == '/' else canonical_path}"
+    full_canonical = f"{DOMAIN}{'/' if canonical_path == '/' else canonical_path}"
     html_out = re.sub(r'<link rel="canonical"\s+href=".*?">', f'<link rel="canonical" href="{full_canonical}">', html_out)
 
     html_out = re.sub(r'<meta property="og:title"\s+content=".*?">', f'<meta property="og:title" content="{escape_html(title)}">', html_out)
@@ -509,7 +509,7 @@ def main():
     ]
 
     for p_path, p_title, p_desc, p_tab in core_pages:
-        h = build_page_html(template_html, p_title, p_desc, p_path, active_tab=p_tab)
+        h = build_page_html(template_html, p_title, p_desc, '/' if p_path == '/about/' else p_path, active_tab=p_tab)
         write_static_file(p_path, h)
         generated_count += 1
 

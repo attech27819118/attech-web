@@ -59,8 +59,8 @@
 ## 快速連結與服務 (Key Links & Services)
 
 - **首頁與公司介紹**: https://www.attech.com.tw/
-- **產品專區與規格篩選**: https://www.attech.com.tw/products
-- **合作夥伴**: https://www.attech.com.tw/partners
-- **免費樣品申請與技術諮詢 (指定樣品 / 快速詢價)**: https://www.attech.com.tw/contact
-- **詳細應用需求評估 (客製配方支援)**: https://www.attech.com.tw/contact?mode=detailed
+- **產品專區與規格篩選**: https://www.attech.com.tw/products/
+- **合作夥伴**: https://www.attech.com.tw/partners/
+- **免費樣品申請與技術諮詢 (指定樣品 / 快速詢價)**: https://www.attech.com.tw/contact/
+- **詳細應用需求評估 (客製配方支援)**: https://www.attech.com.tw/contact/?mode=detailed
 - **網站地圖 (Sitemap)**: https://www.attech.com.tw/sitemap.xml
