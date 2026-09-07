@@ -152,8 +152,20 @@
     </script>
 
     <!-- 正式編譯產出的 CSS 檔案 (含版本號快取破壞) -->
-    <link rel="stylesheet" href="/css/output.css?v=20260907">
-    <link rel="stylesheet" href="/css/style.css?v=20260907">
+    <link rel="stylesheet" href="/css/output.css?v=20260907_v2">
+    <link rel="stylesheet" href="/css/style.css?v=20260907_v2">
+
+    <!-- 搜尋即時排版與全幅展示樣式 -->
+    <style>
+        body.is-searching #section-partner,
+        body.is-searching #directory-sidebar {
+            display: none !important;
+        }
+        body.is-searching #directory-main {
+            width: 100% !important;
+            flex: 1 1 100% !important;
+        }
+    </style>
 
     <!-- FontAwesome 非同步非阻塞載入 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -967,15 +979,14 @@
                         </div>
                     </aside>
 
-                    <main
+                    <main id="directory-main"
                         class="flex-1 w-full bg-white border border-gray-200 rounded-xl shadow-sm p-5 overflow-visible">
                         <div
                             class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 mb-3 pb-2.5 border-b border-gray-200">
                             <div class="flex flex-wrap items-center gap-3">
                                 <h3 class="f-size-base f-weight-bold text-slate-900 flex items-center gap-2">
-                                    <span id="dir-current-path" class="text-blue-950 f-weight-bold">未選取分類</span>
-                                    <span id="dir-match-count"
-                                        class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">0</span>
+                                    <span id="dir-current-path" class="text-blue-950 f-weight-bold"><span class="text-slate-600 font-semibold">Micro Powders</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="text-slate-700 font-semibold">地板塗料</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">全部</span></span>
+                                    <span id="dir-match-count" class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">20</span>
                                 </h3>
                                 <!-- 純文字評分提示 (僅在 MPI 時顯示) -->
                                 <div id="mpi-rating-legend"
@@ -2420,15 +2431,15 @@
     <!-- ==========================================
          前端模組化 JavaScript 腳本庫 (含版本號快取破壞)
          ========================================== -->
-    <script src="/js/state.js?v=20260907"></script>
-    <script src="/js/search-engine.js?v=20260907"></script>
-    <script src="/js/data-repo.js?v=20260907"></script>
-    <script src="/js/filter-engine.js?v=20260907"></script>
-    <script src="/js/table-renderer.js?v=20260907"></script>
-    <script src="/js/compare.js?v=20260907"></script>
-    <script src="/js/contact.js?v=20260907"></script>
-    <script src="/js/router.js?v=20260907"></script>
-    <script src="/js/app.js?v=20260907"></script>
+    <script src="/js/state.js?v=20260907_v2"></script>
+    <script src="/js/search-engine.js?v=20260907_v2"></script>
+    <script src="/js/data-repo.js?v=20260907_v2"></script>
+    <script src="/js/filter-engine.js?v=20260907_v2"></script>
+    <script src="/js/table-renderer.js?v=20260907_v2"></script>
+    <script src="/js/compare.js?v=20260907_v2"></script>
+    <script src="/js/contact.js?v=20260907_v2"></script>
+    <script src="/js/router.js?v=20260907_v2"></script>
+    <script src="/js/app.js?v=20260907_v2"></script>
 </body>
 
 </html>
