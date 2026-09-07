@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "aws-amplify": "^6.20.0",
     "cors": "^2.8.6",
     "dotenv": "^16.6.1",
     "express": "^5.2.1",
@@ -8,11 +9,18 @@
     "resend": "^6.22.0"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.24.0",
+    "@aws-amplify/backend-cli": "^1.9.0",
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",
     "autoprefixer": "^10.5.4",
+    "aws-cdk-lib": "^2.244.0",
+    "constructs": "^10.8.1",
+    "esbuild": "^0.28.2",
     "postcss": "^8.5.25",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3"
   },
   "name": "web-combine20260805-github",
   "version": "1.0.0",
@@ -21,15 +29,15 @@
   "directories": {
     "doc": "doc"
   },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js",
-        "build": "npm run build:css && node scripts/build-static-pages.js && node scripts/generate_sitemap.js",
-        "build:pages": "node scripts/build-static-pages.js",
-        "build:css": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
-        "dev": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
-        "sitemap": "node scripts/generate_sitemap.js"
-    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "npm run build:css && node scripts/build-static-pages.js && node scripts/generate_sitemap.js",
+    "build:pages": "node scripts/build-static-pages.js",
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
+    "sitemap": "node scripts/generate_sitemap.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rosf000/test.git"
