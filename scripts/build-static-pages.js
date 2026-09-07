@@ -303,7 +303,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                 </p>
             </div>
             <div class="flex flex-wrap items-center gap-2.5 shrink-0">
-                <a href="/contact?product=${safeName}" 
+                <a href="/contact/?product=${safeName}" 
                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
@@ -440,7 +440,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                         <i class="fa-solid fa-file-lines"></i>
                         <span>${bannerButtonText}</span>
                     </a>
-                    <a href="/contact?product=${safeName}" 
+                    <a href="/contact/?product=${safeName}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
                         <i class="fa-solid fa-envelope"></i>
                         <span>索取免費樣品</span>
@@ -471,7 +471,7 @@ function buildPageHtml({
     html = html.replace(/<meta name="description"\s+content=".*?">/s, `<meta name="description" content="${escapeHtml(description)}">`);
 
     // 3. 替換 Canonical
-    const fullCanonical = `${DOMAIN}${canonicalPath === '/' ? '' : canonicalPath}`;
+    const fullCanonical = `${DOMAIN}${canonicalPath === '/' ? '/' : canonicalPath}`;
     html = html.replace(/<link rel="canonical"\s+href=".*?">/, `<link rel="canonical" href="${fullCanonical}">`);
 
     // 4. 替換 OpenGraph & Twitter
@@ -600,7 +600,7 @@ corePages.forEach(page => {
     const html = buildPageHtml({
         title: page.title,
         description: page.description,
-        canonicalPath: page.path,
+        canonicalPath: page.path === '/about/' ? '/' : page.path,
         activeTab: page.tab
     });
     writeStaticHtmlFile(page.path, html);

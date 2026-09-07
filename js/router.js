@@ -287,19 +287,19 @@ function parseUrlRoute() {
             const hPartner = (hParams.get('partner') || 'mpi').toLowerCase();
             const hLine = hParams.get('line') || 'ptfe';
             const hProduct = hParams.get('product') || hParams.get('item');
-            cleanMigratedPath = `/products/${hPartner}/${hLine}`;
-            if (hProduct) cleanMigratedPath += `/${encodeURIComponent(hProduct)}`;
+            cleanMigratedPath = `/products/${hPartner}/${hLine}/`;
+            if (hProduct) cleanMigratedPath += `${encodeURIComponent(hProduct)}/`;
             if (hParams.get('category') && hParams.get('category') !== 'all') {
                 cleanMigratedPath += `?category=${encodeURIComponent(hParams.get('category'))}`;
             }
             if (hParams.get('q')) {
-                cleanMigratedPath = `/products?q=${encodeURIComponent(hParams.get('q'))}`;
+                cleanMigratedPath = `/products/?q=${encodeURIComponent(hParams.get('q'))}`;
             }
         } else if (hTab === 'partners') {
-            cleanMigratedPath = '/partners';
+            cleanMigratedPath = '/partners/';
         } else if (hTab === 'contact') {
             const mode = hParams.get('mode');
-            cleanMigratedPath = mode === 'detailed' ? '/contact?mode=detailed' : '/contact';
+            cleanMigratedPath = mode === 'detailed' ? '/contact/?mode=detailed' : '/contact/';
         }
 
         const basePath = getAppBasePath();

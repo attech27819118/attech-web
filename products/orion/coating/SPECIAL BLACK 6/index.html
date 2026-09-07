@@ -151,9 +151,9 @@
         }
     </script>
 
-    <!-- 正式編譯產出的 CSS 檔案 -->
-    <link rel="stylesheet" href="./css/output.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- 正式編譯產出的 CSS 檔案 (含版本號快取破壞) -->
+    <link rel="stylesheet" href="/css/output.css?v=20260907">
+    <link rel="stylesheet" href="/css/style.css?v=20260907">
 
     <!-- FontAwesome 非同步非阻塞載入 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -261,7 +261,7 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50 attech-accent">
         <div class="optimized-container px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 gap-4">
-                <a href="/about/" class="flex items-center cursor-pointer active:scale-[0.98] shrink-0 no-underline"
+                <a href="/" class="flex items-center cursor-pointer active:scale-[0.98] shrink-0 no-underline"
                     id="nav-brand-logo" aria-label="回到首頁/關於宏威">
                     <div class="flex-shrink-0 flex flex-col justify-center w-full">
                         <!-- 第一行：中文標題（水平均分） + AT 方塊（靠右） -->
@@ -285,7 +285,7 @@
                 <!-- 全域搜尋已在獨立產品頁移除 -->
 
                 <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="tablist" aria-label="網站主要選單">
-                    <a href="/about/" id="nav-about" role="tab" aria-selected="false" aria-controls="tab-about"
+                    <a href="/" id="nav-about" role="tab" aria-selected="false" aria-controls="tab-about"
                         class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 h-16 inline-flex items-center">
                         首頁
                     </a>
@@ -470,7 +470,7 @@
             <!-- 行動裝置版分頁導覽列 -->
             <div class="flex md:hidden items-center justify-between gap-1.5 pb-2 pt-1 border-t border-gray-100"
                 role="tablist" aria-label="行動版主要選單">
-                <a href="/about/" id="mobile-nav-about" role="tab" aria-selected="false"
+                <a href="/" id="mobile-nav-about" role="tab" aria-selected="false"
                     class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs">
                     首頁
                 </a>
@@ -843,7 +843,7 @@
                 </p>
             </div>
             <div class="flex flex-wrap items-center gap-2.5 shrink-0">
-                <a href="/contact?product=SPECIAL%20BLACK%206" 
+                <a href="/contact/?product=SPECIAL%20BLACK%206" 
                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
@@ -976,7 +976,7 @@
                         <i class="fa-solid fa-file-lines"></i>
                         <span>直達官網看完整規格與特性</span>
                     </a>
-                    <a href="/contact?product=SPECIAL%20BLACK%206" 
+                    <a href="/contact/?product=SPECIAL%20BLACK%206" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
                         <i class="fa-solid fa-envelope"></i>
                         <span>索取免費樣品</span>
@@ -1973,17 +1973,17 @@
     </div>
 
     <!-- ==========================================
-         前端模組化 JavaScript 腳本庫
+         前端模組化 JavaScript 腳本庫 (含版本號快取破壞)
          ========================================== -->
-    <script src="js/state.js"></script>
-    <script src="js/search-engine.js"></script>
-    <script src="js/data-repo.js"></script>
-    <script src="js/filter-engine.js"></script>
-    <script src="js/table-renderer.js"></script>
-    <script src="js/compare.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/router.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/state.js?v=20260907"></script>
+    <script src="/js/search-engine.js?v=20260907"></script>
+    <script src="/js/data-repo.js?v=20260907"></script>
+    <script src="/js/filter-engine.js?v=20260907"></script>
+    <script src="/js/table-renderer.js?v=20260907"></script>
+    <script src="/js/compare.js?v=20260907"></script>
+    <script src="/js/contact.js?v=20260907"></script>
+    <script src="/js/router.js?v=20260907"></script>
+    <script src="/js/app.js?v=20260907"></script>
 </body>
 
 </html>
