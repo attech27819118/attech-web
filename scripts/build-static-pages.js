@@ -504,10 +504,6 @@ function buildPageHtml({
         html = html.replace(/<div class="flex-1 max-w-sm mx-2 hidden sm:block">[\s\S]*?<\/form>\s*<\/div>/, '<!-- 全域搜尋已在獨立產品頁移除 -->');
         html = html.replace(/<div class="block sm:hidden pb-2\.5">[\s\S]*?<\/form>\s*<\/div>/, '<!-- 行動版全域搜尋已在獨立產品頁移除 -->');
 
-        // 移除 1. 請選擇品牌 與 資料建置提示
-        html = html.replace(/<section[^>]*id="section-partner"[\s\S]*?<\/section>/, '');
-        html = html.replace(/<section[^>]*id="section-coming-soon"[\s\S]*?<\/section>/, '');
-
         let breadcrumbBarHtml = '';
         if (productMeta) {
             breadcrumbBarHtml = `
@@ -529,11 +525,22 @@ function buildPageHtml({
             </div>`;
         }
 
-        // 將整個目錄與表格工作區 (section-directory-finder) 乾淨替換為獨立產品詳細區塊
-        html = html.replace(
-            /<div id="section-directory-finder"[\s\S]*?<\/main>\s*<\/div>/,
-            `<div id="section-product-detail" class="w-full">${breadcrumbBarHtml}${preRenderedContent}</div>`
-        );
+        // 將 <main> 完整置換為獨立產品頁核心內容，徹底剔除重複的 about, partners, contact 區塊 (減重 80% 以上，解決 GSC 未收錄痛點)
+        const productMainHtml = `<main class="min-h-[80vh]">
+        <section id="tab-products" class="tab-content active" role="tabpanel" aria-labelledby="nav-products">
+            <div class="optimized-container px-4 py-6">
+                <div id="section-product-detail" class="w-full">
+${breadcrumbBarHtml}
+${preRenderedContent}
+                </div>
+            </div>
+        </section>
+    </main>`;
+
+        html = html.replace(/<main class="min-h-\[80vh\]">[\s\S]*?<\/main>/, productMainHtml);
+
+        // 移除獨立產品頁不需使用的 TDS modal 與浮動比較 dock
+        html = html.replace(/<!-- TDS 技術文件預覽彈窗 -->[\s\S]*?<!-- 底部懸浮比較欄[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/, '');
     } else if (preRenderedContent) {
         // 列表頁預渲染注入
         html = html.replace(
@@ -552,6 +559,9 @@ function buildPageHtml({
         const schemaString = `\n    <script type="application/ld+json">\n${JSON.stringify(schemaJson, null, 2)}\n    </script>`;
         html = html.replace('</head>', `${schemaString}\n</head>`);
     }
+
+    // 8. 確保所有 doc 文件下載連結皆為根目錄絕對路徑，防止深層目錄 404
+    html = html.replace(/href="\.\/doc\//g, 'href="/doc/');
 
     return html;
 }

@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
 
+# 阻擋非網頁之內部文件與歷史失效目錄，節省抓取配額 (Crawl Budget)
+Disallow: /doc/
+Disallow: /cgi-bin/
+Disallow: /automotor2014/
+
 # Sitemap 定位
 Sitemap: https://www.attech.com.tw/sitemap.xml
