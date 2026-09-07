@@ -9,7 +9,15 @@ let searchDebounceTimer = null;
 function updateSearchLayout(isSearching) {
     const partnerSection = document.getElementById('section-partner');
     const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
+    const directoryMain = document.getElementById('directory-main');
     const isProductDetail = document.body.classList.contains('is-product-detail');
+
+    if (isSearching) {
+        document.body.classList.add('is-searching');
+    } else {
+        document.body.classList.remove('is-searching');
+    }
+
     if (partnerSection) {
         if (isSearching || isProductDetail) partnerSection.classList.add('hidden');
         else partnerSection.classList.remove('hidden');
@@ -18,12 +26,22 @@ function updateSearchLayout(isSearching) {
         if (isSearching || isProductDetail) directorySidebar.classList.add('hidden');
         else directorySidebar.classList.remove('hidden');
     }
+    if (directoryMain) {
+        if (isSearching) directoryMain.classList.add('w-full');
+        else directoryMain.classList.remove('w-full');
+    }
 }
 
 function debouncedSearch(val) {
     document.querySelectorAll('.global-search-input').forEach(input => {
         if (input.value !== val) input.value = val;
     });
+
+    const immediateQuery = val.trim();
+    if (immediateQuery !== '') {
+        // 使用者輸入字元的第一時間即隱藏品牌與目錄，讓手機/小螢幕直接準備呈現結果
+        updateSearchLayout(true);
+    }
 
     clearTimeout(searchDebounceTimer);
     searchDebounceTimer = setTimeout(async () => {
@@ -332,6 +350,18 @@ function renderDirectoryTree() {
     const brandConfig = AppState.configs[configKey];
     if (!treeMenu || !brandConfig) return;
 
+    // 當前選中的產品線自動預設展開子分類
+    if (AppState.productLine && !AppState.expandedMenus.includes(AppState.productLine)) {
+        AppState.expandedMenus.push(AppState.productLine);
+    }
+
+    // 更新步驟標題，清楚指出當前品牌
+    const stepCatalog = document.getElementById('ui-step-catalog');
+    if (stepCatalog) {
+        const brandName = (configKey === 'others' && AppState.lang === 'zh') ? '其他特化材料' : (brandConfig.brandName || AppState.partner);
+        stepCatalog.innerHTML = `<span class="flex items-center justify-center w-5 h-5 rounded bg-blue-100 text-blue-900 f-size-xs f-weight-bold">2</span> 應用與主要功能 (${brandName})`;
+    }
+
     const iconMap = {
         'ptfe': 'fa-leaf',
         'powder': 'fa-cubes',
@@ -593,12 +623,22 @@ function selectDirectoryNode(lineKey, categoryKey = 'all', preserveExpanded = fa
     renderProducts();
     updateUrlRoute(!preserveExpanded);
 
-    if (window.innerWidth < 1024 && categoryKey !== 'all') {
+    if (window.innerWidth < 1024) {
         const menu = document.getElementById('directory-tree-menu');
         const chevron = document.getElementById('mobile-sidebar-chevron');
-        if (menu && !menu.classList.contains('hidden')) {
-            menu.classList.add('hidden');
-            if (chevron) chevron.classList.remove('rotate-180');
+        const toggleText = document.getElementById('mobile-sidebar-toggle-text');
+        if (categoryKey !== 'all') {
+            if (menu && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                if (chevron) chevron.classList.remove('rotate-180');
+            }
+        }
+        if (toggleText) {
+            const configKey = partnerConfigMap[AppState.partner] || 'mpi';
+            const brandConfig = AppState.configs[configKey];
+            const currentFile = brandConfig?.files?.find(f => f.key === lineKey);
+            const lineTitle = currentFile ? (AppState.lang === 'zh' ? currentFile.titleZh : currentFile.titleEn) : lineKey;
+            toggleText.innerText = `切換目錄 (${lineTitle})`;
         }
     }
 }

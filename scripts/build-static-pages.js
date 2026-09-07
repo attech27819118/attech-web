@@ -308,11 +308,6 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
                 </a>
-                <a href="/products/${partnerKey}/${lineKey}/" 
-                   class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 rounded-xl text-sm font-bold transition-colors">
-                    <i class="fa-solid fa-scale-balanced text-slate-700"></i>
-                    <span>比較同系列其他產品</span>
-                </a>
                 <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}#${safeName}" 
                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -460,7 +455,8 @@ function buildPageHtml({
     preRenderedContent = '',
     schemaJson = null,
     isProductDetailPage = false,
-    productMeta = null
+    productMeta = null,
+    categoryMeta = null
 }) {
     let html = templateHtml;
 
@@ -544,6 +540,11 @@ function buildPageHtml({
             /<tbody id="directory-matrix-body"[\s\S]*?<\/tbody>/,
             `<tbody id="directory-matrix-body" class="divide-y divide-gray-200 text-slate-800 f-weight-normal">${preRenderedContent}</tbody>`
         );
+        if (categoryMeta) {
+            const breadcrumbHtml = `<span class="text-slate-600 font-semibold">${escapeHtml(categoryMeta.brandName)}</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="text-slate-700 font-semibold">${escapeHtml(categoryMeta.lineTitle)}</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">全部</span>`;
+            html = html.replace(/<span id="dir-current-path"[^>]*>.*?<\/span>/, `<span id="dir-current-path" class="text-blue-950 f-weight-bold">${breadcrumbHtml}</span>`);
+            html = html.replace(/<span id="dir-match-count"[^>]*>.*?<\/span>/, `<span id="dir-match-count" class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">${categoryMeta.matchCount}</span>`);
+        }
     }
 
     // 7. 注入專屬 Schema.org JSON-LD
@@ -688,7 +689,12 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             canonicalPath: linePath,
             activeTab: 'products',
             preRenderedContent: tableContentHtml,
-            schemaJson: itemListSchema
+            schemaJson: itemListSchema,
+            categoryMeta: {
+                brandName: brandName,
+                lineTitle: lineTitle,
+                matchCount: products.length
+            }
         });
         writeStaticHtmlFile(linePath, lineHtml);
         generatedCount++;

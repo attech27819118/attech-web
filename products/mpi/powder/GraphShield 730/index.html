@@ -152,8 +152,20 @@
     </script>
 
     <!-- 正式編譯產出的 CSS 檔案 (含版本號快取破壞) -->
-    <link rel="stylesheet" href="/css/output.css?v=20260907">
-    <link rel="stylesheet" href="/css/style.css?v=20260907">
+    <link rel="stylesheet" href="/css/output.css?v=20260907_v2">
+    <link rel="stylesheet" href="/css/style.css?v=20260907_v2">
+
+    <!-- 搜尋即時排版與全幅展示樣式 -->
+    <style>
+        body.is-searching #section-partner,
+        body.is-searching #directory-sidebar {
+            display: none !important;
+        }
+        body.is-searching #directory-main {
+            width: 100% !important;
+            flex: 1 1 100% !important;
+        }
+    </style>
 
     <!-- FontAwesome 非同步非阻塞載入 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -847,11 +859,6 @@
                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
-                </a>
-                <a href="/products/mpi/powder/" 
-                   class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 rounded-xl text-sm font-bold transition-colors">
-                    <i class="fa-solid fa-scale-balanced text-slate-700"></i>
-                    <span>比較同系列其他產品</span>
                 </a>
                 <a href="/products/mpi/powder/?product=GraphShield%20730#GraphShield%20730" 
                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
@@ -2016,15 +2023,15 @@
     <!-- ==========================================
          前端模組化 JavaScript 腳本庫 (含版本號快取破壞)
          ========================================== -->
-    <script src="/js/state.js?v=20260907"></script>
-    <script src="/js/search-engine.js?v=20260907"></script>
-    <script src="/js/data-repo.js?v=20260907"></script>
-    <script src="/js/filter-engine.js?v=20260907"></script>
-    <script src="/js/table-renderer.js?v=20260907"></script>
-    <script src="/js/compare.js?v=20260907"></script>
-    <script src="/js/contact.js?v=20260907"></script>
-    <script src="/js/router.js?v=20260907"></script>
-    <script src="/js/app.js?v=20260907"></script>
+    <script src="/js/state.js?v=20260907_v2"></script>
+    <script src="/js/search-engine.js?v=20260907_v2"></script>
+    <script src="/js/data-repo.js?v=20260907_v2"></script>
+    <script src="/js/filter-engine.js?v=20260907_v2"></script>
+    <script src="/js/table-renderer.js?v=20260907_v2"></script>
+    <script src="/js/compare.js?v=20260907_v2"></script>
+    <script src="/js/contact.js?v=20260907_v2"></script>
+    <script src="/js/router.js?v=20260907_v2"></script>
+    <script src="/js/app.js?v=20260907_v2"></script>
 </body>
 
 </html>

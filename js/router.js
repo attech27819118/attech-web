@@ -445,7 +445,18 @@ function parseUrlRoute() {
             document.body.classList.remove('is-product-detail');
         }
 
-        if (typeof updatePartnerUI === 'function') updatePartnerUI();
+        if (typeof updatePartnerUI === 'function') {
+            updatePartnerUI(() => {
+                // 若為從導覽列或外部指定產品線進入，平滑聚焦目錄與規格表區域，避免大面積品牌區遮擋視線
+                if (rawLine) {
+                    const finder = document.getElementById('section-directory-finder');
+                    if (finder) {
+                        const top = window.pageYOffset + finder.getBoundingClientRect().top - 75;
+                        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                    }
+                }
+            });
+        }
         updatePageMeta('products');
     }
 }

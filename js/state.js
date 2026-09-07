@@ -4,6 +4,7 @@
  * ====================================================================
  */
 
+const APP_VERSION = '20260907_v2';
 const SVG_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%2394a3b8'%3ENo Image%3C/text%3E%3C/svg%3E";
 
 function getAppBaseUrl() {
@@ -32,8 +33,16 @@ function resolveAssetUrl(relPath) {
     }
     const cleanPath = relPath.replace(/^\.?\//, '');
     try {
-        return new URL(cleanPath, getAppBaseUrl()).href;
+        const url = new URL(cleanPath, getAppBaseUrl());
+        // 為 JSON 檔案自動附加版本號，避免 CloudFront (s-maxage=31536000) 與瀏覽器讀取過期快取
+        if (cleanPath.endsWith('.json') && !url.searchParams.has('v')) {
+            url.searchParams.set('v', APP_VERSION);
+        }
+        return url.href;
     } catch (e) {
+        if (cleanPath.endsWith('.json') && !cleanPath.includes('v=')) {
+            return cleanPath + (cleanPath.includes('?') ? '&' : '?') + `v=${APP_VERSION}`;
+        }
         return relPath;
     }
 }
@@ -97,14 +106,14 @@ const featureConfig = {
         "ptfe_alternative": "PTFE取代", "scratch_resistance": "耐刮", "abrasion_resistance": "耐磨",
         "burnish_resistance": "耐拋光", "rub_resistance": "耐摩擦",
         "slip_lubricity": "滑爽", "slip": "滑爽", "anti_slip": "防滑", "increased_cof": "高摩擦",
-        "matting_gloss_control": "消光","v_matting_gloss_control": "更消光","gloss_retention": "保持光澤", "clarity": "透明","v_clarity": "更透明",
+        "matting_gloss_control": "消光", "v_matting_gloss_control": "更消光", "gloss_retention": "保持光澤", "clarity": "透明", "v_clarity": "更透明",
         "soft_touch": "柔感", "texture_structure": "織紋", "corrosion_resistance": "防腐蝕",
         "block_resistance": "抗黏性", "improved_extrusion_flow": "改善流動", "anti_gassing": "防氣泡",
         "metal_mark_resistance": "抗金屬劃痕", "apparent_hardness": "提升表面硬度", "water_beading": "撥水",
         "water_repellency": "撥水", "heat_resistance": "耐高溫", "soil_resistance": "防污性",
         "cleanability": "易潔性", "no_silica_dust": "無矽塵",
         "lubricity_smooth_feel": "滑爽/滑度", "lubricity": "滑爽/潤滑", "flow_leveling": "流平性",
-        "recoatability": "重塗性", "weather_resistance": "耐候性", "chemical_resistance": "耐化學性","high_dispersibility":"易分散"
+        "recoatability": "重塗性", "weather_resistance": "耐候性", "chemical_resistance": "耐化學性", "high_dispersibility": "易分散"
     },
     "en": {
         "ptfe_alternative": "PTFE Alt.",
@@ -139,7 +148,7 @@ const featureConfig = {
         "recoatability": "Recoatability",
         "weather_resistance": "Weather Res.",
         "chemical_resistance": "Chemical Res.",
-        "high_dispersibility":"High dispersibility"
+        "high_dispersibility": "High dispersibility"
     }
 };
 
