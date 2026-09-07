@@ -247,10 +247,6 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
     const applications = getProductApplications(p, partnerKey, lineKey, configData);
 
     const isMpi = (partnerKey || '').toLowerCase() === 'mpi';
-    const isFdaLine = (isMpi && (lineKey === 'industrial' || lineKey === 'ink'));
-    const fdaBadge = (isFdaLine && p.fda_compliant)
-        ? `<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold bg-emerald-50 text-emerald-800 border border-emerald-300" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-emerald-600"></i> FDA 食品接觸合規</span>`
-        : '';
 
     // 適合應用標籤 HTML
     const usageTagsHtml = applications.map(app => `
@@ -295,7 +291,6 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                 <div class="flex flex-wrap items-center gap-2 mb-2.5">
                     <span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">${escapeHtml(brandName)}</span>
                     ${lineTitle ? `<span class="inline-block px-3 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">${escapeHtml(lineTitle)}</span>` : ''}
-                    ${fdaBadge}
                 </div>
                 <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">${escapeHtml(name)}</h1>
                 <p class="text-sm text-slate-600 mt-2 font-medium">
@@ -651,20 +646,12 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             const appList = getProductApplications(p, partnerSlug, lineSlug, config);
             const usageText = appList.map(a => a.title).join('、') || p.main_usage || p.application_fields_zh || '—';
             const safeUrl = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(name)}/`;
-            const isFdaLine = (partnerSlug === 'mpi' && (lineSlug === 'industrial' || lineSlug === 'ink'));
-            const fdaBadge = (isFdaLine && p.fda_compliant)
-                ? `<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>`
-                : '';
-
             return `
             <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
                 <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                    <div class="flex items-center flex-wrap gap-y-0.5">
-                        <a href="${safeUrl}" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                            ${escapeHtml(name)}
-                        </a>
-                        ${fdaBadge}
-                    </div>
+                    <a href="${safeUrl}" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        ${escapeHtml(name)}
+                    </a>
                     <div class="text-xs text-slate-500 font-normal mt-0.5">${escapeHtml(comp)}</div>
                 </td>
                 <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">${escapeHtml(props)}</td>

@@ -968,16 +968,19 @@
                         class="w-full md:w-64 shrink-0 md:sticky md:top-20 max-h-[calc(100vh-6rem)] overflow-y-auto custom-scrollbar space-y-3">
                         <div class="bg-white border border-gray-200 rounded-xl p-3.5 shadow-sm">
                             <button onclick="toggleMobileSidebar()" type="button"
-                                class="w-full md:cursor-default flex items-center justify-between text-left">
+                                id="sidebar-toggle-btn"
+                                aria-expanded="true"
+                                aria-controls="directory-tree-menu"
+                                class="w-full cursor-pointer hover:bg-slate-50 p-1 -m-1 rounded-lg transition-colors flex items-center justify-between text-left">
                                 <h3 class="f-size-sm f-weight-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5"
                                     id="ui-step-catalog">
                                     <span
                                         class="flex items-center justify-center w-5 h-5 rounded bg-blue-100 text-blue-900 f-size-xs f-weight-bold">2</span>
                                     應用與主要功能
                                 </h3>
-                                <span class="md:hidden text-xs text-blue-700 font-bold flex items-center gap-1">
-                                    <span id="mobile-sidebar-toggle-text">切換目錄</span>
-                                    <i class="fa-solid fa-chevron-down text-xs transition-transform"
+                                <span class="text-xs text-blue-700 font-bold flex items-center gap-1">
+                                    <span id="mobile-sidebar-toggle-text" class="md:hidden">切換目錄</span>
+                                    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 rotate-180"
                                         id="mobile-sidebar-chevron"></i>
                                 </span>
                             </button>
@@ -1013,483 +1016,441 @@
                                     <!-- 表頭由 JS 策略動態插入 -->
                                 </thead>
                                 <tbody id="directory-matrix-body" class="divide-y divide-gray-200 text-slate-800 f-weight-normal">
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MP-28AL/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MP-28AL
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">合成蠟 / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">耐刮、高滑度，合成蠟/奈米氧化鋁複合蠟。
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MP-28AL/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MP-28AL
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">合成蠟 / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">耐刮、高滑度，合成蠟/奈米氧化鋁複合蠟。
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 提升抗刮傷、抗擦傷性能。
 提升耐磨性能
 增加表面滑爽度與潤滑性
 選擇 G 規格可使塗層更消光
 選擇 XF 規格可獲得最高的光澤保留度</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MP-28AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MPP-611AL/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MPP-611AL
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MP-28AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MPP-611AL/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MPP-611AL
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品。
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 奈米氧化鋁（莫氏硬度9），提升塗層抗刮與抗擦傷性能。
 提高滑爽性與潤滑性
 能有效降低塗層光澤度，產生消光效果</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MPP-611AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MicroKlear%20418AL/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MicroKlear 418AL
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟 / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MPP-611AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MicroKlear%20418AL/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MicroKlear 418AL
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟 / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品。
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。
 有效提升耐磨性能
 提供優異的表面潤滑性。
 透明度或光澤度產生影響減到最小</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MicroKlear%20418AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/Superslip%206515AL/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                Superslip 6515AL
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / EBS / 奈米氧化鋁</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">抗刮性佳；可取代 PE/PTFE蠟。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MicroKlear%20418AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/Superslip%206515AL/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        Superslip 6515AL
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / EBS / 奈米氧化鋁</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">抗刮性佳；可取代 PE/PTFE蠟。
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。
 具有良好的耐磨性。
 具備滑爽性與潤滑性。
 醯胺蠟提供優異的防粘結與離型效果。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/Superslip%206515AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/PolyGlide%201226XF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                PolyGlide 1226XF
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米陶瓷</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品，提供極佳耐磨性能
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/Superslip%206515AL/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/PolyGlide%201226XF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        PolyGlide 1226XF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯 / 奈米陶瓷</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">PTFE蠟的有效替代品，提供極佳耐磨性能
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。
 提供滑爽性與潤滑度</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/PolyGlide%201226XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/SuperGlide%201231/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                SuperGlide 1231
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">醯胺蠟 / 奈米陶瓷</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">具有出色的抗刮與耐磨性能。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/PolyGlide%201226XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/SuperGlide%201231/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        SuperGlide 1231
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">醯胺蠟 / 奈米陶瓷</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">具有出色的抗刮與耐磨性能。
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 具有良好的抗刮性能。
 具有良好的耐磨性能。
 增加滑爽性、離型性與潤滑性，提供極佳的表面「手感」。
 高熔點可提高耐熱性與防粘結性。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/SuperGlide%201231/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/PolyTuf%201229/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                PolyTuf 1229
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">奈米陶瓷改性聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">有效取代PTFE蠟粉
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、木器漆</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/SuperGlide%201231/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/PolyTuf%201229/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        PolyTuf 1229
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">奈米陶瓷改性聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">有效取代PTFE蠟粉
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 低密度聚乙烯蠟提高的表面耐刮。
 提高表面耐磨性 (Taber) 和漆膜韌性。
 具備防滑特性，非常適合步行路面</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/PolyTuf%201229/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MP-22XF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MP-22XF
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">合成蠟</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">具有抗刮傷（刻痕）防護。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">PTFE 取代、粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/PolyTuf%201229/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MP-22XF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MP-22XF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">合成蠟</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+具有抗刮傷（刻痕）防護。
 提高耐摩擦性能。
 賦予塗層潤滑性與滑爽性。
 提供抗黏結性能</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MP-22XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MPP-620VF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MPP-620VF
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提升塗層的抗刮傷性能。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MP-22XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MPP-620VF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MPP-620VF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提升塗層的抗刮傷性能。
 提升塗層的耐磨和耐摩擦性。
 提供良好表面滑爽性
 提供優異的抗黏結性能
 提高耐熱性
 與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MPP-620VF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MPP-620XF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MPP-620XF
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">賦予優異的抗刮傷性能與耐溶劑性。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、木器漆、皮革塗料、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MPP-620VF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MPP-620XF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MPP-620XF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+賦予優異的抗刮傷性能與耐溶劑性。
 賦予極佳的耐磨和耐摩擦性。
 提供良好表面滑爽性
 提供優異的抗黏結性能
 提高耐熱性</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MPP-620XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MPP-635VF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MPP-635VF
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">高分子量和高硬度提升了塗層的耐刮性
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MPP-620XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MPP-635VF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MPP-635VF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+高分子量和高硬度提升了塗層的耐刮性
 提供卓越的耐磨擦與耐磨性能
 易於分散的細粉，可經由高速混合直接加入
 賦予優異的抗黏結（防黏）性能
 結晶型、高熔點蠟</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、油墨</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MPP-635VF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/PropylMatte%2031/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                PropylMatte 31
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">聚丙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">高分子量可提升塗層耐刮。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、油墨</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MPP-635VF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/PropylMatte%2031/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        PropylMatte 31
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">聚丙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+高分子量可提升塗層耐刮。
 高分子量，可賦予耐磨性。
 賦予防滑性能
 提供高效能的消光效果，且不影響塗料黏度</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/PropylMatte%2031/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/Micropro%20400/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                Micropro 400
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">改性聚丙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提高抗擦傷、刮傷以及金屬劃痕性能
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/PropylMatte%2031/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/Micropro%20400/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        Micropro 400
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">改性聚丙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提高抗擦傷、刮傷以及金屬劃痕性能
 提高耐磨性。
 提供表面滑爽性
 高效的消光劑
 提供抗黏結性能。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、油墨、木器漆</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/Micropro%20400/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/Micromide%20520/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                Micromide 520
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">EBS</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提高表面滑爽、抗刮傷性能
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、油墨、木器漆</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/Micropro%20400/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/Micromide%20520/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        Micromide 520
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">EBS</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提高表面滑爽、抗刮傷性能
 增加滑爽、脫模，具有極佳的表面手感。降低摩擦係數 (COF)
 具有抗黏結性
 高熔點以提升耐熱性能</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/Micromide%20520/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MicroTouch%20800XF/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MicroTouch 800XF
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">脂肪族聚氨酯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提高防刮與抗刮傷性能
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/Micromide%20520/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MicroTouch%20800XF/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MicroTouch 800XF
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">脂肪族聚氨酯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提高防刮與抗刮傷性能
 提高耐磨性
 有效的降低光澤
 可調配塗料的柔軟觸感。
 獨特的表面觸感。提供從絲綢般光滑、橡膠感或皮革感等不同的觸感效果。</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MicroTouch%20800XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MicroTouch%20800F/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MicroTouch 800F
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">脂肪族聚氨酯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提高防刮與抗刮傷性能
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MicroTouch%20800XF/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MicroTouch%20800F/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MicroTouch 800F
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">脂肪族聚氨酯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提高防刮與抗刮傷性能
 提高耐磨性
 有效的降低光澤
 提供從絲滑到橡膠感再到皮革感的不同觸覺效果
 提供不同的粒徑以創造出獨特的表面「觸感」</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MicroTouch%20800F/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MicroKlear%20116/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MicroKlear 116
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟/高密度聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提供抗刮傷性能。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">粉體塗料、工業塗料、油墨、地板塗料、木器漆、皮革塗料</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MicroTouch%20800F/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MicroKlear%20116/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MicroKlear 116
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">巴西棕櫚蠟/高密度聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提供抗刮傷性能。
 提供優異的耐磨性
 提供極佳的滑爽性。在捲鋼塗料中，為成品捲鋼的成型與加工提供最大的滑爽度
 在金屬包裝塗料中提供脫模性能
 適合保持極佳光澤與透明度的應用。在烘烤後能減少捲鋼塗料表面霧影</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MicroKlear%20116/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/PropylMatte%2031HD/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                PropylMatte 31HD
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">加重聚丙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">與二氧化矽消光劑相比，提高了耐刮性
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MicroKlear%20116/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/PropylMatte%2031HD/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        PropylMatte 31HD
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">加重聚丙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+與二氧化矽消光劑相比，提高了耐刮性
 賦予防滑性能
 降低光澤，從半消光到全消光的表面效果
 改善抗黏結性和流動性
 增加防滑性能</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/PropylMatte%2031HD/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/AquaPoly%20511/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                AquaPoly 511
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">改性氧化高密度聚乙烯</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">不含 PTFE 的替代選擇。
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/PropylMatte%2031HD/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/AquaPoly%20511/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        AquaPoly 511
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">改性氧化高密度聚乙烯</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">不含 PTFE 的替代選擇。
+符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 提供最佳水平的抗刮性能。
 提供最佳水平的抗擦傷和抗磨損（防勒痕）防護
 提供極佳的滑爽性與潤滑度
 提供獨特的柔軟觸感
 易於分散的細粉，可通過高速攪拌混合</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨、汽車蠟</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/AquaPoly%20511/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/Polysilk%20750/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                Polysilk 750
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯/醯胺</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提供抗刮性
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨、汽車蠟</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/AquaPoly%20511/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/Polysilk%20750/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        Polysilk 750
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">高密度聚乙烯/醯胺</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提供抗刮性
 提供耐磨性
 增加潤滑性與平滑表面手感。
 增加柔軟手感
 提升抗黏結性</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/Polysilk%20750/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <div class="flex items-center flex-wrap gap-y-0.5">
-                            <a href="/products/mpi/ink/MicroMatte%201415-EZ/" class="text-blue-950 font-extrabold text-sm hover:underline inline leading-snug">
-                                MicroMatte 1415-EZ
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 align-middle shrink-0 ml-1.5 shadow-xs select-none" title="符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"><i class="fa-solid fa-shield-halved text-xs text-emerald-600"></i> FDA</span>
-                        </div>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">緻密化改性合成蠟</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">提升耐刮性能
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">工業塗料、油墨</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/Polysilk%20750/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+                <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                    <a href="/products/mpi/ink/MicroMatte%201415-EZ/" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                        MicroMatte 1415-EZ
+                    </a>
+                    <div class="text-xs text-slate-500 font-normal mt-0.5">緻密化改性合成蠟</div>
+                </td>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
+提升耐刮性能
 提升滑度與抗沾污性
 提供高效的消光作用</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">油墨、木器漆、皮革塗料</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="/products/mpi/ink/MicroMatte%201415-EZ/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr></tbody>
+                <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">油墨、木器漆、皮革塗料</td>
+                <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                    <a href="/products/mpi/ink/MicroMatte%201415-EZ/" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                        <span>規格詳情</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </td>
+            </tr></tbody>
                             </table>
                         </div>
                     </div>

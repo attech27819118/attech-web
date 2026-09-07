@@ -273,6 +273,7 @@ function switchPartner(partnerKey) {
     const brandConfig = AppState.configs[configKey];
     if (brandConfig && brandConfig.files && brandConfig.files[0]) {
         AppState.productLine = brandConfig.files[0].key;
+        AppState.expandedMenus = [AppState.productLine];
     }
     AppState.category = 'all';
     AppState.filters = {};
@@ -350,16 +351,12 @@ function renderDirectoryTree() {
     const brandConfig = AppState.configs[configKey];
     if (!treeMenu || !brandConfig) return;
 
-    // 當前選中的產品線自動預設展開子分類
-    if (AppState.productLine && !AppState.expandedMenus.includes(AppState.productLine)) {
-        AppState.expandedMenus.push(AppState.productLine);
-    }
 
     // 更新步驟標題，清楚指出當前品牌
     const stepCatalog = document.getElementById('ui-step-catalog');
     if (stepCatalog) {
         const brandName = (configKey === 'others' && AppState.lang === 'zh') ? '其他特化材料' : (brandConfig.brandName || AppState.partner);
-        stepCatalog.innerHTML = `<span class="flex items-center justify-center w-5 h-5 rounded bg-blue-100 text-blue-900 f-size-xs f-weight-bold">2</span> 應用與主要功能 (${brandName})`;
+        stepCatalog.innerHTML = `<span class="flex items-center justify-center w-5 h-5 rounded bg-blue-100 text-blue-900 f-size-xs f-weight-bold">2</span> 應用與主要功能 <br>(${brandName})`;
     }
 
     const iconMap = {
@@ -434,12 +431,15 @@ function renderDirectoryTree() {
                 aria-controls="submenu-${lineKey}"
                 title="${lineTitle}"
                 aria-label="${lineTitle}"
-                class="dir-node-btn w-full text-left px-2.5 py-2 rounded f-size-sm f-weight-bold text-slate-900 hover:bg-slate-100 flex items-center justify-between group">
+                class="dir-node-btn w-full text-left px-2.5 py-2 rounded f-size-sm f-weight-bold text-slate-900 hover:bg-slate-100 flex items-center justify-between group cursor-pointer transition-colors">
             <div class="flex items-center gap-2 pointer-events-none">
                 <i class="fa-solid ${iconMap[lineKey] || 'fa-folder'} text-slate-500 f-size-xs" aria-hidden="true"></i>
                 <span>${lineTitle}</span>
             </div>
-            <div class="text-slate-500 group-hover:text-blue-900 ${isExpanded ? 'rotate-180' : ''} pointer-events-none" id="chevron-${lineKey}">
+            <div onclick="event.stopPropagation(); toggleDirectorySubmenu('${lineKey}')"
+                 title="${isExpanded ? '摺疊' : '展開'}"
+                 class="text-slate-500 hover:text-blue-900 p-1 -m-1 rounded transition-transform duration-150 ${isExpanded ? 'rotate-180' : ''}" 
+                 id="chevron-${lineKey}">
                 <i class="fa-solid fa-chevron-down f-size-xs" aria-hidden="true"></i>
             </div>
         </button>
@@ -618,6 +618,9 @@ function selectDirectoryNode(lineKey, categoryKey = 'all', preserveExpanded = fa
     }
     AppState.productLine = lineKey;
     AppState.category = categoryKey;
+    if (lineKey && !AppState.expandedMenus.includes(lineKey)) {
+        AppState.expandedMenus.push(lineKey);
+    }
     resetSearchInputFields();
     renderDirectoryTree();
     renderProducts();
@@ -643,13 +646,36 @@ function selectDirectoryNode(lineKey, categoryKey = 'all', preserveExpanded = fa
     }
 }
 
-function handleMainDirectoryClick(lineKey) {
-    if (AppState.expandedMenus.includes(lineKey)) {
+function toggleDirectorySubmenu(lineKey) {
+    const isExpanded = AppState.expandedMenus.includes(lineKey);
+    const submenu = document.getElementById(`submenu-${lineKey}`);
+    const chevron = document.getElementById(`chevron-${lineKey}`);
+    const btn = document.getElementById(`node-${lineKey}-all`);
+
+    if (isExpanded) {
         AppState.expandedMenus = AppState.expandedMenus.filter(k => k !== lineKey);
+        if (submenu) submenu.classList.add('hidden');
+        if (chevron) chevron.classList.remove('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
     } else {
-        AppState.expandedMenus.push(lineKey);
+        if (!AppState.expandedMenus.includes(lineKey)) {
+            AppState.expandedMenus.push(lineKey);
+        }
+        if (submenu) submenu.classList.remove('hidden');
+        if (chevron) chevron.classList.add('rotate-180');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
     }
-    selectDirectoryNode(lineKey, 'all');
+}
+
+function handleMainDirectoryClick(lineKey) {
+    if (AppState.productLine === lineKey) {
+        toggleDirectorySubmenu(lineKey);
+    } else {
+        if (!AppState.expandedMenus.includes(lineKey)) {
+            AppState.expandedMenus.push(lineKey);
+        }
+        selectDirectoryNode(lineKey, 'all', true);
+    }
 }
 
 function updateNodeActiveStyles(lineKey, categoryKey) {

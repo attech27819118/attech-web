@@ -34,7 +34,9 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
     }
 
     if (tabId === 'products') {
-        AppState.expandedMenus = [];
+        if (AppState.productLine && (!AppState.expandedMenus || AppState.expandedMenus.length === 0)) {
+            AppState.expandedMenus = [AppState.productLine];
+        }
         if (typeof updateSearchLayout === 'function' && !AppState.searchQuery) {
             updateSearchLayout(false);
         }
@@ -604,13 +606,18 @@ function updateHashRoute(usePush = false) { updateUrlRoute(usePush); }
 function toggleMobileSidebar() {
     const menu = document.getElementById('directory-tree-menu');
     const chevron = document.getElementById('mobile-sidebar-chevron');
+    const btn = document.getElementById('sidebar-toggle-btn');
     if (!menu) return;
-    if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        if (chevron) chevron.classList.add('rotate-180');
-    } else {
-        menu.classList.add('hidden');
-        if (chevron) chevron.classList.remove('rotate-180');
+    const isHidden = menu.classList.toggle('hidden');
+    if (chevron) {
+        if (isHidden) {
+            chevron.classList.remove('rotate-180');
+        } else {
+            chevron.classList.add('rotate-180');
+        }
+    }
+    if (btn) {
+        btn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
     }
 }
 
@@ -637,7 +644,7 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
     AppState.productLine = lineKey;
     AppState.category = categoryKey || 'all';
 
-    AppState.expandedMenus = [];
+    AppState.expandedMenus = lineKey ? [lineKey] : [];
 
     const mobileMenu = document.getElementById('directory-tree-menu');
     const mobileChevron = document.getElementById('mobile-sidebar-chevron');
