@@ -1192,12 +1192,25 @@
                                             placeholder="如：0912-345-678 或 04-2239-8056#123"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
-                                    <div class="md:col-span-2">
+                                    <div>
                                         <label for="detail-fax"
                                             class="block f-weight-bold text-slate-900 mb-1">傳真號碼</label>
                                         <input type="text" id="detail-fax" name="detail_fax"
                                             placeholder="例如：04-2239-5165" autocomplete="off" spellcheck="false"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                                    </div>
+                                    <div>
+                                        <label for="detail-date"
+                                            class="block f-weight-bold text-slate-900 mb-1">填表日期</label>
+                                        <div class="relative">
+                                            <input type="text" id="detail-date" name="detail_date" readonly
+                                                class="w-full px-2.5 py-1.5 bg-slate-100 border border-slate-300 rounded outline-none text-slate-700 f-weight-medium cursor-not-allowed select-none"
+                                                title="系統自動帶入當日填表日期">
+                                            <span
+                                                class="absolute right-2.5 top-1/2 -translate-y-1/2 text-blue-900 f-size-xs f-weight-bold flex items-center gap-1 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200/60 pointer-events-none">
+                                                <i class="fa-regular fa-calendar-check text-blue-800"></i> 自動帶入
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="md:col-span-2">
                                         <label for="detail-address" class="block f-weight-bold text-slate-900 mb-1">寄送地址
