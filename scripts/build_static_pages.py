@@ -233,11 +233,11 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
 
     banner_heading = "需要檢視完整技術數據或 TDS 下載？" if is_mpi else "需要檢視完整技術數據？"
     banner_desc = (
-        f"原廠技術資料表（TDS）與全品項規格資料已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整技術檔案。"
+        f"原廠技術資料表（TDS）與全品項規格資料已收錄於官網。點擊按鈕前往官網，查看 {escape_html(name)} 之詳細規格與技術資料。"
         if is_mpi else
-        f"完整產品物性數據與規格資料已完整收錄於官網系統。點擊下方按鈕可前往官網產品專區，系統將自動定位並展開 {escape_html(name)} 之完整物性與應用資訊。"
+        f"完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看 {escape_html(name)} 之詳細規格與技術資料。"
     )
-    banner_button_text = "TDS 與完整規格" if is_mpi else "完整規格與特性"
+    banner_button_text = "TDS 與完整規格" if is_mpi else "詳細規格與技術資料"
 
     return f'''
     <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
