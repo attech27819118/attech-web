@@ -432,11 +432,18 @@ D & E. 曾測試紀錄與備註
             console.error('PDF 生成錯誤:', pdfErr);
         }
 
-        // 郵件發送設定（優先支援 Resend API，次之支援 mail.attech.com.tw 或 SES SMTP）
-        const RESEND_API_KEY = process.env.RESEND_API_KEY;
+        // 郵件傳輸設定（支援 SES SMTP 或企業自建 SMTP 如 mail.attech.com.tw）
+        const SMTP_HOST = process.env.SES_SMTP_HOST || process.env.SMTP_HOST || 'email-smtp.us-east-1.amazonaws.com';
+        const SMTP_PORT = parseInt(process.env.SES_SMTP_PORT || process.env.SMTP_PORT || '465', 10);
+        const SMTP_USER = process.env.SES_SMTP_USER || process.env.SMTP_USER;
+        const SMTP_PASS = process.env.SES_SMTP_PASS || process.env.SMTP_PASS;
         const FROM_EMAIL = process.env.FROM_EMAIL || 'atservice@attech.com.tw';
         const TO_EMAIL = process.env.TO_EMAIL || 'atservice@attech.com.tw';
         const CC_EMAIL = process.env.CC_EMAIL || '';
+
+        if (!SMTP_USER || !SMTP_PASS) {
+            throw new Error(`SMTP 帳號密碼尚未設定（請於 AWS Lambda 環境變數中設定 SMTP_USER 與 SMTP_PASS）`);
+        }
 
         // CC 副本名單 (若有設定才加入)
         let ccList = CC_EMAIL ? [CC_EMAIL] : [];
@@ -449,78 +456,38 @@ D & E. 曾測試紀錄與備註
         }
         ccList = [...new Set(ccList.filter(Boolean))];
 
-        if (RESEND_API_KEY) {
-            console.log('🚀 使用 Resend 雲端 API 發送郵件...');
-            const { Resend } = require('resend');
-            const resend = new Resend(RESEND_API_KEY);
+        const transporter = nodemailer.createTransport({
+            host: SMTP_HOST,
+            port: SMTP_PORT,
+            secure: SMTP_PORT === 465,
+            auth: {
+                user: SMTP_USER,
+                pass: SMTP_PASS
+            },
+            tls: {
+                rejectUnauthorized: false
+            },
+            connectionTimeout: 8000,
+            greetingTimeout: 8000,
+            socketTimeout: 8000
+        });
 
-            const resendAttachments = attachments.map(att => ({
-                filename: att.filename,
-                content: att.content.toString('base64')
-            }));
+        const mailOptions = {
+            from: `"ATTech 官網表單" <${FROM_EMAIL}>`,
+            to: TO_EMAIL,
+            replyTo: email,
+            subject: subject,
+            text: textContent,
+            html: htmlContent,
+            attachments: attachments
+        };
 
-            const sendResult = await resend.emails.send({
-                from: FROM_EMAIL.includes('<') ? FROM_EMAIL : `宏威官網表單 <${FROM_EMAIL}>`,
-                to: [TO_EMAIL],
-                cc: ccList.length > 0 ? ccList : undefined,
-                reply_to: email,
-                subject: subject,
-                text: textContent,
-                html: htmlContent,
-                attachments: resendAttachments
-            });
-
-            if (sendResult.error) {
-                throw new Error(`Resend 發信失敗: ${sendResult.error.message || JSON.stringify(sendResult.error)}`);
-            }
-            console.log(`[Lambda Sent via Resend] ${company} - ${contact} (${type})`);
-        } else {
-            // 使用 SMTP 發送（預設指向企業信箱 mail.attech.com.tw）
-            const SMTP_HOST = process.env.SMTP_HOST || process.env.SES_SMTP_HOST || 'mail.attech.com.tw';
-            const SMTP_PORT = parseInt(process.env.SMTP_PORT || process.env.SES_SMTP_PORT || '465', 10);
-            const SMTP_USER = process.env.SMTP_USER || process.env.SES_SMTP_USER;
-            const SMTP_PASS = process.env.SMTP_PASS || process.env.SES_SMTP_PASS;
-            const SMTP_SECURE = process.env.SMTP_SECURE !== 'false' && (SMTP_PORT === 465);
-
-            if (!SMTP_USER || !SMTP_PASS) {
-                throw new Error(`郵件憑證尚未設定（請於 AWS Lambda 環境變數中設定 RESEND_API_KEY 或 SMTP_USER 與 SMTP_PASS）`);
-            }
-
-            console.log(`[SMTP Connecting] Host: ${SMTP_HOST}:${SMTP_PORT}, User: ${SMTP_USER}, Secure: ${SMTP_SECURE}`);
-
-            const transporter = nodemailer.createTransport({
-                host: SMTP_HOST,
-                port: SMTP_PORT,
-                secure: SMTP_SECURE,
-                auth: {
-                    user: SMTP_USER,
-                    pass: SMTP_PASS
-                },
-                tls: {
-                    rejectUnauthorized: false
-                },
-                connectionTimeout: 10000,
-                greetingTimeout: 10000,
-                socketTimeout: 10000
-            });
-
-            const mailOptions = {
-                from: `"ATTech 官網表單" <${FROM_EMAIL}>`,
-                to: TO_EMAIL,
-                replyTo: email,
-                subject: subject,
-                text: textContent,
-                html: htmlContent,
-                attachments: attachments
-            };
-
-            if (ccList.length > 0) {
-                mailOptions.cc = ccList;
-            }
-
-            await transporter.sendMail(mailOptions);
-            console.log(`[Lambda Sent via SMTP] ${company} - ${contact} (${type})`);
+        if (ccList.length > 0) {
+            mailOptions.cc = ccList;
         }
+
+        await transporter.sendMail(mailOptions);
+        console.log(`[Lambda Sent] ${company} - ${contact} (${type})`);
 
         return {
             statusCode: 200,

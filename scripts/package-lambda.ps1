@@ -29,6 +29,17 @@ try {
     Write-Host "Adding latest index.js to zip..."
     [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $indexPath, "index.js", [System.IO.Compression.CompressionLevel]::Optimal)
 
+    # 1.1 Update lambda.js (確保相容 lambda.handler)
+    $lambdaPath = Join-Path $PSScriptRoot "..\lambda.js"
+    if (Test-Path $lambdaPath) {
+        $lambdaEntry = $zip.GetEntry("lambda.js")
+        if ($null -ne $lambdaEntry) {
+            $lambdaEntry.Delete()
+        }
+        Write-Host "Adding lambda.js to zip..."
+        [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $lambdaPath, "lambda.js", [System.IO.Compression.CompressionLevel]::Optimal)
+    }
+
     # 2. Check or update fonts/NotoSansTC-Regular.ttf
     $fontEntry = $zip.GetEntry("fonts/NotoSansTC-Regular.ttf")
     if ($null -eq $fontEntry) {
