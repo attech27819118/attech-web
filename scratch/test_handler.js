@@ -45,6 +45,7 @@ async function runTests() {
         {
             title: 'A. 基本聯絡資訊',
             rows: [
+                { label: '填表日期', value: '2026/09/08' },
                 { label: '公司名稱', value: '宏威科技股份有限公司' },
                 { label: '聯絡人（職稱）', value: '張經理 (研發部)' },
                 { label: '電子信箱', value: 'test@example.com' },
@@ -103,6 +104,7 @@ async function runTests() {
         {
             title: '基本聯絡與索樣資訊',
             rows: [
+                { label: '填表日期', value: '2026/09/08' },
                 { label: '公司名稱', value: '創新材料研發中心' },
                 { label: '聯絡人（職稱）', value: '李專員' },
                 { label: '電子信箱', value: 'lee@example.com' },
@@ -151,6 +153,7 @@ async function runTests() {
     const mockEvent = {
         body: JSON.stringify({
             type: '詳細需求',
+            applyDate: '2026/09/08',
             company: '宏威測試工業',
             contact: '王工程師',
             email: 'wang@test.com',

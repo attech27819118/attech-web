@@ -6,7 +6,29 @@
 
 let lastSubmitTime = 0;
 
+function getTodayDateStr() {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    return `${yyyy}/${mm}/${dd}`;
+}
+
+function initFormDates() {
+    const detailDateInput = document.getElementById('detail-date');
+    if (detailDateInput) {
+        detailDateInput.value = getTodayDateStr();
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFormDates);
+} else {
+    initFormDates();
+}
+
 function switchFormMode(mode) {
+    initFormDates();
     const quick = document.getElementById('form-mode-quick');
     const detailed = document.getElementById('form-mode-detailed');
     const btnQuick = document.getElementById('mode-btn-quick');
@@ -197,7 +219,8 @@ async function handleContactSubmit(event) {
             phone: mobile || '未提供',
             sample: sample || '未提供',
             address: address || '未提供',
-            message: message || '無'
+            message: message || '無',
+            applyDate: getTodayDateStr()
         };
     } else {
         const company = document.getElementById('detail-company')?.value.trim();
@@ -281,6 +304,8 @@ async function handleContactSubmit(event) {
             formattedSampleReq += `；${sampleReq2}` + (sampleQty2 ? ` (${sampleQty2})` : '');
         }
 
+        const applyDate = document.getElementById('detail-date')?.value.trim() || getTodayDateStr();
+
         payload = {
             type: '詳細需求',
             company,
@@ -290,6 +315,7 @@ async function handleContactSubmit(event) {
             phone: mobile || '未提供',
             fax: fax || '未提供',
             address: address || '未提供',
+            applyDate,
             appFields,
             otherAppDomain: otherAppDomain || '',
             functions,

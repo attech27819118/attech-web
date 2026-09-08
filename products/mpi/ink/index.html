@@ -1763,12 +1763,25 @@
                                             placeholder="如：0912-345-678 或 04-2239-8056#123"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
-                                    <div class="md:col-span-2">
+                                    <div>
                                         <label for="detail-fax"
                                             class="block f-weight-bold text-slate-900 mb-1">傳真號碼</label>
                                         <input type="text" id="detail-fax" name="detail_fax"
                                             placeholder="例如：04-2239-5165" autocomplete="off" spellcheck="false"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
+                                    </div>
+                                    <div>
+                                        <label for="detail-date"
+                                            class="block f-weight-bold text-slate-900 mb-1">填表日期</label>
+                                        <div class="relative">
+                                            <input type="text" id="detail-date" name="detail_date" readonly
+                                                class="w-full px-2.5 py-1.5 bg-slate-100 border border-slate-300 rounded outline-none text-slate-700 f-weight-medium cursor-not-allowed select-none"
+                                                title="系統自動帶入當日填表日期">
+                                            <span
+                                                class="absolute right-2.5 top-1/2 -translate-y-1/2 text-blue-900 f-size-xs f-weight-bold flex items-center gap-1 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200/60 pointer-events-none">
+                                                <i class="fa-regular fa-calendar-check text-blue-800"></i> 自動帶入
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="md:col-span-2">
                                         <label for="detail-address" class="block f-weight-bold text-slate-900 mb-1">寄送地址
@@ -1849,13 +1862,14 @@
                                             <label
                                                 class="inline-flex items-center gap-1.5 cursor-pointer hover:text-blue-900"><input
                                                     type="checkbox" name="app_domain[]" value="樹脂合成(酯化)"
-                                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 樹脂合成(酯化)</label>
+                                                    class="rounded text-blue-900 focus:ring-blue-500/20">
+                                                樹脂合成(酯化)</label>
                                         </div>
                                         <div class="mt-2 flex items-center gap-2">
                                             <label for="detail-other-app-domain"
                                                 class="text-slate-900 f-weight-bold shrink-0 f-size-xs">其他領域：</label>
-                                            <input type="text" id="detail-other-app-domain" name="detail_other_app_domain"
-                                                placeholder="請輸入其他應用領域..."
+                                            <input type="text" id="detail-other-app-domain"
+                                                name="detail_other_app_domain" placeholder="請輸入其他應用領域..."
                                                 class="w-full px-2.5 py-1 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                         </div>
                                     </div>
@@ -1867,7 +1881,8 @@
                                             <label
                                                 class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
                                                     type="checkbox" name="app_func[]" value="密著促進/改善"
-                                                    class="rounded text-blue-900 focus:ring-blue-500/20"> 密著促進/改善</label>
+                                                    class="rounded text-blue-900 focus:ring-blue-500/20">
+                                                密著促進/改善</label>
                                             <label
                                                 class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
                                                     type="checkbox" name="app_func[]" value="交聯"
@@ -1979,7 +1994,7 @@
                                                             type="radio" name="comp-type" value="雙組份"
                                                             class="text-blue-900 focus:ring-blue-500/20"> 雙組份</label>
                                                 </div>
-                                                <div class="flex items-center gap-2 border-l border-slate-300 pl-2.5">
+                                                <div class="flex items-center gap-2 ">
                                                     <label
                                                         class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
                                                             type="radio" name="app-type" value="透明"
@@ -1988,9 +2003,9 @@
                                                         class="inline-flex items-center gap-1 cursor-pointer hover:text-blue-900"><input
                                                             type="radio" name="app-type" value="有顏色"
                                                             class="text-blue-900 focus:ring-blue-500/20"> 有顏色</label>
-                                                    <input type="text" id="detail-app-type-color" name="detail_app_type_color"
-                                                        placeholder="顏色描述..."
-                                                        class="px-2 py-0.5 bg-white border border-slate-300 rounded outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500 w-24 sm:w-28 text-xs">
+                                                    <input type="text" id="detail-app-type-color"
+                                                        name="detail_app_type_color" placeholder="顏色描述..."
+                                                        class="px-2 py-0.5 bg-white border border-slate-300 rounded outline-none focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500 w-20 sm:w-28 text-xs">
                                                 </div>
                                             </div>
                                         </div>
@@ -2013,7 +2028,7 @@
                                             class="space-y-1.5 bg-slate-50 p-2.5 rounded-lg border border-slate-200 f-weight-medium text-slate-800">
                                             <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
                                                 <span
-                                                    class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">塑膠：</span>
+                                                    class="f-weight-bold text-slate-900 w-18 shrink-0 f-size-xs">塑膠：</span>
                                                 <label class="inline-flex items-center gap-1 cursor-pointer"><input
                                                         type="checkbox" name="substrate[]" value="PVC"
                                                         class="rounded text-blue-900"> PVC</label>
@@ -2051,7 +2066,7 @@
                                             <div
                                                 class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
                                                 <span
-                                                    class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">金屬：</span>
+                                                    class="f-weight-bold text-slate-900 w-18 shrink-0 f-size-xs">金屬：</span>
                                                 <label class="inline-flex items-center gap-1 cursor-pointer"><input
                                                         type="checkbox" name="substrate[]" value="鐵"
                                                         class="rounded text-blue-900"> 鐵</label>
@@ -2068,7 +2083,7 @@
                                             <div
                                                 class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
                                                 <span
-                                                    class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">皮革紡織：</span>
+                                                    class="f-weight-bold text-slate-900 w-18 shrink-0 f-size-xs">皮革紡織：</span>
                                                 <label class="inline-flex items-center gap-1 cursor-pointer"><input
                                                         type="checkbox" name="substrate[]" value="真皮"
                                                         class="rounded text-blue-900"> 真皮</label>
@@ -2085,7 +2100,7 @@
                                             <div
                                                 class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pt-1.5 border-t border-slate-200">
                                                 <span
-                                                    class="f-weight-bold text-slate-900 w-14 shrink-0 f-size-xs">其它：</span>
+                                                    class="f-weight-bold text-slate-900 w-18 shrink-0 f-size-xs">其它：</span>
                                                 <label class="inline-flex items-center gap-1 cursor-pointer"><input
                                                         type="checkbox" name="substrate[]" value="木材"
                                                         class="rounded text-blue-900"> 木材</label>
@@ -2211,27 +2226,35 @@
                                         <span class="f-weight-bold text-blue-950 block f-size-sm">索樣產品資訊：</span>
                                         <div class="grid grid-cols-1 sm:grid-cols-12 gap-2.5 items-center">
                                             <div class="sm:col-span-8">
-                                                <label for="detail-sample-req" class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">產品 1 名稱 / 型號 <span class="text-red-600">*</span></label>
+                                                <label for="detail-sample-req"
+                                                    class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">產品 1 名稱
+                                                    / 型號 <span class="text-red-600">*</span></label>
                                                 <input type="text" id="detail-sample-req" name="detail_sample_req"
                                                     autocomplete="off" spellcheck="false" placeholder="例如：MP-22"
                                                     class="w-full px-2.5 py-1.5 bg-white border border-slate-300 rounded outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                             </div>
                                             <div class="sm:col-span-4">
-                                                <label for="detail-sample-qty1" class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">索樣數量</label>
+                                                <label for="detail-sample-qty1"
+                                                    class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">索樣數量</label>
                                                 <input type="text" id="detail-sample-qty1" name="detail_sample_qty1"
                                                     autocomplete="off" spellcheck="false" placeholder="例如：100g"
                                                     class="w-full px-2.5 py-1.5 bg-white border border-slate-300 rounded outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                             </div>
                                         </div>
-                                        <div class="grid grid-cols-1 sm:grid-cols-12 gap-2.5 items-center pt-1 border-t border-slate-200/80">
+                                        <div
+                                            class="grid grid-cols-1 sm:grid-cols-12 gap-2.5 items-center pt-1 border-t border-slate-200/80">
                                             <div class="sm:col-span-8">
-                                                <label for="detail-sample-req2" class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">產品 2 名稱 / 型號 (選填)</label>
+                                                <label for="detail-sample-req2"
+                                                    class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">產品 2 名稱
+                                                    / 型號 (選填)</label>
                                                 <input type="text" id="detail-sample-req2" name="detail_sample_req2"
                                                     autocomplete="off" spellcheck="false" placeholder="例如：Micropro 500"
                                                     class="w-full px-2.5 py-1.5 bg-white border border-slate-300 rounded outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                             </div>
                                             <div class="sm:col-span-4">
-                                                <label for="detail-sample-qty2" class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">索樣數量 (選填)</label>
+                                                <label for="detail-sample-qty2"
+                                                    class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">索樣數量
+                                                    (選填)</label>
                                                 <input type="text" id="detail-sample-qty2" name="detail_sample_qty2"
                                                     autocomplete="off" spellcheck="false" placeholder="例如：100g"
                                                     class="w-full px-2.5 py-1.5 bg-white border border-slate-300 rounded outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
@@ -2272,7 +2295,8 @@
                                     <label for="detail-past-samples" class="block f-weight-bold text-slate-900 mb-1">D.
                                         曾試過的相關樣品</label>
                                     <textarea id="detail-past-samples" name="detail_past_samples" rows="2.5"
-                                        autocomplete="off" spellcheck="false" placeholder="請填寫曾經試用過之樣品名稱、型號、競品或測試評估結果..."
+                                        autocomplete="off" spellcheck="false"
+                                        placeholder="請填寫曾經試用過之樣品名稱、型號、競品或測試評估結果..."
                                         class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
                                 </div>
                                 <div>

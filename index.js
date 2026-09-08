@@ -166,6 +166,7 @@ exports.handler = async (event, context) => {
         let pdfSections = [];
 
         if (isQuickMode) {
+            const applyDate = (data.applyDate || new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' })).replace(/-/g, '/');
             const mobile = data.mobile || data.phone || data.tel || '未提供';
             const sample = data.sample || '未提供';
             const address = data.address || '未提供';
@@ -174,6 +175,7 @@ exports.handler = async (event, context) => {
             textContent = `
 【宏威應用材料 - 指定樣品 / 快速詢價需求單】
 --------------------------------------------------
+填表日期：${applyDate}
 公司名稱：${company}
 聯絡人（職稱）：${contact}
 電子信箱：${email}
@@ -192,7 +194,8 @@ exports.handler = async (event, context) => {
                     <p style="color: #1e3a8a; font-weight: bold; margin: 0; font-size: 15px;">指定樣品 / 快速詢價表單 (簡易樣品申請單)</p>
                 </div>
                 <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px;">
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px; font-weight: bold; width: 150px; color: #475569; background-color: #f8fafc;">公司名稱</td><td style="padding: 8px;">${company}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px; font-weight: bold; width: 150px; color: #475569; background-color: #f8fafc;">填表日期</td><td style="padding: 8px;">${applyDate}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px; font-weight: bold; color: #475569; background-color: #f8fafc;">公司名稱</td><td style="padding: 8px;">${company}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px; font-weight: bold; color: #475569; background-color: #f8fafc;">聯絡人（職稱）</td><td style="padding: 8px;">${contact}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px; font-weight: bold; color: #475569; background-color: #f8fafc;">電子信箱</td><td style="padding: 8px;"><a href="mailto:${email}" style="color: #1e3a8a; text-decoration: none;">${email}</a></td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px; font-weight: bold; color: #475569; background-color: #f8fafc;">聯絡電話 / 手機</td><td style="padding: 8px;">${mobile}</td></tr>
@@ -210,6 +213,7 @@ exports.handler = async (event, context) => {
                 {
                     title: '基本聯絡與索樣資訊',
                     rows: [
+                        { label: '填表日期', value: applyDate },
                         { label: '公司名稱', value: company },
                         { label: '聯絡人（職稱）', value: contact },
                         { label: '電子信箱', value: email },
@@ -221,6 +225,7 @@ exports.handler = async (event, context) => {
                 }
             ];
         } else {
+            const applyDate = (data.applyDate || data.detail_date || new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' })).replace(/-/g, '/');
             const tel = data.tel || data.phone || '未提供';
             const mobile = data.mobile || '未提供';
             const fax = data.fax || '未提供';
@@ -281,6 +286,7 @@ exports.handler = async (event, context) => {
 【宏威應用材料 - 詳細樣品申請與技術評估單】
 --------------------------------------------------
 A. 基本聯絡資訊
+填表日期：${applyDate}
 公司名稱：${company}
 聯絡人（職稱）：${contact}
 電子信箱：${email}
@@ -320,6 +326,7 @@ D & E. 曾測試紀錄與備註
                 
                 <h3 style="color: #1e3a8a; font-size: 14px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">A. 基本聯絡資訊</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">填表日期：</td><td style="padding: 6px;">${applyDate}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">公司名稱：</td><td style="padding: 6px;">${company}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">聯絡人（職稱）：</td><td style="padding: 6px;">${contact}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">電子信箱：</td><td style="padding: 6px;"><a href="mailto:${email}" style="color: #1e3a8a;">${email}</a></td></tr>
@@ -364,6 +371,7 @@ D & E. 曾測試紀錄與備註
                 {
                     title: 'A. 基本聯絡資訊',
                     rows: [
+                        { label: '填表日期', value: applyDate },
                         { label: '公司名稱', value: company },
                         { label: '聯絡人（職稱）', value: contact },
                         { label: '電子信箱', value: email },
