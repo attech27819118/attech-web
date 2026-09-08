@@ -259,7 +259,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     <i class="fa-solid fa-envelope"></i>
                     <span>申請樣品與技術諮詢</span>
                 </a>
-                <a href="/products/{partner_key}/{line_key}/{safe_name}" 
+                <a href="/products/{partner_key}/{line_key}/?product={safe_name}#{safe_name}" 
                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     <span>{quick_spec_text}</span>
@@ -360,7 +360,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto">
-                    <a href="/products/{partner_key}/{line_key}/{safe_name}" 
+                    <a href="/products/{partner_key}/{line_key}/?product={safe_name}#{safe_name}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-sm transition-colors active:scale-95">
                         <i class="fa-solid fa-file-lines"></i>
                         <span>{banner_button_text}</span>

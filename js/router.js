@@ -405,7 +405,12 @@ function parseUrlRoute() {
         AppState.category = rawCategory || 'all';
 
         if (rawProduct) {
-            const decodedProductName = decodeURIComponent(rawProduct);
+            let decodedProductName = rawProduct;
+            try {
+                decodedProductName = decodeURIComponent(rawProduct);
+            } catch (e) {
+                decodedProductName = rawProduct;
+            }
             AppState.selectedProduct = decodedProductName;
 
             // 若頁面已包含預渲染之產品詳情卡片，保持獨立落地頁展示，不重新以列表覆蓋
@@ -447,7 +452,7 @@ function parseUrlRoute() {
                     if (matchedItem) break;
                 }
 
-                const finalName = matchedItem ? matchedItem.product_name : decodedProductName;
+                const finalName = matchedItem ? (matchedItem.product_name || matchedItem.name) : decodedProductName;
                 navigateToCategory(matchedPartner, matchedLine, AppState.category, finalName);
             });
             return;
@@ -712,15 +717,15 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
                         }
 
                         try {
+                            const rect = targetRow.getBoundingClientRect();
+                            const top = window.pageYOffset + rect.top - 120;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } catch (e) {
                             targetRow.scrollIntoView({
                                 behavior: 'smooth',
-                                block: 'start',
+                                block: 'center',
                                 inline: 'nearest'
                             });
-                        } catch (e) {
-                            const rect = targetRow.getBoundingClientRect();
-                            const top = window.pageYOffset + rect.top - 115;
-                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
                         }
 
                         const idx = targetRow.getAttribute('data-index');
