@@ -1,6 +1,6 @@
 /**
  * ====================================================================
- * ATTech Materials - AWS Lambda 專用郵件與 PDF 生成 Handler (lambda.js)
+ * ATTech Materials - AWS Lambda 專用郵件與 PDF 生成 Handler (index.js)
  * ====================================================================
  */
 
@@ -22,7 +22,7 @@ function createStyledPDF(title, sections, companyName) {
     return new Promise((resolve, reject) => {
         const doc = new PDFDocument({
             size: 'A4',
-            margins: { top: 25, bottom: 25, left: 28, right: 28 },
+            margins: { top: 20, bottom: 15, left: 28, right: 28 },
             bufferPages: true
         });
 
@@ -69,7 +69,7 @@ function createStyledPDF(title, sections, companyName) {
         });
 
         const isCompact = totalRows > 12;
-        const rowHeight = isCompact ? 16 : 20;
+        const baseRowHeight = isCompact ? 16 : 20;
         const fontSize = isCompact ? 8 : 8.5;
         const sectionHeaderHeight = isCompact ? 16 : 18;
 
@@ -83,32 +83,38 @@ function createStyledPDF(title, sections, companyName) {
                 const currentY = doc.y;
                 const labelWidth = isCompact ? 120 : 130;
                 const valueWidth = pageWidth - labelWidth;
+                const textVal = String(row.value || '無');
 
-                doc.rect(startX, currentY, labelWidth, rowHeight).fillAndStroke('#F8FAFC', '#CBD5E1');
-                doc.rect(startX + labelWidth, currentY, valueWidth, rowHeight).fillAndStroke('#FFFFFF', '#CBD5E1');
+                doc.font(fontRegular).fontSize(fontSize);
+                const measuredHeight = doc.heightOfString(textVal, { width: valueWidth - 12 });
+                const actualRowHeight = Math.max(baseRowHeight, Math.min(36, measuredHeight + (isCompact ? 6 : 8)));
 
-                doc.font(fontBold).fontSize(fontSize).fillColor('#1E293B').text(row.label, startX + 6, currentY + (isCompact ? 3.5 : 4.5), {
+                doc.rect(startX, currentY, labelWidth, actualRowHeight).fillAndStroke('#F8FAFC', '#CBD5E1');
+                doc.rect(startX + labelWidth, currentY, valueWidth, actualRowHeight).fillAndStroke('#FFFFFF', '#CBD5E1');
+
+                doc.font(fontBold).fontSize(fontSize).fillColor('#1E293B').text(row.label, startX + 6, currentY + 3.5, {
                     width: labelWidth - 10,
                     ellipsis: true
                 });
 
-                doc.font(fontRegular).fontSize(fontSize).fillColor('#334155').text(row.value || '無', startX + labelWidth + 6, currentY + (isCompact ? 3.5 : 4.5), {
-                    width: valueWidth - 10,
+                doc.font(fontRegular).fontSize(fontSize).fillColor('#334155').text(textVal, startX + labelWidth + 6, currentY + 3.5, {
+                    width: valueWidth - 12,
+                    height: actualRowHeight - 5,
                     ellipsis: true
                 });
 
-                doc.y = currentY + rowHeight;
+                doc.y = currentY + actualRowHeight;
             });
 
-            doc.y += 4;
+            doc.y += 3.5;
         });
 
         const currentDate = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
-        const footerY = doc.page.height - 24;
+        const footerY = doc.page.height - 28;
 
         doc.moveTo(startX, footerY - 4).lineTo(startX + pageWidth, footerY - 4).strokeColor('#CBD5E1').lineWidth(0.5).stroke();
-        doc.font(fontRegular).fontSize(7.5).fillColor('#64748B').text(`列印時間：${currentDate} | 宏威應用材料 Discover The Link To Life`, startX, footerY, { align: 'left' });
-        doc.font(fontRegular).fontSize(7.5).fillColor('#64748B').text(`第 1 頁 / 共 1 頁`, startX, footerY, { align: 'right' });
+        doc.font(fontRegular).fontSize(7.5).fillColor('#64748B').text(`列印時間：${currentDate} | 宏威應用材料 Discover The Link To Life`, startX, footerY, { width: pageWidth, align: 'left', lineBreak: false });
+        doc.font(fontRegular).fontSize(7.5).fillColor('#64748B').text(`第 1 頁 / 共 1 頁`, startX, footerY, { width: pageWidth, align: 'right', lineBreak: false });
 
         doc.end();
     });
@@ -153,14 +159,14 @@ exports.handler = async (event, context) => {
         }
 
         const isQuickMode = (type === '快速詢價' || !data.appFields);
-        let subject = `【官網需求單】${company} - ${contact}（${isQuickMode ? '指定樣品/快速詢價' : '詳細應用需求評估'}）`;
+        let subject = `【官網需求單】${company} - ${contact}（${isQuickMode ? '快速樣品申請' : '詳細樣品申請與技術評估'}）`;
         let textContent = '';
         let htmlContent = '';
         let attachments = [];
         let pdfSections = [];
 
         if (isQuickMode) {
-            const mobile = data.mobile || data.phone || '未提供';
+            const mobile = data.mobile || data.phone || data.tel || '未提供';
             const sample = data.sample || '未提供';
             const address = data.address || '未提供';
             const message = data.message || '無';
@@ -215,59 +221,92 @@ exports.handler = async (event, context) => {
                 }
             ];
         } else {
-            const mobile = data.mobile || data.phone || '未提供';
+            const tel = data.tel || data.phone || '未提供';
+            const mobile = data.mobile || '未提供';
             const fax = data.fax || '未提供';
             const address = data.address || '未提供';
-            const appFields = formatList(data.appFields);
+
+            // 處理應用領域（可含其他）
+            let appFieldsStr = formatList(data.appFields);
+            const otherAppDomain = (data.otherAppDomain || data.otherAppField || '').trim();
+            if (otherAppDomain && otherAppDomain !== '無') {
+                appFieldsStr = (appFieldsStr !== '無' && appFieldsStr !== '') ? `${appFieldsStr}（其他: ${otherAppDomain}）` : otherAppDomain;
+            }
+
             const functions = formatList(data.functions);
-            const otherFunc = data.otherFunc || '無';
+            const otherFunc = (data.otherFunc || '').trim();
+            const fullFunc = (otherFunc && otherFunc !== '無') ? `${functions}（其他: ${otherFunc}）` : functions;
+
             const systems = formatList(data.systems);
             const compType = data.compType || '未指定';
             const appType = data.appType || '未指定';
-            const substrates = formatList(data.substrates);
-            const otherSubstrate = data.otherSubstrate || '無';
+
+            // 底材類型（可含其他）
+            let substratesStr = formatList(data.substrates);
+            const otherSubstrate = (data.otherSubstrate || '').trim();
+            if (otherSubstrate && otherSubstrate !== '無') {
+                substratesStr = (substratesStr !== '無' && substratesStr !== '') ? `${substratesStr}（其它: ${otherSubstrate}）` : otherSubstrate;
+            }
+
             const filmThick = data.filmThick ? `${data.filmThick} µm` : '未填寫';
             const noBake = data.noBake || '否';
             const bakeTemp = data.bakeTemp || '未填寫';
             const bakeTime = data.bakeTime || '未填寫';
-            const resins = formatList(data.resins);
+
+            // 樹脂系統（可含其他）
+            let resinsStr = formatList(data.resins);
+            const otherResin = (data.otherResin || '').trim();
+            if (otherResin && otherResin !== '無') {
+                resinsStr = (resinsStr !== '無' && resinsStr !== '') ? `${resinsStr}（其他: ${otherResin}）` : otherResin;
+            }
+
             const restricted = data.restricted || '無';
-            const sampleReq = data.sampleReq || '未填寫';
+
+            // 索樣產品資訊（支援結構化項目或字串）
+            let sampleReq = data.sampleReq || '未填寫';
+            if (Array.isArray(data.sampleItems) && data.sampleItems.length > 0) {
+                const items = data.sampleItems
+                    .filter(it => it && it.name && it.name.trim())
+                    .map(it => it.qty ? `${it.name.trim()}（數量: ${it.qty.trim()}）` : it.name.trim());
+                if (items.length > 0) {
+                    sampleReq = items.join('；');
+                }
+            }
+
             const docs = formatList(data.docs);
             const pastSamples = data.pastSamples || '無';
             const remarks = data.remarks || '無';
 
             textContent = `
-【宏威應用材料 - 詳細應用需求評估單 (完整申請單)】
+【宏威應用材料 - 詳細樣品申請與技術評估單】
 --------------------------------------------------
 A. 基本聯絡資訊
 公司名稱：${company}
 聯絡人（職稱）：${contact}
 電子信箱：${email}
-聯絡電話 / 手機：${mobile}
+電話及分機：${tel}
+手機號碼：${mobile}
 傳真號碼：${fax}
 寄送地址：${address}
 
 B. 應用需求
-應用領域：${appFields}
-功能需求：${functions} (其他: ${otherFunc})
+應用領域：${appFieldsStr}
+功能需求：${fullFunc}
 系統型態：${systems}
 組份 / 外觀：${compType} / ${appType}
 
 C. 基本資訊與規格
-底材類型：${substrates} (其它: ${otherSubstrate})
+底材類型：${substratesStr}
 乾膜厚度：${filmThick}
 乾燥固化條件：不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}
-樹脂系統：${resins}
+樹脂系統：${resinsStr}
 限用物質：${restricted}
-索樣產品需求：${sampleReq}
+索樣產品資訊：${sampleReq}
 需求文件：${docs}
 
-D. 曾測試紀錄
+D & E. 曾測試紀錄與備註
 曾試過的相關樣品：${pastSamples}
-
-E. 備註
-${remarks}
+備註 / 其他說明：${remarks}
 --------------------------------------------------
 時間：${new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })}
             `;
@@ -284,27 +323,28 @@ ${remarks}
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">公司名稱：</td><td style="padding: 6px;">${company}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">聯絡人（職稱）：</td><td style="padding: 6px;">${contact}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">電子信箱：</td><td style="padding: 6px;"><a href="mailto:${email}" style="color: #1e3a8a;">${email}</a></td></tr>
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">電話 / 手機：</td><td style="padding: 6px;">${mobile}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">電話及分機：</td><td style="padding: 6px;">${tel}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">手機號碼：</td><td style="padding: 6px;">${mobile}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">傳真號碼：</td><td style="padding: 6px;">${fax}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">樣品寄送地址：</td><td style="padding: 6px;">${address}</td></tr>
                 </table>
 
                 <h3 style="color: #1e3a8a; font-size: 14px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">B. 應用需求與系統</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">應用領域：</td><td style="padding: 6px;">${appFields}</td></tr>
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">功能需求：</td><td style="padding: 6px;">${functions} (其他: ${otherFunc})</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">應用領域：</td><td style="padding: 6px;">${appFieldsStr}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">功能需求：</td><td style="padding: 6px;">${fullFunc}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">系統型態：</td><td style="padding: 6px;">${systems}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">組份 / 外觀：</td><td style="padding: 6px;">${compType} / ${appType}</td></tr>
                 </table>
 
                 <h3 style="color: #1e3a8a; font-size: 14px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 16px;">C. 基本規格與限制</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">底材類型：</td><td style="padding: 6px;">${substrates} (其它: ${otherSubstrate})</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">底材類型：</td><td style="padding: 6px;">${substratesStr}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">乾膜厚度：</td><td style="padding: 6px;">${filmThick}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">固化條件：</td><td style="padding: 6px;">不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}</td></tr>
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">樹脂系統：</td><td style="padding: 6px;">${resins}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">樹脂系統：</td><td style="padding: 6px;">${resinsStr}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">限用物質：</td><td style="padding: 6px;">${restricted}</td></tr>
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #1e3a8a; background-color: #eff6ff;">索樣產品需求：</td><td style="padding: 6px; font-weight: bold; color: #1e3a8a;">${sampleReq}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #1e3a8a; background-color: #eff6ff;">索樣產品資訊：</td><td style="padding: 6px; font-weight: bold; color: #1e3a8a;">${sampleReq}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">需求文件：</td><td style="padding: 6px;">${docs}</td></tr>
                 </table>
 
@@ -327,7 +367,8 @@ ${remarks}
                         { label: '公司名稱', value: company },
                         { label: '聯絡人（職稱）', value: contact },
                         { label: '電子信箱', value: email },
-                        { label: '聯絡電話 / 手機', value: mobile },
+                        { label: '電話及分機', value: tel },
+                        { label: '手機號碼', value: mobile },
                         { label: '傳真號碼', value: fax },
                         { label: '樣品寄送地址', value: address }
                     ]
@@ -335,8 +376,8 @@ ${remarks}
                 {
                     title: 'B. 應用需求',
                     rows: [
-                        { label: '應用領域', value: appFields },
-                        { label: '功能需求', value: `${functions} (其他: ${otherFunc})` },
+                        { label: '應用領域', value: appFieldsStr },
+                        { label: '功能需求', value: fullFunc },
                         { label: '系統型態', value: systems },
                         { label: '組份 / 外觀', value: `${compType} / ${appType}` }
                     ]
@@ -344,12 +385,12 @@ ${remarks}
                 {
                     title: 'C. 基本資訊與規格',
                     rows: [
-                        { label: '底材類型', value: `${substrates} (其它: ${otherSubstrate})` },
+                        { label: '底材類型', value: substratesStr },
                         { label: '乾膜厚度', value: filmThick },
                         { label: '乾燥固化條件', value: `不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}` },
-                        { label: '樹脂系統', value: resins },
-                        { label: '限用物質', value: restricted },
-                        { label: '索樣產品需求', value: sampleReq },
+                        { label: '樹脂系統', value: resinsStr },
+                        { label: '其他資訊(限用物質)', value: restricted },
+                        { label: '索樣產品資訊', value: sampleReq },
                         { label: '需求文件', value: docs }
                     ]
                 },
@@ -366,7 +407,7 @@ ${remarks}
         // 動態生成單頁 PDF 附件
         try {
             const pdfBuffer = await createStyledPDF(
-                isQuickMode ? `${company} - 快速樣品申請單` : `${company} - 詳細應用需求評估單`,
+                isQuickMode ? `${company} - 快速樣品申請單` : `${company} - 詳細樣品申請與技術評估單`,
                 pdfSections,
                 company
             );
@@ -459,3 +500,6 @@ ${remarks}
         };
     }
 };
+
+exports.createStyledPDF = createStyledPDF;
+

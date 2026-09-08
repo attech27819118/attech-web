@@ -246,11 +246,16 @@ async function handleContactSubmit(event) {
         };
 
         const appFields = getCheckedValues('app_domain[]');
+        const otherAppDomain = document.getElementById('detail-other-app-domain')?.value.trim();
         const functions = getCheckedValues('app_func[]');
         const otherFunc = document.getElementById('detail-other-func')?.value.trim();
         const systems = getCheckedValues('sys_type[]');
         const compType = form.querySelector('input[name="comp-type"]:checked')?.value || '未指定';
-        const appType = form.querySelector('input[name="app-type"]:checked')?.value || '未指定';
+        let appType = form.querySelector('input[name="app-type"]:checked')?.value || '未指定';
+        const colorDesc = document.getElementById('detail-app-type-color')?.value.trim();
+        if (colorDesc) {
+            appType = (appType === '未指定' || appType === '透明') ? `有顏色 (${colorDesc})` : `${appType} (${colorDesc})`;
+        }
 
         const substrates = getCheckedValues('substrate[]');
         const otherSubstrate = document.getElementById('detail-substrate-other')?.value.trim();
@@ -259,10 +264,22 @@ async function handleContactSubmit(event) {
         const bakeTemp = document.getElementById('detail-bake-temp')?.value.trim();
         const bakeTime = document.getElementById('detail-bake-time')?.value.trim();
         const resins = getCheckedValues('resin[]');
+        const otherResin = document.getElementById('detail-resin-other')?.value.trim();
         const restricted = document.getElementById('detail-restricted')?.value.trim();
         const docs = getCheckedValues('doc_req[]');
         const pastSamples = document.getElementById('detail-past-samples')?.value.trim();
         const remarks = document.getElementById('detail-remarks')?.value.trim();
+
+        // 組合索樣產品 1 與 2
+        const sampleQty1 = document.getElementById('detail-sample-qty1')?.value.trim();
+        const sampleReq2 = document.getElementById('detail-sample-req2')?.value.trim();
+        const sampleQty2 = document.getElementById('detail-sample-qty2')?.value.trim();
+
+        let formattedSampleReq = sampleReq;
+        if (sampleQty1) formattedSampleReq += ` (${sampleQty1})`;
+        if (sampleReq2) {
+            formattedSampleReq += `；${sampleReq2}` + (sampleQty2 ? ` (${sampleQty2})` : '');
+        }
 
         payload = {
             type: '詳細需求',
@@ -274,11 +291,13 @@ async function handleContactSubmit(event) {
             fax: fax || '未提供',
             address: address || '未提供',
             appFields,
+            otherAppDomain: otherAppDomain || '',
             functions,
             otherFunc: otherFunc || '無',
             systems,
             compType,
             appType,
+            colorDesc: colorDesc || '',
             substrates,
             otherSubstrate: otherSubstrate || '無',
             filmThick: filmThick || '',
@@ -286,8 +305,13 @@ async function handleContactSubmit(event) {
             bakeTemp: bakeTemp || '未填寫',
             bakeTime: bakeTime || '未填寫',
             resins,
+            otherResin: otherResin || '',
             restricted: restricted || '無',
-            sampleReq: sampleReq || '未提供',
+            sampleReq: formattedSampleReq || '未提供',
+            sampleItems: [
+                { name: sampleReq, qty: sampleQty1 || '' },
+                ...(sampleReq2 ? [{ name: sampleReq2, qty: sampleQty2 || '' }] : [])
+            ],
             docs,
             pastSamples: pastSamples || '無',
             remarks: remarks || '無'
