@@ -77,7 +77,7 @@ function getProductApplications(p, partnerKey, lineKey, configData) {
                         title: title,
                         key: appKey,
                         url: `/products/${pLower}/${appKey}/`,
-                        productUrl: `/products/${pLower}/${appKey}/?product=${safeName}#${safeName}`,
+                        productUrl: `/products/${pLower}/${appKey}/?product=${safeName}`,
                         isCurrent: (appKey === lineKey)
                     });
                 }
@@ -95,7 +95,7 @@ function getProductApplications(p, partnerKey, lineKey, configData) {
                     title: title,
                     key: lineKey,
                     url: `/products/${pLower}/${lineKey}/?category=${encodeURIComponent(title)}`,
-                    productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}#${safeName}`,
+                    productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}`,
                     isCurrent: true
                 });
             }
@@ -111,7 +111,7 @@ function getProductApplications(p, partnerKey, lineKey, configData) {
             title: lineName,
             key: lineKey,
             url: `/products/${pLower}/${lineKey}/`,
-            productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}#${safeName}`,
+            productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}`,
             isCurrent: true
         });
     }
@@ -272,7 +272,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
                 </a>
-                <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}#${safeName}" 
+                <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}" 
                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     <span>${quickSpecText}</span>
@@ -389,7 +389,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto">
-                    <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}#${safeName}" 
+                    <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}" 
                        class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-sm transition-colors active:scale-95">
                         <i class="fa-solid fa-file-lines"></i>
                         <span>${bannerButtonText}</span>
