@@ -289,31 +289,35 @@ function parseUrlRoute() {
     if (window.location.hash && window.location.hash.length > 1) {
         const legacyHash = window.location.hash.replace(/^#\/?/, '');
         const [hTab, hQuery] = legacyHash.split('?');
-        const hParams = new URLSearchParams(hQuery || '');
+        if (['products', 'partners', 'contact', 'about'].includes(hTab)) {
+            const hParams = new URLSearchParams(hQuery || '');
 
-        let cleanMigratedPath = '/';
-        if (hTab === 'products') {
-            const hPartner = (hParams.get('partner') || 'mpi').toLowerCase();
-            const hLine = hParams.get('line') || 'ptfe';
-            const hProduct = hParams.get('product') || hParams.get('item');
-            cleanMigratedPath = `/products/${hPartner}/${hLine}/`;
-            if (hProduct) cleanMigratedPath += `${encodeURIComponent(hProduct)}/`;
-            if (hParams.get('category') && hParams.get('category') !== 'all') {
-                cleanMigratedPath += `?category=${encodeURIComponent(hParams.get('category'))}`;
+            let cleanMigratedPath = '/';
+            if (hTab === 'products') {
+                const hPartner = (hParams.get('partner') || 'mpi').toLowerCase();
+                const hLine = hParams.get('line') || 'ptfe';
+                const hProduct = hParams.get('product') || hParams.get('item');
+                cleanMigratedPath = `/products/${hPartner}/${hLine}/`;
+                if (hProduct) cleanMigratedPath += `${encodeURIComponent(hProduct)}/`;
+                if (hParams.get('category') && hParams.get('category') !== 'all') {
+                    cleanMigratedPath += `?category=${encodeURIComponent(hParams.get('category'))}`;
+                }
+                if (hParams.get('q')) {
+                    cleanMigratedPath = `/products/?q=${encodeURIComponent(hParams.get('q'))}`;
+                }
+            } else if (hTab === 'partners') {
+                cleanMigratedPath = '/partners/';
+            } else if (hTab === 'contact') {
+                const mode = hParams.get('mode');
+                cleanMigratedPath = mode === 'detailed' ? '/contact/?mode=detailed' : '/contact/';
+            } else if (hTab === 'about') {
+                cleanMigratedPath = '/';
             }
-            if (hParams.get('q')) {
-                cleanMigratedPath = `/products/?q=${encodeURIComponent(hParams.get('q'))}`;
-            }
-        } else if (hTab === 'partners') {
-            cleanMigratedPath = '/partners/';
-        } else if (hTab === 'contact') {
-            const mode = hParams.get('mode');
-            cleanMigratedPath = mode === 'detailed' ? '/contact/?mode=detailed' : '/contact/';
+
+            const basePath = getAppBasePath();
+            const fullMigratedPath = basePath ? ('/' + basePath + (cleanMigratedPath === '/' ? '' : cleanMigratedPath)) : cleanMigratedPath;
+            history.replaceState(null, '', fullMigratedPath);
         }
-
-        const basePath = getAppBasePath();
-        const fullMigratedPath = basePath ? ('/' + basePath + (cleanMigratedPath === '/' ? '' : cleanMigratedPath)) : cleanMigratedPath;
-        history.replaceState(null, '', fullMigratedPath);
     }
 
     // 2. 解析標準路徑與 Query 參數
