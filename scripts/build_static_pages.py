@@ -452,7 +452,19 @@ def build_page_html(template_html, title, description, canonical_path, active_ta
     elif pre_rendered_content:
         html_out = re.sub(r'<tbody id="directory-matrix-body"[\s\S]*?</tbody>', f'<tbody id="directory-matrix-body" class="divide-y divide-gray-200 text-slate-800 f-weight-normal">{pre_rendered_content}</tbody>', html_out)
         if category_meta:
-            breadcrumb_html = f'<span class="text-slate-600 font-semibold">{escape_html(category_meta["brandName"])}</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="text-slate-700 font-semibold">{escape_html(category_meta["lineTitle"])}</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">全部</span>'
+            brand_slug = category_meta.get("partnerSlug") or ""
+            line_slug = category_meta.get("lineSlug") or ""
+            brand_link = f'/products/{brand_slug}/' if brand_slug else '/products/'
+            line_link = f'/products/{brand_slug}/{line_slug}/' if (brand_slug and line_slug) else brand_link
+            breadcrumb_html = (
+                f'<a href="/products/" class="text-slate-500 hover:text-blue-900 hover:underline transition-colors font-medium">產品</a>'
+                f' <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> '
+                f'<a href="{brand_link}" class="text-slate-600 hover:text-blue-900 hover:underline transition-colors font-semibold">{escape_html(category_meta["brandName"])}</a>'
+                f' <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> '
+                f'<a href="{line_link}" class="text-slate-700 hover:text-blue-900 hover:underline transition-colors font-semibold">{escape_html(category_meta["lineTitle"])}</a>'
+                f' <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> '
+                f'<span class="f-weight-bold text-blue-950">全部</span>'
+            )
             html_out = re.sub(r'<span id="dir-current-path"[^>]*>.*?</span>', f'<span id="dir-current-path" class="text-blue-950 f-weight-bold">{breadcrumb_html}</span>', html_out)
             html_out = re.sub(r'<span id="dir-match-count"[^>]*>.*?</span>', f'<span id="dir-match-count" class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">{category_meta["matchCount"]}</span>', html_out)
 
@@ -492,6 +504,7 @@ def main():
     for brand_key, brand_obj in config.items():
         partner_slug = brand_key.lower()
         brand_name = brand_obj.get('brandName', brand_key)
+        brand_path = f'/products/{partner_slug}/'
 
         is_mpi = (partner_slug == 'mpi')
         p_desc = (
@@ -499,8 +512,8 @@ def main():
             if is_mpi else
             f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、產品詳細參數與樣品申請服務。"
         )
-        p_html = build_page_html(template_html, f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials", p_desc, p_path, active_tab='products')
-        write_static_file(p_path, p_html)
+        p_html = build_page_html(template_html, f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials", p_desc, brand_path, active_tab='products')
+        write_static_file(brand_path, p_html)
         generated_count += 1
 
         for f_info in brand_obj.get('files', []):
@@ -564,7 +577,9 @@ def main():
                 category_meta={
                     "brandName": brand_name,
                     "lineTitle": line_title,
-                    "matchCount": len(products)
+                    "matchCount": len(products),
+                    "partnerSlug": partner_slug,
+                    "lineSlug": line_slug
                 }
             )
             write_static_file(line_path, line_html)

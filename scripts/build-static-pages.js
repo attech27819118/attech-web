@@ -507,7 +507,11 @@ ${preRenderedContent}
             `<tbody id="directory-matrix-body" class="divide-y divide-gray-200 text-slate-800 f-weight-normal">${preRenderedContent}</tbody>`
         );
         if (categoryMeta) {
-            const breadcrumbHtml = `<span class="text-slate-600 font-semibold">${escapeHtml(categoryMeta.brandName)}</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="text-slate-700 font-semibold">${escapeHtml(categoryMeta.lineTitle)}</span> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">全部</span>`;
+            const brandSlug = categoryMeta.partnerSlug || "";
+            const lineSlug = categoryMeta.lineSlug || "";
+            const brandLink = brandSlug ? `/products/${brandSlug}/` : '/products/';
+            const lineLink = (brandSlug && lineSlug) ? `/products/${brandSlug}/${lineSlug}/` : brandLink;
+            const breadcrumbHtml = `<a href="/products/" class="text-slate-500 hover:text-blue-900 hover:underline transition-colors font-medium">產品</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${brandLink}" class="text-slate-600 hover:text-blue-900 hover:underline transition-colors font-semibold">${escapeHtml(categoryMeta.brandName)}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${lineLink}" class="text-slate-700 hover:text-blue-900 hover:underline transition-colors font-semibold">${escapeHtml(categoryMeta.lineTitle)}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">全部</span>`;
             html = html.replace(/<span id="dir-current-path"[^>]*>.*?<\/span>/, `<span id="dir-current-path" class="text-blue-950 f-weight-bold">${breadcrumbHtml}</span>`);
             html = html.replace(/<span id="dir-match-count"[^>]*>.*?<\/span>/, `<span id="dir-match-count" class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">${categoryMeta.matchCount}</span>`);
         }
@@ -655,7 +659,9 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             categoryMeta: {
                 brandName: brandName,
                 lineTitle: lineTitle,
-                matchCount: products.length
+                matchCount: products.length,
+                partnerSlug: partnerSlug,
+                lineSlug: lineSlug
             }
         });
         writeStaticHtmlFile(linePath, lineHtml);

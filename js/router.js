@@ -81,6 +81,13 @@ document.addEventListener('click', (e) => {
         return;
     }
 
+    // 若點擊的是獨立產品詳細頁面 (路徑為 /products/partner/line/product/)，放行讓瀏覽器直接換頁至該實體靜態頁面
+    const cleanPath = href.replace(/^\/|\/$/g, '').split('?')[0];
+    const pathParts = cleanPath.split('/').filter(Boolean);
+    if (pathParts[0] === 'products' && pathParts.length >= 4) {
+        return;
+    }
+
     e.preventDefault();
     const cleanHref = href.startsWith('/') ? href : ('/' + href);
     const basePath = getAppBasePath();
@@ -401,18 +408,19 @@ function parseUrlRoute() {
             const decodedProductName = decodeURIComponent(rawProduct);
             AppState.selectedProduct = decodedProductName;
 
-            // 實體產品專屬頁面：標記狀態並隱藏 1.請選擇品牌 與 2.應用與主要功能
-            document.body.classList.add('is-product-detail');
-            const partnerSection = document.getElementById('section-partner');
-            const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
-            if (partnerSection) partnerSection.classList.add('hidden');
-            if (directorySidebar) directorySidebar.classList.add('hidden');
-
-            // 若頁面已包含預渲染之產品詳情卡片，保持展示，不重新以列表覆蓋
+            // 若頁面已包含預渲染之產品詳情卡片，保持獨立落地頁展示，不重新以列表覆蓋
             if (document.querySelector('.product-seo-detail')) {
+                document.body.classList.add('is-product-detail');
                 updatePageMeta('product', decodedProductName);
                 return;
             }
+
+            // 若在清單矩陣中，側邊欄與品牌選單始終完整展示，不隱藏
+            document.body.classList.remove('is-product-detail');
+            const partnerSection = document.getElementById('section-partner');
+            const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
+            if (partnerSection) partnerSection.classList.remove('hidden');
+            if (directorySidebar) directorySidebar.classList.remove('hidden');
 
             loadAllBrandsData().then(() => {
                 const targetClean = normalizeProductSlug(decodedProductName);
@@ -626,14 +634,14 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
         clearTimeout(searchDebounceTimer);
         searchDebounceTimer = null;
     }
-    if (productName) {
-        document.body.classList.add('is-product-detail');
-        const partnerSection = document.getElementById('section-partner');
-        const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
-        if (partnerSection) partnerSection.classList.add('hidden');
-        if (directorySidebar) directorySidebar.classList.add('hidden');
-    } else {
-        document.body.classList.remove('is-product-detail');
+    // 目錄大表模式下，側邊欄與品牌選單始終完整展示，不隱藏
+    document.body.classList.remove('is-product-detail');
+    const partnerSection = document.getElementById('section-partner');
+    const directorySidebar = document.getElementById('directory-sidebar') || document.querySelector('#section-directory-finder aside');
+    if (partnerSection) partnerSection.classList.remove('hidden');
+    if (directorySidebar) directorySidebar.classList.remove('hidden');
+
+    if (!productName) {
         if (typeof resetSearchInputFields === 'function') resetSearchInputFields();
         if (typeof updateSearchLayout === 'function') updateSearchLayout(false);
     }
