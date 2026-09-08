@@ -456,6 +456,8 @@ D & E. 曾測試紀錄與備註
         }
         ccList = [...new Set(ccList.filter(Boolean))];
 
+        console.log(`[SMTP Attempt] Host: ${SMTP_HOST}:${SMTP_PORT}, User: ${SMTP_USER ? SMTP_USER.substring(0, 4) + '***' : 'EMPTY'}, Secure: ${SMTP_PORT === 465}`);
+
         const transporter = nodemailer.createTransport({
             host: SMTP_HOST,
             port: SMTP_PORT,
@@ -467,9 +469,9 @@ D & E. 曾測試紀錄與備註
             tls: {
                 rejectUnauthorized: false
             },
-            connectionTimeout: 8000,
-            greetingTimeout: 8000,
-            socketTimeout: 8000
+            connectionTimeout: 5000,
+            greetingTimeout: 5000,
+            socketTimeout: 5000
         });
 
         const mailOptions = {
@@ -506,7 +508,8 @@ D & E. 曾測試紀錄與備註
             body: JSON.stringify({
                 success: false,
                 message: '伺服器處理郵件發送失敗，請稍後再試或直接聯繫客服。',
-                error: error.message
+                error: error.message,
+                code: error.code || null
             })
         };
     }
