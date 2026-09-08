@@ -480,10 +480,15 @@ function updateBreadcrumbPath() {
         ? AppState.category
         : uiText[AppState.lang].cat_all;
 
+    const partnerSlug = (brandConfig?.slug || configKey || 'mpi').toLowerCase();
+    const lineSlug = (AppState.productLine || '').toLowerCase();
+
     pathElem.innerHTML = `
-        <span class="text-slate-600 font-semibold">${brandDisplayName}</span>
+        <a href="/products/" class="text-slate-500 hover:text-blue-900 hover:underline transition-colors font-medium">產品</a>
         <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i>
-        <span class="text-slate-700 font-semibold">${lineTitle}</span>
+        <a href="/products/${partnerSlug}/" class="text-slate-600 hover:text-blue-900 hover:underline transition-colors font-semibold">${brandDisplayName}</a>
+        <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i>
+        <a href="/products/${partnerSlug}/${lineSlug}/" class="text-slate-700 hover:text-blue-900 hover:underline transition-colors font-semibold">${lineTitle}</a>
         <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i>
         <span class="f-weight-bold text-blue-950">${catDisplay}</span>
     `;
@@ -722,6 +727,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
                 openModal(targetBtn.dataset.product, targetBtn.dataset.action);
+                return;
+            }
+
+            // 如果點擊的是超連結 <a> (例如點擊產品名稱要跳轉至產品獨立頁面)，不觸發折疊展開
+            if (e.target.closest('a')) {
                 return;
             }
 
