@@ -45,9 +45,8 @@ function createStyledPDF(title, sections, companyName) {
         if (fs.existsSync(boldFontPath)) {
             doc.registerFont('ChineseBold', boldFontPath);
             fontBold = 'ChineseBold';
-        } else if (fs.existsSync(regularFontPath)) {
-            doc.registerFont('ChineseBold', regularFontPath);
-            fontBold = 'ChineseBold';
+        } else if (fontRegular === 'ChineseRegular') {
+            fontBold = 'ChineseRegular';
         }
 
         const pageWidth = doc.page.width - 56;
