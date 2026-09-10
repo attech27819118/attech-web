@@ -76,6 +76,8 @@ function getProductApplications(p, partnerKey, lineKey, configData) {
                     apps.push({
                         title: title,
                         key: appKey,
+                        categoryUrl: `/products/${pLower}/${appKey}/`,
+                        singleUrl: `/products/${pLower}/${appKey}/${safeName}/`,
                         url: `/products/${pLower}/${appKey}/`,
                         productUrl: `/products/${pLower}/${appKey}/?product=${safeName}`,
                         isCurrent: (appKey === lineKey)
@@ -94,6 +96,8 @@ function getProductApplications(p, partnerKey, lineKey, configData) {
                 apps.push({
                     title: title,
                     key: lineKey,
+                    categoryUrl: `/products/${pLower}/${lineKey}/?category=${encodeURIComponent(title)}`,
+                    singleUrl: `/products/${pLower}/${lineKey}/?category=${encodeURIComponent(title)}&product=${safeName}`,
                     url: `/products/${pLower}/${lineKey}/?category=${encodeURIComponent(title)}`,
                     productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}`,
                     isCurrent: true
@@ -110,6 +114,8 @@ function getProductApplications(p, partnerKey, lineKey, configData) {
         apps.push({
             title: lineName,
             key: lineKey,
+            categoryUrl: `/products/${pLower}/${lineKey}/`,
+            singleUrl: `/products/${pLower}/${lineKey}/${safeName}/`,
             url: `/products/${pLower}/${lineKey}/`,
             productUrl: `/products/${pLower}/${lineKey}/?product=${safeName}`,
             isCurrent: true
@@ -217,16 +223,21 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
 
     const isMpi = (partnerKey || '').toLowerCase() === 'mpi';
 
-    // 適合應用標籤 HTML
-    const usageTagsHtml = applications.map(app => `
-        <a href="${app.url}" 
-           title="至官網檢視 ${escapeHtml(app.title)} 應用領域之所有規格與比較表"
-           class="inline-flex items-center gap-1.5 px-3.5 py-1.5 ${app.isCurrent ? 'bg-blue-900 text-white font-bold' : 'bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300'} rounded-lg text-xs transition-colors shadow-xs">
+    // 適合應用標籤 HTML (方案 A：點擊非當前標籤時直接跳轉至該產品在該應用下的專屬單頁)
+    const usageTagsHtml = applications.map(app => {
+        const href = app.isCurrent ? (app.categoryUrl || app.url) : (app.singleUrl || app.url);
+        const titleText = app.isCurrent
+            ? `點擊至官網檢視 ${escapeHtml(app.title)} 應用領域之所有規格與比較表`
+            : `切換至檢視 ${escapeHtml(name)} 在【${escapeHtml(app.title)}】之應用特點與規格`;
+        return `
+        <a href="${href}" 
+           title="${titleText}"
+           class="inline-flex items-center gap-1.5 px-3.5 py-1.5 ${app.isCurrent ? 'bg-blue-900 text-white font-bold cursor-default' : 'bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300'} rounded-lg text-xs transition-colors shadow-xs">
             <i class="fa-solid fa-tag text-[10px] ${app.isCurrent ? 'text-blue-200' : 'text-blue-600'}"></i>
             <span>${escapeHtml(app.title)}</span>
             ${app.isCurrent ? '<span class="text-[10px] opacity-75 font-normal">(當前系列)</span>' : ''}
-        </a>
-    `).join('');
+        </a>`;
+    }).join('');
 
     // 物性參數表行
     const propRows = getTypicalPropertiesRows(p);
@@ -268,12 +279,12 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
             </div>
             <div class="flex flex-wrap items-center gap-2.5 shrink-0">
                 <a href="/contact/?product=${safeName}" 
-                   class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
                 </a>
                 <a href="/products/${partnerKey}/${lineKey}/?product=${safeName}" 
-                   class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     <span>${quickSpecText}</span>
                 </a>
@@ -302,7 +313,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
 
                     <div class="mt-3 pt-2.5 border-t border-slate-200 text-xs text-slate-500 flex items-center gap-1.5">
                         <i class="fa-solid fa-circle-info text-blue-700 shrink-0"></i>
-                        <span>提示：點擊任一標籤可直接前往官網檢閱同領域之完整產品系列與線上規格比對。</span>
+                        <span>提示：點擊任一標籤可直接切換至該應用領域之產品專屬單頁；當前系列標籤可前往比較表。</span>
                     </div>
                 </div>
 

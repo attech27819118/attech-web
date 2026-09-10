@@ -1439,13 +1439,13 @@
           "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
           "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
-          "slip_lubricity": "提高滑爽性與潤滑性。適合罐頭塗料(內罐及外罐)、貨櫃漆；通過 21CFR 175.300 認證。"
+          "slip_lubricity": "提高滑爽性與潤滑性。"
         },
         "performance_descriptions_en": {
           "ptfe_alternative": "Effective replacement for PTFE additives, providing superior abrasion resistance.",
           "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
           "abrasion_resistance": "HDPE composite reinforced with hard nanoceramic particles, offering enhanced Taber abrasion resistance compared to PE/PTFE additives.",
-          "slip_lubricity": "Imparts surface slip and lubricity. Ideal for interior and exterior can and container coatings; 21CFR 175.300 compliant."
+          "slip_lubricity": "Imparts surface slip and lubricity. "
         }
       },
       "ink": {

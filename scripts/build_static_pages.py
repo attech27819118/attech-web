@@ -79,6 +79,8 @@ def get_product_applications(p, partner_key, line_key, config_data):
                     apps.append({
                         'title': title,
                         'key': app_key,
+                        'category_url': f'/products/{p_lower}/{app_key}/',
+                        'single_url': f'/products/{p_lower}/{app_key}/{safe_name}/',
                         'url': f'/products/{p_lower}/{app_key}/',
                         'product_url': f'/products/{p_lower}/{app_key}/?product={safe_name}',
                         'is_current': (app_key == line_key)
@@ -93,6 +95,8 @@ def get_product_applications(p, partner_key, line_key, config_data):
                 apps.append({
                     'title': title,
                     'key': line_key,
+                    'category_url': f'/products/{p_lower}/{line_key}/?category={urllib.parse.quote(title)}',
+                    'single_url': f'/products/{p_lower}/{line_key}/?category={urllib.parse.quote(title)}&product={safe_name}',
                     'url': f'/products/{p_lower}/{line_key}/?category={urllib.parse.quote(title)}',
                     'product_url': f'/products/{p_lower}/{line_key}/?product={safe_name}',
                     'is_current': True
@@ -107,6 +111,8 @@ def get_product_applications(p, partner_key, line_key, config_data):
         apps.append({
             'title': line_name,
             'key': line_key,
+            'category_url': f'/products/{p_lower}/{line_key}/',
+            'single_url': f'/products/{p_lower}/{line_key}/{safe_name}/',
             'url': f'/products/{p_lower}/{line_key}/',
             'product_url': f'/products/{p_lower}/{line_key}/?product={safe_name}',
             'is_current': True
@@ -187,10 +193,12 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
 
     usage_tags_list = []
     for app in applications:
-        current_cls = 'bg-blue-900 text-white font-bold' if app['is_current'] else 'bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300'
+        current_cls = 'bg-blue-900 text-white font-bold cursor-default' if app['is_current'] else 'bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300'
         icon_cls = 'text-blue-200' if app['is_current'] else 'text-blue-600'
         curr_label = '<span class="text-[10px] opacity-75 font-normal">(當前系列)</span>' if app['is_current'] else ''
-        usage_tags_list.append(f'<a href="{app["url"]}" title="至官網檢視 {escape_html(app["title"])} 應用領域之所有規格與比較表" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 {current_cls} rounded-lg text-xs transition-colors shadow-xs"><i class="fa-solid fa-tag text-[10px] {icon_cls}"></i><span>{escape_html(app["title"])}</span>{curr_label}</a>')
+        href = app.get('category_url') or app['url'] if app['is_current'] else app.get('single_url') or app['url']
+        title_text = f"點擊至官網檢視 {escape_html(app['title'])} 應用領域之所有規格與比較表" if app['is_current'] else f"切換至檢視 {escape_html(name)} 在【{escape_html(app['title'])}】之應用特點與規格"
+        usage_tags_list.append(f'<a href="{href}" title="{title_text}" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 {current_cls} rounded-lg text-xs transition-colors shadow-xs"><i class="fa-solid fa-tag text-[10px] {icon_cls}"></i><span>{escape_html(app["title"])}</span>{curr_label}</a>')
     usage_tags_html = '\n'.join(usage_tags_list)
 
     prop_rows = get_typical_properties_rows(p)
@@ -284,7 +292,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
 
                     <div class="mt-3 pt-2.5 border-t border-slate-200 text-xs text-slate-500 flex items-center gap-1.5">
                         <i class="fa-solid fa-circle-info text-blue-700 shrink-0"></i>
-                        <span>提示：點擊任一標籤可直接前往官網檢閱同領域之完整產品系列與線上規格比對。</span>
+                        <span>提示：點擊任一標籤可直接切換至該應用領域之產品專屬單頁；當前系列標籤可前往比較表。</span>
                     </div>
                 </div>
 
