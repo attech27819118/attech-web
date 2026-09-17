@@ -408,6 +408,18 @@ async function handleContactSubmit(event) {
         }
 
         if (response.ok && result.success) {
+            // 發送 GA4 核心商機轉換事件 (generate_lead)
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    event_category: 'Form_Submission',
+                    event_label: payload.company || '未填公司',
+                    lead_type: isQuickMode ? '快速詢價' : '詳細應用需求',
+                    product_name: (payload.sample || payload.targetProduct || '未指定產品'),
+                    company_name: payload.company || '',
+                    contact_name: payload.contact || ''
+                });
+            }
+
             showToast(result.message || '需求表單已成功送出！專人將儘速與您聯繫。', 'success');
             form.reset();
         } else {
@@ -436,6 +448,17 @@ async function handleContactSubmit(event) {
 
 function requestProductSample(productName, preferredMode = 'quick') {
     if (!productName) return;
+
+    // 發送 GA4 索樣點擊事件 (request_sample_click)
+    if (typeof gtag === 'function') {
+        gtag('event', 'request_sample_click', {
+            event_category: 'Lead_Engagement',
+            event_label: productName,
+            product_name: productName,
+            preferred_mode: preferredMode
+        });
+    }
+
     if (typeof closeCompareModal === 'function') closeCompareModal();
     if (typeof toggleTdsModal === 'function') toggleTdsModal(false);
     if (typeof switchTab === 'function') switchTab('contact');

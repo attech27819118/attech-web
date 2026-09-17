@@ -279,6 +279,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
             </div>
             <div class="flex flex-wrap items-center gap-2.5 shrink-0">
                 <a href="/contact/?product=${safeName}" 
+                    onclick="if(typeof gtag==='function'){gtag('event','request_sample_click',{event_category:'Lead_Engagement',event_label:'${escapeHtml(name)}',product_name:'${escapeHtml(name)}',source:'product_detail'});}"
                     class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>

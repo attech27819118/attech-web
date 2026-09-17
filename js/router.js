@@ -194,6 +194,27 @@ function openModal(productName, type) {
     if (downloadBtn) {
         downloadBtn.href = localPath;
         downloadBtn.download = `${productName}_${type.toUpperCase()}.pdf`;
+        downloadBtn.onclick = function () {
+            if (typeof gtag === 'function') {
+                gtag('event', 'download_tds', {
+                    event_category: 'TDS_Document',
+                    event_label: productName,
+                    product_name: productName,
+                    file_name: `${productName}_${type.toUpperCase()}.pdf`,
+                    doc_type: type
+                });
+            }
+        };
+    }
+
+    // 發送 GA4 TDS 文件預覽事件
+    if (typeof gtag === 'function') {
+        gtag('event', 'view_tds', {
+            event_category: 'TDS_Document',
+            event_label: productName,
+            product_name: productName,
+            doc_type: type
+        });
     }
 
     if (modal) {

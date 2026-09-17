@@ -55,6 +55,13 @@ function debouncedSearch(val) {
             renderGroupedSearchResults(query);
             updateHashRoute(false);
 
+            // 發送 GA4 站內搜尋事件
+            if (typeof gtag === 'function') {
+                gtag('event', 'search', {
+                    search_term: query
+                });
+            }
+
             // 搜尋後平滑捲動至搜尋結果區域，確保使用者第一時間看到結果
             const targetSection = document.getElementById('section-directory-finder');
             if (targetSection) {

@@ -73,6 +73,16 @@ function toggleCompareProduct(productName, partnerKey = null, lineKey = null, pr
             lineKey: lineKey || AppState.productLine,
             product: p
         });
+
+        // 發送 GA4 加入規格比較事件
+        if (typeof gtag === 'function') {
+            gtag('event', 'add_to_compare', {
+                event_category: 'Product_Comparison',
+                event_label: productName,
+                product_name: productName,
+                brand: finalPartner || ''
+            });
+        }
         showToast(AppState.lang === 'zh' ? `已將「${productName}」加入比較清單 (${AppState.compareList.length}/4)` : `Added "${productName}" to comparison (${AppState.compareList.length}/4)`, 'success');
     }
 

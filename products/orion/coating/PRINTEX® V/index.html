@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/MCP-Logo.png">
     <script>
         (function () {
             var baseHref = '/';
@@ -530,6 +532,7 @@
             </div>
             <div class="flex flex-wrap items-center gap-2.5 shrink-0">
                 <a href="/contact/?product=PRINTEX%C2%AE%20V" 
+                    onclick="if(typeof gtag==='function'){gtag('event','request_sample_click',{event_category:'Lead_Engagement',event_label:'PRINTEX® V',product_name:'PRINTEX® V',source:'product_detail'});}"
                     class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
                     <span>索取樣品與技術諮詢</span>
