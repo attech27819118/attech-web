@@ -63,20 +63,13 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
-    <!-- [Google Tag Manager / GA4 追蹤碼] -->
+    <!-- Google tag (gtag.js) - Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CRK9GXG0BN"></script>
     <script>
-        const GTM_ID = 'GTM-XXXXXXX';
-        if (GTM_ID !== 'GTM-XXXXXXX') {
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', GTM_ID);
-        }
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CRK9GXG0BN');
     </script>
 
     <!-- Schema.org 結構化資料 (Organization + WebSite + Catalog ItemList) -->
@@ -112,7 +105,7 @@
                     },
                     "potentialAction": {
                         "@type": "SearchAction",
-                        "target": "https://www.attech.com.tw/products?q={search_term_string}",
+                        "target": "https://www.attech.com.tw/products/?q={search_term_string}",
                         "query-input": "required name=search_term_string"
                     }
                 },
@@ -143,7 +136,7 @@
                             "@type": "ListItem",
                             "position": 4,
                             "name": "其他特化材料 (矽烷偶合劑 / 消光粉 / 馬林酸樹脂 / 密著樹脂)",
-                            "url": "https://www.attech.com.tw/products/others/coating_additive"
+                            "url": "https://www.attech.com.tw/products/others/coating_additive/"
                         }
                     ]
                 }
@@ -177,13 +170,13 @@
 
     <!-- reCAPTCHA v3 防火牆機制 -->
     <script>
-        const RECAPTCHA_KEY = 'YOUR_RECAPTCHA_SITE_KEY';
-        if (RECAPTCHA_KEY !== 'YOUR_RECAPTCHA_SITE_KEY') {
+        window.RECAPTCHA_KEY = '6LcuHMAtAAAAAGyo0sQ4H4ttwY7sYftgJQwvZpDL';
+        (function () {
             const script = document.createElement('script');
-            script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_KEY}`;
+            script.src = `https://www.google.com/recaptcha/api.js?render=${window.RECAPTCHA_KEY}`;
             script.defer = true;
             document.head.appendChild(script);
-        }
+        })();
     </script>
 
     <script type="application/ld+json">
@@ -253,12 +246,6 @@
 </head>
 
 <body class="is-product-detail bg-slate-50 bg-gray-50 text-slate-900 antialiased selection:bg-blue-200 selection:text-blue-950">
-
-    <!-- GTM (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" class="hidden h-0 w-0"
-            title="Google Tag Manager"></iframe>
-    </noscript>
 
     <!-- Toast 通知容器 -->
     <div id="toast-container" class="hidden pointer-events-none fixed bottom-[20px] left-1/2 -translate-x-1/2 z-[100]"
@@ -543,12 +530,12 @@
             </div>
             <div class="flex flex-wrap items-center gap-2.5 shrink-0">
                 <a href="/contact/?product=Micromide%20520" 
-                   class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
                     <i class="fa-solid fa-envelope"></i>
-                    <span>申請樣品與技術諮詢</span>
+                    <span>索取樣品與技術諮詢</span>
                 </a>
                 <a href="/products/mpi/ink/?product=Micromide%20520" 
-                   class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     <span>官網完整規格與 TDS</span>
                 </a>
@@ -565,12 +552,36 @@
                         <i class="fa-solid fa-layer-group text-blue-900"></i> 適合在哪些應用與主要用途
                     </h2>
                     <div class="flex flex-wrap gap-2">
-                        <a href="/products/mpi/powder/Micromide%20520/" title="切換至檢視 Micromide 520 在【粉體塗料】之應用特點與規格" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300 rounded-lg text-xs transition-colors shadow-xs"><i class="fa-solid fa-tag text-[10px] text-blue-600"></i><span>粉體塗料</span></a>
-<a href="/products/mpi/industrial/Micromide%20520/" title="切換至檢視 Micromide 520 在【工業塗料】之應用特點與規格" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300 rounded-lg text-xs transition-colors shadow-xs"><i class="fa-solid fa-tag text-[10px] text-blue-600"></i><span>工業塗料</span></a>
-<a href="/products/mpi/ink/" title="點擊至官網檢視 油墨 應用領域之所有規格與比較表" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-blue-900 text-white font-bold cursor-default rounded-lg text-xs transition-colors shadow-xs"><i class="fa-solid fa-tag text-[10px] text-blue-200"></i><span>油墨</span><span class="text-[10px] opacity-75 font-normal">(當前系列)</span></a>
+                        
+        <a href="/products/mpi/powder/Micromide%20520/" 
+           title="切換至檢視 Micromide 520 在【粉體塗料】之應用特點與規格"
+           class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300 rounded-lg text-xs transition-colors shadow-xs">
+            <i class="fa-solid fa-tag text-[10px] text-blue-600"></i>
+            <span>粉體塗料</span>
+            
+        </a>
+        <a href="/products/mpi/industrial/Micromide%20520/" 
+           title="切換至檢視 Micromide 520 在【工業塗料】之應用特點與規格"
+           class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-blue-50 text-slate-800 hover:text-blue-950 font-semibold border border-slate-300 rounded-lg text-xs transition-colors shadow-xs">
+            <i class="fa-solid fa-tag text-[10px] text-blue-600"></i>
+            <span>工業塗料</span>
+            
+        </a>
+        <a href="/products/mpi/ink/" 
+           title="點擊至官網檢視 油墨 應用領域之所有規格與比較表"
+           class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-blue-900 text-white font-bold cursor-default rounded-lg text-xs transition-colors shadow-xs">
+            <i class="fa-solid fa-tag text-[10px] text-blue-200"></i>
+            <span>油墨</span>
+            <span class="text-[10px] opacity-75 font-normal">(當前系列)</span>
+        </a>
                     </div>
 
-                    <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-2 leading-relaxed"><div><span class="font-bold text-slate-900">詳細應用範疇：</span>木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；金屬粉體。</div><div><span class="font-bold text-slate-900">建議適用系統：</span>溶劑系統和UV系統、粉體系統</div><div><span class="font-bold text-slate-900">建議添加量：</span>0.5-3.0%</div></div>
+                    
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-2 leading-relaxed">
+                        <div><span class="font-bold text-slate-900">詳細應用範疇：</span>木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；金屬粉體。</div>
+                        <div><span class="font-bold text-slate-900">建議適用系統：</span>溶劑系統和UV系統、粉體系統</div>
+                        <div><span class="font-bold text-slate-900">建議添加量：</span>0.5-3.0%</div>
+                    </div>
 
                     <div class="mt-3 pt-2.5 border-t border-slate-200 text-xs text-slate-500 flex items-center gap-1.5">
                         <i class="fa-solid fa-circle-info text-blue-700 shrink-0"></i>
@@ -581,7 +592,7 @@
                 <!-- 性質與特點描述 (單一色底無漸層) -->
                 <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
                     <h2 class="text-sm font-bold text-slate-900 mb-2.5 flex items-center gap-2">
-                        <i class="fa-solid fa-star text-amber-500"></i> 產品描述與特性
+                        <i class="fa-solid fa-star text-amber-500"></i> 產品描述與性能特點
                     </h2>
                     <p class="text-sm text-slate-800 leading-relaxed whitespace-pre-line">符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)
 提高表面滑爽、抗刮傷性能
@@ -590,6 +601,7 @@
 高熔點以提升耐熱性能</p>
                 </div>
 
+                <!-- 代表性物性摘要表格 (若有) -->
                 
                 <div class="border border-slate-200 rounded-xl overflow-hidden shadow-xs">
                     <div class="bg-slate-100 px-4 py-2.5 border-b border-slate-200 font-bold text-xs text-slate-700 uppercase tracking-wider flex items-center gap-2">
@@ -597,7 +609,27 @@
                     </div>
                     <table class="w-full text-left text-sm">
                         <tbody>
-                            <tr class="border-b border-slate-100"><td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">熔點 / 軟化點 (°C)</td><td class="py-2.5 px-4 text-slate-900 font-semibold">141-146</td></tr><tr class="border-b border-slate-100"><td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">平均粒徑 (µm)</td><td class="py-2.5 px-4 text-slate-900 font-semibold">5.0-8.0</td></tr><tr class="border-b border-slate-100"><td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">最大粒徑 (µm)</td><td class="py-2.5 px-4 text-slate-900 font-semibold">22.00</td></tr><tr class="border-b border-slate-100"><td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">密度 / 比重 (g/cm³)</td><td class="py-2.5 px-4 text-slate-900 font-semibold">0.97</td></tr>
+                            
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">熔點 / 軟化點 (°C)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">141-146</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">平均粒徑 (µm)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">5.0-8.0</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">最大粒徑 (µm)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">22.00</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">密度 / 比重 (g/cm³)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">0.97</td>
+        </tr>
+    
                         </tbody>
                     </table>
                 </div>
@@ -693,15 +725,15 @@
     <!-- ==========================================
          前端模組化 JavaScript 腳本庫 (含版本號快取破壞)
          ========================================== -->
-    <script src="/js/state.js?v=20260908_v3"></script>
-    <script src="/js/search-engine.js?v=20260908_v3"></script>
-    <script src="/js/data-repo.js?v=20260908_v3"></script>
-    <script src="/js/filter-engine.js?v=20260908_v3"></script>
-    <script src="/js/table-renderer.js?v=20260908_v3"></script>
-    <script src="/js/compare.js?v=20260908_v3"></script>
-    <script src="/js/contact.js?v=20260908_v3"></script>
-    <script src="/js/router.js?v=20260908_v3"></script>
-    <script src="/js/app.js?v=20260908_v3"></script>
+    <script src="/js/state.js?v=20260917_v1"></script>
+    <script src="/js/search-engine.js?v=20260917_v1"></script>
+    <script src="/js/data-repo.js?v=20260917_v1"></script>
+    <script src="/js/filter-engine.js?v=20260917_v1"></script>
+    <script src="/js/table-renderer.js?v=20260917_v1"></script>
+    <script src="/js/compare.js?v=20260917_v1"></script>
+    <script src="/js/contact.js?v=20260917_v1"></script>
+    <script src="/js/router.js?v=20260917_v1"></script>
+    <script src="/js/app.js?v=20260917_v1"></script>
 </body>
 
 </html>

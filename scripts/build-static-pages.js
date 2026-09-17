@@ -585,7 +585,7 @@ corePages.forEach(page => {
     const html = buildPageHtml({
         title: page.title,
         description: page.description,
-        canonicalPath: page.path === '/about/' ? '/' : page.path,
+        canonicalPath: page.path,
         activeTab: page.tab
     });
     writeStaticHtmlFile(page.path, html);

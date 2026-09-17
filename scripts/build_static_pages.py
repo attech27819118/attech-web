@@ -505,7 +505,7 @@ def main():
     ]
 
     for p_path, p_title, p_desc, p_tab in core_pages:
-        h = build_page_html(template_html, p_title, p_desc, '/' if p_path == '/about/' else p_path, active_tab=p_tab)
+        h = build_page_html(template_html, p_title, p_desc, p_path, active_tab=p_tab)
         write_static_file(p_path, h)
         generated_count += 1
 

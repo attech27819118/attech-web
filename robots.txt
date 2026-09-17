@@ -3,8 +3,12 @@ Allow: /
 
 # 阻擋非網頁之內部文件與歷史失效目錄，節省抓取配額 (Crawl Budget)
 Disallow: /doc/
+Disallow: */doc/
 Disallow: /cgi-bin/
 Disallow: /automotor2014/
+
+# 阻擋帶查詢參數之動態過濾/索樣頁面 (避免重複內容與未建立索引雜訊)
+Disallow: /*?*
 
 # Sitemap 定位
 Sitemap: https://www.attech.com.tw/sitemap.xml

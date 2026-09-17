@@ -372,6 +372,16 @@ async function handleContactSubmit(event) {
     const AWS_API_BASE = window.ATTECH_API_BASE || 'https://uib4yezvl3.execute-api.us-east-1.amazonaws.com/default/attech-send-email';
     const targetUrl = isLocalHost ? 'http://localhost:3000/api/send-email' : AWS_API_BASE;
 
+    // 若已啟用 reCAPTCHA v3，自動取得驗證 Token
+    if (typeof grecaptcha !== 'undefined' && window.RECAPTCHA_KEY) {
+        try {
+            const rcToken = await grecaptcha.execute(window.RECAPTCHA_KEY, { action: 'submit_contact' });
+            if (rcToken) payload.recaptchaToken = rcToken;
+        } catch (rcErr) {
+            console.warn('reCAPTCHA execution error:', rcErr);
+        }
+    }
+
     // 設置 15 秒逾時中斷控制器
     const abortController = new AbortController();
     const timeoutId = setTimeout(() => abortController.abort(), 15000);
