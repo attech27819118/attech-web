@@ -147,11 +147,17 @@
     </script>
 
     <!-- 正式編譯產出的 CSS 檔案 (含版本號快取破壞) -->
-    <link rel="stylesheet" href="/css/output.css?v=20260908_v3">
-    <link rel="stylesheet" href="/css/style.css?v=20260908_v3">
+    <link rel="stylesheet" href="/css/output.css?v=20260917_v1">
+    <link rel="stylesheet" href="/css/style.css?v=20260917_v1">
 
-    <!-- 搜尋即時排版與全幅展示樣式 -->
+    <!-- 搜尋即時排版與全幅展示樣式 & 隱藏 reCAPTCHA 浮動徽章 -->
     <style>
+        .grecaptcha-badge {
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
         body.is-searching #section-partner,
         body.is-searching #directory-sidebar {
             display: none !important;
@@ -2682,6 +2688,11 @@
                                             class="text-red-700 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i
                                                 class="fa-solid fa-file-pdf text-red-600 f-size-xs"></i>PDF</a>
                                     </span><br>填妥請傳真至 <strong>04-2239-5165</strong>。
+                                </p>
+                                <p class="mt-1 text-[11px] text-slate-400 leading-normal">
+                                    本網站採用 Google reCAPTCHA 保護機制，並適用 Google 
+                                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-600">隱私權政策</a> 與 
+                                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-600">服務條款</a>。
                                 </p>
                             </div>
                             <button type="submit" id="form-submit"

@@ -869,3 +869,12 @@ body.is-product-detail .product-seo-detail {
     background-color: #ffffff !important;
     background-image: none !important;
 }
+
+/* ==========================================
+ * 隱藏 Google reCAPTCHA v3 右下角浮動徽章 (依 Google 規範合規隱藏)
+ * ========================================== */
+.grecaptcha-badge {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

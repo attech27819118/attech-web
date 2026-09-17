@@ -147,11 +147,17 @@
     </script>
 
     <!-- 正式編譯產出的 CSS 檔案 (含版本號快取破壞) -->
-    <link rel="stylesheet" href="/css/output.css?v=20260908_v3">
-    <link rel="stylesheet" href="/css/style.css?v=20260908_v3">
+    <link rel="stylesheet" href="/css/output.css?v=20260917_v1">
+    <link rel="stylesheet" href="/css/style.css?v=20260917_v1">
 
-    <!-- 搜尋即時排版與全幅展示樣式 -->
+    <!-- 搜尋即時排版與全幅展示樣式 & 隱藏 reCAPTCHA 浮動徽章 -->
     <style>
+        .grecaptcha-badge {
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
         body.is-searching #section-partner,
         body.is-searching #directory-sidebar {
             display: none !important;
