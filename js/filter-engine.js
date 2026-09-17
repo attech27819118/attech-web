@@ -13,7 +13,7 @@ class ProductFilterEngine {
             const appData = getAppSpecificData(p);
 
             if (tokens.length > 0) {
-                if (!SearchEngine.matchProduct(p, tokens)) return false;
+                if (!SearchEngine.matchProduct(p, tokens, AppState.productLine, currentPartnerKey)) return false;
             }
 
             if (currentPartnerKey === 'mpi') {

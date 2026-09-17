@@ -136,6 +136,8 @@ function renderGroupedSearchResults(query) {
     </tr>`;
     }
 
+    const matchedSections = [];
+
     for (const [configKey, brand] of Object.entries(AppState.configs)) {
         const reversePartnerMap = Object.fromEntries(
             Object.entries(partnerConfigMap).map(([k, v]) => [v, k])
@@ -145,26 +147,48 @@ function renderGroupedSearchResults(query) {
         for (const file of (brand.files || [])) {
             const products = AppState.allProductsCache[file.key] || [];
 
-            const matchedProducts = products.filter(p => {
-                return SearchEngine.matchProduct(p, tokens, file.key, brand.brandName);
-            });
+            const scoredProducts = [];
+            for (const p of products) {
+                const score = SearchEngine.scoreProduct(p, tokens, file.key, brand.brandName);
+                if (score > 0) {
+                    scoredProducts.push({ product: p, score });
+                }
+            }
 
-            if (matchedProducts.length > 0) {
-                totalMatchCount += matchedProducts.length;
-                const sectionTitle = AppState.lang === 'zh' ? file.titleZh : file.titleEn;
+            if (scoredProducts.length > 0) {
+                // 分類內產品依關聯度分數由高至低排序
+                scoredProducts.sort((a, b) => b.score - a.score);
+                matchedSections.push({
+                    configKey,
+                    brand,
+                    partnerName,
+                    file,
+                    items: scoredProducts,
+                    maxScore: scoredProducts[0].score
+                });
+            }
+        }
+    }
 
-                groupedHTML += `
+    // 將包含最高關聯度命中的分類專區排在最上方
+    matchedSections.sort((a, b) => b.maxScore - a.maxScore);
+
+    for (const sec of matchedSections) {
+        totalMatchCount += sec.items.length;
+        const sectionTitle = AppState.lang === 'zh' ? sec.file.titleZh : sec.file.titleEn;
+
+        groupedHTML += `
             <tr class="bg-slate-200 border-y-2 border-blue-600 text-slate-900 f-size-sm">
                 <td colspan="4" class="py-2.5 px-4 tracking-wide">
                     <div class="flex items-center justify-between">
                         <span class="flex items-center gap-2 f-size-sm f-weight-bold text-slate-900">
                             <i class="fa-solid fa-folder-open text-blue-700"></i>
-                            【${brand.brandName}】 ${sectionTitle}
-                            <span class="f-size-xs f-weight-normal text-slate-700">(${matchedProducts.length} 項結果)</span>
+                            【${sec.brand.brandName}】 ${sectionTitle}
+                            <span class="f-size-xs f-weight-normal text-slate-700">(${sec.items.length} 項結果)</span>
                         </span>
-                        <button onclick="navigateToCategory('${partnerName}', '${file.key}', 'all')"
-                                title="前往【${brand.brandName}】${sectionTitle}分類專區"
-                                aria-label="前往【${brand.brandName}】${sectionTitle}分類專區"
+                        <button onclick="navigateToCategory('${sec.partnerName}', '${sec.file.key}', 'all')"
+                                title="前往【${sec.brand.brandName}】${sectionTitle}分類專區"
+                                aria-label="前往【${sec.brand.brandName}】${sectionTitle}分類專區"
                                 class="px-3 py-1 bg-blue-700 hover:bg-blue-800 text-white rounded f-size-xs f-weight-bold flex items-center gap-1.5 transition-all active:scale-95 shadow-sm">
                             <span>前往該分類專區</span>
                             <i class="fa-solid fa-arrow-right f-size-xs" aria-hidden="true"></i>
@@ -173,20 +197,20 @@ function renderGroupedSearchResults(query) {
                 </td>
             </tr>`;
 
-                matchedProducts.forEach((p) => {
-                    const appData = getAppSpecificData(p, file.key);
-                    const rawName = p.product_name || '—';
-                    const rawComp = p.composition_zh || p.chemical_component || p.composition_en || '—';
-                    const rawProps = p.properties || p.performance || '—';
-                    const rawUsage = p.main_usage || p.application_fields_zh || (appData.featured_categories || []).join(', ') || (p.featured_categories || []).join(', ') || '—';
+        sec.items.forEach(({ product: p }) => {
+            const appData = getAppSpecificData(p, sec.file.key);
+            const rawName = p.product_name || '—';
+            const rawComp = p.composition_zh || p.chemical_component || p.composition_en || '—';
+            const rawProps = p.properties || p.performance || '—';
+            const rawUsage = p.main_usage || p.application_fields_zh || (appData.featured_categories || []).join(', ') || (p.featured_categories || []).join(', ') || '—';
 
-                    const highlightedName = SearchEngine.highlight(rawName, tokens);
-                    const highlightedComp = SearchEngine.highlight(rawComp, tokens);
-                    const highlightedProps = SearchEngine.highlight(rawProps, tokens);
-                    const highlightedUsage = SearchEngine.highlight(rawUsage, tokens);
-                    const safeTitleName = rawName.replace(/"/g, '&quot;');
+            const highlightedName = SearchEngine.highlight(rawName, tokens);
+            const highlightedComp = SearchEngine.highlight(rawComp, tokens);
+            const highlightedProps = SearchEngine.highlight(rawProps, tokens);
+            const highlightedUsage = SearchEngine.highlight(rawUsage, tokens);
+            const safeTitleName = rawName.replace(/"/g, '&quot;');
 
-                    groupedHTML += `
+            groupedHTML += `
                 <tr class="hover:bg-blue-50/50 border-b border-gray-200 f-size-sm transition-colors">
                     <td class="py-3 px-3.5 f-weight-bold text-slate-900 align-top">
                         <div class="flex flex-col items-start gap-1 w-full">
@@ -194,15 +218,15 @@ function renderGroupedSearchResults(query) {
                                 <div class="text-blue-950 f-weight-extrabold f-size-sm break-words leading-snug">${highlightedName}</div>
                                 <div class="f-size-xs text-slate-600 f-weight-normal mt-0.5 break-words">${highlightedComp}</div>
                             </div>
-                            ${renderCompareIcon(p, partnerName, file.key)}
+                            ${renderCompareIcon(p, sec.partnerName, sec.file.key)}
                         </div>
                     </td>
                     <td class="py-3 px-3.5 text-slate-800 f-weight-normal align-top leading-relaxed whitespace-pre-line">${highlightedProps}</td>
                     <td class="py-3 px-3.5 text-slate-800 f-weight-normal align-top leading-relaxed whitespace-pre-line">${highlightedUsage}</td>
                     <td class="py-3 px-3.5 text-slate-600 align-top text-center">
                         <div class="flex flex-col items-center gap-1.5">
-                            <span class="f-size-xs text-slate-600 f-weight-bold">${partnerName}</span>
-                            <button onclick="navigateToCategory('${partnerName}', '${file.key}', 'all', decodeURIComponent('${encodeURIComponent(rawName).replace(/'/g, '%27')}'))"
+                            <span class="f-size-xs text-slate-600 f-weight-bold">${sec.partnerName}</span>
+                            <button onclick="navigateToCategory('${sec.partnerName}', '${sec.file.key}', 'all', decodeURIComponent('${encodeURIComponent(rawName).replace(/'/g, '%27')}'))"
                                     title="查看 ${safeTitleName} 詳細資訊"
                                     aria-label="查看 ${safeTitleName} 詳細資訊"
                                     class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded f-weight-bold f-size-xs shadow-sm flex items-center gap-1 transition-all active:scale-95">
@@ -212,9 +236,7 @@ function renderGroupedSearchResults(query) {
                         </div>
                     </td>
                 </tr>`;
-                });
-            }
-        }
+        });
     }
 
     document.getElementById('dir-match-count').innerText = totalMatchCount;
@@ -524,6 +546,15 @@ function renderProducts() {
             const valB = b[AppState.sortColumn] !== undefined ? b[AppState.sortColumn] : b.typical_properties?.[AppState.sortColumn];
             return compareSortValues(valA, valB, AppState.sortOrder);
         });
+    } else if (AppState.searchQuery) {
+        const tokens = SearchEngine.parseTokens(AppState.searchQuery);
+        if (tokens.length > 0) {
+            filtered.sort((a, b) => {
+                const scoreA = SearchEngine.scoreProduct(a, tokens, AppState.productLine, currentPartnerKey);
+                const scoreB = SearchEngine.scoreProduct(b, tokens, AppState.productLine, currentPartnerKey);
+                return scoreB - scoreA;
+            });
+        }
     }
 
     document.getElementById('dir-match-count').innerText = filtered.length;
