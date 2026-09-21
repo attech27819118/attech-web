@@ -626,14 +626,18 @@ function updatePageMeta(type, extra = '') {
     } else if (type === 'search') {
         titleEl.innerText = `「${extra}」搜尋結果 | ${baseTitle}`;
     } else if (type === 'product' && extra) {
-        const brandName = getProductBrandName(extra);
-        titleEl.innerText = `${extra} (${brandName}) | 宏威應用材料 ATTech Materials`;
+        let brandName = getProductBrandName(extra);
+        if (!brandName || brandName === 'Others' || brandName === 'others') {
+            brandName = '宏威特化';
+        }
+        titleEl.innerText = `${extra} | ${brandName} 宏威應用材料`;
     } else if (type === 'products') {
         const configKey = partnerConfigMap[AppState.partner] || 'mpi';
         const brandConfig = AppState.configs ? AppState.configs[configKey] : null;
         const currentFile = brandConfig?.files?.find(f => f.key === AppState.productLine);
         const lineTitle = currentFile ? currentFile.titleZh : '特用化學品目錄';
-        titleEl.innerText = `${lineTitle} | 宏威應用材料 ATTech Materials`;
+        const brandLabel = (AppState.partner === 'Others' || AppState.partner === 'others') ? '特化材料' : (brandConfig?.brandName || AppState.partner);
+        titleEl.innerText = `${lineTitle} (${brandLabel}) | 宏威應用材料 ATTech Materials`;
     }
 }
 
