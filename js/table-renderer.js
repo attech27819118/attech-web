@@ -73,9 +73,9 @@ const DynamicTableRenderer = {
         matting_agent: {
             headerRows: [
                 [
-                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
-                    {title: '<span class="th-title">表面處理</span><br><span class="th-title">化學性質</span>', class: 'min-w-[105px] text-center'},
-                    {title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center'},
+                    { title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center' },
+                    { title: '<span class="th-title">表面處理</span><br><span class="th-title">化學性質</span>', class: 'min-w-[105px] text-center' },
+                    { title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center' },
                     {
                         title: '<span class="th-title">粒徑</span><span class="th-unit">(µm)</span>',
                         class: 'min-w-[55px] text-center'
@@ -88,15 +88,15 @@ const DynamicTableRenderer = {
                         title: '<span class="th-title">密度</span><span class="th-unit">(g/cm³)</span>',
                         class: 'min-w-[62px] text-center'
                     },
-                    {title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center'},
-                    {title: '<span class="th-app">木器漆</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">烤漆</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">塑膠塗料</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">皮革塗料</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">尼龍織物</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">油墨</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">水性</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">UV</span>', class: 'min-w-[36px] px-1 text-center'}
+                    { title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center' },
+                    { title: '<span class="th-app">木器漆</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">烤漆</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">塑膠塗料</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">皮革塗料</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">尼龍織物</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">油墨</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">水性</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">UV</span>', class: 'min-w-[36px] px-1 text-center' }
                 ]
             ],
             columns: [
@@ -188,21 +188,21 @@ const DynamicTableRenderer = {
         maleic_acid_resin: {
             headerRows: [
                 [
-                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
-                    {title: '<span class="th-title">色澤</span>', class: 'min-w-[50px] text-center'},
-                    {title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[60px] text-center'},
+                    { title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center' },
+                    { title: '<span class="th-title">色澤</span>', class: 'min-w-[50px] text-center' },
+                    { title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[60px] text-center' },
                     {
                         title: '<span class="th-title">酸值</span><span class="th-unit">(mgKOH/g)</span>',
                         class: 'min-w-[85px] text-center'
                     },
-                    {title: '<span class="th-title">特性</span>', class: 'min-w-[130px] text-center'},
-                    {title: '<span class="th-app">木器漆</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">噴瓷漆</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">PU機械漆</span>', class: 'min-w-[42px] px-1 text-center'},
-                    {title: '<span class="th-app">路標漆</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">油墨</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">熱熔膠</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">密封膠</span>', class: 'min-w-[36px] px-1 text-center'}
+                    { title: '<span class="th-title">特性</span>', class: 'min-w-[130px] text-center' },
+                    { title: '<span class="th-app">木器漆</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">噴瓷漆</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">PU機械漆</span>', class: 'min-w-[42px] px-1 text-center' },
+                    { title: '<span class="th-app">路標漆</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">油墨</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">熱熔膠</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">密封膠</span>', class: 'min-w-[36px] px-1 text-center' }
                 ]
             ],
             columns: [
@@ -277,8 +277,8 @@ const DynamicTableRenderer = {
         silane: {
             headerRows: [
                 [
-                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center'},
-                    {title: '<span class="th-title">描述 / 主成分</span>', class: 'min-w-[115px] text-center'},
+                    { title: '<span class="th-title">產品名稱</span>', class: 'min-w-[130px] text-center' },
+                    { title: '<span class="th-title">描述 / 主成分</span>', class: 'min-w-[115px] text-center' },
                     {
                         title: '<span class="th-title">密度</span><span class="th-unit">(g/cm³)</span>',
                         class: 'min-w-[62px] text-center'
@@ -291,13 +291,13 @@ const DynamicTableRenderer = {
                         title: '<span class="th-title">沸點</span><span class="th-unit">(°C)</span>',
                         class: 'min-w-[55px] text-center'
                     },
-                    {title: '<span class="th-title">pH</span>', class: 'min-w-[45px] text-center'},
-                    {title: '<span class="th-title">特性 / 優點</span>', class: 'min-w-[120px] text-center'},
-                    {title: '<span class="th-app">密著促進</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">化學合成</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">共黏合劑</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">交聯劑</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">表面改質</span>', class: 'min-w-[36px] px-1 text-center'}
+                    { title: '<span class="th-title">pH</span>', class: 'min-w-[45px] text-center' },
+                    { title: '<span class="th-title">特性 / 優點</span>', class: 'min-w-[120px] text-center' },
+                    { title: '<span class="th-app">密著促進</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">化學合成</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">共黏合劑</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">交聯劑</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">表面改質</span>', class: 'min-w-[36px] px-1 text-center' }
                 ]
             ],
             columns: [
@@ -373,15 +373,15 @@ const DynamicTableRenderer = {
         cpo_adhesion_promoter: {
             headerRows: [
                 [
-                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center'},
-                    {title: '<span class="th-title">化學性質</span>', class: 'min-w-[140px] text-center'},
-                    {title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center'},
-                    {title: '<span class="th-title">玻璃轉化點</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center'},
-                    {title: '<span class="th-title">氯含量</span><span class="th-unit">(%)</span>', class: 'min-w-[55px] text-center'},
-                    {title: '<span class="th-title">黏度</span><span class="th-unit">(mPa·s)</span>', class: 'min-w-[65px] text-center'},
-                    {title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center'},
-                    {title: '<span class="th-app">油墨</span>', class: 'min-w-[38px] px-1 text-center'},
-                    {title: '<span class="th-app">塗料</span>', class: 'min-w-[38px] px-1 text-center'}
+                    { title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center' },
+                    { title: '<span class="th-title">化學性質</span>', class: 'min-w-[140px] text-center' },
+                    { title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center' },
+                    { title: '<span class="th-title">玻璃轉化點</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center' },
+                    { title: '<span class="th-title">氯含量</span><span class="th-unit">(%)</span>', class: 'min-w-[55px] text-center' },
+                    { title: '<span class="th-title">黏度</span><span class="th-unit">(mPa·s)</span>', class: 'min-w-[65px] text-center' },
+                    { title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center' },
+                    { title: '<span class="th-app">油墨</span>', class: 'min-w-[38px] px-1 text-center' },
+                    { title: '<span class="th-app">塗料</span>', class: 'min-w-[38px] px-1 text-center' }
                 ]
             ],
             columns: [
@@ -443,13 +443,13 @@ const DynamicTableRenderer = {
         adhesion_promoter: {
             headerRows: [
                 [
-                    {title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center'},
-                    {title: '<span class="th-title">化學性質</span>', class: 'min-w-[170px] text-center'},
-                    {title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center'},
-                    {title: '<span class="th-title">玻璃轉化點</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center'},
-                    {title: '<span class="th-title">羥基</span><span class="th-unit">OH value</span>', class: 'min-w-[70px] text-center'},
-                    {title: '<span class="th-title">酸價</span>', class: 'min-w-[50px] text-center'},
-                    {title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center'},
+                    { title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center' },
+                    { title: '<span class="th-title">化學性質</span>', class: 'min-w-[170px] text-center' },
+                    { title: '<span class="th-title">適用系統</span>', class: 'min-w-[75px] text-center' },
+                    { title: '<span class="th-title">玻璃轉化點</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center' },
+                    { title: '<span class="th-title">羥基</span><span class="th-unit">OH value</span>', class: 'min-w-[70px] text-center' },
+                    { title: '<span class="th-title">酸價</span>', class: 'min-w-[50px] text-center' },
+                    { title: '<span class="th-title">作用</span>', class: 'min-w-[120px] text-center' },
                     {
                         title: '<span class="th-app">木器漆</span>',
                         class: 'min-w-[36px] px-1 text-center'
@@ -470,8 +470,8 @@ const DynamicTableRenderer = {
                         title: '<span class="th-app">油墨</span>',
                         class: 'min-w-[36px] px-1 text-center'
                     },
-                    {title: '<span class="th-app">水性</span>', class: 'min-w-[36px] px-1 text-center'},
-                    {title: '<span class="th-app">UV</span>', class: 'min-w-[36px] px-1 text-center'}
+                    { title: '<span class="th-app">水性</span>', class: 'min-w-[36px] px-1 text-center' },
+                    { title: '<span class="th-app">UV</span>', class: 'min-w-[36px] px-1 text-center' }
                 ]
             ],
             columns: [
@@ -704,7 +704,7 @@ const DynamicTableRenderer = {
             {
                 id: 'comp',
                 title: '<span class="th-title">作用</span>',
-                class: 'min-w-[90px] text-center',
+                class: 'min-w-[100px] text-center',
                 getValue: p => p.chemical_component || p.composition_zh,
                 render: p => `<span class="whitespace-pre-line leading-relaxed f-weight-normal text-slate-800 break-words">${p.chemical_component || p.composition_zh || '—'}</span>`
             },
@@ -738,37 +738,37 @@ const DynamicTableRenderer = {
             {
                 id: 'casting_elastomers',
                 title: '<span class="th-app">灌注型彈性體</span>',
-                class: 'min-w-[50px] px-1 text-center f-weight-bold text-blue-950',
+                class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.casting_elastomers || p.casting_elastomer || p.system?.casting_elastomers || p.system?.casting_elastomer || p.applications?.casting_elastomers || p.applications?.casting_elastomer) ? '✓' : ' '
             },
             {
                 id: 'cold_casting_elastomers',
                 title: '<span class="th-app">灌注型彈性體 冷</span>',
-                class: 'min-w-[68px] px-1 text-center f-weight-bold text-blue-950',
+                class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.cold_casting_elastomers || p.cold_casting_elastomer || p.system?.cold_casting_elastomers || p.system?.cold_casting_elastomer || p.applications?.cold_casting_elastomers || p.applications?.cold_casting_elastomer) ? '✓' : ' '
             },
             {
                 id: 'hot_casting_elastomers',
                 title: '<span class="th-app">灌注型彈性體 熱</span>',
-                class: 'min-w-[68px] px-1 text-center f-weight-bold text-blue-950',
+                class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.hot_casting_elastomers || p.hot_casting_elastomer || p.system?.hot_casting_elastomers || p.system?.hot_casting_elastomer || p.applications?.hot_casting_elastomers || p.applications?.hot_casting_elastomer) ? '✓' : ' '
             },
             {
                 id: 'pu_foam_soft_and_rigid_foams',
                 title: '<span class="th-app">軟質及硬質發泡</span>',
-                class: 'min-w-[62px] px-1 text-center f-weight-bold text-blue-950',
+                class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.pu_foam_soft_and_rigid_foams || p.pu_foam || p.system?.pu_foam_soft_and_rigid_foams || p.system?.pu_foam || p.applications?.pu_foam_soft_and_rigid_foams || p.applications?.pu_foam) ? '✓' : ' '
             },
             {
                 id: 'sealants',
                 title: '<span class="th-app">黏著劑與密封膠</span>',
-                class: 'min-w-[62px] px-1 text-center f-weight-bold text-blue-950',
+                class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.sealants || p.sealant || p.system?.sealants || p.system?.sealant || p.applications?.sealants || p.applications?.sealant) ? '✓' : ' '
             },
             {
                 id: 'composites',
                 title: '<span class="th-app">複合材料</span>',
-                class: 'min-w-[42px] px-1 text-center f-weight-bold text-blue-950',
+                class: 'min-w-[36px] px-1 text-center f-weight-bold text-blue-950',
                 getValue: p => (p.composites || p.composite || p.system?.composites || p.system?.composite || p.applications?.composites || p.applications?.composite) ? '✓' : ' '
             }
         ],
@@ -961,7 +961,7 @@ function renderCategorizedBadges(p) {
     const ratings = appData.performance_ratings || p.performance_ratings;
     if (!ratings) return '—';
 
-    const plusMap = {1: '+', 2: '++', 3: '+++'};
+    const plusMap = { 1: '+', 2: '++', 3: '+++' };
 
     // 依色彩與性能類別嚴格分組（照顏色換行）
     const groups = {
@@ -1066,7 +1066,7 @@ function renderAccordionDetailCard(p) {
             return `<li class="text-slate-900 mb-1 f-size-sm"><strong class="text-slate-950 f-weight-bold">${label}：</strong><span class="whitespace-pre-line f-weight-normal">${desc}</span></li>`;
         }).join('');
 
-    const plusMap = {1: '+', 2: '++', 3: '+++'};
+    const plusMap = { 1: '+', 2: '++', 3: '+++' };
 
     const categoryHierarchyStyles = {
         "ptfe": {
@@ -1092,7 +1092,7 @@ function renderAccordionDetailCard(p) {
     };
 
     const categoryOrder = ["ptfe", "scratch_and_abrasion", "texture", "special"];
-    const groupedBadges = {"ptfe": [], "scratch_and_abrasion": [], "texture": [], "special": []};
+    const groupedBadges = { "ptfe": [], "scratch_and_abrasion": [], "texture": [], "special": [] };
 
     const ratings = appData.performance_ratings || p.performance_ratings;
     if (ratings) {
