@@ -277,6 +277,24 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
         : `完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看 ${escapeHtml(name)} 之詳細規格與技術資料。`;
     const bannerButtonText = isMpi ? 'TDS 與完整規格' : '詳細規格與技術資料';
 
+    const isPolyester = (lineKey === 'polyester_resin' || lineKey === 'polyester_polyol' || lineKey === 'modified_polyol');
+    const benchmarkCardHtml = isPolyester ? `
+                <!-- 導流卡片：歐系同級對標支援與索樣 (保密型) -->
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-flask-vial"></i> 同級規格對標與測試
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">歐系同級規格平替評估</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                        本品具備優異耐熱、附著與耐候特性，適用於評估對標歐系知名飽和聚酯與結晶多元醇（如 DYNAPOL® / DYNACOLL® 同級應用）。為保護客戶配方機密，完整對照型號不對外公開，歡迎申請樣品進行平行比對測試。
+                    </p>
+                    <a href="/contact/?product=${safeName}" 
+                       class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
+                        <i class="fa-solid fa-vial"></i>
+                        <span>索取測試樣品與技術諮詢</span>
+                    </a>
+                </div>` : '';
+
     return `
     <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
         <!-- 頂部產品基本資訊與快速操作 (純白卡片無漸層) -->
@@ -359,6 +377,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
 
             <!-- 右側 1 欄：官網產品比較導流與原廠支援 (單一色底無漸層，統一風格) -->
             <div class="space-y-6">
+                ${benchmarkCardHtml}
                 <!-- 導流卡片 1：線上產品比較 -->
                 <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
                     <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
@@ -366,7 +385,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">需要比較同系列其他產品？</h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 ${escapeHtml(brandName)} ${escapeHtml(lineTitle)} 各產品的物性規格與適用系統。
+                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 ${escapeHtml(displayBrandBadge)} ${escapeHtml(lineTitle)} 各產品的物性規格與適用系統。
                     </p>
                     <a href="/products/${partnerKey}/${lineKey}/" 
                        class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
@@ -544,6 +563,36 @@ ${preRenderedContent}
             const breadcrumbHtml = `<a href="/products/" class="text-slate-500 hover:text-blue-900 hover:underline transition-colors font-medium">產品</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${brandLink}" class="text-slate-600 hover:text-blue-900 hover:underline transition-colors font-semibold">${escapeHtml(categoryMeta.brandName)}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${lineLink}" class="text-slate-700 hover:text-blue-900 hover:underline transition-colors font-semibold">${escapeHtml(categoryMeta.lineTitle)}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">全部</span>`;
             html = html.replace(/<span id="dir-current-path"[^>]*>.*?<\/span>/, `<span id="dir-current-path" class="text-blue-950 f-weight-bold">${breadcrumbHtml}</span>`);
             html = html.replace(/<span id="dir-match-count"[^>]*>.*?<\/span>/, `<span id="dir-match-count" class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">${categoryMeta.matchCount}</span>`);
+
+            if (lineSlug === 'polyester_resin') {
+                const benchmarkBannerHtml = `
+                    <div class="mb-5 rounded-xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/60 p-4 sm:p-5 shadow-xs">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <div class="space-y-1">
+                                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-900 text-xs font-bold">
+                                    <i class="fa-solid fa-flask-vial"></i> 技術對標與選型支援
+                                </div>
+                                <h4 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
+                                    歐系高階聚酯樹脂 / 結晶多元醇 同級平替與配方評估
+                                </h4>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
+                                    針對業界歐系熱塑性飽和共聚酯（<strong>DYNAPOL®</strong> 同級）及反應型結晶多元醇（<strong>DYNACOLL®</strong> 同級）之應用需求，宏威材料提供物性平行比對、相容性評估與高品質平替方案。為保護客戶配方機密，完整對標清單不對外公開，歡迎聯繫技術團隊索取一對一選型建議與測試樣品。
+                                </p>
+                                <div class="text-[11px] text-slate-400 mt-1">
+                                    * DYNAPOL® 與 DYNACOLL® 為 Evonik 註冊商標，文中所述型號僅用於同級性能選型參考。
+                                </div>
+                            </div>
+                            <div class="shrink-0 w-full sm:w-auto">
+                                <a href="/contact/?mode=detailed" 
+                                   class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors active:scale-95 whitespace-nowrap">
+                                    <i class="fa-solid fa-vial"></i>
+                                    <span>申請對標諮詢 / 索取樣品</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>`;
+                html = html.replace(/(<div class="table-container)/, `${benchmarkBannerHtml}\n                        $1`);
+            }
         }
     }
 
@@ -869,11 +918,36 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             }))
         };
 
+        let pageSchema = itemListSchema;
+        if (lineSlug === 'polyester_resin') {
+            pageSchema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    itemListSchema,
+                    {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "宏威材料是否提供對應 DYNAPOL® 或 DYNACOLL® 的同級聚酯樹脂產品？",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "是的，宏威應用材料提供多款性能對標歐系熱塑性飽和共聚酯（DYNAPOL® 同級）與反應型結晶多元醇（DYNACOLL® 同級）之高性能產品。為保護客戶配方機密，具體型號對照清單不對外公開，歡迎聯繫我們的技術人員索取一對一選型建議與樣品進行平行測試。"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            };
+        }
+
         const linePageTitle = isOthers
             ? `${lineTitle} 特化材料系列 | 宏威應用材料 ATTech Materials`
             : `${lineTitle} (${brandName}) | 宏威應用材料 ATTech Materials`;
         const linePageDesc = isOthers
-            ? `宏威應用材料精選特化材料 ${lineTitle}，提供 ${products.map(p => p.product_name || p.name).slice(0, 8).join(', ')} 等規格之物性參數比對與樣品申請。`
+            ? (lineSlug === 'polyester_resin'
+                ? `宏威應用材料精選特化材料 聚酯樹脂系列，對標歐系知名高分子量共聚酯 (DYNAPOL®) 與反應型結晶聚酯多元醇 (DYNACOLL®)，提供 RS 6059, RS 6067, RS 6069, RS 6073 等規格之物性參數比對與樣品申請。`
+                : `宏威應用材料精選特化材料 ${lineTitle}，提供 ${products.map(p => p.product_name || p.name).slice(0, 8).join(', ')} 等規格之物性參數比對與樣品申請。`)
             : `宏威應用材料精選 ${brandName} ${lineTitle} 特用化學品，提供 ${products.map(p => p.product_name || p.name).slice(0, 8).join(', ')} 等品項之物性參數與免費索樣。`;
 
         const lineHtml = buildPageHtml({
@@ -882,7 +956,7 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
             canonicalPath: linePath,
             activeTab: 'products',
             preRenderedContent: tableContentHtml,
-            schemaJson: itemListSchema,
+            schemaJson: pageSchema,
             categoryMeta: {
                 brandName: brandName === 'Others' ? '特化材料' : brandName,
                 lineTitle: lineTitle,
