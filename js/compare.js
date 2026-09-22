@@ -63,7 +63,7 @@ function toggleCompareProduct(productName, partnerKey = null, lineKey = null, pr
         if (!finalPartner || finalPartner === 'MPI') {
             if (p.brand_code === 'dorfketal' || p.brand === 'dorfketal') finalPartner = 'DorfKetal';
             else if (p.brand_code === 'orion' || p.brand === 'orion') finalPartner = 'Orion';
-            else if (p.brand_code === 'others' || p.brand === 'others') finalPartner = 'Others';
+            else if (p.brand_code === 'others' || p.brand === 'others' || p.brand_code === 'kuller') finalPartner = 'Others';
             else if (p.applications_data) finalPartner = 'MPI';
             else finalPartner = partnerKey || AppState.partner;
         }
@@ -220,7 +220,7 @@ function extractProductSpecs(p, item) {
     if (!partnerKey || partnerKey === 'MPI') {
         if (p.brand_code === 'dorfketal' || p.brand === 'dorfketal') partnerKey = 'DorfKetal';
         else if (p.brand_code === 'orion' || p.brand === 'orion') partnerKey = 'Orion';
-        else if (p.brand_code === 'others' || p.brand === 'others') partnerKey = 'Others';
+        else if (p.brand_code === 'others' || p.brand === 'others' || p.brand_code === 'kuller') partnerKey = 'Others';
         else if (p.applications_data) partnerKey = 'MPI';
         else partnerKey = item?.partnerKey || 'MPI';
     }
@@ -303,13 +303,14 @@ function extractProductSpecs(p, item) {
         usage: usage,
 
         melt_point: tp.melt_point_c || tp.melt_point || p.melt_point_c || p.melt_point || '',
+        glass_transition_temp: tp.glass_transition_temp_c || p.glass_transition_temp_c || p.tg || '',
         mean_size: (tp.mean_particle_size_um && tp.mean_particle_size_um !== '—') ? tp.mean_particle_size_um : (p.mean_particle_size_um || p.particle_size || tp.mean_size || ''),
         primary_particle_size: tp.average_primary_particle_size_nm || tp.primary_particle_size || p.average_primary_particle_size_nm || p.primary_particle_size || '',
         max_size: tp.max_particle_size_um ? `${tp.max_particle_size_um} µm` : (p.max_particle_size_um || tp.max_size || ''),
         density: tp.density_g_cc_25c || tp.density || p.density_g_cc_25c || p.density || '',
-        softening_point: tp.softening_point || p.softening_point || '',
+        softening_point: tp.softening_point_c || tp.softening_point || p.softening_point || '',
         acid_value: tp.acid_value || p.acid_value || '',
-        oh_value: tp.OH_value || p.OH_value || p.oh_value || tp.oh_value || '',
+        oh_value: tp.hydroxyl_value || tp.OH_value || p.OH_value || p.oh_value || tp.oh_value || '',
         chlorine: tp.chlorine_content || p.chlorine_content || p.chlorine || '',
         viscosity: tp.viscosity || p.viscosity || '',
         molecular_weight: tp.molecular_weight || p.molecular_weight || '',
@@ -371,6 +372,7 @@ const specCategories = [
         categoryIcon: 'fa-gauge-high',
         rows: [
             {key: 'melt_point', label: {zh: '熔點 (°C)', en: 'Melt Point (°C)'}, type: 'value'},
+            {key: 'glass_transition_temp', label: {zh: '玻璃化轉化溫度 Tg (°C)', en: 'Glass Transition Temp Tg (°C)'}, type: 'value'},
             {key: 'mean_size', label: {zh: '平均粒徑 D50 (µm)', en: 'Mean Size D50 (µm)'}, type: 'value'},
             {
                 key: 'primary_particle_size',

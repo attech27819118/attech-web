@@ -168,6 +168,15 @@ function getProductDescription(p, partnerKey, lineKey) {
     } else if (!desc && pLower === 'others') {
         if (lineKey === 'silane') {
             desc = `高性能矽烷偶合劑（${p.composition_zh || '有機矽烷'}），能顯著改善無機填料與有機基體間之相容性，提升界面附著力、耐水性與力學機械強度。`;
+        } else if (lineKey === 'polyester_resin' || lineKey === 'polyester_polyol' || lineKey === 'modified_polyol') {
+            const subCat = (p.featured_categories && p.featured_categories[0]) || '';
+            if (subCat === '低分子量聚酯樹脂' || lineKey === 'polyester_polyol') {
+                desc = `Kuller 低分子量聚酯樹脂 / 聚酯多元醇（${p.composition_zh || '聚酯多元醇'}），物態呈${p.appearance}，分子量約 ${p.typical_properties?.molecular_weight || '—'}，羥值 ${p.typical_properties?.hydroxyl_value || '—'} mgKOH/g。主要應用於${p.application_fields_zh || '聚氨酯熱熔膠與彈性體'}等體系，具備優異的黏著強度、耐溫性與耐候水解性能。`;
+            } else if (subCat === '改性多元醇' || lineKey === 'modified_polyol') {
+                desc = `Kuller 特種改性多元醇（${p.composition_zh || '改性多元醇'}），物態呈${p.appearance}，分子量約 ${p.typical_properties?.molecular_weight || '—'}，羥值 ${p.typical_properties?.hydroxyl_value || '—'} mgKOH/g。專為${p.application_fields_zh || '聚氨酯熱熔膠'}開發，具備優越的接著力、柔韌性與反應相容性。`;
+            } else {
+                desc = `Kuller 高分子量聚酯樹脂（${p.composition_zh || '聚酯樹脂'}），物態呈${p.appearance}，玻璃化溫度 Tg 達 ${p.typical_properties?.glass_transition_temp_c ?? '—'}°C，分子量約 ${p.typical_properties?.molecular_weight || '—'}。廣泛應用於${p.application_fields_zh || '印刷油墨、粘合劑、罐頭塗料'}等，賦予塗層卓越的附著力、耐化學品性與加工成型性。`;
+            }
         }
     }
 
@@ -188,13 +197,16 @@ function getTypicalPropertiesRows(p) {
     };
 
     // 微粉蠟、樹脂與化學品通用物性
-    addRow('熔點 / 軟化點 (°C)', t.melt_point_c || p.softening_point);
+    if (t.melt_point_c) addRow('熔點 (°C)', t.melt_point_c);
+    if (t.softening_point_c || p.softening_point) addRow('軟化點 (°C)', t.softening_point_c || p.softening_point);
+    addRow('玻璃化溫度 Tg (°C)', t.glass_transition_temp_c || p.glass_transition_temp_c);
+    addRow('羥值 (mg KOH/g)', t.hydroxyl_value || p.hydroxyl_value);
     addRow('平均粒徑 (µm)', t.mean_particle_size_um || p.particle_size);
     addRow('最大粒徑 (µm)', t.max_particle_size_um);
     addRow('密度 / 比重 (g/cm³)', t.density_g_cc_25c || p.density || p.specific_gravity);
     addRow('酸價 (mg KOH/g)', t.acid_value || p.acid_value);
     addRow('閃點 (°C)', t.flash_point || p.flash_point);
-    addRow('分子量 (Mw)', t.molecular_weight);
+    addRow('分子量 (Mw / Mn)', t.molecular_weight);
     addRow('外觀 / 狀態', p.appearance);
     addRow('固成份 / 活性物含量 (%)', t.solid_content || t.active_content || p.active_content);
     addRow('黏度 (mPa·s / cSt)', t.viscosity || p.viscosity);
@@ -674,6 +686,19 @@ function getProductSeoInfo(p, partnerSlug, lineSlug, brandName, lineTitle) {
         } else if (lLower === 'adhesion_promoter') {
             categoryTag = '特用密著促進劑';
             categorySubTitle = '非氯系特用密著促進劑 (金屬與工程塑膠塗層)';
+        } else if (lLower === 'polyester_resin' || lLower === 'polyester_polyol' || lLower === 'modified_polyol') {
+            brandDisplay = 'Kuller';
+            const subCat = (p.featured_categories && p.featured_categories[0]) || '';
+            if (subCat === '低分子量聚酯樹脂' || lLower === 'polyester_polyol') {
+                categoryTag = '低分子量聚酯樹脂';
+                categorySubTitle = '低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)';
+            } else if (subCat === '改性多元醇' || lLower === 'modified_polyol') {
+                categoryTag = '改性多元醇';
+                categorySubTitle = '特種改性多元醇 (聚氨酯熱熔膠/軟包裝)';
+            } else {
+                categoryTag = '高分子量聚酯樹脂';
+                categorySubTitle = '高分子量聚酯樹脂 (DYNAPOL/DYNACOLL替代品)';
+            }
         } else {
             categorySubTitle = lineTitle;
         }
@@ -781,11 +806,11 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
     const partnerPath = `/products/${partnerSlug}/`;
     const isMpi = partnerSlug === 'mpi';
     const isOthers = partnerSlug === 'others';
-    const partnerDisplayTitle = isOthers ? '特化材料助劑系列 (消光粉/馬林酸樹脂/矽烷/密著促進劑)' : `${brandName} 特用化學品系列`;
+    const partnerDisplayTitle = isOthers ? '特化材料助劑系列 (聚酯樹脂/消光粉/馬林酸樹脂/矽烷/密著促進劑)' : `${brandName} 特用化學品系列`;
     const partnerDesc = isMpi
         ? `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、TDS技術資料下載與樣品申請服務。`
         : (isOthers
-            ? `宏威應用材料精選特化材料助劑系列，涵蓋二氧化矽消光粉、馬林酸樹脂、矽烷偶合劑、粉體塗料功能性助劑、CPO密著促進劑等，提供規格對比、詳細物性參數與免費索樣服務。`
+            ? `宏威應用材料精選特化材料助劑系列，涵蓋聚酯樹脂、二氧化矽消光粉、馬林酸樹脂、矽烷偶合劑、粉體塗料功能性助劑、CPO密著促進劑等，提供規格對比、詳細物性參數與免費索樣服務。`
             : `宏威應用材料代理銷售 ${brandName} 全系列特用化學品，提供規格對比、產品詳細參數與樣品申請服務。`);
     const partnerHtml = buildPageHtml({
         title: `${partnerDisplayTitle} | 宏威應用材料 ATTech Materials`,

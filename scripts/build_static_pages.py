@@ -162,7 +162,10 @@ def get_typical_properties_rows(p):
         if val is not None and str(val).strip() not in ('', '—', 'N/A'):
             rows.append({'label': label, 'val': str(val).strip()})
 
-    add_row('熔點 / 軟化點 (°C)', t.get('melt_point_c') or p.get('softening_point'))
+    if t.get('melt_point_c'):
+        add_row('熔點 (°C)', t.get('melt_point_c'))
+    if t.get('softening_point_c') or p.get('softening_point'):
+        add_row('軟化點 (°C)', t.get('softening_point_c') or p.get('softening_point'))
     add_row('平均粒徑 (µm)', t.get('mean_particle_size_um') or p.get('particle_size'))
     add_row('最大粒徑 (µm)', t.get('max_particle_size_um'))
     add_row('密度 / 比重 (g/cm³)', t.get('density_g_cc_25c') or p.get('density') or p.get('specific_gravity'))

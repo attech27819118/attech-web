@@ -298,6 +298,7 @@ function switchPartner(partnerKey) {
     AppState.partner = partnerKey;
     AppState.selectedProduct = null;
     AppState.expandedDetails = [];
+    AppState.sortColumn = null;
     const configKey = partnerConfigMap[partnerKey] || 'mpi';
     const brandConfig = AppState.configs[configKey];
     if (brandConfig && brandConfig.files && brandConfig.files[0]) {
@@ -408,7 +409,10 @@ function renderDirectoryTree() {
         'matting_agent': 'fa-cloud',
         'cpo_adhesion_promoter': 'fa-link',
         'adhesion_promoter': 'fa-magnet',
-        'maleic_acid_resin': 'fa-dna'
+        'maleic_acid_resin': 'fa-dna',
+        'polyester_polyol': 'fa-flask',
+        'modified_polyol': 'fa-vial-virus',
+        'polyester_resin': 'fa-gem'
     };
 
     treeMenu.innerHTML = brandConfig.files.map(file => {
@@ -547,10 +551,20 @@ function renderProducts() {
         filters: AppState.filters
     });
 
+    const activeFields = DynamicTableRenderer.getActiveFields(currentPartnerKey, filtered);
+
     if (AppState.sortColumn) {
+        const columns = activeFields.columns || (Array.isArray(activeFields) ? activeFields : []);
+        const colDef = columns.find(c => (c.propKey && c.propKey === AppState.sortColumn) || (c.id && c.id === AppState.sortColumn));
         filtered.sort((a, b) => {
-            const valA = a[AppState.sortColumn] !== undefined ? a[AppState.sortColumn] : a.typical_properties?.[AppState.sortColumn];
-            const valB = b[AppState.sortColumn] !== undefined ? b[AppState.sortColumn] : b.typical_properties?.[AppState.sortColumn];
+            let valA, valB;
+            if (colDef && typeof colDef.getValue === 'function') {
+                valA = colDef.getValue(a);
+                valB = colDef.getValue(b);
+            } else {
+                valA = a[AppState.sortColumn] !== undefined ? a[AppState.sortColumn] : a.typical_properties?.[AppState.sortColumn];
+                valB = b[AppState.sortColumn] !== undefined ? b[AppState.sortColumn] : b.typical_properties?.[AppState.sortColumn];
+            }
             return compareSortValues(valA, valB, AppState.sortOrder);
         });
     } else if (AppState.searchQuery) {
@@ -566,7 +580,6 @@ function renderProducts() {
 
     document.getElementById('dir-match-count').innerText = filtered.length;
 
-    const activeFields = DynamicTableRenderer.getActiveFields(currentPartnerKey, filtered);
     if (thead) thead.innerHTML = DynamicTableRenderer.getHeaderHTML(activeFields);
 
     const colCount = activeFields.columns ? activeFields.columns.length : activeFields.length;
@@ -658,6 +671,9 @@ function selectDirectoryNode(lineKey, categoryKey = 'all', preserveExpanded = fa
     if (!preserveExpanded) {
         AppState.expandedDetails = [];
         AppState.selectedProduct = null;
+    }
+    if (lineKey !== AppState.productLine) {
+        AppState.sortColumn = null;
     }
     AppState.productLine = lineKey;
     AppState.category = categoryKey;

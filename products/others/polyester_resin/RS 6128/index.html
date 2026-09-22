@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            var baseHref = '/';
+            if (window.location.hostname.endsWith('github.io')) {
+                var repo = window.location.pathname.split('/').filter(Boolean)[0];
+                if (repo) baseHref = '/' + repo + '/';
+            }
+            document.write('<base href="' + baseHref + '">');
+            window.APP_BASE_HREF = baseHref;
+
+            window.SVG_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%2394a3b8'%3ENo Image%3C/text%3E%3C/svg%3E";
+
+            window.handleImageFallback = function (img, localSrc) {
+                if (!img) return;
+                if (!img.dataset.fallbackStep) {
+                    img.dataset.fallbackStep = "1";
+                    if (localSrc) {
+                        var clean = localSrc.replace(/^\.?\//, '');
+                        img.src = (baseHref + clean).replace(/\/+/g, '/');
+                        return;
+                    }
+                }
+                img.onerror = null;
+                img.src = window.SVG_PLACEHOLDER;
+                img.classList.add('opacity-70');
+            };
+        })();
+    </script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="img/MCP-Logo.png">
+    <title id="web-title">RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂) | Kuller 宏威應用材料</title>
+
+    <!-- SEO & Metadata -->
+    <meta name="google-site-verification" content="Qh-v0xNgiYGwqRPK7ew3VTJmxopJivHruUclmmA6TOQ" />
+    <meta name="description" content="Kuller RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)：聚酯多元醇，Kuller 低分子量聚酯樹脂 / 聚酯多元醇（聚酯多元醇），物態呈液態，分子量約 5500，羥值 18-25 mgKOH/g。主要應用於聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝等體系，具備優異的黏著強度、耐溫性與... 適合應用：低分子量聚酯樹脂。提供產品規格比較、詳細物性參數與樣品申請。">
+    <meta name="keywords"
+        content="特用化學品, PTFE取代, 微粉蠟, Micro Powders, Dorf Ketal, Tyzor, Orion碳黑, 工業塗料, 粉體塗料, 耐磨劑, 消光劑, 宏威應用材料">
+    <link rel="canonical" href="https://www.attech.com.tw/products/others/polyester_resin/RS%206128/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Open Graph / Facebook / LINE -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="宏威應用材料 ATTech Materials">
+    <meta property="og:url" content="https://www.attech.com.tw/products/others/polyester_resin/RS%206128/">
+    <meta property="og:title" content="RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂) | Kuller 宏威應用材料">
+    <meta property="og:description" content="Kuller RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)：聚酯多元醇，Kuller 低分子量聚酯樹脂 / 聚酯多元醇（聚酯多元醇），物態呈液態，分子量約 5500，羥值 18-25 mgKOH/g。主要應用於聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝等體系，具備優異的黏著強度、耐溫性與... 適合應用：低分子量聚酯樹脂。提供產品規格比較、詳細物性參數與樣品申請。">
+    <meta property="og:image" content="https://www.attech.com.tw/img/MCP-Logo.png">
+    <meta property="og:locale" content="zh_TW">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.attech.com.tw/products/others/polyester_resin/RS%206128/">
+    <meta name="twitter:title" content="RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂) | Kuller 宏威應用材料">
+    <meta name="twitter:description" content="Kuller RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)：聚酯多元醇，Kuller 低分子量聚酯樹脂 / 聚酯多元醇（聚酯多元醇），物態呈液態，分子量約 5500，羥值 18-25 mgKOH/g。主要應用於聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝等體系，具備優異的黏著強度、耐溫性與... 適合應用：低分子量聚酯樹脂。提供產品規格比較、詳細物性參數與樣品申請。">
+    <meta name="twitter:image" content="https://www.attech.com.tw/img/MCP-Logo.png">
+
+    <!-- 最佳化第三方資源預連線 (Preconnect) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+    <!-- Google tag (gtag.js) - Google Analytics 4 (GA4) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        (function () {
+            var hostname = window.location.hostname;
+            var isLocal = ['localhost', '127.0.0.1', ''].indexOf(hostname) !== -1 ||
+                window.location.protocol === 'file:' ||
+                hostname.endsWith('.local') ||
+                /^(192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.)/.test(hostname);
+            if (isLocal) {
+                window['ga-disable-G-RC6CHE673V'] = true;
+                console.log('[GA4] 本地開發環境，已自動停用 Google Analytics 追蹤 (G-RC6CHE673V)');
+                return;
+            }
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RC6CHE673V';
+            document.head.appendChild(script);
+            gtag('js', new Date());
+            gtag('config', 'G-RC6CHE673V');
+        })();
+    </script>
+
+    <!-- Schema.org 結構化資料 (Organization + WebSite + Catalog ItemList) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://www.attech.com.tw/#organization",
+                    "name": "宏威應用材料 Discover The Link To Life",
+                    "alternateName": "宏威應用材料",
+                    "url": "https://www.attech.com.tw",
+                    "logo": "https://www.attech.com.tw/img/MCP-Logo.png",
+                    "description": "專業特用化學品供應商，代理銷售 Micro Powders 微粉蠟、Dorf Ketal 鈦鋯酸酯與潤滑油添加劑、Orion 特級碳黑、矽烷偶合劑、消光粉等高性能工業材料。",
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "telephone": "+886-4-2239-8056",
+                            "contactType": "sales",
+                            "email": "atservice@attech.com.tw",
+                            "availableLanguage": ["zh-TW", "en"]
+                        }
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://www.attech.com.tw/#website",
+                    "url": "https://www.attech.com.tw",
+                    "name": "宏威應用材料 Discover The Link To Life",
+                    "publisher": {
+                        "@id": "https://www.attech.com.tw/#organization"
+                    },
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": "https://www.attech.com.tw/products/?q={search_term_string}",
+                        "query-input": "required name=search_term_string"
+                    }
+                },
+                {
+                    "@type": "ItemList",
+                    "@id": "https://www.attech.com.tw/#catalog",
+                    "name": "特用化學品產品線目錄",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Micro Powders 微粉蠟與 PTFE 取代系列",
+                            "url": "https://www.attech.com.tw/products/mpi/ptfe/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Dorf Ketal Tyzor® 鈦酸酯與鋯酸酯催化劑",
+                            "url": "https://www.attech.com.tw/products/dorfketal/tyzor/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Orion 塗料與油墨特級碳黑",
+                            "url": "https://www.attech.com.tw/products/orion/coating/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "name": "其他特化材料 (聚酯樹脂 / 矽烷偶合劑 / 消光粉 / 馬林酸樹脂)",
+                            "url": "https://www.attech.com.tw/products/others/polyester_resin/"
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+
+    <!-- 正式編譯產出的 CSS 檔案 (含版本號快取破壞) -->
+    <link rel="stylesheet" href="css/output.css?v=20260917_v1">
+    <link rel="stylesheet" href="css/style.css?v=20260917_v1">
+
+    <!-- 搜尋即時排版與全幅展示樣式 & 隱藏 reCAPTCHA 浮動徽章 -->
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        body.is-searching #section-partner,
+        body.is-searching #directory-sidebar {
+            display: none !important;
+        }
+
+        body.is-searching #directory-main {
+            width: 100% !important;
+            flex: 1 1 100% !important;
+        }
+    </style>
+
+    <!-- FontAwesome 非同步非阻塞載入 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <!-- reCAPTCHA v3 防火牆機制 -->
+    <script>
+        window.RECAPTCHA_KEY = '6LcuHMAtAAAAAGyo0sQ4H4ttwY7sYftgJQwvZpDL';
+        (function () {
+            const script = document.createElement('script');
+            script.src = `https://www.google.com/recaptcha/api.js?render=${window.RECAPTCHA_KEY}`;
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://www.attech.com.tw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "產品",
+          "item": "https://www.attech.com.tw/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "特化材料",
+          "item": "https://www.attech.com.tw/products/others/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "聚酯樹脂",
+          "item": "https://www.attech.com.tw/products/others/polyester_resin/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)",
+          "item": "https://www.attech.com.tw/products/others/polyester_resin/RS%206128/"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)",
+      "alternateName": [
+        "RS 6128",
+        "低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)"
+      ],
+      "category": "低分子量聚酯樹脂",
+      "image": "https://www.attech.com.tw/img/MCP-Logo.png",
+      "description": "Kuller RS 6128 低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)：主要成分：聚酯多元醇。適用體系與應用領域：低分子量聚酯樹脂。特性說明：Kuller 低分子量聚酯樹脂 / 聚酯多元醇（聚酯多元醇），物態呈液態，分子量約 5500，羥值 18-25 mgKOH/g。主要應用於聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝等體系，具備優異的黏著強度、耐溫性與耐候水解性能。。宏威應用材料提供原廠規格書 TDS 下載、樣品申請與技術諮詢。",
+      "brand": {
+        "@type": "Brand",
+        "name": "Kuller"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.attech.com.tw/products/others/polyester_resin/RS%206128/",
+        "price": "0",
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "宏威應用材料 ATTech Materials"
+        }
+      }
+    }
+  ]
+}
+    </script>
+</head>
+
+<body class="is-product-detail bg-slate-50 bg-gray-50 text-slate-900 antialiased selection:bg-blue-200 selection:text-blue-950">
+
+    <!-- Toast 通知容器 -->
+    <div id="toast-container" class="hidden pointer-events-none fixed bottom-[20px] left-1/2 -translate-x-1/2 z-[100]"
+        role="status" aria-live="polite">
+        <div id="toast-message"
+            class="bg-slate-900 text-white px-5 py-2.5 rounded-xl shadow-2xl flex items-center gap-2.5 f-size-base f-weight-bold">
+            <i class="fa-solid fa-circle-check text-emerald-400 f-size-lg" aria-hidden="true"></i>
+            <span id="toast-text">需求訊息已成功送出！</span>
+        </div>
+    </div>
+
+    <!-- 導覽列 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 attech-accent">
+        <div class="optimized-container px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 gap-4">
+                <a href="./" class="flex items-center cursor-pointer active:scale-[0.98] shrink-0 no-underline"
+                    id="nav-brand-logo" aria-label="回到首頁/關於宏威">
+                    <div class="flex-shrink-0 flex flex-col justify-center w-full">
+                        <!-- 第一行：中文標題（水平均分） + AT 方塊（靠右） -->
+                        <div class="flex items-center justify-between w-full gap-3">
+                            <span
+                                class="flex-1 flex justify-between f-weight-extrabold f-size-2xl text-blue-950 tracking-tight leading-tight">
+                                <span>宏</span><span>威</span><span>應</span><span>用</span><span>材</span><span>料</span>
+                            </span>
+                            <div
+                                class="flex-shrink-0 w-9 h-9 bg-gradient-to-br from-blue-900 to-indigo-800 text-white flex items-center justify-center f-weight-bold f-size-2xl rounded shadow-inner tracking-wider border border-blue-700">
+                                AT
+                            </div>
+                        </div>
+                        <!-- 第二行：英文副標題 -->
+                        <span class="f-size-xs text-slate-600 f-weight-bold tracking-widest uppercase mt-0.5">Discover
+                            The Link To Life</span>
+                    </div>
+                </a>
+
+                <!-- 全域導覽列搜尋框（桌面版） -->
+                <!-- 全域搜尋已在獨立產品頁移除 -->
+
+                <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="tablist" aria-label="網站主要選單">
+                    <a href="./" id="nav-about" role="tab" aria-selected="false" aria-controls="tab-about"
+                        class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 h-16 inline-flex items-center">
+                        首頁
+                    </a>
+                    <!-- 導覽列產品項目 (包含 Mega Menu) -->
+                    <div class="relative group">
+                        <a href="products/" id="nav-products" role="tab" aria-selected="true"
+                            class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 inline-flex items-center gap-1.5 h-16">
+                            產品
+                        </a>
+
+                        <!-- Mega Menu 下拉容器 -->
+                        <div
+                            class="hidden group-hover:block fixed left-0 right-0 top-16 w-full bg-white shadow-2xl border-b border-gray-200 z-50 transition-all">
+                            <div class="optimized-container max-w-7xl mx-auto px-6 py-7">
+                                <div class="flex items-center justify-between pb-3 mb-5 border-b border-gray-100">
+                                    <span class="text-xl font-bold uppercase tracking-widest text-slate-400">產品目錄</span>
+                                    <a class="text-xl text-blue-900 font-bold hover:underline cursor-pointer"
+                                        href="products/">
+                                        瀏覽所有產品 →
+                                    </a>
+                                </div>
+
+                                <!-- 4 欄式產品網格 -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                                    <!-- Column 1 -->
+                                    <div class="space-y-4">
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/dorfketal/tyzor/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Organic Titanates and Zirconates
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">鈦酸酯與鋯酸酯,
+                                                Tyzor
+                                            </div>
+                                        </a>
+
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/others/silane/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Silane / 矽烷偶合劑
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">Dynasylan /
+                                                hydrosil 系列
+                                            </div>
+                                        </a>
+
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/dorfketal/chain/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Chain Extender / 擴鏈劑
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">Unilink &
+                                                Clearlink 系列
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- Column 2 -->
+                                    <div class="space-y-4">
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/orion/coating/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Special Carbon Black
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">特級碳黑 /
+                                                導電碳黑
+                                            </div>
+                                        </a>
+
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/mpi/ptfe/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Micronized Wax / 微粉蠟
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">PTFE 取代 /
+                                                耐磨耐刮助劑
+                                            </div>
+                                        </a>
+
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/others/matting_agent/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Matting Agent / 消光粉
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">二氧化矽 /
+                                                表面處理消光
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- Column 3 -->
+                                    <div class="space-y-4">
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/others/maleic_acid_resin/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Maleic Resin / 馬林酸樹脂
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">
+                                                松香改性馬林酸樹脂
+                                            </div>
+                                        </a>
+
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/others/cpo_adhesion_promoter/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Adhesion Resin / 密著樹脂
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">氯化聚烯烴 (CPO) &
+                                                非氯系
+                                            </div>
+                                        </a>
+
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/others/coating_additive/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Powder Coating Additive
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">
+                                                粉體塗料專用功能性助劑
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- Column 4 -->
+                                    <div class="space-y-4">
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/dorfketal/px/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                PX Lubricant Additives
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">潤滑油添加劑 (原
+                                                ExxonMobil)
+                                            </div>
+                                        </a>
+
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/others/polyester_resin/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Polyester Resin / 聚酯樹酯
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">
+                                                高分子量聚酯樹脂 (DYNAPOL/DYNACOLL替代品)
+                                            </div>
+                                        </a>
+
+                                        <div
+                                            class="bg-gradient-to-br from-slate-900 to-blue-950 rounded-lg p-3.5 text-white shadow-sm mt-2">
+                                            <div class="text-base font-bold text-blue-300 mb-1">找不到合適產品？</div>
+                                            <p class="text-base text-slate-300 leading-relaxed mb-3">
+                                                使用規格諮詢表單，由專人為您配對最適配方。</p>
+                                            <a href="contact/?mode=detailed"
+                                                class="block w-full text-center py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded text-base font-bold transition-all">
+                                                填寫需求評估
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="partners/" id="nav-partners" role="tab" aria-selected="false" aria-controls="tab-partners"
+                        class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
+                        合作夥伴
+                    </a>
+                    <a href="contact/" id="nav-contact" role="tab" aria-selected="false" aria-controls="tab-contact"
+                        class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
+                        聯絡我們
+                    </a>
+                </div>
+            </div>
+
+            <!-- 行動裝置版分頁導覽列 -->
+            <div class="flex md:hidden items-center justify-between gap-1.5 pb-2 pt-1 border-t border-gray-100"
+                role="tablist" aria-label="行動版主要選單">
+                <a href="./" id="mobile-nav-about" role="tab" aria-selected="false"
+                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs">
+                    首頁
+                </a>
+                <a href="products/" id="mobile-nav-products" role="tab" aria-selected="true"
+                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
+                    產品專區
+                </a>
+                <a href="partners/" id="mobile-nav-partners" role="tab" aria-selected="false"
+                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
+                    合作夥伴
+                </a>
+                <a href="contact/" id="mobile-nav-contact" role="tab" aria-selected="false"
+                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
+                    聯絡我們
+                </a>
+            </div>
+
+            <!-- 行動裝置版搜尋框 -->
+            <!-- 行動版全域搜尋已在獨立產品頁移除 -->
+        </div>
+    </nav>
+
+    <main class="min-h-[80vh]">
+        <section id="tab-products" class="tab-content active" role="tabpanel" aria-labelledby="nav-products">
+            <div class="optimized-container px-4 py-6">
+                <div id="section-product-detail" class="w-full">
+
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-3 border-b border-slate-200">
+                <a href="/products/others/polyester_resin/" class="inline-flex items-center gap-2 text-sm font-bold text-slate-800 hover:text-blue-900 transition-colors">
+                    <i class="fa-solid fa-arrow-left"></i> 返回 Kuller 聚酯樹脂 產品列表與規格比較
+                </a>
+                <nav class="flex items-center gap-1.5 text-xs text-slate-500 font-medium" aria-label="麵包屑導航">
+                    <a href="/" class="hover:underline">首頁</a>
+                    <span>/</span>
+                    <a href="/products/" class="hover:underline">產品</a>
+                    <span>/</span>
+                    <a href="/products/others/" class="hover:underline">Kuller</a>
+                    <span>/</span>
+                    <a href="/products/others/polyester_resin/" class="hover:underline">聚酯樹脂</a>
+                    <span>/</span>
+                    <span class="text-slate-900 font-bold">RS 6128</span>
+                </nav>
+            </div>
+
+    <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
+        <!-- 頂部產品基本資訊與快速操作 (純白卡片無漸層) -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5 pb-6 border-b border-slate-200">
+            <div>
+                <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">Kuller</span>
+                    <span class="inline-block px-3 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">低分子量聚酯樹脂</span>
+                </div>
+                <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight flex flex-wrap items-baseline gap-2">
+                    <span>RS 6128</span>
+                    <span class="text-base sm:text-2xl font-bold text-blue-900">低分子量聚酯樹脂 / 聚酯多元醇 (熱熔膠/彈性體/UV樹脂)</span>
+                </h1>
+                <p class="text-sm text-slate-600 mt-2 font-medium">
+                    主要化學成分：<span class="text-slate-900 font-semibold">聚酯多元醇</span>
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+                <a href="/contact/?product=RS%206128" 
+                    onclick="if(typeof gtag==='function'){gtag('event','request_sample_click',{event_category:'Lead_Engagement',event_label:'RS 6128',product_name:'RS 6128',source:'product_detail'});}"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-xs transition-colors active:scale-95">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>索取樣品與技術諮詢</span>
+                </a>
+                <a href="/products/others/polyester_resin/?product=RS%206128" 
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-50 text-blue-900 border border-blue-300 rounded-xl text-sm font-bold transition-colors">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>官網完整規格與特性</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 產品核心內容區塊 -->
+        <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- 左側 2 欄：應用領域、特點描述與代表物性 -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- 適合在哪些應用與主要用途 (純色背景無漸層) -->
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <h2 class="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-blue-900"></i> 適合在哪些應用與主要用途
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        
+        <a href="/products/others/polyester_resin/?category=%E4%BD%8E%E5%88%86%E5%AD%90%E9%87%8F%E8%81%9A%E9%85%AF%E6%A8%B9%E8%84%82" 
+           title="點擊至官網檢視 低分子量聚酯樹脂 應用領域之所有規格與比較表"
+           class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-blue-900 text-white font-bold cursor-default rounded-lg text-xs transition-colors shadow-xs">
+            <i class="fa-solid fa-tag text-[10px] text-blue-200"></i>
+            <span>低分子量聚酯樹脂</span>
+            <span class="text-[10px] opacity-75 font-normal">(當前系列)</span>
+        </a>
+                    </div>
+
+                    
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-2 leading-relaxed">
+                        <div><span class="font-bold text-slate-900">詳細應用範疇：</span>聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝</div>
+                        
+                        
+                    </div>
+
+                    <div class="mt-3 pt-2.5 border-t border-slate-200 text-xs text-slate-500 flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-info text-blue-700 shrink-0"></i>
+                        <span>提示：點擊任一標籤可直接切換至該應用領域之產品專屬單頁；當前系列標籤可前往比較表。</span>
+                    </div>
+                </div>
+
+                <!-- 性質與特點描述 (單一色底無漸層) -->
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <h2 class="text-sm font-bold text-slate-900 mb-2.5 flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-500"></i> 產品描述與性能特點
+                    </h2>
+                    <p class="text-sm text-slate-800 leading-relaxed whitespace-pre-line">Kuller 低分子量聚酯樹脂 / 聚酯多元醇（聚酯多元醇），物態呈液態，分子量約 5500，羥值 18-25 mgKOH/g。主要應用於聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝等體系，具備優異的黏著強度、耐溫性與耐候水解性能。</p>
+                </div>
+
+                <!-- 代表性物性摘要表格 (若有) -->
+                
+                <div class="border border-slate-200 rounded-xl overflow-hidden shadow-xs">
+                    <div class="bg-slate-100 px-4 py-2.5 border-b border-slate-200 font-bold text-xs text-slate-700 uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-chart-simple text-blue-900"></i> 代表性物性摘要 (Typical Properties)
+                    </div>
+                    <table class="w-full text-left text-sm">
+                        <tbody>
+                            
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">玻璃化溫度 Tg (°C)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">-50</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">羥值 (mg KOH/g)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">18-25</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">酸價 (mg KOH/g)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">≤2</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">分子量 (Mw / Mn)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">5500</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">外觀 / 狀態</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">液態</td>
+        </tr>
+    
+        <tr class="border-b border-slate-100">
+            <td class="py-2.5 px-4 font-bold text-slate-700 bg-slate-50/80 w-2/5">固成份 / 活性物含量 (%)</td>
+            <td class="py-2.5 px-4 text-slate-900 font-semibold">100</td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 右側 1 欄：官網產品比較導流與原廠支援 (單一色底無漸層，統一風格) -->
+            <div class="space-y-6">
+                <!-- 導流卡片 1：線上產品比較 -->
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-scale-balanced"></i> 產品線上對比功能
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">需要比較同系列其他產品？</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 Others 聚酯樹脂 各產品的物性規格與適用系統。
+                    </p>
+                    <a href="/products/others/polyester_resin/" 
+                       class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
+                        <span>進入 聚酯樹脂 完整規格比較表</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 導流卡片 2：原廠正品技術保證 (單一色底無漸層，統一風格) -->
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-shield-halved text-blue-800"></i> 原廠正品技術支援
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">宏威應用材料 專業技術</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        宏威應用材料為 Kuller 在台灣之專業特用化學代理商，備有原廠技術規格、樣品庫存與應用技術諮詢服務。
+                    </p>
+                    <div class="pt-3 border-t border-slate-200 text-xs text-slate-700 space-y-2.5">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速樣品申請</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供完整產品物性與技術諮詢</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 leading-relaxed">
+                        電話諮詢：04-2239-8056<br>
+                        技術信箱：atservice@attech.com.tw
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部大橫幅：官網深入互動導流 (純深石板灰底色無漸層) -->
+        <div class="mt-8 bg-slate-900 text-white rounded-xl p-6 sm:p-8 border border-slate-800 shadow-sm">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                <div>
+                    <div class="flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-building"></i> 宏威應用材料 官方產品資料庫
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white">
+                        需要檢視完整技術數據？
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
+                        完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看 RS 6128 之詳細規格與技術資料。
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto">
+                    <a href="/products/others/polyester_resin/?product=RS%206128" 
+                       class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-sm transition-colors active:scale-95">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>詳細規格與技術資料</span>
+                    </a>
+                    <a href="/contact/?product=RS%206128" 
+                       class="flex-1 lg:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-slate-100 text-slate-900 rounded-xl text-sm font-bold transition-colors">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>申請樣品</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-300 py-6 text-center f-size-sm border-t border-slate-800">
+        <p id="footer-warning" class="f-weight-normal">
+            本公司代理及銷售之產品，均使用於工業用途，不得自行使用於醫療及食品相關行業。</p>
+        <p class="mt-1 f-weight-semibold">© <span id="year">2026</span> 宏威應用材料 Discover The Link To Life. All rights
+            reserved.</p>
+    </footer>
+
+    <!-- ==========================================
+         前端模組化 JavaScript 腳本庫 (含版本號快取破壞)
+         ========================================== -->
+    <script src="js/state.js?v=20260917_v1"></script>
+    <script src="js/search-engine.js?v=20260917_v1"></script>
+    <script src="js/data-repo.js?v=20260917_v1"></script>
+    <script src="js/filter-engine.js?v=20260917_v1"></script>
+    <script src="js/table-renderer.js?v=20260917_v1"></script>
+    <script src="js/compare.js?v=20260917_v1"></script>
+    <script src="js/contact.js?v=20260917_v1"></script>
+    <script src="js/router.js?v=20260917_v1"></script>
+    <script src="js/app.js?v=20260917_v1"></script>
+</body>
+
+</html>

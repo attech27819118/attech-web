@@ -4,28 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            var baseHref = '/';
+            if (window.location.hostname.endsWith('github.io')) {
+                var repo = window.location.pathname.split('/').filter(Boolean)[0];
+                if (repo) baseHref = '/' + repo + '/';
+            }
+            document.write('<base href="' + baseHref + '">');
+        })();
+    </script>
     <title>技術資料表 (TDS) 下載專區 | 宏威應用材料 ATTech Materials</title>
     <meta name="description" content="宏威應用材料特用化學品原廠技術規格書 (TDS) 與物性資料表下載中心，提供 Micro Powders、Dorf Ketal 等品牌完整技術資料。">
     <link rel="canonical" href="https://www.attech.com.tw/tds/">
-    <meta http-equiv="refresh" content="3;url=/products/">
+    <meta http-equiv="refresh" content="3;url=products/">
     <!-- 引入全站核心樣式 -->
-    <link rel="stylesheet" href="/css/output.css?v=20260907_v2">
-    <link rel="stylesheet" href="/css/style.css?v=20260907_v2">
+    <link rel="stylesheet" href="css/output.css?v=20260907_v2">
+    <link rel="stylesheet" href="css/style.css?v=20260907_v2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="bg-gray-50 text-slate-900 antialiased min-h-screen flex flex-col justify-between">
     <header class="bg-white shadow-sm border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-3 no-underline">
+            <a href="./" class="flex items-center gap-3 no-underline">
                 <span class="font-extrabold text-2xl text-blue-950 tracking-tight">宏威應用材料</span>
                 <span class="text-xs bg-blue-900 text-white font-bold px-2 py-0.5 rounded">AT</span>
             </a>
             <nav class="flex items-center gap-4 text-sm font-semibold">
-                <a href="/" class="text-slate-700 hover:text-blue-900">首頁</a>
-                <a href="/products/" class="text-blue-900 font-bold">產品目錄</a>
-                <a href="/partners/" class="text-slate-700 hover:text-blue-900">合作夥伴</a>
-                <a href="/contact/" class="text-slate-700 hover:text-blue-900">聯絡我們</a>
+                <a href="./" class="text-slate-700 hover:text-blue-900">首頁</a>
+                <a href="products/" class="text-blue-900 font-bold">產品目錄</a>
+                <a href="partners/" class="text-slate-700 hover:text-blue-900">合作夥伴</a>
+                <a href="contact/" class="text-slate-700 hover:text-blue-900">聯絡我們</a>
             </nav>
         </div>
     </header>
@@ -40,11 +50,11 @@
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="/products/" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-md transition-all active:scale-95">
+            <a href="products/" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-sm font-bold shadow-md transition-all active:scale-95">
                 <i class="fa-solid fa-table-list"></i>
                 <span>前往產品目錄瀏覽與下載 TDS</span>
             </a>
-            <a href="/contact/" class="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 rounded-xl text-sm font-bold shadow-xs transition-all">
+            <a href="contact/" class="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 rounded-xl text-sm font-bold shadow-xs transition-all">
                 <i class="fa-solid fa-envelope"></i>
                 <span>索取特化材料樣品與技術諮詢</span>
             </a>

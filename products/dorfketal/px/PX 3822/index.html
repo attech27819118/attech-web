@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/img/MCP-Logo.png">
     <script>
         (function () {
             var baseHref = '/';
@@ -13,9 +11,8 @@
                 var repo = window.location.pathname.split('/').filter(Boolean)[0];
                 if (repo) baseHref = '/' + repo + '/';
             }
-            var baseEl = document.createElement('base');
-            baseEl.href = baseHref;
-            document.head.appendChild(baseEl);
+            document.write('<base href="' + baseHref + '">');
+            window.APP_BASE_HREF = baseHref;
 
             window.SVG_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%2394a3b8'%3ENo Image%3C/text%3E%3C/svg%3E";
 
@@ -35,6 +32,8 @@
             };
         })();
     </script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="img/MCP-Logo.png">
     <title id="web-title">PX 3822 高性能潤滑油功能添加劑 (抗氧/防腐蝕/抗磨損) | Dorf Ketal 宏威應用材料</title>
 
     <!-- SEO & Metadata -->
@@ -66,12 +65,27 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
     <!-- Google tag (gtag.js) - Google Analytics 4 (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC6CHE673V"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-RC6CHE673V');
+        (function () {
+            var hostname = window.location.hostname;
+            var isLocal = ['localhost', '127.0.0.1', ''].indexOf(hostname) !== -1 ||
+                window.location.protocol === 'file:' ||
+                hostname.endsWith('.local') ||
+                /^(192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.)/.test(hostname);
+            if (isLocal) {
+                window['ga-disable-G-RC6CHE673V'] = true;
+                console.log('[GA4] 本地開發環境，已自動停用 Google Analytics 追蹤 (G-RC6CHE673V)');
+                return;
+            }
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RC6CHE673V';
+            document.head.appendChild(script);
+            gtag('js', new Date());
+            gtag('config', 'G-RC6CHE673V');
+        })();
     </script>
 
     <!-- Schema.org 結構化資料 (Organization + WebSite + Catalog ItemList) -->
@@ -137,8 +151,8 @@
                         {
                             "@type": "ListItem",
                             "position": 4,
-                            "name": "其他特化材料 (矽烷偶合劑 / 消光粉 / 馬林酸樹脂 / 密著樹脂)",
-                            "url": "https://www.attech.com.tw/products/others/coating_additive/"
+                            "name": "其他特化材料 (聚酯樹脂 / 矽烷偶合劑 / 消光粉 / 馬林酸樹脂)",
+                            "url": "https://www.attech.com.tw/products/others/polyester_resin/"
                         }
                     ]
                 }
@@ -147,8 +161,8 @@
     </script>
 
     <!-- 正式編譯產出的 CSS 檔案 (含版本號快取破壞) -->
-    <link rel="stylesheet" href="/css/output.css?v=20260917_v1">
-    <link rel="stylesheet" href="/css/style.css?v=20260917_v1">
+    <link rel="stylesheet" href="css/output.css?v=20260917_v1">
+    <link rel="stylesheet" href="css/style.css?v=20260917_v1">
 
     <!-- 搜尋即時排版與全幅展示樣式 & 隱藏 reCAPTCHA 浮動徽章 -->
     <style>
@@ -274,7 +288,7 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50 attech-accent">
         <div class="optimized-container px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 gap-4">
-                <a href="/" class="flex items-center cursor-pointer active:scale-[0.98] shrink-0 no-underline"
+                <a href="./" class="flex items-center cursor-pointer active:scale-[0.98] shrink-0 no-underline"
                     id="nav-brand-logo" aria-label="回到首頁/關於宏威">
                     <div class="flex-shrink-0 flex flex-col justify-center w-full">
                         <!-- 第一行：中文標題（水平均分） + AT 方塊（靠右） -->
@@ -298,13 +312,13 @@
                 <!-- 全域搜尋已在獨立產品頁移除 -->
 
                 <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="tablist" aria-label="網站主要選單">
-                    <a href="/" id="nav-about" role="tab" aria-selected="false" aria-controls="tab-about"
+                    <a href="./" id="nav-about" role="tab" aria-selected="false" aria-controls="tab-about"
                         class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 h-16 inline-flex items-center">
                         首頁
                     </a>
                     <!-- 導覽列產品項目 (包含 Mega Menu) -->
                     <div class="relative group">
-                        <a href="/products/" id="nav-products" role="tab" aria-selected="true"
+                        <a href="products/" id="nav-products" role="tab" aria-selected="true"
                             class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 inline-flex items-center gap-1.5 h-16">
                             產品
                         </a>
@@ -316,7 +330,7 @@
                                 <div class="flex items-center justify-between pb-3 mb-5 border-b border-gray-100">
                                     <span class="text-xl font-bold uppercase tracking-widest text-slate-400">產品目錄</span>
                                     <a class="text-xl text-blue-900 font-bold hover:underline cursor-pointer"
-                                        href="/products/">
+                                        href="products/">
                                         瀏覽所有產品 →
                                     </a>
                                 </div>
@@ -326,7 +340,7 @@
                                     <!-- Column 1 -->
                                     <div class="space-y-4">
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/dorfketal/tyzor/">
+                                            href="products/dorfketal/tyzor/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -338,7 +352,7 @@
                                         </a>
 
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/others/silane/">
+                                            href="products/others/silane/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -350,7 +364,7 @@
                                         </a>
 
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/dorfketal/chain/">
+                                            href="products/dorfketal/chain/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -365,7 +379,7 @@
                                     <!-- Column 2 -->
                                     <div class="space-y-4">
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/orion/coating/">
+                                            href="products/orion/coating/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -377,7 +391,7 @@
                                         </a>
 
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/mpi/ptfe/">
+                                            href="products/mpi/ptfe/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -389,7 +403,7 @@
                                         </a>
 
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/others/matting_agent/">
+                                            href="products/others/matting_agent/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -404,7 +418,7 @@
                                     <!-- Column 3 -->
                                     <div class="space-y-4">
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/others/maleic_acid_resin/">
+                                            href="products/others/maleic_acid_resin/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -416,7 +430,7 @@
                                         </a>
 
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/others/cpo_adhesion_promoter/">
+                                            href="products/others/cpo_adhesion_promoter/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -428,7 +442,7 @@
                                         </a>
 
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/others/coating_additive/">
+                                            href="products/others/coating_additive/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -443,7 +457,7 @@
                                     <!-- Column 4 -->
                                     <div class="space-y-4">
                                         <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
-                                            href="/products/dorfketal/px/">
+                                            href="products/dorfketal/px/">
                                             <div
                                                 class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -454,12 +468,24 @@
                                             </div>
                                         </a>
 
+                                        <a class="mega-item group/item cursor-pointer p-2.5 rounded-lg hover:bg-blue-50/80 transition-colors block"
+                                            href="products/others/polyester_resin/">
+                                            <div
+                                                class="text-lg font-bold text-blue-950 group-hover/item:text-blue-700 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                Polyester Resin / 聚酯樹酯
+                                            </div>
+                                            <div class="text-base text-slate-500 font-medium mt-0.5 pl-3">
+                                                高分子量聚酯樹脂 (DYNAPOL/DYNACOLL替代品)
+                                            </div>
+                                        </a>
+
                                         <div
                                             class="bg-gradient-to-br from-slate-900 to-blue-950 rounded-lg p-3.5 text-white shadow-sm mt-2">
                                             <div class="text-base font-bold text-blue-300 mb-1">找不到合適產品？</div>
                                             <p class="text-base text-slate-300 leading-relaxed mb-3">
                                                 使用規格諮詢表單，由專人為您配對最適配方。</p>
-                                            <a href="/contact/?mode=detailed"
+                                            <a href="contact/?mode=detailed"
                                                 class="block w-full text-center py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded text-base font-bold transition-all">
                                                 填寫需求評估
                                             </a>
@@ -469,11 +495,11 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/partners/" id="nav-partners" role="tab" aria-selected="false" aria-controls="tab-partners"
+                    <a href="partners/" id="nav-partners" role="tab" aria-selected="false" aria-controls="tab-partners"
                         class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
                         合作夥伴
                     </a>
-                    <a href="/contact/" id="nav-contact" role="tab" aria-selected="false" aria-controls="tab-contact"
+                    <a href="contact/" id="nav-contact" role="tab" aria-selected="false" aria-controls="tab-contact"
                         class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
                         聯絡我們
                     </a>
@@ -483,19 +509,19 @@
             <!-- 行動裝置版分頁導覽列 -->
             <div class="flex md:hidden items-center justify-between gap-1.5 pb-2 pt-1 border-t border-gray-100"
                 role="tablist" aria-label="行動版主要選單">
-                <a href="/" id="mobile-nav-about" role="tab" aria-selected="false"
+                <a href="./" id="mobile-nav-about" role="tab" aria-selected="false"
                     class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs">
                     首頁
                 </a>
-                <a href="/products/" id="mobile-nav-products" role="tab" aria-selected="true"
+                <a href="products/" id="mobile-nav-products" role="tab" aria-selected="true"
                     class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                     產品專區
                 </a>
-                <a href="/partners/" id="mobile-nav-partners" role="tab" aria-selected="false"
+                <a href="partners/" id="mobile-nav-partners" role="tab" aria-selected="false"
                     class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                     合作夥伴
                 </a>
-                <a href="/contact/" id="mobile-nav-contact" role="tab" aria-selected="false"
+                <a href="contact/" id="mobile-nav-contact" role="tab" aria-selected="false"
                     class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                     聯絡我們
                 </a>
@@ -716,15 +742,15 @@
     <!-- ==========================================
          前端模組化 JavaScript 腳本庫 (含版本號快取破壞)
          ========================================== -->
-    <script src="/js/state.js?v=20260917_v1"></script>
-    <script src="/js/search-engine.js?v=20260917_v1"></script>
-    <script src="/js/data-repo.js?v=20260917_v1"></script>
-    <script src="/js/filter-engine.js?v=20260917_v1"></script>
-    <script src="/js/table-renderer.js?v=20260917_v1"></script>
-    <script src="/js/compare.js?v=20260917_v1"></script>
-    <script src="/js/contact.js?v=20260917_v1"></script>
-    <script src="/js/router.js?v=20260917_v1"></script>
-    <script src="/js/app.js?v=20260917_v1"></script>
+    <script src="js/state.js?v=20260917_v1"></script>
+    <script src="js/search-engine.js?v=20260917_v1"></script>
+    <script src="js/data-repo.js?v=20260917_v1"></script>
+    <script src="js/filter-engine.js?v=20260917_v1"></script>
+    <script src="js/table-renderer.js?v=20260917_v1"></script>
+    <script src="js/compare.js?v=20260917_v1"></script>
+    <script src="js/contact.js?v=20260917_v1"></script>
+    <script src="js/router.js?v=20260917_v1"></script>
+    <script src="js/app.js?v=20260917_v1"></script>
 </body>
 
 </html>

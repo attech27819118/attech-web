@@ -1,0 +1,831 @@
+[
+  {
+    "product_name": "RS 6059",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "無定形態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "無定形態",
+      "solid_content": 100,
+      "glass_transition_temp_c": 10,
+      "molecular_weight": 1800,
+      "hydroxyl_value": "50-60",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 55
+    }
+  },
+  {
+    "product_name": "RS 6067",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "無定形態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "無定形態",
+      "solid_content": 100,
+      "glass_transition_temp_c": 30,
+      "molecular_weight": 3000,
+      "hydroxyl_value": "30-40",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 78
+    }
+  },
+  {
+    "product_name": "RS 6069",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "無定形態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "無定形態",
+      "solid_content": 100,
+      "glass_transition_temp_c": 30,
+      "molecular_weight": 3000,
+      "hydroxyl_value": "30-40",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 77
+    }
+  },
+  {
+    "product_name": "RS 6073",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "軟包裝"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "無定形態",
+    "application_fields_zh": "聚氨酯熱熔膠、軟包裝",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 1,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "無定形態",
+      "solid_content": 100,
+      "glass_transition_temp_c": 30,
+      "molecular_weight": 5500,
+      "hydroxyl_value": "18-24",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 87
+    }
+  },
+  {
+    "product_name": "RS 6078",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "無定形態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "無定形態",
+      "solid_content": 100,
+      "glass_transition_temp_c": 50,
+      "molecular_weight": 2600,
+      "hydroxyl_value": "37-45",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 96
+    }
+  },
+  {
+    "product_name": "RS 6131",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "UV 樹脂",
+      "聚氨酯彈性體",
+      "軟包裝"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "液態",
+    "application_fields_zh": "聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 1,
+      "pu_elastomer": 1,
+      "flexible_packaging": 1,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "液態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -60,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": 30,
+      "softening_point_c": 39
+    }
+  },
+  {
+    "product_name": "RS 6128",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "UV 樹脂",
+      "聚氨酯彈性體",
+      "軟包裝"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "液態",
+    "application_fields_zh": "聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 1,
+      "pu_elastomer": 1,
+      "flexible_packaging": 1,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "液態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -50,
+      "molecular_weight": 5500,
+      "hydroxyl_value": "18-25",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": null
+    }
+  },
+  {
+    "product_name": "RS 6119",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "聚氨酯彈性體",
+      "軟包裝"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "液態",
+    "application_fields_zh": "聚氨酯熱熔膠、聚氨酯彈性體、軟包裝",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 1,
+      "flexible_packaging": 1,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "液態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -30,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": null
+    }
+  },
+  {
+    "product_name": "RS 6071",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "UV 樹脂",
+      "聚氨酯彈性體",
+      "軟包裝"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "液態",
+    "application_fields_zh": "聚氨酯熱熔膠、UV 樹脂、聚氨酯彈性體、軟包裝",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 1,
+      "pu_elastomer": 1,
+      "flexible_packaging": 1,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "液態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -25,
+      "molecular_weight": 1000,
+      "hydroxyl_value": "100-120",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": null
+    }
+  },
+  {
+    "product_name": "RS 6108",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "聚氨酯彈性體"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "液態",
+    "application_fields_zh": "聚氨酯熱熔膠、聚氨酯彈性體",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 1,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "液態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -15,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": null
+    }
+  },
+  {
+    "product_name": "RS 6183",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "軟包裝"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠、軟包裝",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 1,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -60,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": 56,
+      "softening_point_c": 62
+    }
+  },
+  {
+    "product_name": "RS 6184",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -60,
+      "molecular_weight": 8500,
+      "hydroxyl_value": "12-18",
+      "acid_value": "≤2",
+      "melt_point_c": 57,
+      "softening_point_c": 64
+    }
+  },
+  {
+    "product_name": "RS 6173",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -40,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": 95,
+      "softening_point_c": null
+    }
+  },
+  {
+    "product_name": "RS 6193",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": null,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": 70,
+      "softening_point_c": 77
+    }
+  },
+  {
+    "product_name": "RS 6194",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": null,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": 65,
+      "softening_point_c": 73
+    }
+  },
+  {
+    "product_name": "RS 6195",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": null,
+      "molecular_weight": 5500,
+      "hydroxyl_value": "15-25",
+      "acid_value": "≤2",
+      "melt_point_c": 72,
+      "softening_point_c": 79
+    }
+  },
+  {
+    "product_name": "RS 6197",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -30,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤5",
+      "melt_point_c": 115,
+      "softening_point_c": 117
+    }
+  },
+  {
+    "product_name": "RS 6198",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -30,
+      "molecular_weight": 5000,
+      "hydroxyl_value": "15-25",
+      "acid_value": "≤5",
+      "melt_point_c": 115,
+      "softening_point_c": 118
+    }
+  },
+  {
+    "product_name": "RS 6248",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠",
+      "UV 樹脂"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠、UV 樹脂",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 1,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": null,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤3",
+      "melt_point_c": 90,
+      "softening_point_c": 95
+    }
+  },
+  {
+    "product_name": "RS 6168",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": null,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 85
+    }
+  },
+  {
+    "product_name": "RS 6163",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -18,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "25-35",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 92
+    }
+  },
+  {
+    "product_name": "RS 6164",
+    "brand_code": "kuller",
+    "featured_categories": [
+      "聚氨酯熱熔膠"
+    ],
+    "category": "聚酯多元醇",
+    "composition_zh": "聚酯多元醇",
+    "appearance": "結晶態",
+    "application_fields_zh": "聚氨酯熱熔膠",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "pu_hot_melt_adhesive": 1,
+      "uv_resin": 0,
+      "pu_elastomer": 0,
+      "flexible_packaging": 0,
+      "printing_inks": 0,
+      "adhesives": 0,
+      "can_coating": 0,
+      "heat_seal_coating": 0
+    },
+    "typical_properties": {
+      "physical_form": "結晶態",
+      "solid_content": 100,
+      "glass_transition_temp_c": -25,
+      "molecular_weight": 3500,
+      "hydroxyl_value": "27-35",
+      "acid_value": "≤2",
+      "melt_point_c": null,
+      "softening_point_c": 123
+    }
+  }
+]

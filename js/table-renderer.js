@@ -36,6 +36,350 @@ function getProductUrl(productName, partnerKey = null, lineKey = null) {
 
 const DynamicTableRenderer = {
     layoutDefinitions: {
+        polyester_polyol: {
+            headerRows: [
+                [
+                    { propKey: 'product_name', title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center' },
+                    { propKey: 'appearance', title: '<span class="th-title">物態 / 外觀</span>', class: 'min-w-[85px] text-center' },
+                    { propKey: 'glass_transition_temp_c', title: '<span class="th-title">玻璃化溫度</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'molecular_weight', title: '<span class="th-title">分子量</span><span class="th-unit">Mn</span>', class: 'min-w-[70px] text-center' },
+                    { propKey: 'hydroxyl_value', title: '<span class="th-title">羥值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[80px] text-center' },
+                    { propKey: 'acid_value', title: '<span class="th-title">酸值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'melt_point_c', title: '<span class="th-title">熔點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
+                    { propKey: 'softening_point_c', title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
+                    { title: '<span class="th-app">熱熔膠</span>', class: 'min-w-[40px] px-1 text-center' },
+                    { title: '<span class="th-app">軟包裝</span>', class: 'min-w-[40px] px-1 text-center' },
+                    { title: '<span class="th-app">彈性體</span>', class: 'min-w-[40px] px-1 text-center' },
+                    { title: '<span class="th-app">UV樹脂</span>', class: 'min-w-[40px] px-1 text-center' }
+                ]
+            ],
+            columns: [
+                {
+                    id: 'product_name',
+                    propKey: 'product_name',
+                    class: 'min-w-[120px]',
+                    getValue: p => p.product_name,
+                    render: p => `
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <a href="${getProductUrl(p.product_name, 'Others', 'polyester_resin')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
+                        ${renderCompareIcon(p, 'Others', 'polyester_resin')}
+                    </div>`
+                },
+                {
+                    id: 'appearance',
+                    propKey: 'appearance',
+                    class: 'min-w-[85px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.appearance || p.typical_properties?.physical_form || '—'
+                },
+                {
+                    id: 'tg',
+                    propKey: 'glass_transition_temp_c',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.glass_transition_temp_c ?? '—'
+                },
+                {
+                    id: 'mw',
+                    propKey: 'molecular_weight',
+                    class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.molecular_weight ?? '—'
+                },
+                {
+                    id: 'ohv',
+                    propKey: 'hydroxyl_value',
+                    class: 'min-w-[80px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.hydroxyl_value ?? '—'
+                },
+                {
+                    id: 'av',
+                    propKey: 'acid_value',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.acid_value ?? '—'
+                },
+                {
+                    id: 'mp',
+                    propKey: 'melt_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.melt_point_c ?? '—'
+                },
+                {
+                    id: 'sp',
+                    propKey: 'softening_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.softening_point_c ?? '—'
+                },
+                {
+                    id: 'pu_hot_melt_adhesive',
+                    class: 'min-w-[40px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.pu_hot_melt_adhesive) ? '✓' : ' '
+                },
+                {
+                    id: 'flexible_packaging',
+                    class: 'min-w-[40px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.flexible_packaging) ? '✓' : ' '
+                },
+                {
+                    id: 'pu_elastomer',
+                    class: 'min-w-[40px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.pu_elastomer) ? '✓' : ' '
+                },
+                {
+                    id: 'uv_resin',
+                    class: 'min-w-[40px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.uv_resin) ? '✓' : ' '
+                }
+            ]
+        },
+        modified_polyol: {
+            headerRows: [
+                [
+                    { propKey: 'product_name', title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center' },
+                    { propKey: 'appearance', title: '<span class="th-title">物態 / 外觀</span>', class: 'min-w-[85px] text-center' },
+                    { propKey: 'glass_transition_temp_c', title: '<span class="th-title">玻璃化溫度</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'molecular_weight', title: '<span class="th-title">分子量</span><span class="th-unit">Mn</span>', class: 'min-w-[70px] text-center' },
+                    { propKey: 'hydroxyl_value', title: '<span class="th-title">羥值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[80px] text-center' },
+                    { propKey: 'acid_value', title: '<span class="th-title">酸值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'melt_point_c', title: '<span class="th-title">熔點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
+                    { propKey: 'softening_point_c', title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
+                    { title: '<span class="th-app">熱熔膠</span>', class: 'min-w-[45px] px-1 text-center' },
+                    { title: '<span class="th-app">軟包裝</span>', class: 'min-w-[45px] px-1 text-center' }
+                ]
+            ],
+            columns: [
+                {
+                    id: 'product_name',
+                    propKey: 'product_name',
+                    class: 'min-w-[120px]',
+                    getValue: p => p.product_name,
+                    render: p => `
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <a href="${getProductUrl(p.product_name, 'Others', 'polyester_resin')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
+                        ${renderCompareIcon(p, 'Others', 'polyester_resin')}
+                    </div>`
+                },
+                {
+                    id: 'appearance',
+                    propKey: 'appearance',
+                    class: 'min-w-[85px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.appearance || p.typical_properties?.physical_form || '—'
+                },
+                {
+                    id: 'tg',
+                    propKey: 'glass_transition_temp_c',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.glass_transition_temp_c ?? '—'
+                },
+                {
+                    id: 'mw',
+                    propKey: 'molecular_weight',
+                    class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.molecular_weight ?? '—'
+                },
+                {
+                    id: 'ohv',
+                    propKey: 'hydroxyl_value',
+                    class: 'min-w-[80px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.hydroxyl_value ?? '—'
+                },
+                {
+                    id: 'av',
+                    propKey: 'acid_value',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.acid_value ?? '—'
+                },
+                {
+                    id: 'mp',
+                    propKey: 'melt_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.melt_point_c ?? '—'
+                },
+                {
+                    id: 'sp',
+                    propKey: 'softening_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.softening_point_c ?? '—'
+                },
+                {
+                    id: 'pu_hot_melt_adhesive',
+                    class: 'min-w-[45px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.pu_hot_melt_adhesive) ? '✓' : ' '
+                },
+                {
+                    id: 'flexible_packaging',
+                    class: 'min-w-[45px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.flexible_packaging) ? '✓' : ' '
+                }
+            ]
+        },
+        polyester_resin_all: {
+            headerRows: [
+                [
+                    { propKey: 'product_name', title: '<span class="th-title">產品名稱</span>', class: 'min-w-[125px] text-center' },
+                    { propKey: 'appearance', title: '<span class="th-title">物態 / 外觀</span>', class: 'min-w-[85px] text-center' },
+                    { propKey: 'glass_transition_temp_c', title: '<span class="th-title">玻璃化溫度</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'molecular_weight', title: '<span class="th-title">分子量</span><span class="th-unit">Mn</span>', class: 'min-w-[70px] text-center' },
+                    { propKey: 'hydroxyl_value', title: '<span class="th-title">羥值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[80px] text-center' },
+                    { propKey: 'acid_value', title: '<span class="th-title">酸值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'melt_point_c', title: '<span class="th-title">熔點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
+                    { propKey: 'softening_point_c', title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
+                    { propKey: 'application_fields_zh', title: '<span class="th-title">主要應用領域</span>', class: 'min-w-[160px] text-center' }
+                ]
+            ],
+            columns: [
+                {
+                    id: 'product_name',
+                    propKey: 'product_name',
+                    class: 'min-w-[125px]',
+                    getValue: p => p.product_name,
+                    render: p => `
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <a href="${getProductUrl(p.product_name, 'Others', 'polyester_resin')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
+                        ${renderCompareIcon(p, 'Others', 'polyester_resin')}
+                    </div>`
+                },
+                {
+                    id: 'appearance',
+                    propKey: 'appearance',
+                    class: 'min-w-[85px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.appearance || p.typical_properties?.physical_form || '—'
+                },
+                {
+                    id: 'tg',
+                    propKey: 'glass_transition_temp_c',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.glass_transition_temp_c ?? '—'
+                },
+                {
+                    id: 'mw',
+                    propKey: 'molecular_weight',
+                    class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.molecular_weight ?? '—'
+                },
+                {
+                    id: 'ohv',
+                    propKey: 'hydroxyl_value',
+                    class: 'min-w-[80px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.hydroxyl_value ?? '—'
+                },
+                {
+                    id: 'av',
+                    propKey: 'acid_value',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.acid_value ?? '—'
+                },
+                {
+                    id: 'mp',
+                    propKey: 'melt_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.melt_point_c ?? '—'
+                },
+                {
+                    id: 'sp',
+                    propKey: 'softening_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.softening_point_c ?? '—'
+                },
+                {
+                    id: 'applications',
+                    propKey: 'application_fields_zh',
+                    class: 'min-w-[160px] text-left text-xs f-weight-normal text-slate-800 break-words',
+                    getValue: p => p.application_fields_zh || '—',
+                    render: p => `<span class="whitespace-pre-line leading-relaxed">${p.application_fields_zh || '—'}</span>`
+                }
+            ]
+        },
+        polyester_resin: {
+            headerRows: [
+                [
+                    { propKey: 'product_name', title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center' },
+                    { propKey: 'appearance', title: '<span class="th-title">外觀 / 形態</span>', class: 'min-w-[85px] text-center' },
+                    { propKey: 'solid_content', title: '<span class="th-title">固含量</span><span class="th-unit">(%)</span>', class: 'min-w-[65px] text-center' },
+                    { propKey: 'glass_transition_temp_c', title: '<span class="th-title">玻璃化溫度</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'molecular_weight', title: '<span class="th-title">分子量</span><span class="th-unit">Mn</span>', class: 'min-w-[70px] text-center' },
+                    { propKey: 'hydroxyl_value', title: '<span class="th-title">羥值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[80px] text-center' },
+                    { propKey: 'acid_value', title: '<span class="th-title">酸值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'softening_point_c', title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
+                    { title: '<span class="th-app">印刷油墨</span>', class: 'min-w-[42px] px-1 text-center' },
+                    { title: '<span class="th-app">粘合劑</span>', class: 'min-w-[42px] px-1 text-center' },
+                    { title: '<span class="th-app">罐頭塗料</span>', class: 'min-w-[42px] px-1 text-center' },
+                    { title: '<span class="th-app">熱密封</span>', class: 'min-w-[42px] px-1 text-center' }
+                ]
+            ],
+            columns: [
+                {
+                    id: 'product_name',
+                    propKey: 'product_name',
+                    class: 'min-w-[120px]',
+                    getValue: p => p.product_name,
+                    render: p => `
+                    <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                        <a href="${getProductUrl(p.product_name, 'Others', 'polyester_resin')}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">${p.product_name}</a>
+                        ${renderCompareIcon(p, 'Others', 'polyester_resin')}
+                    </div>`
+                },
+                {
+                    id: 'appearance',
+                    propKey: 'appearance',
+                    class: 'min-w-[85px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.appearance || p.typical_properties?.physical_form || '—'
+                },
+                {
+                    id: 'solid_content',
+                    propKey: 'solid_content',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.solid_content ?? '—'
+                },
+                {
+                    id: 'tg',
+                    propKey: 'glass_transition_temp_c',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.glass_transition_temp_c ?? '—'
+                },
+                {
+                    id: 'mw',
+                    propKey: 'molecular_weight',
+                    class: 'min-w-[70px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.molecular_weight ?? '—'
+                },
+                {
+                    id: 'ohv',
+                    propKey: 'hydroxyl_value',
+                    class: 'min-w-[80px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.hydroxyl_value ?? '—'
+                },
+                {
+                    id: 'av',
+                    propKey: 'acid_value',
+                    class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.acid_value ?? '—'
+                },
+                {
+                    id: 'sp',
+                    propKey: 'softening_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.softening_point_c ?? '—'
+                },
+                {
+                    id: 'printing_inks',
+                    class: 'min-w-[42px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.printing_inks) ? '✓' : ' '
+                },
+                {
+                    id: 'adhesives',
+                    class: 'min-w-[42px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.adhesives) ? '✓' : ' '
+                },
+                {
+                    id: 'can_coating',
+                    class: 'min-w-[42px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.can_coating) ? '✓' : ' '
+                },
+                {
+                    id: 'heat_seal_coating',
+                    class: 'min-w-[42px] px-1 text-center f-weight-bold text-blue-950 f-size-sm',
+                    getValue: p => (p.applications?.heat_seal_coating) ? '✓' : ' '
+                }
+            ]
+        },
         powder_coating_additive: [
             {
                 id: 'product_name',
@@ -555,6 +899,7 @@ const DynamicTableRenderer = {
                 }
             ]
         }
+
     },
 
     fieldDefinitions: {
@@ -855,6 +1200,16 @@ const DynamicTableRenderer = {
     getActiveFields(partnerKey, products) {
         const pKey = (partnerConfigMap[partnerKey] || partnerKey || 'mpi').toLowerCase();
         if (pKey === 'others') {
+            if (AppState.productLine === 'polyester_resin') {
+                if (AppState.category === '低分子量聚酯樹脂') {
+                    return this.layoutDefinitions.polyester_polyol;
+                } else if (AppState.category === '改性多元醇') {
+                    return this.layoutDefinitions.modified_polyol;
+                } else if (AppState.category === '高分子量聚酯樹脂') {
+                    return this.layoutDefinitions.polyester_resin;
+                }
+                return this.layoutDefinitions.polyester_resin_all;
+            }
             switch (AppState.productLine) {
                 case 'matting_agent':
                     return this.layoutDefinitions.matting_agent;
@@ -866,6 +1221,10 @@ const DynamicTableRenderer = {
                     return this.layoutDefinitions.cpo_adhesion_promoter;
                 case 'adhesion_promoter':
                     return this.layoutDefinitions.adhesion_promoter;
+                case 'polyester_polyol':
+                    return this.layoutDefinitions.polyester_polyol;
+                case 'modified_polyol':
+                    return this.layoutDefinitions.modified_polyol;
                 default:
                     return this.layoutDefinitions.powder_coating_additive;
             }
@@ -883,10 +1242,34 @@ const DynamicTableRenderer = {
 
     getHeaderHTML(activeFields) {
         if (activeFields && activeFields.headerRows) {
-            return activeFields.headerRows.map(row => {
-                const rowHTML = row.map(col => {
+            return activeFields.headerRows.map((row, rIdx) => {
+                const rowHTML = row.map((col, cIdx) => {
                     const titleWithLineBreak = col.title.replace(/\n/g, '<br>');
-                    return `<th class="py-2 px-2 border-r border-b border-gray-200 text-center align-middle f-weight-bold text-slate-900 bg-slate-100 ${col.class || ''}">${titleWithLineBreak}</th>`;
+                    const colDef = activeFields.columns && (activeFields.headerRows.length === 1 ? activeFields.columns[cIdx] : null);
+                    const sortKey = col.propKey || col.sortKey || colDef?.propKey;
+                    const isSortable = col.sortable !== false && Boolean(sortKey);
+
+                    let sortIcon = '';
+                    let clickAttr = '';
+                    let sortClass = '';
+
+                    if (isSortable && sortKey) {
+                        clickAttr = `onclick="handleSort('${sortKey}')" title="點擊依此欄位排序" style="cursor: pointer;"`;
+                        sortClass = 'cursor-pointer hover:bg-slate-200/80 transition-colors select-none';
+                        if (AppState.sortColumn === sortKey) {
+                            sortIcon = AppState.sortOrder === 'asc'
+                                ? ' <i class="fa-solid fa-arrow-up text-blue-600 f-size-xs shrink-0 ml-1"></i>'
+                                : ' <i class="fa-solid fa-arrow-down text-blue-600 f-size-xs shrink-0 ml-1"></i>';
+                        } else {
+                            sortIcon = ' <i class="fa-solid fa-sort text-slate-400 f-size-xs shrink-0 ml-1"></i>';
+                        }
+                    }
+
+                    const contentHTML = sortIcon
+                        ? `<div class="inline-flex items-center justify-center gap-1 w-full"><span class="flex flex-col items-center justify-center leading-tight">${titleWithLineBreak}</span>${sortIcon}</div>`
+                        : titleWithLineBreak;
+
+                    return `<th ${clickAttr} class="py-2 px-2 border-r border-b border-gray-200 text-center align-middle f-weight-bold text-slate-900 bg-slate-100 ${sortClass} ${col.class || ''}">${contentHTML}</th>`;
                 }).join('');
 
                 return `<tr class="select-none f-size-sm f-weight-bold text-slate-900">${rowHTML}</tr>`;
@@ -898,23 +1281,25 @@ const DynamicTableRenderer = {
         const colsHTML = activeFields.map(f => {
             let sortIcon = '';
             let clickAttr = '';
+            let sortClass = '';
 
-            if (currentPartnerKey === 'orion' && f.propKey) {
-                clickAttr = `onclick="handleSort('${f.propKey}')" style="cursor: pointer;"`;
+            if (f.propKey) {
+                clickAttr = `onclick="handleSort('${f.propKey}')" title="點擊依此欄位排序" style="cursor: pointer;"`;
+                sortClass = 'cursor-pointer hover:bg-slate-200/70 transition-colors select-none';
                 if (AppState.sortColumn === f.propKey) {
                     sortIcon = AppState.sortOrder === 'asc'
-                        ? ' <i class="fa-solid fa-arrow-up text-blue-600 f-size-xs shrink-0"></i>'
-                        : ' <i class="fa-solid fa-arrow-down text-blue-600 f-size-xs shrink-0"></i>';
+                        ? ' <i class="fa-solid fa-arrow-up text-blue-600 f-size-xs shrink-0 ml-1"></i>'
+                        : ' <i class="fa-solid fa-arrow-down text-blue-600 f-size-xs shrink-0 ml-1"></i>';
                 } else {
-                    sortIcon = ' <i class="fa-solid fa-sort text-slate-400 f-size-xs shrink-0"></i>';
+                    sortIcon = ' <i class="fa-solid fa-sort text-slate-400 f-size-xs shrink-0 ml-1"></i>';
                 }
             }
 
             const contentHTML = sortIcon
-                ? `<div class="inline-flex items-center justify-center gap-1 w-full">${f.title}${sortIcon}</div>`
+                ? `<div class="inline-flex items-center justify-center gap-1 w-full"><span class="flex flex-col items-center justify-center leading-tight">${f.title}</span>${sortIcon}</div>`
                 : f.title;
 
-            return `<th ${clickAttr} class="py-2 px-2 f-weight-bold text-slate-900 bg-slate-100 hover:bg-slate-200/70 transition-colors align-middle ${f.class || ''}">
+            return `<th ${clickAttr} class="py-2 px-2 f-weight-bold text-slate-900 bg-slate-100 align-middle ${sortClass} ${f.class || ''}">
     ${contentHTML}
 </th>`;
         }).join('');

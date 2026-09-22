@@ -143,6 +143,17 @@
     "brandName": "Others",
     "files": [
       {
+        "key": "polyester_resin",
+        "jsonPath": "./json/others/polyester_resin.json",
+        "titleZh": "聚酯樹脂",
+        "titleEn": "Polyester Resin",
+        "categoryMap": {
+          "低分子量聚酯樹脂": "Low Molecular Weight Polyester Resin",
+          "改性多元醇": "Modified Polyols",
+          "高分子量聚酯樹脂": "High Molecular Weight Polyester Resin"
+        }
+      },
+      {
         "key": "coating_additive",
         "jsonPath": "./json/others/coating_additive.json",
         "titleZh": "粉體塗料助劑",
@@ -190,19 +201,20 @@
         }
       },
       {
-        "key": "cpo_adhesion_promoter",
-        "jsonPath": "./json/others/cpo_adhesion_promoter.json",
-        "titleZh": "密著促進劑(氯系)",
-        "titleEn": "CPO Adhesion Promoter  ",
-        "categoryMap": {}
-      },
-      {
         "key": "adhesion_promoter",
         "jsonPath": "./json/others/adhesion_promoter.json",
         "titleZh": "密著促進劑(非氯系)",
         "titleEn": "Adhesion Promoter  ",
         "categoryMap": {}
+      },
+      {
+        "key": "cpo_adhesion_promoter",
+        "jsonPath": "./json/others/cpo_adhesion_promoter.json",
+        "titleZh": "密著促進劑(氯系)",
+        "titleEn": "CPO Adhesion Promoter  ",
+        "categoryMap": {}
       }
+
     ]
   }
 }

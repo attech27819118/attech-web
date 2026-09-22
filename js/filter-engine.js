@@ -74,8 +74,9 @@ function compareSortValues(aRaw, bRaw, sortOrder = 'desc') {
         if (typeof val === 'number') return val;
         if (typeof val === 'string') {
             const trimmed = val.trim();
-            if (/^-?\d+(\.\d+)?/.test(trimmed)) {
-                return parseFloat(trimmed);
+            const cleaned = trimmed.replace(/^[<≤>≥~約\s]+/, '');
+            if (/^-?\d+(\.\d+)?/.test(cleaned)) {
+                return parseFloat(cleaned);
             }
         }
         return NaN;
@@ -99,7 +100,8 @@ function handleSort(columnKey) {
         AppState.sortOrder = AppState.sortOrder === 'asc' ? 'desc' : 'asc';
     } else {
         AppState.sortColumn = columnKey;
-        AppState.sortOrder = 'desc';
+        const descFirstKeys = ['bet_surface_area', 'oil_absorption_number', 'tinting_strength', 'blackness_my'];
+        AppState.sortOrder = descFirstKeys.includes(columnKey) ? 'desc' : 'asc';
     }
     if (typeof renderProducts === 'function') {
         renderProducts();
