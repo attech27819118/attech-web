@@ -230,24 +230,40 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
 
     # 僅 MPI 提及 TDS，其餘品牌完全不提及 TDS
     is_mpi = (partner_key or '').lower() == 'mpi'
+    is_others = (partner_key or '').lower() == 'others'
+    brand_display_badge = '特化材料' if is_others else brand_name
+
     quick_spec_text = "官網完整規格與 TDS" if is_mpi else "官網完整規格與特性"
-    service_card_desc = (
-        f"宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。"
-        if is_mpi else
-        f"宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格、樣品庫存與應用技術諮詢服務。"
-    )
-    service_card_tds_item = (
-        '<i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>'
-        if is_mpi else
-        '<i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>'
-    )
+
+    if is_mpi:
+        service_card_badge = '<i class="fa-solid fa-shield-halved text-blue-800"></i> 原廠正品技術支援'
+        service_card_title = "宏威應用材料 專業技術"
+        service_card_desc = f"宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。"
+        service_card_tds_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>'
+        service_card_sample_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速樣品申請</span>'
+        service_card_consult_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>提供完整產品物性與技術諮詢</span>'
+    elif is_others:
+        service_card_badge = '<i class="fa-solid fa-flask-vial text-blue-800"></i> 特化材料技術支援'
+        service_card_title = "宏威應用材料 專業技術評估"
+        service_card_desc = "宏威應用材料深耕特用化學材料領域，精選供應高規格特化樹脂與功能性助劑，備有完整物性技術資料、樣品庫存與配方應用諮詢服務。"
+        service_card_tds_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>嚴選高品質特化材料與專業技術支援</span>'
+        service_card_sample_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援配方評估與快速索樣</span>'
+        service_card_consult_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>提供物性平行比對、相容性與技術諮詢</span>'
+    else:
+        service_card_badge = '<i class="fa-solid fa-shield-halved text-blue-800"></i> 原廠正品技術支援'
+        service_card_title = "宏威應用材料 專業技術"
+        service_card_desc = f"宏威應用材料為 {escape_html(brand_name)} 在台灣之專業特用化學代理商，備有原廠技術規格、樣品庫存與應用技術諮詢服務。"
+        service_card_tds_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>'
+        service_card_sample_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速樣品申請</span>'
+        service_card_consult_item = '<i class="fa-solid fa-check text-emerald-600"></i> <span>提供完整產品物性與技術諮詢</span>'
 
     banner_heading = "需要檢視完整技術數據或 TDS 下載？" if is_mpi else "需要檢視完整技術數據？"
-    banner_desc = (
-        f"原廠技術資料表（TDS）與全品項規格資料已收錄於官網。點擊按鈕前往官網，查看 {escape_html(name)} 之詳細規格與技術資料。"
-        if is_mpi else
-        f"完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看 {escape_html(name)} 之詳細規格與技術資料。"
-    )
+    if is_mpi:
+        banner_desc = f"原廠技術資料表（TDS）與全品項規格資料已收錄於官網。點擊按鈕前往官網，查看 {escape_html(name)} 之詳細規格與技術資料。"
+    elif is_others:
+        banner_desc = f"完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看特化材料 {escape_html(name)} 之詳細規格與技術資料。"
+    else:
+        banner_desc = f"完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看 {escape_html(name)} 之詳細規格與技術資料。"
     banner_button_text = "TDS 與完整規格" if is_mpi else "詳細規格與技術資料"
 
     is_polyester = (line_key in ['polyester_resin', 'polyester_polyol', 'modified_polyol'])
@@ -275,6 +291,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     </div>
                 </div>'''
     else:
+        brand_ref = '特化材料' if is_others else brand_name
         card1_block = f'''<!-- 導流卡片 1：線上產品比較 -->
                 <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
                     <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
@@ -282,7 +299,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">需要比較同系列其他產品？</h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 {escape_html(brand_name)} {escape_html(line_title)} 各產品的物性規格與適用系統。
+                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 {escape_html(brand_ref)} {escape_html(line_title)} 各產品的物性規格與適用系統。
                     </p>
                     <a href="/products/{partner_key}/{line_key}/" 
                        class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
@@ -297,7 +314,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5 pb-6 border-b border-slate-200">
             <div>
                 <div class="flex flex-wrap items-center gap-2 mb-2.5">
-                    <span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">{escape_html(brand_name)}</span>
+                    <span class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">{escape_html(brand_display_badge)}</span>
                     {f'<span class="inline-block px-3 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">{escape_html(line_title)}</span>' if line_title else ''}
                 </div>
                 <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">{escape_html(name)}</h1>
@@ -358,9 +375,9 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                 <!-- 導流卡片 2：原廠正品技術保證 (單一色底無漸層，統一風格) -->
                 <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
                     <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
-                        <i class="fa-solid fa-shield-halved text-blue-800"></i> 原廠正品技術支援
+                        {service_card_badge}
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">宏威應用材料 專業技術</h3>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">{service_card_title}</h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
                         {service_card_desc}
                     </p>
@@ -369,10 +386,10 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
                             {service_card_tds_item}
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速樣品申請</span>
+                            {service_card_sample_item}
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供完整產品物性與技術諮詢</span>
+                            {service_card_consult_item}
                         </div>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 leading-relaxed">
@@ -588,7 +605,10 @@ def main():
 
     for brand_key, brand_obj in config.items():
         partner_slug = brand_key.lower()
+        is_mpi = (partner_slug == 'mpi')
+        is_others = (partner_slug == 'others')
         brand_name = brand_obj.get('brandName', brand_key)
+        brand_display = '特化材料' if is_others else brand_name
         brand_path = f'/products/{partner_slug}/'
 
         # 針對各品牌首頁，預渲染其第一條代表性產品線
@@ -598,21 +618,25 @@ def main():
         first_line_products = all_products_cache.get(first_line_slug, []) if first_line_slug else []
         brand_first_rows = render_product_table_rows(first_line_products, partner_slug, first_line_slug, config) if first_line_slug else []
 
-        is_mpi = (partner_slug == 'mpi')
-        p_desc = (
-            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、TDS技術資料下載與樣品申請服務。"
-            if is_mpi else
-            f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、產品詳細參數與樣品申請服務。"
-        )
+        if is_mpi:
+            p_desc = f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、TDS技術資料下載與樣品申請服務。"
+            brand_page_title = f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials"
+        elif is_others:
+            p_desc = "宏威應用材料精選特化材料助劑系列，涵蓋聚酯樹脂、二氧化矽消光粉、馬林酸樹脂、矽烷偶合劑、粉體塗料功能性助劑、CPO密著促進劑等，提供規格對比、詳細物性參數與免費索樣服務。"
+            brand_page_title = "特化材料助劑系列 | 宏威應用材料 ATTech Materials"
+        else:
+            p_desc = f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、產品詳細參數與樣品申請服務。"
+            brand_page_title = f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials"
+
         p_html = build_page_html(
             template_html,
-            f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials",
+            brand_page_title,
             p_desc,
             brand_path,
             active_tab='products',
             pre_rendered_content=''.join(brand_first_rows) if brand_first_rows else None,
             category_meta={
-                "brandName": brand_name,
+                "brandName": brand_display,
                 "lineTitle": first_line_title,
                 "matchCount": len(first_line_products),
                 "partnerSlug": partner_slug,
@@ -630,11 +654,12 @@ def main():
 
             table_rows = render_product_table_rows(products, partner_slug, line_slug, config)
 
+            line_schema_name = f"{brand_display} {line_title} 產品目錄"
             item_list_schema = {
                 "@context": "https://schema.org",
                 "@type": "ItemList",
-                "name": f"{brand_name} {line_title} 產品目錄",
-                "description": f"{brand_name} {line_title} 特用化學品規格表，共 {len(products)} 項品項。",
+                "name": line_schema_name,
+                "description": f"{brand_display} {line_title} 特用化學品規格表，共 {len(products)} 項品項。",
                 "url": f"{DOMAIN}{line_path}",
                 "numberOfItems": len(products),
                 "itemListElement": [
@@ -648,16 +673,27 @@ def main():
                 ]
             }
 
+            line_page_title = (
+                f"{line_title} (特化材料) | 宏威應用材料 ATTech Materials"
+                if is_others else
+                f"{line_title} ({brand_name}) | 宏威應用材料 ATTech Materials"
+            )
+            line_desc = (
+                f"宏威應用材料精選特化材料 {line_title}，提供 {', '.join([p.get('product_name') or p.get('name', '') for p in products[:8]])} 等品項之物性參數與索樣。"
+                if is_others else
+                f"宏威應用材料精選 {brand_name} {line_title} 特用化學品，提供 {', '.join([p.get('product_name') or p.get('name', '') for p in products[:8]])} 等品項之物性參數與索樣。"
+            )
+
             line_html = build_page_html(
                 template_html,
-                f"{line_title} ({brand_name}) | 宏威應用材料 ATTech Materials",
-                f"宏威應用材料精選 {brand_name} {line_title} 特用化學品，提供 {', '.join([p.get('product_name') or p.get('name', '') for p in products[:8]])} 等品項之物性參數與索樣。",
+                line_page_title,
+                line_desc,
                 line_path,
                 active_tab='products',
                 pre_rendered_content=''.join(table_rows),
                 schema_json=item_list_schema,
                 category_meta={
-                    "brandName": brand_name,
+                    "brandName": brand_display,
                     "lineTitle": line_title,
                     "matchCount": len(products),
                     "partnerSlug": partner_slug,
@@ -687,7 +723,7 @@ def main():
                             "itemListElement": [
                                 { "@type": "ListItem", "position": 1, "name": "首頁", "item": f"{DOMAIN}/" },
                                 { "@type": "ListItem", "position": 2, "name": "產品", "item": f"{DOMAIN}/products/" },
-                                { "@type": "ListItem", "position": 3, "name": brand_name, "item": f"{DOMAIN}/products/{partner_slug}/" },
+                                { "@type": "ListItem", "position": 3, "name": brand_display, "item": f"{DOMAIN}/products/{partner_slug}/" },
                                 { "@type": "ListItem", "position": 4, "name": line_title, "item": f"{DOMAIN}/products/{partner_slug}/{line_slug}/" },
                                 { "@type": "ListItem", "position": 5, "name": p_name, "item": f"{DOMAIN}{product_path}" }
                             ]
@@ -696,10 +732,10 @@ def main():
                             "@type": "Product",
                             "name": p_name,
                             "image": f"{DOMAIN}/img/MCP-Logo.png",
-                            "description": f"{brand_name} {p_name} - 主要成分：{comp or '特用化學材料'}。適合應用：{usage_text}。特性：{props.replace(chr(10), ' ')}",
+                            "description": f"{'宏威應用材料' if is_others else brand_name} {p_name} - 主要成分：{comp or '特用化學材料'}。適合應用：{usage_text}。特性：{props.replace(chr(10), ' ')}",
                             "brand": {
                                 "@type": "Brand",
-                                "name": brand_name
+                                "name": "宏威應用材料" if is_others else brand_name
                             },
                             "offers": {
                                 "@type": "Offer",
@@ -717,13 +753,22 @@ def main():
                     ]
                 }
 
-                is_mpi = (partner_slug == 'mpi')
                 prod_desc_suffix = "提供產品規格比較、TDS技術資料與樣品申請。" if is_mpi else "提供產品規格比較、詳細物性參數與樣品申請。"
-                prod_desc = f"{brand_name} {p_name} 特用化學品：{comp + '，' if comp else ''}{props.replace(chr(10), ' ')[:100] + '... ' if props else ''}適合應用：{usage_text}。{prod_desc_suffix}"
+                prod_desc = (
+                    f"宏威應用材料 {p_name} 特化材料：{comp + '，' if comp else ''}{props.replace(chr(10), ' ')[:100] + '... ' if props else ''}適合應用：{usage_text}。{prod_desc_suffix}"
+                    if is_others else
+                    f"{brand_name} {p_name} 特用化學品：{comp + '，' if comp else ''}{props.replace(chr(10), ' ')[:100] + '... ' if props else ''}適合應用：{usage_text}。{prod_desc_suffix}"
+                )
+
+                prod_title = (
+                    f"{p_name} {line_title} | 特化材料 宏威應用材料"
+                    if is_others else
+                    f"{p_name} ({brand_name}) {line_title} | 宏威應用材料 ATTech Materials"
+                )
 
                 prod_page_html = build_page_html(
                     template_html,
-                    f"{p_name} ({brand_name}) {line_title} | 宏威應用材料 ATTech Materials",
+                    prod_title,
                     prod_desc,
                     product_path,
                     active_tab='products',
@@ -732,7 +777,7 @@ def main():
                     is_product_detail_page=True,
                     product_meta={
                         'name': p_name,
-                        'brandName': brand_name,
+                        'brandName': brand_display,
                         'lineTitle': line_title,
                         'partnerSlug': partner_slug,
                         'lineSlug': line_slug,

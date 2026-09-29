@@ -263,18 +263,41 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
     `).join('');
 
     // 僅 MPI 提及 TDS，其餘品牌完全不提及 TDS
+    const isOthers = (partnerKey || '').toLowerCase() === 'others';
     const quickSpecText = isMpi ? '官網完整規格與 TDS' : '官網完整規格與特性';
-    const serviceCardDesc = isMpi
-        ? `宏威應用材料為 ${escapeHtml(displayBrandBadge)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。`
-        : `宏威應用材料為 ${escapeHtml(displayBrandBadge)} 在台灣之專業特用化學代理商，備有原廠技術規格、樣品庫存與應用技術諮詢服務。`;
-    const serviceCardTdsItem = isMpi
-        ? `<i class="fa-solid fa-check text-emerald-600"></i> <span>備有原廠正式技術規格書 (TDS)</span>`
-        : `<i class="fa-solid fa-check text-emerald-600"></i> <span>原廠正品保證與技術支援</span>`;
 
-    const bannerHeading = isMpi ? '需要檢視完整技術數據或 TDS 下載？' : '需要檢視完整技術數據？';
-    const bannerDesc = isMpi
-        ? `原廠技術資料表（TDS）與全品項規格資料已收錄於官網。點擊按鈕前往官網，查看 ${escapeHtml(name)} 之詳細規格與技術資料。`
-        : `完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看 ${escapeHtml(name)} 之詳細規格與技術資料。`;
+    let serviceBadgeText = '原廠正品技術支援';
+    let serviceBadgeIcon = 'fa-shield-halved';
+    let serviceTitle = '宏威應用材料 專業技術';
+    let serviceCardDesc = '';
+    let serviceCheckItem1 = '';
+
+    if (isOthers) {
+        serviceBadgeText = '特化材料技術支援';
+        serviceBadgeIcon = 'fa-flask-vial';
+        serviceTitle = '宏威應用材料 專業技術評估';
+        serviceCardDesc = '宏威應用材料深耕特用化學材料領域，精選供應高規格特化樹脂與功能性助劑，備有完整物性技術資料、樣品庫存與配方應用諮詢服務。';
+        serviceCheckItem1 = '嚴選高品質特化材料與專業技術支援';
+    } else if (isMpi) {
+        serviceCardDesc = `宏威應用材料為 ${escapeHtml(displayBrandBadge)} 在台灣之專業特用化學代理商，備有原廠技術規格書 (TDS)、樣品庫存與應用技術諮詢服務。`;
+        serviceCheckItem1 = '備有原廠正式技術規格書 (TDS)';
+    } else {
+        serviceCardDesc = `宏威應用材料為 ${escapeHtml(displayBrandBadge)} 在台灣之專業特用化學代理商，備有原廠技術規格、樣品庫存與應用技術諮詢服務。`;
+        serviceCheckItem1 = '原廠正品保證與技術支援';
+    }
+
+    const serviceCardTdsItem = `<i class="fa-solid fa-check text-emerald-600"></i> <span>${serviceCheckItem1}</span>`;
+    const serviceCheckItem2 = isOthers ? '樣品齊全，支援配方評估與快速索樣' : '樣品齊全，支援快速樣品申請';
+    const serviceCheckItem3 = isOthers ? '提供物性平行比對、相容性與技術諮詢' : '提供完整產品物性與技術諮詢';
+
+    const bannerHeading = isOthers
+        ? '需要深入了解特化材料規格或索取樣品？'
+        : (isMpi ? '需要檢視完整技術數據或 TDS 下載？' : '需要檢視完整技術數據？');
+    const bannerDesc = isOthers
+        ? `完整產品物性數據與建議配方資料已收錄於官網。點擊按鈕前往官網，查看 ${escapeHtml(name)} 之詳細規格與技術評估資料。`
+        : (isMpi
+            ? `原廠技術資料表（TDS）與全品項規格資料已收錄於官網。點擊按鈕前往官網，查看 ${escapeHtml(name)} 之詳細規格與技術資料。`
+            : `完整產品物性數據與規格資料已收錄於官網。點擊按鈕前往官網，查看 ${escapeHtml(name)} 之詳細規格與技術資料。`);
     const bannerButtonText = isMpi ? 'TDS 與完整規格' : '詳細規格與技術資料';
 
     const isPolyester = (lineKey === 'polyester_resin' || lineKey === 'polyester_polyol' || lineKey === 'modified_polyol');
@@ -308,7 +331,7 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">需要比較同系列其他產品？</h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 ${escapeHtml(displayBrandBadge)} ${escapeHtml(lineTitle)} 各產品的物性規格與適用系統。
+                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 ${escapeHtml(isOthers ? '特化材料' : displayBrandBadge)} ${escapeHtml(lineTitle)} 各產品的物性規格與適用系統。
                     </p>
                     <a href="/products/${partnerKey}/${lineKey}/" 
                        class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
@@ -404,9 +427,9 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                 <!-- 導流卡片 2：原廠正品技術保證 (單一色底無漸層，統一風格) -->
                 <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
                     <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
-                        <i class="fa-solid fa-shield-halved text-blue-800"></i> 原廠正品技術支援
+                        <i class="fa-solid ${serviceBadgeIcon} text-blue-800"></i> ${serviceBadgeText}
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">宏威應用材料 專業技術</h3>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">${serviceTitle}</h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
                         ${serviceCardDesc}
                     </p>
@@ -415,10 +438,10 @@ function renderProductDetailTableHtml(product, partnerKey, lineKey, brandName, l
                             ${serviceCardTdsItem}
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>樣品齊全，支援快速樣品申請</span>
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>${serviceCheckItem2}</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-emerald-600"></i> <span>提供完整產品物性與技術諮詢</span>
+                            <i class="fa-solid fa-check text-emerald-600"></i> <span>${serviceCheckItem3}</span>
                         </div>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-slate-500 leading-relaxed">
