@@ -597,21 +597,32 @@ ${preRenderedContent}
             html = html.replace(/<span id="dir-match-count"[^>]*>.*?<\/span>/, `<span id="dir-match-count" class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">${categoryMeta.matchCount}</span>`);
 
             if (lineSlug === 'polyester_resin') {
+                const theadHtml = `<thead>
+                    <tr class="bg-slate-100/90 text-slate-800 text-xs font-bold border-b border-gray-200">
+                        <th class="py-2.5 px-3 min-w-[125px] text-center"><span class="th-title">產品名稱</span></th>
+                        <th class="py-2.5 px-3 min-w-[85px] text-center"><span class="th-title">物態 / 外觀</span></th>
+                        <th class="py-2.5 px-3 min-w-[75px] text-center"><span class="th-title">玻璃化溫度</span><br><span class="th-unit">Tg (°C)</span></th>
+                        <th class="py-2.5 px-3 min-w-[70px] text-center"><span class="th-title">分子量</span><br><span class="th-unit">Mn</span></th>
+                        <th class="py-2.5 px-3 min-w-[80px] text-center"><span class="th-title">羥值</span><br><span class="th-unit">(mgKOH/g)</span></th>
+                        <th class="py-2.5 px-3 min-w-[75px] text-center"><span class="th-title">酸值</span><br><span class="th-unit">(mgKOH/g)</span></th>
+                        <th class="py-2.5 px-3 min-w-[65px] text-center"><span class="th-title">熔點</span><br><span class="th-unit">(°C)</span></th>
+                        <th class="py-2.5 px-3 min-w-[65px] text-center"><span class="th-title">軟化點</span><br><span class="th-unit">(°C)</span></th>
+                        <th class="py-2.5 px-3 min-w-[160px] text-center"><span class="th-title">主要應用領域</span></th>
+                    </tr>
+                </thead>`;
+                html = html.replace(/<thead>[\s\S]*?<\/thead>/, theadHtml);
+
                 const benchmarkBannerHtml = `
                     <div id="polyester-resin-benchmark-banner"
                         class="mb-5 rounded-xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/60 p-4 sm:p-5 shadow-xs">
                         <div class="space-y-1.5">
-                            <div
-                                class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-900 text-xs font-bold">
-                                <i class="fa-solid fa-flask-vial"></i> 技術比較與型號支援
-                            </div>
                             <h4 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
                                 歐系高階聚酯樹脂 / 結晶多元醇 同級替代與配方評估
                             </h4>
                             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
-                                針對業界歐系同級飽和聚酯樹脂（<strong>DYNAPOL®</strong>）及聚酯多元醇（<strong>DYNACOLL®</strong>）之應用需求，宏威材料提供物性平行比對、相容性評估與高品質替代方案。為保護客戶配方機密，完整比較清單不對外公開，歡迎<a
+                                本公司針對業界歐系同級聚酯樹脂（<strong>DYNAPOL®</strong>）與（<strong>DYNACOLL®</strong>），提供物性平行比對、相容性評估與高品質替代方案。為保護客戶配方機密，完整比較清單不對外公開，歡迎<a
                                     href="/contact/?mode=detailed"
-                                    class="text-blue-900 font-bold hover:underline">聯繫技術團隊</a>索取一對一型號建議與測試樣品。
+                                    class="text-blue-900 font-bold hover:underline">聯繫業務</a>索取一對一型號建議與測試樣品。
                             </p>
                             <div class="text-[11px] text-slate-400 mt-1">
                                 * DYNAPOL® 與 DYNACOLL® 為 Evonik 註冊商標，文中所述型號僅用於同級性能對照參考。
@@ -620,6 +631,37 @@ ${preRenderedContent}
                     </div>`;
                 html = html.replace(/(<div class="table-container)/, `${benchmarkBannerHtml}\n                        $1`);
             }
+
+            // 更新品牌選單按鈕的選中狀態與第 2 步標題
+            const pKey = (categoryMeta.partnerSlug || "").toLowerCase();
+            const partnerMap = { 'mpi': 'MPI', 'dorfketal': 'DorfKetal', 'orion': 'Orion', 'others': 'Others' };
+            const activePartnerId = partnerMap[pKey] || 'MPI';
+            ['MPI', 'DorfKetal', 'Orion', 'Others'].forEach(p => {
+                const isCur = (p === activePartnerId);
+                const btnRegex = new RegExp(`(<a[^>]*id="btn-partner-${p}"[^>]*class=")([^"]*)(")`);
+                html = html.replace(btnRegex, (match, prefix, classList, suffix) => {
+                    let newClasses = classList
+                        .replace(/\bring-4 ring-blue-400\b/g, '')
+                        .replace(/\bscale-\[1\.02\]\b/g, '')
+                        .replace(/\bshadow-lg\b/g, '')
+                        .replace(/\bopacity-50\b/g, '')
+                        .trim();
+                    if (isCur) {
+                        newClasses += ' ring-4 ring-blue-400 scale-[1.02] shadow-lg';
+                    } else {
+                        newClasses += ' opacity-50';
+                    }
+                    return `${prefix}${newClasses}${suffix}`;
+                });
+            });
+
+            const brandStepName = pKey === 'others' ? '其他特化材料' : (categoryMeta.brandName || activePartnerId);
+            const step2Regex = /<h3[^>]*id="ui-step-catalog"[^>]*>[\s\S]*?<\/h3>/;
+            const step2Html = `<h3 class="f-size-sm f-weight-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5" id="ui-step-catalog">
+                <span class="flex items-center justify-center w-5 h-5 rounded bg-blue-100 text-blue-900 f-size-xs f-weight-bold">2</span>
+                應用與主要功能 <br>(${brandStepName})
+            </h3>`;
+            html = html.replace(step2Regex, step2Html);
         }
     }
 
@@ -678,6 +720,46 @@ const corePages = [
 
 // 預先計算預設目錄 (MPI PTFE)，供 /products/ 渲染完整初始畫面
 function renderProductTableRows(products, partnerSlug, lineSlug) {
+    if (lineSlug === 'polyester_resin') {
+        return products.map((p) => {
+            const name = p.product_name || p.name || '';
+            const tg = p.typical_properties?.glass_transition_temp_c ?? '—';
+            const mw = p.typical_properties?.molecular_weight ?? '—';
+            const ohv = p.typical_properties?.hydroxyl_value ?? '—';
+            const av = p.typical_properties?.acid_value ?? '—';
+            const mp = p.typical_properties?.melt_point_c ?? '—';
+            const sp = p.typical_properties?.softening_point_c ?? '—';
+            const app = p.application_fields_zh || '—';
+            const appLabel = p.appearance || p.typical_properties?.physical_form || '—';
+            const safeUrl = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(name)}/`;
+
+            return `
+        <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors" data-product-name="${escapeHtml(name)}">
+            <td class="py-3 px-3.5 font-bold text-slate-900 align-middle min-w-[125px]">
+                <div class="flex flex-col items-start gap-1 w-full py-0.5">
+                    <a href="${safeUrl}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">
+                        ${escapeHtml(name)}
+                    </a>
+                    <div class="flex items-center gap-1.5 shrink-0 select-none mt-1.5 whitespace-nowrap">
+                        <button data-action="toggle-compare" data-product="${escapeHtml(name)}" data-partner="Others" data-line="polyester_resin" class="compare-icon-btn inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all text-slate-600 hover:text-blue-900 hover:bg-blue-50 bg-slate-50 border border-slate-200 active:scale-90 text-sm font-medium cursor-pointer shrink-0 whitespace-nowrap" title="加入比較 (最多4項)" aria-label="加入比較">
+                            <i class="fa-solid fa-scale-balanced text-xs shrink-0"></i>
+                            <span class="shrink-0 whitespace-nowrap">比較</span>
+                        </button>
+                    </div>
+                </div>
+            </td>
+            <td class="py-3 px-3.5 min-w-[85px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(appLabel)}</td>
+            <td class="py-3 px-3.5 min-w-[75px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(String(tg))}</td>
+            <td class="py-3 px-3.5 min-w-[70px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(String(mw))}</td>
+            <td class="py-3 px-3.5 min-w-[80px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(String(ohv))}</td>
+            <td class="py-3 px-3.5 min-w-[75px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(String(av))}</td>
+            <td class="py-3 px-3.5 min-w-[65px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(String(mp))}</td>
+            <td class="py-3 px-3.5 min-w-[65px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(String(sp))}</td>
+            <td class="py-3 px-3.5 min-w-[160px] text-center f-weight-medium text-slate-900 align-middle">${escapeHtml(app)}</td>
+        </tr>`;
+        }).join('');
+    }
+
     return products.map((p) => {
         const name = p.product_name || p.name || '';
         const comp = p.composition_zh || p.chemical_component || p.composition_en || p.chemistry || '—';

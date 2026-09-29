@@ -541,17 +541,13 @@ function updateProductLineNotice() {
                     <div id="polyester-resin-benchmark-banner"
                         class="mb-5 rounded-xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/60 p-4 sm:p-5 shadow-xs">
                         <div class="space-y-1.5">
-                            <div
-                                class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-900 text-xs font-bold">
-                                <i class="fa-solid fa-flask-vial"></i> 技術比較與型號支援
-                            </div>
                             <h4 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
                                 歐系高階聚酯樹脂 / 結晶多元醇 同級替代與配方評估
                             </h4>
                             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
-                                針對業界歐系同級飽和聚酯樹脂（<strong>DYNAPOL®</strong>）及聚酯多元醇（<strong>DYNACOLL®</strong>）之應用需求，宏威材料提供物性平行比對、相容性評估與高品質替代方案。為保護客戶配方機密，完整比較清單不對外公開，歡迎<a
+                                本公司針對業界歐系同級聚酯樹脂（<strong>DYNAPOL®</strong>）與（<strong>DYNACOLL®</strong>），提供物性平行比對、相容性評估與高品質替代方案。為保護客戶配方機密，完整比較清單不對外公開，歡迎<a
                                     href="/contact/?mode=detailed"
-                                    class="text-blue-900 font-bold hover:underline">聯繫技術團隊</a>索取一對一型號建議與測試樣品。
+                                    class="text-blue-900 font-bold hover:underline">聯繫業務</a>索取一對一型號建議與測試樣品。
                             </p>
                             <div class="text-[11px] text-slate-400 mt-1">
                                 * DYNAPOL® 與 DYNACOLL® 為 Evonik 註冊商標，文中所述型號僅用於同級性能對照參考。
