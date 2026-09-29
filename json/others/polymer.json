@@ -1085,12 +1085,12 @@
     "featured_categories": [
       "高分子量聚酯樹脂",
       "印刷油墨",
-      "粘合劑"
+      "接著劑"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "液態",
-    "application_fields_zh": "印刷油墨、粘合劑",
+    "application_fields_zh": "印刷油墨、接著劑",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,
@@ -1124,12 +1124,12 @@
     "featured_categories": [
       "高分子量聚酯樹脂",
       "印刷油墨",
-      "粘合劑"
+      "接著劑"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "結晶態",
-    "application_fields_zh": "印刷油墨、粘合劑",
+    "application_fields_zh": "印刷油墨、接著劑",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,
@@ -1163,14 +1163,14 @@
     "featured_categories": [
       "高分子量聚酯樹脂",
       "印刷油墨",
-      "粘合劑",
+      "接著劑",
       "罐頭塗料",
       "熱密封塗料"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "固體",
-    "application_fields_zh": "印刷油墨、粘合劑、罐頭塗料、熱密封塗料",
+    "application_fields_zh": "印刷油墨、接著劑、罐頭塗料、熱密封塗料",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,
@@ -1281,12 +1281,12 @@
     "featured_categories": [
       "高分子量聚酯樹脂",
       "印刷油墨",
-      "粘合劑"
+      "接著劑"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "固體",
-    "application_fields_zh": "印刷油墨、粘合劑",
+    "application_fields_zh": "印刷油墨、接著劑",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,

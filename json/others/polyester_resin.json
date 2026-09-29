@@ -1039,12 +1039,12 @@
     "product_name": "RS 6204",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "液態",
-    "application_fields_zh": "印刷油墨、粘合劑",
+    "application_fields_zh": "印刷油墨、接著劑",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,
@@ -1076,12 +1076,12 @@
     "product_name": "RS 6208",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "結晶態",
-    "application_fields_zh": "印刷油墨、粘合劑",
+    "application_fields_zh": "印刷油墨、接著劑",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,
@@ -1113,12 +1113,12 @@
     "product_name": "CP 711",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "固體",
-    "application_fields_zh": "印刷油墨、粘合劑、罐頭塗料、熱密封塗料",
+    "application_fields_zh": "印刷油墨、接著劑、罐頭塗料、熱密封塗料",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,
@@ -1150,7 +1150,7 @@
     "product_name": "CP 710",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
@@ -1187,7 +1187,7 @@
     "product_name": "CP 708",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
@@ -1224,12 +1224,12 @@
     "product_name": "CP 706",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
     "appearance": "固體",
-    "application_fields_zh": "印刷油墨、粘合劑",
+    "application_fields_zh": "印刷油墨、接著劑",
     "system": {
       "waterborne": 0,
       "solvent_borne": 0,
@@ -1261,7 +1261,7 @@
     "product_name": "CP 705",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
@@ -1298,7 +1298,7 @@
     "product_name": "CP 752",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",
@@ -1335,7 +1335,7 @@
     "product_name": "CP 712",
     "brand_code": "kuller",
     "featured_categories": [
-      "高分子量樹脂"
+      "高分子量聚酯樹脂"
     ],
     "category": "高分子量聚酯樹脂",
     "composition_zh": "高分子量聚酯樹脂",

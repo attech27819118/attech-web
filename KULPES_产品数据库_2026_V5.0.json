@@ -1,0 +1,1055 @@
+{
+  "database_info": {
+    "name": "KULPES® 树脂产品数据库 (排除测试方法)",
+    "version": "2026 V5.0",
+    "source_file": "KULPES_产品目录_2026_V5.0 - 複製.xlsx",
+    "extracted_at": "2026-09-21",
+    "company": {
+      "name_zh": "昆勒聚合物(上海)有限公司",
+      "name_en": "Kuller Polymer (Shanghai) Co., Ltd.",
+      "address": "上海市闵行区都庄路2350号2幢501室",
+      "postal_code": "201108",
+      "phone": "021-6486 6300",
+      "website": "http://www.kullerpolymer.com",
+      "email": "kullerpolymer@163.com"
+    },
+    "excluded_sheets": [
+      "测试方法"
+    ],
+    "included_categories": [
+      "聚酯多元醇",
+      "改性多元醇",
+      "高分子量聚酯树脂"
+    ],
+    "category_counts": {
+      "聚酯多元醇": 22,
+      "改性多元醇": 6,
+      "高分子量聚酯树脂": 9
+    },
+    "total_products": 37
+  },
+  "products": [
+    {
+      "id": "KULPES_RS_6059",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6059",
+      "physical_form": "无定形态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 10,
+        "molecular_weight_g_mol": 1800,
+        "hydroxyl_value_mg_koh_g": "50-60",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 55
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6067",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6067",
+      "physical_form": "无定形态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 30,
+        "molecular_weight_g_mol": 3000,
+        "hydroxyl_value_mg_koh_g": "30-40",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 78
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6069",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6069",
+      "physical_form": "无定形态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 30,
+        "molecular_weight_g_mol": 3000,
+        "hydroxyl_value_mg_koh_g": "30-40",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 77
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6073",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6073",
+      "physical_form": "无定形态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 30,
+        "molecular_weight_g_mol": 5500,
+        "hydroxyl_value_mg_koh_g": "18-24",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 87
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": true
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "软包装"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6078",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6078",
+      "physical_form": "无定形态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 50,
+        "molecular_weight_g_mol": 2600,
+        "hydroxyl_value_mg_koh_g": "37-45",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 96
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6131",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6131",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -60,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": 30,
+        "softening_point_c": 39
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": true,
+        "pu_elastomer": true,
+        "flexible_packaging": true
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "UV 树脂",
+        "聚氨酯弹性体",
+        "软包装"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6128",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6128",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -50,
+        "molecular_weight_g_mol": 5500,
+        "hydroxyl_value_mg_koh_g": "18-25",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": true,
+        "pu_elastomer": true,
+        "flexible_packaging": true
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "UV 树脂",
+        "聚氨酯弹性体",
+        "软包装"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6119",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6119",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -30,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": true,
+        "flexible_packaging": true
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "聚氨酯弹性体",
+        "软包装"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6071",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6071",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -25,
+        "molecular_weight_g_mol": 1000,
+        "hydroxyl_value_mg_koh_g": "100-120",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": true,
+        "pu_elastomer": true,
+        "flexible_packaging": true
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "UV 树脂",
+        "聚氨酯弹性体",
+        "软包装"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6108",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6108",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -15,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": true,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "聚氨酯弹性体"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6183",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6183",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -60,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": 56,
+        "softening_point_c": 62
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": true
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "软包装"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6184",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6184",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -60,
+        "molecular_weight_g_mol": 8500,
+        "hydroxyl_value_mg_koh_g": "12-18",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": 57,
+        "softening_point_c": 64
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6173",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6173",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -40,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": 95,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6193",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6193",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": null,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": 70,
+        "softening_point_c": 77
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6194",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6194",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": null,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": 65,
+        "softening_point_c": 73
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6195",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6195",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": null,
+        "molecular_weight_g_mol": 5500,
+        "hydroxyl_value_mg_koh_g": "15-25",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": 72,
+        "softening_point_c": 79
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6197",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6197",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -30,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤5",
+        "melting_point_c": 115,
+        "softening_point_c": 117
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6198",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6198",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -30,
+        "molecular_weight_g_mol": 5000,
+        "hydroxyl_value_mg_koh_g": "15-25",
+        "acid_value_mg_koh_g": "≤5",
+        "melting_point_c": 115,
+        "softening_point_c": 118
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6248",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6248",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": null,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤3",
+        "melting_point_c": 90,
+        "softening_point_c": 95
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": true,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "UV 树脂"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6168",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6168",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": null,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 85
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6163",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6163",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -18,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "25-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 92
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6164",
+      "brand": "KULPES®",
+      "category": "聚酯多元醇",
+      "model": "RS 6164",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -25,
+        "molecular_weight_g_mol": 3500,
+        "hydroxyl_value_mg_koh_g": "27-35",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": 123
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6217",
+      "brand": "KULPES®",
+      "category": "改性多元醇",
+      "model": "RS 6217",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -60,
+        "molecular_weight_g_mol": 2000,
+        "hydroxyl_value_mg_koh_g": "45-55",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6227",
+      "brand": "KULPES®",
+      "category": "改性多元醇",
+      "model": "RS 6227",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -60,
+        "molecular_weight_g_mol": 2000,
+        "hydroxyl_value_mg_koh_g": "51-58",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6331",
+      "brand": "KULPES®",
+      "category": "改性多元醇",
+      "model": "RS 6331",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -60,
+        "molecular_weight_g_mol": 2400,
+        "hydroxyl_value_mg_koh_g": "45-55",
+        "acid_value_mg_koh_g": "≤6",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_5806",
+      "brand": "KULPES®",
+      "category": "改性多元醇",
+      "model": "RS 5806",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -30,
+        "molecular_weight_g_mol": 50000,
+        "hydroxyl_value_mg_koh_g": "25",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": true
+      },
+      "application_tags": [
+        "聚氨酯热熔胶",
+        "软包装"
+      ]
+    },
+    {
+      "id": "KULPES_RS_5807",
+      "brand": "KULPES®",
+      "category": "改性多元醇",
+      "model": "RS 5807",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -15,
+        "molecular_weight_g_mol": 30000,
+        "hydroxyl_value_mg_koh_g": "30",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_5800",
+      "brand": "KULPES®",
+      "category": "改性多元醇",
+      "model": "RS 5800",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -15,
+        "molecular_weight_g_mol": 10000,
+        "hydroxyl_value_mg_koh_g": "25",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "pu_hot_melt_adhesive": true,
+        "uv_resin": false,
+        "pu_elastomer": false,
+        "flexible_packaging": false
+      },
+      "application_tags": [
+        "聚氨酯热熔胶"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6204",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "RS 6204",
+      "physical_form": "液态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -30,
+        "molecular_weight_g_mol": 10000,
+        "hydroxyl_value_mg_koh_g": "6-12",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": true,
+        "adhesives": true,
+        "can_coatings": false,
+        "heat_seal_coatings": false
+      },
+      "application_tags": [
+        "印刷油墨",
+        "粘合剂"
+      ]
+    },
+    {
+      "id": "KULPES_RS_6208",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "RS 6208",
+      "physical_form": "结晶态",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": -10,
+        "molecular_weight_g_mol": 15000,
+        "hydroxyl_value_mg_koh_g": "4-10",
+        "acid_value_mg_koh_g": "≤4",
+        "melting_point_c": null,
+        "softening_point_c": 95
+      },
+      "applications": {
+        "printing_inks": true,
+        "adhesives": true,
+        "can_coatings": false,
+        "heat_seal_coatings": false
+      },
+      "application_tags": [
+        "印刷油墨",
+        "粘合剂"
+      ]
+    },
+    {
+      "id": "KULPES_CP_711",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "CP 711",
+      "physical_form": "固体",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 45,
+        "molecular_weight_g_mol": 16000,
+        "hydroxyl_value_mg_koh_g": "5-10",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": true,
+        "adhesives": true,
+        "can_coatings": true,
+        "heat_seal_coatings": true
+      },
+      "application_tags": [
+        "印刷油墨",
+        "粘合剂",
+        "罐听涂料",
+        "热密封涂料"
+      ]
+    },
+    {
+      "id": "KULPES_CP_710",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "CP 710",
+      "physical_form": "固体",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 63,
+        "molecular_weight_g_mol": 20000,
+        "hydroxyl_value_mg_koh_g": "4-7",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": true,
+        "adhesives": false,
+        "can_coatings": false,
+        "heat_seal_coatings": false
+      },
+      "application_tags": [
+        "印刷油墨"
+      ]
+    },
+    {
+      "id": "KULPES_CP_708",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "CP 708",
+      "physical_form": "固体",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 65,
+        "molecular_weight_g_mol": 20000,
+        "hydroxyl_value_mg_koh_g": "4-7",
+        "acid_value_mg_koh_g": "≤5",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": true,
+        "adhesives": false,
+        "can_coatings": false,
+        "heat_seal_coatings": true
+      },
+      "application_tags": [
+        "印刷油墨",
+        "热密封涂料"
+      ]
+    },
+    {
+      "id": "KULPES_CP_706",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "CP 706",
+      "physical_form": "固体",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 67,
+        "molecular_weight_g_mol": 20000,
+        "hydroxyl_value_mg_koh_g": "4-7",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": true,
+        "adhesives": true,
+        "can_coatings": false,
+        "heat_seal_coatings": false
+      },
+      "application_tags": [
+        "印刷油墨",
+        "粘合剂"
+      ]
+    },
+    {
+      "id": "KULPES_CP_705",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "CP 705",
+      "physical_form": "固体",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 67,
+        "molecular_weight_g_mol": 15000,
+        "hydroxyl_value_mg_koh_g": "4-7",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": true,
+        "adhesives": false,
+        "can_coatings": false,
+        "heat_seal_coatings": false
+      },
+      "application_tags": [
+        "印刷油墨"
+      ]
+    },
+    {
+      "id": "KULPES_CP_752",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "CP 752",
+      "physical_form": "固体",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 70,
+        "molecular_weight_g_mol": 18000,
+        "hydroxyl_value_mg_koh_g": "4-7",
+        "acid_value_mg_koh_g": "≤2",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": false,
+        "adhesives": false,
+        "can_coatings": true,
+        "heat_seal_coatings": false
+      },
+      "application_tags": [
+        "罐听涂料"
+      ]
+    },
+    {
+      "id": "KULPES_CP_712",
+      "brand": "KULPES®",
+      "category": "高分子量聚酯树脂",
+      "model": "CP 712",
+      "physical_form": "固体",
+      "supply_form": {
+        "solid_content_percent": 100
+      },
+      "properties": {
+        "glass_transition_temperature_c": 102,
+        "molecular_weight_g_mol": 15000,
+        "hydroxyl_value_mg_koh_g": "4-7",
+        "acid_value_mg_koh_g": "≤3",
+        "melting_point_c": null,
+        "softening_point_c": null
+      },
+      "applications": {
+        "printing_inks": false,
+        "adhesives": false,
+        "can_coatings": true,
+        "heat_seal_coatings": false
+      },
+      "application_tags": [
+        "罐听涂料"
+      ]
+    }
+  ]
+}

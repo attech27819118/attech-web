@@ -291,15 +291,15 @@ const DynamicTableRenderer = {
             headerRows: [
                 [
                     { propKey: 'product_name', title: '<span class="th-title">產品名稱</span>', class: 'min-w-[120px] text-center' },
-                    { propKey: 'appearance', title: '<span class="th-title">外觀 / 形態</span>', class: 'min-w-[85px] text-center' },
-                    { propKey: 'solid_content', title: '<span class="th-title">固含量</span><span class="th-unit">(%)</span>', class: 'min-w-[65px] text-center' },
+                    { propKey: 'appearance', title: '<span class="th-title">物態 / 外觀</span>', class: 'min-w-[85px] text-center' },
                     { propKey: 'glass_transition_temp_c', title: '<span class="th-title">玻璃化溫度</span><span class="th-unit">Tg (°C)</span>', class: 'min-w-[75px] text-center' },
                     { propKey: 'molecular_weight', title: '<span class="th-title">分子量</span><span class="th-unit">Mn</span>', class: 'min-w-[70px] text-center' },
                     { propKey: 'hydroxyl_value', title: '<span class="th-title">羥值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[80px] text-center' },
                     { propKey: 'acid_value', title: '<span class="th-title">酸值</span><span class="th-unit">(mgKOH/g)</span>', class: 'min-w-[75px] text-center' },
+                    { propKey: 'melt_point_c', title: '<span class="th-title">熔點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
                     { propKey: 'softening_point_c', title: '<span class="th-title">軟化點</span><span class="th-unit">(°C)</span>', class: 'min-w-[65px] text-center' },
                     { title: '<span class="th-app">印刷油墨</span>', class: 'min-w-[42px] px-1 text-center' },
-                    { title: '<span class="th-app">粘合劑</span>', class: 'min-w-[42px] px-1 text-center' },
+                    { title: '<span class="th-app">接著劑</span>', class: 'min-w-[42px] px-1 text-center' },
                     { title: '<span class="th-app">罐頭塗料</span>', class: 'min-w-[42px] px-1 text-center' },
                     { title: '<span class="th-app">熱密封</span>', class: 'min-w-[42px] px-1 text-center' }
                 ]
@@ -321,12 +321,6 @@ const DynamicTableRenderer = {
                     propKey: 'appearance',
                     class: 'min-w-[85px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.appearance || p.typical_properties?.physical_form || '—'
-                },
-                {
-                    id: 'solid_content',
-                    propKey: 'solid_content',
-                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
-                    getValue: p => p.typical_properties?.solid_content ?? '—'
                 },
                 {
                     id: 'tg',
@@ -351,6 +345,12 @@ const DynamicTableRenderer = {
                     propKey: 'acid_value',
                     class: 'min-w-[75px] text-center f-weight-medium text-slate-900',
                     getValue: p => p.typical_properties?.acid_value ?? '—'
+                },
+                {
+                    id: 'mp',
+                    propKey: 'melt_point_c',
+                    class: 'min-w-[65px] text-center f-weight-medium text-slate-900',
+                    getValue: p => p.typical_properties?.melt_point_c ?? '—'
                 },
                 {
                     id: 'sp',
@@ -1205,7 +1205,7 @@ const DynamicTableRenderer = {
                     return this.layoutDefinitions.polyester_polyol;
                 } else if (AppState.category === '改性多元醇') {
                     return this.layoutDefinitions.modified_polyol;
-                } else if (AppState.category === '高分子量聚酯樹脂') {
+                } else if (AppState.category === '高分子量聚酯樹脂' || AppState.category === '高分子量聚酯樹脂') {
                     return this.layoutDefinitions.polyester_resin;
                 }
                 return this.layoutDefinitions.polyester_resin_all;

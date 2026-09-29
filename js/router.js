@@ -46,8 +46,12 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
         if (shouldUpdatePartnerUI && typeof updatePartnerUI === 'function') {
             updatePartnerUI();
         }
-    } else if (tabId === 'contact') {
-        if (typeof prewarmBackendServer === 'function') prewarmBackendServer();
+        if (typeof updateProductLineNotice === 'function') updateProductLineNotice();
+    } else {
+        if (typeof updateProductLineNotice === 'function') updateProductLineNotice();
+        if (tabId === 'contact') {
+            if (typeof prewarmBackendServer === 'function') prewarmBackendServer();
+        }
     }
     if (typeof updateCompareUI === 'function') updateCompareUI();
     if (updateUrl) updateUrlRoute(true);
@@ -310,7 +314,7 @@ function parseUrlRoute() {
     if (window.location.hash && window.location.hash.length > 1) {
         const legacyHash = window.location.hash.replace(/^#\/?/, '');
         const [hTab, hQuery] = legacyHash.split('?');
-        if (['products', 'partners', 'contact', 'about'].includes(hTab)) {
+        if (['products', 'technology', 'partners', 'contact', 'about'].includes(hTab)) {
             const hParams = new URLSearchParams(hQuery || '');
 
             let cleanMigratedPath = '/';
@@ -326,6 +330,8 @@ function parseUrlRoute() {
                 if (hParams.get('q')) {
                     cleanMigratedPath = `/products/?q=${encodeURIComponent(hParams.get('q'))}`;
                 }
+            } else if (hTab === 'technology') {
+                cleanMigratedPath = '/products/';
             } else if (hTab === 'partners') {
                 cleanMigratedPath = '/partners/';
             } else if (hTab === 'contact') {
@@ -363,6 +369,15 @@ function parseUrlRoute() {
     if (!rootSegment || rootSegment === 'about' || rootSegment === 'index.html') {
         switchTab('about', false, false);
         updatePageMeta('about');
+        return;
+    }
+
+    // 舊技術專區網址轉址 (已整合至產品專區)
+    if (rootSegment === 'technology' || rootSegment === 'tech') {
+        const basePath = getAppBasePath();
+        const fullRedirectPath = basePath ? ('/' + basePath + '/products/') : '/products/';
+        history.replaceState(null, '', fullRedirectPath);
+        switchTab('products', false, false);
         return;
     }
 
