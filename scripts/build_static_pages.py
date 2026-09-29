@@ -250,6 +250,47 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
     )
     banner_button_text = "TDS 與完整規格" if is_mpi else "詳細規格與技術資料"
 
+    is_polyester = (line_key in ['polyester_resin', 'polyester_polyol', 'modified_polyol'])
+    if is_polyester:
+        card1_block = f'''<!-- 導流卡片 1：歐系聚酯樹脂同級替代評估 -->
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-scale-balanced"></i> 產品線上對比功能
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">需要比較同系列其他產品？</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        本公司針對業界常用的歐系聚酯樹脂（DYNAPOL® 同級）與（DYNACOLL® 同級），提供物性比對、相容性評估及高品質替代方案。若有需求，歡迎聯繫業務取得專屬型號建議與測試樣品。
+                    </p>
+                    <div class="space-y-2">
+                        <a href="/contact/?product={safe_name}" 
+                           class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>聯繫業務取得專屬型號建議與測試樣品</span>
+                        </a>
+                        <a href="/products/{partner_key}/{line_key}/" 
+                           class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-xl text-xs font-semibold transition-colors">
+                            <span>進入 聚酯樹脂 完整規格比較表</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>'''
+    else:
+        card1_block = f'''<!-- 導流卡片 1：線上產品比較 -->
+                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-scale-balanced"></i> 產品線上對比功能
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">需要比較同系列其他產品？</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 {escape_html(brand_name)} {escape_html(line_title)} 各產品的物性規格與適用系統。
+                    </p>
+                    <a href="/products/{partner_key}/{line_key}/" 
+                       class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
+                        <span>進入 {escape_html(line_title or '此系列')} 完整規格比較表</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>'''
+
     return f'''
     <div class="product-seo-detail bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 mb-8 text-slate-900">
         <!-- 頂部產品基本資訊與快速操作 (純白卡片無漸層) -->
@@ -312,21 +353,7 @@ def render_product_detail_table(p, partner_key, line_key, brand_name, line_title
 
             <!-- 右側 1 欄：官網產品比較導流與原廠支援 (單一色底無漸層，統一風格) -->
             <div class="space-y-6">
-                <!-- 導流卡片 1：線上產品比較 -->
-                <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
-                    <div class="flex items-center gap-2 text-blue-900 text-xs font-bold uppercase tracking-wider mb-2">
-                        <i class="fa-solid fa-scale-balanced"></i> 產品線上對比功能
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">需要比較同系列其他產品？</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                        宏威應用材料官網提供完整的特用化學品物性規格，您可同時比較 {escape_html(brand_name)} {escape_html(line_title)} 各產品的物性規格與適用系統。
-                    </p>
-                    <a href="/products/{partner_key}/{line_key}/" 
-                       class="inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs font-bold transition-colors">
-                        <span>進入 {escape_html(line_title or '此系列')} 完整規格比較表</span>
-                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                    </a>
-                </div>
+                {card1_block}
 
                 <!-- 導流卡片 2：原廠正品技術保證 (單一色底無漸層，統一風格) -->
                 <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
@@ -495,10 +522,49 @@ def write_static_file(rel_path, content):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(content)
 
+def render_product_table_rows(products, partner_slug, line_slug, config):
+    table_rows = []
+    for p in products:
+        name = p.get('product_name') or p.get('name') or ''
+        comp = p.get('composition_zh') or p.get('chemical_component') or p.get('composition_en') or p.get('chemistry') or '—'
+        props = get_product_description(p, partner_slug, line_slug)
+        app_list = get_product_applications(p, partner_slug, line_slug, config)
+        usage_text = '、'.join(a['title'] for a in app_list) or p.get('main_usage') or p.get('application_fields_zh') or '—'
+        safe_url = f'/products/{partner_slug}/{line_slug}/{urllib.parse.quote(name)}/'
+        table_rows.append(f'''
+        <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+            <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
+                <a href="{safe_url}" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                    {escape_html(name)}
+                </a>
+                <div class="text-xs text-slate-500 font-normal mt-0.5">{escape_html(comp)}</div>
+            </td>
+            <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">{escape_html(props)}</td>
+            <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">{escape_html(usage_text)}</td>
+            <td class="py-3 px-3.5 text-center align-top w-[10%]">
+                <a href="{safe_url}" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                    <span>規格詳情</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                </a>
+            </td>
+        </tr>''')
+    return table_rows
+
 def main():
     print("🚀 [Python] 開始建置靜態預渲染 (SSG) 頁面...")
     template_html, config, all_products_cache = load_data()
     generated_count = 0
+
+    # 預先計算預設目錄 (MPI PTFE)，供 /products/ 渲染完整初始畫面
+    default_products = all_products_cache.get('ptfe', [])
+    default_table_rows = render_product_table_rows(default_products, 'mpi', 'ptfe', config)
+    default_category_meta = {
+        "brandName": "Micro Powders",
+        "lineTitle": "微粉蠟 (PTFE取代方案)",
+        "matchCount": len(default_products),
+        "partnerSlug": "mpi",
+        "lineSlug": "ptfe"
+    }
 
     core_pages = [
         ('/about/', '宏威應用材料 Discover The Link To Life | 專業特用化學品供應商', '宏威應用材料 Discover The Link To Life - 專業特用化學品供應商，提供PTFE取代方案、Micro Powders微粉蠟、Dorf Ketal鈦鋯酸酯、Orion特級碳黑等高性能材料與申請樣品服務。', 'about'),
@@ -508,7 +574,15 @@ def main():
     ]
 
     for p_path, p_title, p_desc, p_tab in core_pages:
-        h = build_page_html(template_html, p_title, p_desc, p_path, active_tab=p_tab)
+        if p_path == '/products/':
+            h = build_page_html(
+                template_html, p_title, p_desc, p_path,
+                active_tab=p_tab,
+                pre_rendered_content=''.join(default_table_rows),
+                category_meta=default_category_meta
+            )
+        else:
+            h = build_page_html(template_html, p_title, p_desc, p_path, active_tab=p_tab)
         write_static_file(p_path, h)
         generated_count += 1
 
@@ -517,13 +591,34 @@ def main():
         brand_name = brand_obj.get('brandName', brand_key)
         brand_path = f'/products/{partner_slug}/'
 
+        # 針對各品牌首頁，預渲染其第一條代表性產品線
+        first_file = brand_obj.get('files', [{}])[0] if brand_obj.get('files') else None
+        first_line_slug = first_file.get('key') if first_file else None
+        first_line_title = (first_file.get('titleZh') or first_file.get('titleEn') or first_line_slug) if first_file else ''
+        first_line_products = all_products_cache.get(first_line_slug, []) if first_line_slug else []
+        brand_first_rows = render_product_table_rows(first_line_products, partner_slug, first_line_slug, config) if first_line_slug else []
+
         is_mpi = (partner_slug == 'mpi')
         p_desc = (
             f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、TDS技術資料下載與樣品申請服務。"
             if is_mpi else
             f"宏威應用材料代理銷售 {brand_name} 全系列特用化學品，提供規格對比、產品詳細參數與樣品申請服務。"
         )
-        p_html = build_page_html(template_html, f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials", p_desc, brand_path, active_tab='products')
+        p_html = build_page_html(
+            template_html,
+            f"{brand_name} 特用化學品系列 | 宏威應用材料 ATTech Materials",
+            p_desc,
+            brand_path,
+            active_tab='products',
+            pre_rendered_content=''.join(brand_first_rows) if brand_first_rows else None,
+            category_meta={
+                "brandName": brand_name,
+                "lineTitle": first_line_title,
+                "matchCount": len(first_line_products),
+                "partnerSlug": partner_slug,
+                "lineSlug": first_line_slug
+            } if first_line_slug else None
+        )
         write_static_file(brand_path, p_html)
         generated_count += 1
 
@@ -533,31 +628,7 @@ def main():
             line_path = f'/products/{partner_slug}/{line_slug}/'
             products = all_products_cache.get(line_slug, [])
 
-            table_rows = []
-            for p in products:
-                name = p.get('product_name') or p.get('name') or ''
-                comp = p.get('composition_zh') or p.get('chemical_component') or p.get('composition_en') or p.get('chemistry') or '—'
-                props = get_product_description(p, partner_slug, line_slug)
-                app_list = get_product_applications(p, partner_slug, line_slug, config)
-                usage_text = '、'.join(a['title'] for a in app_list) or p.get('main_usage') or p.get('application_fields_zh') or '—'
-                safe_url = f'/products/{partner_slug}/{line_slug}/{urllib.parse.quote(name)}/'
-                table_rows.append(f'''
-                <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
-                    <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                        <a href="{safe_url}" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
-                            {escape_html(name)}
-                        </a>
-                        <div class="text-xs text-slate-500 font-normal mt-0.5">{escape_html(comp)}</div>
-                    </td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">{escape_html(props)}</td>
-                    <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">{escape_html(usage_text)}</td>
-                    <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                        <a href="{safe_url}" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
-                            <span>規格詳情</span>
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
-                    </td>
-                </tr>''')
+            table_rows = render_product_table_rows(products, partner_slug, line_slug, config)
 
             item_list_schema = {
                 "@context": "https://schema.org",
