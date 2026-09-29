@@ -590,34 +590,31 @@ ${preRenderedContent}
             const lineSlug = categoryMeta.lineSlug || "";
             const brandLink = brandSlug ? `/products/${brandSlug}/` : '/products/';
             const lineLink = (brandSlug && lineSlug) ? `/products/${brandSlug}/${lineSlug}/` : brandLink;
-            const breadcrumbHtml = `<a href="/products/" class="text-slate-500 hover:text-blue-900 hover:underline transition-colors font-medium">產品</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${brandLink}" class="text-slate-600 hover:text-blue-900 hover:underline transition-colors font-semibold">${escapeHtml(categoryMeta.brandName)}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${lineLink}" class="text-slate-700 hover:text-blue-900 hover:underline transition-colors font-semibold">${escapeHtml(categoryMeta.lineTitle)}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">全部</span>`;
+            const brandDisplayName = brandSlug === 'others' ? '其他特化材料' : escapeHtml(categoryMeta.brandName);
+            const catDisplay = '全系列產品';
+            const breadcrumbHtml = `<a href="/products/" class="text-slate-500 hover:text-blue-900 hover:underline transition-colors font-medium">產品</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${brandLink}" class="text-slate-600 hover:text-blue-900 hover:underline transition-colors font-semibold">${brandDisplayName}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <a href="${lineLink}" class="text-slate-700 hover:text-blue-900 hover:underline transition-colors font-semibold">${escapeHtml(categoryMeta.lineTitle)}</a> <i class="fa-solid fa-chevron-right f-size-xs mx-1 text-slate-400"></i> <span class="f-weight-bold text-blue-950">${catDisplay}</span>`;
             html = html.replace(/<span id="dir-current-path"[^>]*>.*?<\/span>/, `<span id="dir-current-path" class="text-blue-950 f-weight-bold">${breadcrumbHtml}</span>`);
             html = html.replace(/<span id="dir-match-count"[^>]*>.*?<\/span>/, `<span id="dir-match-count" class="bg-blue-100 text-blue-900 f-size-xs px-2 py-0.5 rounded-full f-weight-bold">${categoryMeta.matchCount}</span>`);
 
             if (lineSlug === 'polyester_resin') {
                 const benchmarkBannerHtml = `
-                    <div id="polyester-resin-benchmark-banner" class="mb-5 rounded-xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/60 p-4 sm:p-5 shadow-xs">
-                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                            <div class="space-y-1">
-                                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-900 text-xs font-bold">
-                                    <i class="fa-solid fa-flask-vial"></i> 技術比較與型號支援
-                                </div>
-                                <h4 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
-                                    歐系高階聚酯樹脂 / 結晶多元醇 同級替代與配方評估
-                                </h4>
-                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
-                                    針對業界歐系熱塑性飽和共聚酯（<strong>DYNAPOL®</strong> 同級）及反應型結晶多元醇（<strong>DYNACOLL®</strong> 同級）之應用需求，宏威材料提供物性平行比對、相容性評估與高品質替代方案。為保護客戶配方機密，完整比較清單不對外公開，歡迎聯繫技術團隊索取一對一型號建議與測試樣品。
-                                </p>
-                                <div class="text-[11px] text-slate-400 mt-1">
-                                    * DYNAPOL® 與 DYNACOLL® 為 Evonik 註冊商標，文中所述型號僅用於同級性能型號選擇參考。
-                                </div>
+                    <div id="polyester-resin-benchmark-banner"
+                        class="mb-5 rounded-xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/60 p-4 sm:p-5 shadow-xs">
+                        <div class="space-y-1.5">
+                            <div
+                                class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-900 text-xs font-bold">
+                                <i class="fa-solid fa-flask-vial"></i> 技術比較與型號支援
                             </div>
-                            <div class="shrink-0 w-full sm:w-auto">
-                                <a href="/contact/?mode=detailed" 
-                                   class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-xl text-xs sm:text-sm font-bold shadow-xs transition-colors active:scale-95 whitespace-nowrap">
-                                    <i class="fa-solid fa-vial"></i>
-                                    <span>申請同級規格諮詢 / 索取樣品</span>
-                                </a>
+                            <h4 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
+                                歐系高階聚酯樹脂 / 結晶多元醇 同級替代與配方評估
+                            </h4>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
+                                針對業界歐系同級飽和聚酯樹脂（<strong>DYNAPOL®</strong>）及聚酯多元醇（<strong>DYNACOLL®</strong>）之應用需求，宏威材料提供物性平行比對、相容性評估與高品質替代方案。為保護客戶配方機密，完整比較清單不對外公開，歡迎<a
+                                    href="/contact/?mode=detailed"
+                                    class="text-blue-900 font-bold hover:underline">聯繫技術團隊</a>索取一對一型號建議與測試樣品。
+                            </p>
+                            <div class="text-[11px] text-slate-400 mt-1">
+                                * DYNAPOL® 與 DYNACOLL® 為 Evonik 註冊商標，文中所述型號僅用於同級性能對照參考。
                             </div>
                         </div>
                     </div>`;
