@@ -21,8 +21,8 @@ const DEFAULT_REMOTE_URL = 'https://uib4yezvl3.execute-api.us-east-1.amazonaws.c
 const detailedPayload = {
     type: '詳細需求',
     applyDate: new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/-/g, '/'),
-    company: '宏威測試科技股份有限公司',
-    contact: '張經理 (研發部)',
+    company: '測試中',
+    contact: '測試中',
     email: 'atservice@attech.com.tw', // 測試時可改為您的接收信箱
     tel: '04-2239-8056#123',
     mobile: '0912-345-678',
@@ -59,8 +59,8 @@ const detailedPayload = {
 const quickPayload = {
     type: '快速詢價',
     applyDate: new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/-/g, '/'),
-    company: '創新材料快速測試',
-    contact: '李專員',
+    company: '測試中',
+    contact: '測試中',
     email: 'atservice@attech.com.tw',
     mobile: '0988-123-456',
     phone: '0988-123-456',

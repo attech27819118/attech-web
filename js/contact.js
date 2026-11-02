@@ -451,8 +451,6 @@ async function handleContactSubmit(event) {
         submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
     }
 
-    lastSubmitTime = now;
-
     // 後端 API 網址設定：
     // 1. 本機開發自動連線 localhost:3000
     // 2. 正式線上環境預設連線 AWS Lambda API 端點
@@ -532,12 +530,20 @@ async function handleContactSubmit(event) {
             if (successCard) successCard.classList.remove('hidden');
 
             // 平滑捲動至卡片頂部，確保使用者一眼看到明確的成功反饋
-            const targetCard = document.getElementById('contact-form-card') || successCard;
-            if (targetCard) {
-                const navEl = document.querySelector('nav');
-                const navHeight = navEl ? navEl.offsetHeight : 64;
-                const targetY = targetCard.getBoundingClientRect().top + window.pageYOffset - (navHeight + 16);
-                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+            try {
+                const targetCard = document.getElementById('contact-form-card') || successCard;
+                if (targetCard) {
+                    const navEl = document.querySelector('nav');
+                    const navHeight = navEl ? navEl.offsetHeight : 64;
+                    const rect = targetCard.getBoundingClientRect ? targetCard.getBoundingClientRect() : null;
+                    const pageY = (typeof window.pageYOffset !== 'undefined') ? window.pageYOffset : (window.scrollY || 0);
+                    if (rect) {
+                        const targetY = rect.top + pageY - (navHeight + 16);
+                        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+                    }
+                }
+            } catch (scrollErr) {
+                console.warn('Scroll error:', scrollErr);
             }
 
             showToast(result.message || '需求表單已成功送出！專人將儘速與您聯繫。', 'success');
