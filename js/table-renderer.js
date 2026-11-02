@@ -1134,7 +1134,7 @@ const DynamicTableRenderer = {
             {
                 id: 'production_method',
                 propKey: 'production_method',
-                title: '<span class="th-title">生產方法</span>',
+                title: '<span class="th-title">類型</span>',
                 class: 'min-w-[85px] f-weight-bold text-blue-950 text-center',
                 getValue: p => p.production_method
             },

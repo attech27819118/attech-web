@@ -119,6 +119,19 @@ function createStyledPDF(title, sections, companyName) {
     });
 }
 
+// 60 秒防重複提交快取 (AWS Lambda 溫啟動跨請求防重)
+const recentSubmissions = new Map();
+const SUBMISSION_COOLDOWN_MS = 60 * 1000;
+
+function cleanupOldSubmissions() {
+    const now = Date.now();
+    for (const [key, timestamp] of recentSubmissions.entries()) {
+        if (now - timestamp > SUBMISSION_COOLDOWN_MS * 2) {
+            recentSubmissions.delete(key);
+        }
+    }
+}
+
 // AWS Lambda 核心進入點
 exports.handler = async (event, context) => {
     // 跨域 CORS 標頭
@@ -159,6 +172,29 @@ exports.handler = async (event, context) => {
                 })
             };
         }
+
+        // 短時間去重指紋 (避免快速連點或重複發信)
+        const dedupSample = (data.sample || data.sampleReq || (Array.isArray(data.sampleItems) ? data.sampleItems.map(s => s.name).join(';') : '') || data.message || '').trim().toLowerCase();
+        const dedupKey = `${(email || '').trim().toLowerCase()}###${(company || '').trim().toLowerCase()}###${dedupSample}`;
+
+        const lastSeen = recentSubmissions.get(dedupKey);
+        const now = Date.now();
+        if (lastSeen && (now - lastSeen < SUBMISSION_COOLDOWN_MS)) {
+            const waitSeconds = Math.ceil((SUBMISSION_COOLDOWN_MS - (now - lastSeen)) / 1000);
+            console.log(`[DEDUP] 偵測到 ${email} (${company}) 於 ${60 - waitSeconds}s 前已送出相同需求，已安全攔截重複郵件`);
+            return {
+                statusCode: 200,
+                headers: corsHeaders,
+                body: JSON.stringify({
+                    success: true,
+                    isDuplicate: true,
+                    message: `您的需求表單已成功送出並在處理中，專員將儘速與您聯繫（請稍候 ${waitSeconds} 秒後再試，系統已自動為您合併）。`
+                })
+            };
+        }
+
+        cleanupOldSubmissions();
+        recentSubmissions.set(dedupKey, now);
 
         const isQuickMode = (type === '快速詢價' || !data.appFields);
         let subject = `【官網需求單】${company} - ${contact}（${isQuickMode ? '快速樣品申請' : '詳細樣品申請與技術評估'}）`;
