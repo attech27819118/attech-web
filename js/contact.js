@@ -443,49 +443,26 @@ async function handleContactSubmit(event) {
     }
 
     const submitBtn = document.getElementById('form-submit');
-    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
-    let stepTimer = null;
+    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '<i class="fa-solid fa-paper-plane f-size-sm" aria-hidden="true"></i> 送出需求訊息';
 
     if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在傳送需求資料...';
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 需求傳送中，請稍候...';
         submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-
-        let elapsed = 0;
-        stepTimer = setInterval(() => {
-            elapsed += 1;
-            if (elapsed === 2) {
-                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin f-size-sm" aria-hidden="true"></i> 正在生成 PDF 申請單並寄出...';
-            }
-        }, 1000);
     }
 
     lastSubmitTime = now;
 
     // 後端 API 網址設定：
     // 1. 本機開發自動連線 localhost:3000
-    // 2. 正式線上環境預設連線 AWS EC2 API 端點 (可設定自訂網域如 https://api.attech.com.tw 或 EC2 IP/DNS)
-    // 3. 若使用 AWS CloudFront 整合路徑，可直接使用同源相對路徑
+    // 2. 正式線上環境預設連線 AWS Lambda API 端點
     const isLocalHost = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
     const AWS_API_BASE = window.ATTECH_API_BASE || 'https://uib4yezvl3.execute-api.us-east-1.amazonaws.com/default/attech-send-email';
     const targetUrl = isLocalHost ? 'http://localhost:3000/api/send-email' : AWS_API_BASE;
 
-    // 若已啟用 reCAPTCHA v3，自動取得驗證 Token (最多等待 2 秒，超時不阻擋表單發送)
-    if (typeof grecaptcha !== 'undefined' && window.RECAPTCHA_KEY) {
-        try {
-            const rcToken = await Promise.race([
-                grecaptcha.execute(window.RECAPTCHA_KEY, { action: 'submit_contact' }),
-                new Promise(resolve => setTimeout(() => resolve(null), 2000))
-            ]);
-            if (rcToken) payload.recaptchaToken = rcToken;
-        } catch (rcErr) {
-            console.warn('reCAPTCHA execution error:', rcErr);
-        }
-    }
-
-    // 設置 15 秒逾時中斷控制器
+    // 設置 30 秒逾時中斷控制器，確保 Lambda 冷啟動及郵件發送均可完整執行
     const abortController = new AbortController();
-    const timeoutId = setTimeout(() => abortController.abort(), 15000);
+    const timeoutId = setTimeout(() => abortController.abort(), 30000);
 
     try {
         const response = await fetch(targetUrl, {
@@ -503,8 +480,8 @@ async function handleContactSubmit(event) {
             result = await response.json();
         } catch (jsonErr) {
             result = {
-                success: false,
-                message: `伺服器回應異常 (HTTP ${response.status})`
+                success: response.ok,
+                message: response.ok ? '需求表單已成功送出！' : `伺服器回應異常 (HTTP ${response.status})`
             };
         }
 
@@ -529,7 +506,6 @@ async function handleContactSubmit(event) {
             try {
                 sessionStorage.setItem('attech_last_contact_ts', Date.now().toString());
             } catch (e) {}
-            startCooldownTimer(SUBMIT_COOLDOWN_SECONDS);
 
             // 更新成功狀態卡片資訊
             const summaryTypeEl = document.getElementById('success-summary-type');
@@ -566,6 +542,7 @@ async function handleContactSubmit(event) {
 
             showToast(result.message || '需求表單已成功送出！專人將儘速與您聯繫。', 'success');
             form.reset();
+            startCooldownTimer(SUBMIT_COOLDOWN_SECONDS);
         } else {
             const errDetail = result.error ? `（${result.error}）` : '';
             showToast((result.message || '伺服器傳送失敗，請稍後再試。') + errDetail, 'error');
@@ -588,7 +565,6 @@ async function handleContactSubmit(event) {
             showToast('連線至 AWS 後端失敗，請確認網路連線正常或網域已加入 AWS CORS 允許名單。', 'error');
         }
     } finally {
-        if (stepTimer) clearInterval(stepTimer);
         const remainingAfter = getRemainingCooldown();
         if (remainingAfter > 0) {
             startCooldownTimer(remainingAfter);
