@@ -4,7 +4,8 @@
  * ====================================================================
  */
 
-let lastSubmitTime = 0;
+const SUBMIT_COOLDOWN_SECONDS = 60;
+let cooldownInterval = null;
 
 function getTodayDateStr() {
     const today = new Date();
@@ -21,10 +22,107 @@ function initFormDates() {
     }
 }
 
+function getRemainingCooldown() {
+    try {
+        const lastTs = parseInt(sessionStorage.getItem('attech_last_contact_ts') || '0', 10);
+        if (!lastTs) return 0;
+        const elapsed = Math.floor((Date.now() - lastTs) / 1000);
+        if (elapsed < SUBMIT_COOLDOWN_SECONDS) {
+            return SUBMIT_COOLDOWN_SECONDS - elapsed;
+        }
+    } catch (e) {
+        console.warn('sessionStorage access error:', e);
+    }
+    return 0;
+}
+
+function updateSubmitBtnCooldown(remaining) {
+    const submitBtn = document.getElementById('form-submit');
+    if (!submitBtn) return;
+
+    if (remaining > 0) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
+        submitBtn.classList.remove('hover:bg-blue-900', 'active:scale-[0.98]');
+        submitBtn.innerHTML = `<i class="fa-solid fa-clock f-size-sm" aria-hidden="true"></i> 請稍候 (${remaining}s)`;
+    } else {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-60', 'cursor-not-allowed', 'opacity-75');
+        submitBtn.classList.add('hover:bg-blue-900', 'active:scale-[0.98]');
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane f-size-sm" aria-hidden="true"></i> 送出需求訊息';
+        if (cooldownInterval) {
+            clearInterval(cooldownInterval);
+            cooldownInterval = null;
+        }
+    }
+}
+
+function startCooldownTimer(seconds) {
+    if (cooldownInterval) clearInterval(cooldownInterval);
+    let remaining = seconds;
+    updateSubmitBtnCooldown(remaining);
+
+    cooldownInterval = setInterval(() => {
+        remaining -= 1;
+        if (remaining <= 0) {
+            clearInterval(cooldownInterval);
+            cooldownInterval = null;
+            updateSubmitBtnCooldown(0);
+        } else {
+            updateSubmitBtnCooldown(remaining);
+        }
+    }, 1000);
+}
+
+function checkAndInitCooldown() {
+    const remaining = getRemainingCooldown();
+    if (remaining > 0) {
+        startCooldownTimer(remaining);
+    }
+}
+
+function resetContactFormState() {
+    const successCard = document.getElementById('contact-success-state');
+    const form = document.getElementById('attech-contact-form');
+    const switcher = document.getElementById('contact-mode-switcher');
+
+    if (form) {
+        form.reset();
+        form.classList.remove('hidden');
+    }
+    if (switcher) {
+        switcher.classList.remove('hidden');
+    }
+    if (successCard) {
+        successCard.classList.add('hidden');
+    }
+
+    initFormDates();
+
+    const remaining = getRemainingCooldown();
+    if (remaining > 0) {
+        startCooldownTimer(remaining);
+    } else {
+        updateSubmitBtnCooldown(0);
+    }
+
+    const card = document.getElementById('contact-form-card') || document.getElementById('attech-contact-form');
+    if (card) {
+        const navEl = document.querySelector('nav');
+        const navHeight = navEl ? navEl.offsetHeight : 64;
+        const targetY = card.getBoundingClientRect().top + window.pageYOffset - (navHeight + 16);
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+    }
+}
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFormDates);
+    document.addEventListener('DOMContentLoaded', () => {
+        initFormDates();
+        checkAndInitCooldown();
+    });
 } else {
     initFormDates();
+    checkAndInitCooldown();
 }
 
 function switchFormMode(mode) {
@@ -156,9 +254,9 @@ async function handleContactSubmit(event) {
         return;
     }
 
-    const now = Date.now();
-    if (now - lastSubmitTime < 4000) {
-        showToast('請勿頻繁重複送出，請稍後再試。', 'warning');
+    const remainingCd = getRemainingCooldown();
+    if (remainingCd > 0) {
+        showToast(`已收到您的需求！為避免重複寄信，請稍候 ${remainingCd} 秒後再試。`, 'warning');
         return;
     }
 
@@ -372,10 +470,13 @@ async function handleContactSubmit(event) {
     const AWS_API_BASE = window.ATTECH_API_BASE || 'https://uib4yezvl3.execute-api.us-east-1.amazonaws.com/default/attech-send-email';
     const targetUrl = isLocalHost ? 'http://localhost:3000/api/send-email' : AWS_API_BASE;
 
-    // 若已啟用 reCAPTCHA v3，自動取得驗證 Token
+    // 若已啟用 reCAPTCHA v3，自動取得驗證 Token (最多等待 2 秒，超時不阻擋表單發送)
     if (typeof grecaptcha !== 'undefined' && window.RECAPTCHA_KEY) {
         try {
-            const rcToken = await grecaptcha.execute(window.RECAPTCHA_KEY, { action: 'submit_contact' });
+            const rcToken = await Promise.race([
+                grecaptcha.execute(window.RECAPTCHA_KEY, { action: 'submit_contact' }),
+                new Promise(resolve => setTimeout(() => resolve(null), 2000))
+            ]);
             if (rcToken) payload.recaptchaToken = rcToken;
         } catch (rcErr) {
             console.warn('reCAPTCHA execution error:', rcErr);
@@ -408,16 +509,59 @@ async function handleContactSubmit(event) {
         }
 
         if (response.ok && result.success) {
-            // 發送 GA4 核心商機轉換事件 (generate_lead)
-            if (typeof gtag === 'function') {
-                gtag('event', 'generate_lead', {
-                    event_category: 'Form_Submission',
-                    event_label: payload.company || '未填公司',
-                    lead_type: isQuickMode ? '快速詢價' : '詳細應用需求',
-                    product_name: (payload.sample || payload.targetProduct || '未指定產品'),
-                    company_name: payload.company || '',
-                    contact_name: payload.contact || ''
-                });
+            // 發送 GA4 核心商機轉換事件 (generate_lead)，安全防護不中斷表單流程
+            try {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        event_category: 'Form_Submission',
+                        event_label: payload.company || '未填公司',
+                        lead_type: isQuick ? '快速詢價' : '詳細應用需求',
+                        product_name: (payload.sample || payload.sampleReq || '未指定產品'),
+                        company_name: payload.company || '',
+                        contact_name: payload.contact || ''
+                    });
+                }
+            } catch (gtagErr) {
+                console.warn('GA4 tracking error:', gtagErr);
+            }
+
+            // 記錄本次成功發送時間戳並啟動 60 秒冷卻倒數
+            try {
+                sessionStorage.setItem('attech_last_contact_ts', Date.now().toString());
+            } catch (e) {}
+            startCooldownTimer(SUBMIT_COOLDOWN_SECONDS);
+
+            // 更新成功狀態卡片資訊
+            const summaryTypeEl = document.getElementById('success-summary-type');
+            const summaryCompanyEl = document.getElementById('success-summary-company');
+            const summaryContactEl = document.getElementById('success-summary-contact');
+            const summaryEmailEl = document.getElementById('success-summary-email');
+            const summarySampleEl = document.getElementById('success-summary-sample');
+
+            if (summaryTypeEl) summaryTypeEl.innerText = payload.type || '樣品/詢價需求';
+            if (summaryCompanyEl) summaryCompanyEl.innerText = payload.company || '--';
+            if (summaryContactEl) summaryContactEl.innerText = payload.contact || '--';
+            if (summaryEmailEl) summaryEmailEl.innerText = payload.email || '--';
+            if (summarySampleEl) {
+                const sampleText = payload.sample || payload.sampleReq || (payload.sampleItems?.map(s => s.name).filter(Boolean).join('、')) || '依專案需求評估';
+                summarySampleEl.innerText = sampleText;
+                summarySampleEl.title = sampleText;
+            }
+
+            // 顯著切換：隱藏表單與模式切換鈕，顯示成功提示卡片
+            const successCard = document.getElementById('contact-success-state');
+            const switcher = document.getElementById('contact-mode-switcher');
+            if (switcher) switcher.classList.add('hidden');
+            if (form) form.classList.add('hidden');
+            if (successCard) successCard.classList.remove('hidden');
+
+            // 平滑捲動至卡片頂部，確保使用者一眼看到明確的成功反饋
+            const targetCard = document.getElementById('contact-form-card') || successCard;
+            if (targetCard) {
+                const navEl = document.querySelector('nav');
+                const navHeight = navEl ? navEl.offsetHeight : 64;
+                const targetY = targetCard.getBoundingClientRect().top + window.pageYOffset - (navHeight + 16);
+                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
             }
 
             showToast(result.message || '需求表單已成功送出！專人將儘速與您聯繫。', 'success');
@@ -429,19 +573,29 @@ async function handleContactSubmit(event) {
     } catch (err) {
         clearTimeout(timeoutId);
         console.error('Submit form error:', err);
+        const isFileProtocol = (window.location.protocol === 'file:');
+        const isGithubPages = (window.location.hostname.includes('github.io'));
+
         if (err.name === 'AbortError') {
             showToast('連線逾時，請檢查網路連線或稍後再試。', 'error');
+        } else if (isFileProtocol) {
+            showToast('本機檔案 (file://) 受瀏覽器安全限制無法連線 AWS，請用 http://localhost:3000 或正式網域測試。', 'error');
+        } else if (isGithubPages) {
+            showToast('連線失敗 (CORS 跨域阻擋)：AWS API Gateway 目前僅開放正式網域，請至 AWS CORS 設定開放 github.io。', 'error');
+        } else if (isLocalHost) {
+            showToast('無法連線至本地後端伺服器 (port 3000)，請確認本機 node server.js 已啟動。', 'error');
         } else {
-            showToast(isLocalHost
-                ? '無法連線至本地後端伺服器 (port 3000)，請確認本機 node server.js 已啟動。'
-                : '連線至 AWS 後端失敗，請確認網路連線正常。', 'error');
+            showToast('連線至 AWS 後端失敗，請確認網路連線正常或網域已加入 AWS CORS 允許名單。', 'error');
         }
     } finally {
         if (stepTimer) clearInterval(stepTimer);
-        if (submitBtn) {
+        const remainingAfter = getRemainingCooldown();
+        if (remainingAfter > 0) {
+            startCooldownTimer(remainingAfter);
+        } else if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnHTML;
-            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed', 'opacity-60');
         }
     }
 }
@@ -449,14 +603,24 @@ async function handleContactSubmit(event) {
 function requestProductSample(productName, preferredMode = 'quick') {
     if (!productName) return;
 
+    // 若當前停留在送出成功畫面，先重置並切回表單
+    const successCard = document.getElementById('contact-success-state');
+    if (successCard && !successCard.classList.contains('hidden')) {
+        resetContactFormState();
+    }
+
     // 發送 GA4 索樣點擊事件 (request_sample_click)
-    if (typeof gtag === 'function') {
-        gtag('event', 'request_sample_click', {
-            event_category: 'Lead_Engagement',
-            event_label: productName,
-            product_name: productName,
-            preferred_mode: preferredMode
-        });
+    try {
+        if (typeof gtag === 'function') {
+            gtag('event', 'request_sample_click', {
+                event_category: 'Lead_Engagement',
+                event_label: productName,
+                product_name: productName,
+                preferred_mode: preferredMode
+            });
+        }
+    } catch (gtagErr) {
+        console.warn('GA4 sample click tracking error:', gtagErr);
     }
 
     if (typeof closeCompareModal === 'function') closeCompareModal();
