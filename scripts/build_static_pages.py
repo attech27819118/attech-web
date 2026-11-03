@@ -446,7 +446,7 @@ def build_page_html(template_html, title, description, canonical_path, active_ta
     html_out = re.sub(r'<meta name="twitter:description"\s+content=".*?">', f'<meta name="twitter:description" content="{escape_html(description)}">', html_out)
     html_out = re.sub(r'<meta name="twitter:url"\s+content=".*?">', f'<meta name="twitter:url" content="{full_canonical}">', html_out)
 
-    tabs = ['about', 'products', 'partners', 'contact']
+    tabs = ['about', 'products', 'technology', 'partners', 'contact']
     for t in tabs:
         if t == active_tab:
             html_out = re.sub(rf'id="tab-{t}" class="tab-content.*?"', f'id="tab-{t}" class="tab-content active"', html_out)

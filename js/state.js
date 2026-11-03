@@ -4,7 +4,8 @@
  * ====================================================================
  */
 
-const APP_VERSION = '20260929_v2';
+const APP_VERSION = '20261103_v1';
+window.APP_VERSION = APP_VERSION;
 const SVG_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%2394a3b8'%3ENo Image%3C/text%3E%3C/svg%3E";
 
 function getAppBaseUrl() {
@@ -34,18 +35,19 @@ function resolveAssetUrl(relPath) {
     const cleanPath = relPath.replace(/^\.?\//, '');
     try {
         const url = new URL(cleanPath, getAppBaseUrl());
-        // 為 JSON 檔案自動附加版本號，避免 CloudFront (s-maxage=31536000) 與瀏覽器讀取過期快取
-        if (cleanPath.endsWith('.json') && !url.searchParams.has('v')) {
+        // 為 JSON 與重要圖檔資源自動附加版本號，避免 CloudFront (s-maxage=31536000) 與瀏覽器讀取過期快取
+        if ((cleanPath.endsWith('.json') || cleanPath.endsWith('.webp') || cleanPath.endsWith('.png')) && !url.searchParams.has('v')) {
             url.searchParams.set('v', APP_VERSION);
         }
         return url.href;
     } catch (e) {
-        if (cleanPath.endsWith('.json') && !cleanPath.includes('v=')) {
+        if ((cleanPath.endsWith('.json') || cleanPath.endsWith('.webp') || cleanPath.endsWith('.png')) && !cleanPath.includes('v=')) {
             return cleanPath + (cleanPath.includes('?') ? '&' : '?') + `v=${APP_VERSION}`;
         }
         return relPath;
     }
 }
+window.resolveAssetUrl = resolveAssetUrl;
 
 function handleImageFallback(img, localSrc) {
     if (!img.dataset.fallbackStep) {

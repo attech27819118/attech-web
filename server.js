@@ -248,6 +248,29 @@ app.get('/api/health', (req, res) => {
     });
 });
 
+// 取得檔案路徑資訊 (供 Outlook 複製貼上使用)
+app.get('/api/file-path', (req, res) => {
+    try {
+        let relPath = req.query.path || '';
+        if (!relPath) {
+            return res.status(400).json({ error: 'Missing path parameter' });
+        }
+        relPath = decodeURIComponent(relPath).replace(/^\.?\/+/, '');
+        const localFullPath = path.resolve(__dirname, relPath);
+        if (!fs.existsSync(localFullPath)) {
+            return res.status(404).json({ error: 'File not found on local disk', path: localFullPath });
+        }
+        return res.json({
+            relPath: relPath,
+            fullPath: localFullPath,
+            filename: path.basename(localFullPath),
+            fileUrl: `file:///${localFullPath.replace(/\/g, '/')}`
+        });
+    } catch (e) {
+        return res.status(500).json({ error: e.message });
+    }
+});
+
 // 60 秒防重複提交快取 (防止連擊與重複寄信)
 const recentSubmissions = new Map();
 const SUBMISSION_COOLDOWN_MS = 60 * 1000;

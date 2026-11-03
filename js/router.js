@@ -51,6 +51,11 @@ function switchTab(tabId, updateUrl = true, shouldUpdatePartnerUI = true) {
         if (typeof updateProductLineNotice === 'function') updateProductLineNotice();
         if (tabId === 'contact') {
             if (typeof prewarmBackendServer === 'function') prewarmBackendServer();
+        } else if (tabId === 'technology') {
+            if (typeof switchTechCategory === 'function') {
+                const cat = (typeof AppState !== 'undefined' && AppState.activeTechCategory) || 'tyzor';
+                switchTechCategory(cat, false);
+            }
         }
     }
     if (typeof updateCompareUI === 'function') updateCompareUI();
@@ -85,10 +90,13 @@ document.addEventListener('click', (e) => {
         return;
     }
 
-    // 若點擊的是獨立產品詳細頁面 (路徑為 /products/partner/line/product/)，放行讓瀏覽器直接換頁至該實體靜態頁面
+    // 若點擊的是獨立產品詳細頁面 (路徑為 /products/partner/line/product/) 或技術獨立專頁 (如 technology/tyzor/)，放行讓瀏覽器直接換頁至該實體靜態頁面
     const cleanPath = href.replace(/^\/|\/$/g, '').split('?')[0];
     const pathParts = cleanPath.split('/').filter(Boolean);
     if (pathParts[0] === 'products' && pathParts.length >= 4) {
+        return;
+    }
+    if (pathParts[0] === 'technology') {
         return;
     }
 
@@ -185,10 +193,14 @@ function openModal(productName, type) {
     if (loading) loading.classList.remove('hidden');
 
     if (type === 'tds') {
+        window.currentTdsModalRelPath = `tds/${productName} TDS.pdf`;
+        window.currentTdsModalProductName = productName;
         localPath = resolveAssetUrl(`tds/${productName} TDS.pdf`);
         if (title) title.innerText = `${productName} - TDS`;
         if (icon) icon.className = "fa-solid fa-file-pdf text-red-600 mr-2 f-size-base";
     } else if (type === 'data') {
+        window.currentTdsModalRelPath = `coatingsdata/${productName} data.pdf`;
+        window.currentTdsModalProductName = productName;
         localPath = resolveAssetUrl(`coatingsdata/${productName} data.pdf`);
         if (title) title.innerText = `${productName} - Tech Data`;
         if (icon) icon.className = "fa-solid fa-file-lines text-blue-700 mr-2 f-size-base";

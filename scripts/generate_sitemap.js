@@ -50,8 +50,22 @@ function addUrl(loc, changefreq = 'weekly', priority = '0.8') {
 // 1. Core Static Pages (authoritative canonical URLs)
 addUrl(`${DOMAIN}/`, 'daily', '1.0');
 addUrl(`${DOMAIN}/products/`, 'daily', '0.95');
+addUrl(`${DOMAIN}/technology/`, 'daily', '0.95');
 addUrl(`${DOMAIN}/partners/`, 'monthly', '0.8');
 addUrl(`${DOMAIN}/contact/`, 'monthly', '0.9');
+
+// 1.1 Technology Subpages
+const techJsonPath = path.join(rootDir, 'json', 'tech_database.json');
+if (fs.existsSync(techJsonPath)) {
+    try {
+        const techDb = JSON.parse(fs.readFileSync(techJsonPath, 'utf8'));
+        for (const slug of Object.keys(techDb)) {
+            addUrl(`${DOMAIN}/technology/${slug}/`, 'weekly', '0.85');
+        }
+    } catch (e) {
+        console.warn('Failed to load tech_database.json for sitemap:', e.message);
+    }
+}
 
 // 2. Partner Brand and Product Line Pages
 for (const [brandKey, brandObj] of Object.entries(config)) {
