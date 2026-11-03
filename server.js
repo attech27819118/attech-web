@@ -264,7 +264,7 @@ app.get('/api/file-path', (req, res) => {
             relPath: relPath,
             fullPath: localFullPath,
             filename: path.basename(localFullPath),
-            fileUrl: `file:///${localFullPath.replace(/\/g, '/')}`
+            fileUrl: `file:///${localFullPath.replace(/\\/g, '/')}`
         });
     } catch (e) {
         return res.status(500).json({ error: e.message });

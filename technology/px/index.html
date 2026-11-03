@@ -262,8 +262,8 @@
                 </div>
 
                 <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="tablist" aria-label="網站主要選單">
-                    <a href="./" id="nav-about" role="tab" aria-selected="true" aria-controls="tab-about"
-                        class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 h-16 inline-flex items-center">
+                    <a href="./" id="nav-about" role="tab" aria-selected="false" aria-controls="tab-about"
+                   class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
                         首頁
                     </a>
                     <!-- 導覽列產品項目 (包含 Mega Menu) -->
@@ -445,12 +445,10 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!-- 導覽列技術項目 (包含 Mega Menu) -->
                     <div class="relative group">
-                        <a href="technology/tyzor/" id="nav-technology" role="tab" aria-selected="false"
-                            aria-controls="tab-technology"
-                            class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 inline-flex items-center gap-1.5 h-16">
+                        <a href="technology/tyzor/" id="nav-technology" role="tab" aria-selected="true" aria-controls="tab-technology"
+                   class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 inline-flex items-center gap-1.5 h-16">
                             技術
                         </a>
 
@@ -621,7 +619,10 @@
                                             </a>
                                         </div>
                                     </div>
-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a href="partners/" id="nav-partners" role="tab" aria-selected="false" aria-controls="tab-partners"
                         class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center">
                         合作夥伴
@@ -636,16 +637,16 @@
             <!-- 行動裝置版分頁導覽列 -->
             <div class="flex md:hidden items-center justify-between gap-1.5 pb-2 pt-1 border-t border-gray-100"
                 role="tablist" aria-label="行動版主要選單">
-                <a href="./" id="mobile-nav-about" role="tab" aria-selected="true"
-                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs">
+                <a href="./" id="mobile-nav-about" role="tab" aria-selected="false"
+               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                     首頁
                 </a>
                 <a href="products/" id="mobile-nav-products" role="tab" aria-selected="false"
                     class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
                     產品專區
                 </a>
-                <a href="technology/tyzor/" id="mobile-nav-technology" role="tab" aria-selected="false"
-                    class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all">
+                <a href="technology/tyzor/" id="mobile-nav-technology" role="tab" aria-selected="true"
+               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs">
                     技術
                 </a>
                 <a href="partners/" id="mobile-nav-partners" role="tab" aria-selected="false"
@@ -1103,7 +1104,7 @@
                 </div>
             </div>
         </section>
-            <!-- Tab: 技術專區 (Technology) - 獨立分頁一頁式緊湊呈現 (統一白色風格：左側條列式切換，右側資料顯示) -->
+                        <!-- Tab: 技術專區 (Technology) - 獨立分頁一頁式緊湊呈現 (統一白色風格：左側條列式切換，右側資料顯示) -->
     <section id="tab-technology" class="tab-content active" role="tabpanel" aria-labelledby="nav-technology">
         <style>
         .tech-layout-container {

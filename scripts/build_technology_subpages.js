@@ -402,11 +402,11 @@ ${contentHtml}
     pageHtml = pageHtml.replace(/href="technology\/" id="nav-technology"/g, 'href="technology/tyzor/" id="nav-technology"');
     pageHtml = pageHtml.replace(/href="technology\/" id="mobile-nav-technology"/g, 'href="technology/tyzor/" id="mobile-nav-technology"');
 
-    // 導覽列 Active 樣式
-    pageHtml = pageHtml.replace(/id="nav-about" role="tab" aria-selected="false"\s+class="nav-btn [^"]*"/, 'id="nav-about" role="tab" aria-selected="false"\n                   class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center"');
-    pageHtml = pageHtml.replace(/id="nav-technology" role="tab" aria-selected="true" aria-controls="tab-technology"\s+class="nav-btn [^"]*"/, 'id="nav-technology" role="tab" aria-selected="true" aria-controls="tab-technology"\n                   class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 h-16 inline-flex items-center"');
-    pageHtml = pageHtml.replace(/id="mobile-nav-about" role="tab" aria-selected="false"\s+class="mobile-nav-btn [^"]*"/, 'id="mobile-nav-about" role="tab" aria-selected="false"\n               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all"');
-    pageHtml = pageHtml.replace(/id="mobile-nav-technology" role="tab" aria-selected="true"\s+class="mobile-nav-btn [^"]*"/, 'id="mobile-nav-technology" role="tab" aria-selected="true"\n               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs"');
+    // 導覽列 Active 樣式 (將 About 設為未選中，將 Technology 設為選中中)
+    pageHtml = pageHtml.replace(/id="nav-about"\s+role="tab"\s+aria-selected="true"\s+aria-controls="tab-about"\s+class="nav-btn [^"]*"/, 'id="nav-about" role="tab" aria-selected="false" aria-controls="tab-about"\n                   class="nav-btn text-slate-700 hover:text-blue-900 border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 h-16 inline-flex items-center"');
+    pageHtml = pageHtml.replace(/id="nav-technology"\s+role="tab"\s+aria-selected="false"\s+aria-controls="tab-technology"\s+class="nav-btn [^"]*"/, 'id="nav-technology" role="tab" aria-selected="true" aria-controls="tab-technology"\n                   class="nav-btn text-blue-950 f-weight-bold border-b-2 border-blue-900 px-1 pt-1 inline-flex items-center gap-1.5 h-16"');
+    pageHtml = pageHtml.replace(/id="mobile-nav-about"\s+role="tab"\s+aria-selected="true"\s+class="mobile-nav-btn [^"]*"/, 'id="mobile-nav-about" role="tab" aria-selected="false"\n               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-medium text-slate-700 hover:bg-slate-100 transition-all"');
+    pageHtml = pageHtml.replace(/id="mobile-nav-technology"\s+role="tab"\s+aria-selected="false"\s+class="mobile-nav-btn [^"]*"/, 'id="mobile-nav-technology" role="tab" aria-selected="true"\n               class="mobile-nav-btn flex-1 py-1.5 px-2 text-center rounded-lg text-xs font-bold transition-all bg-blue-900 text-white shadow-xs"');
 
     // 快取版本號更新
     pageHtml = pageHtml.replace(/css\/output\.css\?v=[^"]*/g, `css/output.css?v=${CACHE_VERSION}`);

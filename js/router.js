@@ -181,6 +181,13 @@ function updateLanguageUI() {
     }
 }
 
+// ----------------------------------------------------
+// 複製檔案路徑功能（已依需求全站移除）
+// ----------------------------------------------------
+function copyFileAttachmentPath() {}
+function copyProductDocPath() {}
+function copyCurrentTdsPath() {}
+
 function openModal(productName, type) {
     const modal = document.getElementById('tds-modal');
     const iframe = document.getElementById('tds-iframe');
@@ -384,12 +391,20 @@ function parseUrlRoute() {
         return;
     }
 
-    // 舊技術專區網址轉址 (已整合至產品專區)
+    // 技術專區 (Technology)
     if (rootSegment === 'technology' || rootSegment === 'tech') {
-        const basePath = getAppBasePath();
-        const fullRedirectPath = basePath ? ('/' + basePath + '/products/') : '/products/';
-        history.replaceState(null, '', fullRedirectPath);
-        switchTab('products', false, false);
+        const subSlug = segments[1] || 'tyzor';
+        if (!segments[1]) {
+            const basePath = getAppBasePath();
+            const targetUrl = basePath ? `/${basePath}/technology/tyzor/` : '/technology/tyzor/';
+            window.location.replace(targetUrl);
+            return;
+        }
+        switchTab('technology', false, false);
+        if (typeof switchTechCategory === 'function') {
+            switchTechCategory(subSlug, false);
+        }
+        updatePageMeta('technology', subSlug);
         return;
     }
 
@@ -582,6 +597,10 @@ function updateUrlRoute(usePush = false) {
         const isDetailed = !document.getElementById('form-mode-detailed')?.classList.contains('hidden');
         cleanPath = isDetailed ? '/contact/?mode=detailed' : '/contact/';
         updatePageMeta('contact');
+    } else if (activeTab === 'technology') {
+        const activeTechCat = (typeof AppState !== 'undefined' && AppState.activeTechCategory) || 'tyzor';
+        cleanPath = `/technology/${encodeURIComponent(activeTechCat)}/`;
+        updatePageMeta('technology', activeTechCat);
     } else if (activeTab === 'products') {
         if (AppState.searchQuery) {
             cleanPath = `/products/?q=${encodeURIComponent(AppState.searchQuery)}`;
@@ -627,10 +646,14 @@ function updateUrlRoute(usePush = false) {
 
     const currentUrl = window.location.pathname + window.location.search;
     if (currentUrl !== fullPath) {
-        if (usePush) {
-            history.pushState(null, '', fullPath);
-        } else {
-            history.replaceState(null, '', fullPath);
+        try {
+            if (usePush) {
+                history.pushState(null, '', fullPath);
+            } else {
+                history.replaceState(null, '', fullPath);
+            }
+        } catch (e) {
+            // 忽略在 file:// 協定或特殊跨域限制下的 pushState 異常
         }
     }
 }
@@ -665,6 +688,13 @@ function updatePageMeta(type, extra = '') {
         const lineTitle = currentFile ? currentFile.titleZh : '特用化學品目錄';
         const brandLabel = (AppState.partner === 'Others' || AppState.partner === 'others') ? '特化材料' : (brandConfig?.brandName || AppState.partner);
         titleEl.innerText = `${lineTitle} (${brandLabel}) | 宏威應用材料 ATTech Materials`;
+    } else if (type === 'technology') {
+        let techName = '特用化學品技術專區';
+        if (typeof TECH_CATEGORIES !== 'undefined') {
+            const found = TECH_CATEGORIES.find(c => c.slug === extra);
+            if (found) techName = found.titleZh;
+        }
+        titleEl.innerText = `${techName} | ${baseTitle}`;
     }
 }
 
