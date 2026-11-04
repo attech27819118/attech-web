@@ -74,7 +74,19 @@
     "performance_ratings": {},
     "properties": "易分散、通用型、\n良好的表面平滑性。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "D003",
+    "category_letter": "D",
+    "cas_no": "112926-00-8               7631-86-9                    9002-88-4",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2026.01            英文/中文",
+      "fda": "✔ 2026.01              英文/中文",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.01            英文/中文"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Acematt OK 500",
@@ -151,7 +163,19 @@
     "performance_ratings": {},
     "properties": "易分散、 特別適用於 UV 系統\n適用於低光澤度、厚塗系統。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "D004",
+    "category_letter": "D",
+    "cas_no": "112926-00-8               7631-86-9                    9002-88-4",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2025.04        英文",
+      "fda": "✔ 2026.01              英文/中文",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.01            英文/中文"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Acematt OK 520",
@@ -228,7 +252,19 @@
     "performance_ratings": {},
     "properties": "易分散、用量少\n適用於低光澤、 厚塗系統。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "D005",
+    "category_letter": "D",
+    "cas_no": "112926-00-8               7631-86-9                    9002-88-4",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2026.01            英文/中文",
+      "fda": "✔ 2026.01              英文/中文",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.01            英文/中文"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Acematt OK 607",
@@ -305,7 +341,19 @@
     "performance_ratings": {},
     "properties": "粒徑小、透明性好、\n良好的手感滑順，\n特別適用於薄塗系統。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "D013",
+    "category_letter": "D",
+    "cas_no": "112926-00-8               7631-86-9                    9002-88-4",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2025.06        英文",
+      "fda": "✔ 2026.01              英文/中文",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.01            英文/中文"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Acematt TS 100",
@@ -382,7 +430,19 @@
     "performance_ratings": {},
     "properties": "低添加量、高消光效果、\n難消光的油性、水性塗面漆。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "D006",
+    "category_letter": "D",
+    "cas_no": "112945-52-5               7631-86-9",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2025.07        英文",
+      "fda": "✔ 2026.01              英文/中文",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.01            英文/中文"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Aerosil TT 600",
@@ -459,7 +519,9 @@
     "performance_ratings": {},
     "properties": "一般搭配TS100使用。\n粒徑小、透明性好、霧度低、\n手感爽滑、防沉性好。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Matt S390",
@@ -536,6 +598,18 @@
     "performance_ratings": {},
     "properties": "經濟型、高消光效率。\n適用於低光澤度、PU系統。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "D018",
+    "category_letter": "D",
+    "cas_no": "1129-26-00-8",
+    "compliance": {
+      "reach": "✔                 2021.03",
+      "rohs": "✔                 2021.03",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔                 2021.08"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   }
 ]

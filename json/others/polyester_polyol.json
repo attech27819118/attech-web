@@ -34,7 +34,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 55
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6067",
@@ -71,7 +73,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 78
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6069",
@@ -108,7 +112,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 77
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6073",
@@ -146,7 +152,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 87
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6078",
@@ -183,7 +191,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 96
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6131",
@@ -223,7 +233,9 @@
       "acid_value": "≤2",
       "melt_point_c": 30,
       "softening_point_c": 39
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6128",
@@ -263,7 +275,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": null
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6119",
@@ -302,7 +316,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": null
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6071",
@@ -342,7 +358,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": null
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6108",
@@ -380,7 +398,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": null
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6183",
@@ -418,7 +438,9 @@
       "acid_value": "≤2",
       "melt_point_c": 56,
       "softening_point_c": 62
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6184",
@@ -455,7 +477,9 @@
       "acid_value": "≤2",
       "melt_point_c": 57,
       "softening_point_c": 64
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6173",
@@ -492,7 +516,9 @@
       "acid_value": "≤2",
       "melt_point_c": 95,
       "softening_point_c": null
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6193",
@@ -529,7 +555,9 @@
       "acid_value": "≤2",
       "melt_point_c": 70,
       "softening_point_c": 77
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6194",
@@ -566,7 +594,9 @@
       "acid_value": "≤2",
       "melt_point_c": 65,
       "softening_point_c": 73
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6195",
@@ -603,7 +633,9 @@
       "acid_value": "≤2",
       "melt_point_c": 72,
       "softening_point_c": 79
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6197",
@@ -640,7 +672,9 @@
       "acid_value": "≤5",
       "melt_point_c": 115,
       "softening_point_c": 117
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6198",
@@ -677,7 +711,9 @@
       "acid_value": "≤5",
       "melt_point_c": 115,
       "softening_point_c": 118
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6248",
@@ -715,7 +751,9 @@
       "acid_value": "≤3",
       "melt_point_c": 90,
       "softening_point_c": 95
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6168",
@@ -752,7 +790,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 85
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6163",
@@ -789,7 +829,9 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 92
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "RS 6164",
@@ -826,6 +868,8 @@
       "acid_value": "≤2",
       "melt_point_c": null,
       "softening_point_c": 123
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   }
 ]

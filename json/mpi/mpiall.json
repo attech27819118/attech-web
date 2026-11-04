@@ -249,7 +249,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E185",
+    "category_letter": "E",
+    "cas_no": "8002-74-2 1344-28-1",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MP-28AL-XF",
@@ -373,7 +385,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "MP-28AL-G",
@@ -504,7 +518,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "MPP-611AL",
@@ -733,7 +749,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E203",
+    "category_letter": "E",
+    "cas_no": "9002-88-4  1344-28-1",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MPP-620AL-XF",
@@ -873,7 +901,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "MicroKlear 418AL",
@@ -1087,7 +1117,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E201",
+    "category_letter": "E",
+    "cas_no": "8015-86-9              1344-28-1",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "✔2022.07",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Superslip 6515AL",
@@ -1342,7 +1384,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E220",
+    "category_letter": "E",
+    "cas_no": "9002-88-4 110-30-5 1344-28-1",
+    "compliance": {
+      "reach": "✔2026.02",
+      "rohs": "✔2026.02",
+      "fda": "✔2026.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PolyGlide 1226XF",
@@ -1531,7 +1585,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E168",
+    "category_letter": "E",
+    "cas_no": "9002-88-4  66402-68-4",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "SuperGlide 1231",
@@ -1726,7 +1792,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PolyTuf 1229",
@@ -1968,7 +2036,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Spherex 200",
@@ -2073,7 +2143,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Spherex 200XF",
@@ -2173,7 +2245,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "MP-22VF",
@@ -2230,7 +2304,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E115",
+    "category_letter": "E",
+    "cas_no": "8002-74-2",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MP-22XF",
@@ -2424,7 +2510,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E116",
+    "category_letter": "E",
+    "cas_no": "8002-74-2",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MPP-611XF",
@@ -2514,7 +2612,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E204",
+    "category_letter": "E",
+    "cas_no": "9002-88-4",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MPP-620VF",
@@ -2716,7 +2826,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E120",
+    "category_letter": "E",
+    "cas_no": "9002-88-4",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MPP-620XF",
@@ -2817,7 +2939,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E121",
+    "category_letter": "E",
+    "cas_no": "9002-88-4",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MPP-635VF",
@@ -2909,7 +3043,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E190",
+    "category_letter": "E",
+    "cas_no": "9002-88-4",
+    "compliance": {
+      "reach": "✔2026.03",
+      "rohs": "✔2026.03",
+      "fda": "✔2026.03",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylMatte 31",
@@ -3107,7 +3253,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E140",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Micropro 400",
@@ -3229,7 +3387,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E131",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Micromide 520",
@@ -3339,7 +3509,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E137",
+    "category_letter": "E",
+    "cas_no": "110-30-5",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "✔2022.07",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MicroTouch 800XF",
@@ -3543,7 +3725,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E147",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MicroTouch 800F",
@@ -3751,7 +3945,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E145",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MicroTex 580",
@@ -3801,7 +4007,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E138",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MicroTex 950",
@@ -3851,7 +4069,19 @@
       }
     },
     "fda_compliant": false,
-    "fda_regulations": []
+    "fda_regulations": [],
+    "erp_no": "E142",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2026.05",
+      "rohs": "✔2026.05",
+      "fda": "✔2026.05",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MicroTex 975",
@@ -3899,7 +4129,9 @@
       }
     },
     "fda_compliant": false,
-    "fda_regulations": []
+    "fda_regulations": [],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "GraphShield 730",
@@ -3967,7 +4199,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PropylTex 100S",
@@ -4060,7 +4294,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E122",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylTex 140S",
@@ -4153,7 +4399,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E123",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylTex 200S",
@@ -4246,7 +4504,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E124",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylTex 200SF",
@@ -4339,7 +4609,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E125",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylTex 270S",
@@ -4491,7 +4773,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E126",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylTex 270S-1518",
@@ -4586,7 +4880,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PropylTex 325S",
@@ -4737,7 +5033,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E127",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylTex 50",
@@ -4830,7 +5138,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E128",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylTex 20",
@@ -4923,7 +5243,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E129",
+    "category_letter": "E",
+    "cas_no": "9003-07-0",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "NyloTex 50",
@@ -5007,7 +5339,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NyloTex 100",
@@ -5091,7 +5425,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NyloTex 140",
@@ -5176,7 +5512,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NyloTex 200",
@@ -5260,7 +5598,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "MicroKlear 116",
@@ -5358,7 +5698,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E130",
+    "category_letter": "E",
+    "cas_no": "9002-88-4  8015-86-9",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MicroKlear 418",
@@ -5447,7 +5799,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E200",
+    "category_letter": "E",
+    "cas_no": "8015-86-9",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "✔2022.07",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PropylMatte 31HD",
@@ -5541,7 +5905,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E141",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Micropro 440W",
@@ -5626,7 +6002,19 @@
       }
     },
     "fda_compliant": false,
-    "fda_regulations": []
+    "fda_regulations": [],
+    "erp_no": "E132",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2024.04",
+      "rohs": "✔2024.04",
+      "fda": "✔2024.04",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "AquaPoly 511",
@@ -5745,7 +6133,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "AquaPoly 250",
@@ -5810,7 +6200,9 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Polysilk 750",
@@ -5902,7 +6294,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E175",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MicroMatte 1415-EZ",
@@ -6013,7 +6417,19 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E136",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "✔2025.12",
+      "rohs": "✔2025.12",
+      "fda": "✔2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "AquaBead 519",
@@ -6110,6 +6526,18 @@
     "fda_regulations": [
       "21 CFR 175.300",
       "21 CFR 176.170"
-    ]
+    ],
+    "erp_no": "E180",
+    "category_letter": "E",
+    "cas_no": "N.A",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "✔2022.07",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   }
 ]

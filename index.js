@@ -292,9 +292,26 @@ exports.handler = async (event, context) => {
             }
 
             const filmThick = data.filmThick ? `${data.filmThick} µm` : '未填寫';
-            const noBake = data.noBake || '否';
-            const bakeTemp = data.bakeTemp || '未填寫';
-            const bakeTime = data.bakeTime || '未填寫';
+            const isAirDry = (data.cureMethod === '風乾' || data.cureMethod === '常溫風乾' || data.noBake === '是' || data.noBake === true);
+            const rawTemp = (data.bakeTemp || '').trim();
+            const rawTime = (data.bakeTime || '').trim();
+            const hasTemp = rawTemp && rawTemp !== '未填寫' && rawTemp !== '無 (風乾)' && rawTemp !== '無';
+            const hasTime = rawTime && rawTime !== '未填寫' && rawTime !== '無 (風乾)' && rawTime !== '無';
+
+            let cureCondition = '';
+            if (isAirDry) {
+                cureCondition = '常溫風乾（不烘烤）';
+            } else if (hasTemp && hasTime) {
+                cureCondition = `烘烤（溫度: ${rawTemp} | 時間: ${rawTime}）`;
+            } else if (hasTemp) {
+                cureCondition = `烘烤（溫度: ${rawTemp} | 時間: 未填寫）`;
+            } else if (hasTime) {
+                cureCondition = `烘烤（溫度: 未填寫 | 時間: ${rawTime}）`;
+            } else if (data.cureMethod === '烘烤' || data.noBake === '否') {
+                cureCondition = '烘烤（溫度/時間: 未指定）';
+            } else {
+                cureCondition = '未指定';
+            }
 
             // 樹脂系統（可含其他）
             let resinsStr = formatList(data.resins);
@@ -342,7 +359,7 @@ B. 應用需求
 C. 基本資訊與規格
 底材類型：${substratesStr}
 乾膜厚度：${filmThick}
-乾燥固化條件：不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}
+乾燥固化條件：${cureCondition}
 樹脂系統：${resinsStr}
 限用物質：${restricted}
 索樣產品資訊：${sampleReq}
@@ -386,7 +403,7 @@ D & E. 曾測試紀錄與備註
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">底材類型：</td><td style="padding: 6px;">${substratesStr}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">乾膜厚度：</td><td style="padding: 6px;">${filmThick}</td></tr>
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">固化條件：</td><td style="padding: 6px;">不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">乾燥固化條件：</td><td style="padding: 6px;">${cureCondition}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">樹脂系統：</td><td style="padding: 6px;">${resinsStr}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">限用物質：</td><td style="padding: 6px;">${restricted}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #1e3a8a; background-color: #eff6ff;">索樣產品資訊：</td><td style="padding: 6px; font-weight: bold; color: #1e3a8a;">${sampleReq}</td></tr>
@@ -433,7 +450,7 @@ D & E. 曾測試紀錄與備註
                     rows: [
                         { label: '底材類型', value: substratesStr },
                         { label: '乾膜厚度', value: filmThick },
-                        { label: '乾燥固化條件', value: `不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}` },
+                        { label: '乾燥固化條件', value: cureCondition },
                         { label: '樹脂系統', value: resinsStr },
                         { label: '其他資訊(限用物質)', value: restricted },
                         { label: '索樣產品資訊', value: sampleReq },

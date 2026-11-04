@@ -85,7 +85,9 @@
     "performance_ratings": {},
     "properties": "對OPP、PET素材有優異的密著增進效果，適用高速印刷油墨",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "CPP 902",
@@ -173,7 +175,9 @@
     "performance_ratings": {},
     "properties": "對PP、PP改性的熱可塑性橡膠有良好附著力。適用高速印刷油墨",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "CPP 903",
@@ -261,7 +265,9 @@
     "performance_ratings": {},
     "properties": "對PP、PP改性的熱可塑性橡膠有良好附著力。用於表面處理的底漆用",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "MP 45",
@@ -349,6 +355,18 @@
     "performance_ratings": {},
     "properties": "耐酸、耐鹼、耐鹽霧、耐化性佳，與金屬基材有良好密著性\n是高級油墨黏結劑的基本原材料之一。",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C010",
+    "category_letter": "C",
+    "cas_no": "-",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   }
 ]

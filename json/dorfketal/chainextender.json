@@ -13,7 +13,19 @@
       "density_g_cc_25c": 0.94,
       "molecular_weight": 220
     },
-    "properties": "提高附著力\n改善流動性和尺寸安定性都有改善\n抗壓強度， 提高耐衝擊性和低溫性能\n提高拉伸強度與撕裂強度\n適用於MDI體系"
+    "properties": "提高附著力\n改善流動性和尺寸安定性都有改善\n抗壓強度， 提高耐衝擊性和低溫性能\n提高拉伸強度與撕裂強度\n適用於MDI體系",
+    "erp_no": "A066",
+    "category_letter": "A",
+    "cas_no": "101-96-2",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "2922",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Unilink 4200",
@@ -31,7 +43,19 @@
       "density_g_cc_25c": 0.99,
       "molecular_weight": 310
     },
-    "properties": "表面平整和尺寸安定性都有改善\n提高拉伸強度與及回彈性\n提升密著\n硬TDI發泡，軟MDI發泡"
+    "properties": "表面平整和尺寸安定性都有改善\n提高拉伸強度與及回彈性\n提升密著\n硬TDI發泡，軟MDI發泡",
+    "erp_no": "A044",
+    "category_letter": "A",
+    "cas_no": "5285-60-9",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "3082",
+      "dg_class": "9"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "ClearLink 1000",
@@ -49,7 +73,19 @@
       "density_g_cc_25c": 0.89,
       "molecular_weight": 322
     },
-    "properties": "提高硬度及耐紫外光性能\n提高拉伸強度\n低黏度，產品流動性好，改善相容性"
+    "properties": "提高硬度及耐紫外光性能\n提高拉伸強度\n低黏度，產品流動性好，改善相容性",
+    "erp_no": "A045",
+    "category_letter": "A",
+    "cas_no": "154279-60-4",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "2922",
+      "dg_class": "8"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "ClearLink 1080",
@@ -65,7 +101,19 @@
       "density_g_cc_25c": 0.86,
       "molecular_weight": 254
     },
-    "properties": "提高拉伸強度與及耐紫外光安定性\n抗壓強度和尺寸安定性都有改善\n提高密著\n低黏度，產品流動性會更好，改善相容性"
+    "properties": "提高拉伸強度與及耐紫外光安定性\n抗壓強度和尺寸安定性都有改善\n提高密著\n低黏度，產品流動性會更好，改善相容性",
+    "erp_no": "A046",
+    "category_letter": "A",
+    "cas_no": "-",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "2735",
+      "dg_class": "8"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Clearlink 1136",
@@ -82,7 +130,9 @@
       "density_g_cc_25c": 0.99,
       "molecular_weight": 275
     },
-    "properties": "低黏度，顏色淺\n產品流動性好，平整度佳\n提升密著及耐紫外光性能\n對濕氣不敏感\n提高密著\n提高拉伸強度"
+    "properties": "低黏度，顏色淺\n產品流動性好，平整度佳\n提升密著及耐紫外光性能\n對濕氣不敏感\n提高密著\n提高拉伸強度",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Unilink 1030",
@@ -93,7 +143,19 @@
     "applications": {
       "cold_casting_elastomers": true
     },
-    "properties": "鋯酸酯催化劑, 反應速率和錫觸媒相似\n反應速率快、高產率\n可取代錫觸媒"
+    "properties": "鋯酸酯催化劑, 反應速率和錫觸媒相似\n反應速率快、高產率\n可取代錫觸媒",
+    "erp_no": "A043",
+    "category_letter": "A",
+    "cas_no": "111-46-6",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Unilink 2000",
@@ -107,7 +169,9 @@
       "hot_casting_elastomers": true,
       "pu_foam_soft_and_rigid_foams": true
     },
-    "properties": "鈦酸酯催化劑, 反應速率和汞觸媒相似\n可取代汞觸媒"
+    "properties": "鈦酸酯催化劑, 反應速率和汞觸媒相似\n可取代汞觸媒",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Tyzor AA 105",
@@ -120,7 +184,19 @@
       "pu_foam_soft_and_rigid_foams": true,
       "composites": true
     },
-    "properties": "鈦催化劑，反應速率和錫觸媒相似，可取代錫觸媒\n效率良好交聯劑,反應速率快\n環保產品"
+    "properties": "鈦催化劑，反應速率和錫觸媒相似，可取代錫觸媒\n效率良好交聯劑,反應速率快\n環保產品",
+    "erp_no": "A081",
+    "category_letter": "A",
+    "cas_no": "445398-76-5",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor 9000",
@@ -133,6 +209,18 @@
       "pu_foam_soft_and_rigid_foams": true,
       "composites": true
     },
-    "properties": "鈦催化劑，反應速率和錫觸媒相似，可取代錫觸媒\n效率良好交聯劑,反應速率快\n環保產品"
+    "properties": "鈦催化劑，反應速率和錫觸媒相似，可取代錫觸媒\n效率良好交聯劑,反應速率快\n環保產品",
+    "erp_no": "A103",
+    "category_letter": "A",
+    "cas_no": "3087-39-6",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   }
 ]

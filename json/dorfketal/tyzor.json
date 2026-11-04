@@ -69,7 +69,19 @@
     "performance_ratings": {},
     "properties": "催化劑；不易水解高效催化劑；減少堵塞管道\n添加量低、高效能、透明性佳\n更慢的結晶速率，更低的聚合溫度\n出色的物理及耐熱性能；可配合現有鈦酸酯催化劑一起使用\n製造纖維級樹脂，減少毛羽、斷絲及停機\n副產物少，減少更換生產線濾網的頻率",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A057",
+    "category_letter": "A",
+    "cas_no": "68959-15-9         107-21-1                   7732-18-5",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "✔",
+      "pfoa_pfos": "-",
+      "un_no": "1760",
+      "dg_class": "8"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor 422",
@@ -141,7 +153,9 @@
     "performance_ratings": {},
     "properties": "催化劑；不易水解高效催化劑；減少堵塞管道\n添加量低、高效能、透明性佳\n更慢的結晶速率，更低的聚合溫度\n出色的物理及耐熱性能；可配合現有鈦酸酯催化劑一起使用\n副產物少，減少更換生產線濾網的頻率",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Tyzor PC 64",
@@ -213,7 +227,19 @@
     "performance_ratings": {},
     "properties": "催化劑；不易水解高效催化劑；減少堵塞管道\n添加量低、高效能、透明性佳\n更慢的結晶速率，更低的聚合溫度\n出色的物理及耐熱性能；可配合現有鈦酸酯催化劑一起使用\n副產物少，減少更換生產線濾網的頻率",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A049",
+    "category_letter": "A",
+    "cas_no": "107-21-1                67-63-0",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "✔",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor BTP",
@@ -288,7 +314,19 @@
     "performance_ratings": {},
     "properties": "低毒性催化劑；副產物少，提高反應速率、增加產能\n低添加量、高效能、易操作、透明性佳",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A048",
+    "category_letter": "A",
+    "cas_no": "9022-96-2",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "✔",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor TnBT LC",
@@ -359,7 +397,9 @@
     "performance_ratings": {},
     "properties": "高效鈦酸酯催化劑；提高反應速率增加產能\n低毒性、低添加量、取代銻金屬觸媒\n對濕氣及水敏感，易水解",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Tyzor D 140",
@@ -431,7 +471,19 @@
     "performance_ratings": {},
     "properties": "高效鈦酸酯催化劑；提高反應速率增加產能\n低毒性、低添加量、取代銻金屬觸媒\n對濕氣及水敏感，易水解",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A058",
+    "category_letter": "A",
+    "cas_no": "5593-70-4",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor 9000",
@@ -504,7 +556,19 @@
     "performance_ratings": {},
     "properties": "催化劑；用於聚合反應(甲基)丙烯酸酯、聚酯、PBT、可塑劑、各類酯和聚氨酯生產",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A103",
+    "category_letter": "A",
+    "cas_no": "3087-39-6",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor TnBT",
@@ -578,7 +642,19 @@
     "performance_ratings": {},
     "properties": "高效鈦酸酯催化劑；提高反應速率、增加產能\n低毒性、低添加量、取代貴金屬觸媒\n對濕氣及水敏感，易水解",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A040",
+    "category_letter": "A",
+    "cas_no": "5593-70-4",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "✔",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor TOT",
@@ -652,7 +728,19 @@
     "performance_ratings": {},
     "properties": "低毒性、酯化及縮合催化劑\n可以當路易斯酸(Lewis Acid)，提高反應速率、合成率\n副產物少",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A067",
+    "category_letter": "A",
+    "cas_no": "1070-10-6",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "非危                          險品",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor TPT",
@@ -725,7 +813,19 @@
     "performance_ratings": {},
     "properties": "低毒性、酯化及縮合催化劑\n可以當路易斯酸(Lewis Acid)，提高反應速率、合成率\n副產物少",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A038",
+    "category_letter": "A",
+    "cas_no": "546-68-9",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "✔",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor TE",
@@ -800,7 +900,19 @@
     "performance_ratings": {},
     "properties": "水穩定高效能催化劑；可用於齊格勒-納塔(Ziegler-Natta)聚合\n加成和縮合反應；對濕氣及水敏感，易水解",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A042",
+    "category_letter": "A",
+    "cas_no": "36673-16-2           67-63-0                     102-71-6",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "Food Contact ✔2019.06",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor LA",
@@ -874,7 +986,19 @@
     "performance_ratings": {},
     "properties": "水穩定高效能催化劑；取代錫金屬觸媒做酯化\n提高反應速率、高產率、低毒性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A055",
+    "category_letter": "A",
+    "cas_no": "65104-06-5",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "非危               險品",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor TLF 11010",
@@ -945,7 +1069,9 @@
     "performance_ratings": {},
     "properties": "水穩定高效能催化劑；取代錫金屬觸媒做酯化\n提高反應速率、高產率、低毒性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Tyzor 726",
@@ -1016,7 +1142,19 @@
     "performance_ratings": {},
     "properties": "催化劑及交聯劑；在 silane 封端的黏著劑(SPUR)及密封膠(RTV-1)",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A052",
+    "category_letter": "A",
+    "cas_no": "27858-32-8",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor KE 6",
@@ -1087,7 +1225,19 @@
     "performance_ratings": {},
     "properties": "特別適用提高反應速度，改善附著力\n在 silane 封端的黏著劑(SPUR)及密封膠(RTV-1)",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A102",
+    "category_letter": "A",
+    "cas_no": "83877-91-2",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "非危                 險品",
+      "dg_class": "*"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor 217",
@@ -1160,7 +1310,9 @@
     "performance_ratings": {},
     "properties": "密著促進劑/交聯劑；一般水性系統中穩定\n與 OH 官能基和 COOH 官能基反應；改善塗層對金屬與玻璃附著力\n提高反應速度，降低反應時間",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Tyzor AA 75",
@@ -1233,7 +1385,19 @@
     "performance_ratings": {},
     "properties": "交聯劑/密著促進劑；提高乾燥速度；提高耐溶劑性\n提高耐熱性；提供良好密著及交聯",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A077",
+    "category_letter": "A",
+    "cas_no": "67-63-0                                      1792-72-9",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor AA 105",
@@ -1305,7 +1469,19 @@
     "performance_ratings": {},
     "properties": "交聯劑/密著促進劑；提高乾燥速度；提高耐溶劑性\n提高耐熱性；提供良好密著及交聯",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A081",
+    "category_letter": "A",
+    "cas_no": "445398-76-5",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor IAM",
@@ -1376,7 +1552,19 @@
     "performance_ratings": {},
     "properties": "提供良好密著及交聯；在溶劑型油墨中儲存安定性良好\n提高耐熱性、耐水及耐溶劑性\n高效能低添加量\n無乙醯丙酮釋出；微黃接近無色",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A050",
+    "category_letter": "A",
+    "cas_no": "109037-78-7         67-63-0                  64-17-5",
+    "compliance": {
+      "reach": "✔2022.06",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor GBA",
@@ -1449,7 +1637,19 @@
     "performance_ratings": {},
     "properties": "提高乾燥速度，減少乾燥時間；提高耐溶劑性\n提高耐熱性；改善附著力",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A041",
+    "category_letter": "A",
+    "cas_no": "67-63-0                    67-56-1                  71-36-3            17927-72-9",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor 212",
@@ -1521,7 +1721,9 @@
     "performance_ratings": {},
     "properties": "交聯劑/密著促進劑；水性系統可適用\n與 OH 官能基和 COOH 官能基反應；改善塗層對金屬與玻璃附著力\n減少油墨交聯時間；與擁有 OH 官能基水性油墨",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Tyzor NBZ",
@@ -1593,7 +1795,19 @@
     "performance_ratings": {},
     "properties": "與 OH 官能基和 COOH 官能基反應；改善附著力；低毒性催化劑",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A060",
+    "category_letter": "A",
+    "cas_no": "1071-76-7                 71-36-3",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "Tyzor NPZ",
@@ -1664,6 +1878,18 @@
     "performance_ratings": {},
     "properties": "與 OH 官能基和 COOH 官能基反應；改善附著力；低毒性催化劑",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "A047",
+    "category_letter": "A",
+    "cas_no": "23519-77-9                 71-23-8",
+    "compliance": {
+      "reach": "-",
+      "rohs": "✔2022.06",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   }
 ]

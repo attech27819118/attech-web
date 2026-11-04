@@ -68,7 +68,9 @@
     "performance_ratings": {},
     "properties": "適用於多種粉體塗料系統\n純度高，用量低\n使塗膜產生均勻的砂紋效果\n消光，降低表面光澤",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SA 2072",
@@ -139,7 +141,9 @@
     "performance_ratings": {},
     "properties": "經濟型\n適用於多種粉體塗料系統\n使塗膜產生均勻細密的砂紋效果\n消光，降低表面光澤",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SA 208",
@@ -210,7 +214,9 @@
     "performance_ratings": {},
     "properties": "可獲得水紋、皺紋、網紋、魚紋、\n砂紋 等多種紋理表面",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "K7212",
@@ -281,7 +287,9 @@
     "performance_ratings": {},
     "properties": "提供約20-40°光澤\n良好的光澤穩定性\n良好的流平和抗黃變性能",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "K7217 A",
@@ -352,7 +360,9 @@
     "performance_ratings": {},
     "properties": "提供約15-40°光澤\n良好的機械性能及\n烘烤穩定性佳\n高效率消光",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "K7216",
@@ -423,7 +433,9 @@
     "performance_ratings": {},
     "properties": "提供約10-30°光澤\n塗層具有良好的流平性\n優異的抗黃變性能",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "K7215",
@@ -494,7 +506,9 @@
     "performance_ratings": {},
     "properties": "提供最低約6-30°光澤\n極低光澤\n塗層具有良好的流平性\n優異的抗黃變性能",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "K7921",
@@ -565,7 +579,9 @@
     "performance_ratings": {},
     "properties": "提高塗層對不銹鋼\n鍍鋅鋼板等底材的附著力\n提高塗層的柔韌性\n不影響塗層耐候性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "K7922",
@@ -636,7 +652,9 @@
     "performance_ratings": {},
     "properties": "提高塗層對不銹鋼\n鍍鋅鋼板等底材的附著力\n提高塗層的柔韌性\n不影響塗層耐候性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "K7923",
@@ -707,7 +725,9 @@
     "performance_ratings": {},
     "properties": "改善塗層對鍍鋅板\n鋁鎂合金等底材的附著力",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SA 501",
@@ -778,6 +798,18 @@
     "performance_ratings": {},
     "properties": "提高塗層硬度和滑度",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "E075",
+    "category_letter": "E",
+    "cas_no": "9002-88-4",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "-",
+      "dg_class": "-"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   }
 ]

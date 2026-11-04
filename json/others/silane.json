@@ -25,7 +25,19 @@
       "flash_point": 120,
       "boiling_point": "N/A"
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H008",
+    "category_letter": "H",
+    "cas_no": "1760-24-3    67-56-1",
+    "compliance": {
+      "reach": "✔ 2022",
+      "rohs": "✔ 2022",
+      "fda": "✔ 2022",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "AMEO",
@@ -53,7 +65,19 @@
       "flash_point": 96,
       "boiling_point": 220
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H002",
+    "category_letter": "H",
+    "cas_no": "919-30-2",
+    "compliance": {
+      "reach": "✔ 2024",
+      "rohs": "✔ 2024",
+      "fda": "✔ 2024",
+      "pfoa_pfos": "-",
+      "un_no": "3267",
+      "dg_class": "8"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "AMMO",
@@ -81,7 +105,19 @@
       "flash_point": 90,
       "boiling_point": 194
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H003",
+    "category_letter": "H",
+    "cas_no": "13822-56-5",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "1189",
@@ -109,7 +145,19 @@
       "flash_point": 238,
       "boiling_point": "N/A"
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H071",
+    "category_letter": "H",
+    "cas_no": "31024-56-3",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "GLYMO",
@@ -137,7 +185,19 @@
       "flash_point": 122,
       "boiling_point": 90
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H001",
+    "category_letter": "H",
+    "cas_no": "2530-83-8",
+    "compliance": {
+      "reach": "✔ 2024",
+      "rohs": "✔ 2024",
+      "fda": "✔ 2024",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "VTMO",
@@ -165,7 +225,19 @@
       "flash_point": 25,
       "boiling_point": 123
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H005",
+    "category_letter": "H",
+    "cas_no": "2768-02-7",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "VTEO",
@@ -193,7 +265,19 @@
       "flash_point": 38,
       "boiling_point": 156
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H019",
+    "category_letter": "H",
+    "cas_no": "78-08-0",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "VTMOEO",
@@ -221,7 +305,9 @@
       "flash_point": 115,
       "boiling_point": 258
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "MTES",
@@ -249,7 +335,9 @@
       "flash_point": 30,
       "boiling_point": 142
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "9116",
@@ -277,7 +365,19 @@
       "flash_point": 165,
       "boiling_point": 180
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": "H054",
+    "category_letter": "H",
+    "cas_no": "16415-12-6",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "MEMO",
@@ -305,7 +405,9 @@
       "flash_point": 110,
       "boiling_point": 255
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Sivo 110",
@@ -333,7 +435,9 @@
       "flash_point": 90,
       "boiling_point": "92"
     },
-    "properties": "N/A"
+    "properties": "N/A",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Sivo 140",
@@ -361,7 +465,9 @@
       "flash_point": "N/A",
       "boiling_point": "N/A"
     },
-    "properties": "N/A"
+    "properties": "N/A",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Sivo 160",
@@ -389,7 +495,9 @@
       "flash_point": "N/A",
       "boiling_point": "N/A"
     },
-    "properties": "N/A"
+    "properties": "N/A",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Sivo 210",
@@ -417,7 +525,9 @@
       "flash_point": 95,
       "boiling_point": "240"
     },
-    "properties": "N/A"
+    "properties": "N/A",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Sivo 214",
@@ -445,7 +555,9 @@
       "flash_point": 90,
       "boiling_point": "68"
     },
-    "properties": "N/A"
+    "properties": "N/A",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Sivo 560",
@@ -473,7 +585,9 @@
       "flash_point": 34,
       "boiling_point": "142"
     },
-    "properties": "N/A"
+    "properties": "N/A",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Hydrosil 1151",
@@ -501,7 +615,9 @@
       "flash_point": 80,
       "boiling_point": "N/A"
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Hydrosil 1153",
@@ -529,7 +645,9 @@
       "flash_point": 95,
       "boiling_point": "N/A"
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Hydrosil 2926",
@@ -557,7 +675,9 @@
       "flash_point": 95,
       "boiling_point": "N/A"
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Hydrosil 2627",
@@ -584,7 +704,9 @@
       "ph_value": "10-11.4",
       "flash_point": 95
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Hydrosil 2909",
@@ -611,7 +733,9 @@
       "ph_value": "4-5",
       "flash_point": 95
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Hydrosil 2776",
@@ -638,7 +762,9 @@
       "ph_value": "10-11",
       "flash_point": 100
     },
-    "properties": "N/A"
+    "properties": "N/A",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Hydrosil 2907",
@@ -666,6 +792,8 @@
       "flash_point": 95,
       "boiling_point": "N/A"
     },
-    "properties": ""
+    "properties": "",
+    "erp_no": null,
+    "category_letter": null
   }
 ]

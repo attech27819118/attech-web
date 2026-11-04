@@ -36,7 +36,9 @@
       "ash_content": "0.2",
       "bet_surface_area": "270",
       "average_primary_particle_size_nm": "15"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 40L",
@@ -75,7 +77,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "118",
       "average_primary_particle_size_nm": "22"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 30",
@@ -113,7 +117,9 @@
       "ash_content": "0.1",
       "bet_surface_area": "110",
       "average_primary_particle_size_nm": "23"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 30L",
@@ -154,7 +160,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "95",
       "average_primary_particle_size_nm": "24"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 21LB",
@@ -193,7 +201,9 @@
       "ash_content": "0.5",
       "bet_surface_area": "85",
       "average_primary_particle_size_nm": "26"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 20L",
@@ -233,7 +243,9 @@
       "ash_content": "0.4",
       "bet_surface_area": "81",
       "average_primary_particle_size_nm": "28"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 20",
@@ -272,7 +284,9 @@
       "ash_content": "0.1",
       "bet_surface_area": "79",
       "average_primary_particle_size_nm": "27"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 200L",
@@ -311,7 +325,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "76",
       "average_primary_particle_size_nm": "28"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 5L",
@@ -351,7 +367,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "68",
       "average_primary_particle_size_nm": "30"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 10",
@@ -390,7 +408,9 @@
       "ash_content": "0.2",
       "bet_surface_area": "66",
       "average_primary_particle_size_nm": "30"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 125L",
@@ -433,7 +453,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "58",
       "average_primary_particle_size_nm": "35"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 160",
@@ -472,7 +494,9 @@
       "ash_content": "0.2",
       "bet_surface_area": "36",
       "average_primary_particle_size_nm": "55"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 600",
@@ -511,7 +535,9 @@
       "ash_content": "0.1",
       "bet_surface_area": "130",
       "average_primary_particle_size_nm": "22"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 605",
@@ -551,7 +577,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "118",
       "average_primary_particle_size_nm": "22"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 505",
@@ -591,7 +619,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "100",
       "average_primary_particle_size_nm": "24"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 555",
@@ -633,7 +663,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "94",
       "average_primary_particle_size_nm": "26"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 305",
@@ -674,7 +706,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "85",
       "average_primary_particle_size_nm": "28"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 545",
@@ -715,7 +749,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "80",
       "average_primary_particle_size_nm": "29"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 3500",
@@ -756,7 +792,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "60",
       "average_primary_particle_size_nm": "31"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 2500",
@@ -796,7 +834,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "50",
       "average_primary_particle_size_nm": "48"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Nipex® 180IQ",
@@ -833,7 +873,9 @@
       "ash_content": "0.0",
       "bet_surface_area": "260",
       "average_primary_particle_size_nm": "15"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Nipex® 170IQ",
@@ -870,7 +912,9 @@
       "ash_content": "0.0",
       "bet_surface_area": "238",
       "average_primary_particle_size_nm": "17"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Nipex® 160IQ",
@@ -907,7 +951,9 @@
       "ash_content": "0.0",
       "bet_surface_area": "180",
       "average_primary_particle_size_nm": "20"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Nipex® 150",
@@ -945,7 +991,9 @@
       "ash_content": "0.0",
       "bet_surface_area": "175",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Nipex® 60",
@@ -984,7 +1032,9 @@
       "ash_content": "0.1",
       "bet_surface_area": "115",
       "average_primary_particle_size_nm": "21"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "Nipex® 35",
@@ -1023,7 +1073,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "60",
       "average_primary_particle_size_nm": "31"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® U",
@@ -1063,7 +1115,19 @@
       "ash_content": "0.0",
       "bet_surface_area": "92",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": "B124",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PRINTEX® 45",
@@ -1104,7 +1168,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "90",
       "average_primary_particle_size_nm": "26"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® 35",
@@ -1147,7 +1213,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "60",
       "average_primary_particle_size_nm": "31"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® 165",
@@ -1189,7 +1257,9 @@
       "ash_content": "0.5",
       "bet_surface_area": "57",
       "average_primary_particle_size_nm": "35"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® 25",
@@ -1231,7 +1301,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "48",
       "average_primary_particle_size_nm": "47"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 4",
@@ -1272,7 +1344,9 @@
       "ash_content": "0.0",
       "bet_surface_area": "180",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 4A",
@@ -1312,7 +1386,19 @@
       "ash_content": "0.0",
       "bet_surface_area": "180",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": "B003",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "SPECIAL BLACK 550",
@@ -1353,7 +1439,9 @@
       "ash_content": "0.6",
       "bet_surface_area": "112",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 350",
@@ -1394,7 +1482,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "62",
       "average_primary_particle_size_nm": "31"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 250",
@@ -1435,6 +1525,8 @@
       "ash_content": "0.3",
       "bet_surface_area": "48",
       "average_primary_particle_size_nm": "47"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   }
 ]

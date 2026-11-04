@@ -12,7 +12,9 @@
     "application_fields_en": "Industrial Gear Oils",
     "suggested_use_level_zh": "工業齒輪油: 0.02–0.05%",
     "suggested_use_level_en": "Industrial Gear Oils: 0.02–0.05%",
-    "properties": "專利銀金屬鈍化劑，有效保護含銀金屬部件免於催化氧化劣解，顯著提升潤滑系統之運轉可靠度與使用壽命。"
+    "properties": "專利銀金屬鈍化劑，有效保護含銀金屬部件免於催化氧化劣解，顯著提升潤滑系統之運轉可靠度與使用壽命。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3239",
@@ -32,7 +34,9 @@
     "application_fields_en": "Industrial Gear Oils, Hydraulic Fluids, Circulating Oils, Greases, Metal Removal Fluids, Metal Forming Lubricants",
     "suggested_use_level_zh": "工業齒輪油 / 液壓油 / 循環油 / 潤滑脂 / 金屬加工油: 0.02–0.05%",
     "suggested_use_level_en": "Industrial Gear Oils / Hydraulic Fluids / Circulating Oils / Greases / Metalworking Fluids: 0.02–0.05%",
-    "properties": "高效銅金屬去活化劑與防腐蝕劑，廣泛適用於汽輪機油（透平機油）、壓縮機油、液壓油及金屬加工油。"
+    "properties": "高效銅金屬去活化劑與防腐蝕劑，廣泛適用於汽輪機油（透平機油）、壓縮機油、液壓油及金屬加工油。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3806",
@@ -51,7 +55,9 @@
     "application_fields_en": "Natural Gas Engine Oils, Jet Turbine Oils, Hydraulic Fluids, Compressor Oils, Circulating Oils",
     "suggested_use_level_zh": "天然氣引擎機油 / 噴射渦輪發動機油 / 液壓油 / 壓縮機油 / 循環油: 0.05–1.0%",
     "suggested_use_level_en": "Natural Gas Engine Oils / Jet Turbine Oils / Hydraulic Fluids / Compressor Oils / Circulating Oils: 0.05–1.0%",
-    "properties": "高溫抗氧化抑制劑，易溶於各類礦物油與合成基礎油，具備優異之油泥控制與漆膜沉積抑制能力。"
+    "properties": "高溫抗氧化抑制劑，易溶於各類礦物油與合成基礎油，具備優異之油泥控制與漆膜沉積抑制能力。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3807",
@@ -70,7 +76,9 @@
     "application_fields_en": "Natural Gas Engine Oils, Jet Turbine Oils, Hydraulic Fluids, Compressor Oils, Circulating Oils",
     "suggested_use_level_zh": "天然氣引擎機油 / 噴射渦輪發動機油 / 液壓油 / 壓縮機油 / 循環油: 0.05–1.0%",
     "suggested_use_level_en": "Natural Gas Engine Oils / Jet Turbine Oils / Hydraulic Fluids / Compressor Oils / Circulating Oils: 0.05–1.0%",
-    "properties": "專用於汽輪機油、空氣壓縮機油及航空合成潤滑油的高熱安定性氧化抑制劑。"
+    "properties": "專用於汽輪機油、空氣壓縮機油及航空合成潤滑油的高熱安定性氧化抑制劑。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3811",
@@ -86,7 +94,9 @@
     "application_fields_en": "Natural Gas Engine Oils, Compressor Oils",
     "suggested_use_level_zh": "天然氣引擎機油: 1.0–4.0%\n壓縮機油: 1.0–4.0%",
     "suggested_use_level_en": "Natural Gas Engine Oils: 1.0–4.0%\nCompressor Oils: 1.0–4.0%",
-    "properties": "適用於高溫嚴苛工況之芳香胺類抗氧化劑，具備優越之高溫積碳與積垢沉積控制能力。"
+    "properties": "適用於高溫嚴苛工況之芳香胺類抗氧化劑，具備優越之高溫積碳與積垢沉積控制能力。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3812",
@@ -101,7 +111,9 @@
     "application_fields_en": "Metal Removal Fluids, Metalworking Fluids",
     "suggested_use_level_zh": "金屬切削液 / 加工油: 1.0–3.0%",
     "suggested_use_level_en": "Metal Removal / Metalworking Fluids: 1.0–3.0%",
-    "properties": "不含硫非活性油性劑，能顯著改善切削邊界潤滑性能並提高加工精度，外觀淺色且氣味極低。"
+    "properties": "不含硫非活性油性劑，能顯著改善切削邊界潤滑性能並提高加工精度，外觀淺色且氣味極低。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3822",
@@ -119,7 +131,9 @@
     "application_fields_en": "Engine Oils, Greases, Metal Removal Fluids, Metal Forming Lubricants",
     "suggested_use_level_zh": "車用引擎機油: 2.0–10.0%\n潤滑脂 / 金屬加工油: 1.0–5.0%",
     "suggested_use_level_en": "Engine Oils: 2.0–10.0%\nGreases / Metalworking Fluids: 1.0–5.0%",
-    "properties": "無灰無氯型聚異丁烯琥珀酸酐（950 MW），專用於合成高品質琥珀醯亞胺無灰清淨分散劑。"
+    "properties": "無灰無氯型聚異丁烯琥珀酸酐（950 MW），專用於合成高品質琥珀醯亞胺無灰清淨分散劑。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3823",
@@ -137,7 +151,9 @@
     "application_fields_en": "Engine Oils, Automotive/Truck Gear Oils, Metal Removal Fluids, Metal Forming Lubricants",
     "suggested_use_level_zh": "車用/卡車齒輪油: 0.5–2.0%\n車用引擎機油 / 金屬加工油: 依配方調配",
     "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.5–2.0%\nEngine Oils / Metalworking Fluids: Dosage upon request",
-    "properties": "高分子量（1300 MW）無灰無氯 PIBSA 合成中間體，賦予成品油優越之低溫油泥分散性與穩定性。"
+    "properties": "高分子量（1300 MW）無灰無氯 PIBSA 合成中間體，賦予成品油優越之低溫油泥分散性與穩定性。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3824",
@@ -152,7 +168,9 @@
     "application_fields_en": "Automotive/Truck Gear Oils (Manual Transmission, Differential Fluids)",
     "suggested_use_level_zh": "車用/卡車齒輪油: 0.5–2.0%",
     "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.5–2.0%",
-    "properties": "多功能無灰添加劑，兼具極佳防鏽蝕性、非鐵金屬（銅）相容性及極壓抗磨損保護。"
+    "properties": "多功能無灰添加劑，兼具極佳防鏽蝕性、非鐵金屬（銅）相容性及極壓抗磨損保護。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3825",
@@ -167,7 +185,9 @@
     "application_fields_en": "Automotive/Truck Gear Oils (Limited Slip Differential LSD, ATF)",
     "suggested_use_level_zh": "車用/卡車齒輪油: 0.1–1.5%",
     "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.1–1.5%",
-    "properties": "無灰無氯型摩擦修飾劑，相容於礦物基礎油、合成烴（PAO）與合成酯類基礎油。"
+    "properties": "無灰無氯型摩擦修飾劑，相容於礦物基礎油、合成烴（PAO）與合成酯類基礎油。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3827",
@@ -186,7 +206,9 @@
     "application_fields_en": "Hydraulic Fluids, Circulating Oils, Greases, Metal Removal Fluids, Metal Forming Lubricants",
     "suggested_use_level_zh": "液壓油 / 循環油 / 潤滑脂 / 金屬加工油: 0.02–0.05%",
     "suggested_use_level_en": "Hydraulic Fluids / Circulating Oils / Greases / Metalworking Fluids: 0.02–0.05%",
-    "properties": "防止鍍銀軸承與銀質組件受活性硫催化腐蝕劣化，顯著降低磨損並延長機件壽命。"
+    "properties": "防止鍍銀軸承與銀質組件受活性硫催化腐蝕劣化，顯著降低磨損並延長機件壽命。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3830",
@@ -202,7 +224,9 @@
     "application_fields_en": "Water-soluble Metal Removal Fluids, Metal Forming Lubricants",
     "suggested_use_level_zh": "金屬加工乳化液: 依配方調配",
     "suggested_use_level_en": "Metalworking Fluids: Dosage upon request",
-    "properties": "高效油包水型（W/O）乳化劑，溶於礦物油、合成烴及多元醇酯類基礎油。"
+    "properties": "高效油包水型（W/O）乳化劑，溶於礦物油、合成烴及多元醇酯類基礎油。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3841",
@@ -220,7 +244,19 @@
     "application_fields_en": "Engine Oils, Natural Gas Engine Oils, Automotive/Truck Gear Oils, Industrial Gear Oils",
     "suggested_use_level_zh": "引擎機油 / 齒輪油: 0.05–0.30%",
     "suggested_use_level_en": "Engine Oils / Gear Oils: 0.05–0.30%",
-    "properties": "非矽氧烷型抗泡劑，具備極佳低溫破泡性、空氣釋放性與高熱安定性。"
+    "properties": "非矽氧烷型抗泡劑，具備極佳低溫破泡性、空氣釋放性與高熱安定性。",
+    "erp_no": "A101",
+    "category_letter": "A",
+    "cas_no": "64742-48-9",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "1993",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PX 3843",
@@ -236,7 +272,9 @@
     "application_fields_en": "Hydraulic Fluids, Compressor Oils, Turbine Oils",
     "suggested_use_level_zh": "液壓油 / 壓縮機油: 0.05–0.30%",
     "suggested_use_level_en": "Hydraulic Fluids / Compressor Oils: 0.05–0.30%",
-    "properties": "非矽型抗乳化與消泡複合劑，具備卓越之油水分離性與負荷承載力，可溶於礦物油及合成基礎油。"
+    "properties": "非矽型抗乳化與消泡複合劑，具備卓越之油水分離性與負荷承載力，可溶於礦物油及合成基礎油。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3845",
@@ -251,7 +289,9 @@
     "application_fields_en": "Slideways / Ways Oils",
     "suggested_use_level_zh": "滑道油/導軌油: 0.25–1.25%",
     "suggested_use_level_en": "Slideways/Ways Oils: 0.25–1.25%",
-    "properties": "賦予滑道油優異之極壓承載力與防爬行（Stick-Slip）抗磨特性，與多數潤滑功能添加劑具備良好相容性。"
+    "properties": "賦予滑道油優異之極壓承載力與防爬行（Stick-Slip）抗磨特性，與多數潤滑功能添加劑具備良好相容性。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3846",
@@ -268,7 +308,9 @@
     "application_fields_en": "Automotive/Truck Gear Oils, Industrial Gear Oils, Greases",
     "suggested_use_level_zh": "車用/卡車齒輪油: 0.5–1.5%\n工業齒輪油: 0.1–0.4%\n潤滑脂: 0.2–1.0%",
     "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.5–1.5%\nIndustrial Gear Oils: 0.1–0.4%\nGreases: 0.2–1.0%",
-    "properties": "兼具防鏽與防腐蝕特性之極壓抗磨添加劑，適用於重負荷齒輪油、透平機油及高溫潤滑脂。"
+    "properties": "兼具防鏽與防腐蝕特性之極壓抗磨添加劑，適用於重負荷齒輪油、透平機油及高溫潤滑脂。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3847",
@@ -283,7 +325,9 @@
     "application_fields_en": "Engine Oils, Marine Diesel Engine Oils",
     "suggested_use_level_zh": "船用/車用柴油引擎油: 0.5–1.0%",
     "suggested_use_level_en": "Marine / Automotive Diesel Engine Oils: 0.5–1.0%",
-    "properties": "熱氧化安定性優良，對非鐵金屬無腐蝕性，能顯著增強高溫油膜承載力與邊界抗磨損性能。"
+    "properties": "熱氧化安定性優良，對非鐵金屬無腐蝕性，能顯著增強高溫油膜承載力與邊界抗磨損性能。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3849",
@@ -301,7 +345,9 @@
     "application_fields_en": "Engine Oils, Automotive/Truck Gear Oils, Industrial Gear Oils, Greases",
     "suggested_use_level_zh": "車用引擎機油 / 車用齒輪油: 0.5–1.5%\n工業齒輪油: 0.1–0.4%\n潤滑脂: 0.2–1.0%",
     "suggested_use_level_en": "Engine Oils / Automotive Gear Oils: 0.5–1.5%\nIndustrial Gear Oils: 0.1–0.4%\nGreases: 0.2–1.0%",
-    "properties": "形成高強度磷酸鹽化學反應膜，顯著提升潤滑油膜之抗擦傷（Scuffing）與極壓抗磨損承載能力。"
+    "properties": "形成高強度磷酸鹽化學反應膜，顯著提升潤滑油膜之抗擦傷（Scuffing）與極壓抗磨損承載能力。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3861",
@@ -318,7 +364,9 @@
     "application_fields_en": "Greases, Metal Removal Fluids, Metal Forming Lubricants, Compressor Oils",
     "suggested_use_level_zh": "壓縮機油: 0.1–0.2%\n潤滑脂: 0.5–1.5%\n金屬加工液: 0.05–1.0%",
     "suggested_use_level_en": "Compressor Oils: 0.1–0.2%\nGreases: 0.5–1.5%\nMetalworking Fluids: 0.05–1.0%",
-    "properties": "無灰型咪唑啉防鏽劑，添加量低至 0.05 wt% 即展現優異之鐵金屬表面吸附防蝕保護。"
+    "properties": "無灰型咪唑啉防鏽劑，添加量低至 0.05 wt% 即展現優異之鐵金屬表面吸附防蝕保護。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3862",
@@ -334,7 +382,9 @@
     "application_fields_en": "Automotive/Truck Gear Oils, Industrial Gear Oils",
     "suggested_use_level_zh": "車用/卡車齒輪油 / 工業齒輪油: 0.1–0.5%",
     "suggested_use_level_en": "Automotive/Truck Gear Oils / Industrial Gear Oils: 0.1–0.5%",
-    "properties": "無灰複合型防鏽與銅金屬鈍化劑，於硫磷型齒輪油體系中表現極佳之抗腐蝕與防鏽特性。"
+    "properties": "無灰複合型防鏽與銅金屬鈍化劑，於硫磷型齒輪油體系中表現極佳之抗腐蝕與防鏽特性。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3863",
@@ -350,7 +400,9 @@
     "application_fields_en": "Slideways / Ways Oils, Industrial Circulating Oils",
     "suggested_use_level_zh": "滑道油/導軌油: 0.25–1.25%\n循環油: 0.25–1.0%",
     "suggested_use_level_en": "Slideways/Ways Oils: 0.25–1.25%\nCirculating Oils: 0.25–1.0%",
-    "properties": "極低添加劑量下即可提供卓越之銅片防腐蝕保護，並協同提升基礎油之油性潤滑機能。"
+    "properties": "極低添加劑量下即可提供卓越之銅片防腐蝕保護，並協同提升基礎油之油性潤滑機能。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3864",
@@ -367,7 +419,9 @@
     "application_fields_en": "Greases, Metal Removal Fluids, Metal Forming Lubricants, Compressor Oils",
     "suggested_use_level_zh": "壓縮機油: 0.1–1.0%\n潤滑脂: 0.25–1.5%\n金屬加工液: 0.05–1.0%",
     "suggested_use_level_en": "Compressor Oils: 0.1–1.0%\nGreases: 0.25–1.5%\nMetalworking Fluids: 0.05–1.0%",
-    "properties": "通用無灰型咪唑啉防鏽劑，廣泛適用於各類工業潤滑油品及通用潤滑脂配方。"
+    "properties": "通用無灰型咪唑啉防鏽劑，廣泛適用於各類工業潤滑油品及通用潤滑脂配方。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3865",
@@ -382,7 +436,9 @@
     "application_fields_en": "Industrial Greases, Synthetic Greases",
     "suggested_use_level_zh": "潤滑脂: 0.5–1.5%",
     "suggested_use_level_en": "Greases: 0.5–1.5%",
-    "properties": "專為合成潤滑脂及嚴苛工業環境設計之表面活性防鏽劑，具備極強之抗水洗與防鏽保護力。"
+    "properties": "專為合成潤滑脂及嚴苛工業環境設計之表面活性防鏽劑，具備極強之抗水洗與防鏽保護力。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3871",
@@ -398,7 +454,9 @@
     "application_fields_en": "Automotive/Truck Gear Oils, Complex Lithium Greases",
     "suggested_use_level_zh": "車用/卡車齒輪油: 0.3–1.5%\n潤滑脂: 0.5–1.5%",
     "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.3–1.5%\nGreases: 0.5–1.5%",
-    "properties": "有機硼添加劑，具備無灰分散與抗磨損性能，並能顯著提升鋰基潤滑脂之滴點（Dropping Point）。"
+    "properties": "有機硼添加劑，具備無灰分散與抗磨損性能，並能顯著提升鋰基潤滑脂之滴點（Dropping Point）。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 3872",
@@ -414,7 +472,9 @@
     "application_fields_en": "Automotive/Truck Gear Oils, Complex Lithium Greases",
     "suggested_use_level_zh": "車用/卡車齒輪油: 0.3–1.5%\n潤滑脂: 0.5–1.5%",
     "suggested_use_level_en": "Automotive/Truck Gear Oils: 0.3–1.5%\nGreases: 0.5–1.5%",
-    "properties": "低氣味硼化酯類添加劑，兼具減摩與極壓抗磨損效能，可大幅提升潤滑脂高溫滴點。"
+    "properties": "低氣味硼化酯類添加劑，兼具減摩與極壓抗磨損效能，可大幅提升潤滑脂高溫滴點。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 4005",
@@ -434,7 +494,9 @@
     "application_fields_en": "Engine Oils, Natural Gas Engine Oils, Automotive/Truck Gear Oils, Hydraulic Fluids, Compressor Oils, Greases",
     "suggested_use_level_zh": "車用引擎機油: 5.0–15.0%\n車用/卡車齒輪油: 1.0–2.0%\n天然氣引擎機油: 2.0–10.0%\n液壓油 / 壓縮機油: 1.0–3.0%",
     "suggested_use_level_en": "Engine Oils: 5.0–15.0%\nAutomotive/Truck Gear Oils: 1.0–2.0%\nNatural Gas Engine Oils: 2.0–10.0%\nHydraulic Fluids / Compressor Oils: 1.0–3.0%",
-    "properties": "無灰無氯型琥珀醯亞胺分散劑（1000 MW），具優良之低溫油泥與高溫積碳分散能力，廣泛用於各類潤滑油品及燃油清淨配方。"
+    "properties": "無灰無氯型琥珀醯亞胺分散劑（1000 MW），具優良之低溫油泥與高溫積碳分散能力，廣泛用於各類潤滑油品及燃油清淨配方。",
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PX 4006",
@@ -451,6 +513,8 @@
     "application_fields_en": "Engine Oils, Natural Gas Engine Oils, Automotive/Truck Gear Oils",
     "suggested_use_level_zh": "車用引擎機油: 2.0–15.0%\n車用/卡車齒輪油: 1.0–2.0%\n天然氣引擎機油: 2.0–10.0%",
     "suggested_use_level_en": "Engine Oils: 2.0–15.0%\nAutomotive/Truck Gear Oils: 1.0–2.0%\nNatural Gas Engine Oils: 2.0–10.0%",
-    "properties": "高階硼化無灰分散劑，同時具備優異之碳煙分散性、邊界潤滑抗磨損保護及橡膠油封相容性。"
+    "properties": "高階硼化無灰分散劑，同時具備優異之碳煙分散性、邊界潤滑抗磨損保護及橡膠油封相容性。",
+    "erp_no": null,
+    "category_letter": null
   }
 ]

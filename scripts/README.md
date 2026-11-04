@@ -187,17 +187,17 @@ python scripts/sync_tech_updates.py
 
 ---
 
-## 7. 歷史維護與修復腳本清單
+## 7. 歷史維護與修復腳本清單（已收錄至 `scripts/legacy_patches/`）
 
-本目錄下包含部分過去重構與補丁遷移腳本，記錄如下以供參考（日常維運通常不需重複執行）：
+專案在過去重構與補丁遷移期間所撰寫的一次性修復腳本，已全數歸類至 [`scripts/legacy_patches/`](file:///d:/Jay/vscode/attech0824/scripts/legacy_patches/) 目錄下，日常維運皆不需重複執行：
 
 | 腳本名稱 | 歷史用途說明 |
 | :--- | :--- |
-| `update_gallery_tech.py` | 早期將首頁 `#tab-technology` 升級為 11 大畫廊卡片展開型版面的更新腳本。 |
-| `update_tech_all.py` | 早期一鍵將技術資料庫注入 JS 並替換全螢幕視窗邏輯的腳本。 |
-| `update_cover_flow.py` | 早期調整 PDF 封面渲染流與預覽排版之腳本。 |
-| `apply_cover_fix.py` / `apply_cover_clean_fix.py` | 將舊版獨立按鈕移除，改為「點擊封面直接開啟全螢幕檢視」之遷移腳本。 |
-| `apply_true_fullscreen.py` | 將原本的模態視窗升級為沉浸式多頁深色滿版閱讀器之修正腳本。 |
-| `fix_tech_bugs.py` | 修復 PDF.js 載入路徑解析與全螢幕按鍵監聽事件之歷史腳本。 |
-| `fix_missing_data_bug.py` | 修正「暫無公開資料」分頁邏輯與安全防護之補丁腳本。 |
-| `fix_modal_zindex.py` | 修正全螢幕閱讀視窗 z-index 被 Navbar 遮擋問題之腳本。 |
+| `legacy_patches/update_gallery_tech.py` | 早期將首頁 `#tab-technology` 升級為 11 大畫廊卡片展開型版面的更新腳本。 |
+| `legacy_patches/update_tech_all.py` | 早期一鍵將技術資料庫注入 JS 並替換全螢幕視窗邏輯的腳本。 |
+| `legacy_patches/update_cover_flow.py` | 早期調整 PDF 封面渲染流與預覽排版之腳本。 |
+| `legacy_patches/apply_cover_fix.py` / `apply_cover_clean_fix.py` | 將舊版獨立按鈕移除，改為「點擊封面直接開啟全螢幕檢視」之遷移腳本。 |
+| `legacy_patches/apply_true_fullscreen.py` | 將原本的模態視窗升級為沉浸式多頁深色滿版閱讀器之修正腳本。 |
+| `legacy_patches/fix_tech_bugs.py` | 修復 PDF.js 載入路徑解析與全螢幕按鍵監聽事件之歷史腳本。 |
+| `legacy_patches/fix_missing_data_bug.py` | 修正「暫無公開資料」分頁邏輯與安全防護之補丁腳本。 |
+| `legacy_patches/fix_modal_zindex.py` | 修正全螢幕閱讀視窗 z-index 被 Navbar 遮擋問題之腳本。 |

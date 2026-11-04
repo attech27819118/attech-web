@@ -34,7 +34,9 @@
       "ash_content": "0.30",
       "bet_surface_area": "600",
       "average_primary_particle_size_nm": "11"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "COLOUR BLACK FW 255",
@@ -72,7 +74,9 @@
       "ash_content": "0.50",
       "bet_surface_area": "600",
       "average_primary_particle_size_nm": "11"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "COLOUR BLACK FW 310",
@@ -110,7 +114,19 @@
       "ash_content": "0.50",
       "bet_surface_area": "600",
       "average_primary_particle_size_nm": "11"
-    }
+    },
+    "erp_no": "B005",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "COLOUR BLACK FW 200",
@@ -147,7 +163,19 @@
       "ash_content": "0.02",
       "bet_surface_area": "550",
       "average_primary_particle_size_nm": "13"
-    }
+    },
+    "erp_no": "B001",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "COLOUR BLACK FW 2",
@@ -184,7 +212,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "470",
       "average_primary_particle_size_nm": "13"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "COLOUR BLACK FW 285",
@@ -214,7 +244,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "350",
       "average_primary_particle_size_nm": "11"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "COLOUR BLACK FW 1",
@@ -249,7 +281,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "320",
       "average_primary_particle_size_nm": "13"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "COLOUR BLACK FW 18",
@@ -286,7 +320,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "260",
       "average_primary_particle_size_nm": "15"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "COLOUR BLACK S 170",
@@ -320,7 +356,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "230",
       "average_primary_particle_size_nm": "17"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "COLOUR BLACK S 160",
@@ -354,7 +392,19 @@
       "ash_content": "0.02",
       "bet_surface_area": "180",
       "average_primary_particle_size_nm": "20"
-    }
+    },
+    "erp_no": "B004",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PRINTEX® 95",
@@ -388,7 +438,9 @@
       "ash_content": "0.80",
       "bet_surface_area": "250",
       "average_primary_particle_size_nm": "15"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 930L",
@@ -421,7 +473,9 @@
       "ash_content": "0.30",
       "bet_surface_area": "289",
       "average_primary_particle_size_nm": "14"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 600L",
@@ -451,7 +505,9 @@
       "ash_content": "0.6",
       "bet_surface_area": "246",
       "average_primary_particle_size_nm": "16"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 21LB",
@@ -485,7 +541,9 @@
       "ash_content": "0.50",
       "bet_surface_area": "85",
       "average_primary_particle_size_nm": "26"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 200L",
@@ -518,7 +576,9 @@
       "ash_content": "0.30",
       "bet_surface_area": "76",
       "average_primary_particle_size_nm": "28"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "HIBLACK® 160",
@@ -551,7 +611,9 @@
       "ash_content": "0.20",
       "bet_surface_area": "35",
       "average_primary_particle_size_nm": "55"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "LAMP BLACK 101",
@@ -586,7 +648,19 @@
       "ash_content": "0.02",
       "bet_surface_area": "29",
       "average_primary_particle_size_nm": "95"
-    }
+    },
+    "erp_no": "B045",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "NEROX® 600",
@@ -622,7 +696,9 @@
       "ash_content": "0.10",
       "bet_surface_area": "130",
       "average_primary_particle_size_nm": "22"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 605",
@@ -657,7 +733,9 @@
       "ash_content": "0.30",
       "bet_surface_area": "118",
       "average_primary_particle_size_nm": "22"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 505",
@@ -694,7 +772,9 @@
       "ash_content": "0.30",
       "bet_surface_area": "100",
       "average_primary_particle_size_nm": "24"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 510",
@@ -730,7 +810,9 @@
       "ash_content": "0.30",
       "bet_surface_area": "102",
       "average_primary_particle_size_nm": "24"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "NEROX® 1000",
@@ -765,7 +847,9 @@
       "ash_content": "0.10",
       "bet_surface_area": "36",
       "average_primary_particle_size_nm": "50"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® XE2 B",
@@ -798,7 +882,9 @@
       "ash_content": "1.6",
       "bet_surface_area": "1000",
       "average_primary_particle_size_nm": "30"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® KAPPA 50",
@@ -835,7 +921,9 @@
       "ash_content": "0.07",
       "bet_surface_area": "375",
       "average_primary_particle_size_nm": "12"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® KAPPA 20",
@@ -872,7 +960,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "230",
       "average_primary_particle_size_nm": "19"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® L",
@@ -907,7 +997,9 @@
       "ash_content": "0.10",
       "bet_surface_area": "150",
       "average_primary_particle_size_nm": "23"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® U",
@@ -943,7 +1035,19 @@
       "ash_content": "0.02",
       "bet_surface_area": "92",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": "B124",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PRINTEX® V",
@@ -979,7 +1083,19 @@
       "ash_content": "0.02",
       "bet_surface_area": "92",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": "B132",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "PRINTEX® 200",
@@ -1013,7 +1129,9 @@
       "ash_content": "0.15",
       "bet_surface_area": "48",
       "average_primary_particle_size_nm": "47"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® 300",
@@ -1047,7 +1165,9 @@
       "ash_content": "0.20",
       "bet_surface_area": "80",
       "average_primary_particle_size_nm": "27"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "PRINTEX® G",
@@ -1083,7 +1203,9 @@
       "ash_content": "0.10",
       "bet_surface_area": "35",
       "average_primary_particle_size_nm": "51"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 6",
@@ -1118,7 +1240,19 @@
       "ash_content": "0.02",
       "bet_surface_area": "450",
       "average_primary_particle_size_nm": "17"
-    }
+    },
+    "erp_no": "B002",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "SPECIAL BLACK 5",
@@ -1152,7 +1286,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "320",
       "average_primary_particle_size_nm": "20"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 4",
@@ -1188,7 +1324,9 @@
       "ash_content": "0.02",
       "bet_surface_area": "180",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 4A",
@@ -1224,7 +1362,19 @@
       "ash_content": "0.02",
       "bet_surface_area": "180",
       "average_primary_particle_size_nm": "25"
-    }
+    },
+    "erp_no": "B003",
+    "category_letter": "B",
+    "cas_no": "1333-86-4",
+    "compliance": {
+      "reach": "✔ 2025.12",
+      "rohs": "✔ 2025.12",
+      "fda": "✔ 2025.12",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "✔ 2026.02"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "SPECIAL BLACK 250",
@@ -1258,7 +1408,9 @@
       "ash_content": "0.30",
       "bet_surface_area": "48",
       "average_primary_particle_size_nm": "47"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "SPECIAL BLACK 100",
@@ -1293,7 +1445,9 @@
       "ash_content": "0.10",
       "bet_surface_area": "35",
       "average_primary_particle_size_nm": "51"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "XPB 700",
@@ -1322,7 +1476,9 @@
       "ash_content": "0.3",
       "bet_surface_area": "275",
       "average_primary_particle_size_nm": "15"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "XPB 685",
@@ -1351,7 +1507,9 @@
       "ash_content": "0.5",
       "bet_surface_area": "120",
       "average_primary_particle_size_nm": "23"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "XPB 650",
@@ -1380,6 +1538,8 @@
       "ash_content": "0.5",
       "bet_surface_area": "85",
       "average_primary_particle_size_nm": "26"
-    }
+    },
+    "erp_no": null,
+    "category_letter": null
   }
 ]

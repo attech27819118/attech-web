@@ -83,7 +83,9 @@
     "performance_ratings": {},
     "properties": "適用烤漆底漆\n增進對金屬密著及改善柔韌性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "LTW",
@@ -169,7 +171,19 @@
     "performance_ratings": {},
     "properties": "提高金屬、塑膠層間密著\n提升鋁粉定向\n提高柔韌性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C005",
+    "category_letter": "C",
+    "cas_no": "機密",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2026.01            英文/中文",
+      "fda": "✔ 2026.01            英文/中文",
+      "pfoa_pfos": "-",
+      "un_no": "1866",
+      "dg_class": "3"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "LTH",
@@ -255,7 +269,19 @@
     "performance_ratings": {},
     "properties": "提高金屬、塑膠層間密著\n提升鋁粉定向\n提高塗層硬度",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C006",
+    "category_letter": "C",
+    "cas_no": "機密",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2026.01            英文/中文",
+      "fda": "✔ 2025.05       英文",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "SK",
@@ -341,7 +367,19 @@
     "performance_ratings": {},
     "properties": "提高硬度、光澤\n提升對金屬材料、塑膠密著",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C002",
+    "category_letter": "C",
+    "cas_no": "機密",
+    "compliance": {
+      "reach": "✔ 2026.01            英文/中文",
+      "rohs": "✔ 2026.01            英文/中文",
+      "fda": "✔ 2026.01            英文/中文",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "SN 81",
@@ -427,7 +465,19 @@
     "performance_ratings": {},
     "properties": "提高硬度、光澤且不黃變\n黏度低、流動性良好",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C056",
+    "category_letter": "C",
+    "cas_no": "28931-47-7",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "SN 221",
@@ -513,6 +563,18 @@
     "performance_ratings": {},
     "properties": "提高硬度、光澤和附著力\n提升膠黏劑的快乾性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C054",
+    "category_letter": "C",
+    "cas_no": "25054-06-2                                                        50-00-0",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   }
 ]

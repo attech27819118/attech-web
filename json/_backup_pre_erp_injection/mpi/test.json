@@ -1,0 +1,4884 @@
+[
+  {
+    "product_name": "MP-28AL",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mp-28al.html",
+    "composition_zh": "合成蠟 / 奈米氧化鋁",
+    "composition_en": "Synthetic wax / aluminum oxide nanocomposite",
+    "chemical_component": "Synthetic wax/aluminum oxide",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "114-118",
+      "mean_particle_size_um": "6.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.99"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
+      "scratch_resistance": "提升抗刮、抗擦傷與抗磨損性能。",
+      "slip_lubricity": "增加表面滑爽性與潤滑性。",
+      "matting_gloss_control": "選擇 XF 規格以保持光澤。選擇 G 規格以獲得較佳的消光效果與抗拋光性",
+      "metal_mark_resistance": "提高抗磨損與抗金屬劃痕性能",
+      "abrasion_resistance": "抗擦傷與抗磨損性能",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "v_matting_gloss_control": "選擇 G 規格可使塗層更消光",
+      "v_clarity": "選擇 XF 規格可獲得最高的光澤保留度",
+      "lubricity_smooth_feel": "增加表面滑爽性與潤滑性。",
+      "slip": "增加表面滑爽性與潤滑性。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
+      "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
+      "slip_lubricity": "Adds surface slip and lubricity.",
+      "matting_gloss_control": "Choose XF grade for gloss retention. Choose G grade for superior matting efficiency and burnish resistance.",
+      "metal_mark_resistance": "Enhances abrasion resistance and metal mark resistance.",
+      "abrasion_resistance": "Provides scuff and mar resistance.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "clarity": "Choose XF grade for maximum gloss retention and clarity.",
+      "lubricity_smooth_feel": "Adds surface slip and lubricity.",
+      "slip": "Adds surface slip and lubricity."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "water_repellency": 2,
+          "block_resistance": 1,
+          "improved_extrusion_flow": 1,
+          "metal_mark_resistance": 1,
+          "burnish_resistance": 2,
+          "anti_gassing": 2,
+          "clarity": 2
+        }
+      },
+      "powder": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "block_resistance": 1,
+          "improved_extrusion_flow": 1,
+          "anti_gassing": 2,
+          "metal_mark_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗刮性能。",
+          "slip_lubricity": "增加表面滑爽性與潤滑性"
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "example_zh": "罐頭塗料",
+        "example_en": "Can coatings",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 1,
+          "improved_extrusion_flow": 1,
+          "metal_mark_resistance": 1,
+          "slip_lubricity": 2,
+          "burnish_resistance": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高抗刮傷、抗磨損與抗劃痕性能。",
+          "metal_mark_resistance": "提高抗刮傷、抗磨損與抗劃痕性能。",
+          "matting_gloss_control": "選擇 G 規格可獲得最大的消光效果；選擇 XF 規格可獲得最大的光澤保持。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "matting_gloss_control": 1,
+          "soft_touch": 1,
+          "block_resistance": 1,
+          "clarity": 2
+        },
+        "notes_zh": {
+          "ptfe_alternative": "耐刮、高滑度，合成蠟/奈米氧化鋁複合蠟。",
+          "scratch_resistance": "提升抗刮傷、抗擦傷性能。",
+          "abrasion_resistance": "提升耐磨性能",
+          "slip_lubricity": "增加表面滑爽度與潤滑性"
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "matting_gloss_control": 2,
+          "water_repellency": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗刮傷、抗擦傷與抗磨損性能。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "example_zh": "木器漆",
+        "example_en": "Wood coatings",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 1,
+          "texture_structure": 1,
+          "block_resistance": 1,
+          "clarity": 1,
+          "gloss_retention": 1,
+          "lubricity_smooth_feel": 1
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 2,
+          "burnish_resistance": 1,
+          "slip": 2,
+          "matting_gloss_control": 1,
+          "block_resistance": 1
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MP-28AL-XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mp-28al-xf.html",
+    "composition_zh": "合成蠟 / 奈米氧化鋁",
+    "composition_en": "Synthetic wax / aluminum oxide nanocomposite",
+    "chemical_component": "Synthetic wax/aluminum oxide",
+    "recommended_system_type_zh": "水性、溶劑系統、UV系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨(柔印和凹印）；粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "114-118",
+      "mean_particle_size_um": "4.0-6.0",
+      "max_particle_size_um": "15.56",
+      "density_g_cc_25c": "0.99"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
+      "scratch_resistance": "提升抗刮、抗擦傷與抗磨損性能。",
+      "slip_lubricity": "增加表面滑爽性與潤滑性。",
+      "metal_mark_resistance": "提高抗磨損與抗金屬劃痕性能",
+      "clarity": "選擇 XF 規格以獲得最大的光澤保持率。",
+      "gloss_retention": "選擇 XF 規格以獲得最大的光澤保持率。",
+      "lubricity_smooth_feel": "增加表面滑爽性與潤滑性。",
+      "slip": "增加表面滑爽性與潤滑性。",
+      "matting_gloss_control": "選擇 XF 規格以獲得最大的光澤保持率。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
+      "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
+      "slip_lubricity": "Adds surface slip and lubricity.",
+      "metal_mark_resistance": "Improves abrasion and metal mark resistance.",
+      "clarity": "Choose XF grade for maximum gloss retention.",
+      "gloss_retention": "Choose XF grade for maximum gloss retention.",
+      "lubricity_smooth_feel": "Adds surface slip and lubricity.",
+      "slip": "Adds surface slip and lubricity.",
+      "matting_gloss_control": "Choose XF grade for maximum gloss retention."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "water_repellency": 2,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "metal_mark_resistance": 1,
+          "burnish_resistance": 2,
+          "anti_gassing": 2,
+          "clarity": 2
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 1,
+          "texture_structure": 1,
+          "block_resistance": 1,
+          "clarity": 1,
+          "gloss_retention": 1,
+          "lubricity_smooth_feel": 1
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 2,
+          "burnish_resistance": 1,
+          "slip": 2,
+          "matting_gloss_control": 1,
+          "block_resistance": 1
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MP-28AL-G",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mp-28al-g.html",
+    "composition_zh": "合成蠟 / 奈米氧化鋁",
+    "composition_en": "Synthetic wax / aluminum oxide nanocomposite",
+    "chemical_component": "Synthetic wax/aluminum oxide",
+    "recommended_system_type_zh": "水性、溶劑系統、UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨(柔印和凹印）；粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "114-118",
+      "mean_particle_size_um": "10.0-14.0",
+      "max_particle_size_um": "44.00",
+      "density_g_cc_25c": "0.99"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "耐刮、高滑度，高性價比合成蠟/奈米氧化鋁複合蠟。",
+      "scratch_resistance": "提升抗刮、抗擦傷與抗磨損性能。",
+      "slip_lubricity": "增加表面滑爽性與潤滑性。",
+      "matting_gloss_control": "選擇 G 規格以獲得最大的消光效果。",
+      "metal_mark_resistance": "提高抗磨損與抗金屬劃痕性能",
+      "burnish_resistance": "選擇 G 規格以獲得最大的抗拋光效果。",
+      "lubricity_smooth_feel": "增加表面滑爽性與潤滑性。",
+      "slip": "增加表面滑爽性與潤滑性。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Scratch-resistant, high-slip, cost-effective synthetic wax/aluminum oxide nanocomposite.",
+      "scratch_resistance": "Improves scratch, scuff, and mar resistance.",
+      "slip_lubricity": "Adds surface slip and lubricity.",
+      "matting_gloss_control": "Choose G grade for maximum gloss reduction.",
+      "metal_mark_resistance": "Improves abrasion and metal mark resistance.",
+      "burnish_resistance": "Choose G grade for maximum burnish resistance and gloss reduction.",
+      "lubricity_smooth_feel": "Adds surface slip and lubricity.",
+      "slip": "Adds surface slip and lubricity."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "water_repellency": 2,
+          "block_resistance": 1,
+          "improved_extrusion_flow": 1,
+          "metal_mark_resistance": 1,
+          "burnish_resistance": 2,
+          "anti_gassing": 2,
+          "clarity": 2
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 1,
+          "texture_structure": 1,
+          "block_resistance": 1,
+          "clarity": 1,
+          "gloss_retention": 1,
+          "lubricity_smooth_feel": 1
+        },
+        "notes_zh": {
+          "burnish_resistance": "選擇 G 規格以獲得最大的消光與抗拋光效果。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 2,
+          "burnish_resistance": 1,
+          "slip": 2,
+          "matting_gloss_control": 2,
+          "block_resistance": 1
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MPP-611AL",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mpp-611al.html",
+    "composition_zh": "高密度聚乙烯 / 奈米氧化鋁",
+    "composition_en": "High density polyethylene / aluminum oxide nanocomposite",
+    "chemical_component": "HDPE/aluminum oxide",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）\n粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
+    "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "110-116",
+      "mean_particle_size_um": "3.5-5.5",
+      "max_particle_size_um": "15.56",
+      "density_g_cc_25c": "0.99"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "PTFE蠟的有效替代品",
+      "scratch_resistance": "提供最佳的抗刮與抗擦傷性能。",
+      "slip_lubricity": "具備滑爽性與潤滑性。",
+      "apparent_hardness": "複配奈米氧化鋁(莫氏硬度 9)，有效提升表面硬度",
+      "abrasion_resistance": "具有優異的耐磨損與抗磨耗性能。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "matting_gloss_control": "能有效降低塗層光澤度，產生消光效果",
+      "lubricity_smooth_feel": "提供滑爽性與潤滑性。",
+      "slip": "提高滑爽性與潤滑性"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Effective replacement for PTFE wax additives, providing superior scratch resistance.",
+      "scratch_resistance": "Provides optimum scratch, scuff, and mar resistance.",
+      "slip_lubricity": "Provides surface slip and lubricity.",
+      "abrasion_resistance": "Provides excellent scratch, scuff, and mar resistance.",
+      "apparent_hardness": "Aluminum oxide nanoparticles (Mohs hardness 9) effectively increase film surface hardness.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "matting_gloss_control": "Composite particle density maximizes efficiency and minimizes settling.",
+      "intercoat_adhesion": "Composite particle density maximizes efficiency and minimizes settling.",
+      "lubricity_smooth_feel": "Provides surface slip and lubricity.",
+      "slip": "Enhances surface slip and lubricity."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "block_resistance": 2,
+          "metal_mark_resistance": 2,
+          "burnish_resistance": 2,
+          "anti_gassing": 1,
+          "clarity": 1
+        }
+      },
+      "powder": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "scratch_resistance": 3,
+          "block_resistance": 2,
+          "anti_gassing": 1,
+          "metal_mark_resistance": 2
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE蠟粉的有效替代品",
+          "scratch_resistance": "複配奈米氧化鋁顆粒（莫氏硬度 9)。提供良好的抗刮性能。",
+          "slip_lubricity": "具備滑爽性與潤滑性"
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "example_zh": "水性鋁罐塗料",
+        "example_en": "Water-based aluminum can coatings",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 2,
+          "metal_mark_resistance": 2,
+          "slip_lubricity": 2,
+          "burnish_resistance": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升塗層的抗刮傷及抗磨損。",
+          "apparent_hardness": "複配奈米氧化鋁微粉（莫氏硬度 9），提升塗層表面硬度。",
+          "slip_lubricity": "提高滑爽性與潤滑性。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "matting_gloss_control": 2,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE蠟的有效替代品。",
+          "scratch_resistance": "奈米氧化鋁（莫氏硬度9），提升塗層抗刮與抗擦傷性能。",
+          "slip_lubricity": "提高滑爽性與潤滑性"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "clarity": 2,
+          "gloss_retention": 3,
+          "lubricity_smooth_feel": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高抗刮與抗擦傷性能。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 1,
+          "slip": 1,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升的抗刮與抗擦傷性能。"
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高的抗刮與抗擦傷性能。",
+          "slip_lubricity": "提高滑爽性與潤滑性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MPP-620AL-XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mpp-620al-xf.html",
+    "composition_zh": "高密度聚乙烯 / 奈米氧化鋁",
+    "composition_en": "High density polyethylene / aluminum oxide nanocomposite",
+    "chemical_component": "High density polyethylene/aluminum oxide",
+    "recommended_system_type_zh": "水性、溶劑系統、UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料；橡膠添加劑。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings; rubber additives.",
+    "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "120-124",
+      "mean_particle_size_um": "3.5-5.5",
+      "max_particle_size_um": "15.56",
+      "density_g_cc_25c": "1.00"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "PTFE蠟的有效替代品",
+      "scratch_resistance": "提供塗層良好的的抗刮與抗擦傷性能",
+      "slip_lubricity": "提供良好的滑爽性與潤滑性。",
+      "abrasion_resistance": "提供耐磨/抗摩擦性能。",
+      "block_resistance": "提供滑爽性能，以及防黏結性能。",
+      "slip": "提供滑爽性、防黏結性。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Effective replacement for PTFE wax additives, providing superior scratch resistance.",
+      "scratch_resistance": "Provides excellent scratch, scuff, and mar resistance.",
+      "slip_lubricity": "Provides good surface slip and lubricity.",
+      "abrasion_resistance": "Provides surface slip and abrasion/rub resistance.",
+      "block_resistance": "Provides surface slip, abrasion/rub resistance, and antiblocking properties.",
+      "slip": "Highly engineered polyethylene/aluminum oxide nanocomposite providing slip, abrasion/rub resistance, and antiblocking."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "block_resistance": 2,
+          "metal_mark_resistance": 2,
+          "burnish_resistance": 2,
+          "anti_gassing": 1,
+          "clarity": 1
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 3,
+          "cleanability": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE 添加劑的有效替代品。",
+          "scratch_resistance": "提供最大的抗刮與抗擦傷性能。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 3,
+          "cleanability": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE 添加劑的有效替代品。",
+          "scratch_resistance": "提供最大的抗刮與抗擦傷性能。"
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 1,
+          "slip_lubricity": 1
+        },
+        "notes_zh": {
+          "ptfe_alternative": "有效的 PTFE 替代品。",
+          "scratch_resistance": "提供最高程度的抗刮與防擦傷性。",
+          "abrasion_resistance": "提供耐磨/耐擦洗性與防黏結性。",
+          "slip_lubricity": "提供滑爽性與潤滑性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroKlear 418AL",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microklear-418al.html",
+    "composition_zh": "巴西棕櫚蠟 / 奈米氧化鋁",
+    "composition_en": "Carnauba wax / aluminum oxide nanocomposite",
+    "chemical_component": "Carnauba wax/aluminum oxide",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔版與凹版）；罐頭塗料(內罐及外罐)；捲鋼塗料；種子塗料，皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; seed coatings.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "81-86",
+      "mean_particle_size_um": "6.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "1.04"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "PTFE蠟的有效替代品，奈米氧化鋁，莫氏硬度高達9",
+      "scratch_resistance": "提供良好的抗刮性能。",
+      "slip_lubricity": "提供優異的表面潤滑性。",
+      "gloss_retention": "不會影響塗層透明度或光澤度。",
+      "apparent_hardness": "複配奈米氧化鋁(莫氏硬度9)，有效提升表面硬度",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "block_resistance": "提供優異的防粘結與抗回黏性能。",
+      "abrasion_resistance": "有效提升耐磨性能",
+      "lubricity_smooth_feel": "提高表面潤滑性。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Effective replacement for PTFE wax, reinforced with aluminum oxide nanoparticles (Mohs hardness 9).",
+      "scratch_resistance": "Provides excellent scratch and mar resistance.",
+      "slip_lubricity": "Delivers superior surface lubricity.",
+      "gloss_retention": "Does not adversely affect coating clarity or gloss.",
+      "apparent_hardness": "Aluminum oxide nanoparticles (Mohs hardness 9) effectively increase film surface hardness.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "block_resistance": "Also suitable for use in seed coatings.",
+      "abrasion_resistance": "Effectively reduces wear and abrasion.",
+      "lubricity_smooth_feel": "Enhances surface lubricity and smooth feel."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 2
+        }
+      },
+      "powder": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "有效替代PTFE蠟粉",
+          "scratch_resistance": "複配奈米氧化鋁(莫氏硬度9)，可提高巴西棕梠蠟的硬度，提供較佳的抗刮傷性與表面硬度。",
+          "gloss_retention": "對透明度或光澤影響減到最小"
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "example_zh": "水性鋁罐塗料",
+        "example_en": "Water-based aluminum can coatings",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 2,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE蠟的有效替代品。",
+          "apparent_hardness": "複配奈米氧化鋁，(莫氏硬度9)，提高塗層硬度",
+          "gloss_retention": "不影響塗層透明度和光澤度。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 3,
+          "gloss_retention": 1,
+          "block_resistance": 2,
+          "clarity": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE蠟的有效替代品。",
+          "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
+          "gloss_retention": "透明度或光澤度產生影響減到最小"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "example_zh": "水性木器漆",
+        "example_en": "Water-based wood coatings",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "water_repellency": 1,
+          "block_resistance": 1,
+          "clarity": 2,
+          "gloss_retention": 2,
+          "lubricity_smooth_feel": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE蠟的有效替代品",
+          "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
+          "gloss_retention": "對透明度或光澤度影響最小。"
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 2,
+          "water_beading": 1,
+          "soil_resistance": 2,
+          "cleanability": 1
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE蠟的有效替代品",
+          "scratch_resistance": "複配奈米氧化鋁，莫氏硬度9，提供良好的抗刮性能。",
+          "gloss_retention": "不影響透明度與光澤保持。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "Superslip 6515AL",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/superslip-6515al.html",
+    "composition_zh": "高密度聚乙烯 / EBS / 奈米氧化鋁",
+    "composition_en": "HDPE / EBS / aluminum oxide nanocomposite",
+    "chemical_component": "HDPE/EBS/aluminum oxide",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）\n粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; can, container, and coil coatings; rubber additives.",
+    "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "139-145",
+      "mean_particle_size_um": "3.5-5.5",
+      "max_particle_size_um": "15.56",
+      "density_g_cc_25c": "0.99"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "抗刮性佳；可取代 PE/PTFE蠟。",
+      "scratch_resistance": "良好的抗刮性。",
+      "abrasion_resistance": "具有良好的耐磨性。",
+      "slip_lubricity": "具備滑爽性與潤滑性。",
+      "block_resistance": "醯胺蠟提供優異的防粘結與離型效果。",
+      "apparent_hardness": "提高複配奈米氧化鋁(莫氏硬度9)，有效提升表面硬度",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "lubricity_smooth_feel": "具備滑爽性與潤滑性。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Maximum scratch resistance, equivalent to PE/PTFE wax additives.",
+      "scratch_resistance": "Provides excellent scratch and mar resistance.",
+      "abrasion_resistance": "Provides good abrasion resistance with slip and lubricity.",
+      "slip_lubricity": "Provides excellent surface slip and lubricity.",
+      "block_resistance": "Amide wax component provides superior antiblocking and release properties.",
+      "apparent_hardness": "Aluminum oxide nanoparticles (Mohs hardness 9) effectively increase film surface hardness.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "lubricity_smooth_feel": "Provides good abrasion resistance combined with surface slip and lubricity."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "apparent_hardness": 3
+        }
+      },
+      "powder": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "apparent_hardness": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "極佳的抗刮性，效能等同於PE/PTFE蠟粉。",
+          "scratch_resistance": "複配奈米氧化鋁（莫氏硬度 9）增強塗層的硬度。產生良好的抗刮性能。",
+          "abrasion_resistance": "提供優異的耐磨損性能。"
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "example_zh": "塑膠、鋁圈",
+        "example_en": "Plastics, aluminum wheel rims",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "apparent_hardness": 3,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。",
+          "abrasion_resistance": "良好的耐磨性。",
+          "apparent_hardness": "添加奈米氧化鋁，可提升漆模硬度與韌性。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "極佳的抗刮傷性。複配奈米氧化鋁微粉（莫氏硬度 9）增強 HDPE/EBS 複合蠟的耐刮性能。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 3,
+          "soft_touch": 2,
+          "block_resistance": 2,
+          "clarity": 2,
+          "gloss_retention": 3,
+          "lubricity_smooth_feel": 3,
+          "sanding_efficiency": 2
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "burnish_resistance": 2,
+          "slip": 2,
+          "soft_touch": 1,
+          "block_resistance": 3,
+          "cleanability": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "最大的抗刮性；等同於 PE/PTFE 添加劑。"
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提供最高程度的抗刮性與防擦傷性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PolyGlide 1226XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/polyglide-1226xf.html",
+    "composition_zh": "高密度聚乙烯 / 奈米陶瓷",
+    "composition_en": "HDPE / ceramic nanocomposite",
+    "chemical_component": "HDPE/ceramic",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔版與凹版）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆與捲鋼塗料；橡膠添加劑。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; can, container, and coil coatings; rubber additives.",
+    "suggested_use_level_zh": "0.5-1.5%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-1.5% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "109-115",
+      "mean_particle_size_um": "3.5-5.5",
+      "max_particle_size_um": "15.56",
+      "density_g_cc_25c": "0.99"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "PTFE蠟的有效替代品，提供極佳耐磨性能",
+      "abrasion_resistance": "與 PE/PTFE 添加劑相比，提升了 Taber 耐磨性。",
+      "slip_lubricity": "提供滑爽性與潤滑性。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "slip": "提供滑爽性與潤滑性。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Effective replacement for PTFE wax, providing superior abrasion resistance.",
+      "abrasion_resistance": "Improved Taber abrasion resistance compared to PE/PTFE additives.",
+      "slip_lubricity": "Provides surface slip and lubricity.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "slip": "Provides surface slip and lubricity."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 2,
+          "burnish_resistance": 3
+        }
+      },
+      "powder": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 2,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "ptfe_alternative": "PTFE蠟粉的有效替代品，(Taber)耐磨性更佳",
+          "abrasion_resistance": "複配堅硬的奈米陶瓷，提高了塗層的(Taber) 耐磨性。",
+          "slip_lubricity": "提供良好的滑爽性與潤滑性"
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "abrasion_resistance": 3,
+          "block_resistance": 2,
+          "slip_lubricity": 3,
+          "burnish_resistance": 3
+        },
+        "notes_zh": {
+          "abrasion_resistance": "複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
+          "slip_lubricity": "提高滑爽性與潤滑性。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 2
+        },
+        "notes_zh": {
+          "abrasion_resistance": "複配奈米陶瓷微粉和高密度聚乙烯。與 PE/PTFE 添加劑相比，提高了泰伯 (Taber) 耐磨性。",
+          "slip_lubricity": "提供滑爽性與潤滑度"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "burnish_resistance": 3,
+          "slip": 1,
+          "block_resistance": 2,
+          "cleanability": 2
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "abrasion_resistance": "相較於 PE/PTFE 添加劑，可提高泰伯（Taber）耐磨性。",
+          "slip_lubricity": "提供良好爽滑與潤滑性能。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "SuperGlide 1231",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/superglide-1231.html",
+    "composition_zh": "醯胺蠟 / 奈米陶瓷",
+    "composition_en": "Ethylene bis(stearamide) / ceramic nanocomposite",
+    "chemical_component": "Ethylene bis(stearamide)/ceramic",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "木器漆；印刷油墨（柔版與凹版）；粉體塗料\n罐頭塗料(內罐及外罐)、貨櫃漆；粉末冶金。",
+    "application_fields_en": "Wood coatings; printing inks and OPVs (flexo and gravure); powder coatings; interior and exterior can and container coatings; powdered metals.",
+    "suggested_use_level_zh": "0.5-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "141-146",
+      "mean_particle_size_um": "5.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "1.00"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "具有良好的抗刮與耐磨性能。",
+      "scratch_resistance": "具有出色的抗刮性能。",
+      "abrasion_resistance": "具有出色的耐磨性能。",
+      "slip_lubricity": "增加滑爽性、離型性與潤滑性，提供極佳的表面「手感」。",
+      "block_resistance": "高熔點可提高耐熱性與防粘結性。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "metal_mark_resistance": "複配堅硬奈米陶瓷微粉與醯胺蠟的複合蠟，可提供卓越的表面耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "Provides excellent scratch and abrasion resistance compared to PTFE-based additives.",
+      "scratch_resistance": "Delivers outstanding scratch and mar resistance.",
+      "abrasion_resistance": "Delivers outstanding abrasion and rub resistance.",
+      "slip_lubricity": "Adds slip, release, and lubricity with an exceptional surface tactile feel.",
+      "block_resistance": "High melting point enhances heat resistance and antiblocking performance.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "metal_mark_resistance": "Hard nanoceramic particles combined with amide wax provide superior surface scratch and metal marking resistance."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 3,
+          "metal_mark_resistance": 2,
+          "anti_gassing": 3
+        }
+      },
+      "powder": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 3,
+          "anti_gassing": 3,
+          "metal_mark_resistance": 2
+        },
+        "notes_zh": {
+          "ptfe_alternative": "有效替代PTFE蠟粉，具有優異的抗刮和耐磨性能",
+          "scratch_resistance": "具有良好的抗刮性能。",
+          "abrasion_resistance": "複配堅硬、奈米陶瓷與醯胺蠟複合蠟，具提升耐磨性能。",
+          "slip_lubricity": "增加滑爽性、離型性，提供極佳的表面「手感」。降低摩擦係數(COF)",
+          "block_resistance": "高熔點，可提高塗層的耐熱性與防粘結性。"
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "example_zh": "罐頭塗料",
+        "example_en": "Can coatings",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "abrasion_resistance": 3,
+          "block_resistance": 3,
+          "metal_mark_resistance": 2,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "ptfe_alternative": "具有出色的抗刮與耐磨性能。",
+          "scratch_resistance": "具有良好的抗刮性能",
+          "abrasion_resistance": "具有良好的耐磨性能。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 2
+        },
+        "notes_zh": {
+          "ptfe_alternative": "具有出色的抗刮與耐磨性能。",
+          "scratch_resistance": "具有良好的抗刮性能。",
+          "abrasion_resistance": "具有良好的耐磨性能。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "example_zh": "木器漆",
+        "example_en": "Wood coatings",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "burnish_resistance": 2,
+          "block_resistance": 3,
+          "lubricity_smooth_feel": 3,
+          "sanding_efficiency": 2
+        },
+        "notes_zh": {
+          "ptfe_alternative": "具有出色的抗刮與耐磨性能。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PolyTuf 1229",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/polytuf-1229.html",
+    "composition_zh": "奈米陶瓷改性聚乙烯",
+    "composition_en": "Nanoceramic modified polyethylene",
+    "chemical_component": "Ceramic modified polyethylene",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔版與凹版）；粉體塗料；捲鋼塗料；橡膠添加劑；地板塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and masonry); architectural paints; wood coatings; printing inks and OPVs (flexo and gravure); powder coatings; coil coatings; rubber additives; floor coatings.",
+    "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "110-113",
+      "mean_particle_size_um": "9.0-12.0",
+      "max_particle_size_um": "31.11",
+      "density_g_cc_25c": "0.97"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "有效取代PTFE蠟粉",
+      "scratch_resistance": "低密度聚乙烯蠟提供優異的表面耐刮。",
+      "abrasion_resistance": "最大化表面耐磨性 (Taber) 和漆膜韌性。",
+      "anti_slip": "非常適合步行路面。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "PTFE-free alternative delivering equal performance to PTFE additives.",
+      "scratch_resistance": "Low-density polyethylene provides superior surface toughness, durability, and mar resistance.",
+      "abrasion_resistance": "Maximizes surface Taber abrasion resistance and film toughness.",
+      "anti_slip": "Ideal for anti-skid and walking surfaces.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "apparent_hardness": "Increases hardness, ideal for walking surfaces."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 1,
+          "anti_slip": 3,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "metal_mark_resistance": 2,
+          "increased_cof": 1,
+          "burnish_resistance": 3,
+          "anti_gassing": 1,
+          "cleanability": 2,
+          "no_silica_dust": 3
+        }
+      },
+      "powder": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "example_zh": "儲存槽",
+        "example_en": "Storage tanks",
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "matting_gloss_control": 1,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "anti_gassing": 1,
+          "metal_mark_resistance": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提供優異的表面耐刮性能。",
+          "abrasion_resistance": "提升表面耐磨性 (Taber) 和漆膜韌性。"
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "abrasion_resistance": 3,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "metal_mark_resistance": 2,
+          "slip_lubricity": 1,
+          "burnish_resistance": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "聚乙烯蠟提供優異的表面耐刮。",
+          "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
+          "anti_slip": "不影響摩擦係數，非常適合步行路面。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "PTFE 取代",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "fda": 3,
+          "abrasion_resistance": 3,
+          "slip_lubricity": 1,
+          "increased_cof": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "低密度聚乙烯蠟提高的表面耐刮。",
+          "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。",
+          "anti_slip": "具備防滑特性，非常適合步行路面"
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "anti_slip": 3,
+          "abrasion_resistance": 3,
+          "block_resistance": 3,
+          "matting_gloss_control": 3,
+          "cleanability": 2,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "anti_slip": "非常適合步行表面（如地板塗料等）。",
+          "scratch_resistance": "提升表面耐刮。",
+          "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "abrasion_resistance": 3,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 1,
+          "lubricity_smooth_feel": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高表面耐刮。",
+          "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "PTFE 取代"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "abrasion_resistance": 3,
+          "burnish_resistance": 2,
+          "matting_gloss_control": 2,
+          "block_resistance": 2,
+          "polish": 1,
+          "cleanability": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "優異的表面耐刮。",
+          "abrasion_resistance": "提高表面耐磨性 (Taber) 和漆膜韌性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "Spherex 200",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/spherex-200.html",
+    "composition_zh": "壓克力",
+    "composition_en": "Acrylic spherical polymer",
+    "chemical_component": "Acrylic",
+    "recommended_system_type_zh": "水性、溶劑、UV系統塗料及油墨。",
+    "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) coatings and inks.",
+    "application_fields_zh": "地板塗料；粉體塗料；皮革塗料；建築漆；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；木器漆；印刷油墨。",
+    "application_fields_en": "Floor coatings; powder coatings; leather coatings; architectural wall and trim paints; interior and exterior can and container coatings; coil coatings; wood coatings; printing inks and OPVs.",
+    "suggested_use_level_zh": "0.5-8.0%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-8.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "260",
+      "mean_particle_size_um": "18.5-21.5",
+      "max_particle_size_um": "24.00",
+      "density_g_cc_25c": "1.20"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "優異的抗刮性能。",
+      "abrasion_resistance": "優異的耐磨性，並具有高摩擦係數。",
+      "matting_gloss_control": "在建築塗料中可降低光澤。",
+      "apparent_hardness": "堅硬的球形粉末，可提高塗層表面硬度。",
+      "heat_resistance": "260°C 的熔點，可用於高溫烘烤系統",
+      "burnish_resistance": "在建築塗料中可提高抗拋光性。"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Superior scratch and mar resistance with high coefficient of friction.",
+      "abrasion_resistance": "Superior abrasion and rub resistance with high coefficient of friction.",
+      "matting_gloss_control": "Lowers gloss and provides matting in architectural paints.",
+      "apparent_hardness": "Hard, monosized spherical particles that significantly enhance film surface hardness.",
+      "heat_resistance": "High melting point (260°C) makes it ideal for high-temperature baking systems.",
+      "burnish_resistance": "Improves burnish resistance in architectural coatings."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐高溫"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "anti_slip": 2,
+          "matting_gloss_control": 2,
+          "moisture_resistance": 2,
+          "heat_resistance": 3,
+          "apparent_hardness": 3,
+          "burnish_resistance": 2,
+          "clarity": 2
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "耐高溫"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 3,
+          "moisture_resistance": 2,
+          "heat_resistance": 3,
+          "block_resistance": 2,
+          "clarity": 3,
+          "gloss_retention": 2
+        },
+        "notes_zh": {
+          "apparent_hardness": "堅硬、單一尺寸的球形粉末，可提高塗層表面硬度。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "Spherex 200XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/spherex-200xf.html",
+    "composition_zh": "壓克力",
+    "composition_en": "Acrylic spherical polymer",
+    "chemical_component": "Acrylic",
+    "recommended_system_type_zh": "水性、溶劑、UV系統塗料及油墨。",
+    "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) coatings and inks.",
+    "application_fields_zh": "地板塗料粉體塗料皮革塗料建築漆。罐頭塗料(內罐及外罐)、貨櫃漆。捲鋼塗料木器漆。印刷油墨。",
+    "application_fields_en": "Floor coatings; powder coatings; leather coatings; architectural wall and trim paints; interior and exterior can and container coatings; coil coatings; wood coatings; printing inks and OPVs.",
+    "suggested_use_level_zh": "0.5-8.0%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-8.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "260",
+      "mean_particle_size_um": "5.5-6.5",
+      "max_particle_size_um": "8.00",
+      "density_g_cc_25c": "1.20"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "優異的抗刮性能。",
+      "abrasion_resistance": "優異的耐磨性，並具有高摩擦係數。",
+      "matting_gloss_control": "非常適合木器與皮革塗料中的光澤降低與表面保護。",
+      "apparent_hardness": "堅硬的球形粉末，可提升表面硬度。",
+      "heat_resistance": "高熔點，260°C可用於高溫烘烤系統"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Superior scratch and mar resistance with high coefficient of friction.",
+      "abrasion_resistance": "Superior abrasion and rub resistance with high coefficient of friction.",
+      "matting_gloss_control": "Ideal for gloss reduction and surface protection in wood and leather coatings.",
+      "apparent_hardness": "Hard, monosized spherical particles that enhance film surface hardness.",
+      "heat_resistance": "High melting point (260°C) allows formulation in high-temperature baking systems."
+    },
+    "applications": {
+      "ptfe": {
+        "featured_categories": [
+          "耐高溫"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "anti_slip": 2,
+          "matting_gloss_control": 2,
+          "moisture_resistance": 3,
+          "heat_resistance": 3,
+          "apparent_hardness": 3,
+          "burnish_resistance": 2,
+          "clarity": 2
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "耐高溫"
+        ],
+        "ratings": {
+          "ptfe_alternative": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 3,
+          "moisture_resistance": 3,
+          "heat_resistance": 3,
+          "block_resistance": 2,
+          "clarity": 3,
+          "gloss_retention": 2
+        },
+        "notes_zh": {
+          "apparent_hardness": "堅硬、單一尺寸的球形粉末，可提升表面硬度。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MP-22VF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mp-22vf.html",
+    "composition_zh": "合成蠟",
+    "composition_en": "Synthetic wax",
+    "chemical_component": "Synthetic wax",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；粉末冶金。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; powdered metals.",
+    "suggested_use_level_zh": "1.0-3.0%",
+    "suggested_use_level_en": "1.0-3.0%",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "110-115",
+      "mean_particle_size_um": "6.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.93"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "提升抗刮性能。",
+      "slip_lubricity": "賦予撥水效果、潤滑性與滑爽性。若需更高的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。",
+      "block_resistance": "提供極佳抗黏結性能"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Improves scratch and mar resistance.",
+      "slip_lubricity": "Imparts high water repellency, lubricity, and surface slip. For enhanced surface slip, consider MP-22C and MP-28C.",
+      "block_resistance": "Provides excellent antiblocking properties."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "water_repellency": 2,
+          "improved_extrusion_flow": 1,
+          "anti_gassing": 2
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MP-22XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mp-22xf.html",
+    "composition_zh": "合成蠟",
+    "composition_en": "Synthetic wax",
+    "chemical_component": "Synthetic wax",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；金屬粉體。",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; powdered metals.",
+    "suggested_use_level_zh": "1.0-3.0%",
+    "suggested_use_level_en": "1.0-3.0%",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "110-115",
+      "mean_particle_size_um": "4.5-6.5",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.93"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "提升耐刮性能。",
+      "slip_lubricity": "賦予塗層撥水效果、潤滑性與滑爽性。若需更高的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。",
+      "block_resistance": "提供優異的抗黏結性能",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "賦予塗層抗耐磨擦性能。",
+      "rub_resistance": "提高耐摩擦性能。",
+      "water_repellency": "具有持久的撥水性（水珠效果）能。",
+      "lubricity_smooth_feel": "賦予塗層高度潤滑與滑爽性。",
+      "water_beading": "給予撥水性能。"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Enhances scratch, scuff, and abrasion resistance.",
+      "slip_lubricity": "Imparts good lubricity and surface slip while providing water repellency. Consider MP-22C and MP-28C for higher surface slip.",
+      "block_resistance": "Provides excellent antiblocking properties.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Provides coating abrasion and rub resistance.",
+      "rub_resistance": "Enhances rub and scuff resistance.",
+      "water_repellency": "Provides long-lasting water repellency with immediate water beading.",
+      "lubricity_smooth_feel": "Imparts a high degree of lubricity and surface slip combined with rub and mar resistance.",
+      "water_beading": "Imparts water beading performance."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "water_repellency": 2,
+          "improved_extrusion_flow": 1,
+          "anti_gassing": 2
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "耐刮",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "block_resistance": 2,
+          "slip_lubricity": 2,
+          "water_repellency": 2,
+          "burnish_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "賦予塗層抗擦傷與抗劃痕性。",
+          "block_resistance": "提供抗黏結性能。提供持久的撥水性能。",
+          "slip_lubricity": "賦予塗層潤滑性與滑爽性。若需更好的表面滑爽性，可考慮選用 MP-22C 和 MP-28C。符合 OECD 302C 測試標準的可生物降解特性。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "耐刮",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "rub_resistance": 3,
+          "slip_lubricity": 3,
+          "water_repellency": 2,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "具有抗刮傷（刻痕）防護。",
+          "slip_lubricity": "賦予塗層潤滑性與滑爽性。",
+          "block_resistance": "提供抗黏結性能"
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "撥水"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "block_resistance": 1,
+          "water_repellency": 2,
+          "cleanability": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "賦予塗層耐刮擦和耐刮傷性能。",
+          "abrasion_resistance": "賦予塗層耐磨性能。",
+          "block_resistance": "提供防黏結性能。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "water_repellency": 3,
+          "gloss_retention": 2,
+          "lubricity_smooth_feel": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "具備耐刮及抗擦傷性。",
+          "water_repellency": "提供持久的撥水性能。",
+          "block_resistance": "提供防黏結特性。"
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "slip_lubricity": 1,
+          "water_beading": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "具有耐刮特性。",
+          "slip_lubricity": "賦予塗層高程度的潤滑性與滑爽性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MPP-611XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mpp-611xf.html",
+    "composition_zh": "高密度聚乙烯",
+    "composition_en": "High density polyethylene",
+    "chemical_component": "High density polyethylene",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗料",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings; seed coatings.",
+    "suggested_use_level_zh": "1.0-3.0%",
+    "suggested_use_level_en": "1.0-3.0%",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "110-116",
+      "mean_particle_size_um": "4.0-6.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.96"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "abrasion_resistance": "賦予塗層良好的耐磨擦和抗劃痕性。",
+      "slip_lubricity": "提供良好的表面滑爽性",
+      "block_resistance": "提供優異的抗黏結性能。",
+      "apparent_hardness": "可提升塗層表面硬度。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "提升塗層抗劃痕性",
+      "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力。"
+    },
+    "rating_descriptions_en": {
+      "abrasion_resistance": "Imparts excellent rub, mar, and abrasion resistance.",
+      "slip_lubricity": "Provides good surface slip.",
+      "block_resistance": "Delivers superior antiblocking properties.",
+      "apparent_hardness": "Enhances film surface hardness.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Improves coating mar and scratch resistance.",
+      "chemical_resistance": "Offers better resistance to solvent absorption and swelling compared to synthetic wax."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "block_resistance": 2,
+          "apparent_hardness": 2
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "耐磨",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 2,
+          "block_resistance": 2,
+          "apparent_hardness": 2,
+          "slip_lubricity": 2
+        },
+        "notes_zh": {
+          "abrasion_resistance": "提升塗層耐磨擦性。",
+          "block_resistance": "提升抗黏結性能並具備良好的耐熱性。",
+          "slip_lubricity": "提升塗層表面滑爽性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MPP-620VF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mpp-620vf.html",
+    "composition_zh": "高密度聚乙烯",
+    "composition_en": "High density polyethylene",
+    "chemical_component": "High density polyethylene",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
+    "suggested_use_level_zh": "1.0-3.0%",
+    "suggested_use_level_en": "1.0-3.0%",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "120-124",
+      "mean_particle_size_um": "5.0-7.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.96"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "賦予優異的耐刮和抗劃痕性。",
+      "abrasion_resistance": "賦予優異的耐磨、抗擦傷。",
+      "slip_lubricity": "提供良好的表面滑爽性。",
+      "block_resistance": "提供優異的抗黏結性能。增加耐熱性。",
+      "apparent_hardness": "可提高塗層表面硬度。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "metal_mark_resistance": "提升塗層耐磨、抗擦傷和抗劃痕性。",
+      "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力。",
+      "heat_resistance": "提高耐熱性",
+      "lubricity_smooth_feel": "具備良好的表面滑爽性。",
+      "slip": "提升表面滑爽性。"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Imparts excellent scratch and mar resistance.",
+      "abrasion_resistance": "Provides superior abrasion and scuff resistance.",
+      "slip_lubricity": "Provides good surface slip.",
+      "block_resistance": "Delivers superior antiblocking properties and adds heat resistance.",
+      "apparent_hardness": "Increases coating surface hardness.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "metal_mark_resistance": "Improves abrasion, scuff, and metal mark resistance.",
+      "chemical_resistance": "Provides better resistance to solvent absorption and swelling compared to synthetic wax.",
+      "rub_resistance": "Imparts excellent rub resistance.",
+      "heat_resistance": "Adds heat resistance.",
+      "lubricity_smooth_feel": "Delivers good surface slip.",
+      "slip": "Enhances surface slip."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "block_resistance": 3,
+          "improved_extrusion_flow": 3,
+          "anti_gassing": 3,
+          "metal_mark_resistance": 2
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "耐磨",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 2,
+          "block_resistance": 3,
+          "improved_extrusion_flow": 3,
+          "metal_mark_resistance": 2,
+          "slip_lubricity": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升塗層抗劃痕性能。",
+          "abrasion_resistance": "提升塗層耐磨與耐磨擦性能。",
+          "block_resistance": "提升塗層抗黏結性能。",
+          "slip_lubricity": "具有良好的表面滑爽性。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "耐磨",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 2,
+          "rub_resistance": 2,
+          "slip_lubricity": 2,
+          "block_resistance": 1,
+          "chemical_resistance": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升塗層的抗刮傷性能。",
+          "abrasion_resistance": "提升塗層的耐磨和耐摩擦性。",
+          "slip_lubricity": "提供良好表面滑爽性",
+          "block_resistance": "提供優異的抗黏結性能",
+          "chemical_resistance": "與合成蠟相比，具有更好的耐溶劑性與耐膨潤能力"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "clarity": 2,
+          "gloss_retention": 2
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升塗層的抗擦傷性能。",
+          "abrasion_resistance": "提升塗層耐磨、抗摩擦性能。",
+          "block_resistance": "提供優異的防黏結特性。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "burnish_resistance": 1,
+          "slip": 1,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "abrasion_resistance": "提升塗層的耐磨、抗摩擦與抗磨損性能。",
+          "block_resistance": "提供優異的防黏結性能。"
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "scratch_resistance": 2,
+          "slip_lubricity": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升塗層的防劃傷性能。",
+          "slip_lubricity": "賦予良好表面滑爽性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MPP-620XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mpp-620xf.html",
+    "composition_zh": "高密度聚乙烯",
+    "composition_en": "High density polyethylene",
+    "chemical_component": "High density polyethylene",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "120-124",
+      "mean_particle_size_um": "4.5-5.5",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.96"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "提升塗層的抗劃痕性。",
+      "abrasion_resistance": "提高塗層的耐磨與耐磨擦性能。",
+      "block_resistance": "優異的抗黏結性能。增加耐熱性。",
+      "metal_mark_resistance": "賦予優異的耐磨、抗擦傷和金屬抗劃痕性。",
+      "chemical_resistance": "有更好的耐溶劑性與耐膨潤能力。",
+      "slip_lubricity": "提供良好的表面滑爽性。",
+      "heat_resistance": "提高耐熱性"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Imparts excellent mar resistance with good surface slip.",
+      "abrasion_resistance": "Enhances coating abrasion and rub resistance.",
+      "block_resistance": "Provides excellent antiblocking properties and adds heat resistance.",
+      "metal_mark_resistance": "Imparts excellent abrasion, scuff, and metal mark resistance.",
+      "chemical_resistance": "Offers superior resistance to solvent absorption and swelling compared to synthetic wax.",
+      "slip_lubricity": "High-performance micronized polyethylene wax provides a unique combination of surface slip.",
+      "rub_resistance": "Delivers superior rub and scuff resistance.",
+      "heat_resistance": "Enhances coating heat resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "耐磨",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 2,
+          "block_resistance": 1,
+          "metal_mark_resistance": 2,
+          "slip_lubricity": 2,
+          "burnish_resistance": 2
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "耐磨",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 2,
+          "rub_resistance": 2,
+          "slip_lubricity": 1,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "賦予優異的抗刮傷性能與耐溶劑性。",
+          "abrasion_resistance": "賦予極佳的耐磨和耐摩擦性。",
+          "slip_lubricity": "提供良好表面滑爽性",
+          "block_resistance": "提供優異的抗黏結性能"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MPP-635VF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/mpp-635vf.html",
+    "composition_zh": "高密度聚乙烯",
+    "composition_en": "High density polyethylene",
+    "chemical_component": "High density polyethylene",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠和金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料",
+    "application_fields_en": "Industrial coatings (including plastics and metals); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; coil coatings.",
+    "suggested_use_level_zh": "1.0-3.0%",
+    "suggested_use_level_en": "1.0-3.0%",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "123-125",
+      "mean_particle_size_um": "6.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.97"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "提升耐刮、高熔點提升抗擦傷和耐刮性能。",
+      "abrasion_resistance": "提升抗擦傷與耐磨性。",
+      "slip_lubricity": "提高表面滑度",
+      "block_resistance": "賦予優異的抗黏結性能",
+      "apparent_hardness": "可提升塗層表面硬度",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "high_dispersibility": "易於分散的細粉，可經由高速混合直接加入",
+      "heat_resistance": "結晶型、高熔點蠟"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Improves scratch resistance; high melting point delivers superior scuff and scratch resistance.",
+      "abrasion_resistance": "Enhances scuff and abrasion resistance.",
+      "slip_lubricity": "Increases surface slip.",
+      "block_resistance": "Imparts excellent antiblocking properties.",
+      "apparent_hardness": "Enhances coating surface hardness.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "high_dispersibility": "Easily dispersible fine powder that can be incorporated directly via high-speed mixing to provide surface slip.",
+      "heat_resistance": "Crystalline, high-melting-point wax enhances heat resistance."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "耐磨"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "block_resistance": 2
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "耐磨",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 3,
+          "rub_resistance": 3,
+          "slip_lubricity": 3,
+          "block_resistance": 2,
+          "intercoat_adhesion": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "高分子量和高硬度提升了塗層的耐刮性",
+          "abrasion_resistance": "提供卓越的耐磨擦與耐磨性能",
+          "block_resistance": "賦予優異的抗黏結（防黏）性能"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylMatte 31",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propylmatte-31.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性及溶劑系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；粉體塗料；捲鋼塗料；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); powder coatings; coil coatings.",
+    "suggested_use_level_zh": "2.0-5.0%（視所需的消光程度而定）",
+    "suggested_use_level_en": "2.0-5.0% (depending on the desired gloss reduction and texture level)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "8.0-12.0",
+      "max_particle_size_um": "31.00",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "abrasion_resistance": "賦予塗層良好的耐磨性",
+      "slip_lubricity": "提供表面平滑性能",
+      "matting_gloss_control": "高效的消光。具備良好的抗拋光性。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "高分子量可提升塗層耐刮。",
+      "increased_cof": "賦予防滑性能。",
+      "anti_slip": "賦予防滑性能",
+      "burnish_resistance": "高分子量聚合物賦予抗拋光性能。",
+      "lubricity_smooth_feel": "賦予防滑特性。"
+    },
+    "rating_descriptions_en": {
+      "abrasion_resistance": "Imparts good burnish resistance and abrasion resistance to the coating.",
+      "slip_lubricity": "Provides surface smoothness and anti-slip properties.",
+      "matting_gloss_control": "Highly efficient matting and gloss control with burnish resistance.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "High molecular weight polymer enhances coating scratch and burnish resistance.",
+      "increased_cof": "Imparts anti-slip properties.",
+      "anti_slip": "Imparts anti-slip properties.",
+      "burnish_resistance": "High molecular weight polymer imparts burnish resistance.",
+      "lubricity_smooth_feel": "Imparts anti-slip properties."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "slip_lubricity": 1,
+          "matting_gloss_control": 3,
+          "block_resistance": 2,
+          "metal_mark_resistance": 2
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "消光",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 3,
+          "increased_cof": 2,
+          "burnish_resistance": 3
+        },
+        "notes_zh": {
+          "abrasion_resistance": "高分子量聚合物，可賦予耐磨性。",
+          "matting_gloss_control": "用於高效消光和光澤控制。提供穩定的消光效果且不影響塗料黏度。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "消光",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "matting_gloss_control": 3,
+          "block_resistance": 1,
+          "increased_cof": 3
+        },
+        "notes_zh": {
+          "abrasion_resistance": "高分子量，可賦予耐磨性。",
+          "matting_gloss_control": "提供高效能的消光效果，且不影響塗料黏度"
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 1,
+          "matting_gloss_control": 3,
+          "cleanability": 2
+        },
+        "notes_zh": {
+          "anti_slip": "賦予防滑特性。",
+          "abrasion_resistance": "高分子量聚合物，可賦予耐磨性。",
+          "matting_gloss_control": "提供一致的消光效果，且對塗料黏度無影響。如需使用細微織紋進行更高效消光，可嘗試 PropylTex 325S/270S。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "burnish_resistance": 2,
+          "matting_gloss_control": 3,
+          "soft_touch": 1,
+          "block_resistance": 2,
+          "lubricity_smooth_feel": 2,
+          "sanding_efficiency": 1
+        },
+        "notes_zh": {
+          "abrasion_resistance": "高分子量聚合物提升耐磨性能。",
+          "matting_gloss_control": "提供穩定的消光效果，且不影響塗料黏度。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "abrasion_resistance": 1,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 1,
+          "cleanability": 1
+        },
+        "notes_zh": {
+          "abrasion_resistance": "提升耐磨性。",
+          "burnish_resistance": "賦予抗拋光性能。",
+          "anti_slip": "賦予防滑性能。",
+          "matting_gloss_control": "可用於塗料與油墨的消光與光澤控制。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "Micropro 400",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/micropro-400.html",
+    "composition_zh": "改性聚丙烯",
+    "composition_en": "Modified polypropylene",
+    "chemical_component": "Modified polypropylene",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；地板塗料；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; floor coatings.",
+    "suggested_use_level_zh": "0.5-2.0%（抗刮傷及耐磨）；2.0-5.0%（光澤控制）",
+    "suggested_use_level_en": "0.5-2.0% (mar and abrasion resistance); 2.0-5.0% (gloss control)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "140-143",
+      "mean_particle_size_um": "4.5-7.5",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.94"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "提高抗劃痕、抗刮傷和抗金屬刮痕性能。",
+      "abrasion_resistance": "提升耐磨性。",
+      "slip_lubricity": "表面滑爽性",
+      "matting_gloss_control": "高效的消光劑，在中低光澤塗層中具有良好的抗拋光性",
+      "block_resistance": "提供抗黏結性能",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "burnish_resistance": "具備良好的抗拋光。"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Improves mar, scratch, and metal marking resistance.",
+      "abrasion_resistance": "Enhances abrasion resistance.",
+      "slip_lubricity": "Provides surface slip.",
+      "matting_gloss_control": "Effective gloss control agent with good burnish resistance in low- or medium-gloss finishes.",
+      "block_resistance": "Provides antiblocking properties.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "burnish_resistance": "Effective gloss control agent in low- or medium-gloss coatings with good burnish resistance."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "slip_lubricity": 2,
+          "matting_gloss_control": 2,
+          "block_resistance": 2,
+          "metal_mark_resistance": 1
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "消光",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 2,
+          "slip_lubricity": 1,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高抗擦傷、刮傷以及金屬劃痕性能",
+          "abrasion_resistance": "提高耐磨性。",
+          "slip_lubricity": "提供表面滑爽性",
+          "matting_gloss_control": "高效的消光劑",
+          "block_resistance": "提供抗黏結性能。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "burnish_resistance": 2,
+          "matting_gloss_control": 2,
+          "water_repellency": 2,
+          "block_resistance": 3,
+          "sanding_efficiency": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗擦傷、抗金屬劃痕性能。",
+          "abrasion_resistance": "提升耐磨性能。",
+          "matting_gloss_control": "低或中等光澤塗層中，高效的光澤控制劑。",
+          "block_resistance": "提供防黏結特性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "Micromide 520",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/micromide-520.html",
+    "composition_zh": "EBS",
+    "composition_en": "Ethylene bis(stearamide) wax (EBS)",
+    "chemical_component": "Ethylene bis(stearamide) wax (EBS)",
+    "recommended_system_type_zh": "溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Solvent-based, energy curable (UV), and powder coating systems.",
+    "application_fields_zh": "木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；金屬粉體。",
+    "application_fields_en": "Wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; powdered metals.",
+    "suggested_use_level_zh": "0.5-3.0%",
+    "suggested_use_level_en": "0.5-3.0%",
+    "system": {
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "141-146",
+      "mean_particle_size_um": "5.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.97"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "良好的抗刮性。",
+      "slip_lubricity": "增加滑爽性、脫模性，並提供極佳的「手感」。降低摩擦係數 (COF)",
+      "block_resistance": "高熔點可提高耐熱性和抗黏結性",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "heat_resistance": "高熔點以提升耐熱性能"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Provides good scratch resistance and release properties.",
+      "slip_lubricity": "Adds slip, release, and lubricity with an excellent surface tactile feel while lowering COF.",
+      "block_resistance": "High melting point improves heat resistance and antiblocking performance.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "heat_resistance": "High melting point provides enhanced heat resistance."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "高光澤"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "slip_lubricity": 2,
+          "anti_gassing": 3
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "高光澤",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高抗刮傷性能。",
+          "block_resistance": "高熔點可提高耐熱性和抗黏結性。",
+          "slip_lubricity": "增加滑爽性、脫模性，並提供極佳的表面手感。降低摩擦係數 (COF)。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "高光澤",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高表面滑爽、抗刮傷性能",
+          "slip_lubricity": "增加滑爽、脫模，具有極佳的表面手感。降低摩擦係數 (COF)",
+          "block_resistance": "具有抗黏結性"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroTouch 800XF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microtouch-800xf.html",
+    "composition_zh": "脂肪族聚氨酯",
+    "composition_en": "Aliphatic polyurethane",
+    "chemical_component": "Aliphatic polyurethane",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠）；建築漆；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；皮革塗料；地板塗料",
+    "application_fields_en": "Industrial coatings (including plastics and vinyl); architectural paints; wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; leather coatings; floor coatings.",
+    "suggested_use_level_zh": "2.0-10.0%（依要求觸感效果調整添加量）",
+    "suggested_use_level_en": "2.0-10.0% (adjust dosage based on desired tactile effect)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "mean_particle_size_um": "6.0-9.0",
+      "max_particle_size_um": "31.00",
+      "density_g_cc_25c": "1.05"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "提高拋光抗性、抗刮傷性和抗劃痕性。",
+      "abrasion_resistance": "提升耐磨。",
+      "matting_gloss_control": "有效降低光澤",
+      "soft_touch": "皮革塗料",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "texture_structure": "獨特的表面觸感。提供從絲綢般光滑、橡膠感或皮革感等不同的觸感效果。",
+      "burnish_resistance": "提升抗拋光。"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Improves burnish, scratch, and mar resistance.",
+      "abrasion_resistance": "Enhances abrasion resistance.",
+      "matting_gloss_control": "Provides effective gloss reduction.",
+      "soft_touch": "Modifies tactile properties for soft-feel coatings including leather finishes.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "texture_structure": "Delivers a distinct surface touch ranging from satiny smooth to rubbery or leathery.",
+      "burnish_resistance": "Improves burnish resistance."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "ratings": {
+          "matting_gloss_control": 3,
+          "soft_touch": 3
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "柔感",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "matting_gloss_control": 3,
+          "texture_structure": 1,
+          "soft_touch": 3,
+          "increased_cof": 2,
+          "burnish_resistance": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "球形聚氨酯微粉、抗刮傷性能。",
+          "abrasion_resistance": "可提高耐磨性能。",
+          "matting_gloss_control": "有效降低塗層光澤。",
+          "soft_touch": "獨特的表面觸感。提供從絲綢般光滑、橡膠感或皮革感等不同觸感效果。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "柔感",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "matting_gloss_control": 3,
+          "soft_touch": 2,
+          "texture_structure": 1,
+          "increased_cof": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高防刮與抗刮傷性能",
+          "abrasion_resistance": "提高耐磨性",
+          "matting_gloss_control": "有效的降低光澤",
+          "soft_touch": "可調配塗料的柔軟觸感。"
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "ratings": {
+          "matting_gloss_control": 1,
+          "texture_structure": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "聚氨酯微粉，可提升耐刮擦與耐刮傷性。",
+          "abrasion_resistance": "聚氨酯微粉，可提升耐磨性。",
+          "matting_gloss_control": "提供有效的消光效果。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "ratings": {
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "burnish_resistance": 1,
+          "matting_gloss_control": 3,
+          "soft_touch": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗劃傷性能。",
+          "abrasion_resistance": "提升耐磨性能。",
+          "matting_gloss_control": "有效降低光澤。",
+          "soft_touch": "提供從絲滑柔順到橡膠感、皮革感的不同觸感效果。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 2,
+          "soft_touch": 3,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗刮性能。",
+          "abrasion_resistance": "提升耐磨性。",
+          "burnish_resistance": "提升抗拋光性能。",
+          "matting_gloss_control": "有效降低光澤。",
+          "soft_touch": "提供從絲滑、橡膠感至皮革感的不同觸感效果。",
+          "texture_structure": "提供不同粒徑以創造獨特的表面「觸感」。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroTouch 800F",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microtouch-800f.html",
+    "composition_zh": "脂肪族聚氨酯",
+    "composition_en": "Aliphatic polyurethane",
+    "chemical_component": "Aliphatic polyurethane",
+    "recommended_system_type_zh": "水性、溶劑系統和UV系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, energy curable (UV) systems, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)、貨櫃漆；皮革塗料；地板塗料",
+    "application_fields_en": "Industrial coatings (including plastics, vinyl, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); powder coatings; interior and exterior can and container coatings; soft touch coatings; floor coatings.",
+    "suggested_use_level_zh": "2.0-10.0%（依要求觸感效果調整添加量）",
+    "suggested_use_level_en": "2.0-10.0% (adjust dosage based on desired tactile effect)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "mean_particle_size_um": "22.0-30.0",
+      "max_particle_size_um": "120.00",
+      "density_g_cc_25c": "1.05"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "提高抗拋光性、抗刮傷性和抗劃痕性。",
+      "abrasion_resistance": "提升耐磨性。",
+      "matting_gloss_control": "有效降低光澤",
+      "soft_touch": "獨特的表面觸感",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "texture_structure": "提供不同的粒徑以創造出獨特的表面「觸感」",
+      "burnish_resistance": "提升抗拋光性能。"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Improves burnish, scratch, and mar resistance.",
+      "abrasion_resistance": "Enhances abrasion resistance.",
+      "matting_gloss_control": "Provides effective gloss reduction.",
+      "soft_touch": "Creates a distinct surface tactile feel.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "texture_structure": "Utilizes distinct particle size distribution to build unique surface tactile textures.",
+      "burnish_resistance": "Improves burnish resistance."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "ratings": {
+          "matting_gloss_control": 3,
+          "soft_touch": 3
+        }
+      },
+      "industrial": {
+        "featured_categories": [
+          "柔感",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "matting_gloss_control": 3,
+          "texture_structure": 2,
+          "soft_touch": 3,
+          "increased_cof": 2,
+          "burnish_resistance": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "聚氨酯微粉可提高抗刮傷和抗劃痕性能。",
+          "abrasion_resistance": "聚氨酯微粉可提高耐磨性能。",
+          "matting_gloss_control": "有效降低光澤。",
+          "soft_touch": "提供從絲綢般光滑、橡膠感至皮革感等不同的觸感效果。"
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "柔感",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "matting_gloss_control": 3,
+          "soft_touch": 1,
+          "texture_structure": 3,
+          "increased_cof": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提高防刮與抗刮傷性能",
+          "abrasion_resistance": "提高耐磨性",
+          "matting_gloss_control": "有效的降低光澤",
+          "soft_touch": "提供從絲滑到橡膠感再到皮革感的不同觸覺效果"
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "ratings": {
+          "anti_slip": 2,
+          "matting_gloss_control": 1,
+          "texture_structure": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "聚氨酯微粉，提升耐刮擦與耐刮傷性。",
+          "abrasion_resistance": "聚氨酯微粉，提升耐磨性。",
+          "matting_gloss_control": "提供有效的消光效果。",
+          "texture_structure": "提供從絲綢般光滑到橡膠感或皮革感等多種不同的觸感效果。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "ratings": {
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "burnish_resistance": 1,
+          "matting_gloss_control": 3,
+          "soft_touch": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗劃傷性能。",
+          "abrasion_resistance": "提升耐磨性能。",
+          "matting_gloss_control": "有效降低光澤。",
+          "soft_touch": "提供從絲滑柔順到橡膠感、皮革感的不同觸感效果。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "柔感"
+        ],
+        "example_zh": "機車坐墊",
+        "example_en": "Motorcycle seat cushions",
+        "ratings": {
+          "scratch_resistance": 1,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 2,
+          "soft_touch": 3,
+          "texture_structure": 3,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗刮性能。",
+          "matting_gloss_control": "有效降低光澤。",
+          "soft_touch": "提供從絲滑、橡膠感至皮革感的不同觸感效果。",
+          "texture_structure": "提供不同粒徑以創造獨特的表面「觸感」。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroTex 580",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microtex-580.html",
+    "composition_zh": "生質蠟",
+    "composition_en": "Biopolymer",
+    "chemical_component": "Biopolymer",
+    "recommended_system_type_zh": "粉體系統",
+    "recommended_system_type_en": "Powder coating systems.",
+    "application_fields_zh": "粉體塗料",
+    "application_fields_en": "Powder coatings.",
+    "suggested_use_level_zh": "3.0-7.0%（視所需的紋路深淺而定）",
+    "suggested_use_level_en": "3.0-7.0% (depending on the desired level of texture)",
+    "system": {
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "max_particle_size_um": "105 (140 mesh)",
+      "density_g_cc_25c": "1.45"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "不含 PTFE (PFAS)",
+      "matting_gloss_control": "有效降低光澤度，提供消光效果",
+      "texture_structure": "在啞光聚酯/丙烯酸體系中，可提供均勻的砂紙狀表面織紋。在聚酯/環氧和聚酯/HAA 體系中，可提供平滑、分散的顆粒狀表面織紋。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "PTFE (PFAS)-free.",
+      "matting_gloss_control": "Effectively reduces gloss and provides a matting effect.",
+      "texture_structure": "Imparts a uniform sandpaper-like surface texture in matte polyester/acrylic systems; provides a smoother, scattered granular surface texture in polyester/epoxy and polyester/HAA systems."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "織紋"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "texture_structure": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroTex 950",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microtex-950.html",
+    "composition_zh": "改性聚烯烴",
+    "composition_en": "Modified polyolefin",
+    "chemical_component": "Modified polyolefin",
+    "recommended_system_type_zh": "粉體系統",
+    "recommended_system_type_en": "Powder coating systems.",
+    "application_fields_zh": "粉體塗料",
+    "application_fields_en": "Powder coatings.",
+    "suggested_use_level_zh": "4.0-6.0%（視所需的紋路深淺而定）",
+    "suggested_use_level_en": "4.0-6.0% (depending on the desired texture level)",
+    "system": {
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "max_particle_size_um": "74 (200 mesh)",
+      "density_g_cc_25c": "1.22"
+    },
+    "fda_compliant": false,
+    "fda_regulations": [],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "不含 PTFE。",
+      "matting_gloss_control": "可提供類似 PTFE 的低光澤織紋效果。在 6% 時可達到最佳光澤效果。",
+      "texture_structure": "提供均勻的細緻織紋。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "PTFE-free texturing additive.",
+      "matting_gloss_control": "Provides PTFE-like low-gloss texturing; single-digit gloss levels are optimally achieved at 6% addition.",
+      "texture_structure": "Delivers uniform fine surface texturing."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "織紋"
+        ],
+        "example_zh": "車漆",
+        "example_en": "Automotive coatings",
+        "ratings": {
+          "ptfe_alternative": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroTex 975",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microtex-950.html",
+    "composition_zh": "改性聚烯烴",
+    "composition_en": "Modified polyolefin",
+    "chemical_component": "Modified polyolefin",
+    "recommended_system_type_zh": "粉體系統",
+    "recommended_system_type_en": "Powder coating systems.",
+    "application_fields_zh": "粉體塗料",
+    "application_fields_en": "Powder coatings.",
+    "suggested_use_level_zh": "4.0-6.0%（依總配方重量計算，視所需的紋路深淺及光澤度而定）",
+    "suggested_use_level_en": "4.0-6.0% (on total formula weight, depending on the desired texture and gloss level)",
+    "system": {
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "max_particle_size_um": "74 (200 mesh)",
+      "density_g_cc_25c": "2.13"
+    },
+    "fda_compliant": false,
+    "fda_regulations": [],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "不含 PTFE。",
+      "matting_gloss_control": "可提供類似 PTFE 的光澤織紋效果。在添加量 6% 時可達到降低光澤的最佳效果。",
+      "texture_structure": "提供均勻的細緻織紋。"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "PTFE-free texturing additive.",
+      "matting_gloss_control": "Provides PTFE-like texturing with low gloss. Best gloss reduction results are achieved at 6% dosage.",
+      "texture_structure": "Delivers uniform fine surface texturing."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "織紋"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "GraphShield 730",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/graphshield-730.html",
+    "composition_zh": "石墨烯/合成蠟",
+    "composition_en": "Graphene / synthetic wax composite",
+    "chemical_component": "Graphene/synthetic wax",
+    "recommended_system_type_zh": "溶劑型系統、粉體系統",
+    "recommended_system_type_en": "Powder coating systems and industrial coatings.",
+    "application_fields_zh": "粉體塗料；工業塗料",
+    "application_fields_en": "Powder coatings, industrial coatings.",
+    "suggested_use_level_zh": "1.0-3.0%\n(必須與其他添加劑一起預混合，理想溫度最好超過110°C)",
+    "suggested_use_level_en": "1.0-3.0%",
+    "typical_properties": {
+      "melt_point_c": "108-113",
+      "mean_particle_size_um": "8.0-12.0",
+      "max_particle_size_um": "31.00",
+      "density_g_cc_25c": "1.24"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "corrosion_resistance": "與二氧化鈦或其他無機顏料一起配製時，可提高塗層的耐腐蝕性能。",
+      "scratch_resistance": "與二氧化鈦或其他無機顏料配合使用時，可提升塗層的防腐蝕性能。",
+      "slip_lubricity": "提升表面滑感。",
+      "water_beading": "賦予撥水性"
+    },
+    "rating_descriptions_en": {
+      "corrosion_resistance": "Improves corrosion resistance on metal substrates when formulated with titanium dioxide or other inorganic pigments.",
+      "scratch_resistance": "Improves corrosion resistance on bare and treated cold-rolled steel (CRS) when formulated with titanium dioxide or other inorganic pigments.",
+      "slip_lubricity": "Black wax composite delivering graphene in an easy-to-disperse powder utilizing Edge-Functionalized Graphene (EFG) technology.",
+      "water_beading": "Provide water beading."
+    },
+    "applications": {
+      "powder": {
+        "featured_categories": [
+          "防腐蝕"
+        ],
+        "ratings": {
+          "corrosion_resistance": 3
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "防腐蝕"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "slip_lubricity": 2,
+          "corrosion_resistance": 3,
+          "water_beading": 2
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 100S",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-100s.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性及溶劑系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings.",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
+    "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
+    "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "80.0-100.0",
+      "max_particle_size_um": "149 (100 mesh)",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "提供均勻的中等織紋塗層表面。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的漆膜耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough, high molecular weight polypropylene imparts good film durability and abrasion resistance.",
+      "matting_gloss_control": "Reduces coating surface gloss.",
+      "anti_slip": "Maintains high coefficient of friction (COF); ideal for anti-skid and non-slip surfaces.",
+      "texture_structure": "Provides a consistent medium-textured coating surface.",
+      "scratch_resistance": "Tough polypropylene imparts good film scratch resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "anti_slip": 3,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+          "texture_structure": "提供均勻的中等表面織紋效果。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 140S",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-140s.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性及溶劑系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings.",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
+    "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
+    "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "45.0-50.0",
+      "max_particle_size_um": "105 (140 mesh)",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "提供均勻中等織紋塗層表面。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的漆膜耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough polypropylene gives good film durability and abrasion resistance.",
+      "matting_gloss_control": "Reduces coating surface gloss consistently.",
+      "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
+      "texture_structure": "Provides a consistent medium-textured coating surface.",
+      "scratch_resistance": "Tough polypropylene imparts good film scratch resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "anti_slip": 2,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 2,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+          "texture_structure": "提供均勻一致的中等表面織紋效果。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 200S",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-200s.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性及溶劑系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings.",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
+    "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
+    "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "35.0-45.0",
+      "max_particle_size_um": "74 (200 mesh)",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "提供均勻中等織紋塗層表面。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的漆膜耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability and abrasion resistance.",
+      "matting_gloss_control": "Provides consistent gloss reduction.",
+      "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
+      "texture_structure": "Provides a consistent medium-textured coating surface.",
+      "scratch_resistance": "Tough polypropylene gives good film scratch resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "anti_slip": 2,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 2,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+          "texture_structure": "提供均勻中等表面織紋效果。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 200SF",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-200sf.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性及溶劑系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings.",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
+    "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
+    "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "25.0-35.0",
+      "max_particle_size_um": "74 (200 mesh)",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "提供均勻中等織紋塗層表面。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的漆膜耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability and abrasion resistance.",
+      "matting_gloss_control": "Reduces coating gloss.",
+      "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
+      "texture_structure": "Provides a consistent medium-textured coating surface.",
+      "scratch_resistance": "Tough polypropylene gives good film scratch resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "anti_slip": 2,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 2,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+          "texture_structure": "提供均勻中等表面織紋效果。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 270S",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-270s.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性系統、溶劑型系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and industrial coatings.",
+    "application_fields_zh": "工業塗料，(包括金屬、塑膠)；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial coatings including metals, plastics, and masonry; architectural paints; wood coatings; floor coatings.",
+    "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
+    "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "18.5-23.0",
+      "max_particle_size_um": "53 (270 mesh)",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "塗層表面建構細緻的織紋效果。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
+      "burnish_resistance": "提升抗拋光性能。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough, high molecular weight polypropylene provides good durability and abrasion resistance.",
+      "matting_gloss_control": "Provides gloss reduction with improved burnish resistance compared to silica.",
+      "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
+      "texture_structure": "Imparts a fine texture effect to the coating surface.",
+      "scratch_resistance": "Tough polypropylene gives good scratch resistance.",
+      "burnish_resistance": "Improves burnish resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 3,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "anti_slip": 2,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 3,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+          "matting_gloss_control": "提供有效消光效果。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "織紋"
+        ],
+        "ratings": {
+          "abrasion_resistance": 1,
+          "burnish_resistance": 1,
+          "matting_gloss_control": 3,
+          "soft_touch": 1,
+          "texture_structure": 3
+        },
+        "notes_zh": {
+          "matting_gloss_control": "提供消光效果。",
+          "texture_structure": "塗層表面建構細緻的織紋效果"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "織紋"
+        ],
+        "ratings": {
+          "abrasion_resistance": 1,
+          "burnish_resistance": 2,
+          "matting_gloss_control": 3,
+          "soft_touch": 1,
+          "texture_structure": 3,
+          "block_resistance": 2
+        },
+        "notes_zh": {
+          "burnish_resistance": "提升抗拋光性。",
+          "anti_slip": "不會降低摩擦係數（COF）；非常適合防滑表面。",
+          "matting_gloss_control": "提供光澤降低。",
+          "texture_structure": "提供穩定的表面織紋。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 270S-1518",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-270s-1518.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性系統、溶劑型系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and industrial coatings.",
+    "application_fields_zh": "工業塗料，(包括金屬、塑膠)；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial coatings including metals, plastics, and masonry; architectural paints; wood coatings; floor coatings.",
+    "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
+    "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "15.0-18.0",
+      "max_particle_size_um": "53 (270 mesh)",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "anti_slip": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "提供塗層細緻的織紋效果。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough, high molecular weight polypropylene provides good durability.",
+      "matting_gloss_control": "Provides gloss reduction with improved burnish resistance compared to silica.",
+      "anti_slip": "Does not lower COF; ideal for anti-skid surfaces.",
+      "texture_structure": "Adds a mild, fine texture effect to the coating surface with narrow cut particle size distribution for maximum texture control.",
+      "scratch_resistance": "Tough polypropylene gives good durability and scratch resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 3,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "anti_slip": 2,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 3,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+          "matting_gloss_control": "提供有效的消光效果。",
+          "texture_structure": "塗層表面建構細緻的織紋效果。粒徑分布窄，實現最佳織紋控制。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 325S",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-325s.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性系統、溶劑型系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and industrial coatings.",
+    "application_fields_zh": "工業塗料(包括金屬、塑膠)；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial coatings (including metals and plastics); architectural paints; wood coatings; floor coatings.",
+    "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
+    "suggested_use_level_en": "2.0-5.0% depending on the level of texture and gloss reduction desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "10.0-15.0",
+      "max_particle_size_um": "44 (325 mesh)",
+      "density_g_cc_25c": "0.89"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "塗層表面建構細緻的織紋效果。",
+      "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的耐刮性。",
+      "burnish_resistance": "提升抗拋光性能。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough polypropylene provides good film durability and abrasion resistance.",
+      "matting_gloss_control": "Provides efficient gloss reduction with improved burnish resistance compared to silica.",
+      "increased_cof": "Does not lower COF; ideal for anti-skid surfaces.",
+      "texture_structure": "Builds a fine microtexture effect on the coating surface.",
+      "anti_slip": "Maintains high COF; highly suitable for anti-skid and non-slip floor finishes.",
+      "scratch_resistance": "Tough polypropylene imparts good scratch resistance.",
+      "burnish_resistance": "Improves burnish resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "increased_cof": 3,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 3,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "matting_gloss_control": "提供良好的消光效果。"
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "織紋"
+        ],
+        "ratings": {
+          "abrasion_resistance": 1,
+          "burnish_resistance": 1,
+          "matting_gloss_control": 3,
+          "soft_touch": 1,
+          "texture_structure": 3
+        },
+        "notes_zh": {
+          "matting_gloss_control": "提供消光效果。",
+          "texture_structure": "塗層表面建構細緻的織紋效果"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "織紋"
+        ],
+        "ratings": {
+          "abrasion_resistance": 1,
+          "burnish_resistance": 2,
+          "matting_gloss_control": 3,
+          "soft_touch": 1,
+          "texture_structure": 2
+        },
+        "notes_zh": {
+          "burnish_resistance": "提升抗拋光性。",
+          "anti_slip": "不會降低摩擦係數（COF）；非常適合防滑表面。",
+          "matting_gloss_control": "有效降低光澤。",
+          "texture_structure": "提供均勻細緻的織紋表面。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 50",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-50.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性及溶劑系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings.",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
+    "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
+    "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "166-168",
+      "mean_particle_size_um": "200-250",
+      "max_particle_size_um": "297 (50 mesh)",
+      "density_g_cc_25c": "0.90"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
+      "matting_gloss_control": "粗糙化塗層表面來降低光澤。",
+      "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。",
+      "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的漆膜耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability.",
+      "matting_gloss_control": "Provides a consistent coarse-textured coating surface to reduce gloss.",
+      "increased_cof": "Does not lower COF; ideal for anti-skid and non-slip surfaces.",
+      "texture_structure": "Provides a consistent coarse-textured coating surface. Easily dispersible with high-speed mixing.",
+      "anti_slip": "Maintains high COF; ideal for non-slip and anti-skid walking surfaces.",
+      "scratch_resistance": "Tough polypropylene gives good film scratch resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "increased_cof": 3,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 2,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        },
+        "notes_zh": {
+          "texture_structure": "提供均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex 20",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propyltex-20.html",
+    "composition_zh": "聚丙烯",
+    "composition_en": "Polypropylene",
+    "chemical_component": "Polypropylene",
+    "recommended_system_type_zh": "水性及溶劑系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings.",
+    "application_fields_zh": "工業塗料；建築漆；木器漆；地板塗料",
+    "application_fields_en": "Industrial and consumer coatings including masonry, architectural paints, wood coatings, and floor coatings.",
+    "suggested_use_level_zh": "3.0-10.0%（佔總配方重量）",
+    "suggested_use_level_en": "3.0-10.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "166-168",
+      "mean_particle_size_um": "425",
+      "max_particle_size_um": "841 (20 mesh)",
+      "density_g_cc_25c": "0.90"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "堅硬的聚丙烯提供良好的漆膜耐磨性。",
+      "matting_gloss_control": "降低塗層表面光澤。",
+      "increased_cof": "摩擦係數(COF)不降低；非常適合防滑表面。",
+      "texture_structure": "提供均勻的粗糙織紋塗層表面。易分散粉末，可用高速攪拌混合。",
+      "anti_slip": "摩擦係數（COF）不降低；非常適合用於防滑表面。",
+      "scratch_resistance": "堅硬的聚丙烯提供良好的漆膜耐刮性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "abrasion_resistance": "Tough, high molecular weight polypropylene provides good film durability.",
+      "matting_gloss_control": "Provides a consistent coarse textured coating surface to reduce gloss.",
+      "increased_cof": "Does not lower COF; ideal for anti-skid surfaces.",
+      "texture_structure": "Provides a consistent coarse textured coating surface. Easily dispersible with high-speed mixing.",
+      "anti_slip": "Maintains high COF; ideal for non-slip and anti-skid walking surfaces.",
+      "scratch_resistance": "Tough polypropylene gives good film scratch resistance."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "increased_cof": 3,
+          "burnish_resistance": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 2,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "matting_gloss_control": 2,
+          "texture_structure": 3,
+          "cleanability": 1,
+          "no_silica_dust": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "NyloTex 50",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/nylotex-50.html",
+    "composition_zh": "尼龍 66",
+    "composition_en": "Nylon 66",
+    "chemical_component": "Nylon 66",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括金屬）；粉體塗料；捲鋼塗料；地板塗料",
+    "application_fields_en": "Industrial coatings (including metals); powder coatings; coil coatings; floor coatings.",
+    "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
+    "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "257-267",
+      "mean_particle_size_um": "160.0-180.0",
+      "max_particle_size_um": "297 (50 mesh)",
+      "density_g_cc_25c": "1.14"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
+      "abrasion_resistance": "賦予表面韌性與耐磨性。",
+      "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Imparts surface toughness and scratch resistance. High-melting-point polymer is ideal for baking or high-temperature curing systems.",
+      "abrasion_resistance": "Imparts surface toughness and abrasion resistance.",
+      "texture_structure": "Provides a uniform and controlled surface texture. Easily dispersible with high-speed mixing."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 3,
+          "texture_structure": 3,
+          "increased_cof": 3
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "texture_structure": 3,
+          "no_silica_dust": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "NyloTex 100",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/nylotex-100.html",
+    "composition_zh": "尼龍 66",
+    "composition_en": "Nylon 66",
+    "chemical_component": "Nylon 66",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括金屬）；粉體塗料；捲鋼塗料；地板塗料",
+    "application_fields_en": "Industrial coatings (including metals); powder coatings; coil coatings; floor coatings.",
+    "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
+    "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "257-267",
+      "mean_particle_size_um": "80.0-100.0",
+      "max_particle_size_um": "149 (100 mesh)",
+      "density_g_cc_25c": "1.14"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
+      "abrasion_resistance": "賦予表面韌性與耐磨性。",
+      "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Imparts surface toughness and scratch resistance. High melting point is ideal for high-temperature baking systems.",
+      "abrasion_resistance": "Imparts surface toughness and abrasion resistance.",
+      "texture_structure": "Provides a uniform surface texture. Easily dispersible via high-speed mixing."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 3,
+          "texture_structure": 3,
+          "increased_cof": 3
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "texture_structure": 3,
+          "no_silica_dust": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "NyloTex 140",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/nylotex-140.html",
+    "composition_zh": "尼龍 66",
+    "composition_en": "Nylon 66",
+    "chemical_component": "Nylon 66",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括金屬和塑膠）；粉體塗料；捲鋼塗料；地板塗料",
+    "application_fields_en": "Industrial coatings (including metals and plastics); powder coatings; coil coatings; floor coatings.",
+    "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
+    "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "257-267",
+      "mean_particle_size_um": "45.0-65.0",
+      "max_particle_size_um": "105 (140 mesh)",
+      "density_g_cc_25c": "1.14"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
+      "abrasion_resistance": "賦予表面韌性與耐磨性。",
+      "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Imparts surface toughness and scratch resistance. High-melting-point polymer is ideal for baking or high-temperature curing systems.",
+      "abrasion_resistance": "Imparts surface toughness and abrasion durability.",
+      "texture_structure": "Provides a uniform and controlled surface texture. Easily dispersible with high-speed mixing."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 2,
+          "texture_structure": 3,
+          "soft_touch": 1,
+          "increased_cof": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "texture_structure": 3,
+          "no_silica_dust": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "NyloTex 200",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/nylotex-200.html",
+    "composition_zh": "尼龍 66",
+    "composition_en": "Nylon 66",
+    "chemical_component": "Nylon 66",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and powder coating systems.",
+    "application_fields_zh": "工業塗料（包括金屬和塑膠）；粉體塗料；捲鋼塗料；地板塗料",
+    "application_fields_en": "Industrial coatings (including metals and plastics); powder coatings; coil coatings; floor coatings.",
+    "suggested_use_level_zh": "3.0% ~ 5.0%，視所需的織紋深淺而定（佔總配方重量）",
+    "suggested_use_level_en": "3.0-5.0% depending on the level of texture desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "257-267",
+      "mean_particle_size_um": "30.0-50.0",
+      "max_particle_size_um": "74 (200 mesh)",
+      "density_g_cc_25c": "1.14"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "賦予表面韌性與耐刮性。高熔點適合用於高溫烘烤系統",
+      "abrasion_resistance": "賦予表面韌性與耐磨性。",
+      "texture_structure": "提供均勻的表面織紋。易分散，可透過高速攪拌混合"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Imparts surface toughness and scratch resistance. High-melting-point polymer is ideal for use in baking or high-temperature curing systems.",
+      "abrasion_resistance": "Imparts surface toughness and abrasion resistance.",
+      "texture_structure": "Provides a uniform and controlled surface texture. Easily dispersible with high-speed mixing."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "織紋",
+          "FDA"
+        ],
+        "ratings": {
+          "ptfe_alternative": 1,
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 2,
+          "texture_structure": 3,
+          "increased_cof": 2
+        }
+      },
+      "industrial_floor": {
+        "featured_categories": [
+          "防滑"
+        ],
+        "ratings": {
+          "anti_slip": 3,
+          "scratch_resistance": 3,
+          "abrasion_resistance": 3,
+          "texture_structure": 3,
+          "no_silica_dust": 3
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroKlear 116",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microklear-116.html",
+    "composition_zh": "巴西棕櫚蠟/高密度聚乙烯",
+    "composition_en": "Carnauba wax / HDPE composite",
+    "chemical_component": "Carnauba wax/HDPE",
+    "recommended_system_type_zh": "水性、溶系統和UV系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗層；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; seed coatings.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "119-124",
+      "mean_particle_size_um": "4.0-5.25",
+      "max_particle_size_um": "15.56",
+      "density_g_cc_25c": "0.98"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "提供滑爽性、耐磨性和抗刮傷性的優異結合。適合需要高光澤度和透明度的應用。",
+      "abrasion_resistance": "提供滑爽性、耐磨性和抗刮傷性的優異結合。",
+      "block_resistance": "在金屬包裝塗料中提供優異的抗刮傷性和脫模性能。",
+      "gloss_retention": "專為保持透明度和光澤度而設計；可減少捲鋼塗層烘烤後的表面霧影。",
+      "slip_lubricity": "在捲鋼塗料中，為捲鋼成品的成型和加工提供最大的滑爽性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Provides an excellent combination of slip, abrasion resistance, and scratch resistance. Ideal for applications where high gloss and clarity are required.",
+      "abrasion_resistance": "Delivers an optimal balance of slip, abrasion resistance, and scratch resistance.",
+      "block_resistance": "Provides excellent slip, scratch resistance, and food release properties in metal packaging coatings.",
+      "gloss_retention": "Specially designed for clarity and gloss retention; reduces surface haze in coil coatings post-bake.",
+      "slip_lubricity": "In coil coatings, provides maximum surface slip for forming and fabrication of finished coil.",
+      "matting_gloss_control": "Provides outstanding gloss retention.",
+      "clarity": "Ideal for applications requiring high clarity and gloss; reduces post-bake haze in coil coatings."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "高光澤",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 2,
+          "block_resistance": 3,
+          "slip_lubricity": 2,
+          "burnish_resistance": 1
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "高光澤",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "slip_lubricity": 1,
+          "gloss_retention": 3,
+          "block_resistance": 1,
+          "clarity": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提供抗刮傷性能。",
+          "abrasion_resistance": "提供優異的耐磨性",
+          "slip_lubricity": "提供極佳的滑爽性。在捲鋼塗料中，為成品捲鋼的成型與加工提供最大的滑爽度",
+          "block_resistance": "在金屬包裝塗料中提供脫模性能",
+          "gloss_retention": "適合保持極佳光澤與透明度的應用。在烘烤後能減少捲鋼塗料表面霧影"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroKlear 418",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/microklear-418.html",
+    "composition_zh": "巴西棕櫚蠟",
+    "composition_en": "Carnauba wax",
+    "chemical_component": "Carnauba wax",
+    "recommended_system_type_zh": "水性、溶系統和UV系統",
+    "recommended_system_type_en": "Water-based, solvent-based, and energy curable (UV) systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔版與凹版）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；種子塗料，皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; seed coatings.",
+    "suggested_use_level_zh": "1.0-3.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-3.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "81-86",
+      "mean_particle_size_um": "6.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "1.00"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "提升表面潤滑性與抗刮傷性。",
+      "abrasion_resistance": "改善耐磨性。",
+      "block_resistance": "改善抗黏結性、流動性。",
+      "gloss_retention": "對透明度或光澤影響減到最小。",
+      "slip_lubricity": "提供表面潤滑性。是一種生物降解蠟。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Provides surface lubricity and scratch resistance.",
+      "abrasion_resistance": "Improves abrasion resistance in specialty and seed coatings.",
+      "block_resistance": "Improves antiblocking, flow, and handling properties.",
+      "gloss_retention": "Does not adversely affect coating clarity or gloss.",
+      "slip_lubricity": "Delivers superior surface lubricity; 100% natural and biodegradable prime carnauba wax."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "高光澤",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 2,
+          "block_resistance": 2,
+          "slip_lubricity": 3
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "高光澤"
+        ],
+        "ratings": {
+          "scratch_resistance": 2,
+          "slip_lubricity": 2,
+          "water_beading": 1,
+          "soil_resistance": 2,
+          "cleanability": 1,
+          "gloss_retention": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提供抗刮傷性能，提升抗黏結、流動性與耐磨性。",
+          "slip_lubricity": "提供表面潤滑性。",
+          "gloss_retention": "不影響透明度與光澤保持。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "PropylMatte 31HD",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/propylmatte-31hd.html",
+    "composition_zh": "加重聚丙烯",
+    "composition_en": "Densified polypropylene",
+    "chemical_component": "Densified polypropylene",
+    "recommended_system_type_zh": "水性及UV體系。",
+    "recommended_system_type_en": "Water-based and energy curable (UV) systems.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；地板塗料；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); can, container, and coil coatings; floor coatings.",
+    "suggested_use_level_zh": "2.0-5.0%（視所需的紋路深淺而定，佔總配方重量）",
+    "suggested_use_level_en": "2.0-5.0% depending on the level of gloss reduction desired (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "energy curable coatings and inks": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "160-170",
+      "mean_particle_size_um": "8.0-12.0",
+      "max_particle_size_um": "31.00",
+      "density_g_cc_25c": "1.07"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "提升塗層耐刮性能",
+      "block_resistance": "改善抗黏結性和流動性",
+      "matting_gloss_control": "有效降低光澤，從半消光到全消光的表面效果。",
+      "increased_cof": "賦予塗層防滑性能。",
+      "slip_lubricity": "賦予防滑性能",
+      "anti_slip": "增加防滑性能"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Improves coating scratch and burnish resistance compared to silica matting agents.",
+      "block_resistance": "Optimized particle density prevents flotation or hard settling, ensuring superior in-can stability.",
+      "matting_gloss_control": "Efficient gloss reduction providing finishes from satin to matte.",
+      "increased_cof": "Imparts anti-slip properties by maintaining high COF.",
+      "slip_lubricity": "Imparts anti-slip properties.",
+      "anti_slip": "Maintains high COF for non-skid properties."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "消光",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "block_resistance": 2,
+          "matting_gloss_control": 3,
+          "increased_cof": 2,
+          "burnish_resistance": 3
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "消光",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "abrasion_resistance": 1,
+          "matting_gloss_control": 3,
+          "block_resistance": 2,
+          "increased_cof": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "與二氧化矽消光劑相比，提高了耐刮性",
+          "matting_gloss_control": "降低光澤，從半消光到全消光的表面效果"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "Micropro 440W",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/micropro-440w.html",
+    "composition_zh": "改性聚丙烯",
+    "composition_en": "Modified polypropylene",
+    "chemical_component": "Modified polypropylene",
+    "recommended_system_type_zh": "水性系統",
+    "recommended_system_type_en": "Water-based coatings and inks.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨(包括柔印和凹印）；粉體塗料；罐頭塗料(內罐及外罐)及貨櫃漆；地板塗料；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); can, container, and coil coatings; floor coatings.",
+    "suggested_use_level_zh": "0.5-2.0%（耐磨）；2.0-5.0%（光澤控制）（佔總配方重量）",
+    "suggested_use_level_en": "0.5-2.0% (mar and abrasion resistance); 2.0-5.0% (gloss control) (on total formula weight)",
+    "system": {
+      "waterborne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "150-156",
+      "mean_particle_size_um": "7.0-10.0",
+      "max_particle_size_um": "31.00",
+      "density_g_cc_25c": "0.97"
+    },
+    "fda_compliant": false,
+    "fda_regulations": [],
+    "rating_descriptions_zh": {
+      "scratch_resistance": "提高抗刮傷、抗劃痕和抗金屬劃痕性能。",
+      "abrasion_resistance": "提升塗層耐磨性能。",
+      "metal_mark_resistance": "提高抗金屬劃痕性能。",
+      "matting_gloss_control": "在塗層中提供均勻的消光效果。",
+      "slip_lubricity": "賦予平滑的表面「觸感」。",
+      "burnish_resistance": "在低或中等光澤塗層中具備良好的抗拋光性。",
+      "lubricity_smooth_feel": "賦予平滑的表面「手感」。"
+    },
+    "rating_descriptions_en": {
+      "scratch_resistance": "Improves mar, scratch, and metal marking resistance at high efficiency.",
+      "abrasion_resistance": "Enhances coating abrasion resistance.",
+      "metal_mark_resistance": "Provides superior metal marking resistance.",
+      "matting_gloss_control": "Provides uniform gloss reduction with good burnish resistance in low- or medium-gloss finishes.",
+      "slip_lubricity": "Imparts a smooth surface tactile feel.",
+      "burnish_resistance": "Provides uniform gloss reduction with excellent burnish resistance in low- or semi-gloss finishes.",
+      "lubricity_smooth_feel": "Imparts a smooth surface tactile feel."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "block_resistance": 2,
+          "metal_mark_resistance": 1,
+          "matting_gloss_control": 2,
+          "slip_lubricity": 1,
+          "burnish_resistance": 2
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "abrasion_resistance": 2,
+          "burnish_resistance": 2,
+          "matting_gloss_control": 2,
+          "block_resistance": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗刮傷、抗劃痕與抗金屬劃痕性能。",
+          "abrasion_resistance": "提升耐磨性能。",
+          "matting_gloss_control": "有效均勻的消光。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "AquaPoly 511",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/aquapoly-511.html",
+    "composition_zh": "改性氧化高密度聚乙烯",
+    "composition_en": "Modified oxidized HDPE",
+    "chemical_component": "Modified oxidized HDPE",
+    "recommended_system_type_zh": "水性、溶劑系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings and inks.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；建築漆；木器漆；印刷油墨（柔印和凹印）；捲鋼塗料；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); architectural paints; wood coatings; printing inks (flexo and gravure); coil coatings.",
+    "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "117-123",
+      "mean_particle_size_um": "6.0-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.97"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "ptfe_alternative": "不含 PTFE 的替代選擇。",
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "提升抗刮與抗劃痕性能。",
+      "abrasion_resistance": "可提供最佳的耐磨與抗劃痕性能。",
+      "slip_lubricity": "具有優異的滑爽性與潤滑度。",
+      "rub_resistance": "提供最佳水平的抗擦傷和抗磨損（防勒痕）防護",
+      "soft_touch": "提供獨特的柔軟觸感",
+      "high_dispersibility": "易於分散的細粉，可通過高速攪拌混合"
+    },
+    "rating_descriptions_en": {
+      "ptfe_alternative": "PTFE-free alternative for water-based and solvent systems.",
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Provides optimum levels of scuff and mar resistance.",
+      "abrasion_resistance": "Delivers optimum levels of scuff and scratch resistance.",
+      "slip_lubricity": "Imparts excellent surface slip and mobility.",
+      "rub_resistance": "Provides optimum levels of scuff and rub resistance in water-based and solvent systems.",
+      "soft_touch": "Imparts a unique soft-touch feel to inks and coatings.",
+      "high_dispersibility": "Easily dispersible fine powder."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "耐刮",
+          "FDA"
+        ],
+        "example_zh": "捲鋼",
+        "example_en": "Coil coatings",
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 3,
+          "block_resistance": 2,
+          "improved_extrusion_flow": 1,
+          "metal_mark_resistance": 3,
+          "slip_lubricity": 2
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "耐刮",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "rub_resistance": 3,
+          "slip_lubricity": 3,
+          "soft_touch": 2,
+          "block_resistance": 3,
+          "heat_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提供最佳水平的抗刮性能。",
+          "slip_lubricity": "提供極佳的滑爽性與潤滑度"
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "耐刮"
+        ],
+        "ratings": {
+          "scratch_resistance": 3,
+          "slip_lubricity": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提供優異的防刮傷與防擦傷特性。",
+          "slip_lubricity": "提供良好的滑爽性與流動性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "AquaPoly 250",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/aquapoly-250.html",
+    "composition_zh": "改性氧化高密度聚乙烯",
+    "composition_en": "Modified oxidized HDPE",
+    "chemical_component": "Modified oxidized HDPE",
+    "recommended_system_type_zh": "水性系統",
+    "recommended_system_type_en": "Water-based coatings.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；捲鋼塗料；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); coil coatings.",
+    "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "117-123",
+      "mean_particle_size_um": "8.0-10.0",
+      "max_particle_size_um": "31.00",
+      "density_g_cc_25c": "0.97"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "在水性系統中提供卓越的抗劃痕與抗刮傷性能。",
+      "abrasion_resistance": "在水性系統中提供卓越的耐磨擦性能。",
+      "block_resistance": "賦予抗黏結性能。",
+      "metal_mark_resistance": "提供卓越的耐磨擦、抗劃痕與抗刮傷性能。",
+      "slip_lubricity": "提高塗層滑度。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Hard, modified high-density polyethylene blend provides outstanding mar and scratch resistance in water-based systems.",
+      "abrasion_resistance": "Provides outstanding rub and abrasion resistance in aqueous systems.",
+      "block_resistance": "Imparts antiblocking properties.",
+      "metal_mark_resistance": "Provides outstanding rub, mar, and metal mark resistance.",
+      "slip_lubricity": "Enhances surface slip properties."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "耐刮",
+          "FDA"
+        ],
+        "example_zh": "罐頭塗料",
+        "example_en": "Can coatings",
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 2,
+          "block_resistance": 1,
+          "metal_mark_resistance": 2,
+          "slip_lubricity": 2,
+          "burnish_resistance": 1
+        }
+      }
+    }
+  },
+  {
+    "product_name": "Polysilk 750",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/polysilk-750.html",
+    "composition_zh": "高密度聚乙烯/醯胺",
+    "composition_en": "HDPE / amide wax composite",
+    "chemical_component": "HDPE/amide",
+    "recommended_system_type_zh": "溶劑系統及UV系統",
+    "recommended_system_type_en": "Solvent-based and energy curable (UV) coatings and inks.",
+    "application_fields_zh": "工業塗料（包括塑膠、金屬）；木器漆；印刷油墨（柔印和凹印）；罐頭塗料(內罐及外罐)、貨櫃漆；捲鋼塗料；螺絲漆；皮革塗料",
+    "application_fields_en": "Industrial coatings (including plastics, metals, and leather); wood coatings; printing inks (flexo and gravure); interior and exterior can and container coatings; coil coatings; soft touch coatings.",
+    "suggested_use_level_zh": "0.5-2.0%（佔總配方重量）",
+    "suggested_use_level_en": "0.5-2.0% (on total formula weight)",
+    "system": {
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "96-109",
+      "mean_particle_size_um": "5.0-7.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.94"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "複合蠟，提升塗層耐刮性。",
+      "abrasion_resistance": "複合蠟，可提升耐磨與抗擦傷性。",
+      "block_resistance": "提升抗黏結性。",
+      "slip_lubricity": "增加潤滑性與光滑手感。",
+      "soft_touch": "增加柔軟手感"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Formulated wax composite providing scratch and mar resistance.",
+      "abrasion_resistance": "Improves coating abrasion and rub resistance.",
+      "block_resistance": "Imparts antiblocking properties.",
+      "slip_lubricity": "Adds lubricity and a smooth silky feel; maximum lubricity is achieved after 12-24 hours.",
+      "soft_touch": "Adds lubricity and a soft-touch tactile feel."
+    },
+    "applications": {
+      "industrial": {
+        "featured_categories": [
+          "耐刮",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "block_resistance": 1,
+          "slip_lubricity": 1
+        }
+      },
+      "ink": {
+        "featured_categories": [
+          "耐刮",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 1,
+          "rub_resistance": 1,
+          "slip_lubricity": 2,
+          "block_resistance": 1
+        },
+        "notes_zh": {
+          "scratch_resistance": "提供抗刮性",
+          "abrasion_resistance": "提供耐磨性",
+          "slip_lubricity": "增加潤滑性與平滑表面手感。",
+          "block_resistance": "提升抗黏結性"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "MicroMatte 1415-EZ",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/micromatte-1415-ez.html",
+    "composition_zh": "緻密化改性合成蠟",
+    "composition_en": "Densified modified synthetic wax",
+    "chemical_component": "Densified modified synthetic wax",
+    "recommended_system_type_zh": "水性系統。",
+    "recommended_system_type_en": "Water-based",
+    "application_fields_zh": "水性建築漆；木器漆。",
+    "application_fields_en": "Water-based architectural paints and wood coatings.",
+    "suggested_use_level_zh": "1.0-4.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-4.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "136-140",
+      "mean_particle_size_um": "10.0-15.0",
+      "max_particle_size_um": "44 (325 mesh)",
+      "density_g_cc_25c": "1.06"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "fda": "符合 FDA 食品接觸規範 (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "提升耐刮性能",
+      "slip_lubricity": "提升滑度與抗沾污性",
+      "matting_gloss_control": "提供高效的消光作用",
+      "burnish_resistance": "提升抗拋光性能。",
+      "cleanability": "與無機消光劑相比，顯著提高抗污沾性。"
+    },
+    "rating_descriptions_en": {
+      "fda": "Compliant with FDA food contact regulations (21 CFR 175.300 / 176.170)",
+      "scratch_resistance": "Improves burnish resistance and dirt pickup resistance (DPUR) in architectural coatings compared to inorganic flattening agents.",
+      "slip_lubricity": "Surface-treated for easy incorporation into water-based systems; improves soil release and dirt resistance.",
+      "matting_gloss_control": "Provides highly efficient gloss reduction and matting.",
+      "burnish_resistance": "Enhances burnish resistance.",
+      "cleanability": "Dramatically improves dirt pickup resistance (DPUR) versus inorganic flattening agents."
+    },
+    "applications": {
+      "ink": {
+        "featured_categories": [
+          "消光",
+          "FDA"
+        ],
+        "ratings": {
+          "fda": 3,
+          "scratch_resistance": 2,
+          "slip_lubricity": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 2
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "scratch_resistance": 2,
+          "burnish_resistance": 3,
+          "matting_gloss_control": 3,
+          "block_resistance": 3,
+          "cleanability": 3
+        },
+        "notes_zh": {
+          "scratch_resistance": "提升抗拋光性與表面耐刮性。",
+          "matting_gloss_control": "提供高效的消光效果。"
+        }
+      },
+      "leather": {
+        "featured_categories": [
+          "消光"
+        ],
+        "ratings": {
+          "scratch_resistance": 2,
+          "burnish_resistance": 3,
+          "slip": 2,
+          "matting_gloss_control": 3,
+          "block_resistance": 2,
+          "cleanability": 2
+        },
+        "notes_zh": {
+          "burnish_resistance": "提高抗拋光性。",
+          "matting_gloss_control": "提供高效的消光/降低光澤效果。",
+          "cleanability": "多功能消光添加劑，可提升建築塗料的易潔性與抗污吸附性。"
+        }
+      }
+    }
+  },
+  {
+    "product_name": "AquaBead 519",
+    "brand_code": "MPI",
+    "website": "https://www.micropowders.com/aquabead-519.html",
+    "composition_zh": "疏水改性合成蠟",
+    "composition_en": "Hydrophobically modified synthetic wax",
+    "chemical_component": "Hydrophobically modified synthetic wax",
+    "recommended_system_type_zh": "水性與溶劑型系統、粉體系統",
+    "recommended_system_type_en": "Water-based and solvent-based coatings.",
+    "application_fields_zh": "工業塗料（包括金屬)；木器漆；汽車蠟。",
+    "application_fields_en": "Industrial coatings (including metals); wood coatings; automotive polishes.",
+    "suggested_use_level_zh": "1.0-4.0%（佔總配方重量）",
+    "suggested_use_level_en": "1.0-4.0% (on total formula weight)",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "powder_coating": 1
+    },
+    "typical_properties": {
+      "melt_point_c": "126-132",
+      "mean_particle_size_um": "5.5-8.0",
+      "max_particle_size_um": "22.00",
+      "density_g_cc_25c": "0.94"
+    },
+    "fda_compliant": true,
+    "fda_regulations": [
+      "21 CFR 175.300",
+      "21 CFR 176.170"
+    ],
+    "rating_descriptions_zh": {
+      "water_repellency": "提供水珠效果與持久的撥水性。",
+      "scratch_resistance": "提升耐刮性能。",
+      "soil_resistance": "提供防塵性。",
+      "cleanability": "容易清潔。",
+      "gloss_retention": "提供光澤維持。"
+    },
+    "rating_descriptions_en": {
+      "water_repellency": "Imparts immediate water beading and delivers long-lasting water repellency.",
+      "scratch_resistance": "Improves scratch resistance.",
+      "soil_resistance": "Provides soil resistance.",
+      "cleanability": "Easy to clean and maintain.",
+      "gloss_retention": "Provides gloss retention and durability."
+    },
+    "applications": {
+      "industrial_floor": {
+        "featured_categories": [
+          "撥水"
+        ],
+        "ratings": {
+          "block_resistance": 1,
+          "cleanability": 1,
+          "water_repellency": 2
+        }
+      },
+      "wood": {
+        "featured_categories": [
+          "撥水"
+        ],
+        "ratings": {
+          "water_repellency": 3
+        }
+      },
+      "automotive_polishes": {
+        "featured_categories": [
+          "撥水"
+        ],
+        "ratings": {
+          "scratch_resistance": 1,
+          "water_beading": 3,
+          "soil_resistance": 1,
+          "cleanability": 1,
+          "gloss_retention": 3
+        }
+      }
+    }
+  }
+]

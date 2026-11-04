@@ -16,6 +16,117 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ----------------------------------------------------
+// 0. PIMS 集中資料庫即時連線 (Single Source of Truth)
+// ----------------------------------------------------
+let pimsDb = null;
+try {
+    const Database = require('D:/Jay/vscode/techdatas/node_modules/better-sqlite3');
+    const pimsDbPath = path.resolve('D:/Jay/vscode/techdatas/chemical_pims.db');
+    if (fs.existsSync(pimsDbPath)) {
+        pimsDb = new Database(pimsDbPath, { readonly: true, fileMustExist: true });
+        pimsDb.pragma('journal_mode = WAL');
+        console.log('✅ [PIMS DB] 成功直連公槽核心資料庫 (chemical_pims.db)，實現動態即時資料同步！');
+    }
+} catch (err) {
+    console.warn('⚠️ [PIMS DB] 公槽資料庫直連未就緒，使用靜態快取備援:', err.message);
+}
+
+let productErpMap = {};
+try {
+    const erpMapPath = path.join(__dirname, 'product_erp_map.json');
+    if (fs.existsSync(erpMapPath)) {
+        productErpMap = JSON.parse(fs.readFileSync(erpMapPath, 'utf-8'));
+    }
+} catch (e) {
+    console.warn('[ERP MAP] 未能載入 product_erp_map.json:', e.message);
+}
+
+function resolveProductErp(name) {
+    if (!name || typeof name !== 'string') return null;
+    const clean = name.trim();
+    
+    // 優先向活體 PIMS 資料庫即時查詢
+    if (pimsDb) {
+        try {
+            const row = pimsDb.prepare(`
+                SELECT erp_no FROM products 
+                WHERE erp_no = ? 
+                   OR web_display_name = ? 
+                   OR product_name = ?
+                   OR web_display_name = ? COLLATE NOCASE
+                LIMIT 1
+            `).get(clean, clean, clean, clean);
+            if (row && row.erp_no) return row.erp_no;
+        } catch (e) {}
+    }
+
+    if (productErpMap[clean]) return productErpMap[clean].erp_no;
+    if (productErpMap[clean.toLowerCase()]) return productErpMap[clean.toLowerCase()].erp_no;
+    const pure = clean.replace(/（[^）]+）|\([^)]+\)/g, '').trim();
+    if (productErpMap[pure]) return productErpMap[pure].erp_no;
+    if (productErpMap[pure.toLowerCase()]) return productErpMap[pure.toLowerCase()].erp_no;
+    return null;
+}
+
+function formatProductWithErp(itemStr) {
+    if (!itemStr || typeof itemStr !== 'string') return itemStr;
+    const erp = resolveProductErp(itemStr);
+    if (erp && !itemStr.includes(`[ERP: ${erp}]`)) {
+        return `${itemStr} [ERP: ${erp}]`;
+    }
+    return itemStr;
+}
+
+function enrichWithLivePims(items) {
+    if (!pimsDb || !Array.isArray(items)) return items;
+    try {
+        const stmt = pimsDb.prepare(`
+            SELECT erp_no, category_id, product_name, web_display_name, cas_display,
+                   reach_status, rohs_status, food_contact_fda, pfoa_pfos, un_no, dg_class,
+                   packaging_spec
+            FROM products
+            WHERE is_active = 1
+        `);
+        const allDbProds = stmt.all();
+        
+        // Build fast map
+        const dbMap = {};
+        for (const p of allDbProds) {
+            if (p.erp_no) dbMap[p.erp_no] = p;
+            if (p.web_display_name) {
+                dbMap[p.web_display_name.trim().toLowerCase()] = p;
+            }
+            if (p.product_name) {
+                dbMap[p.product_name.trim().toLowerCase()] = p;
+            }
+        }
+        
+        for (const it of items) {
+            const pName = (it.product_name || '').trim().toLowerCase();
+            const pErp = it.erp_no;
+            const match = (pErp && dbMap[pErp]) || dbMap[pName];
+            if (match) {
+                it.erp_no = match.erp_no;
+                it.cas_no = match.cas_display || it.cas_no || '';
+                it.packaging_spec = match.packaging_spec || '';
+                it.compliance = {
+                    reach: match.reach_status || '-',
+                    rohs: match.rohs_status || '-',
+                    fda: match.food_contact_fda || '-',
+                    pfoa_pfos: match.pfoa_pfos || '-',
+                    un_no: match.un_no || '-',
+                    dg_class: match.dg_class || '-'
+                };
+                it.pims_live = true;
+            }
+        }
+    } catch (e) {
+        console.warn('[PIMS ENRICH] 即時注入警告:', e.message);
+    }
+    return items;
+}
+
+// ----------------------------------------------------
 // 1. CORS & Middleware 設定
 // ----------------------------------------------------
 const defaultOrigins = [
@@ -61,6 +172,60 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // 靜態資源目錄（提供 doc, tds, img 下載與靜態託管，並配置快取）
+// ----------------------------------------------------
+// 1.5. 動態產品 API 與 PIMS 資料庫即時直連攔截器 (Single Source of Truth)
+// ----------------------------------------------------
+// (A) 提供全產品即時 REST API
+app.get('/api/live/products', (req, res) => {
+    if (!pimsDb) {
+        return res.status(503).json({ error: 'PIMS Database connection not available' });
+    }
+    try {
+        const { search, category, erp } = req.query;
+        let sql = 'SELECT * FROM products WHERE is_active = 1';
+        const params = [];
+        if (erp) {
+            sql += ' AND erp_no = ?';
+            params.push(erp);
+        }
+        if (category) {
+            sql += ' AND erp_no LIKE ?';
+            params.push(`${category}%`);
+        }
+        if (search) {
+            sql += ' AND (product_name LIKE ? OR web_display_name LIKE ? OR cas_display LIKE ? OR erp_no LIKE ?)';
+            const term = `%${search}%`;
+            params.push(term, term, term, term);
+        }
+        sql += ' ORDER BY erp_no ASC';
+        const rows = pimsDb.prepare(sql).all(...params);
+        res.json({ total: rows.length, products: rows });
+    } catch (e) {
+        res.status(500).json({ error: e.message });
+    }
+});
+
+// (B) 攔截前端靜態 JSON 載入，即時自 PIMS 注入最新物性與合規數據
+app.get('/json/:brand/:file', (req, res, next) => {
+    const filename = req.params.file;
+    if (!filename.endsWith('.json')) return next();
+    
+    const filePath = path.join(__dirname, 'json', req.params.brand, filename);
+    if (!fs.existsSync(filePath)) return next();
+
+    try {
+        let items = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        if (Array.isArray(items) && pimsDb) {
+            items = enrichWithLivePims(items);
+        }
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        return res.json(items);
+    } catch (e) {
+        return next();
+    }
+});
+
 app.use(express.static(path.join(__dirname), {
     maxAge: '1d',
     setHeaders: (res, filePath) => {
@@ -326,7 +491,8 @@ app.post('/api/send-email', async (req, res) => {
         if (isQuickMode) {
             const applyDate = (data.applyDate || new Date().toLocaleDateString('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit' })).replace(/-/g, '/');
             const mobile = data.mobile || data.phone || data.tel || '未提供';
-            const sample = data.sample || '未提供';
+            const rawSample = data.sample || '未提供';
+            const sample = formatProductWithErp(rawSample);
             const address = data.address || '未提供';
             const message = data.message || '無';
 
@@ -413,9 +579,26 @@ app.post('/api/send-email', async (req, res) => {
             }
 
             const filmThick = data.filmThick ? `${data.filmThick} µm` : '未填寫';
-            const noBake = data.noBake || '否';
-            const bakeTemp = data.bakeTemp || '未填寫';
-            const bakeTime = data.bakeTime || '未填寫';
+            const isAirDry = (data.cureMethod === '風乾' || data.cureMethod === '常溫風乾' || data.noBake === '是' || data.noBake === true);
+            const rawTemp = (data.bakeTemp || '').trim();
+            const rawTime = (data.bakeTime || '').trim();
+            const hasTemp = rawTemp && rawTemp !== '未填寫' && rawTemp !== '無 (風乾)' && rawTemp !== '無';
+            const hasTime = rawTime && rawTime !== '未填寫' && rawTime !== '無 (風乾)' && rawTime !== '無';
+
+            let cureCondition = '';
+            if (isAirDry) {
+                cureCondition = '常溫風乾（不烘烤）';
+            } else if (hasTemp && hasTime) {
+                cureCondition = `烘烤（溫度: ${rawTemp} | 時間: ${rawTime}）`;
+            } else if (hasTemp) {
+                cureCondition = `烘烤（溫度: ${rawTemp} | 時間: 未填寫）`;
+            } else if (hasTime) {
+                cureCondition = `烘烤（溫度: 未填寫 | 時間: ${rawTime}）`;
+            } else if (data.cureMethod === '烘烤' || data.noBake === '否') {
+                cureCondition = '烘烤（溫度/時間: 未指定）';
+            } else {
+                cureCondition = '未指定';
+            }
 
             // 樹脂系統（可含其他）
             let resinsStr = formatList(data.resins);
@@ -431,10 +614,16 @@ app.post('/api/send-email', async (req, res) => {
             if (Array.isArray(data.sampleItems) && data.sampleItems.length > 0) {
                 const items = data.sampleItems
                     .filter(it => it && it.name && it.name.trim())
-                    .map(it => it.qty ? `${it.name.trim()}（數量: ${it.qty.trim()}）` : it.name.trim());
+                    .map(it => {
+                        const erp = resolveProductErp(it.name);
+                        const erpTag = erp ? ` [ERP: ${erp}]` : '';
+                        return it.qty ? `${it.name.trim()}${erpTag}（數量: ${it.qty.trim()}）` : `${it.name.trim()}${erpTag}`;
+                    });
                 if (items.length > 0) {
                     sampleReq = items.join('；');
                 }
+            } else if (sampleReq !== '未填寫') {
+                sampleReq = formatProductWithErp(sampleReq);
             }
 
             const docs = formatList(data.docs);
@@ -463,7 +652,7 @@ B. 應用需求
 C. 基本資訊與規格
 底材類型：${substratesStr}
 乾膜厚度：${filmThick}
-乾燥固化條件：不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}
+乾燥固化條件：${cureCondition}
 樹脂系統：${resinsStr}
 限用物質：${restricted}
 索樣產品資訊：${sampleReq}
@@ -506,7 +695,7 @@ D & E. 測試紀錄與備註
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">底材類型：</td><td style="padding: 6px;">${substratesStr}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">乾膜厚度：</td><td style="padding: 6px;">${filmThick}</td></tr>
-                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">乾燥固化條件：</td><td style="padding: 6px;">不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}</td></tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">乾燥固化條件：</td><td style="padding: 6px;">${cureCondition}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">樹脂系統：</td><td style="padding: 6px;">${resinsStr}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #475569;">限用物質：</td><td style="padding: 6px;">${restricted}</td></tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; color: #1e3a8a; background-color: #eff6ff;">索樣產品資訊：</td><td style="padding: 6px; font-weight: bold; color: #1e3a8a;">${sampleReq}</td></tr>
@@ -553,7 +742,7 @@ D & E. 測試紀錄與備註
                     rows: [
                         { label: '底材類型', value: substratesStr },
                         { label: '乾膜厚度', value: filmThick },
-                        { label: '乾燥固化條件', value: `不烘烤: ${noBake} | 溫度: ${bakeTemp} | 時間: ${bakeTime}` },
+                        { label: '乾燥固化條件', value: cureCondition },
                         { label: '樹脂系統', value: resinsStr },
                         { label: '其他資訊(限用物質)', value: restricted },
                         { label: '索樣產品資訊', value: sampleReq },

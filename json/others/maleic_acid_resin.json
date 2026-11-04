@@ -84,7 +84,19 @@
     "performance_ratings": {},
     "properties": "改善漆膜硬度、光澤\n提高乾燥速度及打磨性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C034",
+    "category_letter": "C",
+    "cas_no": "94581-16-5",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "馬林酸樹脂 1305",
@@ -171,7 +183,19 @@
     "performance_ratings": {},
     "properties": "改善漆膜硬度、光澤\n提高乾燥速度及打磨性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C060",
+    "category_letter": "C",
+    "cas_no": "94581-16-5",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "馬林酸樹脂 1307",
@@ -258,7 +282,19 @@
     "performance_ratings": {},
     "properties": "改善漆膜硬度、光澤\n提高乾燥速度及打磨性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C035",
+    "category_letter": "C",
+    "cas_no": "94581-16-5",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "改質馬林酸樹脂 M2000A",
@@ -345,7 +381,9 @@
     "performance_ratings": {},
     "properties": "低黏度，流動性佳，快乾，顏色淺",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "醇溶型馬林酸樹脂 MP-130",
@@ -432,7 +470,19 @@
     "performance_ratings": {},
     "properties": "提高油墨固著速度\n提高光澤及硬度\n當主樹脂使用",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": "C061",
+    "category_letter": "C",
+    "cas_no": "68038-41-5",
+    "compliance": {
+      "reach": "-",
+      "rohs": "-",
+      "fda": "-",
+      "pfoa_pfos": "-",
+      "un_no": "/",
+      "dg_class": "/"
+    },
+    "pims_synced_at": "2026-11-04T09:22:34.429851"
   },
   {
     "product_name": "醇溶型馬林酸樹脂 MP-150",
@@ -519,7 +569,9 @@
     "performance_ratings": {},
     "properties": "提高油墨固著速度\n提高光澤及硬度\n當主樹脂使用",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "酯化松香 MG-85S",
@@ -606,7 +658,9 @@
     "performance_ratings": {},
     "properties": "良好的相溶性\n提高耐候性及粘結力",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "酯化松香 MG-90S",
@@ -693,7 +747,9 @@
     "performance_ratings": {},
     "properties": "良好的相溶性\n提高耐候性及粘結力",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "松香季戊四醇酯 MP-100",
@@ -780,7 +836,9 @@
     "performance_ratings": {},
     "properties": "白色EVA熱熔膠\n顏色淺，耐熱性，耐候性佳",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "松香改質馬林酸樹脂 MRG-1105",
@@ -867,7 +925,9 @@
     "performance_ratings": {},
     "properties": "良好的相容性與密著性\n提升增黏及物性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "松香改質馬林酸樹脂 MRG-1205",
@@ -954,7 +1014,9 @@
     "performance_ratings": {},
     "properties": "良好的相容性與密著性\n提升增黏及物性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "松香改質馬林酸樹脂 MRP-115",
@@ -1041,7 +1103,9 @@
     "performance_ratings": {},
     "properties": "良好的相容性與密著性\n提升增黏及物性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   },
   {
     "product_name": "松香改質馬林酸樹脂 MRP-125",
@@ -1128,6 +1192,8 @@
     "performance_ratings": {},
     "properties": "良好的相容性與密著性\n提升增黏及物性",
     "performance_descriptions_zh": {},
-    "performance_descriptions_en": {}
+    "performance_descriptions_en": {},
+    "erp_no": null,
+    "category_letter": null
   }
 ]

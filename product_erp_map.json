@@ -1,0 +1,877 @@
+{
+  "Unilink 4100": {
+    "erp_no": "A066",
+    "category_letter": "A",
+    "master_name": "Unilink 4100"
+  },
+  "unilink 4100": {
+    "erp_no": "A066",
+    "category_letter": "A",
+    "master_name": "Unilink 4100"
+  },
+  "Unilink 4200": {
+    "erp_no": "A044",
+    "category_letter": "A",
+    "master_name": "Unilink 4200"
+  },
+  "unilink 4200": {
+    "erp_no": "A044",
+    "category_letter": "A",
+    "master_name": "Unilink 4200"
+  },
+  "ClearLink 1000": {
+    "erp_no": "A045",
+    "category_letter": "A",
+    "master_name": "Clearlink 1000"
+  },
+  "clearlink 1000": {
+    "erp_no": "A045",
+    "category_letter": "A",
+    "master_name": "Clearlink 1000"
+  },
+  "ClearLink 1080": {
+    "erp_no": "A046",
+    "category_letter": "A",
+    "master_name": "Clearlink 1080"
+  },
+  "clearlink 1080": {
+    "erp_no": "A046",
+    "category_letter": "A",
+    "master_name": "Clearlink 1080"
+  },
+  "Unilink 1030": {
+    "erp_no": "A043",
+    "category_letter": "A",
+    "master_name": "Unilink 1030"
+  },
+  "unilink 1030": {
+    "erp_no": "A043",
+    "category_letter": "A",
+    "master_name": "Unilink 1030"
+  },
+  "Tyzor AA 105": {
+    "erp_no": "A081",
+    "category_letter": "A",
+    "master_name": "Tyzor AA-105"
+  },
+  "tyzor aa 105": {
+    "erp_no": "A081",
+    "category_letter": "A",
+    "master_name": "Tyzor AA-105"
+  },
+  "Tyzor 9000": {
+    "erp_no": "A103",
+    "category_letter": "A",
+    "master_name": "Tyzor 9000"
+  },
+  "tyzor 9000": {
+    "erp_no": "A103",
+    "category_letter": "A",
+    "master_name": "Tyzor 9000"
+  },
+  "PX 3841": {
+    "erp_no": "A101",
+    "category_letter": "A",
+    "master_name": "PX-3841"
+  },
+  "px 3841": {
+    "erp_no": "A101",
+    "category_letter": "A",
+    "master_name": "PX-3841"
+  },
+  "Tyzor 436": {
+    "erp_no": "A057",
+    "category_letter": "A",
+    "master_name": "Tyzor Activate 436"
+  },
+  "tyzor 436": {
+    "erp_no": "A057",
+    "category_letter": "A",
+    "master_name": "Tyzor Activate 436"
+  },
+  "Tyzor PC 64": {
+    "erp_no": "A049",
+    "category_letter": "A",
+    "master_name": "Tyzor PC-64"
+  },
+  "tyzor pc 64": {
+    "erp_no": "A049",
+    "category_letter": "A",
+    "master_name": "Tyzor PC-64"
+  },
+  "Tyzor BTP": {
+    "erp_no": "A048",
+    "category_letter": "A",
+    "master_name": "Tyzor BTP"
+  },
+  "tyzor btp": {
+    "erp_no": "A048",
+    "category_letter": "A",
+    "master_name": "Tyzor BTP"
+  },
+  "Tyzor D 140": {
+    "erp_no": "A058",
+    "category_letter": "A",
+    "master_name": "Tyzor D-140"
+  },
+  "tyzor d 140": {
+    "erp_no": "A058",
+    "category_letter": "A",
+    "master_name": "Tyzor D-140"
+  },
+  "Tyzor TnBT": {
+    "erp_no": "A040",
+    "category_letter": "A",
+    "master_name": "Tyzor TnBT"
+  },
+  "tyzor tnbt": {
+    "erp_no": "A040",
+    "category_letter": "A",
+    "master_name": "Tyzor TnBT"
+  },
+  "Tyzor TOT": {
+    "erp_no": "A067",
+    "category_letter": "A",
+    "master_name": "Tyzor TOT"
+  },
+  "tyzor tot": {
+    "erp_no": "A067",
+    "category_letter": "A",
+    "master_name": "Tyzor TOT"
+  },
+  "Tyzor TPT": {
+    "erp_no": "A038",
+    "category_letter": "A",
+    "master_name": "Tyzor TPT"
+  },
+  "tyzor tpt": {
+    "erp_no": "A038",
+    "category_letter": "A",
+    "master_name": "Tyzor TPT"
+  },
+  "Tyzor TE": {
+    "erp_no": "A042",
+    "category_letter": "A",
+    "master_name": "Tyzor TE"
+  },
+  "tyzor te": {
+    "erp_no": "A042",
+    "category_letter": "A",
+    "master_name": "Tyzor TE"
+  },
+  "Tyzor LA": {
+    "erp_no": "A055",
+    "category_letter": "A",
+    "master_name": "Tyzor LA"
+  },
+  "tyzor la": {
+    "erp_no": "A055",
+    "category_letter": "A",
+    "master_name": "Tyzor LA"
+  },
+  "Tyzor 726": {
+    "erp_no": "A052",
+    "category_letter": "A",
+    "master_name": "Tyzor 726"
+  },
+  "tyzor 726": {
+    "erp_no": "A052",
+    "category_letter": "A",
+    "master_name": "Tyzor 726"
+  },
+  "Tyzor KE 6": {
+    "erp_no": "A102",
+    "category_letter": "A",
+    "master_name": "Tyzor KE 6"
+  },
+  "tyzor ke 6": {
+    "erp_no": "A102",
+    "category_letter": "A",
+    "master_name": "Tyzor KE 6"
+  },
+  "Tyzor AA 75": {
+    "erp_no": "A077",
+    "category_letter": "A",
+    "master_name": "Tyzor AA-75"
+  },
+  "tyzor aa 75": {
+    "erp_no": "A077",
+    "category_letter": "A",
+    "master_name": "Tyzor AA-75"
+  },
+  "Tyzor IAM": {
+    "erp_no": "A050",
+    "category_letter": "A",
+    "master_name": "Tyzor IAM"
+  },
+  "tyzor iam": {
+    "erp_no": "A050",
+    "category_letter": "A",
+    "master_name": "Tyzor IAM"
+  },
+  "Tyzor GBA": {
+    "erp_no": "A041",
+    "category_letter": "A",
+    "master_name": "Tyzor GBA"
+  },
+  "tyzor gba": {
+    "erp_no": "A041",
+    "category_letter": "A",
+    "master_name": "Tyzor GBA"
+  },
+  "Tyzor NBZ": {
+    "erp_no": "A060",
+    "category_letter": "A",
+    "master_name": "Tyzor NBZ"
+  },
+  "tyzor nbz": {
+    "erp_no": "A060",
+    "category_letter": "A",
+    "master_name": "Tyzor NBZ"
+  },
+  "Tyzor NPZ": {
+    "erp_no": "A047",
+    "category_letter": "A",
+    "master_name": "Tyzor NPZ"
+  },
+  "tyzor npz": {
+    "erp_no": "A047",
+    "category_letter": "A",
+    "master_name": "Tyzor NPZ"
+  },
+  "MP-28AL": {
+    "erp_no": "E185",
+    "category_letter": "E",
+    "master_name": "MP-28AL"
+  },
+  "mp-28al": {
+    "erp_no": "E185",
+    "category_letter": "E",
+    "master_name": "MP-28AL"
+  },
+  "MPP-611AL": {
+    "erp_no": "E203",
+    "category_letter": "E",
+    "master_name": "MPP-611AL"
+  },
+  "mpp-611al": {
+    "erp_no": "E203",
+    "category_letter": "E",
+    "master_name": "MPP-611AL"
+  },
+  "MicroKlear 418AL": {
+    "erp_no": "E201",
+    "category_letter": "E",
+    "master_name": "MicroKlear 418 AL"
+  },
+  "microklear 418al": {
+    "erp_no": "E201",
+    "category_letter": "E",
+    "master_name": "MicroKlear 418 AL"
+  },
+  "Superslip 6515AL": {
+    "erp_no": "E220",
+    "category_letter": "E",
+    "master_name": "Superslip 6515 AL"
+  },
+  "superslip 6515al": {
+    "erp_no": "E220",
+    "category_letter": "E",
+    "master_name": "Superslip 6515 AL"
+  },
+  "PolyGlide 1226XF": {
+    "erp_no": "E168",
+    "category_letter": "E",
+    "master_name": "PolyGlide 1226 XF"
+  },
+  "polyglide 1226xf": {
+    "erp_no": "E168",
+    "category_letter": "E",
+    "master_name": "PolyGlide 1226 XF"
+  },
+  "MP-22VF": {
+    "erp_no": "E115",
+    "category_letter": "E",
+    "master_name": "MP-22VF"
+  },
+  "mp-22vf": {
+    "erp_no": "E115",
+    "category_letter": "E",
+    "master_name": "MP-22VF"
+  },
+  "MP-22XF": {
+    "erp_no": "E116",
+    "category_letter": "E",
+    "master_name": "MP-22XF"
+  },
+  "mp-22xf": {
+    "erp_no": "E116",
+    "category_letter": "E",
+    "master_name": "MP-22XF"
+  },
+  "MPP-611XF": {
+    "erp_no": "E204",
+    "category_letter": "E",
+    "master_name": "MPP-611 XF"
+  },
+  "mpp-611xf": {
+    "erp_no": "E204",
+    "category_letter": "E",
+    "master_name": "MPP-611 XF"
+  },
+  "MPP-620VF": {
+    "erp_no": "E120",
+    "category_letter": "E",
+    "master_name": "MPP-620VF"
+  },
+  "mpp-620vf": {
+    "erp_no": "E120",
+    "category_letter": "E",
+    "master_name": "MPP-620VF"
+  },
+  "MPP-620XF": {
+    "erp_no": "E121",
+    "category_letter": "E",
+    "master_name": "MPP-620XF"
+  },
+  "mpp-620xf": {
+    "erp_no": "E121",
+    "category_letter": "E",
+    "master_name": "MPP-620XF"
+  },
+  "MPP-635VF": {
+    "erp_no": "E190",
+    "category_letter": "E",
+    "master_name": "MPP-635 VF"
+  },
+  "mpp-635vf": {
+    "erp_no": "E190",
+    "category_letter": "E",
+    "master_name": "MPP-635 VF"
+  },
+  "PropylMatte 31": {
+    "erp_no": "E140",
+    "category_letter": "E",
+    "master_name": "Propylmatte 31"
+  },
+  "propylmatte 31": {
+    "erp_no": "E140",
+    "category_letter": "E",
+    "master_name": "Propylmatte 31"
+  },
+  "Micropro 400": {
+    "erp_no": "E131",
+    "category_letter": "E",
+    "master_name": "Micropro 400"
+  },
+  "micropro 400": {
+    "erp_no": "E131",
+    "category_letter": "E",
+    "master_name": "Micropro 400"
+  },
+  "Micromide 520": {
+    "erp_no": "E137",
+    "category_letter": "E",
+    "master_name": "Micromide 520"
+  },
+  "micromide 520": {
+    "erp_no": "E137",
+    "category_letter": "E",
+    "master_name": "Micromide 520"
+  },
+  "MicroTouch 800XF": {
+    "erp_no": "E147",
+    "category_letter": "E",
+    "master_name": "MicroTouch 800 XF"
+  },
+  "microtouch 800xf": {
+    "erp_no": "E147",
+    "category_letter": "E",
+    "master_name": "MicroTouch 800 XF"
+  },
+  "MicroTouch 800F": {
+    "erp_no": "E145",
+    "category_letter": "E",
+    "master_name": "MicroTouch 800F"
+  },
+  "microtouch 800f": {
+    "erp_no": "E145",
+    "category_letter": "E",
+    "master_name": "MicroTouch 800F"
+  },
+  "MicroTex 580": {
+    "erp_no": "E138",
+    "category_letter": "E",
+    "master_name": "Microtex 580"
+  },
+  "microtex 580": {
+    "erp_no": "E138",
+    "category_letter": "E",
+    "master_name": "Microtex 580"
+  },
+  "MicroTex 950": {
+    "erp_no": "E142",
+    "category_letter": "E",
+    "master_name": "MicroTex 950"
+  },
+  "microtex 950": {
+    "erp_no": "E142",
+    "category_letter": "E",
+    "master_name": "MicroTex 950"
+  },
+  "PropylTex 100S": {
+    "erp_no": "E122",
+    "category_letter": "E",
+    "master_name": "PropylTex 100S"
+  },
+  "propyltex 100s": {
+    "erp_no": "E122",
+    "category_letter": "E",
+    "master_name": "PropylTex 100S"
+  },
+  "PropylTex 140S": {
+    "erp_no": "E123",
+    "category_letter": "E",
+    "master_name": "PropylTex 140S"
+  },
+  "propyltex 140s": {
+    "erp_no": "E123",
+    "category_letter": "E",
+    "master_name": "PropylTex 140S"
+  },
+  "PropylTex 200S": {
+    "erp_no": "E124",
+    "category_letter": "E",
+    "master_name": "PropylTex 200S"
+  },
+  "propyltex 200s": {
+    "erp_no": "E124",
+    "category_letter": "E",
+    "master_name": "PropylTex 200S"
+  },
+  "PropylTex 200SF": {
+    "erp_no": "E125",
+    "category_letter": "E",
+    "master_name": "PropylTex 200SF"
+  },
+  "propyltex 200sf": {
+    "erp_no": "E125",
+    "category_letter": "E",
+    "master_name": "PropylTex 200SF"
+  },
+  "PropylTex 270S": {
+    "erp_no": "E126",
+    "category_letter": "E",
+    "master_name": "PropylTex 270S"
+  },
+  "propyltex 270s": {
+    "erp_no": "E126",
+    "category_letter": "E",
+    "master_name": "PropylTex 270S"
+  },
+  "PropylTex 325S": {
+    "erp_no": "E127",
+    "category_letter": "E",
+    "master_name": "PropylTex 325S"
+  },
+  "propyltex 325s": {
+    "erp_no": "E127",
+    "category_letter": "E",
+    "master_name": "PropylTex 325S"
+  },
+  "PropylTex 50": {
+    "erp_no": "E128",
+    "category_letter": "E",
+    "master_name": "PropylTex 50"
+  },
+  "propyltex 50": {
+    "erp_no": "E128",
+    "category_letter": "E",
+    "master_name": "PropylTex 50"
+  },
+  "PropylTex 20": {
+    "erp_no": "E129",
+    "category_letter": "E",
+    "master_name": "PropylTex 20"
+  },
+  "propyltex 20": {
+    "erp_no": "E129",
+    "category_letter": "E",
+    "master_name": "PropylTex 20"
+  },
+  "MicroKlear 116": {
+    "erp_no": "E130",
+    "category_letter": "E",
+    "master_name": "MicroKlear 116"
+  },
+  "microklear 116": {
+    "erp_no": "E130",
+    "category_letter": "E",
+    "master_name": "MicroKlear 116"
+  },
+  "MicroKlear 418": {
+    "erp_no": "E200",
+    "category_letter": "E",
+    "master_name": "MicroKlear 418"
+  },
+  "microklear 418": {
+    "erp_no": "E200",
+    "category_letter": "E",
+    "master_name": "MicroKlear 418"
+  },
+  "PropylMatte 31HD": {
+    "erp_no": "E141",
+    "category_letter": "E",
+    "master_name": "Propylmatte 31 HD"
+  },
+  "propylmatte 31hd": {
+    "erp_no": "E141",
+    "category_letter": "E",
+    "master_name": "Propylmatte 31 HD"
+  },
+  "Micropro 440W": {
+    "erp_no": "E132",
+    "category_letter": "E",
+    "master_name": "Micropro 440W"
+  },
+  "micropro 440w": {
+    "erp_no": "E132",
+    "category_letter": "E",
+    "master_name": "Micropro 440W"
+  },
+  "Polysilk 750": {
+    "erp_no": "E175",
+    "category_letter": "E",
+    "master_name": "Polysilk 750"
+  },
+  "polysilk 750": {
+    "erp_no": "E175",
+    "category_letter": "E",
+    "master_name": "Polysilk 750"
+  },
+  "MicroMatte 1415-EZ": {
+    "erp_no": "E136",
+    "category_letter": "E",
+    "master_name": "MicroMatte 1415 EZ"
+  },
+  "micromatte 1415-ez": {
+    "erp_no": "E136",
+    "category_letter": "E",
+    "master_name": "MicroMatte 1415 EZ"
+  },
+  "AquaBead 519": {
+    "erp_no": "E180",
+    "category_letter": "E",
+    "master_name": "Aquabead 519"
+  },
+  "aquabead 519": {
+    "erp_no": "E180",
+    "category_letter": "E",
+    "master_name": "Aquabead 519"
+  },
+  "COLOUR BLACK FW 310": {
+    "erp_no": "B005",
+    "category_letter": "B",
+    "master_name": "Colour Black  FW 310 碳黑"
+  },
+  "colour black fw 310": {
+    "erp_no": "B005",
+    "category_letter": "B",
+    "master_name": "Colour Black  FW 310 碳黑"
+  },
+  "COLOUR BLACK FW 200": {
+    "erp_no": "B001",
+    "category_letter": "B",
+    "master_name": "Colour Black FW200 碳黑"
+  },
+  "colour black fw 200": {
+    "erp_no": "B001",
+    "category_letter": "B",
+    "master_name": "Colour Black FW200 碳黑"
+  },
+  "COLOUR BLACK S 160": {
+    "erp_no": "B004",
+    "category_letter": "B",
+    "master_name": "Colour Black  S160 碳黑"
+  },
+  "colour black s 160": {
+    "erp_no": "B004",
+    "category_letter": "B",
+    "master_name": "Colour Black  S160 碳黑"
+  },
+  "LAMP BLACK 101": {
+    "erp_no": "B045",
+    "category_letter": "B",
+    "master_name": "Lamp Black 101 碳黑"
+  },
+  "lamp black 101": {
+    "erp_no": "B045",
+    "category_letter": "B",
+    "master_name": "Lamp Black 101 碳黑"
+  },
+  "PRINTEX® U": {
+    "erp_no": "B124",
+    "category_letter": "B",
+    "master_name": "Printex U 色素碳黑"
+  },
+  "printex® u": {
+    "erp_no": "B124",
+    "category_letter": "B",
+    "master_name": "Printex U 色素碳黑"
+  },
+  "PRINTEX® V": {
+    "erp_no": "B132",
+    "category_letter": "B",
+    "master_name": "Printex V 色素碳黑"
+  },
+  "printex® v": {
+    "erp_no": "B132",
+    "category_letter": "B",
+    "master_name": "Printex V 色素碳黑"
+  },
+  "SPECIAL BLACK 6": {
+    "erp_no": "B002",
+    "category_letter": "B",
+    "master_name": "Special Black 6 碳黑"
+  },
+  "special black 6": {
+    "erp_no": "B002",
+    "category_letter": "B",
+    "master_name": "Special Black 6 碳黑"
+  },
+  "SPECIAL BLACK 4A": {
+    "erp_no": "B003",
+    "category_letter": "B",
+    "master_name": "Special Black 4A 碳黑"
+  },
+  "special black 4a": {
+    "erp_no": "B003",
+    "category_letter": "B",
+    "master_name": "Special Black 4A 碳黑"
+  },
+  "LTW": {
+    "erp_no": "C005",
+    "category_letter": "C",
+    "master_name": "TEGO AddBond LTW"
+  },
+  "ltw": {
+    "erp_no": "C005",
+    "category_letter": "C",
+    "master_name": "TEGO AddBond LTW"
+  },
+  "LTH": {
+    "erp_no": "C006",
+    "category_letter": "C",
+    "master_name": "TEGO AddBond LTH"
+  },
+  "lth": {
+    "erp_no": "C006",
+    "category_letter": "C",
+    "master_name": "TEGO AddBond LTH"
+  },
+  "SK": {
+    "erp_no": "C002",
+    "category_letter": "C",
+    "master_name": "TEGO® VariPlus  SK"
+  },
+  "sk": {
+    "erp_no": "C002",
+    "category_letter": "C",
+    "master_name": "TEGO® VariPlus  SK"
+  },
+  "SN 81": {
+    "erp_no": "C056",
+    "category_letter": "C",
+    "master_name": "SN-81 醛酮樹脂"
+  },
+  "sn 81": {
+    "erp_no": "C056",
+    "category_letter": "C",
+    "master_name": "SN-81 醛酮樹脂"
+  },
+  "SN 221": {
+    "erp_no": "C054",
+    "category_letter": "C",
+    "master_name": "SN-221 醛酮樹脂"
+  },
+  "sn 221": {
+    "erp_no": "C054",
+    "category_letter": "C",
+    "master_name": "SN-221 醛酮樹脂"
+  },
+  "SA 501": {
+    "erp_no": "E075",
+    "category_letter": "E",
+    "master_name": "SA 501 粉體塗料助劑"
+  },
+  "sa 501": {
+    "erp_no": "E075",
+    "category_letter": "E",
+    "master_name": "SA 501 粉體塗料助劑"
+  },
+  "MP 45": {
+    "erp_no": "C010",
+    "category_letter": "C",
+    "master_name": "氯醚樹脂 MP 45"
+  },
+  "mp 45": {
+    "erp_no": "C010",
+    "category_letter": "C",
+    "master_name": "氯醚樹脂 MP 45"
+  },
+  "馬林酸樹脂 1303": {
+    "erp_no": "C034",
+    "category_letter": "C",
+    "master_name": "馬林酸樹脂1303"
+  },
+  "馬林酸樹脂 1305": {
+    "erp_no": "C060",
+    "category_letter": "C",
+    "master_name": "馬林酸樹脂1305"
+  },
+  "馬林酸樹脂 1307": {
+    "erp_no": "C035",
+    "category_letter": "C",
+    "master_name": "馬林酸樹脂1307"
+  },
+  "醇溶型馬林酸樹脂 MP-130": {
+    "erp_no": "C061",
+    "category_letter": "C",
+    "master_name": "馬林酸樹脂 MP-130"
+  },
+  "醇溶型馬林酸樹脂 mp-130": {
+    "erp_no": "C061",
+    "category_letter": "C",
+    "master_name": "馬林酸樹脂 MP-130"
+  },
+  "Acematt OK 412": {
+    "erp_no": "D003",
+    "category_letter": "D",
+    "master_name": "Acematt OK 412  消光粉"
+  },
+  "acematt ok 412": {
+    "erp_no": "D003",
+    "category_letter": "D",
+    "master_name": "Acematt OK 412  消光粉"
+  },
+  "Acematt OK 500": {
+    "erp_no": "D004",
+    "category_letter": "D",
+    "master_name": "Acematt OK 500   消光粉"
+  },
+  "acematt ok 500": {
+    "erp_no": "D004",
+    "category_letter": "D",
+    "master_name": "Acematt OK 500   消光粉"
+  },
+  "Acematt OK 520": {
+    "erp_no": "D005",
+    "category_letter": "D",
+    "master_name": "Acematt OK 520   消光粉"
+  },
+  "acematt ok 520": {
+    "erp_no": "D005",
+    "category_letter": "D",
+    "master_name": "Acematt OK 520   消光粉"
+  },
+  "Acematt OK 607": {
+    "erp_no": "D013",
+    "category_letter": "D",
+    "master_name": "Acematt OK 607   消光粉"
+  },
+  "acematt ok 607": {
+    "erp_no": "D013",
+    "category_letter": "D",
+    "master_name": "Acematt OK 607   消光粉"
+  },
+  "Acematt TS 100": {
+    "erp_no": "D006",
+    "category_letter": "D",
+    "master_name": "Acematt TS 100   消光粉"
+  },
+  "acematt ts 100": {
+    "erp_no": "D006",
+    "category_letter": "D",
+    "master_name": "Acematt TS 100   消光粉"
+  },
+  "Matt S390": {
+    "erp_no": "D018",
+    "category_letter": "D",
+    "master_name": "OSCMATT S390 消光粉"
+  },
+  "matt s390": {
+    "erp_no": "D018",
+    "category_letter": "D",
+    "master_name": "OSCMATT S390 消光粉"
+  },
+  "DAMO-T": {
+    "erp_no": "H008",
+    "category_letter": "H",
+    "master_name": "Dynasylan® DAMO-T"
+  },
+  "damo-t": {
+    "erp_no": "H008",
+    "category_letter": "H",
+    "master_name": "Dynasylan® DAMO-T"
+  },
+  "AMEO": {
+    "erp_no": "H002",
+    "category_letter": "H",
+    "master_name": "Dynasylan AMEO"
+  },
+  "ameo": {
+    "erp_no": "H002",
+    "category_letter": "H",
+    "master_name": "Dynasylan AMEO"
+  },
+  "AMMO": {
+    "erp_no": "H003",
+    "category_letter": "H",
+    "master_name": "Dynasylan® AMMO"
+  },
+  "ammo": {
+    "erp_no": "H003",
+    "category_letter": "H",
+    "master_name": "Dynasylan® AMMO"
+  },
+  "1189": {
+    "erp_no": "H071",
+    "category_letter": "H",
+    "master_name": "AT-1189  矽烷"
+  },
+  "GLYMO": {
+    "erp_no": "H001",
+    "category_letter": "H",
+    "master_name": "Dynasylan GLYMO"
+  },
+  "glymo": {
+    "erp_no": "H001",
+    "category_letter": "H",
+    "master_name": "Dynasylan GLYMO"
+  },
+  "VTMO": {
+    "erp_no": "H005",
+    "category_letter": "H",
+    "master_name": "Dynasylan VTMO"
+  },
+  "vtmo": {
+    "erp_no": "H005",
+    "category_letter": "H",
+    "master_name": "Dynasylan VTMO"
+  },
+  "VTEO": {
+    "erp_no": "H019",
+    "category_letter": "H",
+    "master_name": "Dynasylan VTEO"
+  },
+  "vteo": {
+    "erp_no": "H019",
+    "category_letter": "H",
+    "master_name": "Dynasylan VTEO"
+  },
+  "9116": {
+    "erp_no": "H054",
+    "category_letter": "H",
+    "master_name": "AT-9116 矽烷"
+  }
+}

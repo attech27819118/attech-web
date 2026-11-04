@@ -90,6 +90,16 @@ function resetContactFormState() {
         form.reset();
         form.classList.remove('hidden');
     }
+    const bakeRadio = document.getElementById('detail-cure-bake');
+    if (bakeRadio) bakeRadio.checked = true;
+    const bakeParams = document.getElementById('detail-bake-params');
+    const bakeTemp = document.getElementById('detail-bake-temp');
+    const bakeTime = document.getElementById('detail-bake-time');
+    const noBakeHidden = document.getElementById('detail-no-bake');
+    if (noBakeHidden) noBakeHidden.checked = false;
+    if (bakeParams) bakeParams.classList.remove('opacity-40', 'pointer-events-none');
+    if (bakeTemp) bakeTemp.disabled = false;
+    if (bakeTime) bakeTime.disabled = false;
     if (switcher) {
         switcher.classList.remove('hidden');
     }
@@ -115,13 +125,57 @@ function resetContactFormState() {
     }
 }
 
+function initCureMethodControls() {
+    const cureRadios = document.querySelectorAll('input[name="detail_cure_type"]');
+    const bakeParams = document.getElementById('detail-bake-params');
+    const bakeTemp = document.getElementById('detail-bake-temp');
+    const bakeTime = document.getElementById('detail-bake-time');
+    const noBakeHidden = document.getElementById('detail-no-bake');
+
+    function syncState() {
+        const selected = document.querySelector('input[name="detail_cure_type"]:checked')?.value;
+        const isAir = (selected === '風乾' || selected === '常溫風乾');
+        if (noBakeHidden) noBakeHidden.checked = isAir;
+        if (bakeParams && bakeTemp && bakeTime) {
+            if (isAir) {
+                bakeParams.classList.add('opacity-40', 'pointer-events-none');
+                bakeTemp.disabled = true;
+                bakeTime.disabled = true;
+            } else {
+                bakeParams.classList.remove('opacity-40', 'pointer-events-none');
+                bakeTemp.disabled = false;
+                bakeTime.disabled = false;
+            }
+        }
+    }
+
+    cureRadios.forEach(r => {
+        r.addEventListener('change', syncState);
+    });
+
+    [bakeTemp, bakeTime].forEach(input => {
+        if (!input) return;
+        input.addEventListener('focus', () => {
+            const bakeRadio = document.getElementById('detail-cure-bake');
+            if (bakeRadio && !bakeRadio.checked) {
+                bakeRadio.checked = true;
+                syncState();
+            }
+        });
+    });
+
+    syncState();
+}
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         initFormDates();
+        initCureMethodControls();
         checkAndInitCooldown();
     });
 } else {
     initFormDates();
+    initCureMethodControls();
     checkAndInitCooldown();
 }
 
@@ -381,9 +435,13 @@ async function handleContactSubmit(event) {
         const substrates = getCheckedValues('substrate[]');
         const otherSubstrate = document.getElementById('detail-substrate-other')?.value.trim();
         const filmThick = document.getElementById('detail-film-thick')?.value.trim();
-        const noBake = document.getElementById('detail-no-bake')?.checked ? '是' : '否';
-        const bakeTemp = document.getElementById('detail-bake-temp')?.value.trim();
-        const bakeTime = document.getElementById('detail-bake-time')?.value.trim();
+        const cureType = form.querySelector('input[name="detail_cure_type"]:checked')?.value;
+        const noBakeCheckbox = document.getElementById('detail-no-bake');
+        const isAirDry = (cureType === '風乾' || cureType === '常溫風乾' || noBakeCheckbox?.checked === true);
+        const cureMethod = isAirDry ? '常溫風乾' : '烘烤';
+        const noBake = isAirDry ? '是' : '否';
+        const bakeTemp = isAirDry ? '' : document.getElementById('detail-bake-temp')?.value.trim();
+        const bakeTime = isAirDry ? '' : document.getElementById('detail-bake-time')?.value.trim();
         const resins = getCheckedValues('resin[]');
         const otherResin = document.getElementById('detail-resin-other')?.value.trim();
         const restricted = document.getElementById('detail-restricted')?.value.trim();
@@ -425,9 +483,10 @@ async function handleContactSubmit(event) {
             substrates,
             otherSubstrate: otherSubstrate || '無',
             filmThick: filmThick || '',
+            cureMethod,
             noBake,
-            bakeTemp: bakeTemp || '未填寫',
-            bakeTime: bakeTime || '未填寫',
+            bakeTemp: isAirDry ? '無 (風乾)' : (bakeTemp || '未填寫'),
+            bakeTime: isAirDry ? '無 (風乾)' : (bakeTime || '未填寫'),
             resins,
             otherResin: otherResin || '',
             restricted: restricted || '無',

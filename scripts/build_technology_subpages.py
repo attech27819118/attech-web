@@ -427,12 +427,11 @@ def build_single_doc_layout_html(doc, slug, tab_key, item):
         </div>'''
 
     if has_mech_img:
-        # 原廠技術機制圖 (高清示意圖展示)
-        preview_box_html = f'''            <div class="h-full flex flex-col justify-center">
-                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-2xs flex flex-col items-center justify-center min-h-[460px] sm:min-h-[560px] overflow-hidden select-none" oncontextmenu="return false;">
-                    
+        # 原廠技術機制圖 (依原圖比例自然排版自適應，不強制固定卡片高度)
+        preview_box_html = f'''            <div class="flex flex-col justify-center">
+                <div class="bg-white rounded-xl border border-slate-200 p-3 sm:p-4 shadow-2xs flex flex-col items-center justify-center overflow-hidden select-none" oncontextmenu="return false;">
                     <img src="{doc.get("mechImg")}" alt="{doc.get("title")} 反應機制圖"
-                         class="w-full max-h-[420px] sm:max-h-[500px] object-contain rounded select-none pointer-events-none"
+                         class="max-w-full h-auto max-h-[640px] object-contain rounded select-none pointer-events-none mx-auto"
                          draggable="false">
                 </div>
             </div>'''
