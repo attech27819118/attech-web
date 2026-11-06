@@ -674,6 +674,47 @@ ${preRenderedContent}
     // 8. 確保所有 doc 文件下載連結皆為根目錄絕對路徑，防止深層目錄 404
     html = html.replace(/href="\.\/doc\//g, 'href="/doc/');
 
+    // 9. 注入 GA4 產品型號微互動追蹤事件 (view_item / view_item_list)
+    if (isProductDetailPage && productMeta) {
+        const prodEventScript = `\n    <!-- GA4 電商產品瀏覽事件 (view_item) -->
+    <script>
+        (function() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'view_item',
+                currency: 'TWD',
+                value: 0,
+                items: [{
+                    item_id: ${JSON.stringify(productMeta.name)},
+                    item_name: ${JSON.stringify(productMeta.name)},
+                    item_brand: ${JSON.stringify(productMeta.brandNameDisplay || productMeta.brandName)},
+                    item_category: ${JSON.stringify(productMeta.lineTitle)},
+                    item_category2: ${JSON.stringify(productMeta.partnerSlug)}
+                }],
+                product_name: ${JSON.stringify(productMeta.name)},
+                product_brand: ${JSON.stringify(productMeta.brandNameDisplay || productMeta.brandName)},
+                product_category: ${JSON.stringify(productMeta.lineTitle)}
+            });
+        })();
+    </script>`;
+        html = html.replace('</body>', `${prodEventScript}\n</body>`);
+    } else if (categoryMeta) {
+        const catEventScript = `\n    <!-- GA4 電商目錄清單瀏覽事件 (view_item_list) -->
+    <script>
+        (function() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'view_item_list',
+                item_list_id: ${JSON.stringify(categoryMeta.lineSlug || '')},
+                item_list_name: ${JSON.stringify(categoryMeta.lineTitle || '')},
+                product_brand: ${JSON.stringify(categoryMeta.brandName || '')},
+                product_category: ${JSON.stringify(categoryMeta.lineTitle || '')}
+            });
+        })();
+    </script>`;
+        html = html.replace('</body>', `${catEventScript}\n</body>`);
+    }
+
     return html;
 }
 
@@ -734,10 +775,10 @@ function renderProductTableRows(products, partnerSlug, lineSlug) {
             const safeUrl = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(name)}/`;
 
             return `
-        <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors" data-product-name="${escapeHtml(name)}">
+        <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors" data-product-name="${escapeHtml(name)}" data-brand="Others" data-line="polyester_resin">
             <td class="py-3 px-3.5 font-bold text-slate-900 align-middle min-w-[125px]">
                 <div class="flex flex-col items-start gap-1 w-full py-0.5">
-                    <a href="${safeUrl}" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">
+                    <a href="${safeUrl}" title="查看 ${escapeHtml(name)} 完整規格與應用" class="f-weight-bold text-blue-950 hover:underline break-words leading-snug min-w-0 w-full text-left block">
                         ${escapeHtml(name)}
                     </a>
                     <div class="flex items-center gap-1.5 shrink-0 select-none mt-1.5 whitespace-nowrap">
@@ -768,9 +809,9 @@ function renderProductTableRows(products, partnerSlug, lineSlug) {
         const usageText = appList.map(a => a.title).join('、') || p.main_usage || p.application_fields_zh || '—';
         const safeUrl = `/products/${partnerSlug}/${lineSlug}/${encodeURIComponent(name)}/`;
         return `
-        <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors">
+        <tr class="hover:bg-blue-50/50 border-b border-gray-200 text-sm transition-colors" data-product-name="${escapeHtml(name)}" data-brand="${escapeHtml(partnerSlug)}" data-line="${escapeHtml(lineSlug)}">
             <td class="py-3 px-3.5 font-bold text-slate-900 align-top w-[25%]">
-                <a href="${safeUrl}" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
+                <a href="${safeUrl}" title="查看 ${escapeHtml(name)} 完整規格與應用" class="text-blue-950 font-extrabold text-sm hover:underline block leading-snug">
                     ${escapeHtml(name)}
                 </a>
                 <div class="text-xs text-slate-500 font-normal mt-0.5">${escapeHtml(comp)}</div>
@@ -778,7 +819,7 @@ function renderProductTableRows(products, partnerSlug, lineSlug) {
             <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[40%]">${escapeHtml(props)}</td>
             <td class="py-3 px-3.5 text-slate-800 font-normal align-top leading-relaxed whitespace-pre-line w-[25%]">${escapeHtml(usageText)}</td>
             <td class="py-3 px-3.5 text-center align-top w-[10%]">
-                <a href="${safeUrl}" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
+                <a href="${safeUrl}" title="查看 ${escapeHtml(name)} 完整規格與應用" class="px-2.5 py-1 bg-white hover:bg-blue-50 border border-blue-300 text-blue-950 rounded font-bold text-xs shadow-xs inline-flex items-center gap-1 transition-all">
                     <span>規格詳情</span>
                     <i class="fa-solid fa-chevron-right text-[10px]"></i>
                 </a>
@@ -1141,6 +1182,9 @@ for (const [brandKey, brandObj] of Object.entries(config)) {
                         "@type": "Product",
                         "name": `${pName} ${seoInfo.categorySubTitle}`,
                         "alternateName": [pName, seoInfo.categorySubTitle],
+                        "mpn": pName,
+                        "sku": `${partnerSlug.toUpperCase()}-${pName}`,
+                        "model": pName,
                         "category": seoInfo.categoryTag,
                         "image": `${DOMAIN}/img/MCP-Logo.png`,
                         "description": `${seoInfo.brandDisplay} ${pName} ${seoInfo.categorySubTitle}：主要成分：${comp || '特用化學材料'}。適用體系與應用領域：${usageText}。特性說明：${props.replace(/\n/g, ' ')}。宏威應用材料提供原廠規格書 TDS 下載、樣品申請與技術諮詢。`,

@@ -94,6 +94,26 @@ document.addEventListener('click', (e) => {
     const cleanPath = href.replace(/^\/|\/$/g, '').split('?')[0];
     const pathParts = cleanPath.split('/').filter(Boolean);
     if (pathParts[0] === 'products' && pathParts.length >= 4) {
+        const pPartner = pathParts[1] || '';
+        const pLine = pathParts[2] || '';
+        let pName = pathParts[3] || '';
+        try { pName = decodeURIComponent(pName); } catch (e) {}
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'select_item', {
+                item_list_id: pLine,
+                item_list_name: pLine,
+                items: [{
+                    item_id: pName,
+                    item_name: pName,
+                    item_brand: pPartner,
+                    item_category: pLine
+                }],
+                product_name: pName,
+                product_brand: pPartner,
+                product_category: pLine
+            });
+        }
         return;
     }
     if (pathParts[0] === 'technology') {
@@ -224,7 +244,11 @@ function openModal(productName, type) {
                     event_label: productName,
                     product_name: productName,
                     file_name: `${productName}_${type.toUpperCase()}.pdf`,
-                    doc_type: type
+                    doc_type: type,
+                    items: [{
+                        item_id: productName,
+                        item_name: productName
+                    }]
                 });
             }
         };
@@ -236,7 +260,11 @@ function openModal(productName, type) {
             event_category: 'TDS_Document',
             event_label: productName,
             product_name: productName,
-            doc_type: type
+            doc_type: type,
+            items: [{
+                item_id: productName,
+                item_name: productName
+            }]
         });
     }
 
@@ -484,6 +512,21 @@ function parseUrlRoute() {
             if (document.querySelector('.product-seo-detail')) {
                 document.body.classList.add('is-product-detail');
                 updatePageMeta('product', decodedProductName);
+                if (typeof gtag === 'function') {
+                    gtag('event', 'view_item', {
+                        currency: 'TWD',
+                        value: 0,
+                        items: [{
+                            item_id: decodedProductName,
+                            item_name: decodedProductName,
+                            item_brand: AppState.partner || '',
+                            item_category: AppState.productLine || ''
+                        }],
+                        product_name: decodedProductName,
+                        product_brand: AppState.partner || '',
+                        product_category: AppState.productLine || ''
+                    });
+                }
                 return;
             }
 
@@ -847,3 +890,66 @@ function navigateToCategory(partner, lineKey, categoryKey = 'all', productName =
     updateUrlRoute(true);
 }
 
+
+
+// ==========================================
+// GA4 產品型號停留可視度追蹤 (IntersectionObserver)
+// ==========================================
+let _productImpressionObserver = null;
+const _seenProductsInSession = new Set();
+
+function initProductImpressionObserver() {
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    if (!_productImpressionObserver) {
+        _productImpressionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                    const tr = entry.target;
+                    const pName = tr.getAttribute('data-product-name');
+                    if (pName && !_seenProductsInSession.has(pName)) {
+                        tr._dwellTimer = setTimeout(() => {
+                            if (_seenProductsInSession.has(pName)) return;
+                            _seenProductsInSession.add(pName);
+                            const pBrand = tr.getAttribute('data-brand') || (typeof AppState !== 'undefined' ? AppState.partner : '') || '';
+                            const pLine = tr.getAttribute('data-line') || (typeof AppState !== 'undefined' ? AppState.productLine : '') || '';
+
+                            if (typeof gtag === 'function') {
+                                gtag('event', 'view_item_impression', {
+                                    item_id: pName,
+                                    item_name: pName,
+                                    item_brand: pBrand,
+                                    item_category: pLine,
+                                    product_name: pName,
+                                    product_brand: pBrand,
+                                    product_category: pLine
+                                });
+                            }
+                        }, 1500);
+                    }
+                } else {
+                    if (entry.target._dwellTimer) {
+                        clearTimeout(entry.target._dwellTimer);
+                        entry.target._dwellTimer = null;
+                    }
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+    }
+
+    const targets = document.querySelectorAll('#directory-matrix-body tr[data-product-name], tr[data-product-name], .product-accordion-card[data-product-name]');
+    targets.forEach(el => {
+        const pName = el.getAttribute('data-product-name');
+        if (pName && !_seenProductsInSession.has(pName)) {
+            _productImpressionObserver.observe(el);
+        }
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProductImpressionObserver);
+} else {
+    setTimeout(initProductImpressionObserver, 300);
+}

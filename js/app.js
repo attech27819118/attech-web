@@ -640,6 +640,9 @@ function renderProducts() {
     }
 
     tbody.innerHTML = filtered.map((p, idx) => DynamicTableRenderer.getRowHTML(p, idx, activeFields, currentPartnerKey)).join('');
+    if (typeof initProductImpressionObserver === 'function') {
+        setTimeout(initProductImpressionObserver, 100);
+    }
 }
 
 function toggleProductDetail(index, productName) {
@@ -658,6 +661,21 @@ function toggleProductDetail(index, productName) {
         if (parentRow) parentRow.classList.add('row-expanded');
         if (!AppState.expandedDetails.includes(productName)) AppState.expandedDetails.push(productName);
         AppState.selectedProduct = productName;
+        if (typeof gtag === 'function' && productName) {
+            gtag('event', 'select_item', {
+                item_list_id: AppState.productLine || '',
+                item_list_name: AppState.category || '',
+                items: [{
+                    item_id: productName,
+                    item_name: productName,
+                    item_brand: AppState.partner || 'MPI',
+                    item_category: AppState.productLine || ''
+                }],
+                product_name: productName,
+                product_brand: AppState.partner || 'MPI',
+                product_category: AppState.productLine || ''
+            });
+        }
         if (typeof updateHashRoute === 'function') updateHashRoute(false);
     } else {
         detailRow.classList.add('hidden');

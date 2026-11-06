@@ -74,13 +74,29 @@ function toggleCompareProduct(productName, partnerKey = null, lineKey = null, pr
             product: p
         });
 
-        // 發送 GA4 加入規格比較事件
+        // 發送 GA4 加入規格比較事件與商品選取事件
         if (typeof gtag === 'function') {
             gtag('event', 'add_to_compare', {
                 event_category: 'Product_Comparison',
                 event_label: productName,
                 product_name: productName,
-                brand: finalPartner || ''
+                brand: finalPartner || '',
+                items: [{
+                    item_id: productName,
+                    item_name: productName,
+                    item_brand: finalPartner || ''
+                }]
+            });
+            gtag('event', 'select_item', {
+                item_list_id: lineKey || AppState.productLine || 'compare',
+                item_list_name: lineKey || AppState.productLine || 'compare',
+                items: [{
+                    item_id: productName,
+                    item_name: productName,
+                    item_brand: finalPartner || ''
+                }],
+                product_name: productName,
+                product_brand: finalPartner || ''
             });
         }
         showToast(AppState.lang === 'zh' ? `已將「${productName}」加入比較清單 (${AppState.compareList.length}/4)` : `Added "${productName}" to comparison (${AppState.compareList.length}/4)`, 'success');

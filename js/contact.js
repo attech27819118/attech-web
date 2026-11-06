@@ -657,7 +657,20 @@ function requestProductSample(productName, preferredMode = 'quick') {
                 event_category: 'Lead_Engagement',
                 event_label: productName,
                 product_name: productName,
-                preferred_mode: preferredMode
+                preferred_mode: preferredMode,
+                items: [{
+                    item_id: productName,
+                    item_name: productName
+                }]
+            });
+            gtag('event', 'select_item', {
+                item_list_id: 'sample_request',
+                item_list_name: '索樣需求',
+                items: [{
+                    item_id: productName,
+                    item_name: productName
+                }],
+                product_name: productName
             });
         }
     } catch (gtagErr) {
