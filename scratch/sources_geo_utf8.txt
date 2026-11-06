@@ -1,0 +1,55 @@
+﻿=== GA4 USER FIRST SOURCE (Table 3) ===
+                                    最初招攬到使用者的來源/媒介  活躍使用者_9月  活躍使用者_10月  使用者增減
+0                                (direct) / (none)      90.0        157   67.0
+7                                 google / organic      33.0        103   70.0
+3                           cn.bing.com / referral       6.0         17   11.0
+1                                   bing / organic       1.0          5    4.0
+8  teams.public.onecdn.static.microsoft / referral       0.0          3    3.0
+2                       chatgpt.com / ai-assistant       1.0          3    2.0
+9                   tw.search.yahoo.com / referral       3.0          3    0.0
+4                           copilot.com / referral       1.0          1    0.0
+5                            github.com / referral       1.0          1    0.0
+6                                     google / cpc       0.0          1    1.0
+
+=== GA4 SESSION SOURCE / MEDIUM (Table 4) ===
+                                          工作階段來源/媒介  工作階段_9月  工作階段_10月  工作階段增減   成長率%
+7                                  google / organic     84.0     185.0   101.0  120.2
+0                                 (direct) / (none)    110.0     178.0    68.0   61.8
+3                            cn.bing.com / referral      8.0      25.0    17.0  212.5
+5                             github.com / referral      7.0      19.0    12.0  171.4
+2                        chatgpt.com / ai-assistant      1.0       5.0     4.0  400.0
+1                                    bing / organic      1.0       5.0     4.0  400.0
+10  teams.public.onecdn.static.microsoft / referral      0.0       3.0     3.0  300.0
+11                   tw.search.yahoo.com / referral      3.0       3.0     0.0    0.0
+6                                      google / cpc      0.0       1.0     1.0  100.0
+4                            copilot.com / referral      3.0       1.0    -2.0  -66.7
+8                        product_detail / (not set)      0.0       1.0     1.0  100.0
+9                      search.google.com / referral      1.0       0.0    -1.0 -100.0
+
+=== GA4 TOP CITIES (Table 7) ===
+                       城市  活躍使用者_9月  活躍使用者_10月  使用者增減
+19              Guangzhou       4.0       29.0   25.0
+59               Shenzhen       4.0       28.0   24.0
+61              Singapore       9.0       23.0   14.0
+5         Beitun District      10.0       13.0    3.0
+83     Zhongshan District       2.0       12.0   10.0
+16          East District       4.0       10.0    6.0
+33        Lingya District       1.0        7.0    6.0
+3        Banqiao District       2.0        7.0    5.0
+1                 Ashburn       3.0        6.0    3.0
+13         Da’an District       4.0        6.0    2.0
+81       Zhongli District       2.0        6.0    4.0
+70          West District       0.0        5.0    5.0
+78      Yongkang District       1.0        5.0    4.0
+84    Zhongzheng District       2.0        5.0    3.0
+80       Zhonghe District       2.0        4.0    2.0
+27         Hukou Township       1.0        4.0    3.0
+86                 Zhuhai       1.0        4.0    3.0
+24              Hong Kong       0.0        4.0    4.0
+75         Xinyi District       3.0        3.0    0.0
+88       Zuoying District       1.0        3.0    2.0
+69  West Central District       1.0        3.0    2.0
+85            Zhubei City       2.0        3.0    1.0
+23       Ho Chi Minh City       0.0        2.0    2.0
+7           Changhua City       1.0        2.0    1.0
+12        Dayuan District       0.0        2.0    2.0
