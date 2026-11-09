@@ -475,7 +475,9 @@ async function appendToGoogleSheet(data, pdfBuffer, pdfFilename) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
-        console.log(`[GoogleSheet] Synced row: ${payload.company} (HTTP ${res.status})`);
+        const resJson = await res.json().catch(() => ({}));
+        console.log(`[GoogleSheet] Synced row: ${payload.company} (HTTP ${res.status}), pdfUrl: ${resJson.pdfUrl || 'none'}`);
+        return resJson;
     } catch (err) {
         console.error('[GoogleSheet Error]:', err.message);
     }
@@ -704,6 +706,15 @@ D & E. 測試紀錄與備註
                     <p style="color: #1e3a8a; font-weight: bold; margin: 0; font-size: 15px;">詳細應用需求評估 (完整申請單)</p>
                 </div>
 
+                <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 12px 16px; margin-bottom: 16px;">
+                    <div style="font-weight: bold; color: #166534; font-size: 14px; margin-bottom: 4px;">📊 雲端自動同步提醒</div>
+                    <div style="font-size: 12px; color: #15803d; margin-bottom: 10px;">本筆需求已即時自動歸檔至 Google 需求紀錄總表，PDF 申請單已同步存入雲端硬碟。</div>
+                    <div>
+                        <a href="${GOOGLE_SHEET_VIEW_URL}" target="_blank" style="display: inline-block; background-color: #16a34a; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-right: 8px;">📊 開啟 Google 需求總表 ➔</a>
+                        {{PDF_ACTION_BUTTON}}
+                    </div>
+                </div>
+
                 <h3 style="color: #1e3a8a; background-color: #eff6ff; padding: 6px 10px; border-left: 4px solid #1e3a8a; font-size: 14px; margin: 16px 0 8px 0;">A. 基本聯絡資訊</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px;">
                     <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 6px; font-weight: bold; width: 140px; color: #475569;">填表日期：</td><td style="padding: 6px;">${applyDate}</td></tr>
@@ -808,6 +819,22 @@ D & E. 測試紀錄與備註
             console.error('PDF 生成錯誤:', pdfErr);
         }
 
+        // 同步寫入 Google 試算表（含雲端 PDF）並取得雲端連結
+        let pdfUrl = '';
+        try {
+            const sheetResult = await appendToGoogleSheet(data, pdfBuffer, pdfFilename);
+            if (sheetResult && sheetResult.pdfUrl) {
+                pdfUrl = sheetResult.pdfUrl;
+            }
+        } catch (sheetErr) {
+            console.error('[GoogleSheet Server Error]:', sheetErr);
+        }
+
+        const pdfActionBtn = pdfUrl
+            ? `<a href="${pdfUrl}" target="_blank" style="display: inline-block; background-color: #2563eb; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: bold;">📄 線上開啟 PDF 申請單 ➔</a>`
+            : '';
+        htmlContent = htmlContent.replace('{{PDF_ACTION_BUTTON}}', pdfActionBtn);
+
         // CC 副本名單
         let ccList = ['sales1@attech.com.tw'];
         if (data.cc) {
@@ -856,8 +883,7 @@ D & E. 測試紀錄與備註
             console.log(`[SMTP Sent] ${company} - ${contact} (${type})`);
         }
 
-        // 同步寫入 Google 試算表（非同步背景處理，含雲端 PDF）
-        appendToGoogleSheet(data, pdfBuffer, pdfFilename);
+// Google 試算表與雲端硬碟已於發信前完成同步
 
         res.status(200).json({
             success: true,
