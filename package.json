@@ -33,6 +33,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build": "npm run build:css && node scripts/build-static-pages.js && node scripts/generate_sitemap.js",
+    "build:all": "npm run build:css && python scripts/sync_tech_updates.py && node scripts/build-static-pages.js && node scripts/generate_sitemap.js",
     "build:pages": "node scripts/build-static-pages.js",
     "build:css": "tailwindcss -i ./src/input.css -o ./css/output.css --minify",
     "dev": "tailwindcss -i ./src/input.css -o ./css/output.css --watch",
