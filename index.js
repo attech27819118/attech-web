@@ -134,7 +134,7 @@ function cleanupOldSubmissions() {
 
 // AWS Lambda 核心進入點
 // 同步將需求紀錄寫入 Google 試算表（非同步發送）
-async function appendToGoogleSheet(data) {
+async function appendToGoogleSheet(data, pdfBuffer, pdfFilename) {
     const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbxvdFXsz57oSrdAVynVet9_v4VPqAp0ZedUsSYVY7awLXYIbl8Dlgn__kgU-qW9p1nHQw/exec';
     if (!webhookUrl) return;
 
@@ -149,7 +149,9 @@ async function appendToGoogleSheet(data) {
             sampleSent: '',
             quoted: '',
             owner: '',
-            internalNote: ''
+            internalNote: '',
+            pdfBase64: pdfBuffer ? Buffer.from(pdfBuffer).toString('base64') : '',
+            pdfFileName: pdfFilename || `${data.company || '客戶'}_樣品申請單.pdf`
         };
 
         const res = await fetch(webhookUrl, {
@@ -498,16 +500,19 @@ D & E. 曾測試紀錄與備註
             ];
         }
 
+        let pdfBuffer = null;
+        const pdfFilename = isQuickMode ? `${company}_快速樣品申請單.pdf` : `${company}_詳細樣品申請單.pdf`;
+
         // 動態生成單頁 PDF 附件
         try {
-            const pdfBuffer = await createStyledPDF(
+            pdfBuffer = await createStyledPDF(
                 isQuickMode ? `${company} - 快速樣品申請單` : `${company} - 詳細樣品申請與技術評估單`,
                 pdfSections,
                 company
             );
 
             attachments.push({
-                filename: isQuickMode ? `${company}_快速樣品申請單.pdf` : `${company}_詳細樣品申請單.pdf`,
+                filename: pdfFilename,
                 content: pdfBuffer,
                 contentType: 'application/pdf'
             });
@@ -574,8 +579,8 @@ D & E. 曾測試紀錄與備註
         await transporter.sendMail(mailOptions);
         console.log(`[Lambda Sent] ${company} - ${contact} (${type})`);
 
-        // 同步寫入 Google 試算表
-        await appendToGoogleSheet(data);
+        // 同步寫入 Google 試算表（含雲端 PDF）
+        await appendToGoogleSheet(data, pdfBuffer, pdfFilename);
 
         return {
             statusCode: 200,

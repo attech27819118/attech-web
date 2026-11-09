@@ -450,7 +450,7 @@ function cleanupOldSubmissions() {
 }
 
 // 同步將需求紀錄寫入 Google 試算表（非同步背景發送，不阻礙使用者表單體驗）
-async function appendToGoogleSheet(data) {
+async function appendToGoogleSheet(data, pdfBuffer, pdfFilename) {
     const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbxvdFXsz57oSrdAVynVet9_v4VPqAp0ZedUsSYVY7awLXYIbl8Dlgn__kgU-qW9p1nHQw/exec';
     if (!webhookUrl) return;
 
@@ -465,7 +465,9 @@ async function appendToGoogleSheet(data) {
             sampleSent: '',
             quoted: '',
             owner: '',
-            internalNote: ''
+            internalNote: '',
+            pdfBase64: pdfBuffer ? Buffer.from(pdfBuffer).toString('base64') : '',
+            pdfFileName: pdfFilename || `${data.company || '客戶'}_樣品申請單.pdf`
         };
 
         const res = await fetch(webhookUrl, {
@@ -854,8 +856,8 @@ D & E. 測試紀錄與備註
             console.log(`[SMTP Sent] ${company} - ${contact} (${type})`);
         }
 
-        // 同步寫入 Google 試算表（非同步背景處理）
-        appendToGoogleSheet(data);
+        // 同步寫入 Google 試算表（非同步背景處理，含雲端 PDF）
+        appendToGoogleSheet(data, pdfBuffer, pdfFilename);
 
         res.status(200).json({
             success: true,
