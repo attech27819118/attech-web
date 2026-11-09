@@ -68,10 +68,11 @@ function createStyledPDF(title, sections, companyName) {
             totalRows += (sec.rows ? sec.rows.length : 0);
         });
 
-        const isCompact = totalRows > 12;
-        const baseRowHeight = isCompact ? 16 : 20;
-        const fontSize = isCompact ? 8 : 8.5;
-        const sectionHeaderHeight = isCompact ? 16 : 18;
+        // 版面最佳化：動態調整列高與字級，充實填滿 A4 頁面且嚴格保證單頁
+        const isCompact = totalRows > 15;
+        const baseRowHeight = isCompact ? 23 : 26;
+        const fontSize = isCompact ? 9 : 9.5;
+        const sectionHeaderHeight = isCompact ? 19 : 21;
 
         sections.forEach(section => {
             const secHeaderY = doc.y;
@@ -86,30 +87,30 @@ function createStyledPDF(title, sections, companyName) {
                 const textVal = String(row.value || '無');
 
                 doc.font(fontRegular).fontSize(fontSize);
-                const measuredHeight = doc.heightOfString(textVal, { width: valueWidth - 12 });
-                const actualRowHeight = Math.max(baseRowHeight, Math.min(36, measuredHeight + (isCompact ? 6 : 8)));
+                const measuredHeight = doc.heightOfString(textVal, { width: valueWidth - 14 });
+                const actualRowHeight = Math.max(baseRowHeight, Math.min(46, measuredHeight + 8));
 
                 doc.rect(startX, currentY, labelWidth, actualRowHeight).fillAndStroke('#F8FAFC', '#CBD5E1');
                 doc.rect(startX + labelWidth, currentY, valueWidth, actualRowHeight).fillAndStroke('#FFFFFF', '#CBD5E1');
 
-                doc.font(fontBold).fontSize(fontSize).fillColor('#1E293B').text(row.label, startX + 6, currentY + 3.5, {
-                    width: labelWidth - 10,
+                doc.font(fontBold).fontSize(fontSize).fillColor('#1E293B').text(row.label, startX + 7, currentY + 5, {
+                    width: labelWidth - 12,
                     ellipsis: true
                 });
 
-                doc.font(fontRegular).fontSize(fontSize).fillColor('#334155').text(textVal, startX + labelWidth + 6, currentY + 3.5, {
-                    width: valueWidth - 12,
-                    height: actualRowHeight - 5,
+                doc.font(fontRegular).fontSize(fontSize).fillColor('#334155').text(textVal, startX + labelWidth + 7, currentY + 5, {
+                    width: valueWidth - 14,
+                    height: actualRowHeight - 6,
                     ellipsis: true
                 });
 
                 doc.y = currentY + actualRowHeight;
             });
 
-            doc.y += 3.5;
+            doc.y += 6;
         });
 
-        const currentDate = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
+        const currentDate = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' }).replace(/\u202f/g, ' ');
         const footerY = doc.page.height - 28;
 
         doc.moveTo(startX, footerY - 4).lineTo(startX + pageWidth, footerY - 4).strokeColor('#CBD5E1').lineWidth(0.5).stroke();
