@@ -449,6 +449,36 @@ function cleanupOldSubmissions() {
     }
 }
 
+// 同步將需求紀錄寫入 Google 試算表（非同步背景發送，不阻礙使用者表單體驗）
+async function appendToGoogleSheet(data) {
+    const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbxvdFXsz57oSrdAVynVet9_v4VPqAp0ZedUsSYVY7awLXYIbl8Dlgn__kgU-qW9p1nHQw/exec';
+    if (!webhookUrl) return;
+
+    try {
+        const payload = {
+            applyDate: data.applyDate || new Date().toISOString().split('T')[0].replace(/-/g, '/'),
+            company: data.company || '',
+            contact: data.contact || '',
+            email: data.email || '',
+            sampleReq: data.sampleReq || (Array.isArray(data.sampleItems) ? data.sampleItems.map(s => s.name + (s.qty ? ` (${s.qty})` : '')).join('；') : (data.sample || '')),
+            remarks: data.remarks || data.message || '', // "詢問內容"填入詳細表單的"備註/其他說明"
+            sampleSent: '',
+            quoted: '',
+            owner: '',
+            internalNote: ''
+        };
+
+        const res = await fetch(webhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        console.log(`[GoogleSheet] Synced row: ${payload.company} (HTTP ${res.status})`);
+    } catch (err) {
+        console.error('[GoogleSheet Error]:', err.message);
+    }
+}
+
 // 表單提交與郵件發送端點
 app.post('/api/send-email', async (req, res) => {
     try {
@@ -823,6 +853,9 @@ D & E. 測試紀錄與備註
             await transporter.sendMail(mailOptions);
             console.log(`[SMTP Sent] ${company} - ${contact} (${type})`);
         }
+
+        // 同步寫入 Google 試算表（非同步背景處理）
+        appendToGoogleSheet(data);
 
         res.status(200).json({
             success: true,

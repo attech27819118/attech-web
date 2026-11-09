@@ -20,7 +20,7 @@ if hasattr(sys.stderr, 'reconfigure'):
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://www.attech.com.tw"
-CACHE_VERSION = "20261103_v1"
+CACHE_VERSION = "20261109_v2"
 
 # 載入原廠技術資料庫 (由 build_tech_json.py 產生)
 JSON_PATH = os.path.join(ROOT_DIR, "json", "tech_database.json")

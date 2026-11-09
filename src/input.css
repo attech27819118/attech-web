@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+#form-mode-detailed {
+    display: block !important;
+}

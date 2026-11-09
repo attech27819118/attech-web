@@ -382,8 +382,7 @@ function parseUrlRoute() {
             } else if (hTab === 'partners') {
                 cleanMigratedPath = '/partners/';
             } else if (hTab === 'contact') {
-                const mode = hParams.get('mode');
-                cleanMigratedPath = mode === 'detailed' ? '/contact/?mode=detailed' : '/contact/';
+                cleanMigratedPath = '/contact/';
             } else if (hTab === 'about') {
                 cleanMigratedPath = '/';
             }
@@ -446,13 +445,9 @@ function parseUrlRoute() {
     // 索樣與諮詢 (Contact)
     if (rootSegment === 'contact') {
         switchTab('contact', false, false);
-        const mode = segments[1] || searchParams.get('mode') || 'quick';
-        if (typeof switchFormMode === 'function') {
-            switchFormMode(mode === 'detailed' ? 'detailed' : 'quick');
-        }
         const prod = searchParams.get('product') || searchParams.get('item');
         if (prod && typeof requestProductSample === 'function') {
-            requestProductSample(decodeURIComponent(prod), mode);
+            requestProductSample(decodeURIComponent(prod));
         }
         updatePageMeta('contact');
         return;
@@ -637,8 +632,7 @@ function updateUrlRoute(usePush = false) {
         cleanPath = '/partners/';
         updatePageMeta('partners');
     } else if (activeTab === 'contact') {
-        const isDetailed = !document.getElementById('form-mode-detailed')?.classList.contains('hidden');
-        cleanPath = isDetailed ? '/contact/?mode=detailed' : '/contact/';
+        cleanPath = '/contact/';
         updatePageMeta('contact');
     } else if (activeTab === 'technology') {
         const activeTechCat = (typeof AppState !== 'undefined' && AppState.activeTechCategory) || 'tyzor';

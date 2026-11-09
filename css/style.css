@@ -894,3 +894,8 @@ body.is-product-detail .product-seo-detail {
 .tech-mega-menu .mega-item:hover {
     background-color: #dbe4f0 !important;
 }
+
+#form-mode-detailed {
+    display: block !important;
+}
+

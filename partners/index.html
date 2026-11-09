@@ -1105,7 +1105,7 @@
                 </div>
             </div>
         </section>
-                                                                <!-- Tab: 技術專區 (Technology) - 獨立分頁一頁式緊湊呈現 (統一白色風格：左側條列式切換，右側資料顯示) -->
+                                                                        <!-- Tab: 技術專區 (Technology) - 獨立分頁一頁式緊湊呈現 (統一白色風格：左側條列式切換，右側資料顯示) -->
     <section id="tab-technology" class="tab-content" role="tabpanel" aria-labelledby="nav-technology">
         <style>
         .tech-layout-container {
@@ -2074,32 +2074,11 @@
                 <!-- 表單主體 -->
                 <div id="contact-form-card"
                     class="bg-white border border-slate-200 shadow-md rounded-xl overflow-hidden scroll-mt-20">
-                    <div id="contact-mode-switcher"
-                        class="bg-slate-100/90 p-2 sm:p-2.5 border-b border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
-                        <button type="button" onclick="switchFormMode('quick')" id="mode-btn-quick"
-                            class="flex items-center justify-center gap-2.5 p-2.5 rounded-lg border text-left bg-white text-blue-950 border-blue-900 shadow-sm f-weight-bold">
-                            <i class="fa-solid fa-bolt text-amber-500 f-size-lg shrink-0" aria-hidden="true"></i>
-                            <div>
-                                <div class="f-size-base f-weight-bold" id="mode-quick-title">指定樣品 / 快速詢價</div>
-                                <div class="f-size-sm text-slate-700 f-weight-medium" id="mode-quick-sub">
-                                    已有明確產品型號，快速留下資料
-                                </div>
-                            </div>
-                        </button>
-
-                        <button type="button" onclick="switchFormMode('detailed')" id="mode-btn-detailed"
-                            class="flex items-center justify-center gap-2.5 p-2.5 rounded-lg border border-transparent hover:bg-slate-200/60 text-left text-slate-700 f-weight-medium">
-                            <i class="fa-solid fa-clipboard-list text-blue-800 f-size-lg shrink-0"
-                                aria-hidden="true"></i>
-                            <div>
-                                <div class="f-size-base f-weight-bold" id="mode-detailed-title">詳細應用需求評估
-
-                                </div>
-                                <div class="f-size-sm text-slate-700 f-weight-medium" id="mode-detailed-sub">
-                                    提供配方條件與底材資訊，由專人為您選擇適合產品
-                                </div>
-                            </div>
-                        </button>
+                    <div class="bg-slate-100/90 px-4 py-3 sm:px-6 sm:py-3.5 border-b border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5 text-blue-950 font-bold">
+                            <i class="fa-solid fa-clipboard-list text-blue-800 text-lg" aria-hidden="true"></i>
+                            <span class="text-base sm:text-lg">樣品索取與詳細技術評估需求單</span>
+                        </div>
                     </div>
 
                     <form id="attech-contact-form" onsubmit="handleContactSubmit(event)"
@@ -2111,90 +2090,8 @@
                             <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off">
                         </div>
 
-                        <!-- 模式一：指定樣品 / 快速詢價表單 -->
-                        <div id="form-mode-quick" class="space-y-5">
-                            <div
-                                class="bg-blue-50 border border-blue-200 rounded-lg p-3.5 f-size-sm text-blue-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 f-weight-medium">
-                                <div class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-circle-info  text-blue-700 f-size-base shrink-0 mt-0.5"
-                                        aria-hidden="true"></i>
-                                    <div>
-                                        <span>若您已確定欲索取的樣品名稱（如：MP-22），填寫此表單即可快速寄送。</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-1.5 shrink-0 self-end md:self-center">
-                                    <span class="f-size-xs text-blue-900 f-weight-bold hidden sm:inline">紙本下載：</span>
-                                    <a href="doc/Sample_Request_Form_Quick.docx" download="宏威應用材料_簡易樣品申請單.docx"
-                                        class="inline-flex items-center gap-1 text-slate-700 hover:text-blue-900 bg-white border border-slate-300 hover:border-blue-400 hover:bg-blue-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all"
-                                        title="下載簡易樣品申請單 Word 檔">
-                                        <i class="fa-solid fa-file-word text-blue-700" aria-hidden="true"></i> Word
-                                    </a>
-                                    <a href="doc/Sample_Request_Form_Quick.pdf" download="宏威應用材料_簡易樣品申請單.pdf"
-                                        class="inline-flex items-center gap-1 text-slate-700 hover:text-red-900 bg-white border border-slate-300 hover:border-red-400 hover:bg-red-50/50 px-2 py-1 rounded shadow-sm f-size-xs f-weight-medium transition-all"
-                                        title="下載簡易樣品申請單 PDF 檔">
-                                        <i class="fa-solid fa-file-pdf text-red-600" aria-hidden="true"></i> PDF
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 f-size-sm">
-                                <div>
-                                    <label for="quick-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="text" id="quick-company" name="quick_company" required
-                                        autocomplete="off" spellcheck="false" placeholder="請輸入公司名稱"
-                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="quick-contact" class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="text" id="quick-contact" name="quick_contact" required
-                                        autocomplete="off" spellcheck="false" placeholder="請輸入聯絡人姓名與職稱"
-                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="quick-email" class="block f-weight-bold text-slate-900 mb-1">電子信箱 <span
-                                            class="text-red-600">*</span></label>
-                                    <input type="email" id="quick-email" name="quick_email" required autocomplete="off"
-                                        spellcheck="false" placeholder="example@company.com"
-                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div>
-                                    <label for="quick-contact-tel" class="block f-weight-bold text-slate-900 mb-1">聯絡電話
-                                        / 手機 <span class="text-red-600">*</span></label>
-                                    <input type="tel" id="quick-contact-tel" name="quick_contact_tel" required
-                                        autocomplete="off" spellcheck="false"
-                                        pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$|^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
-                                        title="請輸入手機或市話號碼（如：0912-345-678 或 04-2239-8056#123）"
-                                        placeholder="如：0912-345-678 或 04-2239-8056#123"
-                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div class="md:col-span-2">
-                                    <label for="quick-sample" class="block f-weight-bold text-slate-900 mb-1">指定索樣產品與數量
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="text" id="quick-sample" name="quick_sample" required autocomplete="off"
-                                        spellcheck="false" placeholder="例如：MP-22 (100g)"
-                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div class="md:col-span-2">
-                                    <label for="quick-address" class="block f-weight-bold text-slate-900 mb-1">樣品寄送地址
-                                        <span class="text-red-600">*</span></label>
-                                    <input type="text" id="quick-address" name="quick_address" required
-                                        autocomplete="off" spellcheck="false" placeholder="請輸入完整的收件地址"
-                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
-                                </div>
-                                <div class="md:col-span-2">
-                                    <label for="quick-msg" class="block f-weight-bold text-slate-900 mb-1">備註 /
-                                        詢問內容</label>
-                                    <textarea id="quick-msg" name="quick_msg" rows="3" autocomplete="off"
-                                        spellcheck="false" placeholder="請輸入您的其他需求或疑問..."
-                                        class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 模式二：詳細應用需求評估 -->
-                        <div id="form-mode-detailed" class="space-y-5 hidden">
+                        <!-- 詳細應用需求評估表單 -->
+                        <div id="form-mode-detailed" class="space-y-5" style="display: block !important;">
                             <div
                                 class="bg-indigo-50 border border-indigo-200 rounded-lg p-3.5 f-size-sm text-indigo-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 f-weight-medium mb-4">
                                 <div class="flex items-start gap-2.5">
@@ -2235,7 +2132,7 @@
                                     <div>
                                         <label for="detail-company" class="block f-weight-bold text-slate-900 mb-1">公司名稱
                                             <span class="text-red-600">*</span></label>
-                                        <input type="text" id="detail-company" name="detail_company" autocomplete="off"
+                                        <input type="text" id="detail-company" name="detail_company" required autocomplete="off"
                                             spellcheck="false" placeholder="請輸入公司名稱"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
@@ -2243,14 +2140,14 @@
                                         <label for="detail-contact"
                                             class="block f-weight-bold text-slate-900 mb-1">聯絡人（職稱）
                                             <span class="text-red-600">*</span></label>
-                                        <input type="text" id="detail-contact" name="detail_contact" autocomplete="off"
+                                        <input type="text" id="detail-contact" name="detail_contact" required autocomplete="off"
                                             spellcheck="false" placeholder="請輸入聯絡人姓名與職稱"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
                                     <div>
                                         <label for="detail-email" class="block f-weight-bold text-slate-900 mb-1">Email
                                             <span class="text-red-600">*</span></label>
-                                        <input type="email" id="detail-email" name="detail_email" autocomplete="off"
+                                        <input type="email" id="detail-email" name="detail_email" required autocomplete="off"
                                             spellcheck="false" placeholder="example@company.com"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
@@ -2258,7 +2155,7 @@
                                         <label for="detail-contact-tel"
                                             class="block f-weight-bold text-slate-900 mb-1">聯絡電話
                                             / 手機 <span class="text-red-600">*</span></label>
-                                        <input type="tel" id="detail-contact-tel" name="detail_contact_tel"
+                                        <input type="tel" id="detail-contact-tel" name="detail_contact_tel" required
                                             autocomplete="off" spellcheck="false"
                                             pattern="^(\+?886\-?|0)9\d{8}$|^(\+?886\-?|0)9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$|^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$"
                                             title="請輸入手機或市話號碼（如：0912-345-678 或 04-2239-8056#123）"
@@ -2288,7 +2185,7 @@
                                     <div class="md:col-span-2">
                                         <label for="detail-address" class="block f-weight-bold text-slate-900 mb-1">寄送地址
                                             <span class="text-red-600">*</span></label>
-                                        <input type="text" id="detail-address" name="detail_address" autocomplete="off"
+                                        <input type="text" id="detail-address" name="detail_address" required autocomplete="off"
                                             spellcheck="false" placeholder="請輸入完整的樣品收件地址"
                                             class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                     </div>
@@ -2739,7 +2636,7 @@
                                                 <label for="detail-sample-req"
                                                     class="block f-size-xs f-weight-bold text-slate-700 mb-0.5">產品 1 名稱
                                                     / 型號 <span class="text-red-600">*</span></label>
-                                                <input type="text" id="detail-sample-req" name="detail_sample_req"
+                                                <input type="text" id="detail-sample-req" name="detail_sample_req" required
                                                     autocomplete="off" spellcheck="false" placeholder="例如：MP-22"
                                                     class="w-full px-2.5 py-1.5 bg-white border border-slate-300 rounded outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-slate-900 f-weight-medium placeholder-slate-500">
                                             </div>
@@ -2826,18 +2723,7 @@
                                 <p>※ 本調查表內所含之個人資料將受我司嚴格保護，並僅作為公司業務聯繫使用。</p>
                                 <p class="mt-1">習慣傳真作業？點此下載紙本傳真申請單：
                                     <span class="inline-flex items-center gap-1 ml-0.5">
-                                        <span class="text-slate-700 f-weight-bold">[簡易申請單]</span>
-                                        <a href="doc/Sample_Request_Form_Quick.docx" download="宏威應用材料_簡易樣品申請單.docx"
-                                            class="text-blue-900 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i
-                                                class="fa-solid fa-file-word text-blue-700 f-size-xs"></i>Word</a>
-                                        <span class="text-slate-400">/</span>
-                                        <a href="doc/Sample_Request_Form_Quick.pdf" download="宏威應用材料_簡易樣品申請單.pdf"
-                                            class="text-red-700 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i
-                                                class="fa-solid fa-file-pdf text-red-600 f-size-xs"></i>PDF</a>
-                                    </span>
-                                    <span class="text-slate-400 mx-1">|</span>
-                                    <span class="inline-flex items-center gap-1">
-                                        <span class="text-slate-700 f-weight-bold">[詳細評估單]</span>
+                                        <span class="text-slate-700 f-weight-bold">[樣品申請單]</span>
                                         <a href="doc/Sample_Request_Form_Detailed.docx" download="宏威應用材料_詳細樣品申請單.docx"
                                             class="text-blue-900 f-weight-bold hover:underline inline-flex items-center gap-0.5"><i
                                                 class="fa-solid fa-file-word text-blue-700 f-size-xs"></i>Word</a>

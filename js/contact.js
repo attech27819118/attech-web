@@ -84,8 +84,6 @@ function checkAndInitCooldown() {
 function resetContactFormState() {
     const successCard = document.getElementById('contact-success-state');
     const form = document.getElementById('attech-contact-form');
-    const switcher = document.getElementById('contact-mode-switcher');
-
     if (form) {
         form.reset();
         form.classList.remove('hidden');
@@ -100,9 +98,6 @@ function resetContactFormState() {
     if (bakeParams) bakeParams.classList.remove('opacity-40', 'pointer-events-none');
     if (bakeTemp) bakeTemp.disabled = false;
     if (bakeTime) bakeTime.disabled = false;
-    if (switcher) {
-        switcher.classList.remove('hidden');
-    }
     if (successCard) {
         successCard.classList.add('hidden');
     }
@@ -167,13 +162,25 @@ function initCureMethodControls() {
     syncState();
 }
 
+function ensureFormVisible() {
+    const form = document.getElementById('attech-contact-form');
+    const detailed = document.getElementById('form-mode-detailed');
+    if (form) form.classList.remove('hidden');
+    if (detailed) {
+        detailed.classList.remove('hidden');
+        detailed.style.setProperty('display', 'block', 'important');
+    }
+}
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+        ensureFormVisible();
         initFormDates();
         initCureMethodControls();
         checkAndInitCooldown();
     });
 } else {
+    ensureFormVisible();
     initFormDates();
     initCureMethodControls();
     checkAndInitCooldown();
@@ -181,106 +188,7 @@ if (document.readyState === 'loading') {
 
 function switchFormMode(mode) {
     initFormDates();
-    const quick = document.getElementById('form-mode-quick');
-    const detailed = document.getElementById('form-mode-detailed');
-    const btnQuick = document.getElementById('mode-btn-quick');
-    const btnDetailed = document.getElementById('mode-btn-detailed');
-
-    const quickRequired = ['quick-company', 'quick-contact', 'quick-email', 'quick-contact-tel', 'quick-sample', 'quick-address'];
-    const detailRequired = ['detail-company', 'detail-contact', 'detail-email', 'detail-contact-tel', 'detail-address', 'detail-sample-req'];
-
-    // 雙向同步共有欄位內容，確保切換模式時使用者輸入與帶入之索樣產品不遺失
-    const quickCompanyEl = document.getElementById('quick-company');
-    const detailCompanyEl = document.getElementById('detail-company');
-    const quickContactEl = document.getElementById('quick-contact');
-    const detailContactEl = document.getElementById('detail-contact');
-    const quickEmailEl = document.getElementById('quick-email');
-    const detailEmailEl = document.getElementById('detail-email');
-    const quickTelEl = document.getElementById('quick-contact-tel');
-    const detailTelEl = document.getElementById('detail-contact-tel');
-    const quickSampleEl = document.getElementById('quick-sample');
-    const detailSampleEl = document.getElementById('detail-sample-req');
-    const quickAddressEl = document.getElementById('quick-address');
-    const detailAddressEl = document.getElementById('detail-address');
-    const quickMsgEl = document.getElementById('quick-msg');
-    const detailRemarksEl = document.getElementById('detail-remarks');
-
-    const company = (quickCompanyEl?.value || detailCompanyEl?.value || '').trim();
-    const contact = (quickContactEl?.value || detailContactEl?.value || '').trim();
-    const email = (quickEmailEl?.value || detailEmailEl?.value || '').trim();
-    const tel = (quickTelEl?.value || detailTelEl?.value || '').trim();
-    const sample = (quickSampleEl?.value || detailSampleEl?.value || '').trim();
-    const address = (quickAddressEl?.value || detailAddressEl?.value || '').trim();
-    const msg = (quickMsgEl?.value || detailRemarksEl?.value || '').trim();
-
-    if (quickCompanyEl && !quickCompanyEl.value && company) quickCompanyEl.value = company;
-    if (detailCompanyEl && !detailCompanyEl.value && company) detailCompanyEl.value = company;
-
-    if (quickContactEl && !quickContactEl.value && contact) quickContactEl.value = contact;
-    if (detailContactEl && !detailContactEl.value && contact) detailContactEl.value = contact;
-
-    if (quickEmailEl && !quickEmailEl.value && email) quickEmailEl.value = email;
-    if (detailEmailEl && !detailEmailEl.value && email) detailEmailEl.value = email;
-
-    if (quickTelEl && !quickTelEl.value && tel) quickTelEl.value = tel;
-    if (detailTelEl && !detailTelEl.value && tel) detailTelEl.value = tel;
-
-    if (quickSampleEl && !quickSampleEl.value && sample) quickSampleEl.value = sample;
-    if (detailSampleEl && !detailSampleEl.value && sample) detailSampleEl.value = sample;
-
-    if (quickAddressEl && !quickAddressEl.value && address) quickAddressEl.value = address;
-    if (detailAddressEl && !detailAddressEl.value && address) detailAddressEl.value = address;
-
-    if (quickMsgEl && !quickMsgEl.value && msg) quickMsgEl.value = msg;
-    if (detailRemarksEl && !detailRemarksEl.value && msg) detailRemarksEl.value = msg;
-
-    if (mode === 'quick') {
-        quick?.classList.remove('hidden');
-        detailed?.classList.add('hidden');
-        if (btnQuick) {
-            btnQuick.className = 'flex items-center justify-center gap-2.5 p-2.5 sm:p-3 rounded-lg border text-left bg-white text-blue-950 border-blue-900 shadow-sm ring-2 ring-blue-900/10 f-weight-bold transition-all cursor-pointer';
-            btnQuick.setAttribute('aria-selected', 'true');
-        }
-        if (btnDetailed) {
-            btnDetailed.className = 'flex items-center justify-center gap-2.5 p-2.5 sm:p-3 rounded-lg border border-slate-300/80 bg-slate-100/70 hover:bg-slate-200/70 text-left text-slate-700 hover:text-blue-950 f-weight-medium transition-all cursor-pointer';
-            btnDetailed.setAttribute('aria-selected', 'false');
-        }
-
-        quickRequired.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.required = true;
-        });
-        detailRequired.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) {
-                el.required = false;
-                el.setCustomValidity?.('');
-            }
-        });
-    } else {
-        quick?.classList.add('hidden');
-        detailed?.classList.remove('hidden');
-        if (btnDetailed) {
-            btnDetailed.className = 'flex items-center justify-center gap-2.5 p-2.5 sm:p-3 rounded-lg border text-left bg-white text-blue-950 border-blue-900 shadow-sm ring-2 ring-blue-900/10 f-weight-bold transition-all cursor-pointer';
-            btnDetailed.setAttribute('aria-selected', 'true');
-        }
-        if (btnQuick) {
-            btnQuick.className = 'flex items-center justify-center gap-2.5 p-2.5 sm:p-3 rounded-lg border border-slate-300/80 bg-slate-100/70 hover:bg-slate-200/70 text-left text-slate-700 hover:text-blue-950 f-weight-medium transition-all cursor-pointer';
-            btnQuick.setAttribute('aria-selected', 'false');
-        }
-
-        quickRequired.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) {
-                el.required = false;
-                el.setCustomValidity?.('');
-            }
-        });
-        detailRequired.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.required = true;
-        });
-    }
+    ensureFormVisible();
     if (typeof updateHashRoute === 'function') {
         updateHashRoute(false);
     }
@@ -317,189 +225,130 @@ async function handleContactSubmit(event) {
     const mobileRegex = /^(\+?886\-?|0)?9\d{8}$|^(\+?886\-?|0)?9\d{2}[\s\-]?\d{3}[\s\-]?\d{3}$/;
     const phoneRegex = /^(\+?886\-?|0)?\d{1,2}[\s\-]?\d{6,8}(#\d+)?$|^[0-9+\-\s()#]{7,20}$/;
 
-    const isQuick = !document.getElementById('form-mode-quick')?.classList.contains('hidden');
-    let payload = {};
+    const company = document.getElementById('detail-company')?.value.trim();
+    const contact = document.getElementById('detail-contact')?.value.trim();
+    const email = document.getElementById('detail-email')?.value.trim();
+    const mobile = document.getElementById('detail-contact-tel')?.value.trim();
+    const fax = document.getElementById('detail-fax')?.value.trim();
+    const address = document.getElementById('detail-address')?.value.trim();
+    const sampleReq = document.getElementById('detail-sample-req')?.value.trim();
 
-    if (isQuick) {
-        const company = document.getElementById('quick-company')?.value.trim();
-        const contact = document.getElementById('quick-contact')?.value.trim();
-        const email = document.getElementById('quick-email')?.value.trim();
-        const mobile = document.getElementById('quick-contact-tel')?.value.trim();
-        const sample = document.getElementById('quick-sample')?.value.trim();
-        const address = document.getElementById('quick-address')?.value.trim();
-        const message = document.getElementById('quick-msg')?.value.trim();
-
-        if (!company) {
-            highlightInputError('quick-company', '請填寫公司名稱');
-            return;
-        }
-        if (!contact) {
-            highlightInputError('quick-contact', '請填寫聯絡人姓名與職稱');
-            return;
-        }
-        if (!email) {
-            highlightInputError('quick-email', '請填寫電子信箱');
-            return;
-        }
-
-        if (!mobile) {
-            highlightInputError('quick-contact-tel', '請填寫聯絡電話或手機號碼');
-            return;
-        }
-
-        if (!mobileRegex.test(mobile.replace(/\s+/g, '')) && !phoneRegex.test(mobile.replace(/\s+/g, ''))) {
-            highlightInputError('quick-contact-tel', '請輸入正確的電話或手機號碼格式（例：0912-345-678 或 04-2239-8056）');
-            return;
-        }
-
-        if (!sample) {
-            highlightInputError('quick-sample', '請填寫欲索取的樣品型號與數量');
-            return;
-        }
-
-        if (!address) {
-            highlightInputError('quick-address', '請填寫樣品寄送地址');
-            return;
-        }
-
-        payload = {
-            type: '快速詢價',
-            company,
-            contact,
-            email,
-            mobile: mobile || '未提供',
-            phone: mobile || '未提供',
-            sample: sample || '未提供',
-            address: address || '未提供',
-            message: message || '無',
-            applyDate: getTodayDateStr()
-        };
-    } else {
-        const company = document.getElementById('detail-company')?.value.trim();
-        const contact = document.getElementById('detail-contact')?.value.trim();
-        const email = document.getElementById('detail-email')?.value.trim();
-        const mobile = document.getElementById('detail-contact-tel')?.value.trim();
-        const fax = document.getElementById('detail-fax')?.value.trim();
-        const address = document.getElementById('detail-address')?.value.trim();
-        const sampleReq = document.getElementById('detail-sample-req')?.value.trim();
-
-        if (!company) {
-            highlightInputError('detail-company', '請填寫公司名稱');
-            return;
-        }
-        if (!contact) {
-            highlightInputError('detail-contact', '請填寫聯絡人姓名與職稱');
-            return;
-        }
-        if (!email) {
-            highlightInputError('detail-email', '請填寫電子信箱');
-            return;
-        }
-
-        if (!mobile) {
-            highlightInputError('detail-contact-tel', '請填寫聯絡電話或手機號碼');
-            return;
-        }
-
-        if (!mobileRegex.test(mobile.replace(/\s+/g, '')) && !phoneRegex.test(mobile.replace(/\s+/g, ''))) {
-            highlightInputError('detail-contact-tel', '請輸入正確的電話或手機號碼格式（例：0912-345-678 或 04-2239-8056）');
-            return;
-        }
-
-        if (!address) {
-            highlightInputError('detail-address', '請填寫樣品寄送地址');
-            return;
-        }
-
-        if (!sampleReq) {
-            highlightInputError('detail-sample-req', '請填寫欲索取的樣品型號與數量');
-            return;
-        }
-
-        const getCheckedValues = (name) => {
-            return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map(cb => cb.value);
-        };
-
-        const appFields = getCheckedValues('app_domain[]');
-        const otherAppDomain = document.getElementById('detail-other-app-domain')?.value.trim();
-        const functions = getCheckedValues('app_func[]');
-        const otherFunc = document.getElementById('detail-other-func')?.value.trim();
-        const systems = getCheckedValues('sys_type[]');
-        const compType = form.querySelector('input[name="comp-type"]:checked')?.value || '未指定';
-        let appType = form.querySelector('input[name="app-type"]:checked')?.value || '未指定';
-        const colorDesc = document.getElementById('detail-app-type-color')?.value.trim();
-        if (colorDesc) {
-            appType = (appType === '未指定' || appType === '透明') ? `有顏色 (${colorDesc})` : `${appType} (${colorDesc})`;
-        }
-
-        const substrates = getCheckedValues('substrate[]');
-        const otherSubstrate = document.getElementById('detail-substrate-other')?.value.trim();
-        const filmThick = document.getElementById('detail-film-thick')?.value.trim();
-        const cureType = form.querySelector('input[name="detail_cure_type"]:checked')?.value;
-        const noBakeCheckbox = document.getElementById('detail-no-bake');
-        const isAirDry = (cureType === '風乾' || cureType === '常溫風乾' || noBakeCheckbox?.checked === true);
-        const cureMethod = isAirDry ? '常溫風乾' : '烘烤';
-        const noBake = isAirDry ? '是' : '否';
-        const bakeTemp = isAirDry ? '' : document.getElementById('detail-bake-temp')?.value.trim();
-        const bakeTime = isAirDry ? '' : document.getElementById('detail-bake-time')?.value.trim();
-        const resins = getCheckedValues('resin[]');
-        const otherResin = document.getElementById('detail-resin-other')?.value.trim();
-        const restricted = document.getElementById('detail-restricted')?.value.trim();
-        const docs = getCheckedValues('doc_req[]');
-        const pastSamples = document.getElementById('detail-past-samples')?.value.trim();
-        const remarks = document.getElementById('detail-remarks')?.value.trim();
-
-        // 組合索樣產品 1 與 2
-        const sampleQty1 = document.getElementById('detail-sample-qty1')?.value.trim();
-        const sampleReq2 = document.getElementById('detail-sample-req2')?.value.trim();
-        const sampleQty2 = document.getElementById('detail-sample-qty2')?.value.trim();
-
-        let formattedSampleReq = sampleReq;
-        if (sampleQty1) formattedSampleReq += ` (${sampleQty1})`;
-        if (sampleReq2) {
-            formattedSampleReq += `；${sampleReq2}` + (sampleQty2 ? ` (${sampleQty2})` : '');
-        }
-
-        const applyDate = document.getElementById('detail-date')?.value.trim() || getTodayDateStr();
-
-        payload = {
-            type: '詳細需求',
-            company,
-            contact,
-            email,
-            mobile: mobile || '未提供',
-            phone: mobile || '未提供',
-            fax: fax || '未提供',
-            address: address || '未提供',
-            applyDate,
-            appFields,
-            otherAppDomain: otherAppDomain || '',
-            functions,
-            otherFunc: otherFunc || '無',
-            systems,
-            compType,
-            appType,
-            colorDesc: colorDesc || '',
-            substrates,
-            otherSubstrate: otherSubstrate || '無',
-            filmThick: filmThick || '',
-            cureMethod,
-            noBake,
-            bakeTemp: isAirDry ? '無 (風乾)' : (bakeTemp || '未填寫'),
-            bakeTime: isAirDry ? '無 (風乾)' : (bakeTime || '未填寫'),
-            resins,
-            otherResin: otherResin || '',
-            restricted: restricted || '無',
-            sampleReq: formattedSampleReq || '未提供',
-            sampleItems: [
-                { name: sampleReq, qty: sampleQty1 || '' },
-                ...(sampleReq2 ? [{ name: sampleReq2, qty: sampleQty2 || '' }] : [])
-            ],
-            docs,
-            pastSamples: pastSamples || '無',
-            remarks: remarks || '無'
-        };
+    if (!company) {
+        highlightInputError('detail-company', '請填寫公司名稱');
+        return;
     }
+    if (!contact) {
+        highlightInputError('detail-contact', '請填寫聯絡人姓名與職稱');
+        return;
+    }
+    if (!email) {
+        highlightInputError('detail-email', '請填寫電子信箱');
+        return;
+    }
+
+    if (!mobile) {
+        highlightInputError('detail-contact-tel', '請填寫聯絡電話或手機號碼');
+        return;
+    }
+
+    if (!mobileRegex.test(mobile.replace(/\s+/g, '')) && !phoneRegex.test(mobile.replace(/\s+/g, ''))) {
+        highlightInputError('detail-contact-tel', '請輸入正確的電話或手機號碼格式（例：0912-345-678 或 04-2239-8056）');
+        return;
+    }
+
+    if (!address) {
+        highlightInputError('detail-address', '請填寫樣品寄送地址');
+        return;
+    }
+
+    if (!sampleReq) {
+        highlightInputError('detail-sample-req', '請填寫欲索取的樣品型號與數量');
+        return;
+    }
+
+    const getCheckedValues = (name) => {
+        return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map(cb => cb.value);
+    };
+
+    const appFields = getCheckedValues('app_domain[]');
+    const otherAppDomain = document.getElementById('detail-other-app-domain')?.value.trim();
+    const functions = getCheckedValues('app_func[]');
+    const otherFunc = document.getElementById('detail-other-func')?.value.trim();
+    const systems = getCheckedValues('sys_type[]');
+    const compType = form.querySelector('input[name="comp-type"]:checked')?.value || '未指定';
+    let appType = form.querySelector('input[name="app-type"]:checked')?.value || '未指定';
+    const colorDesc = document.getElementById('detail-app-type-color')?.value.trim();
+    if (colorDesc) {
+        appType = (appType === '未指定' || appType === '透明') ? `有顏色 (${colorDesc})` : `${appType} (${colorDesc})`;
+    }
+
+    const substrates = getCheckedValues('substrate[]');
+    const otherSubstrate = document.getElementById('detail-substrate-other')?.value.trim();
+    const filmThick = document.getElementById('detail-film-thick')?.value.trim();
+    const cureType = form.querySelector('input[name="detail_cure_type"]:checked')?.value;
+    const noBakeCheckbox = document.getElementById('detail-no-bake');
+    const isAirDry = (cureType === '風乾' || cureType === '常溫風乾' || noBakeCheckbox?.checked === true);
+    const cureMethod = isAirDry ? '常溫風乾' : '烘烤';
+    const noBake = isAirDry ? '是' : '否';
+    const bakeTemp = isAirDry ? '' : document.getElementById('detail-bake-temp')?.value.trim();
+    const bakeTime = isAirDry ? '' : document.getElementById('detail-bake-time')?.value.trim();
+    const resins = getCheckedValues('resin[]');
+    const otherResin = document.getElementById('detail-resin-other')?.value.trim();
+    const restricted = document.getElementById('detail-restricted')?.value.trim();
+    const docs = getCheckedValues('doc_req[]');
+    const pastSamples = document.getElementById('detail-past-samples')?.value.trim();
+    const remarks = document.getElementById('detail-remarks')?.value.trim();
+
+    // 組合索樣產品 1 與 2
+    const sampleQty1 = document.getElementById('detail-sample-qty1')?.value.trim();
+    const sampleReq2 = document.getElementById('detail-sample-req2')?.value.trim();
+    const sampleQty2 = document.getElementById('detail-sample-qty2')?.value.trim();
+
+    let formattedSampleReq = sampleReq;
+    if (sampleQty1) formattedSampleReq += ` (${sampleQty1})`;
+    if (sampleReq2) {
+        formattedSampleReq += `；${sampleReq2}` + (sampleQty2 ? ` (${sampleQty2})` : '');
+    }
+
+    const applyDate = document.getElementById('detail-date')?.value.trim() || getTodayDateStr();
+
+    let payload = {
+        type: '詳細需求',
+        company,
+        contact,
+        email,
+        mobile: mobile || '未提供',
+        phone: mobile || '未提供',
+        fax: fax || '未提供',
+        address: address || '未提供',
+        applyDate,
+        appFields,
+        otherAppDomain: otherAppDomain || '',
+        functions,
+        otherFunc: otherFunc || '無',
+        systems,
+        compType,
+        appType,
+        colorDesc: colorDesc || '',
+        substrates,
+        otherSubstrate: otherSubstrate || '無',
+        filmThick: filmThick || '',
+        cureMethod,
+        noBake,
+        bakeTemp: isAirDry ? '無 (風乾)' : (bakeTemp || '未填寫'),
+        bakeTime: isAirDry ? '無 (風乾)' : (bakeTime || '未填寫'),
+        resins,
+        otherResin: otherResin || '',
+        restricted: restricted || '無',
+        sampleReq: formattedSampleReq || '未提供',
+        sampleItems: [
+            { name: sampleReq, qty: sampleQty1 || '' },
+            ...(sampleReq2 ? [{ name: sampleReq2, qty: sampleQty2 || '' }] : [])
+        ],
+        docs,
+        pastSamples: pastSamples || '無',
+        remarks: remarks || '無'
+    };
 
     const submitBtn = document.getElementById('form-submit');
     const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '<i class="fa-solid fa-paper-plane f-size-sm" aria-hidden="true"></i> 送出需求訊息';
@@ -549,8 +398,8 @@ async function handleContactSubmit(event) {
                     gtag('event', 'generate_lead', {
                         event_category: 'Form_Submission',
                         event_label: payload.company || '未填公司',
-                        lead_type: isQuick ? '快速詢價' : '詳細應用需求',
-                        product_name: (payload.sample || payload.sampleReq || '未指定產品'),
+                        lead_type: '詳細應用需求',
+                        product_name: (payload.sampleReq || '未指定產品'),
                         company_name: payload.company || '',
                         contact_name: payload.contact || ''
                     });
@@ -576,15 +425,14 @@ async function handleContactSubmit(event) {
             if (summaryContactEl) summaryContactEl.innerText = payload.contact || '--';
             if (summaryEmailEl) summaryEmailEl.innerText = payload.email || '--';
             if (summarySampleEl) {
-                const sampleText = payload.sample || payload.sampleReq || (payload.sampleItems?.map(s => s.name).filter(Boolean).join('、')) || '依專案需求評估';
+                const sampleText = payload.sampleReq || (payload.sampleItems?.map(s => s.name).filter(Boolean).join('、')) || '依專案需求評估';
                 summarySampleEl.innerText = sampleText;
                 summarySampleEl.title = sampleText;
             }
 
             // 顯著切換：隱藏表單與模式切換鈕，顯示成功提示卡片
             const successCard = document.getElementById('contact-success-state');
-            const switcher = document.getElementById('contact-mode-switcher');
-            if (switcher) switcher.classList.add('hidden');
+            // switcher removed
             if (form) form.classList.add('hidden');
             if (successCard) successCard.classList.remove('hidden');
 
@@ -641,7 +489,7 @@ async function handleContactSubmit(event) {
     }
 }
 
-function requestProductSample(productName, preferredMode = 'quick') {
+function requestProductSample(productName) {
     if (!productName) return;
 
     // 若當前停留在送出成功畫面，先重置並切回表單
@@ -657,7 +505,6 @@ function requestProductSample(productName, preferredMode = 'quick') {
                 event_category: 'Lead_Engagement',
                 event_label: productName,
                 product_name: productName,
-                preferred_mode: preferredMode,
                 items: [{
                     item_id: productName,
                     item_name: productName
@@ -680,26 +527,15 @@ function requestProductSample(productName, preferredMode = 'quick') {
     if (typeof closeCompareModal === 'function') closeCompareModal();
     if (typeof toggleTdsModal === 'function') toggleTdsModal(false);
     if (typeof switchTab === 'function') switchTab('contact');
-    switchFormMode(preferredMode);
 
     const sampleText = `${productName}`;
-    const quickInput = document.getElementById('quick-sample');
     const detailInput = document.getElementById('detail-sample-req');
 
-    if (quickInput) {
-        quickInput.value = sampleText;
-        quickInput.classList.add('input-prefilled-highlight');
-        setTimeout(() => quickInput.classList.remove('input-prefilled-highlight'), 2500);
-    }
     if (detailInput) {
         detailInput.value = sampleText;
         detailInput.classList.add('input-prefilled-highlight');
         setTimeout(() => detailInput.classList.remove('input-prefilled-highlight'), 2500);
-    }
-
-    const activeInput = preferredMode === 'detailed' ? detailInput : quickInput;
-    if (activeInput) {
-        activeInput.focus({ preventScroll: true });
+        detailInput.focus({ preventScroll: true });
     }
 
     const t = uiText[AppState.lang] || uiText.zh;
