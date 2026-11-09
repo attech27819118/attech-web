@@ -14,6 +14,7 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const GOOGLE_SHEET_VIEW_URL = process.env.GOOGLE_SHEET_VIEW_URL || 'https://docs.google.com/spreadsheets/d/1rsS0tsO1kX9G0HPSBerrI9Jo8SerZRAzjTrMMPNYays/edit?gid=317142515#gid=317142515';
 
 // ----------------------------------------------------
 // 0. PIMS 集中資料庫即時連線 (Single Source of Truth)
